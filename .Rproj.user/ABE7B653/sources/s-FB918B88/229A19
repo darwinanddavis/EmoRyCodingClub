@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1561499777044.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2805240057",
+    "id" : "229A19",
+    "lastKnownWriteTime" : 1561500307,
+    "last_content_update" : 1561500307964,
+    "path" : "~/Documents/Emory/admin/ecc/admin_/ecc_admin.Rmd",
+    "project_path" : "admin_/ecc_admin.Rmd",
+    "properties" : {
+        "cursorPosition" : "137,0",
+        "scrollLine" : "136"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

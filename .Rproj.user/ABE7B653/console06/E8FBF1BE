@@ -1,0 +1,27 @@
+]0;~/Documents/Emory/admin/r_club[?1034h6300L-127771-M:r_club malishev$ [K6300L-127771-M:r_club malishev$ ls -a
+.			r_club.Rproj		r_club_admin.tex
+..			r_club_admin.Rmd	r_club_admin_cache
+.DS_Store		r_club_admin.html	r_club_mailing_list.txt
+.Rproj.user		r_club_admin.log
+datetime.jpg		r_club_admin.pdf
+ls[K[Kpwd
+/Users/malishev/Documents/Emory/admin/ecc
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git init
+Initialized empty Git repository in /Users/malishev/Documents/Emory/admin/ecc/.git/
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls -a
+.			.Rproj.user		ecc_master.html
+..			.git			emorycodingclub.Rproj
+.DS_Store		admin_
+.Rhistory		ecc_master.Rmd
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .git/[Kignore
+The file /Users/malishev/Documents/Emory/admin/ecc/.gitignore does not exist.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .gitignore.txt
+The file /Users/malishev/Documents/Emory/admin/ecc/.gitignore.txt does not exist.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .gitignore.txt[1P .gitignore.txt[1P .gitignore.txt[1P .gitignore.txt[1P .gitignore.txtt .gitignore.txto .gitignore.txtu .gitignore.txtc .gitignore.txth .gitignore.txt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ touch .gitignoreopen .gitignore.txt[K[K[K[K
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ touch README.MD[K[Kmd
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open README.md 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git log
+fatal: your current branch 'master' does not have any commits yet
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git init[K[K[K[K[K[K[K[Kgit logopen README.md 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git init[K[K[K[K[K add .
