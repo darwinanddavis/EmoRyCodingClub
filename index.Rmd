@@ -1,0 +1,80 @@
+---
+title: "Info"
+---
+
+<br> 
+
+# EmoRy Coding Club
+
+
+# When & Where
+
+**Date:** July 11, 2019, 04:00 - 6:00p  
+**Location:** Rm 2052, O. Rollins
+
+
+<br>
+
+
+# Before you arrive:
+
+Please complete the following install & setup.
+
+To participate in this workshop, you will need to make sure you have:  
+
+* Installed [R](https://www.r-project.org/) from CRAN. 
+  + If you're asked to choose a CRAN mirror, just choose whichever is closest to your location.
+* Installed [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)
+
+<br>
+
+
+
+#### Install Necessary Packages
+Open RStudio and paste the following code into your console, then press Enter to run it:
+
+```{r, eval = FALSE}
+# Download packages from CRAN
+
+install.packages(c("devtools", "knitr", "magrittr", "sf", "sp", "rmarkdown", "usethis", "osmdata"))
+
+```
+
+# Pre-work / HW questions
+
+
+<br>
+
+
+# Learning Objectives
+
+Lorem ipsum dolor sit amet, cum ea ubique iisque facilisi, pri propriae gloriatur ad, duo te feugait disputando. Ex ius congue interpretaris. Sed te probatus dissentiet, purto tollit ut quo, an qui suas oporteat. Novum atomorum incorrupte ea sit.  
+
+Ne cetero definiebas scripserit sea, sint viris elitr vim an. Quidam audire nostrum te pri, eam an invenire scriptorem. Ex altera aeterno scaevola pro, solum iusto ne mei. Et pri cibo constituam, velit postea utroque vim ad. Invidunt electram at per, sed id mutat impetus interesset.  
+
+
+<br>
+
+# Organizers
+
+
+
+
+<br>
+
+# Materials
+
+```{r, echo =FALSE}
+
+# devtools::install_github('yihui/xfun')
+
+# a single RmD file
+# xfun::embed_file('example.Rmd')
+```
+
+Please download the necessary materials for this session. 
+ 
+    + `# r xfun::embed_file('example.Rmd')`  
+    + `# r xfun::embed_file('data.csv')` 
+
+    

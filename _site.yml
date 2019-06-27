@@ -1,0 +1,13 @@
+name: "my-website"
+output_dir: "docs"
+navbar:
+  title: "EmoRy Coding Club"
+  left:
+    - text: "Home"
+      href: index.html
+output:
+  html_document:
+    theme: flatly
+    highlight: tango
+    toc: true
+    toc_float: true
