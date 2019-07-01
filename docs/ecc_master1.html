@@ -11,7 +11,7 @@
 
 
 
-<title>EmoRy Coding Club</title>
+<title>EmoRy Coding Club master document for club sessions</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,10 +23,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<script src="site_libs/clipboard-1.7.1/clipboard.min.js"></script>
-<link href="site_libs/primer-tooltips-1.4.0/build.css" rel="stylesheet" />
-<link href="site_libs/klippy-0.0.0.9500/css/klippy.min.css" rel="stylesheet" />
-<script src="site_libs/klippy-0.0.0.9500/js/klippy.min.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -94,6 +91,15 @@ code span.va { color: #000000; } /* Variable */
 code span.vs { color: #4e9a06; } /* VerbatimString */
 code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
 
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -339,6 +345,14 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
 
 
 
@@ -352,7 +366,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2,h3",
+      selectors: "h1,h2,h3,h4",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
@@ -480,71 +494,76 @@ div.tocify {
 
 <div class="fluid-row" id="header">
 
-
-
-<h1 class="title toc-ignore">EmoRy Coding Club</h1>
-
-</div>
-
-
-<script>
-  addClassKlippyTo("pre.r, pre.markdown");
-  addKlippy('left', 'top', 'auto', '1', 'Copy code', 'Copied!');
-</script>
-<div id="when-where" class="section level1">
-<h1>When &amp; Where</h1>
-<p><strong>Date:</strong> July 11, 2019, 04:00 - 6:00p<br />
-<strong>Location:</strong> Rm 2052, O. Rollins</p>
-<p><br></p>
-</div>
-<div id="before-you-arrive" class="section level1">
-<h1>Before you arrive:</h1>
-<p>Please complete the following install &amp; setup.</p>
-<p>To participate in this workshop, you will need to make sure you:</p>
-<ul>
-<li>Install <a href="https://www.r-project.org/">R</a> from CRAN.
-<ul>
-<li>If you’re asked to choose a CRAN mirror, just choose whichever is closest to your location.</li>
-</ul></li>
-<li>Install <a href="https://www.rstudio.com/products/rstudio/download/">RStudio Desktop</a></li>
-<li>Install the <code>tidyverse</code> package and then load it by copying and pasting the following code into the <em>Console</em> of RStudio and then pressing <em>Enter</em> to execute it.</li>
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(tidyverse)</a></code></pre></div>
-<p><br></p>
 </div>
-<div id="pre-work-questions" class="section level1">
-<h1>Pre-work questions</h1>
-<p>If you you have no previous experience with R or coding, then before arriving please complete the pre-work below to get familiar with a few basic things about the R Studio IDE and coding in R. The exercise below should take less than 5 minutes to complete.</p>
-<p>Once you have installed R and R Studio, copy and paste the code below into the R Studio <em>Console</em> and press <em>Enter</em> to run it.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Caculate something simple</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># Calculate something using built-in contants</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="dv">2</span><span class="op">*</span>pi</a></code></pre></div>
-<p><br></p>
-<p>Use the <em>assignment operator</em>, <code>&lt;-</code>, to create new objects in R</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">b &lt;-<span class="st"> </span>a<span class="op">*</span>pi</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">c &lt;-<span class="st"> &quot;Hello World&quot;</span></a></code></pre></div>
-<p>And then print the objects in the console:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">a </a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">b</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">c</a></code></pre></div>
+
+
+
+<h1 class="title toc-ignore">EmoRy Coding Club master document for club sessions</h1>
+<h4 class="author"><div class="line-block">Matthew Malishev*, Desiree De Leon &amp; Hasse Walum<br />
+<br />
+<em>Emory University, 1510 Clifton Road NE, Atlanta, GA, USA, 30322</em></div></h4>
+
 </div>
-<div id="learning-objectives" class="section level1">
-<h1>Learning Objectives</h1>
-<p>Our first EmoRy Coding Club will be primarily targeted towards beginners, but we hope this will also useful for anyone who may already be familiar with base R but would like to get better practice with the R <code>tidyverse</code>.</p>
+
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+</script>
+
+<p>Date: 2019-06-30<br />
+R version: 3.6.0<br />
+This document can be found at <a href="https://github.com/darwinanddavis/EmoRyCodingClub" class="uri">https://github.com/darwinanddavis/EmoRyCodingClub</a></p>
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+
+<div id="example-of-first-session" class="section level2">
+<h2>Example of first session</h2>
+<div id="pre-session" class="section level4">
+<h4>Pre session</h4>
 <ol style="list-style-type: decimal">
-<li>Introducing beginners to the RStudio IDE</li>
-<li>Doing some introductory plotting with <code>ggplot</code></li>
+<li>assign ‘hello world’ to variable<br />
+</li>
+<li>print to console<br />
+</li>
+<li>run help page for ‘print’</li>
 </ol>
-<p>We will use the <a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> free online text to guide us through learning R.</p>
-<p><br></p>
 </div>
-<div id="materials" class="section level1">
-<h1>Materials</h1>
-<p>We’ll be diving into <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3, Data visualisation</a> and will work through Section 3.3.1.</p>
+<div id="first-session" class="section level4">
+<h4>First session</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>()</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">head</span>()</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">tail</span>()</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw">str</span>()</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw">plot</span>()</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">df<span class="op">$</span>Col1</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">df[, <span class="st">&quot;Col1&quot;</span>]</a></code></pre></div>
+</div>
+<div id="toc" class="section level4">
+<h4>TOC</h4>
+<p>What the session covers<br />
+Dataset<br />
+Showcase of what you’ll learn by the end</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;https://query.data.world/s/beephekfuniqs7n3ym2uitmbvoccgs&quot;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>, <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw">str</span>(df)</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="kw">unique</span>(df<span class="op">$</span>completed_on)[<span class="dv">1</span>]</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="kw">plot</span>(df<span class="op">$</span>end_location_lat, df<span class="op">$</span>end_location_long, <span class="dt">pch =</span> <span class="dv">20</span>, <span class="dt">main =</span> <span class="st">&quot;R plot&quot;</span>, <span class="dt">las =</span> <span class="dv">1</span>, <span class="dt">xlim =</span> <span class="kw">c</span>(<span class="dv">30</span>, <span class="dv">35</span>), </a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">    <span class="dt">ylim =</span> <span class="kw">c</span>(<span class="op">-</span><span class="dv">112</span>, <span class="dv">98</span>))</a></code></pre></div>
+<!-- end body -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+</div>
 </div>
 
 

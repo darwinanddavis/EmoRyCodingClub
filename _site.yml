@@ -5,9 +5,14 @@ navbar:
   left:
     - text: "Home"
       href: index.html
+  right:
+    - text: Admin
+      href: ecc_master1.html
+    - icon: fa-github
+      href: https://github.com/darwinanddavis/EmoRyCodingClub
 output:
   html_document:
-    theme: flatly
+    theme: lumen
     highlight: tango
     toc: true
     toc_float: true
