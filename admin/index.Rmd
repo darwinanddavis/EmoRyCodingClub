@@ -101,6 +101,39 @@ plot(df$end_location_lat,df$end_location_long,pch=20,main="R plot",las=1,xlim=c(
 ```
 
 
+#### Importing Data
+
+AirBnb Data
+
+```{r, eval = FALSE}
+require(readr)
+
+# function for reading in zipped file (106 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+
+url_read <- function(file_url) {
+  con <- gzcon(url(file_url))
+  txt <- readLines(con)
+  return(read.csv(textConnection(txt)))
+}
+
+df <- url_read(url) # read in data
+
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+df <- read.csv(url)
+
+
+```
+
+
+**Before the first session, let's see if we can:**
+
+1) Read this in so that it automatically prints out as a tibble (alternatively, use `tibble(df)` to print)
+2) Reduce/ subset the number of rows to something closer to ~10k? to decrease time to load/ plot, etc. 
+
+
+
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
