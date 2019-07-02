@@ -1,7 +1,7 @@
 ---
 title: EmoRy Coding Club master document 
 author: |
- | Matthew Malishev*, Desiree De Leon & Hasse Walum     
+ | Matt Malishev*, Desiree De Leon & Hasse Walum     
  |  
  | _Emory University, 1510 Clifton Road NE, Atlanta, GA, USA, 30322_
 #bibliography:/Users/malishev/Documents/Melbourne Uni/Thesis_2016/library.bib

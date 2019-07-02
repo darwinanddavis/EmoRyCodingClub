@@ -1,9 +1,35 @@
 ---
 title: "Welcome to the EmoRy Coding Club"
+header-includes:
+ \usepackage{float}
 ---
 
+\  
+\  
+
+## Organisers  
+\    
+### Matt Malishev  
+### Desiree de Leon  
+### Hasse Walum  
+\  
+\  
+<!-- ----------------------- image --------------------------- -->
+<div align="center"; text-align:center>
+  <img src="img/mm.jpeg" style=width:33%>
+  <img src="img/ddl.jpeg" style=width:33%>
+  <img src="img/hw.jpg" style=width:33%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+
+\  
+\  
+
+## Overview    
+This page contains all the documents, links, and information for the monthly `R` coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, `R`, and research levels.  
+  
 ```{r klippy, echo=FALSE, include=TRUE}
-klippy::klippy()
+# klippy::klippy()
 ```
 
 <!-- rmd settings -->
@@ -17,13 +43,14 @@ knitr::opts_chunk$set(
  tidy=TRUE, # make output as tidy
  message = FALSE,  # mask all messages
  warning = FALSE, # mask all warnings 
- size="small" # set code chunk size
+ size="small", # set code chunk size
+ knitr::opts_chunk$set(fig.pos = 'H')
 )
 ```
 
 
 <!-- install packages -->
-```{r, load packages, include=T, cache=F, message=F, warning=F, results='hide'}
+```{r, load packages, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
 packages <- c("ggplot2","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr","leaflet")   
 if (require(packages)) {
     install.packages(packages,dependencies = T)
@@ -32,11 +59,20 @@ if (require(packages)) {
 lapply(packages,library,character.only=T)
 ```
 
+## Date for next session  
+July 11, 2019    
+04:00 - 6:00 PM     
+\  
 
-```{r}
+## Location   
+Rm 2052  
+Wayne O. Rollins Building  
+\  
+
+```{r,echo=F}
 require(leaflet)
 latlon <- c(33.79667, -84.32346) # emory
-ecc_label <- "EmoRy Coding Club"
+ecc_label <- "Room 2052 \nWayne Rollins Research Building"
 map <- leaflet() # initiate the leaflet map object
 map <- addTiles(map) # add the actual map tiles to the leaflet object
 map <- addMarkers(map,latlon[2],latlon[1],label=ecc_label,popup=ecc_label) # generate some random data around lat/lon 35
@@ -44,13 +80,6 @@ map
 
 ```
 
-**Date for next session**  
-July 11, 2019, 04:00 - 6:00 PM  
-\  
-
-**Location**   
-Rm 2052, Wayne O. Rollins Building
-\  
 
 <br>
 
@@ -117,7 +146,7 @@ Our first EmoRy Coding Club will be primarily targeted towards beginners, but we
 
 We will use the [R for Data Science](https://r4ds.had.co.nz/index.html) free online text to guide us through learning R.
 
-![R for Data Science book](/img/cover.png).  
+![R for Data Science book](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/docs/img/cover.png).  
 
 
 
