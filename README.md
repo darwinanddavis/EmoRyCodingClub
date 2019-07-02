@@ -8,9 +8,9 @@
 
   
 <div align="center"; text-align:center>
-  <img src="docs/img/mm.jpeg", width = 300, height = 300>
-  <img src="docs/img/ddl.jpeg" width = 300, height = 300>
-  <img src="docs/img/hw.jpg" width = 300, height = 300>
+  <img src="docs/img/mm.jpeg", width = 200, height = 200>
+  <img src="docs/img/ddl.jpeg" width = 200, height = 200>
+  <img src="docs/img/hw.jpg" width = 200, height = 200>
 </div>
 
 
