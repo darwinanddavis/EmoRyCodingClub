@@ -5,15 +5,15 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "2708887660",
     "id" : "28805F7E",
-    "lastKnownWriteTime" : 1561564001,
-    "last_content_update" : 1561564001121,
+    "lastKnownWriteTime" : 1562090598,
+    "last_content_update" : 1562090598871,
     "path" : "~/Documents/Emory/admin/ecc/ecc_master.Rmd",
     "project_path" : "ecc_master.Rmd",
     "properties" : {
-        "cursorPosition" : "3,53",
-        "scrollLine" : "0"
+        "cursorPosition" : "122,25",
+        "scrollLine" : "108"
     },
     "relative_order" : 2,
     "source_on_save" : false,

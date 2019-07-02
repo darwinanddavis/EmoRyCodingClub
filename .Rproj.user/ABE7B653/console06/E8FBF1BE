@@ -25,3 +25,109 @@ The file /Users/malishev/Documents/Emory/admin/ecc/.gitignore.txt does not exist
 fatal: your current branch 'master' does not have any commits yet
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git init[K[K[K[K[K[K[K[Kgit logopen README.md 
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git init[K[K[K[K[K add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git init[K[K[K[Kcommit -m ''i'n'i't'[C
+[master (root-commit) b2cbf56] init
+ 37 files changed, 1265 insertions(+)
+ create mode 100644 .Rhistory
+ create mode 100644 .Rproj.user/ABE7B653/console06/E8FBF1BE
+ create mode 100644 .Rproj.user/ABE7B653/console06/E8FBF1BE.env
+ create mode 100644 .Rproj.user/ABE7B653/console06/INDEX001
+ create mode 100644 .Rproj.user/ABE7B653/pcs/files-pane.pper
+ create mode 100644 .Rproj.user/ABE7B653/pcs/source-pane.pper
+ create mode 100644 .Rproj.user/ABE7B653/pcs/windowlayoutstate.pper
+ create mode 100644 .Rproj.user/ABE7B653/pcs/workbench-pane.pper
+ create mode 100644 .Rproj.user/ABE7B653/rmd-outputs
+ create mode 100644 .Rproj.user/ABE7B653/saved_source_markers
+ create mode 100644 .Rproj.user/ABE7B653/sources/prop/3977270D
+ create mode 100644 .Rproj.user/ABE7B653/sources/prop/41923272
+ create mode 100644 .Rproj.user/ABE7B653/sources/prop/41FD81BC
+ create mode 100644 .Rproj.user/ABE7B653/sources/prop/89E75701
+ create mode 100644 .Rproj.user/ABE7B653/sources/prop/90CF51A8
+ create mode 100644 .Rproj.user/ABE7B653/sources/prop/966E3938
+ create mode 100644 .Rproj.user/ABE7B653/sources/prop/C99BE371
+ create mode 100644 .Rproj.user/ABE7B653/sources/prop/INDEX
+ create mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/229A19
+ create mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/229A19-contents
+ create mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/28805F7E
+ create mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/28805F7E-contents
+ create mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/2AD4A1D8-contents
+ create mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/lock_file
+ create mode 100644 .Rproj.user/shared/notebooks/45BF1761-ecc_master/1/ABE7B653FB918B88/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/45BF1761-ecc_master/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/5A3CBB58-ecc_admin/1/ABE7B653FB918B88/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/5A3CBB58-ecc_admin/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/E22EADF1-ecc_master/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/E22EADF1-ecc_master/1/s/cz7n466lmj9rs/000002.csv
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100644 .gitignore
+ create mode 100644 README.md
+ create mode 100644 ecc_master.Rmd
+ create mode 100644 ecc_master.html
+ create mode 100644 emorycodingclub.Rproj
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git remote -[Kadd-origin ""h"t"t"p"s":"/"/"g"i"t"h"u"b"."c"o"m"/"d"a"r"w"i"n"a"n"d"d"a"v"i"s"/"E"m"o"R"y"C" [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co""d"i"n"g"C"l"u"b"
+error: Unknown subcommand: add-origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git remote add-origin "https://github.com/darwinanddavis/EmoRyCoddingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodi[1PngClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodin[1PgClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCoding[1PClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodingC[1Plub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodingCl[1Pub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodingClu[1Pb"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodingClub[1P"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodingClub"[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodingClub" [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P "https://github.com/darwinanddavis/EmoRyCodingClub"
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P"https://github.com/darwinanddavis/EmoRyCodingClub"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs "https://github.com/darwinanddavis/EmoRyCodingClub"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P "https://github.com/darwinanddavis/EmoRyCodingClub"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodingClub"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cs "https://github.com/darwinanddavis/EmoRyCodingClub" [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce "https://github.com/darwinanddavis/EmoRyCodingClub""[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ct "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cu "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C"https://github.com/darwinanddavis/EmoRyCoding[1PClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git remote set-url "https://github.com/darwinanddavis/EmoRyCodinggClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodi[1PngClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodin[1PgClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCoding[1PClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C "https://github.com/darwinanddavis/EmoRyCodingClub"[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+usage: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    --push                manipulate push URLs
+    --add                 add URL
+    --delete              delete URLs
+
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git remote add origin "https://github.com/darwinanddavis/EmoRyCo dingClub"
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git remote --v
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push origin master
+Counting objects: 53, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/41)   Compressing objects:   4% (2/41)   Compressing objects:   7% (3/41)   Compressing objects:   9% (4/41)   Compressing objects:  12% (5/41)   Compressing objects:  14% (6/41)   Compressing objects:  17% (7/41)   Compressing objects:  19% (8/41)   Compressing objects:  21% (9/41)   Compressing objects:  24% (10/41)   Compressing objects:  26% (11/41)   Compressing objects:  29% (12/41)   Compressing objects:  31% (13/41)   Compressing objects:  34% (14/41)   Compressing objects:  36% (15/41)   Compressing objects:  39% (16/41)   Compressing objects:  41% (17/41)   Compressing objects:  43% (18/41)   Compressing objects:  46% (19/41)   Compressing objects:  48% (20/41)   Compressing objects:  51% (21/41)   Compressing objects:  53% (22/41)   Compressing objects:  56% (23/41)   Compressing objects:  58% (24/41)   Compressing objects:  60% (25/41)   Compressing objects:  63% (26/41)   Compressing objects:  65% (27/41)   Compressing objects:  68% (28/41)   Compressing objects:  70% (29/41)   Compressing objects:  73% (30/41)   Compressing objects:  75% (31/41)   Compressing objects:  78% (32/41)   Compressing objects:  80% (33/41)   Compressing objects:  82% (34/41)   Compressing objects:  85% (35/41)   Compressing objects:  87% (36/41)   Compressing objects:  90% (37/41)   Compressing objects:  92% (38/41)   Compressing objects:  95% (39/41)   Compressing objects:  97% (40/41)   Compressing objects: 100% (41/41)   Compressing objects: 100% (41/41), done.
+Writing objects:   1% (1/53)   Writing objects:   3% (2/53)   Writing objects:   5% (3/53)   Writing objects:   7% (4/53)   Writing objects:   9% (5/53)   Writing objects:  11% (6/53)   Writing objects:  13% (7/53)   Writing objects:  15% (8/53)   Writing objects:  16% (9/53)   Writing objects:  18% (10/53)   Writing objects:  20% (11/53)   Writing objects:  22% (12/53)   Writing objects:  24% (13/53)   Writing objects:  26% (14/53)   Writing objects:  28% (15/53)   Writing objects:  30% (16/53)   Writing objects:  32% (17/53)   Writing objects:  33% (18/53)   Writing objects:  35% (19/53)   Writing objects:  37% (20/53)   Writing objects:  39% (21/53)   Writing objects:  41% (22/53)   Writing objects:  43% (23/53)   Writing objects:  45% (24/53)   Writing objects:  47% (25/53)   Writing objects:  49% (26/53)   Writing objects:  50% (27/53)   Writing objects:  54% (29/53)   Writing objects:  60% (32/53)   Writing objects:  62% (33/53)   Writing objects:  64% (34/53)   Writing objects:  66% (35/53)   Writing objects:  67% (36/53)   Writing objects:  69% (37/53)   Writing objects:  71% (38/53)   Writing objects:  73% (39/53)   Writing objects:  75% (40/53)   Writing objects:  77% (41/53)   Writing objects:  79% (42/53)   Writing objects:  81% (43/53)   Writing objects:  83% (44/53)   Writing objects:  84% (45/53)   Writing objects:  86% (46/53)   Writing objects:  88% (47/53)   Writing objects:  90% (48/53)   Writing objects:  92% (49/53)   Writing objects:  94% (50/53)   Writing objects:  96% (51/53)   Writing objects:  98% (52/53)   Writing objects: 100% (53/53)   Writing objects: 100% (53/53), 307.89 KiB | 0 bytes/s, done.
+Total 53 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), done.[K
+To https://github.com/darwinanddavis/EmoRyCodingClub
+ * [new branch]      master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git att[K[Kdd. [K[K . 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit 0[K-m ''[K[1P'[1P'[1P'[C[K[K[K[K[K[K[K[K[K[K[K[Kgit reset
+Unstaged changes after reset:
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE
+M	.Rproj.user/ABE7B653/sources/prop/89E75701
+M	.Rproj.user/ABE7B653/sources/prop/C99BE371
+M	.Rproj.user/ABE7B653/sources/s-FB918B88/229A19
+M	.Rproj.user/ABE7B653/sources/s-FB918B88/229A19-contents
+M	.Rproj.user/ABE7B653/sources/s-FB918B88/28805F7E
+M	.Rproj.user/ABE7B653/sources/s-FB918B88/28805F7E-contents
+M	.Rproj.user/shared/notebooks/45BF1761-ecc_master/1/ABE7B653FB918B88/chunks.json
+M	.Rproj.user/shared/notebooks/45BF1761-ecc_master/1/s/chunks.json
+M	ecc_master.Rmd
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . 
