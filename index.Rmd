@@ -85,7 +85,33 @@ We will use the [R for Data Science](https://r4ds.had.co.nz/index.html) free onl
 
 # Materials
 
-We'll be diving into [Ch 3, Data visualisation](https://r4ds.had.co.nz/data-visualisation.html) and will work through Section 3.3.1.
+We'll be diving into [Ch 3, Data visualisation](https://r4ds.had.co.nz/data-visualisation.html) and working through Section 3.3.1.
+
+
+Once we've completed the R for Data Science exercises, we'll repeat the plotting exercise using open-access data from AirBnb.
+
+This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below:
+
+```{r, eval = FALSE}
+require(readr)
+
+# function for reading in zipped file (106 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+
+url_read <- function(file_url) {
+  con <- gzcon(url(file_url))
+  txt <- readLines(con)
+  return(read.csv(textConnection(txt)))
+}
+
+df <- url_read(url) # read in data
+
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+df <- read.csv(url)
+
+```
+
 
 ```{r, echo =FALSE, }
 
