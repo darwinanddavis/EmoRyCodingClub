@@ -27,7 +27,9 @@ To participate in this workshop, you will need to make sure you:
 * Install the `tidyverse` package and then load it by copying and pasting the following code into the *Console* of RStudio and then pressing *Enter* to execute it.
 ```{r, eval= FALSE}
 install.packages("tidyverse")
+install.packages("ggplot2")
 library(tidyverse)
+library(ggplot2)
 ```
 
 
