@@ -58,9 +58,9 @@ tags:
 \  
 <!-- ----------------------- image --------------------------- -->
 <div align="center"; text-align:center>
-  <img src="img/mm.jpeg" style=width:200px>
-  <img src="img/ddl.jpeg" style=width:200px>
-  <img src="img/hw.jpg" style=width:200px>
+  <img src="img/mm.jpeg" style=width:33%>
+  <img src="img/ddl.jpeg" style=width:33%>
+  <img src="img/hw.jpg" style=width:33%>
 </div>
 <!-- ----------------------- image --------------------------- -->
 
