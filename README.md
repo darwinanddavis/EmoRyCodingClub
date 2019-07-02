@@ -8,9 +8,9 @@
 
   
 <div align="center"; text-align:center>
-  <img src="img/mm.jpeg" style=width:33%>
-  <img src="img/ddl.jpeg" style=width:33%>
-  <img src="img/hw.jpg" style=width:33%>
+  <img src="docs/img/mm.jpeg" style=width:33%>
+  <img src="docs/img/ddl.jpeg" style=width:33%>
+  <img src="docs/img/hw.jpg" style=width:33%>
 </div>
 
 
@@ -18,16 +18,17 @@
 
 This page contains all the documents, links, and information for the monthly `R` coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, `R`, and research levels.  
 
-## Below is the link where you'll find all the coding material.    
+Below is the link where you'll find all the coding material.    
 
 ## [EmoRy Coding Club website](https://darwinanddavis.github.io/EmoRyCodingClub/index.html)           
+  
 
+    
+******  
 
 Versions:  
  - R 3.5.0  
  - RStudio 1.1.453     
-
-******
 
 File extensions:     
 .R  
@@ -35,8 +36,7 @@ File extensions:
 .pdf  
 .html  
 
-******  
-
+******    
 
 ### :pig: Troubleshooting links        
 
