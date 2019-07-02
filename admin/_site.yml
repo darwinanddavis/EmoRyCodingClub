@@ -1,13 +1,9 @@
 name: "my-website"
-output_dir: "docs"
 navbar:
   title: "EmoRy Coding Club"
-  left:
-    - text: "Home"
-      href: index.html
-    - text: "Lesson 1"
-      href: Lesson1.html
   right:
+    - text: Admin
+      href: index.html
     - icon: fa-github
       href: https://github.com/darwinanddavis/EmoRyCodingClub
 output:

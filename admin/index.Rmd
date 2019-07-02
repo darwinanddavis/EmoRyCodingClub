@@ -1,7 +1,7 @@
 ---
-title: EmoRy Coding Club master document 
+title: EmoRy Coding Club master document for club sessions  
 author: |
- | Matt Malishev*, Desiree De Leon & Hasse Walum     
+ | Matthew Malishev*, Desiree De Leon & Hasse Walum     
  |  
  | _Emory University, 1510 Clifton Road NE, Atlanta, GA, USA, 30322_
 #bibliography:/Users/malishev/Documents/Melbourne Uni/Thesis_2016/library.bib
@@ -65,6 +65,8 @@ This document can be found at `r params$doi`
 
 \newpage  
 
+## Example of first session   
+
 #### Pre session  
 1. assign 'hello world' to variable    
 2. print to console  
@@ -76,19 +78,59 @@ install.packages()
 head()  
 tail()
 str()
+
 plot()
+
 df$Col1
 df[,"Col1"]
 
-# See call options for class
-methods(class="estUDm")  
+```
+
+#### TOC    
+What the session covers  
+Dataset  
+Showcase of what you'll learn by the end  
+
+```{r,eval=F}
+df <- read.csv("https://query.data.world/s/beephekfuniqs7n3ym2uitmbvoccgs", header=TRUE, stringsAsFactors=FALSE)
+
+str(df)
+unique(df$completed_on)[1]
+plot(df$end_location_lat,df$end_location_long,pch=20,main="R plot",las=1,xlim=c(30,35),ylim=c(-112,98))
 
 ```
 
-<!-- #### TOC     -->
-<!-- What the session covers   -->
-<!-- Dataset   -->
-<!-- Showcase of what you'll learn by the end   -->
+
+#### Importing Data
+
+AirBnb Data
+
+```{r, eval = FALSE}
+require(readr)
+
+# function for reading in zipped file (106 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+
+url_read <- function(file_url) {
+  con <- gzcon(url(file_url))
+  txt <- readLines(con)
+  return(read.csv(textConnection(txt)))
+}
+
+df <- url_read(url) # read in data
+
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+df <- read.csv(url)
+
+
+```
+
+
+**Before the first session, let's see if we can:**
+
+1) Read this in so that it automatically prints out as a tibble (alternatively, use `tibble(df)` to print)
+2) Reduce/ subset the number of rows to something closer to ~10k? to decrease time to load/ plot, etc. 
 
 
 

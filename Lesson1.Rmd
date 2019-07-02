@@ -2,4 +2,7 @@
 title: "Lesson 1"
 ---
 
+Content to come!
+
+
 <!--Here is where we can put the content that we'll be typing live during the session --> 
