@@ -134,7 +134,7 @@ We'll be diving into [Ch 3, Data visualisation](https://r4ds.had.co.nz/data-visu
 # a single RmD file
 # xfun::embed_file('example.Rmd')
 
- # r xfun::embed_file('example.Rmd')`  
+# embed a single csv file
  # r xfun::embed_file('data.csv')` 
 
 ```
