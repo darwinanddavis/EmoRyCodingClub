@@ -44,33 +44,10 @@ tags:
 - nothingness
 ---
 
-\  
-\  
+<!-- ---------------------------------------------------------------- -->
+<!-- ----------------------- rmd settings --------------------------- -->
+<!-- ---------------------------------------------------------------- -->
 
-## Organisers  
-\  
-
-**Matt Malishev**  
-**Desiree de Leon**  
-**Hasse Walum**  
-
-\  
-\  
-<!-- ----------------------- image --------------------------- -->
-<div align="center"; text-align:center>
-  <img src="img/mm.jpeg" style=width:33%>
-  <img src="img/ddl.jpeg" style=width:33%>
-  <img src="img/hw.jpg" style=width:33%>
-</div>
-<!-- ----------------------- image --------------------------- -->
-
-\  
-\  
-
-<!-- ----------------------- overview --------------------------- -->
-## Overview    
-This page contains all the documents, links, and information for the monthly `R` coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, `R`, and research levels.  
-  
 ```{r klippy, echo=FALSE, include=TRUE}
 # klippy::klippy()
 ```
@@ -91,7 +68,6 @@ knitr::opts_chunk$set(
 )
 ```
 
-
 <!-- install packages -->
 ```{r, load packages, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
 packages <- c("ggplot2","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr","leaflet")   
@@ -102,40 +78,69 @@ if (require(packages)) {
 lapply(packages,library,character.only=T)
 ```
 
+<!-- ---------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------- -->
+\  
+\  
+
+<!-- ----------------------- overview --------------------------- -->
+## Overview    
+This page contains all the documents, links, and information for the monthly `R` coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, `R`, and research levels.  
+\  
+\  
+  
+## Organisers  
+
+**Matt Malishev, Department of Biology**    
+**Desiree de Leon, Yerkes National Primate Research Center**  
+**Hasse Walum, Yerkes National Primate Research Center**    
+
+\  
+\  
+<!-- ----------------------- image --------------------------- -->
+<div align="center"; text-align:center>
+  <img src="img/mm.jpeg" style=width:33%>
+  <img src="img/ddl.jpeg" style=width:33%>
+  <img src="img/hw.jpg" style=width:33%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+\    
+
 ## Date for next session  
-July 11, 2019    
-04:00 - 6:00 PM     
+July 11, 2019      
+4:00 - 6:00 PM       
 \  
 
 ## Location   
 Room 2052  
-Wayne O. Rollins Building  
+Wayne Rollins Building  
 \  
 
 ```{r,echo=F}
 require(leaflet)
 latlon <- c(33.79667, -84.32346) # emory
-ecc_label <- "Room 2052, Wayne O. Rollins Building"
+ecc_label <- "Room 2052, Wayne Rollins Building"
 map <- leaflet() # initiate the leaflet map object
 map <- addTiles(map) # add the actual map tiles to the leaflet object
-map <- addMarkers(map,latlon[2],latlon[1],label=ecc_label,popup=ecc_label) # generate some random data around lat/lon 35
+map <- addMarkers(map,latlon[2],latlon[1],label=ecc_label,popup=ecc_label) 
 map 
 
 ```
 
 
 <br>
-
-
+\  
+  
 <!-- ----------------------- 1 before arrival --------------------------- -->
 # Before you arrive
 Everyone needs to have the following software and packages loaded before you come to the first session. That way, we can get straight into it.     
   
 
-* Install [R](https://www.r-project.org/) from CRAN. 
-  + If you're asked to choose a CRAN mirror, just choose whichever is closest to your location.
-* Install [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)
-* Install the `tidyverse` package and then load it by copying and pasting the following code into the *Console* of RStudio and then pressing *Enter* to execute it.
+* [Install `R` from CRAN](https://www.r-project.org/). 
+ + If you're asked to choose a CRAN mirror, just choose whichever is closest to your location.  
+* [Install `RStudio` Desktop](https://www.rstudio.com/products/rstudio/download/)
+* Install the `tidyverse` package and then load it by copying and pasting the following code into the *Console* of `RStudio` and then pressing *Enter* to execute it.
 
 ```{r, eval= FALSE}
 install.packages("tidyverse")
@@ -156,9 +161,9 @@ library(ggplot2)
 
 <!-- ----------------------- 2 pre check --------------------------- -->
 # Pre-work questions  
-If you you have no previous experience with R or coding, then before arriving please complete the pre-work below to get familiar with a few basic things about `R Studio` and coding in `R`. The exercise below should take less than 5 minutes to complete.  
+If you're brand new to `R` or coding, familiarise yourself with a few basic things about `R Studio` and coding in `R`. The exercise below should take less than 5 minutes.    
 
-Once you have installed `R` and `R Studio`, copy and paste the code below into the `R Studio` *Console* and press *Enter* to run it.
+Once you have installed `R` and `R Studio`, copy and paste the code below into the `R Studio` *Console* (or try typing it out yourself) and press *Enter* to run it.  
 
 ```{r, eval = FALSE}
 
@@ -166,7 +171,7 @@ Once you have installed `R` and `R Studio`, copy and paste the code below into t
 2 + 2
 
 # Calculate something using built-in constants
-2*pi
+2 * pi
 
 ```
 
@@ -177,7 +182,7 @@ Use the *assignment operator*, `<-`, to create new objects in `R`
 ```{r, eval = FALSE}
 
 a <- 2 + 2
-b <- a*pi
+b <- a * pi
 c <- "Hello World"
 ```
 
@@ -194,7 +199,7 @@ c
 
 # Learning Objectives
 
-Our first EmoRy Coding Club will be primarily targeted towards beginners, but we hope this will also useful for anyone who may already be familiar with base `R` but would like to get better practice with the `R` `tidyverse`.
+Our first EmoRy Coding Club will be primarily targeted towards beginners, but we hope this will also useful for anyone who may already be familiar with base `R` and wanting better practice with the `R` `tidyverse`.
 
 1) Introducing beginners to the `RStudio` IDE
 2) Doing some introductory plotting with `ggplot`
@@ -216,10 +221,16 @@ We will use the [R for Data Science](https://r4ds.had.co.nz/index.html) free onl
 # Materials
 
 We'll be diving into [Ch 3, Data visualisation](https://r4ds.had.co.nz/data-visualisation.html) and working through Section 3.3.1.
-
+\  
 
 ### The dataset    
-We'll be using [open-access data from AirBnb](http://insideairbnb.com/new-york-city/) as our toy dataset. Once we've completed the above **R for Data Science exercises**, we'll repeat the plotting exercise using these data.   
+We'll also be using [open-access data of housing listings from AirBnb](http://insideairbnb.com/new-york-city/) as our toy dataset. Once we've completed the above **R for Data Science exercises**, we'll repeat the plotting exercise using these data.    
+
+\  
+
+We'll be using this dataset for the rest of the club sessions, so feel free to explore it in your own time.      
+
+\  
 
 
 <!-- ----------------------- image --------------------------- -->
@@ -229,7 +240,7 @@ We'll be using [open-access data from AirBnb](http://insideairbnb.com/new-york-c
 <!-- ----------------------- image --------------------------- -->  
   
 
-This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below:
+This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below in your `R` console and press *Enter*.   
 
 ```{r, eval = FALSE}
 require(readr)
@@ -272,4 +283,4 @@ head(df_small[,1:5])
  # r xfun::embed_file('data.csv')` 
 
 ```
-
+  
