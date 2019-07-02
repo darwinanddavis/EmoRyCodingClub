@@ -1,0 +1,141 @@
+---
+title: "Welcome to the EmoRy Coding Club"
+---
+
+```{r klippy, echo=FALSE, include=TRUE}
+klippy::klippy()
+```
+
+<!-- rmd settings -->
+```{r, set-options, echo = FALSE, cache = FALSE}
+options(width=100)
+knitr::opts_chunk$set(
+ eval = TRUE, # run all code
+ # echo = FALSE, # show code chunks in output 
+ comment = "",
+ tidy.opts=list(width.cutoff=100), # set width of code chunks in output
+ tidy=TRUE, # make output as tidy
+ message = FALSE,  # mask all messages
+ warning = FALSE, # mask all warnings 
+ size="small" # set code chunk size
+)
+```
+
+
+<!-- install packages -->
+```{r, load packages, include=T, cache=F, message=F, warning=F, results='hide'}
+packages <- c("ggplot2","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr","leaflet")   
+if (require(packages)) {
+    install.packages(packages,dependencies = T)
+    require(packages)
+}
+lapply(packages,library,character.only=T)
+```
+
+
+```{r}
+require(leaflet)
+latlon <- c(33.79667, -84.32346) # emory
+ecc_label <- "EmoRy Coding Club"
+map <- leaflet() # initiate the leaflet map object
+map <- addTiles(map) # add the actual map tiles to the leaflet object
+map <- addMarkers(map,latlon[2],latlon[1],label=ecc_label,popup=ecc_label) # generate some random data around lat/lon 35
+map 
+
+```
+
+**Date for next session**  
+July 11, 2019, 04:00 - 6:00 PM  
+\  
+
+**Location**   
+Rm 2052, Wayne O. Rollins Building
+\  
+
+<br>
+
+
+# Before you arrive:
+
+* Install [R](https://www.r-project.org/) from CRAN. 
+  + If you're asked to choose a CRAN mirror, just choose whichever is closest to your location.
+* Install [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)
+* Install the `tidyverse` package and then load it by copying and pasting the following code into the *Console* of RStudio and then pressing *Enter* to execute it.
+
+```{r, eval= FALSE}
+install.packages("tidyverse")
+install.packages("ggplot2")
+library(tidyverse)
+library(ggplot2)
+```
+
+
+<br>
+
+
+# Pre-work questions
+If you you have no previous experience with R or coding, then before arriving please complete the pre-work below to get familiar with a few basic things about the R Studio IDE and coding in R. The exercise below should take less than 5 minutes to complete.
+
+Once you have installed R and R Studio, copy and paste the code below into the R Studio *Console* and press *Enter* to run it.
+
+```{r, eval = FALSE}
+
+# Caculate something simple
+2 + 2
+
+# Calculate something using built-in contants
+2*pi
+
+```
+
+<br>
+
+Use the *assignment operator*, `<-`, to create new objects in R
+
+```{r, eval = FALSE}
+
+a <- 2 + 2
+b <- a*pi
+c <- "Hello World"
+```
+
+And then print the objects in the console:
+
+```{r, eval = FALSE}
+a 
+b
+c
+```
+
+
+# Learning Objectives
+
+Our first EmoRy Coding Club will be primarily targeted towards beginners, but we hope this will also useful for anyone who may already be familiar with base R but would like to get better practice with the R `tidyverse`.
+
+1) Introducing beginners to the RStudio IDE
+2) Doing some introductory plotting with `ggplot`
+
+We will use the [R for Data Science](https://r4ds.had.co.nz/index.html) free online text to guide us through learning R.
+
+![R for Data Science book](/img/cover.png).  
+
+
+
+
+<br>
+
+# Materials
+
+We'll be diving into [Ch 3, Data visualisation](https://r4ds.had.co.nz/data-visualisation.html) and will work through Section 3.3.1.
+
+```{r, echo =FALSE, }
+# devtools::install_github('yihui/xfun')
+
+# a single RmD file
+# xfun::embed_file('example.Rmd')
+
+ # r xfun::embed_file('example.Rmd')`  
+ # r xfun::embed_file('data.csv')` 
+
+```
+

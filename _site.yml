@@ -1,0 +1,20 @@
+name: "my-website"
+output_dir: "docs"
+navbar:
+  title: "EmoRy Coding Club"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Lesson 1"
+      href: lesson1.html
+  right:
+    - text: Admin
+      href: ecc_master1.html
+    - icon: fa-github
+      href: https://github.com/darwinanddavis/EmoRyCodingClub
+output:
+  html_document:
+    theme: lumen
+    highlight: tango
+    toc: true
+    toc_float: true
