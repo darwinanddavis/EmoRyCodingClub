@@ -53,6 +53,8 @@ url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/v
 df <- read.csv(url)
 
 
+
+
 df[is.na(df)] <- 0 # remove nas 
   
 head(df)

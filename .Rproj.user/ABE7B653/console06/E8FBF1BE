@@ -621,3 +621,22 @@ remote: Resolving deltas:   0% (0/23)   [Kremote: Resolving deltas:   4% (1/23
 To https://github.com/darwinanddavis/EmoRyCodingClub
    708eaa4..b4876a4  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[K.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''s'i't'e' 'u'p'd'a't'e' 'h'e'a'd'e'r' 'm'a'p's'[1P'
+[master 9b7c35e] site update header map
+ 4 files changed, 398 insertions(+), 39 deletions(-)
+ rewrite .Rproj.user/shared/notebooks/paths (100%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 12, done.
+Delta compression using up to 4 threads.
+Compressing objects:   9% (1/11)   Compressing objects:  18% (2/11)   Compressing objects:  27% (3/11)   Compressing objects:  36% (4/11)   Compressing objects:  45% (5/11)   Compressing objects:  54% (6/11)   Compressing objects:  63% (7/11)   Compressing objects:  72% (8/11)   Compressing objects:  81% (9/11)   Compressing objects:  90% (10/11)   Compressing objects: 100% (11/11)   Compressing objects: 100% (11/11), done.
+Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 6.61 KiB | 0 bytes/s, done.
+Total 12 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   b4876a4..9b7c35e  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open REad[K[KADME.md 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ got [K[K[Kit commit -m ''[K[K[K[K[K[K[K[K[K[K[K[Kadd .

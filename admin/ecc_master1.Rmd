@@ -96,7 +96,6 @@ methods(class="estUDm")
 
 # airbnb data -------------------------------------------------------------
 
-# Let's turn the following into a 
 ```{r}
 require(readr)
 

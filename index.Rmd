@@ -1,7 +1,47 @@
 ---
 title: "Welcome to the EmoRy Coding Club"
-header-includes:
- \usepackage{float}
+header-includes: \usepackage{float}
+fontsize: 12
+geometry: margin=1in
+documentclass: article
+linkcolor: blue
+urlcolor: blue
+citecolor: red
+output:
+  html_document:
+    highlight: tango
+    code_folding: show
+    toc: yes
+    toc_depth: 3
+    number_sections: no
+    toc_float: yes
+  pdf_document:
+    includes:
+      in_header: # add .tex file with header content
+    highlight: tango
+    template: null
+    toc: yes
+    toc_depth: 3
+    number_sections: false
+    fig_width: 4
+    fig_height: 5
+    fig_caption: true
+    df_print: tibble 
+    citation_package: biblatex # natbib
+    latex_engine: xelatex #pdflatex # lualatex
+    keep_tex: true # keep .tex file in dir 
+  word_document:
+    highlight: tango
+    keep_md: yes
+    pandoc_args: --smart
+    #reference: mystyles.docx
+    toc: yes
+inludes:
+  before_body: before_body.tex
+subtitle: 
+tags:
+- nothing
+- nothingness
 ---
 
 \  
@@ -27,6 +67,7 @@ header-includes:
 \  
 \  
 
+<!-- ----------------------- overview --------------------------- -->
 ## Overview    
 This page contains all the documents, links, and information for the monthly `R` coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, `R`, and research levels.  
   
@@ -67,14 +108,14 @@ July 11, 2019
 \  
 
 ## Location   
-Rm 2052  
+Room 2052  
 Wayne O. Rollins Building  
 \  
 
 ```{r,echo=F}
 require(leaflet)
 latlon <- c(33.79667, -84.32346) # emory
-ecc_label <- "Room 2052 \nWayne Rollins Research Building"
+ecc_label <- "Room 2052, Wayne O. Rollins Building"
 map <- leaflet() # initiate the leaflet map object
 map <- addTiles(map) # add the actual map tiles to the leaflet object
 map <- addMarkers(map,latlon[2],latlon[1],label=ecc_label,popup=ecc_label) # generate some random data around lat/lon 35
@@ -86,7 +127,10 @@ map
 <br>
 
 
-# Before you arrive:
+<!-- ----------------------- 1 before arrival --------------------------- -->
+# Before you arrive
+Everyone needs to have the following software and packages loaded before you come to the first session. That way, we can get straight into it.     
+  
 
 * Install [R](https://www.r-project.org/) from CRAN. 
   + If you're asked to choose a CRAN mirror, just choose whichever is closest to your location.
@@ -100,28 +144,35 @@ library(tidyverse)
 library(ggplot2)
 ```
 
+\  
+\  
+
+### If you have used `R` previously, you can skip to ['Learning Objectives'](#sec3).  
+
+\  
+\  
 
 <br>
 
+<!-- ----------------------- 2 pre check --------------------------- -->
+# Pre-work questions  
+If you you have no previous experience with R or coding, then before arriving please complete the pre-work below to get familiar with a few basic things about `R Studio` and coding in `R`. The exercise below should take less than 5 minutes to complete.  
 
-# Pre-work questions
-If you you have no previous experience with R or coding, then before arriving please complete the pre-work below to get familiar with a few basic things about the R Studio IDE and coding in R. The exercise below should take less than 5 minutes to complete.
-
-Once you have installed R and R Studio, copy and paste the code below into the R Studio *Console* and press *Enter* to run it.
+Once you have installed `R` and `R Studio`, copy and paste the code below into the `R Studio` *Console* and press *Enter* to run it.
 
 ```{r, eval = FALSE}
 
-# Caculate something simple
+# Calculate something simple
 2 + 2
 
-# Calculate something using built-in contants
+# Calculate something using built-in constants
 2*pi
 
 ```
 
 <br>
 
-Use the *assignment operator*, `<-`, to create new objects in R
+Use the *assignment operator*, `<-`, to create new objects in `R`
 
 ```{r, eval = FALSE}
 
@@ -138,29 +189,45 @@ b
 c
 ```
 
+<!-- ----------------------- 3 learning obj --------------------------- -->
+<a id="sec3"></a>  
 
 # Learning Objectives
 
-Our first EmoRy Coding Club will be primarily targeted towards beginners, but we hope this will also useful for anyone who may already be familiar with base R but would like to get better practice with the R `tidyverse`.
+Our first EmoRy Coding Club will be primarily targeted towards beginners, but we hope this will also useful for anyone who may already be familiar with base `R` but would like to get better practice with the `R` `tidyverse`.
 
-1) Introducing beginners to the RStudio IDE
+1) Introducing beginners to the `RStudio` IDE
 2) Doing some introductory plotting with `ggplot`
 
-We will use the [R for Data Science](https://r4ds.had.co.nz/index.html) free online text to guide us through learning R.
+We will use the [R for Data Science](https://r4ds.had.co.nz/index.html) free online text to guide us through learning `R`.
 
-![R for Data Science book](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/docs/img/cover.png).  
 
+<!-- ----------------------- image --------------------------- -->
+<div align="center"; text-align:center>
+  <img src="img/cover.png" style=width:33%>
+</div>
+<!-- ----------------------- image --------------------------- -->
 
 
 
 <br>
 
+<!-- ----------------------- 4 materials --------------------------- -->
 # Materials
 
 We'll be diving into [Ch 3, Data visualisation](https://r4ds.had.co.nz/data-visualisation.html) and working through Section 3.3.1.
 
 
-Once we've completed the R for Data Science exercises, we'll repeat the plotting exercise using open-access data from AirBnb.
+### The dataset    
+We'll be using [open-access data from AirBnb](http://insideairbnb.com/new-york-city/) as our toy dataset. Once we've completed the above **R for Data Science exercises**, we'll repeat the plotting exercise using these data.   
+
+
+<!-- ----------------------- image --------------------------- -->
+<div align="center"; text-align:center>
+  <img src="img/nyc.jpg" style=width:100%>
+</div>
+<!-- ----------------------- image --------------------------- -->  
+  
 
 This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below:
 
@@ -180,10 +247,20 @@ df <- url_read(url) # read in data
 
 # smaller csv file (16 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
-df <- read.csv(url)
+df_small <- read.csv(url)
+head(df_small[,1:5])
 
 ```
 
+If everything worked correctly, you should see the below ouput printed in your `R` console.  
+
+```{r, echo=F, eval=T}
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+df_small <- read.csv(url)
+head(df_small[,1:5])
+
+```
 
 ```{r, echo =FALSE, }
 # devtools::install_github('yihui/xfun')
