@@ -179,3 +179,39 @@ CONFLICT (modify/delete): .Rproj.user/shared/notebooks/45BF1761-ecc_master/1/s/c
 CONFLICT (modify/delete): .Rproj.user/shared/notebooks/45BF1761-ecc_master/1/ABE7B653FB918B88/chunks.json deleted in 607f7b92c692f66e2f64a1335f472ce4bc0ecf61 and modified in HEAD. Version HEAD of .Rproj.user/shared/notebooks/45BF1761-ecc_master/1/ABE7B653FB918B88/chunks.json left in tree.
 Automatic merge failed; fix conflicts and then commit the result.
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git [K[K[K[Kgit add . 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -mm '[K[K[K[Km ''u'p'd'a't'e'd' 'l'o'a'd'i'n'g' 'p'f'e'[1P'[1P'a'g'e'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'i'n'd'e'x'
+[master dbaafc1] updated index
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit[K[K[K[K[K[Kpush
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git remote --v
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push --set-upstream r[Koro[Kigin master
+To https://github.com/darwinanddavis/EmoRyCodingClub
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/darwinanddavis/EmoRyCodingClub'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull o[Korigin mss[K[Kaster
+remote: Enumerating objects: 11, done.[K
+remote: Counting objects:   9% (1/11)   [Kremote: Counting objects:  18% (2/11)   [Kremote: Counting objects:  27% (3/11)   [Kremote: Counting objects:  36% (4/11)   [Kremote: Counting objects:  45% (5/11)   [Kremote: Counting objects:  54% (6/11)   [Kremote: Counting objects:  63% (7/11)   [Kremote: Counting objects:  72% (8/11)   [Kremote: Counting objects:  81% (9/11)   [Kremote: Counting objects:  90% (10/11)   [Kremote: Counting objects: 100% (11/11)   [Kremote: Counting objects: 100% (11/11), done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+remote: Total 7 (delta 3), reused 7 (delta 3), pack-reused 0[K
+Unpacking objects:  14% (1/7)   Unpacking objects:  28% (2/7)   Unpacking objects:  42% (3/7)   Unpacking objects:  57% (4/7)   Unpacking objects:  71% (5/7)   Unpacking objects:  85% (6/7)   Unpacking objects: 100% (7/7)   Unpacking objects: 100% (7/7), done.
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+   607f7b9..6120561  master     -> origin/master
+Auto-merging index.Rmd
+Merge made by the 'recursive' strategy.
+ .Rhistory  | 1 [32m+[m
+ .gitignore | 1 [32m+[m
+ index.Rmd  | 2 [32m+[m[31m-[m
+ 3 files changed, 3 insertions(+), 1 deletion(-)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m[K[K[K[K[K[K[K[K[Kadd .
