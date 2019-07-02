@@ -1,30 +1,67 @@
 ---
-title: "EmoRy Coding Club"
+title: "Welcome to the EmoRy Coding Club"
 ---
 
 ```{r klippy, echo=FALSE, include=TRUE}
 klippy::klippy()
 ```
 
-# When & Where
+<!-- rmd settings -->
+```{r, set-options, echo = FALSE, cache = FALSE}
+options(width=100)
+knitr::opts_chunk$set(
+ eval = TRUE, # run all code
+ # echo = FALSE, # show code chunks in output 
+ comment = "",
+ tidy.opts=list(width.cutoff=100), # set width of code chunks in output
+ tidy=TRUE, # make output as tidy
+ message = FALSE,  # mask all messages
+ warning = FALSE, # mask all warnings 
+ size="small" # set code chunk size
+)
+```
 
-**Date:** July 11, 2019, 04:00 - 6:00p  
-**Location:** Rm 2052, O. Rollins
 
+<!-- install packages -->
+```{r, load packages, include=T, cache=F, message=F, warning=F, results='hide'}
+packages <- c("ggplot2","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr","leaflet")   
+if (require(packages)) {
+    install.packages(packages,dependencies = T)
+    require(packages)
+}
+lapply(packages,library,character.only=T)
+```
+
+
+```{r}
+require(leaflet)
+latlon <- c(33.79667, -84.32346) # emory
+ecc_label <- "EmoRy Coding Club"
+map <- leaflet() # initiate the leaflet map object
+map <- addTiles(map) # add the actual map tiles to the leaflet object
+map <- addMarkers(map,latlon[2],latlon[1],label=ecc_label,popup=ecc_label) # generate some random data around lat/lon 35
+map 
+
+```
+
+**Date for next session**  
+July 11, 2019, 04:00 - 6:00 PM  
+\  
+
+**Location**   
+Rm 2052, Wayne O. Rollins Building
+\  
 
 <br>
 
 
 # Before you arrive:
 
-Please complete the following install & setup.
-
-To participate in this workshop, you will need to make sure you:  
-
 * Install [R](https://www.r-project.org/) from CRAN. 
   + If you're asked to choose a CRAN mirror, just choose whichever is closest to your location.
 * Install [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)
 * Install the `tidyverse` package and then load it by copying and pasting the following code into the *Console* of RStudio and then pressing *Enter* to execute it.
+
 ```{r, eval= FALSE}
 install.packages("tidyverse")
 install.packages("ggplot2")
@@ -80,6 +117,10 @@ Our first EmoRy Coding Club will be primarily targeted towards beginners, but we
 
 We will use the [R for Data Science](https://r4ds.had.co.nz/index.html) free online text to guide us through learning R.
 
+![R for Data Science book](/img/cover.png).  
+
+
+
 
 <br>
 
@@ -114,7 +155,6 @@ df <- read.csv(url)
 
 
 ```{r, echo =FALSE, }
-
 # devtools::install_github('yihui/xfun')
 
 # a single RmD file

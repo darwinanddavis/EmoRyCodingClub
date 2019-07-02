@@ -1,5 +1,5 @@
 ---
-title: EmoRy Coding Club master document for club sessions  
+title: EmoRy Coding Club master document 
 author: |
  | Matthew Malishev*, Desiree De Leon & Hasse Walum     
  |  
@@ -65,8 +65,6 @@ This document can be found at `r params$doi`
 
 \newpage  
 
-## Example of first session   
-
 #### Pre session  
 1. assign 'hello world' to variable    
 2. print to console  
@@ -78,27 +76,20 @@ install.packages()
 head()  
 tail()
 str()
-
 plot()
-
 df$Col1
 df[,"Col1"]
 
-```
-
-#### TOC    
-What the session covers  
-Dataset  
-Showcase of what you'll learn by the end  
-
-```{r,eval=F}
-df <- read.csv("https://query.data.world/s/beephekfuniqs7n3ym2uitmbvoccgs", header=TRUE, stringsAsFactors=FALSE)
-
-str(df)
-unique(df$completed_on)[1]
-plot(df$end_location_lat,df$end_location_long,pch=20,main="R plot",las=1,xlim=c(30,35),ylim=c(-112,98))
+# See call options for class
+methods(class="estUDm")  
 
 ```
+
+<!-- #### TOC     -->
+<!-- What the session covers   -->
+<!-- Dataset   -->
+<!-- Showcase of what you'll learn by the end   -->
+
 
 
 #### Importing Data

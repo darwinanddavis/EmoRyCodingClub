@@ -1,0 +1,71 @@
+# sandbox for ecc dataset  
+require(mapdata)
+require(ggplot2)
+
+df <- read.csv("https://query.data.world/s/beephekfuniqs7n3ym2uitmbvoccgs", header=TRUE, stringsAsFactors=FALSE)
+str(df)
+unique(df$completed_on)[1]
+# plot(df$end_location_lat,df$end_location_long,pch=20,main="R plot",las=1,xlim=c(30,35),ylim=c(-112,98))
+str(df)
+
+
+# clean data --------------------------------------------------------------
+
+lat <- subset(df,end_location_lat==sample(seq(30,35,0.01),200,replace=F));lat
+lon <- subset(df,end_location_long==sample(seq(-98,-95,0.01),200,replace=F));lon
+length(lat);length(lon)
+lat <- lat$end_location_lat
+lon <- lon$end_location_long[1:length(lat)] # make same length 
+latlon <- data.frame(lat,lon)
+
+xlim <- c(max(lon),min(lon))
+ylim <- c(min(lat),max(lat))
+
+# plot --------------------------------------------------------------------
+
+map <- map_data("world", region="usa")
+map <- subset(map,subregion=="Texas")
+
+ggplot +
+  geom_polygon(data=map,aes(x=long, y=lat, group = group), fill = map$group, col="white",size=0.1)
+
+with(latlon,points(lat~lon, pch=20, col = "red", cex = 0.5))
+
+
+
+# airbnb data -------------------------------------------------------------
+# http://insideairbnb.com/get-the-data.html
+require(readr)
+
+# function for reading in zipped file (106 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+
+url_read <- function(file_url) {
+  con <- gzcon(url(file_url))
+  txt <- readLines(con)
+  return(read.csv(textConnection(txt)))
+}
+
+df <- url_read(url) # read in data
+
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+df <- read.csv(url)
+
+
+df[is.na(df)] <- 0 # remove nas 
+  
+head(df)
+str(df)
+names(df)
+# df <- df[1:5000,] # subset data to smaller chunk 
+df$bedrooms
+
+
+df <- df # sub1 choose dataset
+f1 <- "number_of_reviews_ltm"
+f2 <- "beds"  
+col1 <- "bedrooms"
+# plot
+plot(df[,f1],df[,f2],pch=20,col=adjustcolor(df[,col1]+1,0.5))
+
