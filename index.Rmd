@@ -8,10 +8,12 @@ header-includes:
 \  
 
 ## Organisers  
-\    
-### Matt Malishev  
-### Desiree de Leon  
-### Hasse Walum  
+\  
+
+**Matt Malishev**  
+**Desiree de Leon**  
+**Hasse Walum**  
+
 \  
 \  
 <!-- ----------------------- image --------------------------- -->

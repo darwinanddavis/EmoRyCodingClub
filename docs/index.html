@@ -444,7 +444,7 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="lesson1.html">Lesson 1</a>
+  <a href="Lesson1.html">Lesson 1</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -471,14 +471,14 @@ div.tocify {
 <p>   </p>
 <div id="organisers" class="section level2">
 <h2>Organisers</h2>
-<p>   </p>
-<!-- ----------------------- image --------------------------- -->
+<p> </p>
+<p><strong>Matt Malishev</strong><br />
+<strong>Desiree de Leon</strong><br />
+<strong>Hasse Walum</strong></p>
+    <!-- ----------------------- image --------------------------- -->
 <div align="center" ;="" text-align:center="">
 <p><img src="img/mm.jpeg" style=width:33%> <img src="img/ddl.jpeg" style=width:33%> <img src="img/hw.jpg" style=width:33%></p>
 </div>
-<p>Matt Malishev<br />
-Desiree de Leon<br />
-Hasse Walum</p>
 <!-- ----------------------- image --------------------------- -->
 <p>   </p>
 </div>
@@ -499,8 +499,8 @@ Hasse Walum</p>
 <p>Rm 2052<br />
 Wayne O. Rollins Building<br />
  </p>
-<div id="htmlwidget-17bca724e6d8448508c1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-17bca724e6d8448508c1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Room 2052 \nWayne Rollins Research Building",null,null,null,"Room 2052 \nWayne Rollins Research Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8006aac3d56ff0844bfb" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8006aac3d56ff0844bfb">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Room 2052 \nWayne Rollins Research Building",null,null,null,"Room 2052 \nWayne Rollins Research Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
 <p><br></p>
 </div>
 <div id="before-you-arrive" class="section level1">
@@ -552,22 +552,22 @@ c</code></pre></div>
 <p>We’ll be diving into <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3, Data visualisation</a> and working through Section 3.3.1.</p>
 <p>Once we’ve completed the R for Data Science exercises, we’ll repeat the plotting exercise using open-access data from AirBnb.</p>
 <p>This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">require</span>(readr)</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co"># function for reading in zipped file (106 cols)</span></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span></a>
-<a class="sourceLine" id="cb5-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb5-6" data-line-number="6">url_read &lt;-<span class="st"> </span><span class="cf">function</span>(file_url) {</a>
-<a class="sourceLine" id="cb5-7" data-line-number="7">  con &lt;-<span class="st"> </span><span class="kw">gzcon</span>(<span class="kw">url</span>(file_url))</a>
-<a class="sourceLine" id="cb5-8" data-line-number="8">  txt &lt;-<span class="st"> </span><span class="kw">readLines</span>(con)</a>
-<a class="sourceLine" id="cb5-9" data-line-number="9">  <span class="kw">return</span>(<span class="kw">read.csv</span>(<span class="kw">textConnection</span>(txt)))</a>
-<a class="sourceLine" id="cb5-10" data-line-number="10">}</a>
-<a class="sourceLine" id="cb5-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb5-12" data-line-number="12">df &lt;-<span class="st"> </span><span class="kw">url_read</span>(url) <span class="co"># read in data</span></a>
-<a class="sourceLine" id="cb5-13" data-line-number="13"></a>
-<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co"># smaller csv file (16 cols)</span></a>
-<a class="sourceLine" id="cb5-15" data-line-number="15">url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span></a>
-<a class="sourceLine" id="cb5-16" data-line-number="16">df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(url)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(readr)
+
+<span class="co"># function for reading in zipped file (106 cols)</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
+
+url_read &lt;-<span class="st"> </span><span class="cf">function</span>(file_url) {
+    con &lt;-<span class="st"> </span><span class="kw">gzcon</span>(<span class="kw">url</span>(file_url))
+    txt &lt;-<span class="st"> </span><span class="kw">readLines</span>(con)
+    <span class="kw">return</span>(<span class="kw">read.csv</span>(<span class="kw">textConnection</span>(txt)))
+}
+
+df &lt;-<span class="st"> </span><span class="kw">url_read</span>(url)  <span class="co"># read in data</span>
+
+<span class="co"># smaller csv file (16 cols)</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
+df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(url)</code></pre></div>
 </div>
 
 
