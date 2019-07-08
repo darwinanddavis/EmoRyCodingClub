@@ -132,6 +132,38 @@ df <- read.csv(url)
 
 
 ```
+
+# How about this for data import to use tidyverse?
+
+The large dataset has some utility for demonstrated that real data is messy, ie. has multiple variables for neighbourhood--some cleaned, some not. But beyond possibly demonstrating that for the first lesson, I don't think we should use the large data set. 
+
+Also, emphasizing tidyverse with: 
+
+* `readr::read_csv()` instead of `read.csv` (and also much faster for reading the data in)
+* printing tibbles instead of `head()`
+* `glimpse()` in place of `str()`
+
+```{r}
+library(tidyverse) # includes package "readr"
+
+# All Airbnb data (106 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+
+df_full <- read_csv(url) # reads in data
+df <- df_full[df_full$id<1000000,] # subsets ~2k of the ~48k entries based on (arbitrary?) id 
+df # prints as a tibble
+
+
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+
+df_full <-  read_csv(url)
+df <- df_full[df_full$id<1000000,]
+df
+
+glimpse(df)
+
+```
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->

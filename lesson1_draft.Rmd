@@ -1,12 +1,31 @@
 ---
-Title: Lesson 1
+title: EmoRy Coding Club master document 
+author: |
+ | Matt Malishev*, Desiree De Leon & Hasse Walum     
+ |  
+ | _Emory University, 1510 Clifton Road NE, Atlanta, GA, USA, 30322_
+#bibliography:/Users/malishev/Documents/Melbourne Uni/Thesis_2016/library.bib
+output:
+  html_document:
+    highlight: tango
+    code_folding: show
+    toc: yes
+    toc_depth: 4
+    number_sections: no
+    toc_float: yes
+params: 
+  # dir: "/Users/malishev/Documents/Emory/admin/ecc/"
+  date: !r Sys.Date()
+  session: !r sessionInfo()  
+  version: !r getRversion()
+  email: "matthew.malishev@emory.edu"
+  doi: https://github.com/darwinanddavis/EmoRyCodingClub
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
-\
 
 # Agenda
 
@@ -19,7 +38,6 @@ We'll use the content from Chapter 3 of the R for Data Science book.
 5. Reading in outside data
 6. Plotting outside data with ggplot
 
-\
 
 # Loading the tidyverse
 
@@ -53,7 +71,6 @@ Among the variables in `mpg` are:
 * `hwy`, a car’s fuel efficiency on the highway, in miles per gallon (mpg). 
 
 \
-
 # 3.2.2 Creating a ggplot
 
 Run and plot this code first: 
@@ -65,18 +82,16 @@ ggplot(data = mpg) +
 
 This is a plot of the two variables highlighted above. 
 
-Now here's what's going on: 
+Now here's what's going on:
 
 * ggplot() is creating a coordinate system for us--basically an empty graph (This is Exercise #1 later).
 * Now add a "layers", e.g. geom_point (but there are many for different kinds of graphs). Today, we're sticking to scatterplots and geom_point.
 * This always has a mapping argument. Mapping and `aes` will always go together. The `x` and `y` of `aes`, is where we specify what variables go on which axis.
-\
 
 # 3.2.3 A graphing template
 
 We can keep re-using our ggplot code as a template-- to create new plots. The next sections will be about how to modify the mappings and aesthetics to visualize different parts of this dataset.
 
-\
 
 # 3.2.4 Exercises, 10 minutes (?)
 
@@ -87,7 +102,6 @@ ggplot(data = mpg)
 ```
 
 \
-
 2. How many rows are in `mpg`? How many columns?
 
 ```{r, eval = FALSE}
@@ -97,7 +111,6 @@ str(mpg) # or the base r way
 ```
 
 \
-
 3. What does the `drv `variable describe? Read the help for ?mpg to find out.
 ```{r, eval = FALSE}
 ?mpg 
@@ -105,7 +118,6 @@ str(mpg) # or the base r way
 
 If we print `mpg` and find drv column, it's a bunch of weird values. What do they mean? Check the help documentation to find out. `?` works because this data set is built-in.
 \
-
 4. Make a scatterplot of `hwy` vs `cyl`.
 
 ```{r, eval = FALSE}
@@ -113,7 +125,6 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x=hwy, y=cyl))
 ```
 \
-
 5. What happens if you make a scatterplot of class vs drv? Why is the plot not useful?
 
 ```{r, eval = FALSE}
@@ -121,7 +132,6 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x=class, y=drv))
 ```
 
-\
 
 # 3.3 Aesthetic mappings
 
@@ -134,7 +144,6 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy, color = class))
 ```
 \
-
 1. Map class to **size** aesthetic
 
 ```{r, eval = FALSE}
@@ -153,7 +162,6 @@ We get a warning, but this is okay.
 ```
 
 \
-
 3. What happens when you map class to the **shape** aesthetic?
 
 ```{r, eval = FALSE}
@@ -173,7 +181,6 @@ But we can *set* the aesthetic properties manually, instead of having ggplot do 
     geom_point(mapping = aes(x = displ, y = hwy), color = "blue")
 ```
 \
-
 1. Try specifying the color with a [hex code] (https://htmlcolorcodes.com/color-picker/) in quotes. 
 
 ```{r, eval = FALSE}
@@ -188,11 +195,10 @@ But we can *set* the aesthetic properties manually, instead of having ggplot do 
   ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy, color = class), color = "#FFFFFF")
   ```
-\ 
+  
 The inner one is overridden. 
 
 \
-
 3. Extra question: Can you try to generate a plot that looks like this?
 
 ```{r, eval = TRUE, echo = FALSE}
@@ -200,9 +206,7 @@ The inner one is overridden.
     geom_point(mapping = aes(x = displ, y = hwy, size = class, alpha = class), color = "blue")
   
 ```
-
-\
-
+  
 ## Aesthetics you can manually set: 
   * The name of a color as a character string.
   * The size of a point in mm.
@@ -212,20 +216,19 @@ The inner one is overridden.
   
 R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the `colour` and `fill` aesthetics. The hollow shapes (0--14) have a border determined by `colour`; the solid shapes (15--18) are filled with `colour`; the filled shapes (21--24) have a border of `colour` and are filled with `fill`.
   
- 
+  
 Here's an example using a specific shape and size for all points.
 
 ```{r, eval = FALSE}
   ggplot(data = mpg) + 
     geom_point(mapping = aes(x = displ, y = hwy, size = cyl), shape = 21, size = 6)
 ```
-\
+  
   
 # 3.3.1 Exercises
 
 Try these on your own. 15 min?
 \
-
 1. What’s gone wrong with this code? Why are the points not blue?
 
 ```{r, eval = FALSE, include = FALSE} 
@@ -233,7 +236,6 @@ Try these on your own. 15 min?
     geom_point(mapping = aes(x = displ, y = hwy, color = "blue"))
 ```  
 \  
-
 2.  Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset). How can you see this information when you run mpg?
 
 ```{r, include = FALSE}
@@ -241,7 +243,6 @@ Try these on your own. 15 min?
     # Continuous: cty, displ
 ```
 \
-
 3.  Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?
 
 ```{r, include = FALSE, eval = FALSE}
@@ -257,7 +258,7 @@ Try these on your own. 15 min?
     ggplot(data = mpg) + 
       geom_point(mapping = aes(x = displ, y = hwy, shape = cyl)) # WILL NOT WORK
 ```
-\    
+    
     
 4. What happens if you map the same variable to multiple aesthetics?
 
@@ -273,8 +274,7 @@ Try these on your own. 15 min?
       geom_point(mapping = aes(x = displ, y = hwy, size = class, color = class))
     
 ```   
-\
-
+    
 5. What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)
 
 ```{r, include = FALSE}
@@ -292,8 +292,6 @@ Try these on your own. 15 min?
 
 ```
 
-\
-
 6. What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ < 5)? Note, you’ll also need to specify x and y.
   
 ``` {r, include = FALSE}
@@ -304,8 +302,6 @@ Try these on your own. 15 min?
     
 ```   
   
-\
-
 ## 3.4 Common problems
 
 Make sure that you: 
@@ -314,15 +310,11 @@ Make sure that you:
   * Make use of `?`
     
 
-\
-
 # Using wild-caught data
 
 The airbnb data set is not a built in data set, so no we can't use ?dataset help.
 
-\
-
-# Read in data
+## Read in data
 
 ```{r, eval = FALSE}
 library(tidyverse) # includes package "readr"
@@ -338,9 +330,7 @@ df # prints as a tibble
 
 
 
-\
-
-## Taking a quick look at the larger data set
+### Taking a quick look at the larger data set
 * Use glimpse(df) to see a list of all the columns
 * Real data has messy entries, e.g. "Williamsburg, Brooklyn" and "Williamsburg bk" 
 
@@ -359,9 +349,7 @@ glimpse(df)
 
 ``` 
 
-\
-
-# Use `ggplot()`
+## Use `ggplot()`
 
 * We'll do 1 together.
 * Create new scatter plots with the data on your own
@@ -410,8 +398,6 @@ glimpse(df)
        caption = "this is a caption",
        col = "Renamed Legend") 
 ```        
-* Ugly ggplot code courtesy of [Emily Riederer](https://gist.github.com/emilyriederer/2bf4f67d7e198f8359b61706c82e42ee)
-\
 
 ```{r}
   # plot neighborhood_group vs price
@@ -419,7 +405,6 @@ glimpse(df)
     ggplot(data = df) + 
       geom_point(mapping = aes(x = neighbourhood_group, y = price, color = neighbourhood_group), shape = 21, stroke = 1)
 ```
-\
 
 ```{r, include = FALSE}
   # plot minimum_nights vs price
@@ -428,15 +413,13 @@ glimpse(df)
       geom_point(mapping = aes(x = minimum_nights, y = price, color = neighbourhood_group), shape = 21, stroke = 1)
  
 ```
-\
 
 ```{r, include = FALSE}
   # availability_365 vs price
     ggplot(data = df) + 
       geom_point(mapping = aes(x = availability_365, y = price, color = neighbourhood_group), shape = 21, stroke = 1)
 ```
- \
- 
+    
 ```{r, include = FALSE}
   # plot longitude vs price
     
@@ -480,5 +463,6 @@ glimpse(df)
        y = "my y axis",
        caption = "this is a caption",
        col = "Renamed Legend") 
-```
+
    
+        

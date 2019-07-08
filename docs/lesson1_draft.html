@@ -11,7 +11,7 @@
 
 
 
-<title>Lesson1.utf8.md</title>
+<title>EmoRy Coding Club master document</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -23,6 +23,7 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -90,6 +91,15 @@ code span.va { color: #000000; } /* Variable */
 code span.vs { color: #4e9a06; } /* VerbatimString */
 code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
 
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
 </style>
 <script>
 // apply pandoc div.sourceCode style to pre.sourceCode instead
@@ -335,6 +345,14 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
 
 
 
@@ -348,7 +366,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2,h3",
+      selectors: "h1,h2,h3,h4",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
@@ -476,14 +494,24 @@ div.tocify {
 
 <div class="fluid-row" id="header">
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
+
+<h1 class="title toc-ignore">EmoRy Coding Club master document</h1>
+<h4 class="author"><div class="line-block">Matt Malishev*, Desiree De Leon &amp; Hasse Walum<br />
+<br />
+<em>Emory University, 1510 Clifton Road NE, Atlanta, GA, USA, 30322</em></div></h4>
 
 </div>
 
 
-<p><br />
-</p>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
 <p>We’ll use the content from Chapter 3 of the R for Data Science book.</p>
@@ -495,8 +523,6 @@ div.tocify {
 <li>Reading in outside data</li>
 <li>Plotting outside data with ggplot</li>
 </ol>
-<p><br />
-</p>
 </div>
 <div id="loading-the-tidyverse" class="section level1">
 <h1>Loading the tidyverse</h1>
@@ -524,10 +550,7 @@ div.tocify {
 <li><code>hwy</code>, a car’s fuel efficiency on the highway, in miles per gallon (mpg).</li>
 </ul>
 <p><br />
-</p>
-</div>
-<div id="creating-a-ggplot" class="section level1">
-<h1>3.2.2 Creating a ggplot</h1>
+# 3.2.2 Creating a ggplot</p>
 <p>Run and plot this code first:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb3-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x=</span>displ, <span class="dt">y =</span> hwy))</a></code></pre></div>
@@ -536,15 +559,12 @@ div.tocify {
 <ul>
 <li>ggplot() is creating a coordinate system for us–basically an empty graph (This is Exercise #1 later).</li>
 <li>Now add a “layers”, e.g. geom_point (but there are many for different kinds of graphs). Today, we’re sticking to scatterplots and geom_point.</li>
-<li>This always has a mapping argument. Mapping and <code>aes</code> will always go together. The <code>x</code> and <code>y</code> of <code>aes</code>, is where we specify what variables go on which axis.<br />
-</li>
+<li>This always has a mapping argument. Mapping and <code>aes</code> will always go together. The <code>x</code> and <code>y</code> of <code>aes</code>, is where we specify what variables go on which axis.</li>
 </ul>
 </div>
 <div id="a-graphing-template" class="section level1">
 <h1>3.2.3 A graphing template</h1>
 <p>We can keep re-using our ggplot code as a template– to create new plots. The next sections will be about how to modify the mappings and aesthetics to visualize different parts of this dataset.</p>
-<p><br />
-</p>
 </div>
 <div id="exercises-10-minutes" class="section level1">
 <h1>3.2.4 Exercises, 10 minutes (?)</h1>
@@ -553,35 +573,21 @@ div.tocify {
 </ol>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg)</a></code></pre></div>
 <p><br />
-</p>
-<ol start="2" style="list-style-type: decimal">
-<li>How many rows are in <code>mpg</code>? How many columns?</li>
-</ol>
+2. How many rows are in <code>mpg</code>? How many columns?</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">mpg <span class="co">#234 rows, 11 columns, which we know from the tibble output</span></a>
 <a class="sourceLine" id="cb5-2" data-line-number="2"><span class="kw">glimpse</span>(mpg) <span class="co"># Can also do it this way</span></a>
 <a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw">str</span>(mpg) <span class="co"># or the base r way</span></a></code></pre></div>
 <p><br />
-</p>
-<ol start="3" style="list-style-type: decimal">
-<li>What does the <code>drv</code>variable describe? Read the help for ?mpg to find out.</li>
-</ol>
+3. What does the <code>drv</code>variable describe? Read the help for ?mpg to find out.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">?mpg </a></code></pre></div>
 <p>If we print <code>mpg</code> and find drv column, it’s a bunch of weird values. What do they mean? Check the help documentation to find out. <code>?</code> works because this data set is built-in.<br />
-</p>
-<ol start="4" style="list-style-type: decimal">
-<li>Make a scatterplot of <code>hwy</code> vs <code>cyl</code>.</li>
-</ol>
+4. Make a scatterplot of <code>hwy</code> vs <code>cyl</code>.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb7-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x=</span>hwy, <span class="dt">y=</span>cyl))</a></code></pre></div>
 <p><br />
-</p>
-<ol start="5" style="list-style-type: decimal">
-<li>What happens if you make a scatterplot of class vs drv? Why is the plot not useful?</li>
-</ol>
+5. What happens if you make a scatterplot of class vs drv? Why is the plot not useful?</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb8-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x=</span>class, <span class="dt">y=</span>drv))</a></code></pre></div>
-<p><br />
-</p>
 </div>
 <div id="aesthetic-mappings" class="section level1">
 <h1>3.3 Aesthetic mappings</h1>
@@ -590,10 +596,7 @@ div.tocify {
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb9-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">color =</span> class))</a></code></pre></div>
 <p><br />
-</p>
-<ol style="list-style-type: decimal">
-<li>Map class to <strong>size</strong> aesthetic</li>
-</ol>
+1. Map class to <strong>size</strong> aesthetic</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb10-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">size =</span> class))</a></code></pre></div>
 <p>We get a warning, but this is okay.<br />
@@ -604,10 +607,7 @@ div.tocify {
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1">  <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb11-2" data-line-number="2"><span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">alpha =</span> class)) <span class="co"># maps classes to different transparencies</span></a></code></pre></div>
 <p><br />
-</p>
-<ol start="3" style="list-style-type: decimal">
-<li>What happens when you map class to the <strong>shape</strong> aesthetic?</li>
-</ol>
+3. What happens when you map class to the <strong>shape</strong> aesthetic?</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1">  <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb12-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">shape =</span> class))</a></code></pre></div>
 <p>Any warnings? Yes – because shape maxes out at six levels.</p>
@@ -617,10 +617,7 @@ div.tocify {
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">  <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb13-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</a></code></pre></div>
 <p><br />
-</p>
-<ol style="list-style-type: decimal">
-<li>Try specifying the color with a [hex code] (<a href="https://htmlcolorcodes.com/color-picker/" class="uri">https://htmlcolorcodes.com/color-picker/</a>) in quotes.</li>
-</ol>
+1. Try specifying the color with a [hex code] (<a href="https://htmlcolorcodes.com/color-picker/" class="uri">https://htmlcolorcodes.com/color-picker/</a>) in quotes.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">  <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb14-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">color =</span> <span class="st">&quot;#FFFFFF&quot;</span>)</a></code></pre></div>
 <p><br />
@@ -630,17 +627,12 @@ div.tocify {
 </ol>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"> <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb15-2" data-line-number="2"><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">color =</span> class), <span class="dt">color =</span> <span class="st">&quot;#FFFFFF&quot;</span>)</a></code></pre></div>
-<p>  The inner one is overridden.</p>
+<p>The inner one is overridden.</p>
 <p><br />
-</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Extra question: Can you try to generate a plot that looks like this?</li>
-</ol>
+3. Extra question: Can you try to generate a plot that looks like this?</p>
 <pre><code>## Warning: Using size for a discrete variable is not advised.</code></pre>
 <pre><code>## Warning: Using alpha for a discrete variable is not advised.</code></pre>
-<p><img src="Lesson1_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
-<p><br />
-</p>
+<p><img src="lesson1_draft_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <div id="aesthetics-you-can-manually-set" class="section level2">
 <h2>Aesthetics you can manually set:</h2>
 <ul>
@@ -655,57 +647,30 @@ div.tocify {
 <p>Here’s an example using a specific shape and size for all points.</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">  <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb18-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">size =</span> cyl), <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">size =</span> <span class="dv">6</span>)</a></code></pre></div>
-<p><br />
-</p>
 </div>
 </div>
 <div id="exercises" class="section level1">
 <h1>3.3.1 Exercises</h1>
 <p>Try these on your own. 15 min?<br />
-</p>
-<ol style="list-style-type: decimal">
-<li>What’s gone wrong with this code? Why are the points not blue?</li>
-</ol>
-<p> </p>
-<ol start="2" style="list-style-type: decimal">
-<li>Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset). How can you see this information when you run mpg?</li>
-</ol>
+1. What’s gone wrong with this code? Why are the points not blue?</p>
+<p>  2. Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset). How can you see this information when you run mpg?</p>
 <p><br />
-</p>
-<ol start="3" style="list-style-type: decimal">
-<li>Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?</li>
-</ol>
-<p> </p>
+3. Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?</p>
 <ol start="4" style="list-style-type: decimal">
-<li>What happens if you map the same variable to multiple aesthetics?</li>
+<li><p>What happens if you map the same variable to multiple aesthetics?</p></li>
+<li><p>What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)</p></li>
+<li><p>What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ &lt; 5)? Note, you’ll also need to specify x and y.</p></li>
 </ol>
-<p><br />
-</p>
-<ol start="5" style="list-style-type: decimal">
-<li>What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)</li>
-</ol>
-<p><br />
-</p>
-<ol start="6" style="list-style-type: decimal">
-<li>What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ &lt; 5)? Note, you’ll also need to specify x and y.</li>
-</ol>
-<p><br />
-</p>
 <div id="common-problems" class="section level2">
 <h2>3.4 Common problems</h2>
 <p>Make sure that you: * Haven’t put <code>+</code> on the wrong line * Use ( ) and &quot;&quot; in pairs * Make use of <code>?</code></p>
-<p><br />
-</p>
 </div>
 </div>
 <div id="using-wild-caught-data" class="section level1">
 <h1>Using wild-caught data</h1>
 <p>The airbnb data set is not a built in data set, so no we can’t use ?dataset help.</p>
-<p><br />
-</p>
-</div>
-<div id="read-in-data" class="section level1">
-<h1>Read in data</h1>
+<div id="read-in-data" class="section level2">
+<h2>Read in data</h2>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1"><span class="kw">library</span>(tidyverse) <span class="co"># includes package &quot;readr&quot;</span></a>
 <a class="sourceLine" id="cb19-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb19-3" data-line-number="3"><span class="co"># All Airbnb data (106 cols)</span></a>
@@ -714,10 +679,8 @@ div.tocify {
 <a class="sourceLine" id="cb19-6" data-line-number="6">df_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url) <span class="co"># reads in data</span></a>
 <a class="sourceLine" id="cb19-7" data-line-number="7">df &lt;-<span class="st"> </span>df_full[df_full<span class="op">$</span>id<span class="op">&lt;</span><span class="dv">1000000</span>,] <span class="co"># subsets ~2k of the ~48k entries based on (arbitrary?) id </span></a>
 <a class="sourceLine" id="cb19-8" data-line-number="8">df <span class="co"># prints as a tibble</span></a></code></pre></div>
-<p><br />
-</p>
-<div id="taking-a-quick-look-at-the-larger-data-set" class="section level2">
-<h2>Taking a quick look at the larger data set</h2>
+<div id="taking-a-quick-look-at-the-larger-data-set" class="section level3">
+<h3>Taking a quick look at the larger data set</h3>
 <ul>
 <li>Use glimpse(df) to see a list of all the columns</li>
 <li>Real data has messy entries, e.g. “Williamsburg, Brooklyn” and “Williamsburg bk”</li>
@@ -786,12 +749,10 @@ div.tocify {
 ## $ reviews_per_month              &lt;dbl&gt; 0.21, 0.38, NA, 4.53, 0.24, 0.10,…
 ## $ calculated_host_listings_count &lt;dbl&gt; 6, 2, 1, 1, 1, 1, 1, 1, 1, 1, 4, …
 ## $ availability_365               &lt;dbl&gt; 365, 331, 365, 182, 83, 0, 92, 0,…</code></pre>
-<p><br />
-</p>
 </div>
 </div>
-<div id="use-ggplot" class="section level1">
-<h1>Use <code>ggplot()</code></h1>
+<div id="use-ggplot" class="section level2">
+<h2>Use <code>ggplot()</code></h2>
 <ul>
 <li>We’ll do 1 together.</li>
 <li>Create new scatter plots with the data on your own
@@ -840,20 +801,12 @@ div.tocify {
        y = &quot;my y axis&quot;,
        caption = &quot;this is a caption&quot;,
        col = &quot;Renamed Legend&quot;) </code></pre>
-<ul>
-<li>Ugly ggplot code courtesy of <a href="https://gist.github.com/emilyriederer/2bf4f67d7e198f8359b61706c82e42ee">Emily Riederer</a><br />
-</li>
-</ul>
 <div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1">  <span class="co"># plot neighborhood_group vs price</span></a>
 <a class="sourceLine" id="cb27-2" data-line-number="2">    </a>
 <a class="sourceLine" id="cb27-3" data-line-number="3">    <span class="kw">ggplot</span>(<span class="dt">data =</span> df) <span class="op">+</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb27-4" data-line-number="4"><span class="st">      </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> neighbourhood_group, <span class="dt">y =</span> price, <span class="dt">color =</span> neighbourhood_group), <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>)</a></code></pre></div>
-<p><img src="Lesson1_files/figure-html/unnamed-chunk-26-1.png" width="672" /><br />
-</p>
-<p><br />
-</p>
-<p><br />
-</p>
+<p><img src="lesson1_draft_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+</div>
 </div>
 
 

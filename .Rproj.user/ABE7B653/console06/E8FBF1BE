@@ -959,3 +959,164 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+Already on 'master'
+Your branch and 'origin/master' have diverged,
+and have 3 and 3 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull ri[K[Kori[K[Krigin master
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+Please move or remove them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git sybmodel [K[K[K[K[K[K[K[Kubmodelu[K[K[Kule update --init
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git p[K[K[K[K[Kgit submodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[Cpull origin[C[C[C[C[C[C[C
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+Please move or remove them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin mastersubmodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[C[12Prebase[5Pls -agit rm DS_Store ls -a[Kgit rebase
+Cannot rebase: You have unstaged changes.
+Please commit or stash them.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rebasepull origin mastersubmodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[C[12Prebase
+Cannot rebase: You have unstaged changes.
+Please commit or stash them.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rebasepull origin mastersubmodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[C[12Prebase[5Pls -agit rm DS_Store [1@.[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[1@.[C[C[C[C[C[C[C[C[C
+fatal: pathspec '.DS_Store' did not match any files
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset
+Unstaged changes after reset:
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git resetm .DS_Store [7Pebase
+Cannot rebase: You have unstaged changes.
+Please commit or stash them.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rebase[1Psetm .DS_Store [7Pebasepull origin mastersubmodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[C[12Prebase[5Pls -agit rebasecheckout -f masterpull origin[C[C[C[C[C[C[Csubmodule update --init[5Ppull origin master
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+Please move or remove them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin master[12Prebase[1Psetm .DS_Store [7Pebasepull origin mastersubmodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[C[12Prebase[5Pls -agit rm DS_Store 
+fatal: pathspec 'DS_Store' did not match any files
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm DS_Store pull origin master[6Prm DS_Store [1@.
+fatal: pathspec '.DS_Store' did not match any files
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm .DS_Store [1P[C[C[C[C[C[C[C[C[Cpull origin master[12Prebase[1Psetm .DS_Store [8Pesetbasepull origin master[6Prm DS_Store [1@.[C[C[C[C[C[C[C[C[C[Kgit merge master
+Already up-to-date.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull or[K[K
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+Please move or remove them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git config core.ignorecase truepull [K[K[K[K[K[K[K[K[K[Kgit merge --strategy=ours master 
+Already up-to-date.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ mv .DS_Store /[Kcd ""[K[K[K[K[K/d[Kadmin[K[K[K[K[K[Kadmin_
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git comm[K[K[K[Kreset
+Unstaged changes after reset:
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin master
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+Removing admin/index.Rmd
+Auto-merging admin/ecc_master1.Rmd
+CONFLICT (modify/delete): admin/_site/site_libs/tocify-1.9.1/jquery.tocify.js deleted in fe066942840491abb8acf8201c70fb2b93e8f558 and modified in HEAD. Version HEAD of admin/_site/site_libs/tocify-1.9.1/jquery.tocify.js left in tree.
+CONFLICT (modify/delete): admin/_site/site_libs/tocify-1.9.1/jquery.tocify.css deleted in fe066942840491abb8acf8201c70fb2b93e8f558 and modified in HEAD. Version HEAD of admin/_site/site_libs/tocify-1.9.1/jquery.tocify.css left in tree.
+Removing admin/_site/site_libs/navigation-1.1/tabsets.js
+Removing admin/_site/site_libs/navigation-1.1/sourceembed.js
+Removing admin/_site/site_libs/navigation-1.1/codefolding.js
+Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.theme.min.css
+Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.theme.css
+Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.structure.min.css
+Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.structure.css
+Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.min.js
+Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.min.css
+Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.js
+Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.css
+Removing admin/_site/site_libs/jqueryui-1.11.4/index.html
+Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png
+Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png
+Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_777777_256x240.png
+Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_777620_256x240.png
+Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_555555_256x240.png
+Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_444444_256x240.png
+Removing admin/_site/site_libs/jqueryui-1.11.4/README
+Removing admin/_site/site_libs/jquery-1.11.3/jquery.min.js
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff2
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.ttf
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.svg
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.eot
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff2
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.ttf
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.svg
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.eot
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff2
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.ttf
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.svg
+Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.eot
+Removing admin/_site/site_libs/font-awesome-5.1.0/css/v4-shims.css
+Removing admin/_site/site_libs/font-awesome-5.1.0/css/all.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/shim/respond.min.js
+Removing admin/_site/site_libs/bootstrap-3.3.5/shim/html5shiv.min.js
+Removing admin/_site/site_libs/bootstrap-3.3.5/js/npm.js
+Removing admin/_site/site_libs/bootstrap-3.3.5/js/bootstrap.min.js
+Removing admin/_site/site_libs/bootstrap-3.3.5/js/bootstrap.js
+Removing admin/_site/site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2
+Removing admin/_site/site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff
+Removing admin/_site/site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg
+Removing admin/_site/site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/yeti.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/united.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/spacelab.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/simplex.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/sandstone.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/readable.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/paper.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/lumen.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/journal.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/Roboto.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/Raleway.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSans.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/NewsCycle.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/LatoBold.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/Lato.ttf
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/flatly.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/darkly.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/cosmo.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/cerulean.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap.css.map
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.map
+Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap-theme.css
+Removing admin/_site/index.html
+CONFLICT (modify/delete): admin/_site/ecc_master1.html deleted in fe066942840491abb8acf8201c70fb2b93e8f558 and modified in HEAD. Version HEAD of admin/_site/ecc_master1.html left in tree.
+Removing admin/_site/ecc_master.tex
+Removing admin/_site/ecc_master.html
+Removing admin/_site.yml
+Removing .Rproj.user/shared/notebooks/45BF1761-ecc_master/1/s/chunks.json
+Automatic merge failed; fix conflicts and then commit the result.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . 
