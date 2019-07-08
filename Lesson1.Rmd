@@ -1,12 +1,57 @@
 ---
 Title: Lesson 1
+header-includes: \usepackage{float}
+fontsize: 12
+geometry: margin=1in
+documentclass: article
+linkcolor: blue
+urlcolor: blue
+citecolor: red
+always_allow_html: yes
+output:
+  html_document:
+    highlight: tango
+    code_folding: show
+    toc: yes
+    toc_depth: 2
+    number_sections: no
+    toc_float: yes
+    self_contained: false
+    keep_md: true
+  pdf_document:
+    includes:
+      in_header: # add .tex file with header content
+    highlight: tango
+    template: null
+    toc: yes
+    toc_depth: 3
+    number_sections: false
+    fig_width: 4
+    fig_height: 5
+    fig_caption: true
+    df_print: tibble 
+    citation_package: biblatex # natbib
+    latex_engine: xelatex #pdflatex # lualatex
+    keep_tex: true # keep .tex file in dir 
+  word_document:
+    highlight: tango
+    keep_md: yes
+    pandoc_args: --smart
+    #reference: mystyles.docx
+    toc: yes
+inludes:
+  before_body: before_body.tex
+subtitle: 
+tags:
+- nothing
+- nothingness
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
-\
+\  
 
 # Agenda
 
@@ -19,13 +64,13 @@ We'll use the content from Chapter 3 of the R for Data Science book.
 5. Reading in outside data
 6. Plotting outside data with ggplot
 
-\
+\  
 
 # Loading the tidyverse
 
 We'll load the tidyverse-- you can think of this as a big conglomeration of packages that give us useful functionality (kind of like downloading apps on our phone, for example).
 
-\
+\  
 
 ```{r, eval = FALSE}
 library(tidyverse)
@@ -33,7 +78,7 @@ library(tidyverse)
 # Command Return to execute the line/ "run the code"
 ```
 
-\
+\  
 
 # 3.2.1 The `mpg` data frame
 
@@ -52,7 +97,7 @@ Among the variables in `mpg` are:
 * `displ`, a car’s engine size, in litres.
 * `hwy`, a car’s fuel efficiency on the highway, in miles per gallon (mpg). 
 
-\
+\  
 
 # 3.2.2 Creating a ggplot
 
@@ -70,13 +115,14 @@ Now here's what's going on:
 * ggplot() is creating a coordinate system for us--basically an empty graph (This is Exercise #1 later).
 * Now add a "layers", e.g. geom_point (but there are many for different kinds of graphs). Today, we're sticking to scatterplots and geom_point.
 * This always has a mapping argument. Mapping and `aes` will always go together. The `x` and `y` of `aes`, is where we specify what variables go on which axis.
-\
+
+\  
 
 # 3.2.3 A graphing template
 
 We can keep re-using our ggplot code as a template-- to create new plots. The next sections will be about how to modify the mappings and aesthetics to visualize different parts of this dataset.
 
-\
+\  
 
 # 3.2.4 Exercises, 10 minutes (?)
 
@@ -86,7 +132,7 @@ We can keep re-using our ggplot code as a template-- to create new plots. The ne
 ggplot(data = mpg)
 ```
 
-\
+\  
 
 2. How many rows are in `mpg`? How many columns?
 
@@ -96,7 +142,7 @@ glimpse(mpg) # Can also do it this way
 str(mpg) # or the base r way
 ```
 
-\
+\  
 
 3. What does the `drv `variable describe? Read the help for ?mpg to find out.
 ```{r, eval = FALSE}
@@ -104,7 +150,8 @@ str(mpg) # or the base r way
 ```
 
 If we print `mpg` and find drv column, it's a bunch of weird values. What do they mean? Check the help documentation to find out. `?` works because this data set is built-in.
-\
+
+\  
 
 4. Make a scatterplot of `hwy` vs `cyl`.
 
@@ -112,7 +159,7 @@ If we print `mpg` and find drv column, it's a bunch of weird values. What do the
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x=hwy, y=cyl))
 ```
-\
+\  
 
 5. What happens if you make a scatterplot of class vs drv? Why is the plot not useful?
 
@@ -121,7 +168,7 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x=class, y=drv))
 ```
 
-\
+\  
 
 # 3.3 Aesthetic mappings
 
@@ -133,7 +180,7 @@ By adding a 3rd variable to a 2D scatterplot (aka the size, shape, or color of o
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy, color = class))
 ```
-\
+\  
 
 1. Map class to **size** aesthetic
 

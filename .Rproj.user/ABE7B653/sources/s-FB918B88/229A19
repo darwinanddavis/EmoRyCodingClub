@@ -7,13 +7,13 @@
     "folds" : "",
     "hash" : "0",
     "id" : "229A19",
-    "lastKnownWriteTime" : 1562608917,
-    "last_content_update" : 1562608917228,
+    "lastKnownWriteTime" : 1562611804,
+    "last_content_update" : 1562611804935,
     "path" : "~/Documents/Emory/admin/ecc/admin_/ecc_admin.Rmd",
     "project_path" : "admin_/ecc_admin.Rmd",
     "properties" : {
-        "cursorPosition" : "63,37",
-        "scrollLine" : "58"
+        "cursorPosition" : "23,17",
+        "scrollLine" : "17"
     },
     "relative_order" : 1,
     "source_on_save" : false,

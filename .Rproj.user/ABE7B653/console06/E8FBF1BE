@@ -1120,3 +1120,39 @@ Removing admin/_site.yml
 Removing .Rproj.user/shared/notebooks/45BF1761-ecc_master/1/s/chunks.json
 Automatic merge failed; fix conflicts and then commit the result.
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''d's' 's't'o'r'e' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'_'s't'o'r'e' 'i'[1P'f'i'x'
+[master 2cea5f1] ds_store fix
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 46, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/45)   Compressing objects:   4% (2/45)   Compressing objects:   6% (3/45)   Compressing objects:   8% (4/45)   Compressing objects:  11% (5/45)   Compressing objects:  13% (6/45)   Compressing objects:  15% (7/45)   Compressing objects:  17% (8/45)   Compressing objects:  20% (9/45)   Compressing objects:  22% (10/45)   Compressing objects:  24% (11/45)   Compressing objects:  26% (12/45)   Compressing objects:  28% (13/45)   Compressing objects:  31% (14/45)   Compressing objects:  33% (15/45)   Compressing objects:  35% (16/45)   Compressing objects:  37% (17/45)   Compressing objects:  40% (18/45)   Compressing objects:  42% (19/45)   Compressing objects:  44% (20/45)   Compressing objects:  46% (21/45)   Compressing objects:  48% (22/45)   Compressing objects:  51% (23/45)   Compressing objects:  53% (24/45)   Compressing objects:  55% (25/45)   Compressing objects:  57% (26/45)   Compressing objects:  60% (27/45)   Compressing objects:  62% (28/45)   Compressing objects:  64% (29/45)   Compressing objects:  66% (30/45)   Compressing objects:  68% (31/45)   Compressing objects:  71% (32/45)   Compressing objects:  73% (33/45)   Compressing objects:  75% (34/45)   Compressing objects:  77% (35/45)   Compressing objects:  80% (36/45)   Compressing objects:  82% (37/45)   Compressing objects:  84% (38/45)   Compressing objects:  86% (39/45)   Compressing objects:  88% (40/45)   Compressing objects:  91% (41/45)   Compressing objects:  93% (42/45)   Compressing objects:  95% (43/45)   Compressing objects:  97% (44/45)   Compressing objects: 100% (45/45)   Compressing objects: 100% (45/45), done.
+Writing objects:   2% (1/46)   Writing objects:   4% (2/46)   Writing objects:   6% (3/46)   Writing objects:   8% (4/46)   Writing objects:  10% (5/46)   Writing objects:  13% (6/46)   Writing objects:  15% (7/46)   Writing objects:  17% (8/46)   Writing objects:  19% (9/46)   Writing objects:  21% (10/46)   Writing objects:  23% (11/46)   Writing objects:  26% (12/46)   Writing objects:  28% (13/46)   Writing objects:  30% (14/46)   Writing objects:  32% (15/46)   Writing objects:  34% (16/46)   Writing objects:  36% (17/46)   Writing objects:  39% (18/46)   Writing objects:  41% (19/46)   Writing objects:  43% (20/46)   Writing objects:  45% (21/46)   Writing objects:  47% (22/46)   Writing objects:  50% (23/46)   Writing objects:  52% (24/46)   Writing objects:  54% (25/46)   Writing objects:  56% (26/46)   Writing objects:  58% (27/46)   Writing objects:  60% (28/46)   Writing objects:  63% (29/46)   Writing objects:  65% (30/46)   Writing objects:  67% (31/46)   Writing objects:  69% (32/46)   Writing objects:  71% (33/46)   Writing objects:  73% (34/46)   Writing objects:  76% (35/46)   Writing objects:  78% (36/46)   Writing objects:  80% (37/46)   Writing objects:  82% (38/46)   Writing objects:  84% (39/46)   Writing objects:  86% (40/46)   Writing objects:  89% (41/46)   Writing objects:  91% (42/46)   Writing objects:  93% (43/46)   Writing objects:  95% (44/46)   Writing objects:  97% (45/46)   Writing objects: 100% (46/46)   Writing objects: 100% (46/46), 11.12 KiB | 0 bytes/s, done.
+Total 46 (delta 28), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/28)   [Kremote: Resolving deltas:  14% (4/28)   [Kremote: Resolving deltas:  28% (8/28)   [Kremote: Resolving deltas:  42% (12/28)   [Kremote: Resolving deltas:  46% (13/28)   [Kremote: Resolving deltas:  50% (14/28)   [Kremote: Resolving deltas:  53% (15/28)   [Kremote: Resolving deltas:  57% (16/28)   [Kremote: Resolving deltas:  64% (18/28)   [Kremote: Resolving deltas:  75% (21/28)   [Kremote: Resolving deltas:  78% (22/28)   [Kremote: Resolving deltas:  85% (24/28)   [Kremote: Resolving deltas:  89% (25/28)   [Kremote: Resolving deltas:  92% (26/28)   [Kremote: Resolving deltas:  96% (27/28)   [Kremote: Resolving deltas: 100% (28/28)   [Kremote: Resolving deltas: 100% (28/28), completed with 15 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   fe06694..2cea5f1  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls
+Lesson1.Rmd		admin_			index.md
+README.md		docs			lesson1_draft.Rmd
+_site.yml		emorycodingclub.Rproj
+admin			index.Rmd
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd admin
+]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ ls
+_site		ecc_master.tex	ecc_master1.md	shapes.png
+ecc_master.html	ecc_master1.Rmd	ggplot1.png
+]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ cd ,[K.
+]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ ls
+_site		ecc_master.tex	ecc_master1.md	shapes.png
+ecc_master.html	ecc_master1.Rmd	ggplot1.png
+]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ cd ..
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls
+Lesson1.Rmd		admin_			index.md
+README.md		docs			lesson1_draft.Rmd
+_site.yml		emorycodingclub.Rproj
+admin			index.Rmd
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open Lesson1.Rmd 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . 
