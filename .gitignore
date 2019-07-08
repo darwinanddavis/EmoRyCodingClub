@@ -1,5 +1,6 @@
 admin_/
 .Rproj.user
 .Rhistory
+.DS_Store
 docs/admin/
 docs/_site

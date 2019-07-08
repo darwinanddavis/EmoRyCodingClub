@@ -843,3 +843,44 @@ error: Your local changes to the following files would be overwritten by merge:
 Please commit your changes or stash them before you merge.
 Aborting
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''p'r'e' 'e'[1P'[1P' 'l'e's's'o'n'1'[1P' '1' 'e'v'a'l'
+[master 0bae6cd] pre lesson 1 eval
+ 13 files changed, 1095 insertions(+), 3645 deletions(-)
+ rewrite admin/_site/ecc_master1.html (98%)
+ delete mode 100644 admin/ecc_master1.html
+ create mode 100644 admin/ecc_master1.md
+ create mode 100644 index.md
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+To https://github.com/darwinanddavis/EmoRyCodingClub
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/darwinanddavis/EmoRyCodingClub'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull master ori[K[K[K[K[K[K[K[K[K[Korigin master
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+Please move or remove them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .git
+.git/       .gitignore  
+6300L-127771-M:ecc malishev$ open .git
+.git/       .gitignore  
+6300L-127771-M:ecc malishev$ open .gitignore [C[C[1P [1P [1P ore 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .gitignore git pull origin mastersh[Kll origin mastersh[Kcommit -m 'pre lesson 1 eval'add .[K[K[K[K[K[Kstatus
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 1 and 3 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+	[31mmodified:   .gitignore[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
