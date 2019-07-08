@@ -884,3 +884,78 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m [K ''p'r'e' 'l'e's's'o'n' '1' 'e'v'a'l'
+[master 0a060f9] pre lesson 1 eval
+ 2 files changed, 42 insertions(+)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pusgh[K[Kh
+To https://github.com/darwinanddavis/EmoRyCodingClub
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/darwinanddavis/EmoRyCodingClub'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull orogin ma[K[K[K[K[K[K[Kigin master
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+Please move or remove them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin mastersh[Kcommit -m 'pre lesson 1 eval'add .[Kstatusopen .gitignore 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .gitignore git pull origin master
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+Please move or remove them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm -cha[K[Kached [C[1@-[C[C[C[C[C[C[C[C . D S _ S t o r e [1P
+fatal: pathspec 'DS_Store' did not match any files
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm --cached DS_Store [1@.
+fatal: pathspec '.DS_Store' did not match any files
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+Please move or remove them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push p[Korigin master
+To https://github.com/darwinanddavis/EmoRyCodingClub
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/darwinanddavis/EmoRyCodingClub'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git config core.ignorecase true
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git config core.ignorecase true[9Ppush origin masterll[K origin master
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+Please move or remove them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin masterconfig core.ignorecase true[9Ppush origin masterll[Krm --cached .DS_Store [1P[C[C[C[C[C[C[C[C[C[3Ppull origin masterrm --cached DS_Store [1@.[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[3Ppull origin master[6Popen .gitignore git pull origin mastersh[Kll origin master[6Popen .gitignore git pull origin masterrm --cached DS_Store 
+fatal: pathspec 'DS_Store' did not match any files
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm --cached DS_Store [3Ppull origin masterrm --cached DS_Store [1@.
+fatal: pathspec '.DS_Store' did not match any files
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm --cached .DS_Store [1P[C[C[C[C[C[C[C[C[C[3Ppull origin masterconfig core.ignorecase true[9Ppull origin master
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+error: The following untracked working tree files would be overwritten by merge:
+	.DS_Store
+Please move or remove them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin masterrm --cached .DS_Store [4Ppull origin master[Kgit add [K[K[K[Kstatus
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 2 and 3 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
