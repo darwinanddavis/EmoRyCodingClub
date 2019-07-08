@@ -51,35 +51,13 @@ tags:
 <!-- ----------------------- rmd settings --------------------------- -->
 <!-- ---------------------------------------------------------------- -->
 
-```{r klippy, echo=FALSE, include=TRUE}
-# klippy::klippy()
-```
+
 
 <!-- rmd settings -->
-```{r, set-options, echo = FALSE, cache = FALSE}
-options(width=100)
-knitr::opts_chunk$set(
- eval = TRUE, # run all code
- # echo = FALSE, # show code chunks in output 
- comment = "",
- tidy.opts=list(width.cutoff=100), # set width of code chunks in output
- tidy=TRUE, # make output as tidy
- message = FALSE,  # mask all messages
- warning = FALSE, # mask all warnings 
- size="small", # set code chunk size
- knitr::opts_chunk$set(fig.pos = 'H')
-)
-```
+
 
 <!-- install packages -->
-```{r, load packages, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
-packages <- c("ggplot2","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr","leaflet")   
-if (require(packages)) {
-    install.packages(packages,dependencies = T)
-    require(packages)
-}
-lapply(packages,library,character.only=T)
-```
+
 
 <!-- ---------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------- -->
@@ -120,16 +98,8 @@ Room 2052
 Wayne Rollins Building  
 \  
 
-```{r,echo=F}
-require(leaflet)
-latlon <- c(33.79667, -84.32346) # emory
-ecc_label <- "Room 2052, Wayne Rollins Building"
-map <- leaflet() # initiate the leaflet map object
-map <- addTiles(map) # add the actual map tiles to the leaflet object
-map <- addMarkers(map,latlon[2],latlon[1],label=ecc_label,popup=ecc_label) 
-map 
-
-```
+<!--html_preserve--><div id="htmlwidget-7d70f905a61f13954fbc" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7d70f905a61f13954fbc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Room 2052, Wayne Rollins Building",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 
 <br>
@@ -145,7 +115,8 @@ Everyone needs to have the following software and packages loaded before you com
 * [Install `RStudio` Desktop](https://www.rstudio.com/products/rstudio/download/)
 * Install the `tidyverse` package and then load it by copying and pasting the following code into the *Console* of `RStudio` and then pressing *Enter* to execute it.
 
-```{r, eval= FALSE}
+
+```r
 install.packages("tidyverse")
 install.packages("ggplot2")
 library(tidyverse)
@@ -168,22 +139,21 @@ If you're brand new to `R` or coding, familiarise yourself with a few basic thin
 
 Once you have installed `R` and `R Studio`, copy and paste the code below into the `R Studio` *Console* (or try typing it out yourself) and press *Enter* to run it.  
 
-```{r, eval = FALSE}
 
+```r
 # Calculate something simple
 2 + 2
 
 # Calculate something using built-in constants
 2 * pi
-
 ```
 
 <br>
 
 Use the *assignment operator*, `<-`, to create new objects in `R`
 
-```{r, eval = FALSE}
 
+```r
 a <- 2 + 2
 b <- a * pi
 c <- "Hello World"
@@ -191,8 +161,9 @@ c <- "Hello World"
 
 And then print the objects in the console:
 
-```{r, eval = FALSE}
-a 
+
+```r
+a
 b
 c
 ```
@@ -243,45 +214,39 @@ We'll be using this dataset for the rest of the club sessions, so feel free to e
 
 This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below in your `R` console and press *Enter*.   
 
-```{r, eval = FALSE}
+
+```r
 require(readr)
 
 # function for reading in zipped file (106 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
 
 url_read <- function(file_url) {
-  con <- gzcon(url(file_url))
-  txt <- readLines(con)
-  return(read.csv(textConnection(txt)))
+    con <- gzcon(url(file_url))
+    txt <- readLines(con)
+    return(read.csv(textConnection(txt)))
 }
 
-df <- url_read(url) # read in data
+df <- url_read(url)  # read in data
 
 # smaller csv file (16 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
 df_small <- read.csv(url)
-head(df_small[,1:5])
-
+head(df_small[, 1:5])
 ```
 
 If everything worked correctly, you should see the below ouput printed in your `R` console.  
 
-```{r, echo=F, eval=T}
-# smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
-df_small <- read.csv(url)
-head(df_small[,1:5])
 
 ```
-
-```{r, echo =FALSE, }
-# devtools::install_github('yihui/xfun')
-
-# a single RmD file
-# xfun::embed_file('example.Rmd')
-
-# embed a single csv file
- # r xfun::embed_file('data.csv')` 
-
+    id                                             name host_id   host_name neighbourhood_group
+1 2539               Clean & quiet apt home by the park    2787        John            Brooklyn
+2 2595                            Skylit Midtown Castle    2845    Jennifer           Manhattan
+3 3647              THE VILLAGE OF HARLEM....NEW YORK !    4632   Elisabeth           Manhattan
+4 3831                  Cozy Entire Floor of Brownstone    4869 LisaRoxanne            Brooklyn
+5 4989 Great 1 bdrm. apartment in the PERFECT location!    7118  New-Yorker           Manhattan
+6 5022 Entire Apt: Spacious Studio/Loft by central park    7192       Laura           Manhattan
 ```
+
+
   

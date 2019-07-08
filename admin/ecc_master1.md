@@ -41,37 +41,15 @@ params:
   MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
 </script>
 
-```{r echo = FALSE}
-# library(rmarkdown)
-# setwd("")
-# f <- list.files()[1]
-# render(f, output_format='pdf_document')
-```
 
-```{r, set-options, echo = FALSE, cache = FALSE}
-options(width=100)
-knitr::opts_chunk$set(
- eval = TRUE, # run all code
- # echo = FALSE, # show code chunks in output 
- comment = "",
- tidy.opts=list(width.cutoff=100), # set width of code chunks in output
- tidy=TRUE, # make output as tidy
- message = FALSE,  # mask all messages
- warning = FALSE, # mask all warnings 
- size="small" # set code chunk size
-)
 
-# https://github.com/ucb-stat133/stat133-fall-2016/blob/master/hws/hw02-tables-ggplot.Rmd
-#knitr::opts_knit$set(root.dir=paste0(params$dir,"/")) # set working dir
 
-#setwd(paste0(params$dir,"/")) # for running just in R not knitr
-```
 
 \newpage   
 
-Date: `r params$date`  
-R version: `r params$version`  
-This document can be found at `r params$doi`  
+Date: 2019-07-08  
+R version: 3.5.0  
+This document can be found at https://github.com/darwinanddavis/EmoRyCodingClub  
 
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
@@ -86,18 +64,18 @@ This document can be found at `r params$doi`
 3. run help page for 'print'  
 
 #### First session  
-```{r,eval=F}
-install.packages()  
-head()  
+
+```r
+install.packages()
+head()
 tail()
 str()
 plot()
 df$Col1
-df[,"Col1"]
+df[, "Col1"]
 
 # See call options for class
-methods(class="estUDm")  
-
+methods(class = "estUDm")
 ```
 
 <!-- #### TOC     -->
@@ -111,26 +89,25 @@ methods(class="estUDm")
 
 # airbnb data -------------------------------------------------------------
 
-```{r}
+
+```r
 require(readr)
 
 # function for reading in zipped file (106 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
 
 url_read <- function(file_url) {
-  con <- gzcon(url(file_url))
-  txt <- readLines(con)
-  return(read.csv(textConnection(txt)))
+    con <- gzcon(url(file_url))
+    txt <- readLines(con)
+    return(read.csv(textConnection(txt)))
 }
 
-df <- url_read(url) # read in data
+df <- url_read(url)  # read in data
 
 # smaller csv file (16 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
 df <- read.csv(url)
 # ------
-
-
 ```
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->

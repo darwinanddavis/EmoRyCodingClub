@@ -762,3 +762,84 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    635a696..a0a24f4  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''f'i'n'a'l' 'i'n'd'e'x' 'f'o'r' 'e'a'i'l'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'
+[master c3ed633] final index
+ 3 files changed, 115 insertions(+), 77 deletions(-)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
+Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 1.96 KiB | 0 bytes/s, done.
+Total 9 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/6)   [Kremote: Resolving deltas:  16% (1/6)   [Kremote: Resolving deltas:  33% (2/6)   [Kremote: Resolving deltas:  50% (3/6)   [Kremote: Resolving deltas:  66% (4/6)   [Kremote: Resolving deltas:  83% (5/6)   [Kremote: Resolving deltas: 100% (6/6)   [Kremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   a0a24f4..c3ed633  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin master -m ''u'o'd'a't'e'[1P'[1P'[1P'[1P'[1P'[1P'm'e'r'g'[1P'[1P'[1P'[1P'p'r'e'[1P'[1P'[1P'p'r'e' 'l'e's's'o'n' '1' 'e'v'a'l'[1P'[1P'[1P'[1P't'e's't'[1P'[1P'[1P'[1P's'e'n'd'o'u't'[1P'[1P'[1P'[1P'[1P'[1P'[1P'e'v'a'l'
+error: unknown switch `m'
+usage: git pull [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+
+Options related to merging
+    -r, --rebase[=<false|true|preserve|interactive>]
+                          incorporate changes by rebasing rather than merging
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    --edit                edit message before committing
+    --ff                  allow fast-forward
+    --ff-only             abort if fast-forward is not possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    --autostash           automatically stash/stash pop before and after rebase
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+
+Options related to fetching
+    --all                 fetch from all remotes
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local branch
+    -t, --tags            fetch all tags and associated objects
+    -p, --prune           prune remote-tracking branches no longer on remote
+    --recurse-submodules[=<on-demand>]
+                          control recursive fetching of submodules
+    -j, --jobs[=<n>]      number of submodules pulled in parallel
+    --dry-run             dry run
+    -k, --keep            keep downloaded pack
+    --depth <depth>       deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin master -m 'pre lesson 1 eval'[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+remote: Enumerating objects: 56, done.[K
+remote: Counting objects:   1% (1/56)   [Kremote: Counting objects:   3% (2/56)   [Kremote: Counting objects:   5% (3/56)   [Kremote: Counting objects:   7% (4/56)   [Kremote: Counting objects:   8% (5/56)   [Kremote: Counting objects:  10% (6/56)   [Kremote: Counting objects:  12% (7/56)   [Kremote: Counting objects:  14% (8/56)   [Kremote: Counting objects:  16% (9/56)   [Kremote: Counting objects:  17% (10/56)   [Kremote: Counting objects:  19% (11/56)   [Kremote: Counting objects:  21% (12/56)   [Kremote: Counting objects:  23% (13/56)   [Kremote: Counting objects:  25% (14/56)   [Kremote: Counting objects:  26% (15/56)   [Kremote: Counting objects:  28% (16/56)   [Kremote: Counting objects:  30% (17/56)   [Kremote: Counting objects:  32% (18/56)   [Kremote: Counting objects:  33% (19/56)   [Kremote: Counting objects:  35% (20/56)   [Kremote: Counting objects:  37% (21/56)   [Kremote: Counting objects:  39% (22/56)   [Kremote: Counting objects:  41% (23/56)   [Kremote: Counting objects:  42% (24/56)   [Kremote: Counting objects:  44% (25/56)   [Kremote: Counting objects:  46% (26/56)   [Kremote: Counting objects:  48% (27/56)   [Kremote: Counting objects:  50% (28/56)   [Kremote: Counting objects:  51% (29/56)   [Kremote: Counting objects:  53% (30/56)   [Kremote: Counting objects:  55% (31/56)   [Kremote: Counting objects:  57% (32/56)   [Kremote: Counting objects:  58% (33/56)   [Kremote: Counting objects:  60% (34/56)   [Kremote: Counting objects:  62% (35/56)   [Kremote: Counting objects:  64% (36/56)   [Kremote: Counting objects:  66% (37/56)   [Kremote: Counting objects:  67% (38/56)   [Kremote: Counting objects:  69% (39/56)   [Kremote: Counting objects:  71% (40/56)   [Kremote: Counting objects:  73% (41/56)   [Kremote: Counting objects:  75% (42/56)   [Kremote: Counting objects:  76% (43/56)   [Kremote: Counting objects:  78% (44/56)   [Kremote: Counting objects:  80% (45/56)   [Kremote: Counting objects:  82% (46/56)   [Kremote: Counting objects:  83% (47/56)   [Kremote: Counting objects:  85% (48/56)   [Kremote: Counting objects:  87% (49/56)   [Kremote: Counting objects:  89% (50/56)   [Kremote: Counting objects:  91% (51/56)   [Kremote: Counting objects:  92% (52/56)   [Kremote: Counting objects:  94% (53/56)   [Kremote: Counting objects:  96% (54/56)   [Kremote: Counting objects:  98% (55/56)   [Kremote: Counting objects: 100% (56/56)   [Kremote: Counting objects: 100% (56/56), done.[K
+remote: Compressing objects:   3% (1/30)   [Kremote: Compressing objects:   6% (2/30)   [Kremote: Compressing objects:  10% (3/30)   [Kremote: Compressing objects:  13% (4/30)   [Kremote: Compressing objects:  16% (5/30)   [Kremote: Compressing objects:  20% (6/30)   [Kremote: Compressing objects:  23% (7/30)   [Kremote: Compressing objects:  26% (8/30)   [Kremote: Compressing objects:  30% (9/30)   [Kremote: Compressing objects:  33% (10/30)   [Kremote: Compressing objects:  36% (11/30)   [Kremote: Compressing objects:  40% (12/30)   [Kremote: Compressing objects:  43% (13/30)   [Kremote: Compressing objects:  46% (14/30)   [Kremote: Compressing objects:  50% (15/30)   [Kremote: Compressing objects:  53% (16/30)   [Kremote: Compressing objects:  56% (17/30)   [Kremote: Compressing objects:  60% (18/30)   [Kremote: Compressing objects:  63% (19/30)   [Kremote: Compressing objects:  66% (20/30)   [Kremote: Compressing objects:  70% (21/30)   [Kremote: Compressing objects:  73% (22/30)   [Kremote: Compressing objects:  76% (23/30)   [Kremote: Compressing objects:  80% (24/30)   [Kremote: Compressing objects:  83% (25/30)   [Kremote: Compressing objects:  86% (26/30)   [Kremote: Compressing objects:  90% (27/30)   [Kremote: Compressing objects:  93% (28/30)   [Kremote: Compressing objects:  96% (29/30)   [Kremote: Compressing objects: 100% (30/30)   [Kremote: Compressing objects: 100% (30/30), done.[K
+Unpacking objects:   2% (1/45)   Unpacking objects:   4% (2/45)   Unpacking objects:   6% (3/45)   Unpacking objects:   8% (4/45)   Unpacking objects:  11% (5/45)   Unpacking objects:  13% (6/45)   Unpacking objects:  15% (7/45)   Unpacking objects:  17% (8/45)   Unpacking objects:  20% (9/45)   Unpacking objects:  22% (10/45)   Unpacking objects:  24% (11/45)   Unpacking objects:  26% (12/45)   Unpacking objects:  28% (13/45)   Unpacking objects:  31% (14/45)   Unpacking objects:  33% (15/45)   Unpacking objects:  35% (16/45)   Unpacking objects:  37% (17/45)   Unpacking objects:  40% (18/45)   Unpacking objects:  42% (19/45)   Unpacking objects:  44% (20/45)   Unpacking objects:  46% (21/45)   Unpacking objects:  48% (22/45)   Unpacking objects:  51% (23/45)   Unpacking objects:  53% (24/45)   Unpacking objects:  55% (25/45)   Unpacking objects:  57% (26/45)   Unpacking objects:  60% (27/45)   Unpacking objects:  62% (28/45)   Unpacking objects:  64% (29/45)   Unpacking objects:  66% (30/45)   Unpacking objects:  68% (31/45)   Unpacking objects:  71% (32/45)   remote: Total 45 (delta 14), reused 41 (delta 10), pack-reused 0[K
+Unpacking objects:  73% (33/45)   Unpacking objects:  75% (34/45)   Unpacking objects:  77% (35/45)   Unpacking objects:  80% (36/45)   Unpacking objects:  82% (37/45)   Unpacking objects:  84% (38/45)   Unpacking objects:  86% (39/45)   Unpacking objects:  88% (40/45)   Unpacking objects:  91% (41/45)   Unpacking objects:  93% (42/45)   Unpacking objects:  95% (43/45)   Unpacking objects:  97% (44/45)   Unpacking objects: 100% (45/45)   Unpacking objects: 100% (45/45), done.
+From https://github.com/darwinanddavis/EmoRyCodingClub
+ * branch            master     -> FETCH_HEAD
+   c3ed633..fe06694  master     -> origin/master
+Updating c3ed633..fe06694
+error: Your local changes to the following files would be overwritten by merge:
+	admin/_site/ecc_master1.html
+	admin/_site/site_libs/tocify-1.9.1/jquery.tocify.css
+	admin/_site/site_libs/tocify-1.9.1/jquery.tocify.js
+	admin/ecc_master1.Rmd
+Please commit your changes or stash them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
