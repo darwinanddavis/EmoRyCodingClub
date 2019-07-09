@@ -88,7 +88,7 @@ lapply(packages,library,character.only=T)
 
 # Functions and packages for `r params$lesson`    
 
-```{r,eval=F, echo=F}
+```{r,eval=T, echo=F}
 require(readr)
 readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson1.txt")
 readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson1.txt")
@@ -289,7 +289,7 @@ But we can *set* the aesthetic properties manually, instead of having ggplot do 
 
 ```{r, eval = T}
 ggplot(data = my_data) +  
-  geom_point(mapping = aes(x = displ, y = hwy), color = "blue") +
+  geom_point(mapping = aes(x = x, y = y), color = "blue") +
   my_theme
 ```
 \  
@@ -297,7 +297,7 @@ ggplot(data = my_data) +
 Using color both inside and outside the aes  
 ```{r, eval = T}
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = class), color = "#000000") +
+  geom_point(mapping = aes(x = x, y = y, color = class), color = "#000000") +
   my_theme
 ```
 \  
@@ -315,7 +315,6 @@ ggplot(data = my_data) +
   <center>![](admin/shapes.png){width=400px}</center>
   
 R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the `colour` and `fill` aesthetics. The hollow shapes (0--14) have a border determined by `colour`; the solid shapes (15--18) are filled with `colour`; the filled shapes (21--24) have a border of `colour` and are filled with `fill`.  
-
 
 # AirBnB data 
 
@@ -351,6 +350,10 @@ glimpse(df)
 
 ``` 
 \    
+
+# Summary 
+
+
 
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->

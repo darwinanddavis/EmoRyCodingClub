@@ -1260,3 +1260,50 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    2cea5f1..58b2d64  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ;;[C[K[K;'[K[K[K'' ''[Cl'e's's'o'n'1' 'v'2'
+[master dfe5e1a] lesson1 v2
+ 38 files changed, 1238 insertions(+), 1586 deletions(-)
+ rewrite Lesson1.Rmd (76%)
+ rewrite Lesson1.md (76%)
+ copy Lesson1.Rmd => admin/ecc_master1.Rmd (56%)
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (97%)
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png
+ delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-21-1.png
+ delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-21-2.png
+ delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-22-1.png
+ delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-22-2.png
+ delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png
+ delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-26-1.png
+ delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-27-1.png
+ delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-28-1.png
+ delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-29-1.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-5-1.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-8-2.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-8-3.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-9-1.png
+ create mode 100644 docs/functions_lesson1.txt
+ create mode 100644 docs/packages_lesson1.txt
+ create mode 100644 functions_lesson1.txt
+ create mode 100644 packages_lesson1.txt
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 38, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/36)   Compressing objects:   5% (2/36)   Compressing objects:   8% (3/36)   Compressing objects:  11% (4/36)   Compressing objects:  13% (5/36)   Compressing objects:  16% (6/36)   Compressing objects:  19% (7/36)   Compressing objects:  22% (8/36)   Compressing objects:  25% (9/36)   Compressing objects:  27% (10/36)   Compressing objects:  30% (11/36)   Compressing objects:  33% (12/36)   Compressing objects:  36% (13/36)   Compressing objects:  38% (14/36)   Compressing objects:  41% (15/36)   Compressing objects:  44% (16/36)   Compressing objects:  47% (17/36)   Compressing objects:  50% (18/36)   Compressing objects:  52% (19/36)   Compressing objects:  55% (20/36)   Compressing objects:  58% (21/36)   Compressing objects:  61% (22/36)   Compressing objects:  63% (23/36)   Compressing objects:  66% (24/36)   Compressing objects:  69% (25/36)   Compressing objects:  72% (26/36)   Compressing objects:  75% (27/36)   Compressing objects:  77% (28/36)   Compressing objects:  80% (29/36)   Compressing objects:  83% (30/36)   Compressing objects:  86% (31/36)   Compressing objects:  88% (32/36)   Compressing objects:  91% (33/36)   Compressing objects:  94% (34/36)   Compressing objects:  97% (35/36)   Compressing objects: 100% (36/36)   Compressing objects: 100% (36/36), done.
+Writing objects:   2% (1/38)   Writing objects:   5% (2/38)   Writing objects:   7% (3/38)   Writing objects:  10% (4/38)   Writing objects:  13% (5/38)   Writing objects:  15% (6/38)   Writing objects:  18% (7/38)   Writing objects:  21% (8/38)   Writing objects:  23% (9/38)   Writing objects:  26% (10/38)   Writing objects:  28% (11/38)   Writing objects:  31% (12/38)   Writing objects:  34% (13/38)   Writing objects:  36% (14/38)   Writing objects:  39% (15/38)   Writing objects:  42% (16/38)   Writing objects:  44% (17/38)   Writing objects:  47% (18/38)   Writing objects:  50% (19/38)   Writing objects:  52% (20/38)   Writing objects:  55% (21/38)   Writing objects:  57% (22/38)   Writing objects:  60% (23/38)   Writing objects:  63% (24/38)   Writing objects:  65% (25/38)   Writing objects:  68% (26/38)   Writing objects:  71% (27/38)   Writing objects:  73% (28/38)   Writing objects:  76% (29/38)   Writing objects:  78% (30/38)   Writing objects:  81% (31/38)   Writing objects:  84% (32/38)   Writing objects:  86% (33/38)   Writing objects:  89% (34/38)   Writing objects:  92% (35/38)   Writing objects:  94% (36/38)   Writing objects:  97% (37/38)   Writing objects: 100% (38/38)   Writing objects: 100% (38/38), 349.72 KiB | 0 bytes/s, done.
+Total 38 (delta 15), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/15)   [Kremote: Resolving deltas:   6% (1/15)   [Kremote: Resolving deltas:  13% (2/15)   [Kremote: Resolving deltas:  20% (3/15)   [Kremote: Resolving deltas:  26% (4/15)   [Kremote: Resolving deltas:  33% (5/15)   [Kremote: Resolving deltas:  40% (6/15)   [Kremote: Resolving deltas:  46% (7/15)   [Kremote: Resolving deltas:  53% (8/15)   [Kremote: Resolving deltas:  60% (9/15)   [Kremote: Resolving deltas:  66% (10/15)   [Kremote: Resolving deltas:  73% (11/15)   [Kremote: Resolving deltas:  80% (12/15)   [Kremote: Resolving deltas:  86% (13/15)   [Kremote: Resolving deltas:  93% (14/15)   [Kremote: Resolving deltas: 100% (15/15)   [Kremote: Resolving deltas: 100% (15/15), completed with 13 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   58b2d64..dfe5e1a  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add index.[K[K[K[K[K[K.
