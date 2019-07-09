@@ -283,6 +283,8 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, size = class)) +
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+\  
+
 We get a warning, but this is okay.  
 \  
 
@@ -304,10 +306,11 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, shape = class)) 
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+\  
 
-Any warnings? Yes -- because shape maxes out at six levels.
+Any warnings? Yes, because shape maxes out at six levels.
+\  
 
-\
 ## Manually changing aesthetic properties
   
 But we can *set* the aesthetic properties manually, instead of having ggplot do the scaling automatically. For example, we can make our ggplot points all blue like this. This time, putting color OUTSIDE the `aes` argument.
@@ -353,16 +356,16 @@ library(tidyverse)  # includes package 'readr'
 # All Airbnb data (106 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
 
-df_full <- read_csv(url)  # reads in data
-glimpse(df_full)
+airbnb_full <- read_csv(url)  # reads in data
+glimpse(airbnb_full)
 ```
 \  
 
 Using the smaller dataset 
 
 ```r
-df <- df_full[df_full$id < 1e+06, ]
-glimpse(df)
+airbnb <- airbnb_full[airbnb_full$id < 1e+06, ]
+glimpse(airbnb)
 ```
 \    
 
@@ -371,7 +374,34 @@ glimpse(df)
 Using the above plotting functions to visualise the AirBnB data  
 
 
+```r
+# plot neighborhood_group vs price
+names(airbnb)
 
+head(airbnb$price)
+
+x <- airbnb$neighbourhood_group_cleansed
+y <- airbnb$price
+
+ggplot(data = airbnb) + geom_point(mapping = aes(x = x, y = y, color = y), shape = 21, stroke = 1)
+```
+
+Try your own plot using the other variables in the dataset    
+
+```r
+# plot neighborhood_group vs price
+names(airbnb)
+glimpse(airbnb)
+
+my_data <- NULL
+x <- NULL
+y <- NULL
+color <- NULL
+shape <- NULL
+stroke <- NULL
+
+ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, color = color), shape = shape, stroke = stroke)
+```
 
 
 

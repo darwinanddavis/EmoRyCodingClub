@@ -639,7 +639,8 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_tufte</span>()  <s
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-12-1.png" /><!-- -->  </p>
 <p>Size by data column</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">size =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson1_files/figure-html/unnamed-chunk-13-1.png" /><!-- --> We get a warning, but this is okay.<br />
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-13-1.png" /><!-- -->  </p>
+<p>We get a warning, but this is okay.<br />
  </p>
 </div>
 <div id="transparency" class="section level2">
@@ -652,10 +653,11 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_tufte</span>()  <s
 <div id="shape" class="section level2">
 <h2>Shape</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">shape =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson1_files/figure-html/unnamed-chunk-15-1.png" /><!-- --></p>
-<p>Any warnings? Yes – because shape maxes out at six levels.</p>
-<p><br />
-## Manually changing aesthetic properties</p>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-15-1.png" /><!-- -->  </p>
+<p>Any warnings? Yes, because shape maxes out at six levels.  </p>
+</div>
+<div id="manually-changing-aesthetic-properties" class="section level2">
+<h2>Manually changing aesthetic properties</h2>
 <p>But we can <em>set</em> the aesthetic properties manually, instead of having ggplot do the scaling automatically. For example, we can make our ggplot points all blue like this. This time, putting color OUTSIDE the <code>aes</code> argument.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-16-1.png" /><!-- -->  </p>
@@ -686,17 +688,39 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_tufte</span>()  <s
 <span class="co"># All Airbnb data (106 cols)</span>
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
 
-df_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)  <span class="co"># reads in data</span>
-<span class="kw">glimpse</span>(df_full)</code></pre></div>
+airbnb_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)  <span class="co"># reads in data</span>
+<span class="kw">glimpse</span>(airbnb_full)</code></pre></div>
 <p> </p>
 <p>Using the smaller dataset</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span>df_full[df_full<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]
-<span class="kw">glimpse</span>(df)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">airbnb &lt;-<span class="st"> </span>airbnb_full[airbnb_full<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]
+<span class="kw">glimpse</span>(airbnb)</code></pre></div>
 <p> </p>
 </div>
 <div id="plotting-airbnb-data-with-ggplot" class="section level1">
 <h1>Plotting AirBnB data with ggplot</h1>
 <p>Using the above plotting functions to visualise the AirBnB data</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot neighborhood_group vs price</span>
+<span class="kw">names</span>(airbnb)
+
+<span class="kw">head</span>(airbnb<span class="op">$</span>price)
+
+x &lt;-<span class="st"> </span>airbnb<span class="op">$</span>neighbourhood_group_cleansed
+y &lt;-<span class="st"> </span>airbnb<span class="op">$</span>price
+
+<span class="kw">ggplot</span>(<span class="dt">data =</span> airbnb) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">color =</span> y), <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>)</code></pre></div>
+<p>Try your own plot using the other variables in the dataset</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot neighborhood_group vs price</span>
+<span class="kw">names</span>(airbnb)
+<span class="kw">glimpse</span>(airbnb)
+
+my_data &lt;-<span class="st"> </span><span class="ot">NULL</span>
+x &lt;-<span class="st"> </span><span class="ot">NULL</span>
+y &lt;-<span class="st"> </span><span class="ot">NULL</span>
+color &lt;-<span class="st"> </span><span class="ot">NULL</span>
+shape &lt;-<span class="st"> </span><span class="ot">NULL</span>
+stroke &lt;-<span class="st"> </span><span class="ot">NULL</span>
+
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">color =</span> color), <span class="dt">shape =</span> shape, <span class="dt">stroke =</span> stroke)</code></pre></div>
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
