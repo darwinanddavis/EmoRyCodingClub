@@ -485,14 +485,26 @@ div.tocify {
 </div>
 
 
-<p> </p>
+<p><br />
+<!-- install packages --></p>
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+<div id="functions-and-packages-for-lesson-1" class="section level1">
+<h1>Functions and packages for Lesson 1</h1>
+</div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
-<p>We’ll use the content from Chapter 3 of the R for Data Science book.</p>
+<p>We’ll be using <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3 Data visualisation in <code>R</code> for Data Science</a>.<br />
+Section 3.3.1.</p>
 <ol style="list-style-type: decimal">
-<li>Loading the tidyverse</li>
-<li>Preview a built-in dataset</li>
-<li>Using ggplot with the built-in data set (to make scatterplots)</li>
+<li>Loading the tidyverse<br />
+</li>
+<li>Preview a built-in dataset<br />
+</li>
+<li>Using ggplot with the built-in data set (to make scatterplots)<br />
+</li>
 <li>Modifying plot aesthetics</li>
 <li>Reading in outside data</li>
 <li>Plotting outside data with ggplot</li>
@@ -503,293 +515,177 @@ div.tocify {
 <h1>Loading the tidyverse</h1>
 <p>We’ll load the tidyverse– you can think of this as a big conglomeration of packages that give us useful functionality (kind of like downloading apps on our phone, for example).</p>
 <p> </p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)  <span class="co"># install package</span>
+<span class="kw">library</span>(tidyverse)  <span class="co"># load the package library</span>
+<span class="kw">require</span>(tidyverse)  <span class="co"># same as library    </span>
+
 <span class="co"># We are typing in an R Script. Things with # in front make them comments and notes to ourselves</span>
-<span class="co"># Command Return to execute the line/ &quot;run the code&quot;</span></code></pre></div>
+<span class="co"># Command Return to execute the line/ &#39;run the code&#39;</span></code></pre></div>
 <p> </p>
 </div>
-<div id="the-mpg-data-frame" class="section level1">
-<h1>3.2.1 The <code>mpg</code> data frame</h1>
+<div id="using-built-in-r-data-the-mpg-dataset" class="section level1">
+<h1>Using built in <code>R</code> data: the <code>mpg</code> dataset</h1>
+<p>[Section 3.2.1]((<a href="https://r4ds.had.co.nz/data-visualisation.html" class="uri">https://r4ds.had.co.nz/data-visualisation.html</a>)</p>
 <p>We’ll use a built-in tidyverse dataset called <code>mpg</code> with data about cars and gas-mileage.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mpg
-?mpg</code></pre></div>
+<span class="st">`</span><span class="dt">?</span><span class="st">`</span>(mpg  <span class="co"># run help page  </span>
+)</code></pre></div>
 <ul>
 <li>This is a tibble (data frame) that we’ve “printed” out. It’s like R’s version of an excel spreadsheet, but much better.</li>
-<li>A tibble will show us first 10 rows.</li>
+<li>A tibble will show us the first 10 rows, rows containing the data, column names, and the class of data within each column, such as numeric, integer, or character.</li>
 </ul>
-<p>Among the variables in <code>mpg</code> are:</p>
+<div id="summarising-data" class="section level2">
+<h2>Summarising data</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(mpg)  <span class="co"># class of data frame</span>
+<span class="kw">class</span>(mpg<span class="op">$</span>manufacturer)  <span class="co"># class of data column</span>
+<span class="kw">str</span>(mpg)  <span class="co"># structure of data</span>
+<span class="kw">glimpse</span>(mpg)  <span class="co"># preview of data </span>
+<span class="kw">summary</span>(mpg)  <span class="co"># basic summary stats  </span>
+<span class="kw">table</span>(mpg<span class="op">$</span>manufacturer)  <span class="co"># counts of each column</span>
+<span class="kw">head</span>(mpg)  <span class="co"># visualise first 6 rows of data</span>
+<span class="kw">tail</span>(mpg, <span class="dv">10</span>)  <span class="co"># visualise last 10 (or N) rows of data </span>
+<span class="kw">names</span>(mpg)  <span class="co"># get column names</span>
+mpg<span class="op">$</span>displ  <span class="co"># print a column</span>
+mpg<span class="op">$</span>hwy  <span class="co"># print a column</span></code></pre></div>
+<p> </p>
+</div>
+</div>
+<div id="creating-a-plot-with-ggplot" class="section level1">
+<h1>Creating a plot with <code>ggplot</code></h1>
+<p>[Section 3.2.2]((<a href="https://r4ds.had.co.nz/data-visualisation.html" class="uri">https://r4ds.had.co.nz/data-visualisation.html</a>)</p>
 <ul>
-<li><code>displ</code>, a car’s engine size, in litres.</li>
-<li><code>hwy</code>, a car’s fuel efficiency on the highway, in miles per gallon (mpg).</li>
+<li><code>ggplot()</code>. Creates a coordinate system for us–basically an empty graph.<br />
+</li>
+<li><code>geom_point()</code>. Adds a “layer”, e.g. geom_point (but there are many for different kinds of graphs).</li>
 </ul>
-<p> </p>
-</div>
-<div id="creating-a-ggplot" class="section level1">
-<h1>3.2.2 Creating a ggplot</h1>
-<p>Run and plot this code first:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x=</span>displ, <span class="dt">y =</span> hwy))</code></pre></div>
-<p>This is a plot of the two variables highlighted above.</p>
-<p>Now here’s what’s going on:</p>
-<ul>
-<li>ggplot() is creating a coordinate system for us–basically an empty graph (This is Exercise #1 later).</li>
-<li>Now add a “layers”, e.g. geom_point (but there are many for different kinds of graphs). Today, we’re sticking to scatterplots and geom_point.</li>
-<li>This always has a mapping argument. Mapping and <code>aes</code> will always go together. The <code>x</code> and <code>y</code> of <code>aes</code>, is where we specify what variables go on which axis.</li>
-</ul>
-<p> </p>
-</div>
-<div id="a-graphing-template" class="section level1">
-<h1>3.2.3 A graphing template</h1>
-<p>We can keep re-using our ggplot code as a template– to create new plots. The next sections will be about how to modify the mappings and aesthetics to visualize different parts of this dataset.</p>
-<p> </p>
-</div>
-<div id="exercises-10-minutes" class="section level1">
-<h1>3.2.4 Exercises, 10 minutes (?)</h1>
-<ol style="list-style-type: decimal">
-<li>Run <code>ggplot(data = mpg)</code>. What do you see?</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg)</code></pre></div>
-<p> </p>
-<ol start="2" style="list-style-type: decimal">
-<li>How many rows are in <code>mpg</code>? How many columns?</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mpg <span class="co">#234 rows, 11 columns, which we know from the tibble output</span>
-<span class="kw">glimpse</span>(mpg) <span class="co"># Can also do it this way</span>
-<span class="kw">str</span>(mpg) <span class="co"># or the base r way</span></code></pre></div>
-<p> </p>
-<ol start="3" style="list-style-type: decimal">
-<li>What does the <code>drv</code>variable describe? Read the help for ?mpg to find out.</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">?mpg </code></pre></div>
-<p>If we print <code>mpg</code> and find drv column, it’s a bunch of weird values. What do they mean? Check the help documentation to find out. <code>?</code> works because this data set is built-in.</p>
-<p> </p>
-<ol start="4" style="list-style-type: decimal">
-<li>Make a scatterplot of <code>hwy</code> vs <code>cyl</code>.</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x=</span>hwy, <span class="dt">y=</span>cyl))</code></pre></div>
-<p> </p>
-<ol start="5" style="list-style-type: decimal">
-<li>What happens if you make a scatterplot of class vs drv? Why is the plot not useful?</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x=</span>class, <span class="dt">y=</span>drv))</code></pre></div>
-<p> </p>
-</div>
-<div id="aesthetic-mappings" class="section level1">
-<h1>3.3 Aesthetic mappings</h1>
-<div class="figure">
-<img src="admin/ggplot1.png" />
+<p>Plot two of the data columns</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy))</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-5-1.png" /><!-- -->  </p>
+<p>Changing the data column inputs for the <strong>x</strong> and <strong>y</strong> axis of the plot</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> class, <span class="dt">y =</span> drv))</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-6-1.png" /><!-- -->  </p>
+<p>Assign data to variables to create dynamic inputs</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_data &lt;-<span class="st"> </span>mpg  <span class="co"># create own variable using a name of your choice  </span>
+x &lt;-<span class="st"> </span>mpg<span class="op">$</span>displ
+y &lt;-<span class="st"> </span>mpg<span class="op">$</span>hwy
 
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y))</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-7-1.png" /><!-- -->  </p>
+<div id="themes" class="section level2">
+<h2>Themes</h2>
+<p>Change plot style. Link for more <a href="https://www.datanovia.com/en/blog/ggplot-themes-gallery/">ggplot themes</a>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(ggthemes)
+<span class="co"># install.packages(&#39;tvthemes&#39;) require(tvthemes)</span>
+
+<span class="co"># classic theme</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>()</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-8-1.png" /><!-- --></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># minimal theme</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-8-2.png" /><!-- --></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># assign theme to variable</span>
+my_theme &lt;-<span class="st"> </span><span class="kw">theme_tufte</span>()  <span class="co"># assign theme to your own variable </span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y)) <span class="op">+</span><span class="st"> </span>my_theme  <span class="co"># add variable defining your chosen theme  </span></code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-8-3.png" /><!-- -->  </p>
 </div>
-<p>By adding a 3rd variable to a 2D scatterplot (aka the size, shape, or color of our points). We can change the “Level” of a point’s size, shape, or color. ggplot then chooses an appropriate scale to visualize each of these. For example:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">color =</span> class))</code></pre></div>
+</div>
+<div id="aesthetic-mapping" class="section level1">
+<h1>Aesthetic mapping</h1>
+<p>[Section 3.3]((<a href="https://r4ds.had.co.nz/data-visualisation.html" class="uri">https://r4ds.had.co.nz/data-visualisation.html</a>)</p>
+<p><code>color</code>. Change the color of the data points. <code>size</code>. Change the size of the data points.<br />
+<code>alpha</code>. Change the transparency of the data points.</p>
+<div id="color" class="section level2">
+<h2>Color</h2>
+<p>Color by color name.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y), <span class="dt">color =</span> <span class="st">&quot;light blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-9-1.png" /><!-- -->  </p>
+<p>Color by a <a href="https://htmlcolorcodes.com/color-picker/">hex code</a> in quotes.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y), <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-10-1.png" /><!-- -->  </p>
+<p>Color by data column</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">color =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p> </p>
-<ol style="list-style-type: decimal">
-<li>Map class to <strong>size</strong> aesthetic</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">size =</span> class))</code></pre></div>
-<p>We get a warning, but this is okay.<br />
-2. Now try using <strong>alpha</strong> as the aesthetic:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">alpha =</span> class)) <span class="co"># maps classes to different transparencies</span></code></pre></div>
-<p><br />
-3. What happens when you map class to the <strong>shape</strong> aesthetic?</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
-<span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">shape =</span> class))</code></pre></div>
+</div>
+<div id="size" class="section level2">
+<h2>Size</h2>
+<p>Size by integer</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">size =</span> <span class="dv">5</span>)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-12-1.png" /><!-- -->  </p>
+<p>Size by data column</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">size =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-13-1.png" /><!-- --> We get a warning, but this is okay.<br />
+ </p>
+</div>
+<div id="transparency" class="section level2">
+<h2>Transparency</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">alpha =</span> class)) <span class="op">+</span><span class="st"> </span><span class="co"># maps classes to different transparencies</span>
+<span class="st">  </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-14-1.png" /><!-- -->  </p>
+</div>
+<div id="shape" class="section level2">
+<h2>Shape</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">shape =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-15-1.png" /><!-- --></p>
 <p>Any warnings? Yes – because shape maxes out at six levels.</p>
 <p><br />
 ## Manually changing aesthetic properties</p>
 <p>But we can <em>set</em> the aesthetic properties manually, instead of having ggplot do the scaling automatically. For example, we can make our ggplot points all blue like this. This time, putting color OUTSIDE the <code>aes</code> argument.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
-<span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</code></pre></div>
-<p><br />
-1. Try specifying the color with a [hex code] (<a href="https://htmlcolorcodes.com/color-picker/" class="uri">https://htmlcolorcodes.com/color-picker/</a>) in quotes.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
-<span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">color =</span> <span class="st">&quot;#FFFFFF&quot;</span>)</code></pre></div>
-<p><br />
-2. What happens if you specify color in two places (i.e. inside AND outside of the <code>aes</code> argument)?</p>
-<p><code>r   ggplot(data = mpg) +    geom_point(mapping = aes(x = displ, y = hwy, color = class), color = &quot;#FFFFFF&quot;)</code>   The inner one is overridden.</p>
-<p><br />
-3. Extra question: Can you try to generate a plot that looks like this?</p>
-<pre><code>## Warning: Using size for a discrete variable is not advised.</code></pre>
-<pre><code>## Warning: Using alpha for a discrete variable is not advised.</code></pre>
-<p><img src="Lesson1_files/figure-html/unnamed-chunk-16-1.png" /><!-- --></p>
-<p><br />
-## Aesthetics you can manually set: * The name of a color as a character string. * The size of a point in mm. * The shape of a point as a number, as shown in Figure 3.1.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-16-1.png" /><!-- -->  </p>
+<p>Using color both inside and outside the aes</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">color =</span> class), <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-17-1.png" /><!-- -->  </p>
+<p><strong>The inner one is overridden.</strong></p>
+
+</div>
+<div id="aesthetics-you-can-manually-set" class="section level2">
+<h2>Aesthetics you can manually set</h2>
+<ul>
+<li>The name of a color as a character string.</li>
+<li>The size of a point in mm.</li>
+<li>The shape of a point as a number, as shown in Figure 3.1.</li>
+</ul>
 <center>
 <img src="admin/shapes.png" width="400" />
 </center>
 <p>R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the <code>colour</code> and <code>fill</code> aesthetics. The hollow shapes (0–14) have a border determined by <code>colour</code>; the solid shapes (15–18) are filled with <code>colour</code>; the filled shapes (21–24) have a border of <code>colour</code> and are filled with <code>fill</code>.</p>
-<p>Here’s an example using a specific shape and size for all points.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  <span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span>
-<span class="st">    </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">size =</span> cyl), <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">size =</span> <span class="dv">6</span>)</code></pre></div>
-<p><br />
-<br />
-# 3.3.1 Exercises</p>
-<p>Try these on your own. 15 min?<br />
-1. What’s gone wrong with this code? Why are the points not blue?</p>
-<p> </p>
-<ol start="2" style="list-style-type: decimal">
-<li>Which variables in mpg are categorical? Which variables are continuous? (Hint: type ?mpg to read the documentation for the dataset). How can you see this information when you run mpg?</li>
-</ol>
-<p><br />
-3. Map a continuous variable to color, size, and shape. How do these aesthetics behave differently for categorical vs. continuous variables?</p>
-<p> </p>
-<ol start="4" style="list-style-type: decimal">
-<li>What happens if you map the same variable to multiple aesthetics?</li>
-</ol>
-<p><br />
-5. What does the stroke aesthetic do? What shapes does it work with? (Hint: use ?geom_point)</p>
-<p><br />
-6. What happens if you map an aesthetic to something other than a variable name, like aes(colour = displ &lt; 5)? Note, you’ll also need to specify x and y.</p>
-<p><br />
-## 3.4 Common problems</p>
-<p>Make sure that you: * Haven’t put <code>+</code> on the wrong line * Use ( ) and “” in pairs * Make use of <code>?</code></p>
-<p><br />
-# Using wild-caught data</p>
-<p>The airbnb data set is not a built in data set, so no we can’t use ?dataset help.</p>
-<p><br />
-# Read in data</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse) <span class="co"># includes package &quot;readr&quot;</span>
+</div>
+</div>
+<div id="airbnb-data" class="section level1">
+<h1>AirBnB data</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)  <span class="co"># includes package &#39;readr&#39;</span>
 
 <span class="co"># All Airbnb data (106 cols)</span>
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
 
-df_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url) <span class="co"># reads in data</span>
-df &lt;-<span class="st"> </span>df_full[df_full<span class="op">$</span>id<span class="op">&lt;</span><span class="dv">1000000</span>,] <span class="co"># subsets ~2k of the ~48k entries based on (arbitrary?) id </span>
-df <span class="co"># prints as a tibble</span></code></pre></div>
-<p><br />
-## Taking a quick look at the larger data set * Use glimpse(df) to see a list of all the columns * Real data has messy entries, e.g. “Williamsburg, Brooklyn” and “Williamsburg bk”</p>
-<p><br />
-Let’s stick with a smaller data set</p>
+df_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)  <span class="co"># reads in data</span>
+df &lt;-<span class="st"> </span>df_full[df_full<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># subsets ~2k of the ~48k entries based on (arbitrary?) id </span>
+df  <span class="co"># prints as a tibble</span></code></pre></div>
+<p> </p>
+<div id="taking-a-quick-look-at-the-larger-data-set" class="section level2">
+<h2>Taking a quick look at the larger data set</h2>
+<ul>
+<li>Use glimpse(df) to see a list of all the columns</li>
+<li>Real data has messy entries, e.g. “Williamsburg, Brooklyn” and “Williamsburg bk”</li>
+</ul>
+<p> </p>
+<p>Let’s stick with a smaller data set</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
 
-df_full &lt;-<span class="st">  </span><span class="kw">read_csv</span>(url)</code></pre></div>
-<pre><code>## Parsed with column specification:
-## cols(
-##   id = col_double(),
-##   name = col_character(),
-##   host_id = col_double(),
-##   host_name = col_character(),
-##   neighbourhood_group = col_character(),
-##   neighbourhood = col_character(),
-##   latitude = col_double(),
-##   longitude = col_double(),
-##   room_type = col_character(),
-##   price = col_double(),
-##   minimum_nights = col_double(),
-##   number_of_reviews = col_double(),
-##   last_review = col_date(format = &quot;&quot;),
-##   reviews_per_month = col_double(),
-##   calculated_host_listings_count = col_double(),
-##   availability_365 = col_double()
-## )</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span>df_full[df_full<span class="op">$</span>id<span class="op">&lt;</span><span class="dv">1000000</span>,]
-df</code></pre></div>
-<pre><code>## # A tibble: 2,177 x 16
-##       id name  host_id host_name neighbourhood_g… neighbourhood latitude
-##    &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;            &lt;chr&gt;            &lt;dbl&gt;
-##  1  2539 Clea…    2787 John      Brooklyn         Kensington        40.6
-##  2  2595 Skyl…    2845 Jennifer  Manhattan        Midtown           40.8
-##  3  3647 THE …    4632 Elisabeth Manhattan        Harlem            40.8
-##  4  3831 Cozy…    4869 LisaRoxa… Brooklyn         Clinton Hill      40.7
-##  5  4989 Grea…    7118 New-York… Manhattan        Hell&#39;s Kitch…     40.8
-##  6  5022 Enti…    7192 Laura     Manhattan        East Harlem       40.8
-##  7  5099 Larg…    7322 Chris     Manhattan        Murray Hill       40.7
-##  8  5121 Blis…    7356 Garon     Brooklyn         Bedford-Stuy…     40.7
-##  9  5178 Larg…    8967 Shunichi  Manhattan        Hell&#39;s Kitch…     40.8
-## 10  5203 Cozy…    7490 MaryEllen Manhattan        Upper West S…     40.8
-## # … with 2,167 more rows, and 9 more variables: longitude &lt;dbl&gt;,
-## #   room_type &lt;chr&gt;, price &lt;dbl&gt;, minimum_nights &lt;dbl&gt;,
-## #   number_of_reviews &lt;dbl&gt;, last_review &lt;date&gt;, reviews_per_month &lt;dbl&gt;,
-## #   calculated_host_listings_count &lt;dbl&gt;, availability_365 &lt;dbl&gt;</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">glimpse</span>(df)</code></pre></div>
-<pre><code>## Observations: 2,177
-## Variables: 16
-## $ id                             &lt;dbl&gt; 2539, 2595, 3647, 3831, 4989, 502…
-## $ name                           &lt;chr&gt; &quot;Clean &amp; quiet apt home by the pa…
-## $ host_id                        &lt;dbl&gt; 2787, 2845, 4632, 4869, 7118, 719…
-## $ host_name                      &lt;chr&gt; &quot;John&quot;, &quot;Jennifer&quot;, &quot;Elisabeth&quot;, …
-## $ neighbourhood_group            &lt;chr&gt; &quot;Brooklyn&quot;, &quot;Manhattan&quot;, &quot;Manhatt…
-## $ neighbourhood                  &lt;chr&gt; &quot;Kensington&quot;, &quot;Midtown&quot;, &quot;Harlem&quot;…
-## $ latitude                       &lt;dbl&gt; 40.64749, 40.75362, 40.80902, 40.…
-## $ longitude                      &lt;dbl&gt; -73.97237, -73.98377, -73.94190, …
-## $ room_type                      &lt;chr&gt; &quot;Private room&quot;, &quot;Entire home/apt&quot;…
-## $ price                          &lt;dbl&gt; 149, 225, 150, 89, 105, 80, 200, …
-## $ minimum_nights                 &lt;dbl&gt; 1, 1, 3, 1, 4, 10, 3, 45, 2, 2, 1…
-## $ number_of_reviews              &lt;dbl&gt; 9, 44, 0, 258, 27, 9, 71, 49, 424…
-## $ last_review                    &lt;date&gt; 2018-10-19, 2019-05-07, NA, 2019…
-## $ reviews_per_month              &lt;dbl&gt; 0.21, 0.38, NA, 4.53, 0.24, 0.10,…
-## $ calculated_host_listings_count &lt;dbl&gt; 6, 2, 1, 1, 1, 1, 1, 1, 1, 1, 4, …
-## $ availability_365               &lt;dbl&gt; 365, 331, 365, 182, 83, 0, 92, 0,…</code></pre>
-<p><br />
-# Use <code>ggplot()</code></p>
-<ul>
-<li>We’ll do 1 together.</li>
-<li>Create new scatter plots with the data on your own
-<ul>
-<li>Explore at least 3 different variable relationships</li>
-<li>Do 1 version of a presentable ggplot</li>
-<li>Take the same ggplot and make change the aesthetics to make it an ugly ggplot</li>
-<li><strong>Bonus points</strong>: copy and paste the following code into one of your existing ggplots as an additional layer to make a very ugly ggplot! Run the plot to see what this produces. Then modify some of the arguments to make the plot look more acceptable!</li>
-</ul></li>
-</ul>
-<pre><code>    +
-  theme(
-    
-    plot.background = element_rect(fill = &quot;lightyellow&quot;),
-    plot.title = element_text(size = 30, hjust = 0.25),
-    plot.subtitle = element_text(size = 20, hjust = 0.75, color = &quot;mediumvioletred&quot;, family = &quot;serif&quot;),
-    plot.caption = element_text(size = 10, face = &quot;italic&quot;, angle = 25),
-    
-    panel.background = element_rect(fill = &#39;lightblue&#39;, colour = &#39;darkred&#39;, size = 4),
-    panel.border = element_rect(fill = NA, color = &quot;green&quot;, size = 2),
-    panel.grid.major.x = element_line(color = &quot;purple&quot;, linetype = 2),
-    panel.grid.minor.x = element_line(color = &quot;orange&quot;, linetype = 3),
-    panel.grid.minor.y = element_blank(),
-    
-    axis.title.x = element_text(face = &quot;bold.italic&quot;, color = &quot;blue&quot;),
-    axis.title.y = element_text(family = &quot;mono&quot;, face = &quot;bold&quot;, size = 20, hjust = 0.25),
-    axis.text = element_text(face = &quot;italic&quot;, size = 15),
-    axis.text.x.bottom = element_text(angle = 180), # note that axis.text options from above are inherited
-    
-    strip.background = element_rect(fill = &quot;magenta&quot;),
-    strip.text.y = element_text(color = &quot;white&quot;),
-    strip.placement = &quot;outside&quot;,
-    
-    legend.background = element_rect(fill = &quot;orangered4&quot;), # generally will want to match w plot background
-    legend.key = element_rect(fill = &quot;orange&quot;),
-    legend.direction = &quot;horizontal&quot;,
-    legend.position = &quot;bottom&quot;,
-    legend.justification = &quot;left&quot;,
-    legend.title = element_text(family = &quot;serif&quot;, color = &quot;white&quot;),
-    legend.text = element_text(family = &quot;mono&quot;, face = &quot;italic&quot;, color = &quot;limegreen&quot;)
-    
-  ) +
-  labs(title = &quot;test title&quot;,
-       subtitle = &quot;test subtitle&quot;,
-       x = &quot;my x axis&quot;,
-       y = &quot;my y axis&quot;,
-       caption = &quot;this is a caption&quot;,
-       col = &quot;Renamed Legend&quot;) </code></pre>
-<ul>
-<li>Ugly ggplot code courtesy of <a href="https://gist.github.com/emilyriederer/2bf4f67d7e198f8359b61706c82e42ee">Emily Riederer</a><br />
-</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">  <span class="co"># plot neighborhood_group vs price</span>
-    
-    <span class="kw">ggplot</span>(<span class="dt">data =</span> df) <span class="op">+</span><span class="st"> </span>
-<span class="st">      </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> neighbourhood_group, <span class="dt">y =</span> price, <span class="dt">color =</span> neighbourhood_group), <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>)</code></pre></div>
-<p><img src="Lesson1_files/figure-html/unnamed-chunk-26-1.png" /><!-- --><br />
-</p>
-<p><br />
-</p>
-<p><br />
-</p>
+df_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+df &lt;-<span class="st"> </span>df_full[df_full<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]
+df
+
+<span class="kw">glimpse</span>(df)</code></pre></div>
+<p> </p>
+<!-- end body -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+</div>
 </div>
 
 

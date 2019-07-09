@@ -1,0 +1,3 @@
+tidyverse
+readr
+ggthemes

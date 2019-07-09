@@ -373,16 +373,14 @@ div.tocify {
   MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
 </script>
 
-<p>Date: 2019-07-08<br />
+<p>Date: 2019-07-09<br />
 R version: 3.5.0<br />
 This document can be found at <a href="https://github.com/darwinanddavis/EmoRyCodingClub" class="uri">https://github.com/darwinanddavis/EmoRyCodingClub</a></p>
 <!-- ____________________________________________________________________________ -->
-<!-- ____________________________________________________________________________ -->
-<!-- ____________________________________________________________________________ -->
 <!-- start body -->
 
-<div id="pre-session" class="section level4">
-<h4>Pre session</h4>
+<div id="pre-session" class="section level2">
+<h2>Pre session</h2>
 <ol style="list-style-type: decimal">
 <li>assign ‘hello world’ to variable<br />
 </li>
@@ -391,8 +389,8 @@ This document can be found at <a href="https://github.com/darwinanddavis/EmoRyCo
 <li>run help page for ‘print’</li>
 </ol>
 </div>
-<div id="first-session" class="section level4">
-<h4>First session</h4>
+<div id="lesson-1" class="section level2">
+<h2>Lesson 1</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>()
 <span class="kw">head</span>()
 <span class="kw">tail</span>()
@@ -407,9 +405,9 @@ df[, <span class="st">&quot;Col1&quot;</span>]
 <!-- What the session covers   -->
 <!-- Dataset   -->
 <!-- Showcase of what you'll learn by the end   -->
-</div>
 <div id="importing-data" class="section level4">
 <h4>Importing Data</h4>
+</div>
 </div>
 <div id="airbnb-data--" class="section level1">
 <h1>airbnb data ————————————————————-</h1>
@@ -430,9 +428,48 @@ df &lt;-<span class="st"> </span><span class="kw">url_read</span>(url)  <span cl
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
 df &lt;-<span class="st"> </span><span class="kw">read.csv</span>(url)
 <span class="co"># ------</span></code></pre></div>
+</div>
+<div id="a-graphing-template" class="section level1">
+<h1>3.2.3 A graphing template</h1>
+<p>We can keep re-using our ggplot code as a template to create new plots. The next sections will be about how to modify the mappings and aesthetics to visualize different parts of this dataset.</p>
+<p> </p>
+</div>
+<div id="aesthetic-mappings" class="section level1">
+<h1>3.3 Aesthetic mappings</h1>
+<div class="figure">
+<img src="admin/ggplot1.png" />
+
+</div>
+</div>
+<div id="exercises-10-minutes" class="section level1">
+<h1>3.2.4 Exercises, 10 minutes (?)</h1>
+<ol style="list-style-type: decimal">
+<li>Run <code>ggplot(data = mpg)</code>. What do you see?</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg)</code></pre></div>
+<p>If we print <code>mpg</code> and find drv column, it’s a bunch of weird values. What do they mean? Check the help documentation to find out. <code>?</code> works because this data set is built-in.</p>
+</div>
+<div id="use-ggplot" class="section level1">
+<h1>Use <code>ggplot()</code></h1>
+<ul>
+<li>We’ll do 1 together.</li>
+<li>Create new scatter plots with the data on your own
+<ul>
+<li>Explore at least 3 different variable relationships</li>
+<li>Do 1 version of a presentable ggplot</li>
+<li>Take the same ggplot and make change the aesthetics to make it an ugly ggplot</li>
+<li><strong>Bonus points</strong>: copy and paste the following code into one of your existing ggplots as an additional layer to make a very ugly ggplot! Run the plot to see what this produces. Then modify some of the arguments to make the plot look more acceptable!</li>
+</ul></li>
+<li>Ugly ggplot code courtesy of <a href="https://gist.github.com/emilyriederer/2bf4f67d7e198f8359b61706c82e42ee">Emily Riederer</a><br />
+</li>
+</ul>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
 <!-- end body -->
-<!-- ____________________________________________________________________________ -->
-<!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
 </div>
 

@@ -1156,3 +1156,107 @@ _site.yml		emorycodingclub.Rproj
 admin			index.Rmd
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open Lesson1.Rmd 
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ got cm[K[K[K[K[Kit commit -m ''u'p'd'a't'e'd' 'y'a'm'l's' 'f'o'r' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'a'l'l' 'y'a'm'l's'
+[master 58b2d64] updated all yamls
+ 99 files changed, 30286 insertions(+), 297 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (71%)
+ rewrite .Rproj.user/shared/notebooks/paths (100%)
+ create mode 100644 Lesson1.md
+ create mode 100644 admin/ecc_master1.html
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap-theme.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap-theme.css.map
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap-theme.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap.css.map
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/cerulean.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/cosmo.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/darkly.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/flatly.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Lato.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/LatoBold.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/NewsCycle.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSans.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Raleway.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Roboto.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/journal.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/lumen.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/paper.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/readable.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/sandstone.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/simplex.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/spacelab.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/united.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/yeti.min.css
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/js/bootstrap.js
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/js/bootstrap.min.js
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/js/npm.js
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/shim/html5shiv.min.js
+ create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/shim/respond.min.js
+ create mode 100644 admin/ecc_master1_files/jquery-1.11.3/jquery.min.js
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/README
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_444444_256x240.png
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_555555_256x240.png
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_777620_256x240.png
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_777777_256x240.png
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/index.html
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.css
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.js
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.min.css
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.min.js
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.structure.css
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.structure.min.css
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.theme.css
+ create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.theme.min.css
+ create mode 100644 admin/ecc_master1_files/navigation-1.1/codefolding.js
+ create mode 100644 admin/ecc_master1_files/navigation-1.1/sourceembed.js
+ create mode 100644 admin/ecc_master1_files/navigation-1.1/tabsets.js
+ create mode 100644 admin/ecc_master1_files/tocify-1.9.1/jquery.tocify.css
+ create mode 100644 admin/ecc_master1_files/tocify-1.9.1/jquery.tocify.js
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (98%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-21-1.png (98%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-21-2.png (98%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-22-1.png (98%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-22-2.png (98%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png (98%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-26-1.png (98%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-27-1.png (98%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-28-1.png (98%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-29-1.png (98%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 40, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/38)   Compressing objects:   5% (2/38)   Compressing objects:   7% (3/38)   Compressing objects:  10% (4/38)   Compressing objects:  13% (5/38)   Compressing objects:  15% (6/38)   Compressing objects:  18% (7/38)   Compressing objects:  21% (8/38)   Compressing objects:  23% (9/38)   Compressing objects:  26% (10/38)   Compressing objects:  28% (11/38)   Compressing objects:  31% (12/38)   Compressing objects:  34% (13/38)   Compressing objects:  36% (14/38)   Compressing objects:  39% (15/38)   Compressing objects:  42% (16/38)   Compressing objects:  44% (17/38)   Compressing objects:  47% (18/38)   Compressing objects:  50% (19/38)   Compressing objects:  52% (20/38)   Compressing objects:  55% (21/38)   Compressing objects:  57% (22/38)   Compressing objects:  60% (23/38)   Compressing objects:  63% (24/38)   Compressing objects:  65% (25/38)   Compressing objects:  68% (26/38)   Compressing objects:  71% (27/38)   Compressing objects:  73% (28/38)   Compressing objects:  76% (29/38)   Compressing objects:  78% (30/38)   Compressing objects:  81% (31/38)   Compressing objects:  84% (32/38)   Compressing objects:  86% (33/38)   Compressing objects:  89% (34/38)   Compressing objects:  92% (35/38)   Compressing objects:  94% (36/38)   Compressing objects:  97% (37/38)   Compressing objects: 100% (38/38)   Compressing objects: 100% (38/38), done.
+Writing objects:   2% (1/40)   Writing objects:   5% (2/40)   Writing objects:   7% (3/40)   Writing objects:  10% (4/40)   Writing objects:  12% (5/40)   Writing objects:  15% (6/40)   Writing objects:  17% (7/40)   Writing objects:  20% (8/40)   Writing objects:  22% (9/40)   Writing objects:  25% (10/40)   Writing objects:  27% (11/40)   Writing objects:  30% (12/40)   Writing objects:  32% (13/40)   Writing objects:  35% (14/40)   Writing objects:  37% (15/40)   Writing objects:  40% (16/40)   Writing objects:  42% (17/40)   Writing objects:  45% (18/40)   Writing objects:  47% (19/40)   Writing objects:  50% (20/40)   Writing objects:  52% (21/40)   Writing objects:  55% (22/40)   Writing objects:  57% (23/40)   Writing objects:  60% (24/40)   Writing objects:  62% (25/40)   Writing objects:  65% (26/40)   Writing objects:  67% (27/40)   Writing objects:  70% (28/40)   Writing objects:  72% (29/40)   Writing objects:  75% (30/40)   Writing objects:  77% (31/40)   Writing objects:  80% (32/40)   Writing objects:  82% (33/40)   Writing objects:  85% (34/40)   Writing objects:  87% (35/40)   Writing objects:  90% (36/40)   Writing objects:  92% (37/40)   Writing objects:  95% (38/40)   Writing objects:  97% (39/40)   Writing objects: 100% (40/40)   Writing objects: 100% (40/40), 570.13 KiB | 0 bytes/s, done.
+Total 40 (delta 18), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/18)   [Kremote: Resolving deltas:   5% (1/18)   [Kremote: Resolving deltas:  11% (2/18)   [Kremote: Resolving deltas:  16% (3/18)   [Kremote: Resolving deltas:  22% (4/18)   [Kremote: Resolving deltas:  27% (5/18)   [Kremote: Resolving deltas:  33% (6/18)   [Kremote: Resolving deltas:  38% (7/18)   [Kremote: Resolving deltas:  44% (8/18)   [Kremote: Resolving deltas:  50% (9/18)   [Kremote: Resolving deltas:  55% (10/18)   [Kremote: Resolving deltas:  66% (12/18)   [Kremote: Resolving deltas:  72% (13/18)   [Kremote: Resolving deltas:  83% (15/18)   [Kremote: Resolving deltas:  88% (16/18)   [Kremote: Resolving deltas:  94% (17/18)   [Kremote: Resolving deltas: 100% (18/18)   [Kremote: Resolving deltas: 100% (18/18), completed with 16 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   2cea5f1..58b2d64  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ git add .

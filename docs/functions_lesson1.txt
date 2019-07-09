@@ -1,0 +1,15 @@
+? 
+ggplot  
+geom_point
+aes 
+class
+str
+summary
+table
+head
+tail 
+names
+color
+size
+alpha
+fill
