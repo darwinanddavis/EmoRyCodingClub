@@ -100,8 +100,12 @@ Section 3.3.1.
 The `RStudio` integrated development environment (IDE) and what you can do with it.  
 \    
 
-<center>![R studio interface](admin/rstudio1.jpg){width=100%}</center>
-\  
+<!-- ----------------------- image --------------------------- -->
+<div align="center"; text-align:center>
+  <img src="admin/rstudio1.jpg" style=width:100%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+
 
 A more complete example of what you can acheive with the interface.  
 \  
