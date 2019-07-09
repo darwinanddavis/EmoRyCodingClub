@@ -349,7 +349,12 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = cl
   * The size of a point in mm.
   * The shape of a point as a number, as shown in Figure 3.1. 
   
-  <center>![](img/shapes.png){width=400px}</center>
+  <!-- ----------------------- image --------------------------- -->
+<div align="center">
+  <img src="img/shapes.png" style=width:100%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+\  
   
 `R` has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the `colour` and `fill` aesthetics. The hollow shapes (0--14) have a border determined by `colour`; the solid shapes (15--18) are filled with `colour`; the filled shapes (21--24) have a border of `colour` and are filled with `fill`.  
 
@@ -417,6 +422,8 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = minimum_nights, y = price, col
 ggplot(data = nyc) + geom_point(mapping = aes(x = availability_365, y = price, color = neighbourhood_group), 
     shape = 21, stroke = 1) + my_theme
 ```
+
+![](Lesson1_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
     
 
 ```r
@@ -424,6 +431,8 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = availability_365, y = price, c
 ggplot(data = nyc) + geom_point(mapping = aes(x = longitude, y = price, color = neighbourhood_group), 
     shape = 21, stroke = 1) + my_theme
 ```
+
+![](Lesson1_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
 
 
 Try your own plot using the other variables in the dataset    

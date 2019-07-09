@@ -679,9 +679,12 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_minimal</span>()  
 <li>The size of a point in mm.</li>
 <li>The shape of a point as a number, as shown in Figure 3.1.</li>
 </ul>
-<center>
-<img src="img/shapes.png" width="400" />
-</center>
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+<p><img src="img/shapes.png" style=width:100%></p>
+</div>
+<!-- ----------------------- image --------------------------- -->
+<p> </p>
 <p><code>R</code> has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the <code>colour</code> and <code>fill</code> aesthetics. The hollow shapes (0–14) have a border determined by <code>colour</code>; the solid shapes (15–18) are filled with <code>colour</code>; the filled shapes (21–24) have a border of <code>colour</code> and are filled with <code>fill</code>.</p>
 
 </div>
@@ -724,9 +727,11 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># availability_365 vs price</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> nyc) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> availability_<span class="dv">365</span>, <span class="dt">y =</span> price, <span class="dt">color =</span> neighbourhood_group), 
     <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-23-1.png" /><!-- --></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot longitude vs price</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> nyc) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> longitude, <span class="dt">y =</span> price, <span class="dt">color =</span> neighbourhood_group), 
     <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-24-1.png" /><!-- --></p>
 <p>Try your own plot using the other variables in the dataset</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot neighborhood_group vs price</span>
 <span class="kw">names</span>(airbnb)

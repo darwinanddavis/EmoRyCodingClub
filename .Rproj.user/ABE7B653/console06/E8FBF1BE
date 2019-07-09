@@ -1525,3 +1525,37 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    eaea9da..8fb4202  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'fixed shapes fig'add .[K
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'fixed shapes fig'
+[master 5d99fd5] fixed shapes fig
+ 15 files changed, 35 insertions(+), 14 deletions(-)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-11-1.png (95%)
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png (97%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png (95%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-18-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-21-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-22-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-3.png (96%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m 'fixed shapes fig'add .[K[1Ppush
+Counting objects: 21, done.
+Delta compression using up to 4 threads.
+Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
+Writing objects:   4% (1/21)   Writing objects:   9% (2/21)   Writing objects:  14% (3/21)   Writing objects:  19% (4/21)   Writing objects:  23% (5/21)   Writing objects:  28% (6/21)   Writing objects:  33% (7/21)   Writing objects:  38% (8/21)   Writing objects:  42% (9/21)   Writing objects:  47% (10/21)   Writing objects:  52% (11/21)   Writing objects:  57% (12/21)   Writing objects:  61% (13/21)   Writing objects:  66% (14/21)   Writing objects:  71% (15/21)   Writing objects:  76% (16/21)   Writing objects:  80% (17/21)   Writing objects:  85% (18/21)   Writing objects:  90% (19/21)   Writing objects:  95% (20/21)   Writing objects: 100% (21/21)   Writing objects: 100% (21/21), 345.78 KiB | 0 bytes/s, done.
+Total 21 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   8fb4202..5d99fd5  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'fixed shapes fig'add .[K
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[Kgit reset 
+Unstaged changes after reset:
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE
+M	Lesson1.Rmd
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset [1Padd .
