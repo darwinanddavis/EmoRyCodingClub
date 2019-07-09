@@ -219,21 +219,19 @@ ggplot(data = my_data) +
 Change plot style. Link for more [ggplot themes](https://www.datanovia.com/en/blog/ggplot-themes-gallery/).        
 ```{r, eval = T}
 require(ggthemes)
-# install.packages("tvthemes")
-# require(tvthemes)
 
 # classic theme
 ggplot(data = my_data) + 
   geom_point(mapping = aes(x = displ, y = hwy)) + 
-  theme_classic()
+  theme_minimal()
 
 # minimal theme
 ggplot(data = my_data) + 
   geom_point(mapping = aes(x = displ, y = hwy)) + 
-  theme_minimal()  
+  theme_tufte()  
 
 # assign theme to variable  
-my_theme <- theme_minimal() # assign theme to your own variable 
+my_theme <- theme_classic() # assign theme to your own variable 
 ggplot(data = my_data) + 
   geom_point(mapping = aes(x = displ, y = hwy)) + 
   my_theme # add variable defining your chosen theme  
