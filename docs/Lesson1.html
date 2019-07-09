@@ -493,28 +493,49 @@ div.tocify {
 <!-- start body -->
 <div id="functions-and-packages-for-lesson-1" class="section level1">
 <h1>Functions and packages for Lesson 1</h1>
+<pre><code> [1] &quot;? &quot;         &quot;ggplot  &quot;   &quot;geom_point&quot; &quot;aes &quot;       &quot;class&quot;      &quot;str&quot;        &quot;summary&quot;   
+ [8] &quot;table&quot;      &quot;head&quot;       &quot;tail &quot;      &quot;names&quot;      &quot;color&quot;      &quot;size&quot;       &quot;alpha&quot;     
+[15] &quot;fill&quot;      </code></pre>
+<pre><code>[1] &quot;tidyverse&quot; &quot;readr&quot;     &quot;ggthemes&quot; </code></pre>
 </div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
 <p>We’ll be using <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3 Data visualisation in <code>R</code> for Data Science</a>.<br />
 Section 3.3.1.</p>
-<ol style="list-style-type: decimal">
-<li>Loading the tidyverse<br />
+<ul>
+<li>Intro to the <code>R</code>environment (IDE)<br />
 </li>
-<li>Preview a built-in dataset<br />
+<li>Loading packages, e.g. <code>tidyverse</code><br />
+</li>
+<li>Using built-in <code>R</code> data: the <code>mpg</code> dataset<br />
 </li>
 <li>Using ggplot with the built-in data set (to make scatterplots)<br />
 </li>
-<li>Modifying plot aesthetics</li>
-<li>Reading in outside data</li>
-<li>Plotting outside data with ggplot</li>
-</ol>
+<li>Modifying plot aesthetics<br />
+</li>
+<li>Reading in outside data: AirBnB data<br />
+</li>
+<li>Plotting AirBnB data with ggplot</li>
+</ul>
 <p> </p>
 </div>
-<div id="loading-the-tidyverse" class="section level1">
-<h1>Loading the tidyverse</h1>
-<p>We’ll load the tidyverse– you can think of this as a big conglomeration of packages that give us useful functionality (kind of like downloading apps on our phone, for example).</p>
+<div id="intro-to-the-r-environment-ide" class="section level1">
+<h1>Intro to the <code>R</code> environment (IDE)</h1>
+<p>The <code>RStudio</code> integrated development environment (IDE) and what you can do with it.<br />
+ </p>
+<center>
+<img src="admin/rstudio1.jpg" alt="R studio interface" style="width:100.0%" />
+</center>
 <p> </p>
+<p>A more complete example of what you can acheive with the interface.<br />
+ </p>
+<center>
+<img src="admin/rstudio2.jpg" alt="R studio interface with increased functionality" style="width:100.0%" />
+</center>
+</div>
+<div id="loading-packages-e.g.-tidyverse" class="section level1">
+<h1>Loading packages, e.g. <code>tidyverse</code></h1>
+<p>How to load packages in <code>R</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)  <span class="co"># install package</span>
 <span class="kw">library</span>(tidyverse)  <span class="co"># load the package library</span>
 <span class="kw">require</span>(tidyverse)  <span class="co"># same as library    </span>
@@ -524,7 +545,7 @@ Section 3.3.1.</p>
 <p> </p>
 </div>
 <div id="using-built-in-r-data-the-mpg-dataset" class="section level1">
-<h1>Using built in <code>R</code> data: the <code>mpg</code> dataset</h1>
+<h1>Using built-in <code>R</code> data: the <code>mpg</code> dataset</h1>
 <p>[Section 3.2.1]((<a href="https://r4ds.had.co.nz/data-visualisation.html" class="uri">https://r4ds.had.co.nz/data-visualisation.html</a>)</p>
 <p>We’ll use a built-in tidyverse dataset called <code>mpg</code> with data about cars and gas-mileage.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mpg
@@ -631,10 +652,10 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_tufte</span>()  <s
 <p><br />
 ## Manually changing aesthetic properties</p>
 <p>But we can <em>set</em> the aesthetic properties manually, instead of having ggplot do the scaling automatically. For example, we can make our ggplot points all blue like this. This time, putting color OUTSIDE the <code>aes</code> argument.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-16-1.png" /><!-- -->  </p>
 <p>Using color both inside and outside the aes</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">color =</span> class), <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">color =</span> class), <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span><span class="st"> </span>
 <span class="st">    </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-17-1.png" /><!-- -->  </p>
 <p><strong>The inner one is overridden.</strong></p>
@@ -653,39 +674,28 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_tufte</span>()  <s
 <p>R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the <code>colour</code> and <code>fill</code> aesthetics. The hollow shapes (0–14) have a border determined by <code>colour</code>; the solid shapes (15–18) are filled with <code>colour</code>; the filled shapes (21–24) have a border of <code>colour</code> and are filled with <code>fill</code>.</p>
 </div>
 </div>
-<div id="airbnb-data" class="section level1">
-<h1>AirBnB data</h1>
+<div id="reading-in-outside-data-airbnb-data" class="section level1">
+<h1>Reading in outside data: AirBnB data</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)  <span class="co"># includes package &#39;readr&#39;</span>
 
 <span class="co"># All Airbnb data (106 cols)</span>
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
 
 df_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)  <span class="co"># reads in data</span>
-df &lt;-<span class="st"> </span>df_full[df_full<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># subsets ~2k of the ~48k entries based on (arbitrary?) id </span>
-df  <span class="co"># prints as a tibble</span></code></pre></div>
+<span class="kw">glimpse</span>(df_full)</code></pre></div>
 <p> </p>
-<div id="taking-a-quick-look-at-the-larger-data-set" class="section level2">
-<h2>Taking a quick look at the larger data set</h2>
-<ul>
-<li>Use glimpse(df) to see a list of all the columns</li>
-<li>Real data has messy entries, e.g. “Williamsburg, Brooklyn” and “Williamsburg bk”</li>
-</ul>
-<p> </p>
-<p>Let’s stick with a smaller data set</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
-url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
-
-df_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
-df &lt;-<span class="st"> </span>df_full[df_full<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]
-df
-
+<p>Using the smaller dataset</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span>df_full[df_full<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]
 <span class="kw">glimpse</span>(df)</code></pre></div>
 <p> </p>
+</div>
+<div id="plotting-airbnb-data-with-ggplot" class="section level1">
+<h1>Plotting AirBnB data with ggplot</h1>
+<p>Using the above plotting functions to visualise the AirBnB data</p>
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
-</div>
 </div>
 
 

@@ -70,26 +70,47 @@ params:
 # Functions and packages for Lesson 1    
 
 
+```
+ [1] "? "         "ggplot  "   "geom_point" "aes "       "class"      "str"        "summary"   
+ [8] "table"      "head"       "tail "      "names"      "color"      "size"       "alpha"     
+[15] "fill"      
+```
+
+```
+[1] "tidyverse" "readr"     "ggthemes" 
+```
 
 # Agenda
 
 We'll be using [Ch 3 Data visualisation in `R` for Data Science](https://r4ds.had.co.nz/data-visualisation.html).  
 Section 3.3.1.     
 
-1. Loading the tidyverse  
-2. Preview a built-in dataset  
-3. Using ggplot with the built-in data set (to make scatterplots)  
-4. Modifying plot aesthetics
-5. Reading in outside data
-6. Plotting outside data with ggplot
+* Intro to the `R`environment (IDE)  
+* Loading packages, e.g. `tidyverse`  
+* Using built-in `R` data: the `mpg` dataset   
+* Using ggplot with the built-in data set (to make scatterplots)    
+* Modifying plot aesthetics  
+* Reading in outside data: AirBnB data  
+* Plotting AirBnB data with ggplot      
 
 \  
 
-# Loading the tidyverse
+# Intro to the `R` environment (IDE)  
 
-We'll load the tidyverse-- you can think of this as a big conglomeration of packages that give us useful functionality (kind of like downloading apps on our phone, for example).
+The `RStudio` integrated development environment (IDE) and what you can do with it.  
+\    
 
+<center>![R studio interface](admin/rstudio1.jpg){width=100%}</center>
 \  
+
+A more complete example of what you can acheive with the interface.  
+\  
+
+<center>![R studio interface with increased functionality](admin/rstudio2.jpg){width=100%}</center>
+
+# Loading packages, e.g. `tidyverse`  
+
+How to load packages in `R`.  
 
 
 ```r
@@ -100,10 +121,9 @@ require(tidyverse)  # same as library
 # We are typing in an R Script. Things with # in front make them comments and notes to ourselves
 # Command Return to execute the line/ 'run the code'
 ```
-
 \  
 
-# Using built in `R` data: the `mpg` dataset   
+# Using built-in `R` data: the `mpg` dataset   
 [Section 3.2.1]((https://r4ds.had.co.nz/data-visualisation.html)
 
 We'll use a built-in tidyverse dataset called `mpg` with data about cars and gas-mileage.
@@ -285,7 +305,7 @@ But we can *set* the aesthetic properties manually, instead of having ggplot do 
 
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "blue") + my_theme
+ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y), color = "blue") + my_theme
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
@@ -294,7 +314,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "
 Using color both inside and outside the aes  
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = class), color = "#000000") + 
+ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, color = class), color = "#000000") + 
     my_theme
 ```
 
@@ -315,8 +335,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = cl
   
 R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the `colour` and `fill` aesthetics. The hollow shapes (0--14) have a border determined by `colour`; the solid shapes (15--18) are filled with `colour`; the filled shapes (21--24) have a border of `colour` and are filled with `fill`.  
 
-
-# AirBnB data 
+# Reading in outside data: AirBnB data  
 
 
 ```r
@@ -326,30 +345,26 @@ library(tidyverse)  # includes package 'readr'
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
 
 df_full <- read_csv(url)  # reads in data
-df <- df_full[df_full$id < 1e+06, ]  # subsets ~2k of the ~48k entries based on (arbitrary?) id 
-df  # prints as a tibble
+glimpse(df_full)
 ```
 \  
 
-## Taking a quick look at the larger data set
-* Use glimpse(df) to see a list of all the columns
-* Real data has messy entries, e.g. "Williamsburg, Brooklyn" and "Williamsburg bk" 
-
-\  
-
-Let's stick with a smaller data set
+Using the smaller dataset 
 
 ```r
-# smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
-
-df_full <- read_csv(url)
 df <- df_full[df_full$id < 1e+06, ]
-df
-
 glimpse(df)
 ```
 \    
+
+# Plotting AirBnB data with ggplot  
+
+Using the above plotting functions to visualise the AirBnB data  
+
+
+
+
+
 
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->
