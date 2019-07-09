@@ -212,24 +212,23 @@ Change plot style. Link for more [ggplot themes](https://www.datanovia.com/en/bl
 
 ```r
 require(ggthemes)
-# install.packages('tvthemes') require(tvthemes)
 
 # classic theme
-ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + theme_classic()
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + theme_minimal()
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 ```r
 # minimal theme
-ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + theme_minimal()
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + theme_tufte()
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
 
 ```r
 # assign theme to variable
-my_theme <- theme_minimal()  # assign theme to your own variable 
+my_theme <- theme_classic()  # assign theme to your own variable 
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + my_theme  # add variable defining your chosen theme  
 ```
 

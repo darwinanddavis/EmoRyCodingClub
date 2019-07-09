@@ -605,16 +605,15 @@ mpg<span class="op">$</span>hwy  <span class="co"># print a column</span></code>
 <h2>Themes</h2>
 <p>Change plot style. Link for more <a href="https://www.datanovia.com/en/blog/ggplot-themes-gallery/">ggplot themes</a>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(ggthemes)
-<span class="co"># install.packages(&#39;tvthemes&#39;) require(tvthemes)</span>
 
 <span class="co"># classic theme</span>
-<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>()</code></pre></div>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-9-1.png" /><!-- --></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># minimal theme</span>
-<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</code></pre></div>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_tufte</span>()</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-9-2.png" /><!-- --></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># assign theme to variable</span>
-my_theme &lt;-<span class="st"> </span><span class="kw">theme_minimal</span>()  <span class="co"># assign theme to your own variable </span>
+my_theme &lt;-<span class="st"> </span><span class="kw">theme_classic</span>()  <span class="co"># assign theme to your own variable </span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme  <span class="co"># add variable defining your chosen theme  </span></code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-9-3.png" /><!-- -->  </p>
 </div>
