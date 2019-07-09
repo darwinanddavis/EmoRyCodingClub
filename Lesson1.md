@@ -101,16 +101,21 @@ The `RStudio` integrated development environment (IDE) and what you can do with 
 \    
 
 <!-- ----------------------- image --------------------------- -->
-<div align="center"; text-align:center>
-  <img src="admin/rstudio1.jpg" style=width:100%>
+<div align="center">
+  <img src="img/rstudio1.jpg" style=width:100%>
 </div>
 <!-- ----------------------- image --------------------------- -->
-
+\  
 
 A more complete example of what you can acheive with the interface.  
 \  
 
-<center>![R studio interface with increased functionality](admin/rstudio2.jpg){width=100%}</center>
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+  <img src="img/rstudio2.jpg" style=width:100%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+\  
 
 # Loading packages, e.g. `tidyverse`  
 
