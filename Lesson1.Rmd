@@ -87,14 +87,21 @@ lapply(packages,library,character.only=T)
 <!-- start body -->
 
 # Lesson 1: Intro to plotting data in `R` with `ggplot`    
+\  
 
-## Functions and packages for `r params$lesson`    
-
+Functions for `r params$lesson`    
 ```{r,eval=T, echo=F}
 require(readr)
 readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson1.txt")
+```
+\  
+
+Packages for `r params$lesson`      
+```{r,eval=T, echo=F}
+require(readr)
 readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson1.txt")
 ```
+\  
 
 # Agenda
 
@@ -422,8 +429,6 @@ stroke <- NULL
 ggplot(data = my_data) + 
   geom_point(mapping = aes(x = x, y = y, color = color), shape = shape, stroke = stroke)
 ```
-
-
 
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->

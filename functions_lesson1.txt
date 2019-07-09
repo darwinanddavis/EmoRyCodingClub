@@ -13,3 +13,8 @@ color
 size
 alpha
 fill
+stroke
+shape
+theme_minimal
+theme_classic
+theme_tufte
