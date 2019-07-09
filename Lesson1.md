@@ -229,7 +229,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + theme_m
 
 ```r
 # assign theme to variable
-my_theme <- theme_classic()  # assign theme to your own variable 
+my_theme <- theme_minimal()  # assign theme to your own variable 
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + my_theme  # add variable defining your chosen theme  
 ```
 
@@ -257,7 +257,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "
 Color by a [hex code](https://htmlcolorcodes.com/color-picker/) in quotes.  
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "#000000") + my_theme
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "#BB5C42") + my_theme
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
@@ -268,6 +268,8 @@ Color by data column
 ```r
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = class)) + my_theme
 ```
+
+![](Lesson1_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 \  
 
 ## Size 
@@ -339,8 +341,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = cl
 \  
 
 **The inner one is overridden.**     
-
-\newpage      
+\  
 
 ## Aesthetics you can manually set  
 
@@ -348,14 +349,16 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = cl
   * The size of a point in mm.
   * The shape of a point as a number, as shown in Figure 3.1. 
   
-  <center>![](admin/shapes.png){width=400px}</center>
+  <center>![](img/shapes.png){width=400px}</center>
   
-R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the `colour` and `fill` aesthetics. The hollow shapes (0--14) have a border determined by `colour`; the solid shapes (15--18) are filled with `colour`; the filled shapes (21--24) have a border of `colour` and are filled with `fill`.  
+`R` has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the `colour` and `fill` aesthetics. The hollow shapes (0--14) have a border determined by `colour`; the solid shapes (15--18) are filled with `colour`; the filled shapes (21--24) have a border of `colour` and are filled with `fill`.  
+
+\newpage      
 
 # Further plotting examples    
 [Section 3.3.1](https://r4ds.had.co.nz/data-visualisation.html#exercises-1)  
 
-The online reference contains further examples of how to visualise your data.  
+The online reference contains further examples of how to visualise your data.    
 
 # Reading in outside data: NYC AirBnB data  
 

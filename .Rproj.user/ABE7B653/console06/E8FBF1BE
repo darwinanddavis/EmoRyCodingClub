@@ -1508,3 +1508,20 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    00f8752..eaea9da  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ it [K[K[Kgit commit 0m[K[K-m ''a'd'd'e'd' '[1P'[1P'[1P'[1P'[1P'[1P'f'i'x'e' '[1P'd' 'f'i'g' '[1P'[1P'[1P'[1P's'y'a'p'[1P'[1P'[1P'h'a'p'e's' 'f'i'g'
+[master 8fb4202] fixed shapes fig
+ 2 files changed, 45 insertions(+), 9 deletions(-)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git ous[K[K[Kpush
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1.14 KiB | 0 bytes/s, done.
+Total 7 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   eaea9da..8fb4202  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'fixed shapes fig'add .[K
