@@ -68,19 +68,24 @@ params:
 <!-- start body -->
 
 # Lesson 1: Intro to plotting data in `R` with `ggplot`    
+\  
 
-## Functions and packages for Lesson 1    
-
+Functions for Lesson 1    
 
 ```
- [1] "? "         "ggplot  "   "geom_point" "aes "       "class"      "str"        "summary"   
- [8] "table"      "head"       "tail "      "names"      "color"      "size"       "alpha"     
-[15] "fill"      
+ [1] "? "            "ggplot  "      "geom_point"    "aes "          "class"         "str"          
+ [7] "summary"       "table"         "head"          "tail "         "names"         "color"        
+[13] "size"          "alpha"         "fill"          "stroke"        "shape"         "theme_minimal"
+[19] "theme_classic" "theme_tufte"  
 ```
+\  
+
+Packages for Lesson 1      
 
 ```
 [1] "tidyverse" "readr"     "ggthemes" 
 ```
+\  
 
 # Agenda
 
@@ -178,7 +183,7 @@ Plot two of the data columns
 ggplot(data = mpg) + geom_point(mapping = aes(x = displ, y = hwy))
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 \  
 
 Changing the data column inputs for the **x** and **y** axis of the plot  
@@ -187,7 +192,7 @@ Changing the data column inputs for the **x** and **y** axis of the plot
 ggplot(data = mpg) + geom_point(mapping = aes(x = class, y = drv))
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 \  
 
 Assign data to variables to create dynamic inputs  
@@ -198,7 +203,7 @@ my_data <- mpg  # create own variable using a name of your choice
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy))
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 \  
 
 ## Themes  
@@ -213,14 +218,14 @@ require(ggthemes)
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + theme_classic()
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 ```r
 # minimal theme
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + theme_minimal()
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-8-2.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-9-2.png)<!-- -->
 
 ```r
 # assign theme to variable
@@ -228,7 +233,7 @@ my_theme <- theme_classic()  # assign theme to your own variable
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + my_theme  # add variable defining your chosen theme  
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-8-3.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-9-3.png)<!-- -->
 \  
 
 # Aesthetic mapping  
@@ -246,7 +251,7 @@ Color by color name.
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "light blue") + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 \   
 
 Color by a [hex code](https://htmlcolorcodes.com/color-picker/) in quotes.  
@@ -255,7 +260,7 @@ Color by a [hex code](https://htmlcolorcodes.com/color-picker/) in quotes.
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "#000000") + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 \  
 
 Color by data column  
@@ -273,7 +278,7 @@ Size by integer
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, size = 5)) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 \  
 
 Size by data column      
@@ -282,7 +287,7 @@ Size by data column
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, size = class)) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 \  
 
 We get a warning, but this is okay.  
@@ -296,7 +301,7 @@ ggplot(data = my_data) +
   my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 \  
 
 ## Shape  
@@ -305,7 +310,7 @@ ggplot(data = my_data) +
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, shape = class)) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 \  
 
 Any warnings? Yes, because shape maxes out at six levels.
@@ -320,7 +325,7 @@ But we can *set* the aesthetic properties manually, instead of having ggplot do 
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "blue") + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 \  
 
 Using color both inside and outside the aes  
@@ -330,7 +335,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = cl
     my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 \  
 
 **The inner one is overridden.**     
@@ -392,7 +397,7 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = neighbourhood_group, y = price
     shape = 21, stroke = 1) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
 
 
 ```r
@@ -401,7 +406,7 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = minimum_nights, y = price, col
     shape = 20, size = 3, stroke = 1) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
 
 ```r
@@ -432,8 +437,6 @@ color <- NULL
 shape <- NULL
 stroke <- NULL
 ```
-
-
 
 
 

@@ -1458,3 +1458,20 @@ To https://github.com/darwinanddavis/EmoRyCodingClub
    640d7ed..d9ed04d  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ;9A[K[K[Kopen functions_lesson1.txt 
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open functions_lesson1.txt git push[Kcommit -m 'lesson 1 final v2'add .[K
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .open functions_lesson1.txt git push[Kcommit -m 'lesson 1 final v2'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'a'[1P'u'p'd'a't'e'd' 'u'n'c'[1P'[1P'[1P'l'e's's'o'n' '1' 'f'u'n'c't'i'o'n' 'l'i's't'[1P'[1P'[1P'[1P'[1P'[1P'n's' 'l'i's't'
+[master 00f8752] updated lesson 1 functions list
+ 3 files changed, 45 insertions(+), 5 deletions(-)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git ush[K[K[Kpush
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
+Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 1.46 KiB | 0 bytes/s, done.
+Total 8 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   d9ed04d..00f8752  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'updated lesson 1 functions list'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
