@@ -610,7 +610,7 @@ y &lt;-<span class="st"> </span>mpg<span class="op">$</span>hwy
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-8-2.png" /><!-- --></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># assign theme to variable</span>
-my_theme &lt;-<span class="st"> </span><span class="kw">theme_tufte</span>()  <span class="co"># assign theme to your own variable </span>
+my_theme &lt;-<span class="st"> </span><span class="kw">theme_classic</span>()  <span class="co"># assign theme to your own variable </span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y)) <span class="op">+</span><span class="st"> </span>my_theme  <span class="co"># add variable defining your chosen theme  </span></code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-8-3.png" /><!-- -->  </p>
 </div>
@@ -681,33 +681,42 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_tufte</span>()  <s
 <p>R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the <code>colour</code> and <code>fill</code> aesthetics. The hollow shapes (0–14) have a border determined by <code>colour</code>; the solid shapes (15–18) are filled with <code>colour</code>; the filled shapes (21–24) have a border of <code>colour</code> and are filled with <code>fill</code>.</p>
 </div>
 </div>
-<div id="reading-in-outside-data-airbnb-data" class="section level1">
-<h1>Reading in outside data: AirBnB data</h1>
+<div id="reading-in-outside-data-nyc-airbnb-data" class="section level1">
+<h1>Reading in outside data: NYC AirBnB data</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)  <span class="co"># includes package &#39;readr&#39;</span>
-
 <span class="co"># All Airbnb data (106 cols)</span>
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
 
-airbnb_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)  <span class="co"># reads in data</span>
-<span class="kw">glimpse</span>(airbnb_full)</code></pre></div>
+nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)  <span class="co"># reads in data</span>
+<span class="kw">glimpse</span>(nyc_full)</code></pre></div>
 <p> </p>
-<p>Using the smaller dataset</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">airbnb &lt;-<span class="st"> </span>airbnb_full[airbnb_full<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]
-<span class="kw">glimpse</span>(airbnb)</code></pre></div>
+<p>Using a smaller dataset</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
+
+nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># get smaller subet of data</span>
+<span class="kw">length</span>(nyc<span class="op">$</span>id)  <span class="co"># print length of &#39;id&#39; column</span></code></pre></div>
+<pre><code>[1] 2177</code></pre>
 <p> </p>
 </div>
 <div id="plotting-airbnb-data-with-ggplot" class="section level1">
 <h1>Plotting AirBnB data with ggplot</h1>
 <p>Using the above plotting functions to visualise the AirBnB data</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot neighborhood_group vs price</span>
-<span class="kw">names</span>(airbnb)
-
-<span class="kw">head</span>(airbnb<span class="op">$</span>price)
-
-x &lt;-<span class="st"> </span>airbnb<span class="op">$</span>neighbourhood_group_cleansed
-y &lt;-<span class="st"> </span>airbnb<span class="op">$</span>price
-
-<span class="kw">ggplot</span>(<span class="dt">data =</span> airbnb) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">color =</span> y), <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>)</code></pre></div>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> nyc) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> neighbourhood_group, <span class="dt">y =</span> price, <span class="dt">color =</span> neighbourhood_group), 
+    <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-20-1.png" /><!-- --></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot minimum_nights vs price</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> nyc) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> minimum_nights, <span class="dt">y =</span> price, <span class="dt">color =</span> neighbourhood_group), 
+    <span class="dt">shape =</span> <span class="dv">20</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">stroke =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-21-1.png" /><!-- --></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># availability_365 vs price</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> nyc) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> availability_<span class="dv">365</span>, <span class="dt">y =</span> price, <span class="dt">color =</span> neighbourhood_group), 
+    <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot longitude vs price</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> nyc) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> longitude, <span class="dt">y =</span> price, <span class="dt">color =</span> neighbourhood_group), 
+    <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p>Try your own plot using the other variables in the dataset</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot neighborhood_group vs price</span>
 <span class="kw">names</span>(airbnb)
@@ -718,9 +727,7 @@ x &lt;-<span class="st"> </span><span class="ot">NULL</span>
 y &lt;-<span class="st"> </span><span class="ot">NULL</span>
 color &lt;-<span class="st"> </span><span class="ot">NULL</span>
 shape &lt;-<span class="st"> </span><span class="ot">NULL</span>
-stroke &lt;-<span class="st"> </span><span class="ot">NULL</span>
-
-<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">color =</span> color), <span class="dt">shape =</span> shape, <span class="dt">stroke =</span> stroke)</code></pre></div>
+stroke &lt;-<span class="st"> </span><span class="ot">NULL</span></code></pre></div>
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->

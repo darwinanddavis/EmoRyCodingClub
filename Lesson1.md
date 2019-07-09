@@ -224,7 +224,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y)) + theme_minimal
 
 ```r
 # assign theme to variable
-my_theme <- theme_tufte()  # assign theme to your own variable 
+my_theme <- theme_classic()  # assign theme to your own variable 
 ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y)) + my_theme  # add variable defining your chosen theme  
 ```
 
@@ -347,25 +347,32 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, color = class), 
   
 R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the `colour` and `fill` aesthetics. The hollow shapes (0--14) have a border determined by `colour`; the solid shapes (15--18) are filled with `colour`; the filled shapes (21--24) have a border of `colour` and are filled with `fill`.  
 
-# Reading in outside data: AirBnB data  
+# Reading in outside data: NYC AirBnB data  
 
 
 ```r
 library(tidyverse)  # includes package 'readr'
-
 # All Airbnb data (106 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
 
-airbnb_full <- read_csv(url)  # reads in data
-glimpse(airbnb_full)
+nyc_full <- read_csv(url)  # reads in data
+glimpse(nyc_full)
 ```
 \  
 
-Using the smaller dataset 
+Using a smaller dataset 
 
 ```r
-airbnb <- airbnb_full[airbnb_full$id < 1e+06, ]
-glimpse(airbnb)
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+
+nyc <- read_csv(url)
+nyc <- nyc[nyc$id < 1e+06, ]  # get smaller subet of data
+length(nyc$id)  # print length of 'id' column
+```
+
+```
+[1] 2177
 ```
 \    
 
@@ -376,15 +383,35 @@ Using the above plotting functions to visualise the AirBnB data
 
 ```r
 # plot neighborhood_group vs price
-names(airbnb)
-
-head(airbnb$price)
-
-x <- airbnb$neighbourhood_group_cleansed
-y <- airbnb$price
-
-ggplot(data = airbnb) + geom_point(mapping = aes(x = x, y = y, color = y), shape = 21, stroke = 1)
+ggplot(data = nyc) + geom_point(mapping = aes(x = neighbourhood_group, y = price, color = neighbourhood_group), 
+    shape = 21, stroke = 1) + my_theme
 ```
+
+![](Lesson1_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
+
+
+```r
+# plot minimum_nights vs price
+ggplot(data = nyc) + geom_point(mapping = aes(x = minimum_nights, y = price, color = neighbourhood_group), 
+    shape = 20, size = 3, stroke = 1) + my_theme
+```
+
+![](Lesson1_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
+
+
+```r
+# availability_365 vs price
+ggplot(data = nyc) + geom_point(mapping = aes(x = availability_365, y = price, color = neighbourhood_group), 
+    shape = 21, stroke = 1) + my_theme
+```
+    
+
+```r
+# plot longitude vs price
+ggplot(data = nyc) + geom_point(mapping = aes(x = longitude, y = price, color = neighbourhood_group), 
+    shape = 21, stroke = 1) + my_theme
+```
+
 
 Try your own plot using the other variables in the dataset    
 
@@ -399,9 +426,9 @@ y <- NULL
 color <- NULL
 shape <- NULL
 stroke <- NULL
-
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, color = color), shape = shape, stroke = stroke)
 ```
+
+
 
 
 
