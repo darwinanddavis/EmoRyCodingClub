@@ -1399,3 +1399,32 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    1475e47..a22ed58  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'airbnb null data'add .[K
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'airbnb null data'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'l'e's's'o'n' '1' 'f'i'n'a'l'
+[master 640d7ed] lesson 1 final
+ 16 files changed, 128 insertions(+), 76 deletions(-)
+ delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/6673B09F
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png (95%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png (97%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png (95%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (95%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png (95%)
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-20-1.png
+ create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-21-1.png
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-3.png (95%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-1.png (95%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pish[K[K[Kush
+Counting objects: 22, done.
+Delta compression using up to 4 threads.
+Compressing objects:   4% (1/21)   Compressing objects:   9% (2/21)   Compressing objects:  14% (3/21)   Compressing objects:  19% (4/21)   Compressing objects:  23% (5/21)   Compressing objects:  28% (6/21)   Compressing objects:  33% (7/21)   Compressing objects:  38% (8/21)   Compressing objects:  42% (9/21)   Compressing objects:  47% (10/21)   Compressing objects:  52% (11/21)   Compressing objects:  57% (12/21)   Compressing objects:  61% (13/21)   Compressing objects:  66% (14/21)   Compressing objects:  71% (15/21)   Compressing objects:  76% (16/21)   Compressing objects:  80% (17/21)   Compressing objects:  85% (18/21)   Compressing objects:  90% (19/21)   Compressing objects:  95% (20/21)   Compressing objects: 100% (21/21)   Compressing objects: 100% (21/21), done.
+Writing objects:   4% (1/22)   Writing objects:   9% (2/22)   Writing objects:  13% (3/22)   Writing objects:  18% (4/22)   Writing objects:  22% (5/22)   Writing objects:  27% (6/22)   Writing objects:  31% (7/22)   Writing objects:  36% (8/22)   Writing objects:  40% (9/22)   Writing objects:  45% (10/22)   Writing objects:  50% (11/22)   Writing objects:  54% (12/22)   Writing objects:  59% (13/22)   Writing objects:  63% (14/22)   Writing objects:  68% (15/22)   Writing objects:  72% (16/22)   Writing objects:  77% (17/22)   Writing objects:  81% (18/22)   Writing objects:  86% (19/22)   Writing objects:  90% (20/22)   Writing objects:  95% (21/22)   Writing objects: 100% (22/22)   Writing objects: 100% (22/22), 246.57 KiB | 0 bytes/s, done.
+Total 22 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/9)   [Kremote: Resolving deltas:  11% (1/9)   [Kremote: Resolving deltas:  22% (2/9)   [Kremote: Resolving deltas:  33% (3/9)   [Kremote: Resolving deltas:  44% (4/9)   [Kremote: Resolving deltas:  55% (5/9)   [Kremote: Resolving deltas:  66% (6/9)   [Kremote: Resolving deltas:  77% (7/9)   [Kremote: Resolving deltas:  88% (8/9)   [Kremote: Resolving deltas: 100% (9/9)   [Kremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   a22ed58..640d7ed  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'lesson 1 final'add .[K

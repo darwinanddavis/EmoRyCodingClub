@@ -491,17 +491,20 @@ div.tocify {
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
-<div id="functions-and-packages-for-lesson-1" class="section level1">
-<h1>Functions and packages for Lesson 1</h1>
+<div id="lesson-1-intro-to-plotting-data-in-r-with-ggplot" class="section level1">
+<h1>Lesson 1: Intro to plotting data in <code>R</code> with <code>ggplot</code></h1>
+<div id="functions-and-packages-for-lesson-1" class="section level2">
+<h2>Functions and packages for Lesson 1</h2>
 <pre><code> [1] &quot;? &quot;         &quot;ggplot  &quot;   &quot;geom_point&quot; &quot;aes &quot;       &quot;class&quot;      &quot;str&quot;        &quot;summary&quot;   
  [8] &quot;table&quot;      &quot;head&quot;       &quot;tail &quot;      &quot;names&quot;      &quot;color&quot;      &quot;size&quot;       &quot;alpha&quot;     
 [15] &quot;fill&quot;      </code></pre>
 <pre><code>[1] &quot;tidyverse&quot; &quot;readr&quot;     &quot;ggthemes&quot; </code></pre>
 </div>
+</div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
 <p>We’ll be using <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3 Data visualisation in <code>R</code> for Data Science</a>.<br />
-Section 3.3.1.</p>
+Section 3.1.1.</p>
 <ul>
 <li>Intro to the <code>R</code>environment (IDE)<br />
 </li>
@@ -551,7 +554,7 @@ Section 3.3.1.</p>
 </div>
 <div id="using-built-in-r-data-the-mpg-dataset" class="section level1">
 <h1>Using built-in <code>R</code> data: the <code>mpg</code> dataset</h1>
-<p>[Section 3.2.1]((<a href="https://r4ds.had.co.nz/data-visualisation.html" class="uri">https://r4ds.had.co.nz/data-visualisation.html</a>)</p>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#the-mpg-data-frame">Section 3.2.1</a></p>
 <p>We’ll use a built-in tidyverse dataset called <code>mpg</code> with data about cars and gas-mileage.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mpg
 <span class="st">`</span><span class="dt">?</span><span class="st">`</span>(mpg  <span class="co"># run help page  </span>
@@ -578,7 +581,7 @@ mpg<span class="op">$</span>hwy  <span class="co"># print a column</span></code>
 </div>
 <div id="creating-a-plot-with-ggplot" class="section level1">
 <h1>Creating a plot with <code>ggplot</code></h1>
-<p>[Section 3.2.2]((<a href="https://r4ds.had.co.nz/data-visualisation.html" class="uri">https://r4ds.had.co.nz/data-visualisation.html</a>)</p>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#creating-a-ggplot">Section 3.2.2</a></p>
 <ul>
 <li><code>ggplot()</code>. Creates a coordinate system for us–basically an empty graph.<br />
 </li>
@@ -592,10 +595,8 @@ mpg<span class="op">$</span>hwy  <span class="co"># print a column</span></code>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-6-1.png" /><!-- -->  </p>
 <p>Assign data to variables to create dynamic inputs</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_data &lt;-<span class="st"> </span>mpg  <span class="co"># create own variable using a name of your choice  </span>
-x &lt;-<span class="st"> </span>mpg<span class="op">$</span>displ
-y &lt;-<span class="st"> </span>mpg<span class="op">$</span>hwy
 
-<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y))</code></pre></div>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy))</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-7-1.png" /><!-- -->  </p>
 <div id="themes" class="section level2">
 <h2>Themes</h2>
@@ -604,41 +605,41 @@ y &lt;-<span class="st"> </span>mpg<span class="op">$</span>hwy
 <span class="co"># install.packages(&#39;tvthemes&#39;) require(tvthemes)</span>
 
 <span class="co"># classic theme</span>
-<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>()</code></pre></div>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_classic</span>()</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-8-1.png" /><!-- --></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># minimal theme</span>
-<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</code></pre></div>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-8-2.png" /><!-- --></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># assign theme to variable</span>
 my_theme &lt;-<span class="st"> </span><span class="kw">theme_classic</span>()  <span class="co"># assign theme to your own variable </span>
-<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y)) <span class="op">+</span><span class="st"> </span>my_theme  <span class="co"># add variable defining your chosen theme  </span></code></pre></div>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme  <span class="co"># add variable defining your chosen theme  </span></code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-8-3.png" /><!-- -->  </p>
 </div>
 </div>
 <div id="aesthetic-mapping" class="section level1">
 <h1>Aesthetic mapping</h1>
-<p>[Section 3.3]((<a href="https://r4ds.had.co.nz/data-visualisation.html" class="uri">https://r4ds.had.co.nz/data-visualisation.html</a>)</p>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#aesthetic-mappings">Section 3.3</a></p>
 <p><code>color</code>. Change the color of the data points. <code>size</code>. Change the size of the data points.<br />
 <code>alpha</code>. Change the transparency of the data points.</p>
 <div id="color" class="section level2">
 <h2>Color</h2>
 <p>Color by color name.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y), <span class="dt">color =</span> <span class="st">&quot;light blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">color =</span> <span class="st">&quot;light blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-9-1.png" /><!-- -->  </p>
 <p>Color by a <a href="https://htmlcolorcodes.com/color-picker/">hex code</a> in quotes.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y), <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-10-1.png" /><!-- -->  </p>
 <p>Color by data column</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">color =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">color =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p> </p>
 </div>
 <div id="size" class="section level2">
 <h2>Size</h2>
 <p>Size by integer</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">size =</span> <span class="dv">5</span>)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">size =</span> <span class="dv">5</span>)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-12-1.png" /><!-- -->  </p>
 <p>Size by data column</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">size =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">size =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-13-1.png" /><!-- -->  </p>
 <p>We get a warning, but this is okay.<br />
  </p>
@@ -646,23 +647,23 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_classic</span>()  
 <div id="transparency" class="section level2">
 <h2>Transparency</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span>
-<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">alpha =</span> class)) <span class="op">+</span><span class="st"> </span><span class="co"># maps classes to different transparencies</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">alpha =</span> class)) <span class="op">+</span><span class="st"> </span><span class="co"># maps classes to different transparencies</span>
 <span class="st">  </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-14-1.png" /><!-- -->  </p>
 </div>
 <div id="shape" class="section level2">
 <h2>Shape</h2>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">shape =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">shape =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-15-1.png" /><!-- -->  </p>
 <p>Any warnings? Yes, because shape maxes out at six levels.  </p>
 </div>
 <div id="manually-changing-aesthetic-properties" class="section level2">
 <h2>Manually changing aesthetic properties</h2>
 <p>But we can <em>set</em> the aesthetic properties manually, instead of having ggplot do the scaling automatically. For example, we can make our ggplot points all blue like this. This time, putting color OUTSIDE the <code>aes</code> argument.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-16-1.png" /><!-- -->  </p>
 <p>Using color both inside and outside the aes</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> x, <span class="dt">y =</span> y, <span class="dt">color =</span> class), <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">color =</span> class), <span class="dt">color =</span> <span class="st">&quot;#000000&quot;</span>) <span class="op">+</span><span class="st"> </span>
 <span class="st">    </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-17-1.png" /><!-- -->  </p>
 <p><strong>The inner one is overridden.</strong></p>
@@ -680,6 +681,11 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_classic</span>()  
 </center>
 <p>R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the <code>colour</code> and <code>fill</code> aesthetics. The hollow shapes (0–14) have a border determined by <code>colour</code>; the solid shapes (15–18) are filled with <code>colour</code>; the filled shapes (21–24) have a border of <code>colour</code> and are filled with <code>fill</code>.</p>
 </div>
+</div>
+<div id="further-plotting-examples" class="section level1">
+<h1>Further plotting examples</h1>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#exercises-1">Section 3.3.1</a></p>
+<p>The online reference contains further examples of how to visualise your data.</p>
 </div>
 <div id="reading-in-outside-data-nyc-airbnb-data" class="section level1">
 <h1>Reading in outside data: NYC AirBnB data</h1>

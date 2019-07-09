@@ -1,5 +1,5 @@
 ---
-Title: Lesson 1
+Title: "Lesson 1"
 header-includes: \usepackage{float}
 fontsize: 12
 geometry: margin=1in
@@ -67,7 +67,9 @@ params:
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
 
-# Functions and packages for Lesson 1    
+# Lesson 1: Intro to plotting data in `R` with `ggplot`    
+
+## Functions and packages for Lesson 1    
 
 
 ```
@@ -83,7 +85,7 @@ params:
 # Agenda
 
 We'll be using [Ch 3 Data visualisation in `R` for Data Science](https://r4ds.had.co.nz/data-visualisation.html).  
-Section 3.3.1.     
+Section 3.1.1.     
 
 * Intro to the `R`environment (IDE)  
 * Loading packages, e.g. `tidyverse`  
@@ -133,7 +135,7 @@ require(tidyverse)  # same as library
 \  
 
 # Using built-in `R` data: the `mpg` dataset   
-[Section 3.2.1]((https://r4ds.had.co.nz/data-visualisation.html)
+[Section 3.2.1](https://r4ds.had.co.nz/data-visualisation.html#the-mpg-data-frame)  
 
 We'll use a built-in tidyverse dataset called `mpg` with data about cars and gas-mileage.
 
@@ -165,7 +167,7 @@ mpg$hwy  # print a column
 \    
 
 # Creating a plot with `ggplot`  
-[Section 3.2.2]((https://r4ds.had.co.nz/data-visualisation.html)   
+[Section 3.2.2](https://r4ds.had.co.nz/data-visualisation.html#creating-a-ggplot)     
 
 * `ggplot()`. Creates a coordinate system for us--basically an empty graph.  
 * `geom_point()`. Adds a "layer", e.g. geom_point (but there are many for different kinds of graphs).  
@@ -192,10 +194,8 @@ Assign data to variables to create dynamic inputs
 
 ```r
 my_data <- mpg  # create own variable using a name of your choice  
-x <- mpg$displ
-y <- mpg$hwy
 
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y))
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy))
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
@@ -210,14 +210,14 @@ require(ggthemes)
 # install.packages('tvthemes') require(tvthemes)
 
 # classic theme
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y)) + theme_classic()
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + theme_classic()
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 ```r
 # minimal theme
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y)) + theme_minimal()
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + theme_minimal()
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-8-2.png)<!-- -->
@@ -225,14 +225,14 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y)) + theme_minimal
 ```r
 # assign theme to variable
 my_theme <- theme_classic()  # assign theme to your own variable 
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y)) + my_theme  # add variable defining your chosen theme  
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + my_theme  # add variable defining your chosen theme  
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-8-3.png)<!-- -->
 \  
 
 # Aesthetic mapping  
-[Section 3.3]((https://r4ds.had.co.nz/data-visualisation.html)  
+[Section 3.3](https://r4ds.had.co.nz/data-visualisation.html#aesthetic-mappings)  
 
 `color`. Change the color of the data points.
 `size`. Change the size of the data points.  
@@ -243,7 +243,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y)) + my_theme  # a
 Color by color name. 
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y), color = "light blue") + my_theme
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "light blue") + my_theme
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
@@ -252,7 +252,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y), color = "light 
 Color by a [hex code](https://htmlcolorcodes.com/color-picker/) in quotes.  
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y), color = "#000000") + my_theme
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "#000000") + my_theme
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
@@ -261,7 +261,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y), color = "#00000
 Color by data column  
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, color = class)) + my_theme
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = class)) + my_theme
 ```
 \  
 
@@ -270,7 +270,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, color = class)) 
 Size by integer  
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, size = 5)) + my_theme
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, size = 5)) + my_theme
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
@@ -279,7 +279,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, size = 5)) + my_
 Size by data column      
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, size = class)) + my_theme
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, size = class)) + my_theme
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
@@ -292,7 +292,7 @@ We get a warning, but this is okay.
 
 ```r
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = x, y = y, alpha = class)) + # maps classes to different transparencies
+  geom_point(mapping = aes(x = displ, y = hwy, alpha = class)) + # maps classes to different transparencies
   my_theme
 ```
 
@@ -302,7 +302,7 @@ ggplot(data = my_data) +
 ## Shape  
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, shape = class)) + my_theme
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, shape = class)) + my_theme
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
@@ -317,7 +317,7 @@ But we can *set* the aesthetic properties manually, instead of having ggplot do 
 
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y), color = "blue") + my_theme
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "blue") + my_theme
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
@@ -326,7 +326,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y), color = "blue")
 Using color both inside and outside the aes  
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, color = class), color = "#000000") + 
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = class), color = "#000000") + 
     my_theme
 ```
 
@@ -346,6 +346,11 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = x, y = y, color = class), 
   <center>![](admin/shapes.png){width=400px}</center>
   
 R has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the `colour` and `fill` aesthetics. The hollow shapes (0--14) have a border determined by `colour`; the solid shapes (15--18) are filled with `colour`; the filled shapes (21--24) have a border of `colour` and are filled with `fill`.  
+
+# Further plotting examples    
+[Section 3.3.1](https://r4ds.had.co.nz/data-visualisation.html#exercises-1)  
+
+The online reference contains further examples of how to visualise your data.  
 
 # Reading in outside data: NYC AirBnB data  
 

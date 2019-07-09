@@ -245,18 +245,16 @@ This is a really big data set (it has ~50k rows !!), so it will take a moment to
 
 ```{r, eval = FALSE}
 require(readr)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
 
-df_full <-  read_csv(url)
-glimpse(df_full)
+nyc_full <-  read_csv(url)
 
 # smaller csv file (16 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
-df_full <-  read_csv(url)
-df <- df_full[df_full$id<1000000,] # truncate dataset 
-df
+nyc <-  read_csv(url)
+nyc <- nyc[nyc$id < 1000000,] # truncate dataset 
 
-head(df[,1:5])
+head(nyc[,1:5])
 
 ```
 
