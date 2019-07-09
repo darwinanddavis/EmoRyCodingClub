@@ -1475,3 +1475,36 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    d9ed04d..00f8752  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'updated lesson 1 functions list'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'updated lesson 1 functions list'
+[master eaea9da] updated lesson 1 functions list
+ 20 files changed, 73 insertions(+), 45 deletions(-)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-9-1.png => unnamed-chunk-10-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-10-1.png => unnamed-chunk-11-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-12-1.png => unnamed-chunk-13-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-13-1.png => unnamed-chunk-14-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-14-1.png => unnamed-chunk-15-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-15-1.png => unnamed-chunk-16-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-16-1.png => unnamed-chunk-17-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-17-1.png => unnamed-chunk-18-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-20-1.png => unnamed-chunk-21-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-21-1.png => unnamed-chunk-22-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-5-1.png => unnamed-chunk-6-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-6-1.png => unnamed-chunk-7-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-7-1.png => unnamed-chunk-8-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-8-1.png => unnamed-chunk-9-1.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-8-2.png => unnamed-chunk-9-2.png} (100%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-8-3.png => unnamed-chunk-9-3.png} (100%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m 'updated lesson 1 functions list'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K[1Ppush
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  45% (5/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  72% (8/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 1.99 KiB | 0 bytes/s, done.
+Total 11 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   00f8752..eaea9da  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
