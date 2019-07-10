@@ -163,7 +163,8 @@ We'll use a built-in tidyverse dataset called `mpg` with data about cars and gas
 
 ```{r}
 mpg
-?mpg # run help page  
+# run help page with '?'
+?mpg   
 ```
 
 * This is a tibble (data frame) that we've "printed" out. It's like R's version of an excel spreadsheet, but much better. 
@@ -171,8 +172,6 @@ mpg
 
 ## Summarising data        
 ```{r}
-class(mpg) # class of data frame
-class(mpg$manufacturer) # class of data column
 str(mpg) # structure of data
 glimpse(mpg) # preview of data 
 summary(mpg) # basic summary stats  
@@ -180,6 +179,8 @@ table(mpg$manufacturer) # counts of each column
 head(mpg) # visualise first 6 rows of data
 tail(mpg,10) # visualise last 10 (or N) rows of data 
 names(mpg) # get column names
+class(mpg) # class of data frame
+class(mpg$manufacturer) # class of data column
 mpg$displ # print a column
 mpg$hwy # print a column
 ```
@@ -188,8 +189,8 @@ mpg$hwy # print a column
 # Creating a plot with `ggplot`  
 [Section 3.2.2](https://r4ds.had.co.nz/data-visualisation.html#creating-a-ggplot)     
 
-* `ggplot()`. Creates a coordinate system for us--basically an empty graph.  
-* `geom_point()`. Adds a "layer", e.g. geom_point (but there are many for different kinds of graphs).  
+* `ggplot()` Creates a coordinate system for us--basically an empty graph.  
+* `geom_point()` Adds a "layer", e.g. geom_point (but there are many for different kinds of graphs).  
 
 Plot two of the data columns  
 ```{r, eval = T}
@@ -231,10 +232,10 @@ ggplot(data = my_data) +
   theme_tufte()  
 
 # assign theme to variable  
-my_theme <- theme_classic() # assign theme to your own variable 
+my_theme <- theme_classic() 
 ggplot(data = my_data) + 
   geom_point(mapping = aes(x = displ, y = hwy)) + 
-  my_theme # add variable defining your chosen theme  
+  my_theme # apply your chosen theme  
 
 ```
 \  
@@ -296,8 +297,9 @@ We get a warning, but this is okay.
 
 ## Transparency 
 ```{r, eval = T}
+# map classe column to different transparencies
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy, alpha = class)) + # maps classes to different transparencies
+  geom_point(mapping = aes(x = displ, y = hwy, alpha = class)) + 
   my_theme
 ```
 \  
@@ -327,13 +329,20 @@ ggplot(data = my_data) +
 Using color both inside and outside the aes  
 ```{r, eval = T}
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = class), color = "#000000") +
+  geom_point(mapping = aes(x = displ, y = hwy, color = class), color = "#AE42BB") +
   my_theme
 ```
 \  
 
 **The inner one is overridden.**     
 \  
+
+Putting it all together as a snapshot of what's possible  
+```{r, eval = T}
+ggplot(data = my_data) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class, size = class, alpha = class)) +
+  my_theme
+```
 
 ## Aesthetics you can manually set  
 

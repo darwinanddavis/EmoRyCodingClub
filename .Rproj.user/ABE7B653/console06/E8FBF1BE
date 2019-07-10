@@ -1595,3 +1595,39 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    0b2c358..bf7a405  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''u'p'[1P'[1P's'e't' 't'h'm'e'[1P'[1P'e'e' '[1P'[1P'm'e' 't'o' 'c'l'a's'i's'c'[1P'[1P'[1P's'i'c'
+[master 45a33e8] set theme to classic
+ 19 files changed, 23 insertions(+), 8 deletions(-)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-11-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png (97%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png (97%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png (96%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-9-1.png => unnamed-chunk-18-1.png} (100%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-21-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-22-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png (97%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-24-1.png (97%)
+ rename docs/Lesson1_files/figure-html/{unnamed-chunk-18-1.png => unnamed-chunk-9-1.png} (100%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-2.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-3.png (96%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ it [K[K[Kgit pish[K[K[K[Krete[K[Kmote --v
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push orign [K[K[K[K[K[K[K
+Counting objects: 24, done.
+Delta compression using up to 4 threads.
+Compressing objects:   4% (1/23)   Compressing objects:   8% (2/23)   Compressing objects:  13% (3/23)   Compressing objects:  17% (4/23)   Compressing objects:  21% (5/23)   Compressing objects:  26% (6/23)   Compressing objects:  30% (7/23)   Compressing objects:  34% (8/23)   Compressing objects:  39% (9/23)   Compressing objects:  43% (10/23)   Compressing objects:  47% (11/23)   Compressing objects:  52% (12/23)   Compressing objects:  56% (13/23)   Compressing objects:  60% (14/23)   Compressing objects:  65% (15/23)   Compressing objects:  69% (16/23)   Compressing objects:  73% (17/23)   Compressing objects:  78% (18/23)   Compressing objects:  82% (19/23)   Compressing objects:  86% (20/23)   Compressing objects:  91% (21/23)   Compressing objects:  95% (22/23)   Compressing objects: 100% (23/23)   Compressing objects: 100% (23/23), done.
+Writing objects:   4% (1/24)   Writing objects:   8% (2/24)   Writing objects:  12% (3/24)   Writing objects:  16% (4/24)   Writing objects:  20% (5/24)   Writing objects:  25% (6/24)   Writing objects:  29% (7/24)   Writing objects:  33% (8/24)   Writing objects:  37% (9/24)   Writing objects:  41% (10/24)   Writing objects:  45% (11/24)   Writing objects:  50% (12/24)   Writing objects:  54% (13/24)   Writing objects:  58% (14/24)   Writing objects:  62% (15/24)   Writing objects:  66% (16/24)   Writing objects:  70% (17/24)   Writing objects:  75% (18/24)   Writing objects:  79% (19/24)   Writing objects:  83% (20/24)   Writing objects:  87% (21/24)   Writing objects:  91% (22/24)   Writing objects:  95% (23/24)   Writing objects: 100% (24/24)   Writing objects: 100% (24/24), 455.15 KiB | 0 bytes/s, done.
+Total 24 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   bf7a405..45a33e8  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .

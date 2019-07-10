@@ -147,8 +147,8 @@ We'll use a built-in tidyverse dataset called `mpg` with data about cars and gas
 
 ```r
 mpg
-`?`(mpg  # run help page  
-)
+# run help page with '?'
+`?`(mpg)
 ```
 
 * This is a tibble (data frame) that we've "printed" out. It's like R's version of an excel spreadsheet, but much better. 
@@ -157,8 +157,6 @@ mpg
 ## Summarising data        
 
 ```r
-class(mpg)  # class of data frame
-class(mpg$manufacturer)  # class of data column
 str(mpg)  # structure of data
 glimpse(mpg)  # preview of data 
 summary(mpg)  # basic summary stats  
@@ -166,6 +164,8 @@ table(mpg$manufacturer)  # counts of each column
 head(mpg)  # visualise first 6 rows of data
 tail(mpg, 10)  # visualise last 10 (or N) rows of data 
 names(mpg)  # get column names
+class(mpg)  # class of data frame
+class(mpg$manufacturer)  # class of data column
 mpg$displ  # print a column
 mpg$hwy  # print a column
 ```
@@ -174,8 +174,8 @@ mpg$hwy  # print a column
 # Creating a plot with `ggplot`  
 [Section 3.2.2](https://r4ds.had.co.nz/data-visualisation.html#creating-a-ggplot)     
 
-* `ggplot()`. Creates a coordinate system for us--basically an empty graph.  
-* `geom_point()`. Adds a "layer", e.g. geom_point (but there are many for different kinds of graphs).  
+* `ggplot()` Creates a coordinate system for us--basically an empty graph.  
+* `geom_point()` Adds a "layer", e.g. geom_point (but there are many for different kinds of graphs).  
 
 Plot two of the data columns  
 
@@ -228,8 +228,8 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + theme_t
 
 ```r
 # assign theme to variable
-my_theme <- theme_classic()  # assign theme to your own variable 
-ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + my_theme  # add variable defining your chosen theme  
+my_theme <- theme_classic()
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy)) + my_theme  # apply your chosen theme  
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-9-3.png)<!-- -->
@@ -297,9 +297,8 @@ We get a warning, but this is okay.
 ## Transparency 
 
 ```r
-ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy, alpha = class)) + # maps classes to different transparencies
-  my_theme
+# map classe column to different transparencies
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, alpha = class)) + my_theme
 ```
 
 ![](Lesson1_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
@@ -332,7 +331,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "
 Using color both inside and outside the aes  
 
 ```r
-ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = class), color = "#000000") + 
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = class), color = "#AE42BB") + 
     my_theme
 ```
 
@@ -341,6 +340,15 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = cl
 
 **The inner one is overridden.**     
 \  
+
+Putting it all together as a snapshot of what's possible  
+
+```r
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = class, size = class, alpha = class)) + 
+    my_theme
+```
+
+![](Lesson1_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 
 ## Aesthetics you can manually set  
 
@@ -404,7 +412,7 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = neighbourhood_group, y = price
     shape = 21, stroke = 1) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
 
 ```r
@@ -413,7 +421,7 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = minimum_nights, y = price, col
     shape = 20, size = 3, stroke = 1) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
 
 
 ```r
@@ -422,7 +430,7 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = availability_365, y = price, c
     shape = 21, stroke = 1) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
     
 
 ```r
@@ -431,7 +439,7 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = longitude, y = price, color = 
     shape = 21, stroke = 1) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
 
 
 Try your own plot using the other variables in the dataset    
