@@ -271,6 +271,15 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = cl
 ![](Lesson1_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 \  
 
+Inside versus outside the `aes`  
+
+```r
+ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = "blue")) + my_theme
+```
+
+![](Lesson1_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+\  
+
 ## Size 
 
 Size by integer  
@@ -279,7 +288,7 @@ Size by integer
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, size = 5)) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 \  
 
 Size by data column      
@@ -288,7 +297,7 @@ Size by data column
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, size = class)) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 \  
 
 We get a warning, but this is okay.  
@@ -301,7 +310,7 @@ We get a warning, but this is okay.
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, alpha = class)) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 \  
 
 ## Shape  
@@ -310,7 +319,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, alpha = cl
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, shape = class)) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 \  
 
 Any warnings? Yes, because shape maxes out at six levels.
@@ -325,7 +334,7 @@ But we can *set* the aesthetic properties manually, instead of having ggplot do 
 ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy), color = "blue") + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 \  
 
 Using color both inside and outside the aes  
@@ -335,7 +344,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = cl
     my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 \  
 
 **The inner one is overridden.**     
@@ -348,7 +357,7 @@ ggplot(data = my_data) + geom_point(mapping = aes(x = displ, y = hwy, color = cl
     my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
 
 ## Aesthetics you can manually set  
 
@@ -412,7 +421,7 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = neighbourhood_group, y = price
     shape = 21, stroke = 1) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
 
 
 ```r
@@ -421,7 +430,7 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = minimum_nights, y = price, col
     shape = 20, size = 3, stroke = 1) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
 
 
 ```r
@@ -430,7 +439,7 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = availability_365, y = price, c
     shape = 21, stroke = 1) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
     
 
 ```r
@@ -439,7 +448,7 @@ ggplot(data = nyc) + geom_point(mapping = aes(x = longitude, y = price, color = 
     shape = 21, stroke = 1) + my_theme
 ```
 
-![](Lesson1_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
+![](Lesson1_files/figure-html/unnamed-chunk-26-1.png)<!-- -->
 
 
 Try your own plot using the other variables in the dataset    

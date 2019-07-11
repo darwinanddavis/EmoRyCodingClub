@@ -274,6 +274,14 @@ ggplot(data = my_data) +
 ```
 \  
 
+Inside versus outside the `aes`  
+```{r, eval = T}
+ggplot(data = my_data) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = "blue")) +
+  my_theme
+```
+\  
+
 ## Size 
 
 Size by integer  

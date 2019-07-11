@@ -532,8 +532,8 @@ div.tocify {
 <p>Room 2052<br />
 Wayne Rollins Building<br />
  </p>
-<div id="htmlwidget-54ceddfe9cc683e0739b" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-54ceddfe9cc683e0739b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Room 2052, Wayne Rollins Building",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7ef1ac112f68dfda566b" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7ef1ac112f68dfda566b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Room 2052, Wayne Rollins Building",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
 <p><br>  </p>
 <!-- ----------------------- 1 before arrival --------------------------- -->
 </div>
@@ -612,26 +612,26 @@ c</code></pre></div>
 <!-- ----------------------- image --------------------------- -->
 <p>This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below in your <code>R</code> console and press <em>Enter</em>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(readr)
-url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
 
-df_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
-<span class="kw">glimpse</span>(df_full)
+nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
 
 <span class="co"># smaller csv file (16 cols)</span>
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
-df_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
-df &lt;-<span class="st"> </span>df_full[df_full<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># truncate dataset </span>
-df
+nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># truncate dataset </span>
 
-<span class="kw">head</span>(df[, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>])</code></pre></div>
+<span class="kw">head</span>(nyc[, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>])</code></pre></div>
 <p>If everything worked correctly, you should see the below ouput printed in your <code>R</code> console.</p>
-<pre><code>    id                                             name host_id   host_name neighbourhood_group
-1 2539               Clean &amp; quiet apt home by the park    2787        John            Brooklyn
-2 2595                            Skylit Midtown Castle    2845    Jennifer           Manhattan
-3 3647              THE VILLAGE OF HARLEM....NEW YORK !    4632   Elisabeth           Manhattan
-4 3831                  Cozy Entire Floor of Brownstone    4869 LisaRoxanne            Brooklyn
-5 4989 Great 1 bdrm. apartment in the PERFECT location!    7118  New-Yorker           Manhattan
-6 5022 Entire Apt: Spacious Studio/Loft by central park    7192       Laura           Manhattan</code></pre>
+<pre><code># A tibble: 6 x 5
+     id name                                             host_id host_name   neighbourhood_group
+  &lt;dbl&gt; &lt;chr&gt;                                              &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;              
+1  2539 Clean &amp; quiet apt home by the park                  2787 John        Brooklyn           
+2  2595 Skylit Midtown Castle                               2845 Jennifer    Manhattan          
+3  3647 THE VILLAGE OF HARLEM....NEW YORK !                 4632 Elisabeth   Manhattan          
+4  3831 Cozy Entire Floor of Brownstone                     4869 LisaRoxanne Brooklyn           
+5  4989 Great 1 bdrm. apartment in the PERFECT location!    7118 New-Yorker  Manhattan          
+6  5022 Entire Apt: Spacious Studio/Loft by central park    7192 Laura       Manhattan          </code></pre>
 </div>
 </div>
 
