@@ -263,8 +263,10 @@ If everything worked correctly, you should see the below ouput printed in your `
 ```{r, echo=F, eval=T}
 # smaller csv file (16 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
-df_small <- read.csv(url)
-head(df_small[,1:5])
+nyc <-  read_csv(url)
+nyc <- nyc[nyc$id < 1000000,] # truncate dataset 
+
+head(nyc[,1:5])
 
 ```
 

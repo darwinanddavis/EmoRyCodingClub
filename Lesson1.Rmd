@@ -105,6 +105,43 @@ readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/mast
 ```
 \  
 
+# Gallery  
+Let's whet our appetite with an `R` showcase.      
+Hover over the points and use the interactive toolbar to visualise the data.        
+**The code, plot, webpage, and rendering is all done within `R`!**  
+
+```{r, eval=T, echo=F}
+require(plotly)
+require(tidyr)
+require(crosstalk)
+
+m <- gather(mpg, variable, value, -c(year,cyl))
+msd <- highlight_key(m, ~variable)
+gg <- ggplot(m, aes(factor(year), value)) + 
+  geom_jitter(alpha = 0.3) +
+  labs(x = "Year") +
+  theme_classic()
+
+bscols(
+  widths = c(11, rep(5,2)),
+  filter_select("id", "Select a variable", msd, ~variable, multiple = F),
+  ggplotly(gg, dynamicTicks = "y") %>% 
+    layout(margin = list(l = 30)),
+  plot_ly(msd, x = ~jitter(cyl), y = ~value, alpha = ~cyl, linetype = NULL,
+          mode = "markers",
+          hoverinfo = "text", 
+          text = ~paste0("Cyl: ", round(cyl),
+                        "\n",variable,": ", value,
+                        "\nYear: ", year)
+          ) %>% 
+    add_markers(alpha = 0.3) %>%
+    layout(xaxis = list(showgrid = F,
+                        title = "Cylinder"),
+           yaxis = list(showgrid = F)
+    )
+)
+```
+
 # Agenda
 
 We'll be using [Ch 3 Data visualisation in `R` for Data Science](https://r4ds.had.co.nz/data-visualisation.html).  

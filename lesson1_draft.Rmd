@@ -463,6 +463,29 @@ glimpse(df)
        y = "my y axis",
        caption = "this is a caption",
        col = "Renamed Legend") 
+```
+
+
+```{r}
+library(extrafont)
+loadfonts()
+# extrafont::font_import() run once
+# quartz()
+
+mpg %>% 
+  ggplot(aes(displ)) +
+  geom_histogram(aes(fill = class), col = "black", size = 0.1) +
+  labs(title = "Customise your titles using custom fonts",
+       subtitle = "like a Game of Thrones theme",
+       caption = " including the colour palette") +
+  scale_y_continuous(expand = c(0,0)) +
+  scale_x_continuous(expand = c(0,0)) +
+  scale_fill_stark() +
+  theme_classic() +
+  theme(text = element_text(family = "Cinzel", size = 5)) 
+
+
+```
 
    
         
