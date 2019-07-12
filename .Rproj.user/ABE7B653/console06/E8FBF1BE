@@ -1000,3 +1000,61 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    180b6e8..e11d859  master -> master
 [K6300L-127771-M:ecc malishev$ git add . 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''s't'r'p'[1P'[1P'i'p'[1P'[1P'r'i'p'p'e'd' 'b'a'c'k' 'y'a'm'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'r'e'd'u'c'e'd' 'y'a'm'l's'
+[master c28cfb2] reduced yamls
+ 20 files changed, 856 insertions(+), 651 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (85%)
+ delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/229A19
+ delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/229A19-contents
+ delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/28805F7E-contents
+ delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/2AD4A1D8-contents
+ delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/6673B09F-contents
+ delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/lock_file
+ create mode 100644 Lesson2.Rmd
+ create mode 100644 Lesson2.md
+ create mode 100644 docs/Lesson2.html
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 25, done.
+Delta compression using up to 4 threads.
+Compressing objects:   4% (1/23)   Compressing objects:   8% (2/23)   Compressing objects:  13% (3/23)   Compressing objects:  17% (4/23)   Compressing objects:  21% (5/23)   Compressing objects:  26% (6/23)   Compressing objects:  30% (7/23)   Compressing objects:  34% (8/23)   Compressing objects:  39% (9/23)   Compressing objects:  43% (10/23)   Compressing objects:  47% (11/23)   Compressing objects:  52% (12/23)   Compressing objects:  56% (13/23)   Compressing objects:  60% (14/23)   Compressing objects:  65% (15/23)   Compressing objects:  69% (16/23)   Compressing objects:  73% (17/23)   Compressing objects:  78% (18/23)   Compressing objects:  82% (19/23)   Compressing objects:  86% (20/23)   Compressing objects:  91% (21/23)   Compressing objects:  95% (22/23)   Compressing objects: 100% (23/23)   Compressing objects: 100% (23/23), done.
+Writing objects:   4% (1/25)   Writing objects:   8% (2/25)   Writing objects:  12% (3/25)   Writing objects:  16% (4/25)   Writing objects:  20% (5/25)   Writing objects:  24% (6/25)   Writing objects:  28% (7/25)   Writing objects:  32% (8/25)   Writing objects:  36% (9/25)   Writing objects:  40% (10/25)   Writing objects:  44% (11/25)   Writing objects:  48% (12/25)   Writing objects:  52% (13/25)   Writing objects:  56% (14/25)   Writing objects:  60% (15/25)   Writing objects:  64% (16/25)   Writing objects:  68% (17/25)   Writing objects:  72% (18/25)   Writing objects:  76% (19/25)   Writing objects:  80% (20/25)   Writing objects:  84% (21/25)   Writing objects:  88% (22/25)   Writing objects:  92% (23/25)   Writing objects:  96% (24/25)   Writing objects: 100% (25/25)   Writing objects: 100% (25/25), 5.97 KiB | 0 bytes/s, done.
+Total 25 (delta 18), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/18)   [Kremote: Resolving deltas:   5% (1/18)   [Kremote: Resolving deltas:  11% (2/18)   [Kremote: Resolving deltas:  16% (3/18)   [Kremote: Resolving deltas:  22% (4/18)   [Kremote: Resolving deltas:  27% (5/18)   [Kremote: Resolving deltas:  33% (6/18)   [Kremote: Resolving deltas:  38% (7/18)   [Kremote: Resolving deltas:  44% (8/18)   [Kremote: Resolving deltas:  50% (9/18)   [Kremote: Resolving deltas:  55% (10/18)   [Kremote: Resolving deltas:  61% (11/18)   [Kremote: Resolving deltas:  66% (12/18)   [Kremote: Resolving deltas:  72% (13/18)   [Kremote: Resolving deltas:  77% (14/18)   [Kremote: Resolving deltas:  88% (16/18)   [Kremote: Resolving deltas:  94% (17/18)   [Kremote: Resolving deltas: 100% (18/18)   [Kremote: Resolving deltas: 100% (18/18), completed with 16 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   e11d859..c28cfb2  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'reduced yamls'add . [K
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . [2Ppushcommit -m 'reduced yamls'push[Kadd . [K[K[K[K[K[Kreseet[K[Kt
+Unstaged changes after reset:
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE.env
+M	Lesson1.Rmd
+M	Lesson2.Rmd
+M	docs/Lesson1.html
+M	docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-11-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-18-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-19-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-20-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-24-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-25-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-26-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-9-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-9-2.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-9-3.png
+M	docs/index.html
+M	index.Rmd
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git resetadd . 

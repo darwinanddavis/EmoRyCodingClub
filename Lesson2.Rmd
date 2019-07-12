@@ -1,12 +1,6 @@
 ---
 Title: "Lesson 2"
 header-includes: \usepackage{float}
-fontsize: 12
-geometry: margin=1in
-documentclass: article
-linkcolor: blue
-urlcolor: blue
-citecolor: red
 always_allow_html: yes
 output:
   html_document:
@@ -14,10 +8,9 @@ output:
     code_folding: show
     toc: yes
     toc_depth: 2
-    number_sections: no
     toc_float: yes
+    number_sections: no
     self_contained: false
-    keep_md: true
 params: 
   lesson: !r paste0("Lesson ",2)  
 ---
