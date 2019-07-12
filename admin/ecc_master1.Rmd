@@ -392,6 +392,22 @@ If we print `mpg` and find drv column, it's a bunch of weird values. What do the
        col = "Renamed Legend") 
 ```
 
+# Lesson 2  
+
+- more intentional problem sets   
+- give people more breaks throughout  
+- use club time as work time    
+- set entry problem set from previous lesson (repetition only)     
+
+
+
+Session 2  
+Aug 8   
+-	read in data    
+-	come with own data   
+-	facets?    
+
+  
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->
 

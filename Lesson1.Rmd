@@ -18,43 +18,9 @@ output:
     toc_float: yes
     self_contained: false
     keep_md: true
-  pdf_document:
-    includes:
-      in_header: # add .tex file with header content
-    highlight: tango
-    template: null
-    toc: yes
-    toc_depth: 3
-    number_sections: false
-    fig_width: 4
-    fig_height: 5
-    fig_caption: true
-    df_print: tibble 
-    citation_package: biblatex # natbib
-    latex_engine: xelatex #pdflatex # lualatex
-    keep_tex: true # keep .tex file in dir 
-  word_document:
-    highlight: tango
-    keep_md: yes
-    pandoc_args: --smart
-    #reference: mystyles.docx
-    toc: yes
-inludes:
-  before_body: before_body.tex
-subtitle: 
-tags:
-- nothing
-- nothingness  
 params: 
-  # dir: "/Users/malishev/Documents/Emory/admin/ecc/"
-  date: !r Sys.Date()
-  session: !r sessionInfo()  
-  version: !r getRversion()
-  email: "matthew.malishev@emory.edu"  
   lesson: !r paste0("Lesson ",1)  
-  doi: https://github.com/darwinanddavis/EmoRyCodingClub
 ---
-
 
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
 options(width=100)
@@ -394,6 +360,7 @@ url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/v
 nyc <-  read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
 length(nyc$id) # print length of 'id' column
+glimpse(nyc)
 ``` 
 \    
 

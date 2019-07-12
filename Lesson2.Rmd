@@ -1,0 +1,105 @@
+---
+Title: "Lesson 2"
+header-includes: \usepackage{float}
+fontsize: 12
+geometry: margin=1in
+documentclass: article
+linkcolor: blue
+urlcolor: blue
+citecolor: red
+always_allow_html: yes
+output:
+  html_document:
+    highlight: tango
+    code_folding: show
+    toc: yes
+    toc_depth: 2
+    number_sections: no
+    toc_float: yes
+    self_contained: false
+    keep_md: true
+params: 
+  lesson: !r paste0("Lesson ",2)  
+---
+
+
+```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
+options(width=100)
+knitr::opts_chunk$set(
+  eval = FALSE, # run all code
+  echo = TRUE, # show code chunks in output 
+  tidy = TRUE, # make output as tidy
+  message = FALSE,  # mask all messages
+  warning = FALSE, # mask all warnings 
+  comment = "",
+  tidy.opts=list(width.cutoff=100), # set width of code chunks in output
+  size="small" # set code chunk size
+  )
+```
+\
+
+<!-- install packages -->
+```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
+packages <- c("ggplot2","ggthemes","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr")   
+if (require(packages)) {
+    install.packages(packages,dependencies = T)
+    require(packages)
+    # load tvthemes
+    devtools::install_github("Ryo-N7/tvthemes")
+}
+lapply(packages,library,character.only=T)
+```
+
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+
+# Lesson 2: Reading data and more plotting  
+\  
+
+Functions for `r params$lesson`    
+```{r,eval=T, echo=F}
+require(readr)
+# readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
+```
+\  
+
+Packages for `r params$lesson`      
+```{r,eval=T, echo=F}
+require(readr)
+# readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
+```
+\    
+
+# Agenda
+
+We'll be using [Ch 3 Data visualisation in `R` for Data Science](https://r4ds.had.co.nz/data-visualisation.html).  
+Section 3.1.1.     
+
+* Do first problem set
+* Read in data file  
+* Set working directory `here`  
+* Facets  
+
+
+\  
+
+# Do first problem set
+
+Recreate this plot using lesson 1 content    
+
+```{r}
+ggplot()
+```
+
+# Read in .csv data file  
+
+```{r, eval =F}
+require(here)
+getwd()
+here()
+
+read_csv("data.csv")
+```
+

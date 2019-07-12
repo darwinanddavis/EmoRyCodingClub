@@ -18,33 +18,8 @@ output:
     toc_float: yes
     self_contained: false
     keep_md: true
-  pdf_document:
-    includes:
-      in_header: # add .tex file with header content
-    highlight: tango
-    template: null
-    toc: yes
-    toc_depth: 3
-    number_sections: false
-    fig_width: 4
-    fig_height: 5
-    fig_caption: true
-    df_print: tibble 
-    citation_package: biblatex # natbib
-    latex_engine: xelatex #pdflatex # lualatex
-    keep_tex: true # keep .tex file in dir 
-  word_document:
-    highlight: tango
-    keep_md: yes
-    pandoc_args: --smart
-    #reference: mystyles.docx
-    toc: yes
-inludes:
-  before_body: before_body.tex
-subtitle: 
-tags:
-- nothing
-- nothingness
+params: 
+  lesson: "Loading page"  
 ---
 
 <!-- ---------------------------------------------------------------- -->
@@ -89,7 +64,7 @@ This page contains all the documents, links, and information for the monthly `R`
 \    
 
 ## Date for next session  
-July 11, 2019      
+August 8, 2019      
 4:00 - 6:00 PM       
 \  
 
@@ -98,8 +73,8 @@ Room 2052
 Wayne Rollins Building  
 \  
 
-<!--html_preserve--><div id="htmlwidget-7ef1ac112f68dfda566b" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7ef1ac112f68dfda566b">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Room 2052, Wayne Rollins Building",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
+<!--html_preserve--><div id="htmlwidget-a7f47c27ee19e30b35a8" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a7f47c27ee19e30b35a8">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Room 2052, Wayne Rollins Building",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script><!--/html_preserve-->
 
 
 <br>

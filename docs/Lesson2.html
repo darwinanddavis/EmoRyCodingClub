@@ -11,9 +11,9 @@
 
 
 
-<title>Welcome to the EmoRy Coding Club</title>
+<title></title>
 
-<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -24,14 +24,6 @@
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
-<script src="site_libs/htmlwidgets-1.2/htmlwidgets.js"></script>
-<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
-<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
-<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
-<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
-<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
-<script src="site_libs/leaflet-binding-2.0.2/leaflet.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -489,150 +481,53 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Welcome to the EmoRy Coding Club</h1>
 
 </div>
 
 
-<!-- ---------------------------------------------------------------- -->
-<!-- ----------------------- rmd settings --------------------------- -->
-<!-- ---------------------------------------------------------------- -->
-<!-- rmd settings -->
-<!-- install packages -->
-<!-- ---------------------------------------------------------------- -->
-<!-- ---------------------------------------------------------------- -->
-<!-- ---------------------------------------------------------------- -->
-<p>   </p>
-<!-- ----------------------- overview --------------------------- -->
-<div id="overview" class="section level2">
-<h2>Overview</h2>
-<p>This page contains all the documents, links, and information for the monthly <code>R</code> coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, <code>R</code>, and research levels.<br />
-   </p>
-</div>
-<div id="organisers" class="section level2">
-<h2>Organisers</h2>
-<p><strong>Matt Malishev, Department of Biology</strong><br />
-<strong>Desiree de Leon, Yerkes National Primate Research Center</strong><br />
-<strong>Hasse Walum, Yerkes National Primate Research Center</strong></p>
-    <!-- ----------------------- image --------------------------- -->
-<div align="center" ;="" text-align:center="">
-<p><img src="img/mm.jpeg" style=width:33%> <img src="img/ddl.jpeg" style=width:33%> <img src="img/hw.jpg" style=width:33%></p>
-</div>
-<!-- ----------------------- image --------------------------- -->
+<p><br />
+<!-- install packages --></p>
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+<div id="lesson-2-reading-data-and-more-plotting" class="section level1">
+<h1>Lesson 2: Reading data and more plotting</h1>
+<p> </p>
+<p>Functions for Lesson 2</p>
+<p> </p>
+<p>Packages for Lesson 2</p>
 <p> </p>
 </div>
-<div id="date-for-next-session" class="section level2">
-<h2>Date for next session</h2>
-<p>August 8, 2019<br />
-4:00 - 6:00 PM<br />
- </p>
+<div id="agenda" class="section level1">
+<h1>Agenda</h1>
 </div>
-<div id="location" class="section level2">
-<h2>Location</h2>
-<p>Room 2052<br />
-Wayne Rollins Building<br />
- </p>
-<div id="htmlwidget-a7f47c27ee19e30b35a8" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-a7f47c27ee19e30b35a8">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Room 2052, Wayne Rollins Building",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
-<p><br>  </p>
-<!-- ----------------------- 1 before arrival --------------------------- -->
-</div>
-<div id="before-you-arrive" class="section level1">
-<h1>Before you arrive</h1>
-<p>Everyone needs to have the following software and packages loaded before you come to the first session. That way, we can get straight into it.</p>
+<div id="agenda-1" class="section level1">
+<h1>Agenda</h1>
+<p>We’ll be using <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3 Data visualisation in <code>R</code> for Data Science</a>.<br />
+Section 3.1.1.</p>
 <ul>
-<li><a href="https://www.r-project.org/">Install <code>R</code> from CRAN</a>.</li>
-<li>If you’re asked to choose a CRAN mirror, just choose whichever is closest to your location.<br />
+<li>Do first problem set</li>
+<li>Read in data file<br />
 </li>
-<li><a href="https://www.rstudio.com/products/rstudio/download/">Install <code>RStudio</code> Desktop</a></li>
-<li>Install the <code>tidyverse</code> package and then load it by copying and pasting the following code into the <em>Console</em> of <code>RStudio</code> and then pressing <em>Enter</em> to execute it.</li>
+<li>Set working directory <code>here</code><br />
+</li>
+<li>Facets</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)
-<span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)
-<span class="kw">library</span>(tidyverse)
-<span class="kw">library</span>(ggplot2)</code></pre></div>
-<p>   </p>
-<div id="if-you-have-used-r-previously-you-can-skip-to-learning-objectives." class="section level3">
-<h3>If you have used <code>R</code> previously, you can skip to <a href="#sec3">‘Learning Objectives’</a>.</h3>
-<p>   </p>
-<p><br></p>
-<!-- ----------------------- 2 pre check --------------------------- -->
+<p> </p>
 </div>
+<div id="do-first-problem-set" class="section level1">
+<h1>Do first problem set</h1>
+<p>Recreate this plot using lesson 1 content</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>()</code></pre></div>
 </div>
-<div id="pre-work-questions" class="section level1">
-<h1>Pre-work questions</h1>
-<p>If you’re brand new to <code>R</code> or coding, familiarise yourself with a few basic things about <code>R Studio</code> and coding in <code>R</code>. The exercise below should take less than 5 minutes.</p>
-<p>Once you have installed <code>R</code> and <code>R Studio</code>, copy and paste the code below into the <code>R Studio</code> <em>Console</em> (or try typing it out yourself) and press <em>Enter</em> to run it.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Calculate something simple</span>
-<span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span>
+<div id="read-in-.csv-data-file" class="section level1">
+<h1>Read in .csv data file</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(here)
+<span class="kw">getwd</span>()
+<span class="kw">here</span>()
 
-<span class="co"># Calculate something using built-in constants</span>
-<span class="dv">2</span> <span class="op">*</span><span class="st"> </span>pi</code></pre></div>
-<p><br></p>
-<p>Use the <em>assignment operator</em>, <code>&lt;-</code>, to create new objects in <code>R</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span>
-b &lt;-<span class="st"> </span>a <span class="op">*</span><span class="st"> </span>pi
-c &lt;-<span class="st"> &quot;Hello World&quot;</span></code></pre></div>
-<p>And then print the objects in the console:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a
-b
-c</code></pre></div>
-<!-- ----------------------- 3 learning obj --------------------------- -->
-<p><a id="sec3"></a></p>
-</div>
-<div id="learning-objectives" class="section level1">
-<h1>Learning Objectives</h1>
-<p>Our first EmoRy Coding Club will be primarily targeted towards beginners, but we hope this will also useful for anyone who may already be familiar with base <code>R</code> and wanting better practice with the <code>tidyverse</code> package.</p>
-<ol style="list-style-type: decimal">
-<li>Introducing beginners to the <code>RStudio</code> IDE</li>
-<li>Doing some introductory plotting with <code>ggplot</code></li>
-</ol>
-<p>We will use the <a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> free online text to guide us through learning <code>R</code>.</p>
-<!-- ----------------------- image --------------------------- -->
-<div align="center" ;="" text-align:center="">
-<p><img src="img/cover.png" style=width:33%></p>
-</div>
-<!-- ----------------------- image --------------------------- -->
-<p><br></p>
-<!-- ----------------------- 4 materials --------------------------- -->
-</div>
-<div id="materials" class="section level1">
-<h1>Materials</h1>
-<p>We’ll be diving into <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3, Data visualisation</a> and working through Section 3.3.1.  </p>
-<div id="the-dataset" class="section level3">
-<h3>The dataset</h3>
-<p>We’ll also be using <a href="http://insideairbnb.com/new-york-city/">open-access data of housing listings from AirBnb</a> as our toy dataset. Once we’ve completed the above <strong>R for Data Science exercises</strong>, we’ll repeat the plotting exercise using these data.<br />
- </p>
-<p>We’ll be using this dataset for the rest of the club sessions, so feel free to explore it in your own time.<br />
-   </p>
-<!-- ----------------------- image --------------------------- -->
-<div align="center" ;="" text-align:center="">
-<p><img src="img/nyc.jpg" style=width:100%></p>
-</div>
-<!-- ----------------------- image --------------------------- -->
-<p>This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below in your <code>R</code> console and press <em>Enter</em>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(readr)
-url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
-
-nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
-
-<span class="co"># smaller csv file (16 cols)</span>
-url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
-nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
-nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># truncate dataset </span>
-
-<span class="kw">head</span>(nyc[, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>])</code></pre></div>
-<p>If everything worked correctly, you should see the below ouput printed in your <code>R</code> console.</p>
-<pre><code># A tibble: 6 x 5
-     id name                                             host_id host_name   neighbourhood_group
-  &lt;dbl&gt; &lt;chr&gt;                                              &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;              
-1  2539 Clean &amp; quiet apt home by the park                  2787 John        Brooklyn           
-2  2595 Skylit Midtown Castle                               2845 Jennifer    Manhattan          
-3  3647 THE VILLAGE OF HARLEM....NEW YORK !                 4632 Elisabeth   Manhattan          
-4  3831 Cozy Entire Floor of Brownstone                     4869 LisaRoxanne Brooklyn           
-5  4989 Great 1 bdrm. apartment in the PERFECT location!    7118 New-Yorker  Manhattan          
-6  5022 Entire Apt: Spacious Studio/Loft by central park    7192 Laura       Manhattan          </code></pre>
-</div>
+<span class="kw">read_csv</span>(<span class="st">&quot;data.csv&quot;</span>)</code></pre></div>
 </div>
 
 

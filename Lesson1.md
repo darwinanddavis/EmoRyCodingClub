@@ -18,43 +18,9 @@ output:
     toc_float: yes
     self_contained: false
     keep_md: true
-  pdf_document:
-    includes:
-      in_header: # add .tex file with header content
-    highlight: tango
-    template: null
-    toc: yes
-    toc_depth: 3
-    number_sections: false
-    fig_width: 4
-    fig_height: 5
-    fig_caption: true
-    df_print: tibble 
-    citation_package: biblatex # natbib
-    latex_engine: xelatex #pdflatex # lualatex
-    keep_tex: true # keep .tex file in dir 
-  word_document:
-    highlight: tango
-    keep_md: yes
-    pandoc_args: --smart
-    #reference: mystyles.docx
-    toc: yes
-inludes:
-  before_body: before_body.tex
-subtitle: 
-tags:
-- nothing
-- nothingness  
 params: 
-  # dir: "/Users/malishev/Documents/Emory/admin/ecc/"
-  date: !r Sys.Date()
-  session: !r sessionInfo()  
-  version: !r getRversion()
-  email: "matthew.malishev@emory.edu"  
   lesson: !r paste0("Lesson ",1)  
-  doi: https://github.com/darwinanddavis/EmoRyCodingClub
 ---
-
 
 
 \
@@ -407,6 +373,31 @@ length(nyc$id)  # print length of 'id' column
 
 ```
 [1] 2177
+```
+
+```r
+glimpse(nyc)
+```
+
+```
+Observations: 2,177
+Variables: 16
+$ id                             <dbl> 2539, 2595, 3647, 3831, 4989, 5022, 5099, 5121, 5178, 5203…
+$ name                           <chr> "Clean & quiet apt home by the park", "Skylit Midtown Cast…
+$ host_id                        <dbl> 2787, 2845, 4632, 4869, 7118, 7192, 7322, 7356, 8967, 7490…
+$ host_name                      <chr> "John", "Jennifer", "Elisabeth", "LisaRoxanne", "New-Yorke…
+$ neighbourhood_group            <chr> "Brooklyn", "Manhattan", "Manhattan", "Brooklyn", "Manhatt…
+$ neighbourhood                  <chr> "Kensington", "Midtown", "Harlem", "Clinton Hill", "Hell's…
+$ latitude                       <dbl> 40.64749, 40.75362, 40.80902, 40.68514, 40.76260, 40.79851…
+$ longitude                      <dbl> -73.97237, -73.98377, -73.94190, -73.95976, -73.99304, -73…
+$ room_type                      <chr> "Private room", "Entire home/apt", "Private room", "Entire…
+$ price                          <dbl> 149, 225, 150, 89, 105, 80, 200, 60, 79, 79, 150, 135, 85,…
+$ minimum_nights                 <dbl> 1, 1, 3, 1, 4, 10, 3, 45, 2, 2, 1, 5, 2, 4, 2, 90, 2, 2, 1…
+$ number_of_reviews              <dbl> 9, 44, 0, 258, 27, 9, 71, 49, 424, 118, 159, 50, 184, 163,…
+$ last_review                    <date> 2018-10-19, 2019-05-07, NA, 2019-05-20, 2018-07-25, 2018-…
+$ reviews_per_month              <dbl> 0.21, 0.38, NA, 4.53, 0.24, 0.10, 0.58, 0.40, 3.46, 1.00, …
+$ calculated_host_listings_count <dbl> 6, 2, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 3, 1, 1, 1, 1, 1, 1…
+$ availability_365               <dbl> 365, 331, 365, 182, 83, 0, 92, 0, 214, 0, 153, 25, 20, 342…
 ```
 \    
 
