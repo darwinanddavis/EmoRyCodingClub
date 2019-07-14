@@ -1,16 +1,5 @@
 ---
 Title: "Welcome to the Emo`R`y Coding Club"
-header-includes: \usepackage{float}
-always_allow_html: yes
-output:
-  html_document:
-    highlight: tango
-    code_folding: show
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
-    number_sections: no
-    self_contained: false
 params: 
   lesson: "Index"
 ---
@@ -53,6 +42,8 @@ lapply(packages,library,character.only=T)
 <!-- ---------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------- -->
 
+\
+
 # Welcome to the Emo`R`y Coding Club  
 \  
 \  
@@ -72,11 +63,13 @@ This page contains all the documents, links, and information for the monthly `R`
 \  
 \  
 <!-- ----------------------- image --------------------------- -->
-<div align="center"; text-align:center>
-  <img src="img/mm.jpeg" style=width:33%>
-  <img src="img/ddl.jpeg" style=width:33%>
-  <img src="img/hw.jpg" style=width:33%>
-</div>
+
+```{r, echo = FALSE, out.width = "33%", fig.align = "center", out.extra = "style = 'display: inline;'"}
+
+knitr::include_graphics(c("img/mm.jpeg", "img/ddl.jpeg", "img/hw.jpg"))
+
+```
+
 <!-- ----------------------- image --------------------------- -->
 \    
 
@@ -102,10 +95,10 @@ map
 ```
 
 
-<br>
 \  
   
 <!-- ----------------------- 1 before arrival --------------------------- -->
+
 # Before you arrive
 Everyone needs to have the following software and packages loaded before you come to the first session. That way, we can get straight into it.     
   
