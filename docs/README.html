@@ -23,6 +23,8 @@
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
 
 
 
@@ -51,6 +53,9 @@ h6 {
 }
 .table th:not([align]) {
   text-align: left;
+}
+#rmd-source-code {
+  display: none;
 }
 </style>
 
@@ -243,6 +248,15 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("README.md");
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
 
 
 
@@ -256,7 +270,7 @@ $(document).ready(function ()  {
 
     // establish options
     var options = {
-      selectors: "h1,h2,h3",
+      selectors: "h1,h2",
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
@@ -367,14 +381,11 @@ div.tocify {
   <a href="index.html">Home</a>
 </li>
 <li>
-  <a href="lesson1.html">Lesson 1</a>
+  <a href="Lesson1.html">Lesson 1</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="ecc_master1.html">Admin</a>
-</li>
-<li>
   <a href="https://github.com/darwinanddavis/EmoRyCodingClub">
     <span class="fa fa-github"></span>
      
@@ -386,6 +397,16 @@ div.tocify {
 </div><!--/.navbar -->
 
 <div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
 
 
 
@@ -402,15 +423,24 @@ div.tocify {
 </div>
 <div id="corresponding-author-matthew.malishev-at-emory.edu" class="section level5">
 <h5>*Corresponding author: matthew.malishev [at] emory.edu</h5>
+<div align="center"; text-align:center>
+  <img src="docs/img/mm.jpeg", width = 200, height = 200>
+  <img src="docs/img/ddl.jpeg" width = 200, height = 200>
+  <img src="docs/img/hw.jpg" width = 200, height = 200>
+</div>
 </div>
 </div>
 <div id="overview" class="section level2">
 <h2>Overview</h2>
 <p>This page contains all the documents, links, and information for the monthly <code>R</code> coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, <code>R</code>, and research levels.</p>
+<p>Below is the link where you’ll find all the coding material.</p>
+</div>
+<div id="emory-coding-club-website" class="section level2">
+<h2><a href="https://darwinanddavis.github.io/EmoRyCodingClub/index.html">EmoRy Coding Club website</a></h2>
+<hr />
 <p>Versions:<br />
 - R 3.5.0<br />
 - RStudio 1.1.453</p>
-<hr />
 <p>File extensions:<br />
 .R<br />
 .Rmd<br />
@@ -430,6 +460,7 @@ div.tocify {
 </div>
 </div>
 
+<div id="rmd-source-code">IyBXZWxjb21lIHRvIHRoZSBFbW9SeSBDb2RpbmcgQ2x1YiAgICAKCiMjIyBNYXR0IE1hbGlzaGV2KiwgRGVzaXJlZSBEZSBMZW9uICYgSGFzc2UgV2FsdW0gICAgCgojIyMjIyBFbW9yeSBVbml2ZXJzaXR5LCAxNTEwIENsaWZ0b24gUm9hZCBORSwgQXRsYW50YSwgR0EsIFVTQSwgMzAzMjJfICAgIAoKIyMjIyMgKkNvcnJlc3BvbmRpbmcgYXV0aG9yOiBtYXR0aGV3Lm1hbGlzaGV2IFthdF0gZW1vcnkuZWR1ICAgIAoKICAKPGRpdiBhbGlnbj0iY2VudGVyIjsgdGV4dC1hbGlnbjpjZW50ZXI+CiAgPGltZyBzcmM9ImRvY3MvaW1nL21tLmpwZWciLCB3aWR0aCA9IDIwMCwgaGVpZ2h0ID0gMjAwPgogIDxpbWcgc3JjPSJkb2NzL2ltZy9kZGwuanBlZyIgd2lkdGggPSAyMDAsIGhlaWdodCA9IDIwMD4KICA8aW1nIHNyYz0iZG9jcy9pbWcvaHcuanBnIiB3aWR0aCA9IDIwMCwgaGVpZ2h0ID0gMjAwPgo8L2Rpdj4KCgojIyBPdmVydmlldyAgCgpUaGlzIHBhZ2UgY29udGFpbnMgYWxsIHRoZSBkb2N1bWVudHMsIGxpbmtzLCBhbmQgaW5mb3JtYXRpb24gZm9yIHRoZSBtb250aGx5IGBSYCBjb2RpbmcgY2x1YiBoZWxkIGluIHRoZSBEZXBhcnRtZW50IG9mIEJpb2xvZ3ksIEVtb3J5IFVuaXZlcnNpdHkuIFdlIG1lZXQgbW9udGhseSBhbmQgaW50cm9kdWNlIG5ldyBjb2RpbmcgY29uY2VwdHMgYW5kIHRlY2huaXF1ZXMgaW4gYSBjYXN1YWwgd29ya2luZyBlbnZpcm9ubWVudC4gVGhlIGNsdWIgaXMgaGFsZiBsZXNzb24gaGFsZiB3b3Jrc2hvcCBzdHlsZSBhbmQgY2F0ZXJzIGZvciBhbGwgY29kaW5nLCBgUmAsIGFuZCByZXNlYXJjaCBsZXZlbHMuICAKCkJlbG93IGlzIHRoZSBsaW5rIHdoZXJlIHlvdSdsbCBmaW5kIGFsbCB0aGUgY29kaW5nIG1hdGVyaWFsLiAgICAKCiMjIFtFbW9SeSBDb2RpbmcgQ2x1YiB3ZWJzaXRlXShodHRwczovL2RhcndpbmFuZGRhdmlzLmdpdGh1Yi5pby9FbW9SeUNvZGluZ0NsdWIvaW5kZXguaHRtbCkgICAgICAgICAgIAogIAoKICAgIAoqKioqKiogIAoKVmVyc2lvbnM6ICAKIC0gUiAzLjUuMCAgCiAtIFJTdHVkaW8gMS4xLjQ1MyAgICAgCgpGaWxlIGV4dGVuc2lvbnM6ICAgICAKLlIgIAouUm1kICAgICAgCi5wZGYgIAouaHRtbCAgCgoqKioqKiogICAgCgojIyMgOnBpZzogVHJvdWJsZXNob290aW5nIGxpbmtzICAgICAgICAKCiMjIE1haW50YWluZXIgIAoqKk1hdHQgTWFsaXNoZXYqKiAgIAo6bWFnOiBbV2Vic2l0ZV0oaHR0cHM6Ly93d3cucmVzZWFyY2hnYXRlLm5ldC9wcm9maWxlL01hdHRfTWFsaXNoZXYpICAgIAo6YmlyZDogW0BkYXJ3aW5hbmRkYXZpc10oaHR0cHM6Ly90d2l0dGVyLmNvbS9kYXJ3aW5hbmRkYXZpcykgIAo6ZW1haWw6IG1hdHRoZXcubWFsaXNoZXYgW2F0XSBlbW9yeS5lZHUgICAgICAgIAoK</div>
 
 
 </div>
