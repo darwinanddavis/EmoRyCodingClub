@@ -9,7 +9,7 @@ navbar:
   right:
     - icon: fa-github
       href: https://github.com/darwinanddavis/EmoRyCodingClub
-output_dir: "docs"
+output_dir: 'docs'
 output:
   html_document:
     theme: lumen
