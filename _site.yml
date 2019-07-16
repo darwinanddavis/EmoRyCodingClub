@@ -1,5 +1,4 @@
 name: "my-website"
-output_dir: "docs"
 navbar:
   title: "EmoRy Coding Club"
   left:
@@ -10,9 +9,14 @@ navbar:
   right:
     - icon: fa-github
       href: https://github.com/darwinanddavis/EmoRyCodingClub
+output_dir: 'docs'
 output:
   html_document:
     theme: lumen
     highlight: tango
-    toc: true
-    toc_float: true
+    code_folding: show
+    code_download: true
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    number_sections: no

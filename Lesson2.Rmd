@@ -1,16 +1,5 @@
 ---
 Title: "Lesson 2"
-header-includes: \usepackage{float}
-always_allow_html: yes
-output:
-  html_document:
-    highlight: tango
-    code_folding: show
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
-    number_sections: no
-    self_contained: false
 params: 
   lesson: !r paste0("Lesson ",2)  
 ---
@@ -49,6 +38,7 @@ lapply(packages,library,character.only=T)
 <!-- start body -->
 
 # Lesson 2: Reading data and more plotting  
+
 \  
 
 Functions for `r params$lesson`    
@@ -56,6 +46,7 @@ Functions for `r params$lesson`
 require(readr)
 # readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
 ```
+
 \  
 
 Packages for `r params$lesson`      
@@ -63,6 +54,7 @@ Packages for `r params$lesson`
 require(readr)
 # readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
 ```
+
 \    
 
 # Agenda
@@ -85,7 +77,9 @@ Recreate this plot using lesson 1 content
 ```{r}
 ggplot()
 ```
-
+ 
+ \
+ 
 # Read in .csv data file  
 
 ```{r, eval =F}
