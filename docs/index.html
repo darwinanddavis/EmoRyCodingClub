@@ -11,7 +11,7 @@
 
 
 
-<title>index.utf8.md</title>
+<title></title>
 
 <script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,7 +25,7 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <script src="site_libs/navigation-1.1/sourceembed.js"></script>
-<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.2/htmlwidgets.js"></script>
 <link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
 <script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
 <link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
@@ -39,66 +39,41 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-a.sourceLine { display: inline-block; line-height: 1.25; }
-a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
-a.sourceLine:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode { white-space: pre; position: relative; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-code.sourceCode { white-space: pre-wrap; }
-a.sourceLine { text-indent: -1em; padding-left: 1em; }
-}
-pre.numberSource a.sourceLine
-  { position: relative; left: -4em; }
-pre.numberSource a.sourceLine::before
-  { content: attr(data-line-number);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; pointer-events: all; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  { background-color: #f8f8f8; }
-@media screen {
-a.sourceLine::before { text-decoration: underline; }
-}
-code span.al { color: #ef2929; } /* Alert */
-code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #c4a000; } /* Attribute */
-code span.bn { color: #0000cf; } /* BaseN */
-code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4e9a06; } /* Char */
-code span.cn { color: #000000; } /* Constant */
-code span.co { color: #8f5902; font-style: italic; } /* Comment */
-code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code span.dt { color: #204a87; } /* DataType */
-code span.dv { color: #0000cf; } /* DecVal */
-code span.er { color: #a40000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #0000cf; } /* Float */
-code span.fu { color: #000000; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code span.ot { color: #8f5902; } /* Other */
-code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code span.sc { color: #000000; } /* SpecialChar */
-code span.ss { color: #4e9a06; } /* SpecialString */
-code span.st { color: #4e9a06; } /* String */
-code span.va { color: #000000; } /* Variable */
-code span.vs { color: #4e9a06; } /* VerbatimString */
-code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
 
 .sourceCode .row {
   width: 100%;
@@ -443,6 +418,8 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -492,6 +469,9 @@ div.tocify {
 <li>
   <a href="Lesson1.html">Lesson 1</a>
 </li>
+<li>
+  <a href="Lesson2.html">Lesson 2</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -532,10 +512,8 @@ div.tocify {
 <!-- ---------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------- -->
 <p><br />
-</p>
-<div id="welcome-to-the-emory-coding-club" class="section level1">
-<h1>Welcome to the Emo<code>R</code>y Coding Club</h1>
-<p>   </p>
+# Welcome to the Emo<code>R</code>y Coding Club<br />
+   </p>
 <!-- ----------------------- overview --------------------------- -->
 <div id="overview" class="section level2">
 <h2>Overview</h2>
@@ -548,14 +526,6 @@ div.tocify {
 <strong>Desiree de Leon, Yerkes National Primate Research Center</strong><br />
 <strong>Hasse Walum, Yerkes National Primate Research Center</strong></p>
 <p>    <!-- ----------------------- image --------------------------- --></p>
-<div align="center"; text-align:center>
-  <img src="img/mm.jpeg" style=width:33%>
-  <img src="img/ddl.jpeg" style=width:33%>
-  <img src="img/hw.jpg" style=width:33%>
-</div>
-<center>
-<img src="img/mm.jpeg" style="width:33.0%" /> <img src="img/ddl.jpeg" style="width:33.0%" /> <img src="img/hw.jpg" style="width:33.0%" />
-</center>
 <p><img src="img/mm.jpeg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /><img src="img/ddl.jpeg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /><img src="img/hw.jpg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /></p>
 <!-- ----------------------- image --------------------------- -->
 <p> </p>
@@ -571,11 +541,10 @@ div.tocify {
 <p>Room 2052<br />
 Wayne Rollins Building<br />
  </p>
-<div id="htmlwidget-aa94171a40c3207fd92d" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-aa94171a40c3207fd92d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Room 2052, Wayne Rollins Building",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
-<p><br>  </p>
+<div id="htmlwidget-87178f94264ec3578ad9" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-87178f94264ec3578ad9">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Room 2052, Wayne Rollins Building",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
+<p> </p>
 <!-- ----------------------- 1 before arrival --------------------------- -->
-</div>
 </div>
 <div id="before-you-arrive" class="section level1">
 <h1>Before you arrive</h1>
@@ -587,10 +556,10 @@ Wayne Rollins Building<br />
 <li><a href="https://www.rstudio.com/products/rstudio/download/">Install <code>RStudio</code> Desktop</a></li>
 <li>Install the <code>tidyverse</code> package and then load it by copying and pasting the following code into the <em>Console</em> of <code>RStudio</code> and then pressing <em>Enter</em> to execute it.</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw">library</span>(tidyverse)</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw">library</span>(ggplot2)</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)
+<span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)
+<span class="kw">library</span>(tidyverse)
+<span class="kw">library</span>(ggplot2)</code></pre></div>
 <p>   </p>
 <div id="if-you-have-used-r-previously-you-can-skip-to-learning-objectives." class="section level3">
 <h3>If you have used <code>R</code> previously, you can skip to <a href="#sec3">‘Learning Objectives’</a>.</h3>
@@ -603,20 +572,20 @@ Wayne Rollins Building<br />
 <h1>Pre-work questions</h1>
 <p>If you’re brand new to <code>R</code> or coding, familiarise yourself with a few basic things about <code>R Studio</code> and coding in <code>R</code>. The exercise below should take less than 5 minutes.</p>
 <p>Once you have installed <code>R</code> and <code>R Studio</code>, copy and paste the code below into the <code>R Studio</code> <em>Console</em> (or try typing it out yourself) and press <em>Enter</em> to run it.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># Calculate something simple</span></a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co"># Calculate something using built-in constants</span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="dv">2</span> <span class="op">*</span><span class="st"> </span>pi</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Calculate something simple</span>
+<span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span>
+
+<span class="co"># Calculate something using built-in constants</span>
+<span class="dv">2</span> <span class="op">*</span><span class="st"> </span>pi</code></pre></div>
 <p><br></p>
 <p>Use the <em>assignment operator</em>, <code>&lt;-</code>, to create new objects in <code>R</code></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span></a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">b &lt;-<span class="st"> </span>a <span class="op">*</span><span class="st"> </span>pi</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3">c &lt;-<span class="st"> &quot;Hello World&quot;</span></a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span>
+b &lt;-<span class="st"> </span>a <span class="op">*</span><span class="st"> </span>pi
+c &lt;-<span class="st"> &quot;Hello World&quot;</span></code></pre></div>
 <p>And then print the objects in the console:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">a</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">b</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3">c</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a
+b
+c</code></pre></div>
 <!-- ----------------------- 3 learning obj --------------------------- -->
 <p><a id="sec3"></a></p>
 </div>
@@ -629,8 +598,8 @@ Wayne Rollins Building<br />
 </ol>
 <p>We will use the <a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> free online text to guide us through learning <code>R</code>.</p>
 <!-- ----------------------- image --------------------------- -->
-<div align="center"; text-align:center>
-  <img src="img/cover.png" style=width:33%>
+<div align="center" ;="" text-align:center="">
+<p><img src="img/cover.png" style=width:33%></p>
 </div>
 <!-- ----------------------- image --------------------------- -->
 <p><br></p>
@@ -646,22 +615,22 @@ Wayne Rollins Building<br />
 <p>We’ll be using this dataset for the rest of the club sessions, so feel free to explore it in your own time.<br />
    </p>
 <!-- ----------------------- image --------------------------- -->
-<div align="center"; text-align:center>
-  <img src="img/nyc.jpg" style=width:100%>
+<div align="center" ;="" text-align:center="">
+<p><img src="img/nyc.jpg" style=width:100%></p>
 </div>
 <!-- ----------------------- image --------------------------- -->
 <p>This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below in your <code>R</code> console and press <em>Enter</em>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">require</span>(readr)</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2">url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span></a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"></a>
-<a class="sourceLine" id="cb5-4" data-line-number="4">nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)</a>
-<a class="sourceLine" id="cb5-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co"># smaller csv file (16 cols)</span></a>
-<a class="sourceLine" id="cb5-7" data-line-number="7">url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span></a>
-<a class="sourceLine" id="cb5-8" data-line-number="8">nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)</a>
-<a class="sourceLine" id="cb5-9" data-line-number="9">nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># truncate dataset </span></a>
-<a class="sourceLine" id="cb5-10" data-line-number="10"></a>
-<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="kw">head</span>(nyc[, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>])</a></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(readr)
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
+
+nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+
+<span class="co"># smaller csv file (16 cols)</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
+nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># truncate dataset </span>
+
+<span class="kw">head</span>(nyc[, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>])</code></pre></div>
 <p>If everything worked correctly, you should see the below ouput printed in your <code>R</code> console.</p>
 <pre><code># A tibble: 6 x 5
      id name                                             host_id host_name   neighbourhood_group
@@ -675,7 +644,7 @@ Wayne Rollins Building<br />
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tClRpdGxlOiAiV2VsY29tZSB0byB0aGUgRW1vYFJgeSBDb2RpbmcgQ2x1YiIKcGFyYW1zOiAKICBsZXNzb246ICJJbmRleCIKLS0tCgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gcm1kIHNldHRpbmdzIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tPgoKYGBge3Iga2xpcHB5LCBlY2hvPUZBTFNFLCBpbmNsdWRlPVRSVUV9CiMga2xpcHB5OjprbGlwcHkoKQpgYGAKCjwhLS0gcm1kIHNldHRpbmdzIC0tPgpgYGB7ciwgc2V0LW9wdGlvbnMsIGVjaG8gPSBGQUxTRSwgY2FjaGUgPSBGQUxTRX0Kb3B0aW9ucyh3aWR0aD0xMDApCmtuaXRyOjpvcHRzX2NodW5rJHNldCgKIGV2YWwgPSBUUlVFLCAjIHJ1biBhbGwgY29kZQogIyBlY2hvID0gRkFMU0UsICMgc2hvdyBjb2RlIGNodW5rcyBpbiBvdXRwdXQgCiBjb21tZW50ID0gIiIsCiB0aWR5Lm9wdHM9bGlzdCh3aWR0aC5jdXRvZmY9MTAwKSwgIyBzZXQgd2lkdGggb2YgY29kZSBjaHVua3MgaW4gb3V0cHV0CiB0aWR5PVRSVUUsICMgbWFrZSBvdXRwdXQgYXMgdGlkeQogbWVzc2FnZSA9IEZBTFNFLCAgIyBtYXNrIGFsbCBtZXNzYWdlcwogd2FybmluZyA9IEZBTFNFLCAjIG1hc2sgYWxsIHdhcm5pbmdzIAogc2l6ZT0ic21hbGwiLCAjIHNldCBjb2RlIGNodW5rIHNpemUKIGtuaXRyOjpvcHRzX2NodW5rJHNldChmaWcucG9zID0gJ0gnKQopCmBgYAoKPCEtLSBpbnN0YWxsIHBhY2thZ2VzIC0tPgpgYGB7ciwgbG9hZCBwYWNrYWdlcywgaW5jbHVkZT1ULCBjYWNoZT1GLCBtZXNzYWdlPUYsIHdhcm5pbmc9RiwgcmVzdWx0cz0naGlkZScsZWNobz1GfQpwYWNrYWdlcyA8LSBjKCJnZ3Bsb3QyIiwiZHBseXIiLCJ0aWR5dmVyc2UiLCJ6b28iLCJSQ29sb3JCcmV3ZXIiLCJ2aXJpZGlzIiwicGx5ciIsImxlYWZsZXQiKSAgIAppZiAocmVxdWlyZShwYWNrYWdlcykpIHsKICAgIGluc3RhbGwucGFja2FnZXMocGFja2FnZXMsZGVwZW5kZW5jaWVzID0gVCkKICAgIHJlcXVpcmUocGFja2FnZXMpCn0KbGFwcGx5KHBhY2thZ2VzLGxpYnJhcnksY2hhcmFjdGVyLm9ubHk9VCkKYGBgCgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tPgoKXAoKIyBXZWxjb21lIHRvIHRoZSBFbW9gUmB5IENvZGluZyBDbHViICAKXCAgClwgIAoKPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBvdmVydmlldyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CiMjIE92ZXJ2aWV3ICAgIApUaGlzIHBhZ2UgY29udGFpbnMgYWxsIHRoZSBkb2N1bWVudHMsIGxpbmtzLCBhbmQgaW5mb3JtYXRpb24gZm9yIHRoZSBtb250aGx5IGBSYCBjb2RpbmcgY2x1YiBoZWxkIGluIHRoZSBEZXBhcnRtZW50IG9mIEJpb2xvZ3ksIEVtb3J5IFVuaXZlcnNpdHkuIFdlIG1lZXQgbW9udGhseSBhbmQgaW50cm9kdWNlIG5ldyBjb2RpbmcgY29uY2VwdHMgYW5kIHRlY2huaXF1ZXMgaW4gYSBjYXN1YWwgd29ya2luZyBlbnZpcm9ubWVudC4gVGhlIGNsdWIgaXMgaGFsZiBsZXNzb24gaGFsZiB3b3Jrc2hvcCBzdHlsZSBhbmQgY2F0ZXJzIGZvciBhbGwgY29kaW5nLCBgUmAsIGFuZCByZXNlYXJjaCBsZXZlbHMuICAKXCAgClwgIAogIAojIyBPcmdhbmlzZXJzICAKCioqTWF0dCBNYWxpc2hldiwgRGVwYXJ0bWVudCBvZiBCaW9sb2d5KiogICAgCioqRGVzaXJlZSBkZSBMZW9uLCBZZXJrZXMgTmF0aW9uYWwgUHJpbWF0ZSBSZXNlYXJjaCBDZW50ZXIqKiAgCioqSGFzc2UgV2FsdW0sIFllcmtlcyBOYXRpb25hbCBQcmltYXRlIFJlc2VhcmNoIENlbnRlcioqICAgIAoKXCAgClwgIAo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIGltYWdlIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KCjxkaXYgYWxpZ249ImNlbnRlciI7IHRleHQtYWxpZ246Y2VudGVyPgogIDxpbWcgc3JjPSJpbWcvbW0uanBlZyIgc3R5bGU9d2lkdGg6MzMlPgogIDxpbWcgc3JjPSJpbWcvZGRsLmpwZWciIHN0eWxlPXdpZHRoOjMzJT4KICA8aW1nIHNyYz0iaW1nL2h3LmpwZyIgc3R5bGU9d2lkdGg6MzMlPgo8L2Rpdj4KCjxjZW50ZXI+CgohW10oaW1nL21tLmpwZWcpe3dpZHRoPTMzJX0gIVtdKGltZy9kZGwuanBlZyl7d2lkdGg9MzMlfSAhW10oaW1nL2h3LmpwZyl7d2lkdGg9MzMlfQo8L2NlbnRlcj4KCmBgYHtyLCBlY2hvID0gRkFMU0UsIG91dC53aWR0aCA9ICIzMyUiLCBmaWcuYWxpZ24gPSAiY2VudGVyIiwgb3V0LmV4dHJhID0gInN0eWxlID0gJ2Rpc3BsYXk6IGlubGluZTsnIn0KCmtuaXRyOjppbmNsdWRlX2dyYXBoaWNzKGMoImltZy9tbS5qcGVnIiwgImltZy9kZGwuanBlZyIsICJpbWcvaHcuanBnIikpCgpgYGAKCjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gaW1hZ2UgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tPgpcICAgIAoKIyMgRGF0ZSBmb3IgbmV4dCBzZXNzaW9uICAKQXVndXN0IDgsIDIwMTkgICAgICAKNDowMCAtIDY6MDAgUE0gICAgICAgClwgIAoKIyMgTG9jYXRpb24gICAKUm9vbSAyMDUyICAKV2F5bmUgUm9sbGlucyBCdWlsZGluZyAgClwgIAoKYGBge3IsZWNobz1GfQpyZXF1aXJlKGxlYWZsZXQpCmxhdGxvbiA8LSBjKDMzLjc5NjY3LCAtODQuMzIzNDYpICMgZW1vcnkKZWNjX2xhYmVsIDwtICJSb29tIDIwNTIsIFdheW5lIFJvbGxpbnMgQnVpbGRpbmciCm1hcCA8LSBsZWFmbGV0KCkgIyBpbml0aWF0ZSB0aGUgbGVhZmxldCBtYXAgb2JqZWN0Cm1hcCA8LSBhZGRUaWxlcyhtYXApICMgYWRkIHRoZSBhY3R1YWwgbWFwIHRpbGVzIHRvIHRoZSBsZWFmbGV0IG9iamVjdAptYXAgPC0gYWRkTWFya2VycyhtYXAsbGF0bG9uWzJdLGxhdGxvblsxXSxsYWJlbD1lY2NfbGFiZWwscG9wdXA9ZWNjX2xhYmVsKSAKbWFwIAoKYGBgCgoKPGJyPgpcICAKICAKPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAxIGJlZm9yZSBhcnJpdmFsIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KCiMgQmVmb3JlIHlvdSBhcnJpdmUKRXZlcnlvbmUgbmVlZHMgdG8gaGF2ZSB0aGUgZm9sbG93aW5nIHNvZnR3YXJlIGFuZCBwYWNrYWdlcyBsb2FkZWQgYmVmb3JlIHlvdSBjb21lIHRvIHRoZSBmaXJzdCBzZXNzaW9uLiBUaGF0IHdheSwgd2UgY2FuIGdldCBzdHJhaWdodCBpbnRvIGl0LiAgICAgCiAgCgoqIFtJbnN0YWxsIGBSYCBmcm9tIENSQU5dKGh0dHBzOi8vd3d3LnItcHJvamVjdC5vcmcvKS4gCiArIElmIHlvdSdyZSBhc2tlZCB0byBjaG9vc2UgYSBDUkFOIG1pcnJvciwganVzdCBjaG9vc2Ugd2hpY2hldmVyIGlzIGNsb3Nlc3QgdG8geW91ciBsb2NhdGlvbi4gIAoqIFtJbnN0YWxsIGBSU3R1ZGlvYCBEZXNrdG9wXShodHRwczovL3d3dy5yc3R1ZGlvLmNvbS9wcm9kdWN0cy9yc3R1ZGlvL2Rvd25sb2FkLykKKiBJbnN0YWxsIHRoZSBgdGlkeXZlcnNlYCBwYWNrYWdlIGFuZCB0aGVuIGxvYWQgaXQgYnkgY29weWluZyBhbmQgcGFzdGluZyB0aGUgZm9sbG93aW5nIGNvZGUgaW50byB0aGUgKkNvbnNvbGUqIG9mIGBSU3R1ZGlvYCBhbmQgdGhlbiBwcmVzc2luZyAqRW50ZXIqIHRvIGV4ZWN1dGUgaXQuCgpgYGB7ciwgZXZhbD0gRkFMU0V9Cmluc3RhbGwucGFja2FnZXMoInRpZHl2ZXJzZSIpCmluc3RhbGwucGFja2FnZXMoImdncGxvdDIiKQpsaWJyYXJ5KHRpZHl2ZXJzZSkKbGlicmFyeShnZ3Bsb3QyKQpgYGAKClwgIApcICAKCiMjIyBJZiB5b3UgaGF2ZSB1c2VkIGBSYCBwcmV2aW91c2x5LCB5b3UgY2FuIHNraXAgdG8gWydMZWFybmluZyBPYmplY3RpdmVzJ10oI3NlYzMpLiAgCgpcICAKXCAgCgo8YnI+Cgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIDIgcHJlIGNoZWNrIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KIyBQcmUtd29yayBxdWVzdGlvbnMgIApJZiB5b3UncmUgYnJhbmQgbmV3IHRvIGBSYCBvciBjb2RpbmcsIGZhbWlsaWFyaXNlIHlvdXJzZWxmIHdpdGggYSBmZXcgYmFzaWMgdGhpbmdzIGFib3V0IGBSIFN0dWRpb2AgYW5kIGNvZGluZyBpbiBgUmAuIFRoZSBleGVyY2lzZSBiZWxvdyBzaG91bGQgdGFrZSBsZXNzIHRoYW4gNSBtaW51dGVzLiAgICAKCk9uY2UgeW91IGhhdmUgaW5zdGFsbGVkIGBSYCBhbmQgYFIgU3R1ZGlvYCwgY29weSBhbmQgcGFzdGUgdGhlIGNvZGUgYmVsb3cgaW50byB0aGUgYFIgU3R1ZGlvYCAqQ29uc29sZSogKG9yIHRyeSB0eXBpbmcgaXQgb3V0IHlvdXJzZWxmKSBhbmQgcHJlc3MgKkVudGVyKiB0byBydW4gaXQuICAKCmBgYHtyLCBldmFsID0gRkFMU0V9CgojIENhbGN1bGF0ZSBzb21ldGhpbmcgc2ltcGxlCjIgKyAyCgojIENhbGN1bGF0ZSBzb21ldGhpbmcgdXNpbmcgYnVpbHQtaW4gY29uc3RhbnRzCjIgKiBwaQoKYGBgCgo8YnI+CgpVc2UgdGhlICphc3NpZ25tZW50IG9wZXJhdG9yKiwgYDwtYCwgdG8gY3JlYXRlIG5ldyBvYmplY3RzIGluIGBSYAoKYGBge3IsIGV2YWwgPSBGQUxTRX0KCmEgPC0gMiArIDIKYiA8LSBhICogcGkKYyA8LSAiSGVsbG8gV29ybGQiCmBgYAoKQW5kIHRoZW4gcHJpbnQgdGhlIG9iamVjdHMgaW4gdGhlIGNvbnNvbGU6CgpgYGB7ciwgZXZhbCA9IEZBTFNFfQphIApiCmMKYGBgCgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIDMgbGVhcm5pbmcgb2JqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KPGEgaWQ9InNlYzMiPjwvYT4gIAoKIyBMZWFybmluZyBPYmplY3RpdmVzCgpPdXIgZmlyc3QgRW1vUnkgQ29kaW5nIENsdWIgd2lsbCBiZSBwcmltYXJpbHkgdGFyZ2V0ZWQgdG93YXJkcyBiZWdpbm5lcnMsIGJ1dCB3ZSBob3BlIHRoaXMgd2lsbCBhbHNvIHVzZWZ1bCBmb3IgYW55b25lIHdobyBtYXkgYWxyZWFkeSBiZSBmYW1pbGlhciB3aXRoIGJhc2UgYFJgIGFuZCB3YW50aW5nIGJldHRlciBwcmFjdGljZSB3aXRoIHRoZSBgdGlkeXZlcnNlYCBwYWNrYWdlLiAgCgoxKSBJbnRyb2R1Y2luZyBiZWdpbm5lcnMgdG8gdGhlIGBSU3R1ZGlvYCBJREUKMikgRG9pbmcgc29tZSBpbnRyb2R1Y3RvcnkgcGxvdHRpbmcgd2l0aCBgZ2dwbG90YAoKV2Ugd2lsbCB1c2UgdGhlIFtSIGZvciBEYXRhIFNjaWVuY2VdKGh0dHBzOi8vcjRkcy5oYWQuY28ubnovaW5kZXguaHRtbCkgZnJlZSBvbmxpbmUgdGV4dCB0byBndWlkZSB1cyB0aHJvdWdoIGxlYXJuaW5nIGBSYC4KCgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIGltYWdlIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KPGRpdiBhbGlnbj0iY2VudGVyIjsgdGV4dC1hbGlnbjpjZW50ZXI+CiAgPGltZyBzcmM9ImltZy9jb3Zlci5wbmciIHN0eWxlPXdpZHRoOjMzJT4KPC9kaXY+CjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gaW1hZ2UgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tPgoKCgo8YnI+Cgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIDQgbWF0ZXJpYWxzIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KIyBNYXRlcmlhbHMKCldlJ2xsIGJlIGRpdmluZyBpbnRvIFtDaCAzLCBEYXRhIHZpc3VhbGlzYXRpb25dKGh0dHBzOi8vcjRkcy5oYWQuY28ubnovZGF0YS12aXN1YWxpc2F0aW9uLmh0bWwpIGFuZCB3b3JraW5nIHRocm91Z2ggU2VjdGlvbiAzLjMuMS4KXCAgCgojIyMgVGhlIGRhdGFzZXQgICAgCldlJ2xsIGFsc28gYmUgdXNpbmcgW29wZW4tYWNjZXNzIGRhdGEgb2YgaG91c2luZyBsaXN0aW5ncyBmcm9tIEFpckJuYl0oaHR0cDovL2luc2lkZWFpcmJuYi5jb20vbmV3LXlvcmstY2l0eS8pIGFzIG91ciB0b3kgZGF0YXNldC4gT25jZSB3ZSd2ZSBjb21wbGV0ZWQgdGhlIGFib3ZlICoqUiBmb3IgRGF0YSBTY2llbmNlIGV4ZXJjaXNlcyoqLCB3ZSdsbCByZXBlYXQgdGhlIHBsb3R0aW5nIGV4ZXJjaXNlIHVzaW5nIHRoZXNlIGRhdGEuICAgICAgClwgIAoKV2UnbGwgYmUgdXNpbmcgdGhpcyBkYXRhc2V0IGZvciB0aGUgcmVzdCBvZiB0aGUgY2x1YiBzZXNzaW9ucywgc28gZmVlbCBmcmVlIHRvIGV4cGxvcmUgaXQgaW4geW91ciBvd24gdGltZS4gICAgICAKXCAgClwgIAoKPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBpbWFnZSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CjxkaXYgYWxpZ249ImNlbnRlciI7IHRleHQtYWxpZ246Y2VudGVyPgogIDxpbWcgc3JjPSJpbWcvbnljLmpwZyIgc3R5bGU9d2lkdGg6MTAwJT4KPC9kaXY+CjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gaW1hZ2UgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tPiAgCiAgCgpUaGlzIGlzIGEgcmVhbGx5IGJpZyBkYXRhIHNldCAoaXQgaGFzIH41MGsgcm93cyAhISksIHNvIGl0IHdpbGwgdGFrZSBhIG1vbWVudCB0byBydW4uIFRvIGltcG9ydCB0aGUgQWlyQm5iIGRhdGEgZnJvbSB0aGUgVVJMLCBjb3B5IGFuZCBwYXN0ZSB0aGUgbGluZXMgb2YgY29kZSBiZWxvdyBpbiB5b3VyIGBSYCBjb25zb2xlIGFuZCBwcmVzcyAqRW50ZXIqLiAgIAoKYGBge3IsIGV2YWwgPSBGQUxTRX0KcmVxdWlyZShyZWFkcikKdXJsIDwtICJodHRwOi8vZGF0YS5pbnNpZGVhaXJibmIuY29tL3VuaXRlZC1zdGF0ZXMvbnkvbmV3LXlvcmstY2l0eS8yMDE5LTA2LTAyL2RhdGEvbGlzdGluZ3MuY3N2Lmd6IgoKbnljX2Z1bGwgPC0gIHJlYWRfY3N2KHVybCkKCiMgc21hbGxlciBjc3YgZmlsZSAoMTYgY29scykKdXJsIDwtICJodHRwOi8vZGF0YS5pbnNpZGVhaXJibmIuY29tL3VuaXRlZC1zdGF0ZXMvbnkvbmV3LXlvcmstY2l0eS8yMDE5LTA2LTAyL3Zpc3VhbGlzYXRpb25zL2xpc3RpbmdzLmNzdiIKbnljIDwtICByZWFkX2Nzdih1cmwpCm55YyA8LSBueWNbbnljJGlkIDwgMTAwMDAwMCxdICMgdHJ1bmNhdGUgZGF0YXNldCAKCmhlYWQobnljWywxOjVdKQoKYGBgCgpJZiBldmVyeXRoaW5nIHdvcmtlZCBjb3JyZWN0bHksIHlvdSBzaG91bGQgc2VlIHRoZSBiZWxvdyBvdXB1dCBwcmludGVkIGluIHlvdXIgYFJgIGNvbnNvbGUuICAKCmBgYHtyLCBlY2hvPUYsIGV2YWw9VH0KIyBzbWFsbGVyIGNzdiBmaWxlICgxNiBjb2xzKQp1cmwgPC0gImh0dHA6Ly9kYXRhLmluc2lkZWFpcmJuYi5jb20vdW5pdGVkLXN0YXRlcy9ueS9uZXcteW9yay1jaXR5LzIwMTktMDYtMDIvdmlzdWFsaXNhdGlvbnMvbGlzdGluZ3MuY3N2IgpueWMgPC0gIHJlYWRfY3N2KHVybCkKbnljIDwtIG55Y1tueWMkaWQgPCAxMDAwMDAwLF0gIyB0cnVuY2F0ZSBkYXRhc2V0IAoKaGVhZChueWNbLDE6NV0pCgpgYGAKCmBgYHtyLCBlY2hvID1GQUxTRSwgfQojIGRldnRvb2xzOjppbnN0YWxsX2dpdGh1YigneWlodWkveGZ1bicpCgojIGEgc2luZ2xlIFJtRCBmaWxlCiMgeGZ1bjo6ZW1iZWRfZmlsZSgnZXhhbXBsZS5SbWQnKQoKIyBlbWJlZCBhIHNpbmdsZSBjc3YgZmlsZQogIyByIHhmdW46OmVtYmVkX2ZpbGUoJ2RhdGEuY3N2JylgIAoKYGBgCiAg</div>
+<div id="rmd-source-code">LS0tClRpdGxlOiAiV2VsY29tZSB0byB0aGUgRW1vYFJgeSBDb2RpbmcgQ2x1YiIKcGFyYW1zOiAKICBsZXNzb246ICJJbmRleCIKLS0tCgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gcm1kIHNldHRpbmdzIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tPgoKYGBge3Iga2xpcHB5LCBlY2hvPUZBTFNFLCBpbmNsdWRlPVRSVUV9CiMga2xpcHB5OjprbGlwcHkoKQpgYGAKCjwhLS0gcm1kIHNldHRpbmdzIC0tPgpgYGB7ciwgc2V0LW9wdGlvbnMsIGVjaG8gPSBGQUxTRSwgY2FjaGUgPSBGQUxTRX0Kb3B0aW9ucyh3aWR0aD0xMDApCmtuaXRyOjpvcHRzX2NodW5rJHNldCgKIGV2YWwgPSBUUlVFLCAjIHJ1biBhbGwgY29kZQogIyBlY2hvID0gRkFMU0UsICMgc2hvdyBjb2RlIGNodW5rcyBpbiBvdXRwdXQgCiBjb21tZW50ID0gIiIsCiB0aWR5Lm9wdHM9bGlzdCh3aWR0aC5jdXRvZmY9MTAwKSwgIyBzZXQgd2lkdGggb2YgY29kZSBjaHVua3MgaW4gb3V0cHV0CiB0aWR5PVRSVUUsICMgbWFrZSBvdXRwdXQgYXMgdGlkeQogbWVzc2FnZSA9IEZBTFNFLCAgIyBtYXNrIGFsbCBtZXNzYWdlcwogd2FybmluZyA9IEZBTFNFLCAjIG1hc2sgYWxsIHdhcm5pbmdzIAogc2l6ZT0ic21hbGwiLCAjIHNldCBjb2RlIGNodW5rIHNpemUKIGtuaXRyOjpvcHRzX2NodW5rJHNldChmaWcucG9zID0gJ0gnKQopCmBgYAoKPCEtLSBpbnN0YWxsIHBhY2thZ2VzIC0tPgpgYGB7ciwgbG9hZCBwYWNrYWdlcywgaW5jbHVkZT1ULCBjYWNoZT1GLCBtZXNzYWdlPUYsIHdhcm5pbmc9RiwgcmVzdWx0cz0naGlkZScsZWNobz1GfQpwYWNrYWdlcyA8LSBjKCJnZ3Bsb3QyIiwiZHBseXIiLCJ0aWR5dmVyc2UiLCJ6b28iLCJSQ29sb3JCcmV3ZXIiLCJ2aXJpZGlzIiwicGx5ciIsImxlYWZsZXQiKSAgIAppZiAocmVxdWlyZShwYWNrYWdlcykpIHsKICAgIGluc3RhbGwucGFja2FnZXMocGFja2FnZXMsZGVwZW5kZW5jaWVzID0gVCkKICAgIHJlcXVpcmUocGFja2FnZXMpCn0KbGFwcGx5KHBhY2thZ2VzLGxpYnJhcnksY2hhcmFjdGVyLm9ubHk9VCkKYGBgCgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tPgoKXAoKIyBXZWxjb21lIHRvIHRoZSBFbW9gUmB5IENvZGluZyBDbHViICAKXCAgClwgIAoKPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBvdmVydmlldyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CiMjIE92ZXJ2aWV3ICAgIApUaGlzIHBhZ2UgY29udGFpbnMgYWxsIHRoZSBkb2N1bWVudHMsIGxpbmtzLCBhbmQgaW5mb3JtYXRpb24gZm9yIHRoZSBtb250aGx5IGBSYCBjb2RpbmcgY2x1YiBoZWxkIGluIHRoZSBEZXBhcnRtZW50IG9mIEJpb2xvZ3ksIEVtb3J5IFVuaXZlcnNpdHkuIFdlIG1lZXQgbW9udGhseSBhbmQgaW50cm9kdWNlIG5ldyBjb2RpbmcgY29uY2VwdHMgYW5kIHRlY2huaXF1ZXMgaW4gYSBjYXN1YWwgd29ya2luZyBlbnZpcm9ubWVudC4gVGhlIGNsdWIgaXMgaGFsZiBsZXNzb24gaGFsZiB3b3Jrc2hvcCBzdHlsZSBhbmQgY2F0ZXJzIGZvciBhbGwgY29kaW5nLCBgUmAsIGFuZCByZXNlYXJjaCBsZXZlbHMuICAKXCAgClwgIAogIAojIyBPcmdhbmlzZXJzICAKCioqTWF0dCBNYWxpc2hldiwgRGVwYXJ0bWVudCBvZiBCaW9sb2d5KiogICAgCioqRGVzaXJlZSBkZSBMZW9uLCBZZXJrZXMgTmF0aW9uYWwgUHJpbWF0ZSBSZXNlYXJjaCBDZW50ZXIqKiAgCioqSGFzc2UgV2FsdW0sIFllcmtlcyBOYXRpb25hbCBQcmltYXRlIFJlc2VhcmNoIENlbnRlcioqICAgIAoKXCAgClwgIAo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIGltYWdlIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KCmBgYHtyLCBlY2hvID0gRkFMU0UsIG91dC53aWR0aCA9ICIzMyUiLCBmaWcuYWxpZ24gPSAiY2VudGVyIiwgb3V0LmV4dHJhID0gInN0eWxlID0gJ2Rpc3BsYXk6IGlubGluZTsnIn0KCmtuaXRyOjppbmNsdWRlX2dyYXBoaWNzKGMoImltZy9tbS5qcGVnIiwgImltZy9kZGwuanBlZyIsICJpbWcvaHcuanBnIikpCgpgYGAKCjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gaW1hZ2UgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tPgpcICAgIAoKIyMgRGF0ZSBmb3IgbmV4dCBzZXNzaW9uICAKQXVndXN0IDgsIDIwMTkgICAgICAKNDowMCAtIDY6MDAgUE0gICAgICAgClwgIAoKIyMgTG9jYXRpb24gICAKUm9vbSAyMDUyICAKV2F5bmUgUm9sbGlucyBCdWlsZGluZyAgClwgIAoKYGBge3IsZWNobz1GfQpyZXF1aXJlKGxlYWZsZXQpCmxhdGxvbiA8LSBjKDMzLjc5NjY3LCAtODQuMzIzNDYpICMgZW1vcnkKZWNjX2xhYmVsIDwtICJSb29tIDIwNTIsIFdheW5lIFJvbGxpbnMgQnVpbGRpbmciCm1hcCA8LSBsZWFmbGV0KCkgIyBpbml0aWF0ZSB0aGUgbGVhZmxldCBtYXAgb2JqZWN0Cm1hcCA8LSBhZGRUaWxlcyhtYXApICMgYWRkIHRoZSBhY3R1YWwgbWFwIHRpbGVzIHRvIHRoZSBsZWFmbGV0IG9iamVjdAptYXAgPC0gYWRkTWFya2VycyhtYXAsbGF0bG9uWzJdLGxhdGxvblsxXSxsYWJlbD1lY2NfbGFiZWwscG9wdXA9ZWNjX2xhYmVsKSAKbWFwIAoKYGBgCgoKXCAgCiAgCjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gMSBiZWZvcmUgYXJyaXZhbCAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CgojIEJlZm9yZSB5b3UgYXJyaXZlCkV2ZXJ5b25lIG5lZWRzIHRvIGhhdmUgdGhlIGZvbGxvd2luZyBzb2Z0d2FyZSBhbmQgcGFja2FnZXMgbG9hZGVkIGJlZm9yZSB5b3UgY29tZSB0byB0aGUgZmlyc3Qgc2Vzc2lvbi4gVGhhdCB3YXksIHdlIGNhbiBnZXQgc3RyYWlnaHQgaW50byBpdC4gICAgIAogIAoKKiBbSW5zdGFsbCBgUmAgZnJvbSBDUkFOXShodHRwczovL3d3dy5yLXByb2plY3Qub3JnLykuIAogKyBJZiB5b3UncmUgYXNrZWQgdG8gY2hvb3NlIGEgQ1JBTiBtaXJyb3IsIGp1c3QgY2hvb3NlIHdoaWNoZXZlciBpcyBjbG9zZXN0IHRvIHlvdXIgbG9jYXRpb24uICAKKiBbSW5zdGFsbCBgUlN0dWRpb2AgRGVza3RvcF0oaHR0cHM6Ly93d3cucnN0dWRpby5jb20vcHJvZHVjdHMvcnN0dWRpby9kb3dubG9hZC8pCiogSW5zdGFsbCB0aGUgYHRpZHl2ZXJzZWAgcGFja2FnZSBhbmQgdGhlbiBsb2FkIGl0IGJ5IGNvcHlpbmcgYW5kIHBhc3RpbmcgdGhlIGZvbGxvd2luZyBjb2RlIGludG8gdGhlICpDb25zb2xlKiBvZiBgUlN0dWRpb2AgYW5kIHRoZW4gcHJlc3NpbmcgKkVudGVyKiB0byBleGVjdXRlIGl0LgoKYGBge3IsIGV2YWw9IEZBTFNFfQppbnN0YWxsLnBhY2thZ2VzKCJ0aWR5dmVyc2UiKQppbnN0YWxsLnBhY2thZ2VzKCJnZ3Bsb3QyIikKbGlicmFyeSh0aWR5dmVyc2UpCmxpYnJhcnkoZ2dwbG90MikKYGBgCgpcICAKXCAgCgojIyMgSWYgeW91IGhhdmUgdXNlZCBgUmAgcHJldmlvdXNseSwgeW91IGNhbiBza2lwIHRvIFsnTGVhcm5pbmcgT2JqZWN0aXZlcyddKCNzZWMzKS4gIAoKXCAgClwgIAoKPGJyPgoKPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAyIHByZSBjaGVjayAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CiMgUHJlLXdvcmsgcXVlc3Rpb25zICAKSWYgeW91J3JlIGJyYW5kIG5ldyB0byBgUmAgb3IgY29kaW5nLCBmYW1pbGlhcmlzZSB5b3Vyc2VsZiB3aXRoIGEgZmV3IGJhc2ljIHRoaW5ncyBhYm91dCBgUiBTdHVkaW9gIGFuZCBjb2RpbmcgaW4gYFJgLiBUaGUgZXhlcmNpc2UgYmVsb3cgc2hvdWxkIHRha2UgbGVzcyB0aGFuIDUgbWludXRlcy4gICAgCgpPbmNlIHlvdSBoYXZlIGluc3RhbGxlZCBgUmAgYW5kIGBSIFN0dWRpb2AsIGNvcHkgYW5kIHBhc3RlIHRoZSBjb2RlIGJlbG93IGludG8gdGhlIGBSIFN0dWRpb2AgKkNvbnNvbGUqIChvciB0cnkgdHlwaW5nIGl0IG91dCB5b3Vyc2VsZikgYW5kIHByZXNzICpFbnRlciogdG8gcnVuIGl0LiAgCgpgYGB7ciwgZXZhbCA9IEZBTFNFfQoKIyBDYWxjdWxhdGUgc29tZXRoaW5nIHNpbXBsZQoyICsgMgoKIyBDYWxjdWxhdGUgc29tZXRoaW5nIHVzaW5nIGJ1aWx0LWluIGNvbnN0YW50cwoyICogcGkKCmBgYAoKPGJyPgoKVXNlIHRoZSAqYXNzaWdubWVudCBvcGVyYXRvciosIGA8LWAsIHRvIGNyZWF0ZSBuZXcgb2JqZWN0cyBpbiBgUmAKCmBgYHtyLCBldmFsID0gRkFMU0V9CgphIDwtIDIgKyAyCmIgPC0gYSAqIHBpCmMgPC0gIkhlbGxvIFdvcmxkIgpgYGAKCkFuZCB0aGVuIHByaW50IHRoZSBvYmplY3RzIGluIHRoZSBjb25zb2xlOgoKYGBge3IsIGV2YWwgPSBGQUxTRX0KYSAKYgpjCmBgYAoKPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAzIGxlYXJuaW5nIG9iaiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CjxhIGlkPSJzZWMzIj48L2E+ICAKCiMgTGVhcm5pbmcgT2JqZWN0aXZlcwoKT3VyIGZpcnN0IEVtb1J5IENvZGluZyBDbHViIHdpbGwgYmUgcHJpbWFyaWx5IHRhcmdldGVkIHRvd2FyZHMgYmVnaW5uZXJzLCBidXQgd2UgaG9wZSB0aGlzIHdpbGwgYWxzbyB1c2VmdWwgZm9yIGFueW9uZSB3aG8gbWF5IGFscmVhZHkgYmUgZmFtaWxpYXIgd2l0aCBiYXNlIGBSYCBhbmQgd2FudGluZyBiZXR0ZXIgcHJhY3RpY2Ugd2l0aCB0aGUgYHRpZHl2ZXJzZWAgcGFja2FnZS4gIAoKMSkgSW50cm9kdWNpbmcgYmVnaW5uZXJzIHRvIHRoZSBgUlN0dWRpb2AgSURFCjIpIERvaW5nIHNvbWUgaW50cm9kdWN0b3J5IHBsb3R0aW5nIHdpdGggYGdncGxvdGAKCldlIHdpbGwgdXNlIHRoZSBbUiBmb3IgRGF0YSBTY2llbmNlXShodHRwczovL3I0ZHMuaGFkLmNvLm56L2luZGV4Lmh0bWwpIGZyZWUgb25saW5lIHRleHQgdG8gZ3VpZGUgdXMgdGhyb3VnaCBsZWFybmluZyBgUmAuCgoKPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBpbWFnZSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CjxkaXYgYWxpZ249ImNlbnRlciI7IHRleHQtYWxpZ246Y2VudGVyPgogIDxpbWcgc3JjPSJpbWcvY292ZXIucG5nIiBzdHlsZT13aWR0aDozMyU+CjwvZGl2Pgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIGltYWdlIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KCgoKPGJyPgoKPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSA0IG1hdGVyaWFscyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CiMgTWF0ZXJpYWxzCgpXZSdsbCBiZSBkaXZpbmcgaW50byBbQ2ggMywgRGF0YSB2aXN1YWxpc2F0aW9uXShodHRwczovL3I0ZHMuaGFkLmNvLm56L2RhdGEtdmlzdWFsaXNhdGlvbi5odG1sKSBhbmQgd29ya2luZyB0aHJvdWdoIFNlY3Rpb24gMy4zLjEuClwgIAoKIyMjIFRoZSBkYXRhc2V0ICAgIApXZSdsbCBhbHNvIGJlIHVzaW5nIFtvcGVuLWFjY2VzcyBkYXRhIG9mIGhvdXNpbmcgbGlzdGluZ3MgZnJvbSBBaXJCbmJdKGh0dHA6Ly9pbnNpZGVhaXJibmIuY29tL25ldy15b3JrLWNpdHkvKSBhcyBvdXIgdG95IGRhdGFzZXQuIE9uY2Ugd2UndmUgY29tcGxldGVkIHRoZSBhYm92ZSAqKlIgZm9yIERhdGEgU2NpZW5jZSBleGVyY2lzZXMqKiwgd2UnbGwgcmVwZWF0IHRoZSBwbG90dGluZyBleGVyY2lzZSB1c2luZyB0aGVzZSBkYXRhLiAgICAgIApcICAKCldlJ2xsIGJlIHVzaW5nIHRoaXMgZGF0YXNldCBmb3IgdGhlIHJlc3Qgb2YgdGhlIGNsdWIgc2Vzc2lvbnMsIHNvIGZlZWwgZnJlZSB0byBleHBsb3JlIGl0IGluIHlvdXIgb3duIHRpbWUuICAgICAgClwgIApcICAKCjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gaW1hZ2UgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tPgo8ZGl2IGFsaWduPSJjZW50ZXIiOyB0ZXh0LWFsaWduOmNlbnRlcj4KICA8aW1nIHNyYz0iaW1nL255Yy5qcGciIHN0eWxlPXdpZHRoOjEwMCU+CjwvZGl2Pgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIGltYWdlIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4gIAogIAoKVGhpcyBpcyBhIHJlYWxseSBiaWcgZGF0YSBzZXQgKGl0IGhhcyB+NTBrIHJvd3MgISEpLCBzbyBpdCB3aWxsIHRha2UgYSBtb21lbnQgdG8gcnVuLiBUbyBpbXBvcnQgdGhlIEFpckJuYiBkYXRhIGZyb20gdGhlIFVSTCwgY29weSBhbmQgcGFzdGUgdGhlIGxpbmVzIG9mIGNvZGUgYmVsb3cgaW4geW91ciBgUmAgY29uc29sZSBhbmQgcHJlc3MgKkVudGVyKi4gICAKCmBgYHtyLCBldmFsID0gRkFMU0V9CnJlcXVpcmUocmVhZHIpCnVybCA8LSAiaHR0cDovL2RhdGEuaW5zaWRlYWlyYm5iLmNvbS91bml0ZWQtc3RhdGVzL255L25ldy15b3JrLWNpdHkvMjAxOS0wNi0wMi9kYXRhL2xpc3RpbmdzLmNzdi5neiIKCm55Y19mdWxsIDwtICByZWFkX2Nzdih1cmwpCgojIHNtYWxsZXIgY3N2IGZpbGUgKDE2IGNvbHMpCnVybCA8LSAiaHR0cDovL2RhdGEuaW5zaWRlYWlyYm5iLmNvbS91bml0ZWQtc3RhdGVzL255L25ldy15b3JrLWNpdHkvMjAxOS0wNi0wMi92aXN1YWxpc2F0aW9ucy9saXN0aW5ncy5jc3YiCm55YyA8LSAgcmVhZF9jc3YodXJsKQpueWMgPC0gbnljW255YyRpZCA8IDEwMDAwMDAsXSAjIHRydW5jYXRlIGRhdGFzZXQgCgpoZWFkKG55Y1ssMTo1XSkKCmBgYAoKSWYgZXZlcnl0aGluZyB3b3JrZWQgY29ycmVjdGx5LCB5b3Ugc2hvdWxkIHNlZSB0aGUgYmVsb3cgb3VwdXQgcHJpbnRlZCBpbiB5b3VyIGBSYCBjb25zb2xlLiAgCgpgYGB7ciwgZWNobz1GLCBldmFsPVR9CiMgc21hbGxlciBjc3YgZmlsZSAoMTYgY29scykKdXJsIDwtICJodHRwOi8vZGF0YS5pbnNpZGVhaXJibmIuY29tL3VuaXRlZC1zdGF0ZXMvbnkvbmV3LXlvcmstY2l0eS8yMDE5LTA2LTAyL3Zpc3VhbGlzYXRpb25zL2xpc3RpbmdzLmNzdiIKbnljIDwtICByZWFkX2Nzdih1cmwpCm55YyA8LSBueWNbbnljJGlkIDwgMTAwMDAwMCxdICMgdHJ1bmNhdGUgZGF0YXNldCAKCmhlYWQobnljWywxOjVdKQoKYGBgCgpgYGB7ciwgZWNobyA9RkFMU0UsIH0KIyBkZXZ0b29sczo6aW5zdGFsbF9naXRodWIoJ3lpaHVpL3hmdW4nKQoKIyBhIHNpbmdsZSBSbUQgZmlsZQojIHhmdW46OmVtYmVkX2ZpbGUoJ2V4YW1wbGUuUm1kJykKCiMgZW1iZWQgYSBzaW5nbGUgY3N2IGZpbGUKICMgciB4ZnVuOjplbWJlZF9maWxlKCdkYXRhLmNzdicpYCAKCmBgYAogIA==</div>
 
 
 </div>
