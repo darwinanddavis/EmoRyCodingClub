@@ -1,7 +1,19 @@
 ---
 Title: "Lesson 2"
-params: 
-  lesson: !r paste0("Lesson ",2)  
+header-includes: \usepackage{float}
+always_allow_html: yes
+output:
+  html_document:
+    highlight: tango
+    code_folding: show
+    toc: yes
+    toc_depth: 2
+    toc_float: yes
+    number_sections: no
+    self_contained: false
+params:
+  lesson: !r paste0("Lesson ",2)
+  title: "Reading data, setting working directories, and plotting facets"  
 ---
 
 
@@ -37,14 +49,14 @@ lapply(packages,library,character.only=T)
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
 
-# Lesson 2: Reading data and more plotting  
+# Lesson 2: Reading data, setting working directories, and plotting facets  
 
 \  
 
 Functions for `r params$lesson`    
 ```{r,eval=T, echo=F}
 require(readr)
-# readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
+readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
 ```
 
 \  
@@ -52,7 +64,7 @@ require(readr)
 Packages for `r params$lesson`      
 ```{r,eval=T, echo=F}
 require(readr)
-# readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
+readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
 ```
 
 \    
@@ -70,23 +82,41 @@ Section 3.1.1.
 
 \  
 
-# Do first problem set
+# Do First problem set  
 
-Recreate this plot using lesson 1 content    
+Before each new session, we'll do a quick recap, called a Do First. These will only use functions we've previously covered, so if you're unsure or can't remember, just check the code from the previous session.    
+\    
 
-```{r}
-ggplot()
+Recreate the below plot using the smaller NYC AirBnB dataset. There are four aesthetics to change and the plot uses `theme_solarized`.    
+
+```{r, echo=F, eval=T, out.width="100%"}
+require(ggplot2)
+require(dplyr)
+require(ggthemes)
+
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+
+nyc <-  read_csv(url)
+nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
+
+ggplot(data=nyc) +
+  geom_point(mapping = aes(x=minimum_nights, y=number_of_reviews), colour = "orange", shape = 15, size = 2, alpha = 0.4) +
+  theme_solarized()
 ```
- 
- \
+\  
  
 # Read in .csv data file  
 
+We'll also be learning how to read in data, so have a go at testing these functions.  
 ```{r, eval =F}
-require(here)
+# run the help page for the below functions to see what they do
 getwd()
-here()
+setwd()
 
-read_csv("data.csv")
+require(here)
+here()
 ```
+
+## More to come as we develop it~!      
 

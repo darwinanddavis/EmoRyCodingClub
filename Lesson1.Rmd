@@ -13,6 +13,7 @@ output:
     self_contained: false
 params: 
   lesson: !r paste0("Lesson ",1)  
+  title: "Lesson 1: Intro to plotting data in R with ggplot"    
 ---
 
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}

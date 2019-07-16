@@ -5,7 +5,9 @@ navbar:
     - text: "Home"
       href: index.html
     - text: "Lesson 1"
-      href: Lesson1.html
+      href: Lesson1.html  
+    - text: "Lesson 2"
+      href: Lesson2.html
   right:
     - icon: fa-github
       href: https://github.com/darwinanddavis/EmoRyCodingClub
