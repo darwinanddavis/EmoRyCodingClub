@@ -5,7 +5,7 @@ always_allow_html: yes
 output:
   html_document:
     highlight: tango
-    code_folding: show
+    code_folding: hide
     toc: yes
     toc_depth: 2
     toc_float: yes
@@ -88,6 +88,14 @@ Before each new session, we'll do a quick recap, called a Do First. These will o
 \    
 
 Recreate the below plot using the smaller NYC AirBnB dataset. There are four aesthetics to change and the plot uses `theme_solarized`.    
+```{r, echo=T}
+
+
+# You didn't think we'd make it this easy, did you?
+
+
+```
+
 
 ```{r, echo=F, eval=T, out.width="100%"}
 require(ggplot2)
