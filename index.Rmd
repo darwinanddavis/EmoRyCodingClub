@@ -1,7 +1,12 @@
 ---
-Title: "Welcome to the Emo`R`y Coding Club"
+Title: "Welcome to the EmoRy Coding Club"
+header-includes: \usepackage{float}
+always_allow_html: yes
+output:
+  html_document
 params: 
   lesson: "Index"
+  title: "Welcome to the Emo`R`y Coding Club" 
 ---
 
 <!-- ---------------------------------------------------------------- -->
@@ -38,13 +43,14 @@ if (require(packages)) {
 lapply(packages,library,character.only=T)
 ```
 
-<!-- ---------------------------------------------------------------- -->
-<!-- ---------------------------------------------------------------- -->
-<!-- ---------------------------------------------------------------- -->
-\    
-# Welcome to the Emo`R`y Coding Club    
-\      
-  
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->  
+
+# `r params$title`      
+\             
+
 <!-- ----------------------- overview --------------------------- -->
 ## Overview    
 This page contains all the documents, links, and information for the monthly `R` coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, `R`, and research levels.  

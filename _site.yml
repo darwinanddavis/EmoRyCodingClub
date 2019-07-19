@@ -8,6 +8,12 @@ navbar:
       href: Lesson1.html
     - text: "Lesson 2"
       href: Lesson2.html
+    - text: "Lesson 3"
+      href: Lesson3.html
+    - text: "Lesson 4"
+      href: Lesson4.html
+    - text: "Lesson 5"
+      href: Lesson5.html
   right:
     - icon: fa-github
       href: https://github.com/darwinanddavis/EmoRyCodingClub

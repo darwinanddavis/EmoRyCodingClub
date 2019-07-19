@@ -2495,3 +2495,91 @@ usage: git checkout [<options>] <branch>
     --progress            force progress reporting
 
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ it[K[Kgit cooi[K[Kmmit -m ''p'u'b'l'i's'h' 'l'e's's'o'n'3'-'5'[1P'[1P'[1P' '3'5'[1P'-'5'[1@e[1@a[1@r[C[1@l[1@y[1@ [1P[1P[1P[1P[1P[1P[1@d[1@r[1@a[1@f[1@t[1@ 
+[master 47ca138] publish draft lesson 3-5
+ 24 files changed, 1561 insertions(+), 785 deletions(-)
+ rename docs/Lesson3.Rmd => Lesson3.Rmd (99%)
+ rename docs/Lesson4.Rmd => Lesson4.Rmd (100%)
+ rename docs/Lesson5.Rmd => Lesson5.Rmd (96%)
+ rename {docs/Lesson5_cache => Lesson5_cache}/html/__packages (71%)
+ create mode 100644 Lesson5_cache/html/unnamed-chunk-3_42b909711ebd71adceb372b1d15b3e38.RData
+ rename {docs/Lesson5_cache => Lesson5_cache}/html/unnamed-chunk-3_42b909711ebd71adceb372b1d15b3e38.rdb (100%)
+ rename {docs/Lesson5_cache => Lesson5_cache}/html/unnamed-chunk-3_42b909711ebd71adceb372b1d15b3e38.rdx (100%)
+ create mode 100644 Lesson5_files/figure-html/unnamed-chunk-4-1.png
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png (97%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png (97%)
+ rewrite docs/Lesson3.html (99%)
+ create mode 100644 docs/Lesson3_files/figure-html/unnamed-chunk-3-1.png
+ rewrite docs/Lesson4.html (99%)
+ create mode 100644 docs/Lesson4_files/figure-html/unnamed-chunk-3-1.png
+ rewrite docs/Lesson5.html (99%)
+ delete mode 100644 docs/Lesson5_cache/html/unnamed-chunk-3_42b909711ebd71adceb372b1d15b3e38.RData
+ rewrite docs/Lesson5_files/figure-html/unnamed-chunk-4-1.png (96%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 39, done.
+Delta compression using up to 4 threads.
+Compressing objects:   3% (1/29)   Compressing objects:   6% (2/29)   Compressing objects:  10% (3/29)   Compressing objects:  13% (4/29)   Compressing objects:  17% (5/29)   Compressing objects:  20% (6/29)   Compressing objects:  24% (7/29)   Compressing objects:  27% (8/29)   Compressing objects:  31% (9/29)   Compressing objects:  34% (10/29)   Compressing objects:  37% (11/29)   Compressing objects:  41% (12/29)   Compressing objects:  44% (13/29)   Compressing objects:  48% (14/29)   Compressing objects:  51% (15/29)   Compressing objects:  55% (16/29)   Compressing objects:  58% (17/29)   Compressing objects:  62% (18/29)   Compressing objects:  65% (19/29)   Compressing objects:  68% (20/29)   Compressing objects:  72% (21/29)   Compressing objects:  75% (22/29)   Compressing objects:  79% (23/29)   Compressing objects:  82% (24/29)   Compressing objects:  86% (25/29)   Compressing objects:  89% (26/29)   Compressing objects:  93% (27/29)   Compressing objects:  96% (28/29)   Compressing objects: 100% (29/29)   Compressing objects: 100% (29/29), done.
+Writing objects:   2% (1/39)   Writing objects:   5% (2/39)   Writing objects:   7% (3/39)   Writing objects:  10% (4/39)   Writing objects:  12% (5/39)   Writing objects:  15% (6/39)   Writing objects:  17% (7/39)   Writing objects:  20% (8/39)   Writing objects:  23% (9/39)   Writing objects:  25% (10/39)   Writing objects:  28% (11/39)   Writing objects:  30% (12/39)   Writing objects:  35% (14/39)   Writing objects:  38% (15/39)   Writing objects:  41% (16/39)   Writing objects:  43% (17/39)   Writing objects:  46% (18/39)   Writing objects:  48% (19/39)   Writing objects:  51% (20/39)   Writing objects:  53% (21/39)   Writing objects:  56% (22/39)   Writing objects:  58% (23/39)   Writing objects:  61% (24/39)   Writing objects:  64% (25/39)   Writing objects:  66% (26/39)   Writing objects:  69% (27/39)   Writing objects:  71% (28/39)   Writing objects:  74% (29/39)   Writing objects:  79% (31/39)   Writing objects:  82% (32/39)   Writing objects:  84% (33/39)   Writing objects:  87% (34/39)   Writing objects:  89% (35/39)   Writing objects:  92% (36/39)   Writing objects:  94% (37/39)   Writing objects:  97% (38/39)   Writing objects: 100% (39/39)   Writing objects: 100% (39/39), 419.41 KiB | 0 bytes/s, done.
+Total 39 (delta 14), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/14)   [Kremote: Resolving deltas:   7% (1/14)   [Kremote: Resolving deltas:  14% (2/14)   [Kremote: Resolving deltas:  21% (3/14)   [Kremote: Resolving deltas:  28% (4/14)   [Kremote: Resolving deltas:  35% (5/14)   [Kremote: Resolving deltas:  42% (6/14)   [Kremote: Resolving deltas:  50% (7/14)   [Kremote: Resolving deltas:  57% (8/14)   [Kremote: Resolving deltas:  64% (9/14)   [Kremote: Resolving deltas:  71% (10/14)   [Kremote: Resolving deltas: 100% (14/14)   [Kremote: Resolving deltas: 100% (14/14), completed with 10 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   63b57b3..47ca138  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git p[Kcommit -m ''u'p'd'a't'e' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'[K[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'r'e's'e't'
+> git status
+> 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset'
+git status
+ echo 7E542F6B && /usr/bin/env && echo 563BE3E6[A[A[K
+[K
+[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+	[32mmodified:   _site.yml[m
+	[32mmodified:   docs/Lesson1.html[m
+	[32mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png[m
+	[32mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png[m
+	[32mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png[m
+	[32mmodified:   index.Rmd[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset
+Unstaged changes after reset:
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE
+M	_site.yml
+M	docs/Lesson1.html
+M	docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png
+M	docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png
+M	index.Rmd
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git resetstatus
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+	[31mmodified:   _site.yml[m
+	[31mmodified:   docs/Lesson1.html[m
+	[31mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png[m
+	[31mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png[m
+	[31mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png[m
+	[31mmodified:   index.Rmd[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
