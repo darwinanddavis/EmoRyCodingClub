@@ -2583,3 +2583,23 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''p'u's'h' 'l'e's's'o'n'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'c'h'a'n'g'e' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'u'p'd'a't'e'd' 'a'm'[1P'[1P' 'y'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'm'a'd'e' 'y'a'm'l' 'c'o'n's'i's't'e'n't' 'u'[1P'[1P'/'p'i's'h'e'd'[1P'[1P'[1P'[1P'[1P'u'e'd' '[1P'[1P'[1P's'h'e'd' 'l'e's's'[1P'[1P'[1P'3'-'5'e3-5's3-5's3-5'o3-5'n3-5' 3-5'[1@s
+[master b2ce903] made yamls consistent/pushed lesson 3-5
+ 7 files changed, 117 insertions(+), 8 deletions(-)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png (97%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png (96%)
+ rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png (97%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 14, done.
+Delta compression using up to 4 threads.
+Compressing objects:   7% (1/13)   Compressing objects:  15% (2/13)   Compressing objects:  23% (3/13)   Compressing objects:  30% (4/13)   Compressing objects:  38% (5/13)   Compressing objects:  46% (6/13)   Compressing objects:  53% (7/13)   Compressing objects:  61% (8/13)   Compressing objects:  69% (9/13)   Compressing objects:  76% (10/13)   Compressing objects:  84% (11/13)   Compressing objects:  92% (12/13)   Compressing objects: 100% (13/13)   Compressing objects: 100% (13/13), done.
+Writing objects:   7% (1/14)   Writing objects:  14% (2/14)   Writing objects:  21% (3/14)   Writing objects:  28% (4/14)   Writing objects:  35% (5/14)   Writing objects:  42% (6/14)   Writing objects:  50% (7/14)   Writing objects:  57% (8/14)   Writing objects:  64% (9/14)   Writing objects:  71% (10/14)   Writing objects:  78% (11/14)   Writing objects:  85% (12/14)   Writing objects:  92% (13/14)   Writing objects: 100% (14/14)   Writing objects: 100% (14/14), 80.95 KiB | 0 bytes/s, done.
+Total 14 (delta 8), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/8)   [Kremote: Resolving deltas:  12% (1/8)   [Kremote: Resolving deltas:  25% (2/8)   [Kremote: Resolving deltas:  37% (3/8)   [Kremote: Resolving deltas:  50% (4/8)   [Kremote: Resolving deltas:  62% (5/8)   [Kremote: Resolving deltas:  75% (6/8)   [Kremote: Resolving deltas:  87% (7/8)   [Kremote: Resolving deltas: 100% (8/8)   [Kremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   47ca138..b2ce903  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ render [K[K[K[K[K[K[Kgit add .
