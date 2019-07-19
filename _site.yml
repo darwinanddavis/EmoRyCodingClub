@@ -21,4 +21,5 @@ output:
     toc: yes
     toc_depth: 2
     toc_float: yes
-    number_sections: no
+    number_sections: no  
+    self_contained: false

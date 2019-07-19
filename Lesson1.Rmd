@@ -3,17 +3,10 @@ Title: "Lesson 1"
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
-  html_document:
-    highlight: tango
-    code_folding: show
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
-    number_sections: no
-    self_contained: false
+  html_document
 params: 
   lesson: !r paste0("Lesson ",1)
-  title: "Lesson 1: Intro to plotting data in R with ggplot"
+  title: "Lesson 1: Intro to plotting data in `R` with `ggplot`"
 ---
 
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
@@ -48,7 +41,7 @@ lapply(packages,library,character.only=T)
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
 
-# Lesson 1: Intro to plotting data in `R` with `ggplot`    
+# `r params$title`  
 \  
 
 Functions for `r params$lesson`    
@@ -75,8 +68,8 @@ Section 3.1.1.
 * Using built-in `R` data: the `mpg` dataset   
 * Using ggplot with the built-in data set (to make scatterplots)    
 * Modifying plot aesthetics  
-* Reading in outside data: AirBnB data  
-* Plotting AirBnB data with ggplot      
+* Reading in outside data: Airbnb data  
+* Plotting Airbnb data with ggplot      
 
 \  
 
@@ -334,7 +327,7 @@ ggplot(data = my_data) +
 
 The online reference contains further examples of how to visualise your data.    
 
-# Reading in outside data: NYC AirBnB data  
+# Reading in outside data: NYC Airbnb data  
 
 ```{r}
 library(tidyverse) # includes package "readr"

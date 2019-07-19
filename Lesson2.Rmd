@@ -3,17 +3,10 @@ Title: "Lesson 2"
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
-  html_document:
-    highlight: tango
-    code_folding: hide
-    toc: yes
-    toc_depth: 2
-    toc_float: yes
-    number_sections: no
-    self_contained: false
+  html_document
 params:
   lesson: !r paste0("Lesson ",2)
-  title: "Reading data, setting working directories, and plotting facets"  
+  title: "Lesson 2: Reading data, setting working directories, and plotting facets"  
 ---
 
 
@@ -49,7 +42,7 @@ lapply(packages,library,character.only=T)
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
 
-# Lesson 2: Reading data, setting working directories, and plotting facets  
+# `r params$title`    
 
 \  
 
@@ -87,7 +80,8 @@ Section 3.1.1.
 Before each new session, we'll do a quick recap, called a Do First. These will only use functions we've previously covered, so if you're unsure or can't remember, just check the code from the previous session.    
 \    
 
-Recreate the below plot using the smaller NYC AirBnB dataset. There are four aesthetics to change and the plot uses `theme_solarized`.    
+Recreate the below plot using the smaller NYC Airbnb dataset. There are four aesthetics to change and the plot uses `theme_solarized`.  
+_Hint_: Use the help `?` function if something isn't clear.  
 ```{r, echo=T}
 
 
@@ -112,7 +106,7 @@ ggplot(data=nyc) +
   geom_point(mapping = aes(x=minimum_nights, y=number_of_reviews), colour = "orange", shape = 15, size = 2, alpha = 0.4) +
   theme_solarized()
 ```
-\  
+\    
  
 # Read in .csv data file  
 
@@ -126,5 +120,31 @@ require(here)
 here()
 ```
 
-## More to come as we develop it~!      
+## Plotting facets    
+`facet_wrap` and `facet_grid`  
+Facets add a third variable to a plot.   
+  * The facet function takes a formula as an argument, which is just a data structure, denoted by a tilde **~**  
+
+`facet_wrap`    
+```{r,eval=T}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_wrap(~ class, nrow = 2) +
+  theme_classic()
+
+```
+
+`facet_grid`  
+```{r, eval=T}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(drv ~ cyl) +
+  theme_bw()
+```
+
+
+## Exercise 1  
+Try plotting facets using the smaller Airbnb data.  
+ * What happens when you use a continuous variable on a `facet_wrap`?  
+
 

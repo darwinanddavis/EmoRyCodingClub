@@ -1,0 +1,106 @@
+---
+Title: "Lesson 4"
+header-includes: \usepackage{float}
+always_allow_html: yes
+output:
+  html_document
+params:
+  lesson: !r paste0("Lesson ",4)
+  title: "Lesson 4: `apply` functions and plotting barcharts and distributions"      
+---
+
+
+```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
+options(width=100)
+knitr::opts_chunk$set(
+  eval = FALSE, # run all code
+  echo = TRUE, # show code chunks in output 
+  tidy = TRUE, # make output as tidy
+  message = FALSE,  # mask all messages
+  warning = FALSE, # mask all warnings 
+  comment = "",
+  tidy.opts=list(width.cutoff=100), # set width of code chunks in output
+  size="small" # set code chunk size
+  )
+```
+\
+
+<!-- install packages -->
+```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
+packages <- c("ggplot2","ggthemes","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr")   
+if (require(packages)) {
+    install.packages(packages,dependencies = T)
+    require(packages)
+    # load tvthemes
+    devtools::install_github("Ryo-N7/tvthemes")
+}
+lapply(packages,library,character.only=T)
+```
+
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+
+# `r params$title`        
+
+\  
+
+Functions for `r params$lesson`    
+```{r,eval=T, echo=F}
+require(readr)
+readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
+```
+
+\  
+
+Packages for `r params$lesson`      
+```{r,eval=T, echo=F}
+require(readr)
+readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
+```
+
+\    
+
+# Agenda  
+* Use `apply`, `mapply`, `lapply`, and `sapply` to apply functions to data  
+* Plot bar charts and distributions  
+
+## Do First    
+
+Recreate the below plot using the smaller NYC Airbnb dataset.    
+
+```{r, echo=F, eval=T, out.width="100%"}
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+nyc <-  read_csv(url)
+nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
+
+
+require(ggplot2)
+require(dplyr)
+require(ggthemes)
+
+ttl <- "Price of Airbnb apartments in NYC"
+subttl <- "by number of reviews"
+caption <- "Source: Airbnb open data"
+xlab <- "Number of reviews"
+ylab <- "Price ($US)"  
+colv <- "#535EEB"
+colv_smooth <- "#3B27BA"
+size <- 2
+alpha <- 0.3
+
+# glimpse(nyc)  
+# nyc$calculated_host_listings_count %>% unique
+ggplot(data = nyc, mapping = aes(x = reviews_per_month, y = number_of_reviews)) +
+  geom_point(color = colv, size=3, alpha = alpha) +
+  geom_smooth(color= colv_smooth, fill=colv_smooth,method="loess") +
+  labs(title = ttl,
+       subtitle = subttl,
+       caption = caption,
+       x = xlab,
+       y = ylab) +
+  theme_classic()
+```
+

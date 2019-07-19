@@ -1,0 +1,96 @@
+---
+Title: "Lesson 5"
+header-includes: \usepackage{float}
+always_allow_html: yes
+output:
+  html_document
+params:
+  lesson: !r paste0("Lesson ",5)
+  title: "Lesson 5: `if` statements and subsetting data"        
+---
+
+
+```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
+options(width=100)
+knitr::opts_chunk$set(
+  eval = FALSE, # run all code
+  echo = TRUE, # show code chunks in output 
+  tidy = TRUE, # make output as tidy
+  message = FALSE,  # mask all messages
+  warning = FALSE, # mask all warnings 
+  comment = "",
+  tidy.opts=list(width.cutoff=100), # set width of code chunks in output
+  size="small" # set code chunk size
+  )
+```
+\
+
+<!-- install packages -->
+```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
+packages <- c("ggplot2","ggthemes","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr")   
+if (require(packages)) {
+    install.packages(packages,dependencies = T)
+    require(packages)
+    # load tvthemes
+    devtools::install_github("Ryo-N7/tvthemes")
+}
+lapply(packages,library,character.only=T)
+```
+
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+
+# `r params$title`        
+
+\  
+
+Functions for `r params$lesson`    
+```{r,eval=T, echo=F}
+require(readr)
+readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
+```
+
+\  
+
+Packages for `r params$lesson`      
+```{r,eval=T, echo=F}
+require(readr)
+readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
+```
+
+\    
+
+# Agenda  
+* Chop up datasets into smaller parts using `filter` and `subset`  
+* Create conditional statements and toggles using `if` and `else`      
+
+## Do First    
+
+Recreate the below plot using the larger NYC Airbnb dataset.    
+```{r,echo=F,eval=T,cache=T}
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+nyc_full <- read_csv(url) # reads in data
+```
+
+```{r, echo=F, eval=T, out.width="100%"}
+ttl <- "NYC Airbnb listings"
+subttl <- "for room types across neighbourhoods"
+xlab <- "Number of listings by hosts"
+my_theme <- theme_tufte()
+
+# glimpse(nyc_full)  
+nyc_full_ <- nyc_full %>% subset(availability_30 > 0)
+
+ggplot() +
+  geom_bar(data = nyc_full_, mapping = aes(x = availability_30,
+       fill=neighbourhood_group_cleansed), show.legend = FALSE) +
+  facet_grid(room_type ~ neighbourhood_group_cleansed) +
+  labs(title = ttl,
+       subtitle = subttl,
+       x = xlab) +
+  my_theme 
+
+```
+

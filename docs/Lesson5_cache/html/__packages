@@ -1,0 +1,16 @@
+base
+ggplot2
+ggthemes
+dplyr
+tidyverse
+tibble
+tidyr
+readr
+purrr
+stringr
+forcats
+zoo
+RColorBrewer
+viridisLite
+viridis
+plyr

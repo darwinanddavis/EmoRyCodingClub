@@ -41,10 +41,10 @@ lapply(packages,library,character.only=T)
 <!-- ---------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------- -->
 <!-- ---------------------------------------------------------------- -->
-# Welcome to the Emo`R`y Coding Club  
+\    
+# Welcome to the Emo`R`y Coding Club    
 \      
-\  
-
+  
 <!-- ----------------------- overview --------------------------- -->
 ## Overview    
 This page contains all the documents, links, and information for the monthly `R` coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, `R`, and research levels.  
