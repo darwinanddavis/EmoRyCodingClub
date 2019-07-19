@@ -75,9 +75,9 @@ nyc_full <- read_csv(url) # reads in data
 ```
 
 ```{r, echo=F, eval=T, out.width="100%"}
-ttl <- "NYC Airbnb listings"
+ttl <- "NYC Airbnb availability"
 subttl <- "for room types across neighbourhoods"
-xlab <- "Number of listings by hosts"
+xlab <- "Availability of property in next 30 days"
 my_theme <- theme_tufte()
 
 # glimpse(nyc_full)  

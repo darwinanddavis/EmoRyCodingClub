@@ -381,6 +381,17 @@ Aug 8
 -	facets?    
 
   
+# Airbnb data exploration  
+
+Example 1  
+https://rstudio-pubs-static.s3.amazonaws.com/407929_afc5ef0f2ad648389447a6ca3f4a7cd4.html  
+
+
+Example 2  
+https://medium.com/datadriveninvestor/exploratory-data-analysis-on-airbnb-properties-in-paris-bce61bd680c8  
+
+  
+  
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->
 

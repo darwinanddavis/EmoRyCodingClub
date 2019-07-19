@@ -2427,3 +2427,71 @@ error: Your local changes to the following files would be overwritten by merge:
 Please commit your changes or stash them before you merge.
 Aborting
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''p'r'e' 's't'a's'h' 'c'o'm'
+[master 63b57b3] pre stash com
+ 1 file changed, 21 insertions(+), 1 deletion(-)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pish[K[K[Kush
+Counting objects: 12, done.
+Delta compression using up to 4 threads.
+Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
+Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 2.07 KiB | 0 bytes/s, done.
+Total 12 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/6)   [Kremote: Resolving deltas:  33% (2/6)   [Kremote: Resolving deltas:  66% (4/6)   [Kremote: Resolving deltas: 100% (6/6)   [Kremote: Resolving deltas: 100% (6/6), completed with 3 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   89b4215..63b57b3  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git stash apply
+error: Your local changes to the following files would be overwritten by merge:
+	.Rproj.user/ABE7B653/console06/E8FBF1BE
+Please commit your changes or stash them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git stash apply[5Ptus
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git checkout --.Rproj.user/ABE7B653/console06/E8FBF1BE
+error: unknown option `.Rproj.user/ABE7B653/console06/E8FBF1BE'
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --progress            force progress reporting
+
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .

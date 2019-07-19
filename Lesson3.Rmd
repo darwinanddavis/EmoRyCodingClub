@@ -79,7 +79,6 @@ require(ggthemes)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
 nyc <-  read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
-names(nyc)
 
 ggplot(data = nyc, mapping = aes(x = minimum_nights, y = price)) +
   geom_point(aes(color=neighbourhood_group),show.legend = F) +
