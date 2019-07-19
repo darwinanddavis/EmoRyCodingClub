@@ -2407,3 +2407,23 @@ Changes not staged for commit:
 
 no changes added to commit
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add ,[K.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .commit -m 'pre stash commit'
+[master c2061e6] pre stash commit
+ 1 file changed, 72 insertions(+)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push[K[K[K[Kstatus
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git statuscommit -m 'pre stash commit'add .[Kcommit -m 'pre stash commit'status[Ksh apply
+error: Your local changes to the following files would be overwritten by merge:
+	.Rproj.user/ABE7B653/console06/E8FBF1BE
+Please commit your changes or stash them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
