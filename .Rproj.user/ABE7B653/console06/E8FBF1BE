@@ -2335,3 +2335,75 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    70a490d..ef9585b  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+Saved working directory and index state WIP on master: 89b4215 added lesson 3-5
+HEAD is now at 89b4215 added lesson 3-5
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git status[1Pshrevert --no-commit 89b4215e454754cf8e7700f1e49d42606b233da5d
+error: Your local changes to the following files would be overwritten by merge:
+	.Rproj.user/ABE7B653/console06/E8FBF1BE
+Please commit your changes or stash them before you merge.
+Aborting
+fatal: revert failed
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git log --oneline
+[?1h=[33m89b4215[m added lesson 3-5[m
+[33mef9585b[m index update[m
+[33m70a490d[m l2 code fold[m
+[33me3ce381[m added l2 page[m
+[33mc3fe6c5[m render l2 page[m
+[33m968ad2f[m added l2 pck and func files[m
+[33mcae1f80[m file-cleanup merge Merge branch 'file-cleanup'[m
+[33m9dbda6e[m pre file-cleanup merge[m
+[33m832088e[m Makes the docs folder the output directory for all rendered Rmds[m
+:[K[K [KESCESC[KOO[KAA[K[K:[K[K[?1l>]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git log --oneline[K[K[K[K[K[K[K[K[K
+[?1h=[33mcommit 89b4215e454754cf8e7700f1e49d42606b23da5d[m[m
+Author: darwinanddavis <matthew.malishev@gmail.com>[m
+Date:   Fri Jul 19 13:28:47 2019 -0400[m
+[m
+    added lesson 3-5[m
+[m
+[33mcommit ef9585b88d4c0e55226face6ae281c0732758a65[m[m
+Author: darwinanddavis <matthew.malishev@gmail.com>[m
+Date:   Wed Jul 17 10:00:00 2019 -0400[m
+:[K[K[?1l>]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git [K[K[K[Kgit log --onelinerevert --no-commit 89b4215e454754cf8e7700f1e49d42606b233da5d[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[6Plog --oneline[K--oneline[K[K[K[K[K[K[K[K[Kgit log --onelinerevert --no-commit status[K[1Pshrevert --no-commit 89b4215e454754cf8e7700f1e49d42606b233da5d
+error: Your local changes to the following files would be overwritten by merge:
+	.Rproj.user/ABE7B653/console06/E8FBF1BE
+Please commit your changes or stash them before you merge.
+Aborting
+fatal: revert failed
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git stash list
+[?1h=stash@{0}: WIP on master: 89b4215 added lesson 3-5[m
+stash@{1}: WIP on master: 89b4215 added lesson 3-5[m
+[K[?1l>]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git stash apply
+error: Your local changes to the following files would be overwritten by merge:
+	.Rproj.user/ABE7B653/console06/E8FBF1BE
+Please commit your changes or stash them before you merge.
+Aborting
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[K[K[K[K[Kstatus
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . [K[K[K[K[K[Kcommit -m ''p'o's't' 's't'a's'h' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'r'e' 's't'a's'h' 'c'o'm'm'i't'
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+
+no changes added to commit
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add ,[K.
