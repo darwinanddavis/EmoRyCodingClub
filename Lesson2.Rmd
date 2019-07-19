@@ -3,7 +3,8 @@ Title: "Lesson 2"
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
-  html_document
+  html_document:
+    code_folding: hide
 params:
   lesson: !r paste0("Lesson ",2)
   title: "Lesson 2: Reading data, setting working directories, and plotting facets"  
@@ -80,7 +81,7 @@ Section 3.1.1.
 Before each new session, we'll do a quick recap, called a Do First. These will only use functions we've previously covered, so if you're unsure or can't remember, just check the code from the previous session.    
 \    
 
-Recreate the below plot using the smaller NYC Airbnb dataset. There are four aesthetics to change and the plot uses `theme_solarized`.  
+Recreate the below plot using the smaller NYC Airbnb dataset (`nyc` from Lesson 1). There are four aesthetics to change and the plot uses `theme_solarized`.  
 _Hint_: Use the help `?` function if something isn't clear.  
 ```{r, echo=T}
 

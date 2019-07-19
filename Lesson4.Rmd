@@ -68,7 +68,7 @@ readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/mast
 
 ## Do First    
 
-Recreate the below plot using the smaller NYC Airbnb dataset.    
+Recreate the below plot using the smaller NYC Airbnb dataset. There are four aesthetics to change and the fitted line is a "loess" curve.        
 
 ```{r, echo=F, eval=T, out.width="100%"}
 # smaller csv file (16 cols)
@@ -84,8 +84,8 @@ require(ggthemes)
 ttl <- "Price of Airbnb apartments in NYC"
 subttl <- "by number of reviews"
 caption <- "Source: Airbnb open data"
-xlab <- "Number of reviews"
-ylab <- "Price ($US)"  
+xlab <- "Reviews per month"
+ylab <- "Number of reviews"  
 colv <- "#535EEB"
 colv_smooth <- "#3B27BA"
 size <- 2
@@ -95,7 +95,7 @@ alpha <- 0.3
 # nyc$calculated_host_listings_count %>% unique
 ggplot(data = nyc, mapping = aes(x = reviews_per_month, y = number_of_reviews)) +
   geom_point(color = colv, size=3, alpha = alpha) +
-  geom_smooth(color= colv_smooth, fill=colv_smooth,method="loess") +
+  geom_smooth(color= colv_smooth, fill=colv_smooth, method="loess") +
   labs(title = ttl,
        subtitle = subttl,
        caption = caption,
