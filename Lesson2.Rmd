@@ -108,18 +108,33 @@ ggplot(data=nyc) +
   theme_solarized()
 ```
 \    
- 
-# Read in .csv data file  
 
-We'll also be learning how to read in data, so have a go at testing these functions.  
-```{r, eval =F}
-# run the help page for the below functions to see what they do
-getwd()
-setwd()
-
-require(here)
-here()
+# Load packages with `pacman`  
+```{r}
+install.packages("pacman")
+require(pacman)
 ```
+
+Type in the packages you want to install into the p_load function.  
+_Note: the below two arguments are the same_
+```{r}
+p_load(dplyr,ggplot2,here) # your packages  
+pacman::p_load(dplyr,ggplot2,here) # this is the same as above, just the tidyverse way of doing it: 'package::function(argument1,argument2,argument3)'
+```
+
+# Read in .csv data file  
+Using `here` to set your working directory  
+```{r}
+set_here() # set current working directory 
+dr_here() # print current working directory where .here is located
+```
+Create a folder in your directory called **'lookhere'**, then open a new file in TextEdit (Mac) or Notepad (Windows), type in something like " _We found the here file!_ ", then save the file as **"heretest.txt"**.      
+```{r}
+list.files() # print files in your current working dir. the 'heretest.txt' file is not here, but one folder below in lookhere/
+here("lookhere","heretest.txt") # using here to forage for the file
+cat(readLines("lookhere/heretest.txt")) # finding the file manually
+```
+
 
 ## Plotting facets    
 `facet_wrap` and `facet_grid`  

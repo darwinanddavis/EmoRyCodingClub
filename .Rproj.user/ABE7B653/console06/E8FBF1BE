@@ -2623,3 +2623,95 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    b2ce903..64602b0  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[K[K[Kd .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''g'[1P'y'[1P's'e'[1P'[1P'[K[C'[Cu'p'd'a't'e' 'l'4' 'd'o' 'f'i'r's't'
+[master d18c481] update l4 do first
+ 7 files changed, 35 insertions(+), 14 deletions(-)
+ rewrite docs/Lesson4_files/figure-html/unnamed-chunk-3-1.png (83%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pich[K[K[Kush
+Counting objects: 15, done.
+Delta compression using up to 4 threads.
+Compressing objects:   7% (1/13)   Compressing objects:  15% (2/13)   Compressing objects:  23% (3/13)   Compressing objects:  30% (4/13)   Compressing objects:  38% (5/13)   Compressing objects:  46% (6/13)   Compressing objects:  53% (7/13)   Compressing objects:  61% (8/13)   Compressing objects:  69% (9/13)   Compressing objects:  76% (10/13)   Compressing objects:  84% (11/13)   Compressing objects:  92% (12/13)   Compressing objects: 100% (13/13)   Compressing objects: 100% (13/13), done.
+Writing objects:   6% (1/15)   Writing objects:  13% (2/15)   Writing objects:  20% (3/15)   Writing objects:  26% (4/15)   Writing objects:  33% (5/15)   Writing objects:  40% (6/15)   Writing objects:  46% (7/15)   Writing objects:  53% (8/15)   Writing objects:  60% (9/15)   Writing objects:  66% (10/15)   Writing objects:  73% (11/15)   Writing objects:  80% (12/15)   Writing objects:  86% (13/15)   Writing objects:  93% (14/15)   Writing objects: 100% (15/15)   Writing objects: 100% (15/15), 193.92 KiB | 0 bytes/s, done.
+Total 15 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/9)   [Kremote: Resolving deltas:  11% (1/9)   [Kremote: Resolving deltas:  22% (2/9)   [Kremote: Resolving deltas:  33% (3/9)   [Kremote: Resolving deltas:  44% (4/9)   [Kremote: Resolving deltas:  55% (5/9)   [Kremote: Resolving deltas:  66% (6/9)   [Kremote: Resolving deltas:  77% (7/9)   [Kremote: Resolving deltas:  88% (8/9)   [Kremote: Resolving deltas: 100% (9/9)   [Kremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   64602b0..d18c481  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls 
+Lesson1.Rmd		README.md		functions_lesson2.txt
+Lesson2.Rmd		_site.yml		img
+Lesson3.Rmd		admin			index.Rmd
+Lesson4.Rmd		admin_			packages_lesson1.txt
+Lesson5.Rmd		docs			packages_lesson2.txt
+Lesson5_cache		emorycodingclub.Rproj
+Lesson5_files		functions_lesson1.txt
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd ..[K[K[K[K[Kcd amin[K[K[Kdmin
+]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ ls
+_ecc_master1.Rmd	_lesson1_draft.Rmd	ggplot1.png
+]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ ls
+_ecc_master1.Rmd	_lesson1_draft.Rmd	ggplot1.png
+]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ cd ..
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls
+Lesson1.Rmd		README.md		functions_lesson2.txt
+Lesson2.Rmd		_site.yml		img
+Lesson3.Rmd		admin			index.Rmd
+Lesson4.Rmd		admin_			packages_lesson1.txt
+Lesson5.Rmd		docs			packages_lesson2.txt
+Lesson5_cache		emorycodingclub.Rproj
+Lesson5_files		functions_lesson1.txt
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd docs/
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ touch here_te[K[K[Ktest.tt[Kxt
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ open heretouch heretest.txt
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ touch heretest.txt[10Pcd docs/touch heretest.txt[Kopen heretest.txt 
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ ls
+Lesson1.html		Lesson4_files		functions_lesson2.txt
+Lesson1_files		Lesson5.html		heretest.txt
+Lesson2.html		Lesson5_files		img
+Lesson2_files		README.html		index.html
+Lesson3.html		admin			packages_lesson1.txt
+Lesson3_files		admin_			packages_lesson2.txt
+Lesson4.html		functions_lesson1.txt	site_libs
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ pwd
+/Users/malishev/Documents/Emory/admin/ecc/docs
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ cd ..
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
+/Users/malishev/Documents/Emory/admin/ecc
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwdcd ..[2Ppwd[1Plspwdcd ..[2Ppwd[Kopen here[K[K[K[K[K[K[K[K[Kpwd
+/Users/malishev/Documents/Emory/admin/ecc
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd dco[K[Kocs/
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ open her`[Ketest.txt 
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ cd ..
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
+/Users/malishev/Documents/Emory/admin/ecc
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
+/Users/malishev/Documents/Emory/admin/ecc
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ mkdir lookhere
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd lookhere/
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ touch heretest.txt
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ open heretest.txt 
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ cd ..[K[K..
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd docs/
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ ls
+Lesson1.html		Lesson4_files		functions_lesson2.txt
+Lesson1_files		Lesson5.html		heretest.txt
+Lesson2.html		Lesson5_files		img
+Lesson2_files		README.html		index.html
+Lesson3.html		admin			packages_lesson1.txt
+Lesson3_files		admin_			packages_lesson2.txt
+Lesson4.html		functions_lesson1.txt	site_libs
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ rm heretest.txt 
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ le[Ks
+Lesson1.html		Lesson4_files		functions_lesson2.txt
+Lesson1_files		Lesson5.html		img
+Lesson2.html		Lesson5_files		index.html
+Lesson2_files		README.html		packages_lesson1.txt
+Lesson3.html		admin			packages_lesson2.txt
+Lesson3_files		admin_			site_libs
+Lesson4.html		functions_lesson1.txt
+]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ p[Kcd ..
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
+/Users/malishev/Documents/Emory/admin/ecc
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
