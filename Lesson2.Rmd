@@ -110,10 +110,9 @@ ggplot(data=nyc) +
 
 `TAB` = autofill rest of function/global variable  
 `CTRL + ENTER` = run code    
-`CTRL + SHIFT + M` = insert pipe `%>%`    
-\  
-
-**Run `ALT + SHIFT + K`  for [all available shortkeys](file://localhost/Applications/RStudio.app/Contents/Resources/www/docs/keyboard.htm)**        
+`ALT + -` = insert assign operator `<-`  
+`CTRL + SHIFT + M` = insert pipe `%>%`        
+**Run `ALT + SHIFT + K`  for [all available shortkeys](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)**          
 \    
 
 # Load packages with `pacman`  
