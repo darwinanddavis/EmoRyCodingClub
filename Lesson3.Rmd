@@ -43,7 +43,6 @@ lapply(packages,library,character.only=T)
 <!-- start body -->
 
 # `r params$title`      
-
 \  
 
 Functions for `r params$lesson`    
@@ -51,7 +50,6 @@ Functions for `r params$lesson`
 require(readr)
 readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
 ```
-
 \  
 
 Packages for `r params$lesson`      
@@ -59,7 +57,6 @@ Packages for `r params$lesson`
 require(readr)
 readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
 ```
-
 \    
 
 # Agenda  
@@ -70,7 +67,7 @@ Section 3.7.
 * Explore the super useful `list` structure  
 * Plot bar charts and density distributions  
 
-## Do First    
+# Do First    
 
 Recreate the below plot using the smaller NYC Airbnb dataset.  
 ```{r, echo=F, eval=T, out.width="100%"}

@@ -43,7 +43,6 @@ lapply(packages,library,character.only=T)
 <!-- start body -->
 
 # `r params$title`        
-
 \  
 
 Functions for `r params$lesson`    
@@ -51,7 +50,6 @@ Functions for `r params$lesson`
 require(readr)
 readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
 ```
-
 \  
 
 Packages for `r params$lesson`      
@@ -59,14 +57,13 @@ Packages for `r params$lesson`
 require(readr)
 readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
 ```
-
 \    
 
 # Agenda  
 * Chop up datasets into smaller parts using `filter` and `subset`  
 * Create conditional statements and toggles using `if` and `else`      
 
-## Do First    
+# Do First    
 
 Recreate the below plot using the larger NYC Airbnb dataset.    
 ```{r,echo=F,eval=T,cache=T}
@@ -93,4 +90,23 @@ ggplot() +
   my_theme 
 
 ```
+
+
+# Reading in data files    
+Using `here` to set your working directory  
+```{r}
+require(here) # load the here package if not already
+set_here() # set current working directory 
+dr_here() # print current working directory where .here is located
+```
+
+1. Create a folder in your directory called **'lookhere'**.  
+2. Open a new file in TextEdit (Mac) or Notepad (Windows), type in something like " _We found the here file!_ ", then save the file as **"heretest.txt"**.       
+```{r}
+list.files() # print files in your current working dir. the 'heretest.txt' file is not here, but one folder below in the new 'lookhere' folder
+here("lookhere","heretest.txt") # using here to forage for the file
+here("lookhere","heretest.txt") %>% readLines # print the contents in R
+
+```
+
 

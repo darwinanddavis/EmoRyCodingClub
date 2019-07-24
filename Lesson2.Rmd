@@ -44,7 +44,6 @@ lapply(packages,library,character.only=T)
 <!-- start body -->
 
 # `r params$title`    
-
 \  
 
 Functions for `r params$lesson`    
@@ -52,15 +51,13 @@ Functions for `r params$lesson`
 require(readr)
 readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
 ```
-
-\  
+\    
 
 Packages for `r params$lesson`      
 ```{r,eval=T, echo=F}
 require(readr)
 readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
 ```
-
 \    
 
 # Agenda
@@ -109,6 +106,16 @@ ggplot(data=nyc) +
 ```
 \    
 
+# Some useful shortkeys for making `R` life easier    
+
+`TAB` = autofill rest of function/global variable  
+`CTRL + ENTER` = run code    
+`CTRL + SHIFT + M` = insert pipe `%>%`    
+\  
+
+**Run `ALT + SHIFT + K`  for [all available shortkeys](file://localhost/Applications/RStudio.app/Contents/Resources/www/docs/keyboard.htm)**        
+\    
+
 # Load packages with `pacman`  
 ```{r}
 install.packages("pacman")
@@ -118,29 +125,11 @@ require(pacman)
 Type in the packages you want to install into the p_load function.  
 _Note: the below two arguments are the same_
 ```{r}
-p_load(dplyr,ggplot2,here) # your packages  
-pacman::p_load(dplyr,ggplot2,here) # this is the same as above, just the tidyverse way of doing it: 'package::function(argument1,argument2,argument3)'
+p_load(dplyr,ggplot2) # your packages  
+pacman::p_load(dplyr,ggplot2) # this is the same as above, just the tidyverse way of doing it: 'package::function(argument1,argument2,argument3)'
 ```
 
-# Reading in data files  
-Using `here` to set your working directory  
-```{r}
-require(here) # load the here package if not already
-set_here() # set current working directory 
-dr_here() # print current working directory where .here is located
-```
-
-1. Create a folder in your directory called **'lookhere'**.  
-2. Open a new file in TextEdit (Mac) or Notepad (Windows), type in something like " _We found the here file!_ ", then save the file as **"heretest.txt"**.       
-```{r}
-list.files() # print files in your current working dir. the 'heretest.txt' file is not here, but one folder below in the new 'lookhere' folder
-here("lookhere","heretest.txt") # using here to forage for the file
-here("lookhere","heretest.txt") %>% readLines # print the contents in R
-
-```
-
-
-## Plotting facets    
+# Plotting facets    
 `facet_wrap` and `facet_grid`  
 Facets add a third variable to a plot.   
   * The facet function takes a formula as an argument, which is just a data structure, denoted by a tilde **~**  
@@ -163,7 +152,7 @@ ggplot(data = mpg) +
 ```
 
 
-## Exercise 1  
+# Exercise 1  
 Try plotting facets using the smaller Airbnb data.  
  * What happens when you use a continuous variable on a `facet_wrap`?  
 
