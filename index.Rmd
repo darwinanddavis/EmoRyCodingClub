@@ -235,6 +235,10 @@ nyc <- nyc[nyc$id < 1000000,] # truncate dataset
 head(nyc[,1:5])
 
 ```
+\  
+\  
+
+#### Save and use the above code snippet whenever you need to load our two datasets, `nyc_full` and `nyc`, as we'll be using them regularly throughout the club sessions.         
 
 ```{r, echo =FALSE, }
 # devtools::install_github('yihui/xfun')
