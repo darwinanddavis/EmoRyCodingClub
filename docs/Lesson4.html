@@ -29,6 +29,80 @@
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
 
 <style type="text/css">
@@ -458,9 +532,37 @@ div.tocify {
 <p>Recreate the below plot using the smaller NYC Airbnb dataset. There are four aesthetics to change and the fitted line is a “loess” curve.</p>
 <p><img src="Lesson4_files/figure-html/unnamed-chunk-3-1.png" width="100%" /></p>
 </div>
+<div id="using-the-different-apply-functions" class="section level2">
+<h2>Using the different apply functions</h2>
+<p>Create a list for testing the different apply functions</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_list &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">rnorm</span>(<span class="dv">100</span>), <span class="co"># random normal dist of 100 numbers</span>
+               LETTERS, <span class="co"># letter from A to Z</span>
+               <span class="kw">sample</span>(<span class="dv">100</span>,<span class="dv">50</span>) <span class="co"># sample ~ 100 50 times</span>
+               )
+my_list</code></pre></div>
+<p><code>lapply</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_list <span class="op">%&gt;%</span><span class="st"> </span>sort  <span class="co"># throw error because sort doesn&#39;t recognise elements within list</span>
+
+<span class="co"># option 1</span>
+my_list <span class="op">%&gt;%</span><span class="st"> </span>unlist  <span class="co"># unlist first</span>
+my_list <span class="op">%&gt;%</span><span class="st"> </span>unlist <span class="op">%&gt;%</span><span class="st"> </span>sort  <span class="co"># then sort</span>
+<span class="co"># bad because it converts the class of each list element to the only class possible across each</span>
+<span class="co"># element, a character</span>
+
+<span class="co"># option 2</span>
+my_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">lapply</span>(sort)  <span class="co"># or just apply the function e.g. sort to the entire list</span>
+<span class="co"># better because it retains the class of each list element</span></code></pre></div>
+<p>Other functions to pass to <code>lapply</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">lapply</span>(mean)
+my_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">lapply</span>(min)
+my_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">lapply</span>(max)
+my_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">lapply</span>(median)
+my_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">lapply</span>(unique)
+my_list <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">lapply</span>(sum)  <span class="co"># error b/c the second list element is a character class </span></code></pre></div>
+</div>
 </div>
 
-<div id="rmd-source-code">LS0tClRpdGxlOiAiTGVzc29uIDQiCmhlYWRlci1pbmNsdWRlczogXHVzZXBhY2thZ2V7ZmxvYXR9CmFsd2F5c19hbGxvd19odG1sOiB5ZXMKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQKcGFyYW1zOgogIGxlc3NvbjogIXIgcGFzdGUwKCJMZXNzb24gIiw0KQogIHRpdGxlOiAiTGVzc29uIDQ6IGBhcHBseWAgZnVuY3Rpb25zIGFuZCBwbG90dGluZyBiYXJjaGFydHMgYW5kIGRpc3RyaWJ1dGlvbnMiICAgICAgCi0tLQoKCmBgYHtyLCBzZXR1cCwgZWNobyA9IEZBTFNFLCBjYWNoZSA9IEZBTFNFLCBpbmNsdWRlID0gRkFMU0V9Cm9wdGlvbnMod2lkdGg9MTAwKQprbml0cjo6b3B0c19jaHVuayRzZXQoCiAgZXZhbCA9IEZBTFNFLCAjIHJ1biBhbGwgY29kZQogIGVjaG8gPSBUUlVFLCAjIHNob3cgY29kZSBjaHVua3MgaW4gb3V0cHV0IAogIHRpZHkgPSBUUlVFLCAjIG1ha2Ugb3V0cHV0IGFzIHRpZHkKICBtZXNzYWdlID0gRkFMU0UsICAjIG1hc2sgYWxsIG1lc3NhZ2VzCiAgd2FybmluZyA9IEZBTFNFLCAjIG1hc2sgYWxsIHdhcm5pbmdzIAogIGNvbW1lbnQgPSAiIiwKICB0aWR5Lm9wdHM9bGlzdCh3aWR0aC5jdXRvZmY9MTAwKSwgIyBzZXQgd2lkdGggb2YgY29kZSBjaHVua3MgaW4gb3V0cHV0CiAgc2l6ZT0ic21hbGwiICMgc2V0IGNvZGUgY2h1bmsgc2l6ZQogICkKYGBgClwKCjwhLS0gaW5zdGFsbCBwYWNrYWdlcyAtLT4KYGBge3IsIGxvYWQgcGFja2FnZXMsIGV2YWw9VCwgaW5jbHVkZT1ULCBjYWNoZT1GLCBtZXNzYWdlPUYsIHdhcm5pbmc9RiwgcmVzdWx0cz0naGlkZScsZWNobz1GfQpwYWNrYWdlcyA8LSBjKCJnZ3Bsb3QyIiwiZ2d0aGVtZXMiLCJkcGx5ciIsInRpZHl2ZXJzZSIsInpvbyIsIlJDb2xvckJyZXdlciIsInZpcmlkaXMiLCJwbHlyIikgICAKaWYgKHJlcXVpcmUocGFja2FnZXMpKSB7CiAgICBpbnN0YWxsLnBhY2thZ2VzKHBhY2thZ2VzLGRlcGVuZGVuY2llcyA9IFQpCiAgICByZXF1aXJlKHBhY2thZ2VzKQogICAgIyBsb2FkIHR2dGhlbWVzCiAgICBkZXZ0b29sczo6aW5zdGFsbF9naXRodWIoIlJ5by1ONy90dnRoZW1lcyIpCn0KbGFwcGx5KHBhY2thZ2VzLGxpYnJhcnksY2hhcmFjdGVyLm9ubHk9VCkKYGBgCgo8IS0tIF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18gLS0+CjwhLS0gX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXyAtLT4KPCEtLSBfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fIC0tPgo8IS0tIHN0YXJ0IGJvZHkgLS0+CgojIGByIHBhcmFtcyR0aXRsZWAgICAgICAgIAoKXCAgCgpGdW5jdGlvbnMgZm9yIGByIHBhcmFtcyRsZXNzb25gICAgIApgYGB7cixldmFsPVQsIGVjaG89Rn0KcmVxdWlyZShyZWFkcikKcmVhZExpbmVzKCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZGFyd2luYW5kZGF2aXMvRW1vUnlDb2RpbmdDbHViL21hc3Rlci9mdW5jdGlvbnNfbGVzc29uMi50eHQiKQpgYGAKClwgIAoKUGFja2FnZXMgZm9yIGByIHBhcmFtcyRsZXNzb25gICAgICAgCmBgYHtyLGV2YWw9VCwgZWNobz1GfQpyZXF1aXJlKHJlYWRyKQpyZWFkTGluZXMoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9kYXJ3aW5hbmRkYXZpcy9FbW9SeUNvZGluZ0NsdWIvbWFzdGVyL3BhY2thZ2VzX2xlc3NvbjIudHh0IikKYGBgCgpcICAgIAoKIyBBZ2VuZGEgIAoqIFVzZSBgYXBwbHlgLCBgbWFwcGx5YCwgYGxhcHBseWAsIGFuZCBgc2FwcGx5YCB0byBhcHBseSBmdW5jdGlvbnMgdG8gZGF0YSAgCiogUGxvdCBiYXIgY2hhcnRzIGFuZCBkaXN0cmlidXRpb25zICAKCiMjIERvIEZpcnN0ICAgIAoKUmVjcmVhdGUgdGhlIGJlbG93IHBsb3QgdXNpbmcgdGhlIHNtYWxsZXIgTllDIEFpcmJuYiBkYXRhc2V0LiBUaGVyZSBhcmUgZm91ciBhZXN0aGV0aWNzIHRvIGNoYW5nZSBhbmQgdGhlIGZpdHRlZCBsaW5lIGlzIGEgImxvZXNzIiBjdXJ2ZS4gICAgICAgIAoKYGBge3IsIGVjaG89RiwgZXZhbD1ULCBvdXQud2lkdGg9IjEwMCUifQojIHNtYWxsZXIgY3N2IGZpbGUgKDE2IGNvbHMpCnVybCA8LSAiaHR0cDovL2RhdGEuaW5zaWRlYWlyYm5iLmNvbS91bml0ZWQtc3RhdGVzL255L25ldy15b3JrLWNpdHkvMjAxOS0wNi0wMi92aXN1YWxpc2F0aW9ucy9saXN0aW5ncy5jc3YiCm55YyA8LSAgcmVhZF9jc3YodXJsKQpueWMgPC0gbnljW255YyRpZCA8IDEwMDAwMDAsXSAjIGdldCBzbWFsbGVyIHN1YmV0IG9mIGRhdGEKCgpyZXF1aXJlKGdncGxvdDIpCnJlcXVpcmUoZHBseXIpCnJlcXVpcmUoZ2d0aGVtZXMpCgp0dGwgPC0gIlByaWNlIG9mIEFpcmJuYiBhcGFydG1lbnRzIGluIE5ZQyIKc3VidHRsIDwtICJieSBudW1iZXIgb2YgcmV2aWV3cyIKY2FwdGlvbiA8LSAiU291cmNlOiBBaXJibmIgb3BlbiBkYXRhIgp4bGFiIDwtICJSZXZpZXdzIHBlciBtb250aCIKeWxhYiA8LSAiTnVtYmVyIG9mIHJldmlld3MiICAKY29sdiA8LSAiIzUzNUVFQiIKY29sdl9zbW9vdGggPC0gIiMzQjI3QkEiCnNpemUgPC0gMgphbHBoYSA8LSAwLjMKCiMgZ2xpbXBzZShueWMpICAKIyBueWMkY2FsY3VsYXRlZF9ob3N0X2xpc3RpbmdzX2NvdW50ICU+JSB1bmlxdWUKZ2dwbG90KGRhdGEgPSBueWMsIG1hcHBpbmcgPSBhZXMoeCA9IHJldmlld3NfcGVyX21vbnRoLCB5ID0gbnVtYmVyX29mX3Jldmlld3MpKSArCiAgZ2VvbV9wb2ludChjb2xvciA9IGNvbHYsIHNpemU9MywgYWxwaGEgPSBhbHBoYSkgKwogIGdlb21fc21vb3RoKGNvbG9yPSBjb2x2X3Ntb290aCwgZmlsbD1jb2x2X3Ntb290aCwgbWV0aG9kPSJsb2VzcyIpICsKICBsYWJzKHRpdGxlID0gdHRsLAogICAgICAgc3VidGl0bGUgPSBzdWJ0dGwsCiAgICAgICBjYXB0aW9uID0gY2FwdGlvbiwKICAgICAgIHggPSB4bGFiLAogICAgICAgeSA9IHlsYWIpICsKICB0aGVtZV9jbGFzc2ljKCkKYGBgCgo=</div>
+<div id="rmd-source-code">LS0tClRpdGxlOiAiTGVzc29uIDQiCmhlYWRlci1pbmNsdWRlczogXHVzZXBhY2thZ2V7ZmxvYXR9CmFsd2F5c19hbGxvd19odG1sOiB5ZXMKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQKcGFyYW1zOgogIGxlc3NvbjogIXIgcGFzdGUwKCJMZXNzb24gIiw0KQogIHRpdGxlOiAiTGVzc29uIDQ6IGBhcHBseWAgZnVuY3Rpb25zIGFuZCBwbG90dGluZyBiYXJjaGFydHMgYW5kIGRpc3RyaWJ1dGlvbnMiICAgICAgCi0tLQoKCmBgYHtyLCBzZXR1cCwgZWNobyA9IEZBTFNFLCBjYWNoZSA9IEZBTFNFLCBpbmNsdWRlID0gRkFMU0V9Cm9wdGlvbnMod2lkdGg9MTAwKQprbml0cjo6b3B0c19jaHVuayRzZXQoCiAgZXZhbCA9IEZBTFNFLCAjIHJ1biBhbGwgY29kZQogIGVjaG8gPSBUUlVFLCAjIHNob3cgY29kZSBjaHVua3MgaW4gb3V0cHV0IAogIHRpZHkgPSBUUlVFLCAjIG1ha2Ugb3V0cHV0IGFzIHRpZHkKICBtZXNzYWdlID0gRkFMU0UsICAjIG1hc2sgYWxsIG1lc3NhZ2VzCiAgd2FybmluZyA9IEZBTFNFLCAjIG1hc2sgYWxsIHdhcm5pbmdzIAogIGNvbW1lbnQgPSAiIiwKICB0aWR5Lm9wdHM9bGlzdCh3aWR0aC5jdXRvZmY9MTAwKSwgIyBzZXQgd2lkdGggb2YgY29kZSBjaHVua3MgaW4gb3V0cHV0CiAgc2l6ZT0ic21hbGwiICMgc2V0IGNvZGUgY2h1bmsgc2l6ZQogICkKYGBgClwKCjwhLS0gaW5zdGFsbCBwYWNrYWdlcyAtLT4KYGBge3IsIGxvYWQgcGFja2FnZXMsIGV2YWw9VCwgaW5jbHVkZT1ULCBjYWNoZT1GLCBtZXNzYWdlPUYsIHdhcm5pbmc9RiwgcmVzdWx0cz0naGlkZScsZWNobz1GfQpwYWNrYWdlcyA8LSBjKCJnZ3Bsb3QyIiwiZ2d0aGVtZXMiLCJkcGx5ciIsInRpZHl2ZXJzZSIsInpvbyIsIlJDb2xvckJyZXdlciIsInZpcmlkaXMiLCJwbHlyIikgICAKaWYgKHJlcXVpcmUocGFja2FnZXMpKSB7CiAgICBpbnN0YWxsLnBhY2thZ2VzKHBhY2thZ2VzLGRlcGVuZGVuY2llcyA9IFQpCiAgICByZXF1aXJlKHBhY2thZ2VzKQogICAgIyBsb2FkIHR2dGhlbWVzCiAgICBkZXZ0b29sczo6aW5zdGFsbF9naXRodWIoIlJ5by1ONy90dnRoZW1lcyIpCn0KbGFwcGx5KHBhY2thZ2VzLGxpYnJhcnksY2hhcmFjdGVyLm9ubHk9VCkKYGBgCgo8IS0tIF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18gLS0+CjwhLS0gX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXyAtLT4KPCEtLSBfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fIC0tPgo8IS0tIHN0YXJ0IGJvZHkgLS0+CgojIGByIHBhcmFtcyR0aXRsZWAgICAgICAgIAoKXCAgCgpGdW5jdGlvbnMgZm9yIGByIHBhcmFtcyRsZXNzb25gICAgIApgYGB7cixldmFsPVQsIGVjaG89Rn0KcmVxdWlyZShyZWFkcikKcmVhZExpbmVzKCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZGFyd2luYW5kZGF2aXMvRW1vUnlDb2RpbmdDbHViL21hc3Rlci9mdW5jdGlvbnNfbGVzc29uMi50eHQiKQpgYGAKClwgIAoKUGFja2FnZXMgZm9yIGByIHBhcmFtcyRsZXNzb25gICAgICAgCmBgYHtyLGV2YWw9VCwgZWNobz1GfQpyZXF1aXJlKHJlYWRyKQpyZWFkTGluZXMoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9kYXJ3aW5hbmRkYXZpcy9FbW9SeUNvZGluZ0NsdWIvbWFzdGVyL3BhY2thZ2VzX2xlc3NvbjIudHh0IikKYGBgCgpcICAgIAoKIyBBZ2VuZGEgIAoqIFVzZSBgYXBwbHlgLCBgbWFwcGx5YCwgYGxhcHBseWAsIGFuZCBgc2FwcGx5YCB0byBhcHBseSBmdW5jdGlvbnMgdG8gZGF0YSAgCiogUGxvdCBiYXIgY2hhcnRzIGFuZCBkaXN0cmlidXRpb25zICAKCiMjIERvIEZpcnN0ICAgIAoKUmVjcmVhdGUgdGhlIGJlbG93IHBsb3QgdXNpbmcgdGhlIHNtYWxsZXIgTllDIEFpcmJuYiBkYXRhc2V0LiBUaGVyZSBhcmUgZm91ciBhZXN0aGV0aWNzIHRvIGNoYW5nZSBhbmQgdGhlIGZpdHRlZCBsaW5lIGlzIGEgImxvZXNzIiBjdXJ2ZS4gICAgICAgIAoKYGBge3IsIGVjaG89RiwgZXZhbD1ULCBvdXQud2lkdGg9IjEwMCUifQojIHNtYWxsZXIgY3N2IGZpbGUgKDE2IGNvbHMpCnVybCA8LSAiaHR0cDovL2RhdGEuaW5zaWRlYWlyYm5iLmNvbS91bml0ZWQtc3RhdGVzL255L25ldy15b3JrLWNpdHkvMjAxOS0wNi0wMi92aXN1YWxpc2F0aW9ucy9saXN0aW5ncy5jc3YiCm55YyA8LSAgcmVhZF9jc3YodXJsKQpueWMgPC0gbnljW255YyRpZCA8IDEwMDAwMDAsXSAjIGdldCBzbWFsbGVyIHN1YmV0IG9mIGRhdGEKCgpyZXF1aXJlKGdncGxvdDIpCnJlcXVpcmUoZHBseXIpCnJlcXVpcmUoZ2d0aGVtZXMpCgp0dGwgPC0gIlByaWNlIG9mIEFpcmJuYiBhcGFydG1lbnRzIGluIE5ZQyIKc3VidHRsIDwtICJieSBudW1iZXIgb2YgcmV2aWV3cyIKY2FwdGlvbiA8LSAiU291cmNlOiBBaXJibmIgb3BlbiBkYXRhIgp4bGFiIDwtICJSZXZpZXdzIHBlciBtb250aCIKeWxhYiA8LSAiTnVtYmVyIG9mIHJldmlld3MiICAKY29sdiA8LSAiIzUzNUVFQiIKY29sdl9zbW9vdGggPC0gIiMzQjI3QkEiCnNpemUgPC0gMgphbHBoYSA8LSAwLjMKCiMgZ2xpbXBzZShueWMpICAKIyBueWMkY2FsY3VsYXRlZF9ob3N0X2xpc3RpbmdzX2NvdW50ICU+JSB1bmlxdWUKZ2dwbG90KGRhdGEgPSBueWMsIG1hcHBpbmcgPSBhZXMoeCA9IHJldmlld3NfcGVyX21vbnRoLCB5ID0gbnVtYmVyX29mX3Jldmlld3MpKSArCiAgZ2VvbV9wb2ludChjb2xvciA9IGNvbHYsIHNpemU9MywgYWxwaGEgPSBhbHBoYSkgKwogIGdlb21fc21vb3RoKGNvbG9yPSBjb2x2X3Ntb290aCwgZmlsbD1jb2x2X3Ntb290aCwgbWV0aG9kPSJsb2VzcyIpICsKICBsYWJzKHRpdGxlID0gdHRsLAogICAgICAgc3VidGl0bGUgPSBzdWJ0dGwsCiAgICAgICBjYXB0aW9uID0gY2FwdGlvbiwKICAgICAgIHggPSB4bGFiLAogICAgICAgeSA9IHlsYWIpICsKICB0aGVtZV9jbGFzc2ljKCkKYGBgCgojIyBVc2luZyB0aGUgZGlmZmVyZW50IGFwcGx5IGZ1bmN0aW9ucyAKCkNyZWF0ZSBhIGxpc3QgZm9yIHRlc3RpbmcgdGhlIGRpZmZlcmVudCBhcHBseSBmdW5jdGlvbnMgIApgYGB7cn0KbXlfbGlzdCA8LSBsaXN0KHJub3JtKDEwMCksICMgcmFuZG9tIG5vcm1hbCBkaXN0IG9mIDEwMCBudW1iZXJzCiAgICAgICAgICAgICAgIExFVFRFUlMsICMgbGV0dGVyIGZyb20gQSB0byBaCiAgICAgICAgICAgICAgIHNhbXBsZSgxMDAsNTApICMgc2FtcGxlIH4gMTAwIDUwIHRpbWVzCiAgICAgICAgICAgICAgICkKbXlfbGlzdApgYGAKCmBsYXBwbHlgICAgICAgCmBgYHtyfQpteV9saXN0ICU+JSBzb3J0ICMgdGhyb3cgZXJyb3IgYmVjYXVzZSBzb3J0IGRvZXNuJ3QgcmVjb2duaXNlIGVsZW1lbnRzIHdpdGhpbiBsaXN0CgojIG9wdGlvbiAxCm15X2xpc3QgJT4lIHVubGlzdCAjIHVubGlzdCBmaXJzdApteV9saXN0ICU+JSB1bmxpc3QgJT4lIHNvcnQgIyB0aGVuIHNvcnQKIyBiYWQgYmVjYXVzZSBpdCBjb252ZXJ0cyB0aGUgY2xhc3Mgb2YgZWFjaCBsaXN0IGVsZW1lbnQgdG8gdGhlIG9ubHkgY2xhc3MgcG9zc2libGUgYWNyb3NzIGVhY2ggZWxlbWVudCwgYSBjaGFyYWN0ZXIgICAKCiMgb3B0aW9uIDIKbXlfbGlzdCAlPiUgbGFwcGx5KHNvcnQpICAjIG9yIGp1c3QgYXBwbHkgdGhlIGZ1bmN0aW9uIGUuZy4gc29ydCB0byB0aGUgZW50aXJlIGxpc3QKIyBiZXR0ZXIgYmVjYXVzZSBpdCByZXRhaW5zIHRoZSBjbGFzcyBvZiBlYWNoIGxpc3QgZWxlbWVudCAKYGBgCgpPdGhlciBmdW5jdGlvbnMgdG8gcGFzcyB0byBgbGFwcGx5YCAgICAKYGBge3J9Cm15X2xpc3QgJT4lIGxhcHBseShtZWFuKQpteV9saXN0ICU+JSBsYXBwbHkobWluKQpteV9saXN0ICU+JSBsYXBwbHkobWF4KQpteV9saXN0ICU+JSBsYXBwbHkobWVkaWFuKQpteV9saXN0ICU+JSBsYXBwbHkodW5pcXVlKQpteV9saXN0ICU+JSBsYXBwbHkoc3VtKSAjIGVycm9yIGIvYyB0aGUgc2Vjb25kIGxpc3QgZWxlbWVudCBpcyBhIGNoYXJhY3RlciBjbGFzcyAKYGBgCgo=</div>
 
 
 </div>
