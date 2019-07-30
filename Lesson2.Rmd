@@ -110,13 +110,13 @@ ggplot(data=nyc) +
 `CTRL + ENTER` = run code    
 `ALT (OPTION) + -` = insert assign operator `<-`    
 `CTRL + SHIFT + M` = insert pipe `%>%`     
-**Run `ALT + SHIFT + K`  for [all available shortkeys](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)**          
+**Run `ALT + SHIFT + K`  for [all available shortkeys](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)**        
 \        
-
 
 # Read in data      
 ```{r}
-# generate data file to email to group  
+my_file <- "your_csv_file.csv"
+my_data <- read_csv(my_file)
 ```
 \  
 
@@ -129,31 +129,30 @@ ggplot(data = my_data) +
   geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
   my_theme
 ```
+\  
 
 # Plotting facets    
 `facet_wrap` and `facet_grid`  
-Facets add a third variable to a plot.   
-  * The facet function takes a formula as an argument, which is just a data structure, denoted by a tilde **~**  
+Facets add a third variable to a plot  
+The facet function takes a formula as an argument, which is just a data structure, denoted by a tilde **~**    
 
 `facet_wrap`  
-When you have one variable to plot as a facet     
+When you have one variable to plot as a facet       
 ```{r,eval=T}
-ggplot(data = mpg) + 
+ggplot(data = my_data) + 
   geom_point(mapping = aes(x = displ, y = hwy)) + 
   facet_wrap(~ class, nrow = 2) +
-  theme_classic()
+  my_theme
 ```
 
 `facet_grid`  
 When you know the two variables you want to plot  
-
-**The formula structure for `facet_grid` is Y variable `~` X variable, e.g. `drv ~ cyl`**         
-
+**The formula structure for `facet_grid` is Y variable `~` X variable, e.g. `drv ~ cyl`**           
 ```{r, eval=T}
-ggplot(data = mpg) + 
+ggplot(data = my_data) + 
   geom_point(mapping = aes(x = displ, y = hwy)) + 
   facet_grid(drv ~ cyl) +
-  theme_bw()
+  my_theme
 ```
 
 
@@ -162,28 +161,32 @@ ggplot(data = mpg) +
   
 # Group vs. colour
 Using `group` separates the data into objects, but `colour` will distinguish the differences among these objects     
-```{r}
-ggplot(data = mpg) +
-  geom_smooth(mapping = aes(x = displ, y = hwy))
+```{r,eval=T}
+ggplot(data = my_data) +
+  geom_smooth(mapping = aes(x = displ, y = hwy)) +
+  my_theme
               
-ggplot(data = mpg) +
-  geom_smooth(mapping = aes(x = displ, y = hwy, group = drv))
+ggplot(data = my_data) +
+  geom_smooth(mapping = aes(x = displ, y = hwy, group = drv)) +
+  my_theme
     
-ggplot(data = mpg) +
+ggplot(data = my_data) +
   geom_smooth(
     mapping = aes(x = displ, y = hwy, color = drv),
     show.legend = FALSE
-  )
+  ) +
+  my_theme
 ```
 
 # Geometric objects            
 
 # Adding `geoms`    
 Possibly the most useful part of plotting data is layering plot types       
-```{r}
-ggplot(data = mpg) + 
+```{r,eval=T}
+ggplot(data = my_data) + 
   geom_point(mapping = aes(x = displ, y = hwy)) +
-  geom_smooth(mapping = aes(x = displ, y = hwy))
+  geom_smooth(mapping = aes(x = displ, y = hwy)) +
+  my_theme
 ```
 
 # Applying the Airbnb data  

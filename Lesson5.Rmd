@@ -59,9 +59,8 @@ Packages for `r params$lesson`
 
 # Agenda
 
-[Data visualisation in `R` for Data Science, `r params$bookchapter_name`](`r params$bookchapter_section`).      
-\ 
-
+[Data visualisation in `R` for Data Science, `r params$bookchapter_name`](`r params$bookchapter_section`).        
+ 
 <!--  end yaml template------------------------------------------------------- -->
   
 * Chop up datasets into smaller parts using `filter` and `subset`  
