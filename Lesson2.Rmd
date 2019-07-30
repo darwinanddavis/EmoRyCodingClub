@@ -1,16 +1,19 @@
 ---
-Title: "Lesson 2"
+params:
+  lesson: "Lesson 2"
+  title: "Reading data, setting working directories, and plotting facets"
+  bookchapter_name: "Section 3.5.1"    
+  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
+  functions: "`facet_wrap`, `facet_grid`, `geom_smooth`"
+  packages: "No new packages!"      
+  # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
   html_document:
     code_folding: hide
-params:
-  lesson: !r paste0("Lesson ",2)
-  title: "Lesson 2: Reading data, setting working directories, and plotting facets"  
 ---
-
-
+  
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
 options(width=100)
 knitr::opts_chunk$set(
@@ -35,7 +38,7 @@ if (require(packages)) {
     # load tvthemes
     devtools::install_github("Ryo-N7/tvthemes")
 }
-lapply(packages,library,character.only=T)
+lapply(packages,library,character.only=T)  
 ```
 
 <!-- ____________________________________________________________________________ -->
@@ -43,27 +46,22 @@ lapply(packages,library,character.only=T)
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
 
-# `r params$title`    
+# `r paste0(params$lesson,": ",params$title)`    
 \  
 
-Functions for `r params$lesson`    
-```{r,eval=T, echo=F}
-require(readr)
-readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
-```
+Functions for `r params$lesson`  
+`r params$functions`    
 \    
 
-Packages for `r params$lesson`      
-```{r,eval=T, echo=F}
-require(readr)
-readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
-```
+Packages for `r params$lesson`          
+`r params$packages`        
 \    
 
 # Agenda
 
-We'll be using [Ch 3 Data visualisation in `R` for Data Science](https://r4ds.had.co.nz/data-visualisation.html).  
-Section 3.1.1.     
+[Data visualisation in `R` for Data Science, `r params$bookchapter_name`](`r params$bookchapter_section`).    
+
+<!--  end yaml template------------------------------------------------------- -->
 
 * Do first problem set
 * Read in data file  
@@ -110,22 +108,26 @@ ggplot(data=nyc) +
 
 `TAB` = autofill rest of function/global variable  
 `CTRL + ENTER` = run code    
-`ALT + -` = insert assign operator `<-`  
-`CTRL + SHIFT + M` = insert pipe `%>%`        
+`ALT (OPTION) + -` = insert assign operator `<-`    
+`CTRL + SHIFT + M` = insert pipe `%>%`     
 **Run `ALT + SHIFT + K`  for [all available shortkeys](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)**          
-\    
+\        
 
-# Load packages with `pacman`  
+
+# Read in data      
 ```{r}
-install.packages("pacman")
-require(pacman)
+# generate data file to email to group  
 ```
+\  
 
-Type in the packages you want to install into the p_load function.  
-_Note: the below two arguments are the same_
-```{r}
-p_load(dplyr,ggplot2) # your packages  
-pacman::p_load(dplyr,ggplot2) # this is the same as above, just the tidyverse way of doing it: 'package::function(argument1,argument2,argument3)'
+# Grouping data    
+One way to group your data is by colour  
+```{r, eval = T}
+my_data <- mpg
+my_theme <- theme_classic()
+ggplot(data = my_data) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+  my_theme
 ```
 
 # Plotting facets    
@@ -133,16 +135,20 @@ pacman::p_load(dplyr,ggplot2) # this is the same as above, just the tidyverse wa
 Facets add a third variable to a plot.   
   * The facet function takes a formula as an argument, which is just a data structure, denoted by a tilde **~**  
 
-`facet_wrap`    
+`facet_wrap`  
+When you have one variable to plot as a facet     
 ```{r,eval=T}
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy)) + 
   facet_wrap(~ class, nrow = 2) +
   theme_classic()
-
 ```
 
 `facet_grid`  
+When you know the two variables you want to plot  
+
+**The formula structure for `facet_grid` is Y variable `~` X variable, e.g. `drv ~ cyl`**         
+
 ```{r, eval=T}
 ggplot(data = mpg) + 
   geom_point(mapping = aes(x = displ, y = hwy)) + 
@@ -151,8 +157,39 @@ ggplot(data = mpg) +
 ```
 
 
-# Exercise 1  
-Try plotting facets using the smaller Airbnb data.  
- * What happens when you use a continuous variable on a `facet_wrap`?  
+# Exercise 3.5  
+[3.5.1](https://r4ds.had.co.nz/data-visualisation.html#exercises-2)  
+  
+# Group vs. colour
+Using `group` separates the data into objects, but `colour` will distinguish the differences among these objects     
+```{r}
+ggplot(data = mpg) +
+  geom_smooth(mapping = aes(x = displ, y = hwy))
+              
+ggplot(data = mpg) +
+  geom_smooth(mapping = aes(x = displ, y = hwy, group = drv))
+    
+ggplot(data = mpg) +
+  geom_smooth(
+    mapping = aes(x = displ, y = hwy, color = drv),
+    show.legend = FALSE
+  )
+```
 
+# Geometric objects            
 
+# Adding `geoms`    
+Possibly the most useful part of plotting data is layering plot types       
+```{r}
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  geom_smooth(mapping = aes(x = displ, y = hwy))
+```
+
+# Applying the Airbnb data  
+Try using the new examples on the Airbnb dataset.      
+
+<!-- end body -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->

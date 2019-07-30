@@ -1,15 +1,19 @@
 ---
-Title: "Lesson 5"
+params:
+  lesson: "Lesson 5"
+  title: "`if` statements and subsetting data"
+  bookchapter_name: "Section 3.5.1"    
+  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
+  functions: "`facet_bar`, `list`"
+  packages: "`here`"      
+  # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
-  html_document
-params:
-  lesson: !r paste0("Lesson ",5)
-  title: "Lesson 5: `if` statements and subsetting data"        
+  html_document:
+    code_folding: hide
 ---
-
-
+  
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
 options(width=100)
 knitr::opts_chunk$set(
@@ -34,7 +38,7 @@ if (require(packages)) {
     # load tvthemes
     devtools::install_github("Ryo-N7/tvthemes")
 }
-lapply(packages,library,character.only=T)
+lapply(packages,library,character.only=T)  
 ```
 
 <!-- ____________________________________________________________________________ -->
@@ -42,24 +46,24 @@ lapply(packages,library,character.only=T)
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
 
-# `r params$title`        
+# `r paste0(params$lesson,": ",params$title)`    
 \  
 
-Functions for `r params$lesson`    
-```{r,eval=T, echo=F}
-require(readr)
-readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
-```
-\  
-
-Packages for `r params$lesson`      
-```{r,eval=T, echo=F}
-require(readr)
-readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
-```
+Functions for `r params$lesson`  
+`r params$functions`    
 \    
 
-# Agenda  
+Packages for `r params$lesson`          
+`r params$packages`        
+\    
+
+# Agenda
+
+[Data visualisation in `R` for Data Science, `r params$bookchapter_name`](`r params$bookchapter_section`).      
+\ 
+
+<!--  end yaml template------------------------------------------------------- -->
+  
 * Chop up datasets into smaller parts using `filter` and `subset`  
 * Create conditional statements and toggles using `if` and `else`      
 

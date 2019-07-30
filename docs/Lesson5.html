@@ -29,6 +29,80 @@
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' || rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
 
 
 <style type="text/css">
@@ -256,7 +330,7 @@ $(document).ready(function () {
 <script>
 $(document).ready(function () {
   window.initializeSourceEmbed("Lesson5.Rmd");
-  window.initializeCodeFolding("show" === "show");
+  window.initializeCodeFolding("hide" === "show");
 });
 </script>
 
@@ -439,28 +513,45 @@ div.tocify {
 <div id="lesson-5-if-statements-and-subsetting-data" class="section level1">
 <h1>Lesson 5: <code>if</code> statements and subsetting data</h1>
 <p> </p>
-<p>Functions for Lesson 5</p>
-<pre><code>[1] &quot;p_load&quot; &quot;here&quot;  </code></pre>
-<p> </p>
-<p>Packages for Lesson 5</p>
-<pre><code>[1] &quot;pacman&quot; &quot;here&quot;  </code></pre>
-<p> </p>
+<p>Functions for Lesson 5<br />
+<code>facet_bar</code>, <code>list</code><br />
+ </p>
+<p>Packages for Lesson 5<br />
+No new packages!<br />
+ </p>
 </div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#facets">Data visualisation in <code>R</code> for Data Science, Section 3.5.1</a>.<br />
+ </p>
 <ul>
 <li>Chop up datasets into smaller parts using <code>filter</code> and <code>subset</code><br />
 </li>
 <li>Create conditional statements and toggles using <code>if</code> and <code>else</code></li>
 </ul>
-<div id="do-first" class="section level2">
-<h2>Do First</h2>
-<p>Recreate the below plot using the larger NYC Airbnb dataset.</p>
-<p><img src="Lesson5_files/figure-html/unnamed-chunk-4-1.png" width="100%" /></p>
 </div>
+<div id="do-first" class="section level1">
+<h1>Do First</h1>
+<p>Recreate the below plot using the larger NYC Airbnb dataset.</p>
+<p><img src="Lesson5_files/figure-html/unnamed-chunk-2-1.png" width="100%" /></p>
+</div>
+<div id="reading-in-data-files" class="section level1">
+<h1>Reading in data files</h1>
+<p>Using <code>here</code> to set your working directory</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(here)  <span class="co"># load the here package if not already</span>
+<span class="kw">set_here</span>()  <span class="co"># set current working directory </span>
+<span class="kw">dr_here</span>()  <span class="co"># print current working directory where .here is located</span></code></pre></div>
+<ol style="list-style-type: decimal">
+<li>Create a folder in your directory called <strong>‘lookhere’</strong>.<br />
+</li>
+<li>Open a new file in TextEdit (Mac) or Notepad (Windows), type in something like &quot; <em>We found the here file!</em> “, then save the file as <strong>“heretest.txt”</strong>.</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list.files</span>()  <span class="co"># print files in your current working dir. the &#39;heretest.txt&#39; file is not here, but one folder below in the new &#39;lookhere&#39; folder</span>
+<span class="kw">here</span>(<span class="st">&quot;lookhere&quot;</span>, <span class="st">&quot;heretest.txt&quot;</span>)  <span class="co"># using here to forage for the file</span>
+<span class="kw">here</span>(<span class="st">&quot;lookhere&quot;</span>, <span class="st">&quot;heretest.txt&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>readLines  <span class="co"># print the contents in R</span></code></pre></div>
 </div>
 
-<div id="rmd-source-code">LS0tClRpdGxlOiAiTGVzc29uIDUiCmhlYWRlci1pbmNsdWRlczogXHVzZXBhY2thZ2V7ZmxvYXR9CmFsd2F5c19hbGxvd19odG1sOiB5ZXMKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQKcGFyYW1zOgogIGxlc3NvbjogIXIgcGFzdGUwKCJMZXNzb24gIiw1KQogIHRpdGxlOiAiTGVzc29uIDU6IGBpZmAgc3RhdGVtZW50cyBhbmQgc3Vic2V0dGluZyBkYXRhIiAgICAgICAgCi0tLQoKCmBgYHtyLCBzZXR1cCwgZWNobyA9IEZBTFNFLCBjYWNoZSA9IEZBTFNFLCBpbmNsdWRlID0gRkFMU0V9Cm9wdGlvbnMod2lkdGg9MTAwKQprbml0cjo6b3B0c19jaHVuayRzZXQoCiAgZXZhbCA9IEZBTFNFLCAjIHJ1biBhbGwgY29kZQogIGVjaG8gPSBUUlVFLCAjIHNob3cgY29kZSBjaHVua3MgaW4gb3V0cHV0IAogIHRpZHkgPSBUUlVFLCAjIG1ha2Ugb3V0cHV0IGFzIHRpZHkKICBtZXNzYWdlID0gRkFMU0UsICAjIG1hc2sgYWxsIG1lc3NhZ2VzCiAgd2FybmluZyA9IEZBTFNFLCAjIG1hc2sgYWxsIHdhcm5pbmdzIAogIGNvbW1lbnQgPSAiIiwKICB0aWR5Lm9wdHM9bGlzdCh3aWR0aC5jdXRvZmY9MTAwKSwgIyBzZXQgd2lkdGggb2YgY29kZSBjaHVua3MgaW4gb3V0cHV0CiAgc2l6ZT0ic21hbGwiICMgc2V0IGNvZGUgY2h1bmsgc2l6ZQogICkKYGBgClwKCjwhLS0gaW5zdGFsbCBwYWNrYWdlcyAtLT4KYGBge3IsIGxvYWQgcGFja2FnZXMsIGV2YWw9VCwgaW5jbHVkZT1ULCBjYWNoZT1GLCBtZXNzYWdlPUYsIHdhcm5pbmc9RiwgcmVzdWx0cz0naGlkZScsZWNobz1GfQpwYWNrYWdlcyA8LSBjKCJnZ3Bsb3QyIiwiZ2d0aGVtZXMiLCJkcGx5ciIsInRpZHl2ZXJzZSIsInpvbyIsIlJDb2xvckJyZXdlciIsInZpcmlkaXMiLCJwbHlyIikgICAKaWYgKHJlcXVpcmUocGFja2FnZXMpKSB7CiAgICBpbnN0YWxsLnBhY2thZ2VzKHBhY2thZ2VzLGRlcGVuZGVuY2llcyA9IFQpCiAgICByZXF1aXJlKHBhY2thZ2VzKQogICAgIyBsb2FkIHR2dGhlbWVzCiAgICBkZXZ0b29sczo6aW5zdGFsbF9naXRodWIoIlJ5by1ONy90dnRoZW1lcyIpCn0KbGFwcGx5KHBhY2thZ2VzLGxpYnJhcnksY2hhcmFjdGVyLm9ubHk9VCkKYGBgCgo8IS0tIF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18gLS0+CjwhLS0gX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXyAtLT4KPCEtLSBfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fIC0tPgo8IS0tIHN0YXJ0IGJvZHkgLS0+CgojIGByIHBhcmFtcyR0aXRsZWAgICAgICAgIAoKXCAgCgpGdW5jdGlvbnMgZm9yIGByIHBhcmFtcyRsZXNzb25gICAgIApgYGB7cixldmFsPVQsIGVjaG89Rn0KcmVxdWlyZShyZWFkcikKcmVhZExpbmVzKCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vZGFyd2luYW5kZGF2aXMvRW1vUnlDb2RpbmdDbHViL21hc3Rlci9mdW5jdGlvbnNfbGVzc29uMi50eHQiKQpgYGAKClwgIAoKUGFja2FnZXMgZm9yIGByIHBhcmFtcyRsZXNzb25gICAgICAgCmBgYHtyLGV2YWw9VCwgZWNobz1GfQpyZXF1aXJlKHJlYWRyKQpyZWFkTGluZXMoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9kYXJ3aW5hbmRkYXZpcy9FbW9SeUNvZGluZ0NsdWIvbWFzdGVyL3BhY2thZ2VzX2xlc3NvbjIudHh0IikKYGBgCgpcICAgIAoKIyBBZ2VuZGEgIAoqIENob3AgdXAgZGF0YXNldHMgaW50byBzbWFsbGVyIHBhcnRzIHVzaW5nIGBmaWx0ZXJgIGFuZCBgc3Vic2V0YCAgCiogQ3JlYXRlIGNvbmRpdGlvbmFsIHN0YXRlbWVudHMgYW5kIHRvZ2dsZXMgdXNpbmcgYGlmYCBhbmQgYGVsc2VgICAgICAgCgojIyBEbyBGaXJzdCAgICAKClJlY3JlYXRlIHRoZSBiZWxvdyBwbG90IHVzaW5nIHRoZSBsYXJnZXIgTllDIEFpcmJuYiBkYXRhc2V0LiAgICAKYGBge3IsZWNobz1GLGV2YWw9VCxjYWNoZT1UfQp1cmwgPC0gImh0dHA6Ly9kYXRhLmluc2lkZWFpcmJuYi5jb20vdW5pdGVkLXN0YXRlcy9ueS9uZXcteW9yay1jaXR5LzIwMTktMDYtMDIvZGF0YS9saXN0aW5ncy5jc3YuZ3oiCm55Y19mdWxsIDwtIHJlYWRfY3N2KHVybCkgIyByZWFkcyBpbiBkYXRhCmBgYAoKYGBge3IsIGVjaG89RiwgZXZhbD1ULCBvdXQud2lkdGg9IjEwMCUifQp0dGwgPC0gIk5ZQyBBaXJibmIgYXZhaWxhYmlsaXR5IgpzdWJ0dGwgPC0gImZvciByb29tIHR5cGVzIGFjcm9zcyBuZWlnaGJvdXJob29kcyIKeGxhYiA8LSAiQXZhaWxhYmlsaXR5IG9mIHByb3BlcnR5IGluIG5leHQgMzAgZGF5cyIKbXlfdGhlbWUgPC0gdGhlbWVfdHVmdGUoKQoKIyBnbGltcHNlKG55Y19mdWxsKSAgCm55Y19mdWxsXyA8LSBueWNfZnVsbCAlPiUgc3Vic2V0KGF2YWlsYWJpbGl0eV8zMCA+IDApCgpnZ3Bsb3QoKSArCiAgZ2VvbV9iYXIoZGF0YSA9IG55Y19mdWxsXywgbWFwcGluZyA9IGFlcyh4ID0gYXZhaWxhYmlsaXR5XzMwLAogICAgICAgZmlsbD1uZWlnaGJvdXJob29kX2dyb3VwX2NsZWFuc2VkKSwgc2hvdy5sZWdlbmQgPSBGQUxTRSkgKwogIGZhY2V0X2dyaWQocm9vbV90eXBlIH4gbmVpZ2hib3VyaG9vZF9ncm91cF9jbGVhbnNlZCkgKwogIGxhYnModGl0bGUgPSB0dGwsCiAgICAgICBzdWJ0aXRsZSA9IHN1YnR0bCwKICAgICAgIHggPSB4bGFiKSArCiAgbXlfdGhlbWUgCgpgYGAKCg==</div>
+<div id="rmd-source-code">LS0tCnBhcmFtczoKICBsZXNzb246ICJMZXNzb24gNSIKICB0aXRsZTogImBpZmAgc3RhdGVtZW50cyBhbmQgc3Vic2V0dGluZyBkYXRhIgogIGJvb2tjaGFwdGVyX25hbWU6ICJTZWN0aW9uIDMuNS4xIiAgICAKICBib29rY2hhcHRlcl9zZWN0aW9uOiAiaHR0cHM6Ly9yNGRzLmhhZC5jby5uei9kYXRhLXZpc3VhbGlzYXRpb24uaHRtbCNmYWNldHMiCiAgZnVuY3Rpb25zOiAiYGZhY2V0X2JhcmAsIGBsaXN0YCIKICBwYWNrYWdlczogIk5vIG5ldyBwYWNrYWdlcyEiICAgICAgCiAgIyBlbmQgaW5wdXRzCmhlYWRlci1pbmNsdWRlczogXHVzZXBhY2thZ2V7ZmxvYXR9CmFsd2F5c19hbGxvd19odG1sOiB5ZXMKb3V0cHV0OgogIGh0bWxfZG9jdW1lbnQ6CiAgICBjb2RlX2ZvbGRpbmc6IGhpZGUKLS0tCiAgCmBgYHtyLCBzZXR1cCwgZWNobyA9IEZBTFNFLCBjYWNoZSA9IEZBTFNFLCBpbmNsdWRlID0gRkFMU0V9Cm9wdGlvbnMod2lkdGg9MTAwKQprbml0cjo6b3B0c19jaHVuayRzZXQoCiAgZXZhbCA9IEZBTFNFLCAjIHJ1biBhbGwgY29kZQogIGVjaG8gPSBUUlVFLCAjIHNob3cgY29kZSBjaHVua3MgaW4gb3V0cHV0IAogIHRpZHkgPSBUUlVFLCAjIG1ha2Ugb3V0cHV0IGFzIHRpZHkKICBtZXNzYWdlID0gRkFMU0UsICAjIG1hc2sgYWxsIG1lc3NhZ2VzCiAgd2FybmluZyA9IEZBTFNFLCAjIG1hc2sgYWxsIHdhcm5pbmdzIAogIGNvbW1lbnQgPSAiIiwKICB0aWR5Lm9wdHM9bGlzdCh3aWR0aC5jdXRvZmY9MTAwKSwgIyBzZXQgd2lkdGggb2YgY29kZSBjaHVua3MgaW4gb3V0cHV0CiAgc2l6ZT0ic21hbGwiICMgc2V0IGNvZGUgY2h1bmsgc2l6ZQogICkKYGBgClwKCjwhLS0gaW5zdGFsbCBwYWNrYWdlcyAtLT4KYGBge3IsIGxvYWQgcGFja2FnZXMsIGV2YWw9VCwgaW5jbHVkZT1ULCBjYWNoZT1GLCBtZXNzYWdlPUYsIHdhcm5pbmc9RiwgcmVzdWx0cz0naGlkZScsZWNobz1GfQpwYWNrYWdlcyA8LSBjKCJnZ3Bsb3QyIiwiZ2d0aGVtZXMiLCJkcGx5ciIsInRpZHl2ZXJzZSIsInpvbyIsIlJDb2xvckJyZXdlciIsInZpcmlkaXMiLCJwbHlyIikgICAKaWYgKHJlcXVpcmUocGFja2FnZXMpKSB7CiAgICBpbnN0YWxsLnBhY2thZ2VzKHBhY2thZ2VzLGRlcGVuZGVuY2llcyA9IFQpCiAgICByZXF1aXJlKHBhY2thZ2VzKQogICAgIyBsb2FkIHR2dGhlbWVzCiAgICBkZXZ0b29sczo6aW5zdGFsbF9naXRodWIoIlJ5by1ONy90dnRoZW1lcyIpCn0KbGFwcGx5KHBhY2thZ2VzLGxpYnJhcnksY2hhcmFjdGVyLm9ubHk9VCkgIApgYGAKCjwhLS0gX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXyAtLT4KPCEtLSBfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fIC0tPgo8IS0tIF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18gLS0+CjwhLS0gc3RhcnQgYm9keSAtLT4KCiMgYHIgcGFzdGUwKHBhcmFtcyRsZXNzb24sIjogIixwYXJhbXMkdGl0bGUpYCAgICAKXCAgCgpGdW5jdGlvbnMgZm9yIGByIHBhcmFtcyRsZXNzb25gICAKYHIgcGFyYW1zJGZ1bmN0aW9uc2AgICAgClwgICAgCgpQYWNrYWdlcyBmb3IgYHIgcGFyYW1zJGxlc3NvbmAgICAgICAgICAgCmByIHBhcmFtcyRwYWNrYWdlc2AgICAgICAgIApcICAgIAoKIyBBZ2VuZGEKCltEYXRhIHZpc3VhbGlzYXRpb24gaW4gYFJgIGZvciBEYXRhIFNjaWVuY2UsIGByIHBhcmFtcyRib29rY2hhcHRlcl9uYW1lYF0oYHIgcGFyYW1zJGJvb2tjaGFwdGVyX3NlY3Rpb25gKS4gICAgICAKXCAgCgoqIENob3AgdXAgZGF0YXNldHMgaW50byBzbWFsbGVyIHBhcnRzIHVzaW5nIGBmaWx0ZXJgIGFuZCBgc3Vic2V0YCAgCiogQ3JlYXRlIGNvbmRpdGlvbmFsIHN0YXRlbWVudHMgYW5kIHRvZ2dsZXMgdXNpbmcgYGlmYCBhbmQgYGVsc2VgICAgICAgCgojIERvIEZpcnN0ICAgIAoKUmVjcmVhdGUgdGhlIGJlbG93IHBsb3QgdXNpbmcgdGhlIGxhcmdlciBOWUMgQWlyYm5iIGRhdGFzZXQuICAgIApgYGB7cixlY2hvPUYsZXZhbD1ULGNhY2hlPVR9CnVybCA8LSAiaHR0cDovL2RhdGEuaW5zaWRlYWlyYm5iLmNvbS91bml0ZWQtc3RhdGVzL255L25ldy15b3JrLWNpdHkvMjAxOS0wNi0wMi9kYXRhL2xpc3RpbmdzLmNzdi5neiIKbnljX2Z1bGwgPC0gcmVhZF9jc3YodXJsKSAjIHJlYWRzIGluIGRhdGEKYGBgCgpgYGB7ciwgZWNobz1GLCBldmFsPVQsIG91dC53aWR0aD0iMTAwJSJ9CnR0bCA8LSAiTllDIEFpcmJuYiBhdmFpbGFiaWxpdHkiCnN1YnR0bCA8LSAiZm9yIHJvb20gdHlwZXMgYWNyb3NzIG5laWdoYm91cmhvb2RzIgp4bGFiIDwtICJBdmFpbGFiaWxpdHkgb2YgcHJvcGVydHkgaW4gbmV4dCAzMCBkYXlzIgpteV90aGVtZSA8LSB0aGVtZV90dWZ0ZSgpCgojIGdsaW1wc2UobnljX2Z1bGwpICAKbnljX2Z1bGxfIDwtIG55Y19mdWxsICU+JSBzdWJzZXQoYXZhaWxhYmlsaXR5XzMwID4gMCkKCmdncGxvdCgpICsKICBnZW9tX2JhcihkYXRhID0gbnljX2Z1bGxfLCBtYXBwaW5nID0gYWVzKHggPSBhdmFpbGFiaWxpdHlfMzAsCiAgICAgICBmaWxsPW5laWdoYm91cmhvb2RfZ3JvdXBfY2xlYW5zZWQpLCBzaG93LmxlZ2VuZCA9IEZBTFNFKSArCiAgZmFjZXRfZ3JpZChyb29tX3R5cGUgfiBuZWlnaGJvdXJob29kX2dyb3VwX2NsZWFuc2VkKSArCiAgbGFicyh0aXRsZSA9IHR0bCwKICAgICAgIHN1YnRpdGxlID0gc3VidHRsLAogICAgICAgeCA9IHhsYWIpICsKICBteV90aGVtZSAKCmBgYAoKCiMgUmVhZGluZyBpbiBkYXRhIGZpbGVzICAgIApVc2luZyBgaGVyZWAgdG8gc2V0IHlvdXIgd29ya2luZyBkaXJlY3RvcnkgIApgYGB7cn0KcmVxdWlyZShoZXJlKSAjIGxvYWQgdGhlIGhlcmUgcGFja2FnZSBpZiBub3QgYWxyZWFkeQpzZXRfaGVyZSgpICMgc2V0IGN1cnJlbnQgd29ya2luZyBkaXJlY3RvcnkgCmRyX2hlcmUoKSAjIHByaW50IGN1cnJlbnQgd29ya2luZyBkaXJlY3Rvcnkgd2hlcmUgLmhlcmUgaXMgbG9jYXRlZApgYGAKCjEuIENyZWF0ZSBhIGZvbGRlciBpbiB5b3VyIGRpcmVjdG9yeSBjYWxsZWQgKionbG9va2hlcmUnKiouICAKMi4gT3BlbiBhIG5ldyBmaWxlIGluIFRleHRFZGl0IChNYWMpIG9yIE5vdGVwYWQgKFdpbmRvd3MpLCB0eXBlIGluIHNvbWV0aGluZyBsaWtlICIgX1dlIGZvdW5kIHRoZSBoZXJlIGZpbGUhXyAiLCB0aGVuIHNhdmUgdGhlIGZpbGUgYXMgKioiaGVyZXRlc3QudHh0IioqLiAgICAgICAKYGBge3J9Cmxpc3QuZmlsZXMoKSAjIHByaW50IGZpbGVzIGluIHlvdXIgY3VycmVudCB3b3JraW5nIGRpci4gdGhlICdoZXJldGVzdC50eHQnIGZpbGUgaXMgbm90IGhlcmUsIGJ1dCBvbmUgZm9sZGVyIGJlbG93IGluIHRoZSBuZXcgJ2xvb2toZXJlJyBmb2xkZXIKaGVyZSgibG9va2hlcmUiLCJoZXJldGVzdC50eHQiKSAjIHVzaW5nIGhlcmUgdG8gZm9yYWdlIGZvciB0aGUgZmlsZQpoZXJlKCJsb29raGVyZSIsImhlcmV0ZXN0LnR4dCIpICU+JSByZWFkTGluZXMgIyBwcmludCB0aGUgY29udGVudHMgaW4gUgoKYGBgCgoK</div>
 
 
 </div>

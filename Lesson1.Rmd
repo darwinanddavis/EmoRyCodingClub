@@ -1,14 +1,19 @@
 ---
-Title: "Lesson 1"
+params:
+  lesson: "Lesson 1"
+  title: "Intro to plotting data in R with `ggplot`"
+  bookchapter_name: "Section 3.1.1"    
+  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html"
+  functions: "`?`, `str`, `glimpse`, `summary`, `table`, `min`, `max`, `ggplot`, `geom_point`, `geom_smooth`, `theme_minimal`, `theme_classic`, `theme_tufte`"
+  packages: "`tidyverse`, `ggplot2`, `dplyr`"      
+  # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
-  html_document
-params: 
-  lesson: !r paste0("Lesson ",1)
-  title: "Lesson 1: Intro to plotting data in `R` with `ggplot`"
+  html_document:
+    code_folding: hide
 ---
-
+  
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
 options(width=100)
 knitr::opts_chunk$set(
@@ -33,7 +38,7 @@ if (require(packages)) {
     # load tvthemes
     devtools::install_github("Ryo-N7/tvthemes")
 }
-lapply(packages,library,character.only=T)
+lapply(packages,library,character.only=T)  
 ```
 
 <!-- ____________________________________________________________________________ -->
@@ -41,27 +46,22 @@ lapply(packages,library,character.only=T)
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
 
-# `r params$title`  
+# `r paste0(params$lesson,": ",params$title)`    
 \  
 
-Functions for `r params$lesson`    
-```{r,eval=T, echo=F}
-require(readr)
-readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson1.txt")
-```
-\  
+Functions for `r params$lesson`  
+`r params$functions`    
+\    
 
-Packages for `r params$lesson`      
-```{r,eval=T, echo=F}
-require(readr)
-readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson1.txt")
-```
-\  
+Packages for `r params$lesson`          
+`r params$packages`        
+\    
 
-# Agenda
+# Agenda  
 
-We'll be using [Ch 3 Data visualisation in `R` for Data Science](https://r4ds.had.co.nz/data-visualisation.html).  
-Section 3.1.1.     
+[Data visualisation in `R` for Data Science, `r params$bookchapter_name`](`r params$bookchapter_section`).    
+
+<!--  end yaml template------------------------------------------------------- -->
 
 * Intro to the `R`environment (IDE)  
 * Loading packages, e.g. `tidyverse`  

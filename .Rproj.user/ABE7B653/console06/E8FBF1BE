@@ -1,1832 +1,4 @@
 
-hint: its remote counterpart. Integrate the remote changes (e.g.
-hint: 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull master ori[K[K[K[K[K[K[K[K[K[Korigin master
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * branch            master     -> FETCH_HEAD
-error: The following untracked working tree files would be overwritten by merge:
-	.DS_Store
-Please move or remove them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .git
-.git/       .gitignore  
-6300L-127771-M:ecc malishev$ open .git
-.git/       .gitignore  
-6300L-127771-M:ecc malishev$ open .gitignore [C[C[1P [1P [1P ore 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .gitignore git pull origin mastersh[Kll origin mastersh[Kcommit -m 'pre lesson 1 eval'add .[K[K[K[K[K[Kstatus
-On branch master
-Your branch and 'origin/master' have diverged,
-and have 1 and 3 different commits each, respectively.
-  (use "git pull" to merge the remote branch into yours)
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-	[31mmodified:   .gitignore[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m [K ''p'r'e' 'l'e's's'o'n' '1' 'e'v'a'l'
-[master 0a060f9] pre lesson 1 eval
- 2 files changed, 42 insertions(+)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pusgh[K[Kh
-To https://github.com/darwinanddavis/EmoRyCodingClub
- ! [rejected]        master -> master (non-fast-forward)
-error: failed to push some refs to 'https://github.com/darwinanddavis/EmoRyCodingClub'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Integrate the remote changes (e.g.
-hint: 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull orogin ma[K[K[K[K[K[K[Kigin master
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * branch            master     -> FETCH_HEAD
-error: The following untracked working tree files would be overwritten by merge:
-	.DS_Store
-Please move or remove them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin mastersh[Kcommit -m 'pre lesson 1 eval'add .[Kstatusopen .gitignore 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .gitignore git pull origin master
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * branch            master     -> FETCH_HEAD
-error: The following untracked working tree files would be overwritten by merge:
-	.DS_Store
-Please move or remove them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm -cha[K[Kached [C[1@-[C[C[C[C[C[C[C[C . D S _ S t o r e [1P
-fatal: pathspec 'DS_Store' did not match any files
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm --cached DS_Store [1@.
-fatal: pathspec '.DS_Store' did not match any files
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull
-error: The following untracked working tree files would be overwritten by merge:
-	.DS_Store
-Please move or remove them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push p[Korigin master
-To https://github.com/darwinanddavis/EmoRyCodingClub
- ! [rejected]        master -> master (non-fast-forward)
-error: failed to push some refs to 'https://github.com/darwinanddavis/EmoRyCodingClub'
-hint: Updates were rejected because the tip of your current branch is behind
-hint: its remote counterpart. Integrate the remote changes (e.g.
-hint: 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git config core.ignorecase true
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git config core.ignorecase true[9Ppush origin masterll[K origin master
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * branch            master     -> FETCH_HEAD
-error: The following untracked working tree files would be overwritten by merge:
-	.DS_Store
-Please move or remove them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin masterconfig core.ignorecase true[9Ppush origin masterll[Krm --cached .DS_Store [1P[C[C[C[C[C[C[C[C[C[3Ppull origin masterrm --cached DS_Store [1@.[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[3Ppull origin master[6Popen .gitignore git pull origin mastersh[Kll origin master[6Popen .gitignore git pull origin masterrm --cached DS_Store 
-fatal: pathspec 'DS_Store' did not match any files
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm --cached DS_Store [3Ppull origin masterrm --cached DS_Store [1@.
-fatal: pathspec '.DS_Store' did not match any files
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm --cached .DS_Store [1P[C[C[C[C[C[C[C[C[C[3Ppull origin masterconfig core.ignorecase true[9Ppull origin master
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * branch            master     -> FETCH_HEAD
-error: The following untracked working tree files would be overwritten by merge:
-	.DS_Store
-Please move or remove them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin masterrm --cached .DS_Store [4Ppull origin master[Kgit add [K[K[K[Kstatus
-On branch master
-Your branch and 'origin/master' have diverged,
-and have 2 and 3 different commits each, respectively.
-  (use "git pull" to merge the remote branch into yours)
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-Already on 'master'
-Your branch and 'origin/master' have diverged,
-and have 3 and 3 different commits each, respectively.
-  (use "git pull" to merge the remote branch into yours)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull ri[K[Kori[K[Krigin master
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * branch            master     -> FETCH_HEAD
-error: The following untracked working tree files would be overwritten by merge:
-	.DS_Store
-Please move or remove them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git sybmodel [K[K[K[K[K[K[K[Kubmodelu[K[K[Kule update --init
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git p[K[K[K[K[Kgit submodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[Cpull origin[C[C[C[C[C[C[C
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * branch            master     -> FETCH_HEAD
-error: The following untracked working tree files would be overwritten by merge:
-	.DS_Store
-Please move or remove them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin mastersubmodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[C[12Prebase[5Pls -agit rm DS_Store ls -a[Kgit rebase
-Cannot rebase: You have unstaged changes.
-Please commit or stash them.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rebasepull origin mastersubmodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[C[12Prebase
-Cannot rebase: You have unstaged changes.
-Please commit or stash them.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rebasepull origin mastersubmodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[C[12Prebase[5Pls -agit rm DS_Store [1@.[C[C[C[C[C[C[C[C[C[1P[C[C[C[C[C[C[C[C[C[1@.[C[C[C[C[C[C[C[C[C
-fatal: pathspec '.DS_Store' did not match any files
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset
-Unstaged changes after reset:
-M	.Rproj.user/ABE7B653/console06/E8FBF1BE
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git resetm .DS_Store [7Pebase
-Cannot rebase: You have unstaged changes.
-Please commit or stash them.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rebase[1Psetm .DS_Store [7Pebasepull origin mastersubmodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[C[12Prebase[5Pls -agit rebasecheckout -f masterpull origin[C[C[C[C[C[C[Csubmodule update --init[5Ppull origin master
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * branch            master     -> FETCH_HEAD
-error: The following untracked working tree files would be overwritten by merge:
-	.DS_Store
-Please move or remove them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin master[12Prebase[1Psetm .DS_Store [7Pebasepull origin mastersubmodule update --init[5Ppull origin mastercheckout -f[C[C[C[C[C[C[C[12Prebase[5Pls -agit rm DS_Store 
-fatal: pathspec 'DS_Store' did not match any files
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm DS_Store pull origin master[6Prm DS_Store [1@.
-fatal: pathspec '.DS_Store' did not match any files
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git rm .DS_Store [1P[C[C[C[C[C[C[C[C[Cpull origin master[12Prebase[1Psetm .DS_Store [8Pesetbasepull origin master[6Prm DS_Store [1@.[C[C[C[C[C[C[C[C[C[Kgit merge master
-Already up-to-date.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull or[K[K
-error: The following untracked working tree files would be overwritten by merge:
-	.DS_Store
-Please move or remove them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git config core.ignorecase truepull [K[K[K[K[K[K[K[K[K[Kgit merge --strategy=ours master 
-Already up-to-date.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ mv .DS_Store /[Kcd ""[K[K[K[K[K/d[Kadmin[K[K[K[K[K[Kadmin_
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git comm[K[K[K[Kreset
-Unstaged changes after reset:
-M	.Rproj.user/ABE7B653/console06/E8FBF1BE
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull origin master
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * branch            master     -> FETCH_HEAD
-Removing admin/index.Rmd
-Auto-merging admin/ecc_master1.Rmd
-CONFLICT (modify/delete): admin/_site/site_libs/tocify-1.9.1/jquery.tocify.js deleted in fe066942840491abb8acf8201c70fb2b93e8f558 and modified in HEAD. Version HEAD of admin/_site/site_libs/tocify-1.9.1/jquery.tocify.js left in tree.
-CONFLICT (modify/delete): admin/_site/site_libs/tocify-1.9.1/jquery.tocify.css deleted in fe066942840491abb8acf8201c70fb2b93e8f558 and modified in HEAD. Version HEAD of admin/_site/site_libs/tocify-1.9.1/jquery.tocify.css left in tree.
-Removing admin/_site/site_libs/navigation-1.1/tabsets.js
-Removing admin/_site/site_libs/navigation-1.1/sourceembed.js
-Removing admin/_site/site_libs/navigation-1.1/codefolding.js
-Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.theme.min.css
-Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.theme.css
-Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.structure.min.css
-Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.structure.css
-Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.min.js
-Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.min.css
-Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.js
-Removing admin/_site/site_libs/jqueryui-1.11.4/jquery-ui.css
-Removing admin/_site/site_libs/jqueryui-1.11.4/index.html
-Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png
-Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png
-Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_777777_256x240.png
-Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_777620_256x240.png
-Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_555555_256x240.png
-Removing admin/_site/site_libs/jqueryui-1.11.4/images/ui-icons_444444_256x240.png
-Removing admin/_site/site_libs/jqueryui-1.11.4/README
-Removing admin/_site/site_libs/jquery-1.11.3/jquery.min.js
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff2
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.ttf
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.svg
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.eot
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff2
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.ttf
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.svg
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.eot
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff2
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.ttf
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.svg
-Removing admin/_site/site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.eot
-Removing admin/_site/site_libs/font-awesome-5.1.0/css/v4-shims.css
-Removing admin/_site/site_libs/font-awesome-5.1.0/css/all.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/shim/respond.min.js
-Removing admin/_site/site_libs/bootstrap-3.3.5/shim/html5shiv.min.js
-Removing admin/_site/site_libs/bootstrap-3.3.5/js/npm.js
-Removing admin/_site/site_libs/bootstrap-3.3.5/js/bootstrap.min.js
-Removing admin/_site/site_libs/bootstrap-3.3.5/js/bootstrap.js
-Removing admin/_site/site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2
-Removing admin/_site/site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff
-Removing admin/_site/site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg
-Removing admin/_site/site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/yeti.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/united.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/spacelab.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/simplex.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/sandstone.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/readable.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/paper.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/lumen.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/journal.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/Roboto.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/Raleway.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/OpenSans.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/NewsCycle.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/LatoBold.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/fonts/Lato.ttf
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/flatly.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/darkly.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/cosmo.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/cerulean.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap.css.map
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.map
-Removing admin/_site/site_libs/bootstrap-3.3.5/css/bootstrap-theme.css
-Removing admin/_site/index.html
-CONFLICT (modify/delete): admin/_site/ecc_master1.html deleted in fe066942840491abb8acf8201c70fb2b93e8f558 and modified in HEAD. Version HEAD of admin/_site/ecc_master1.html left in tree.
-Removing admin/_site/ecc_master.tex
-Removing admin/_site/ecc_master.html
-Removing admin/_site.yml
-Removing .Rproj.user/shared/notebooks/45BF1761-ecc_master/1/s/chunks.json
-Automatic merge failed; fix conflicts and then commit the result.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''d's' 's't'o'r'e' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'_'s't'o'r'e' 'i'[1P'f'i'x'
-[master 2cea5f1] ds_store fix
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 46, done.
-Delta compression using up to 4 threads.
-Compressing objects:   2% (1/45)   Compressing objects:   4% (2/45)   Compressing objects:   6% (3/45)   Compressing objects:   8% (4/45)   Compressing objects:  11% (5/45)   Compressing objects:  13% (6/45)   Compressing objects:  15% (7/45)   Compressing objects:  17% (8/45)   Compressing objects:  20% (9/45)   Compressing objects:  22% (10/45)   Compressing objects:  24% (11/45)   Compressing objects:  26% (12/45)   Compressing objects:  28% (13/45)   Compressing objects:  31% (14/45)   Compressing objects:  33% (15/45)   Compressing objects:  35% (16/45)   Compressing objects:  37% (17/45)   Compressing objects:  40% (18/45)   Compressing objects:  42% (19/45)   Compressing objects:  44% (20/45)   Compressing objects:  46% (21/45)   Compressing objects:  48% (22/45)   Compressing objects:  51% (23/45)   Compressing objects:  53% (24/45)   Compressing objects:  55% (25/45)   Compressing objects:  57% (26/45)   Compressing objects:  60% (27/45)   Compressing objects:  62% (28/45)   Compressing objects:  64% (29/45)   Compressing objects:  66% (30/45)   Compressing objects:  68% (31/45)   Compressing objects:  71% (32/45)   Compressing objects:  73% (33/45)   Compressing objects:  75% (34/45)   Compressing objects:  77% (35/45)   Compressing objects:  80% (36/45)   Compressing objects:  82% (37/45)   Compressing objects:  84% (38/45)   Compressing objects:  86% (39/45)   Compressing objects:  88% (40/45)   Compressing objects:  91% (41/45)   Compressing objects:  93% (42/45)   Compressing objects:  95% (43/45)   Compressing objects:  97% (44/45)   Compressing objects: 100% (45/45)   Compressing objects: 100% (45/45), done.
-Writing objects:   2% (1/46)   Writing objects:   4% (2/46)   Writing objects:   6% (3/46)   Writing objects:   8% (4/46)   Writing objects:  10% (5/46)   Writing objects:  13% (6/46)   Writing objects:  15% (7/46)   Writing objects:  17% (8/46)   Writing objects:  19% (9/46)   Writing objects:  21% (10/46)   Writing objects:  23% (11/46)   Writing objects:  26% (12/46)   Writing objects:  28% (13/46)   Writing objects:  30% (14/46)   Writing objects:  32% (15/46)   Writing objects:  34% (16/46)   Writing objects:  36% (17/46)   Writing objects:  39% (18/46)   Writing objects:  41% (19/46)   Writing objects:  43% (20/46)   Writing objects:  45% (21/46)   Writing objects:  47% (22/46)   Writing objects:  50% (23/46)   Writing objects:  52% (24/46)   Writing objects:  54% (25/46)   Writing objects:  56% (26/46)   Writing objects:  58% (27/46)   Writing objects:  60% (28/46)   Writing objects:  63% (29/46)   Writing objects:  65% (30/46)   Writing objects:  67% (31/46)   Writing objects:  69% (32/46)   Writing objects:  71% (33/46)   Writing objects:  73% (34/46)   Writing objects:  76% (35/46)   Writing objects:  78% (36/46)   Writing objects:  80% (37/46)   Writing objects:  82% (38/46)   Writing objects:  84% (39/46)   Writing objects:  86% (40/46)   Writing objects:  89% (41/46)   Writing objects:  91% (42/46)   Writing objects:  93% (43/46)   Writing objects:  95% (44/46)   Writing objects:  97% (45/46)   Writing objects: 100% (46/46)   Writing objects: 100% (46/46), 11.12 KiB | 0 bytes/s, done.
-Total 46 (delta 28), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/28)   [Kremote: Resolving deltas:  14% (4/28)   [Kremote: Resolving deltas:  28% (8/28)   [Kremote: Resolving deltas:  42% (12/28)   [Kremote: Resolving deltas:  46% (13/28)   [Kremote: Resolving deltas:  50% (14/28)   [Kremote: Resolving deltas:  53% (15/28)   [Kremote: Resolving deltas:  57% (16/28)   [Kremote: Resolving deltas:  64% (18/28)   [Kremote: Resolving deltas:  75% (21/28)   [Kremote: Resolving deltas:  78% (22/28)   [Kremote: Resolving deltas:  85% (24/28)   [Kremote: Resolving deltas:  89% (25/28)   [Kremote: Resolving deltas:  92% (26/28)   [Kremote: Resolving deltas:  96% (27/28)   [Kremote: Resolving deltas: 100% (28/28)   [Kremote: Resolving deltas: 100% (28/28), completed with 15 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   fe06694..2cea5f1  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls
-Lesson1.Rmd		admin_			index.md
-README.md		docs			lesson1_draft.Rmd
-_site.yml		emorycodingclub.Rproj
-admin			index.Rmd
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd admin
-]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ ls
-_site		ecc_master.tex	ecc_master1.md	shapes.png
-ecc_master.html	ecc_master1.Rmd	ggplot1.png
-]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ cd ,[K.
-]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ ls
-_site		ecc_master.tex	ecc_master1.md	shapes.png
-ecc_master.html	ecc_master1.Rmd	ggplot1.png
-]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ cd ..
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls
-Lesson1.Rmd		admin_			index.md
-README.md		docs			lesson1_draft.Rmd
-_site.yml		emorycodingclub.Rproj
-admin			index.Rmd
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open Lesson1.Rmd 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ got cm[K[K[K[K[Kit commit -m ''u'p'd'a't'e'd' 'y'a'm'l's' 'f'o'r' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'a'l'l' 'y'a'm'l's'
-[master 58b2d64] updated all yamls
- 99 files changed, 30286 insertions(+), 297 deletions(-)
- rewrite .Rproj.user/ABE7B653/console06/INDEX001 (71%)
- rewrite .Rproj.user/shared/notebooks/paths (100%)
- create mode 100644 Lesson1.md
- create mode 100644 admin/ecc_master1.html
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap-theme.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap-theme.css.map
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap-theme.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap.css.map
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/cerulean.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/cosmo.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/darkly.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/flatly.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Lato.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/LatoBold.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/NewsCycle.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSans.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Raleway.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Roboto.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/journal.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/lumen.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/paper.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/readable.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/sandstone.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/simplex.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/spacelab.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/united.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/css/yeti.min.css
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/js/bootstrap.js
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/js/bootstrap.min.js
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/js/npm.js
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/shim/html5shiv.min.js
- create mode 100644 admin/ecc_master1_files/bootstrap-3.3.5/shim/respond.min.js
- create mode 100644 admin/ecc_master1_files/jquery-1.11.3/jquery.min.js
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/README
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_444444_256x240.png
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_555555_256x240.png
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_777620_256x240.png
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_777777_256x240.png
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/index.html
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.css
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.js
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.min.css
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.min.js
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.structure.css
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.structure.min.css
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.theme.css
- create mode 100644 admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.theme.min.css
- create mode 100644 admin/ecc_master1_files/navigation-1.1/codefolding.js
- create mode 100644 admin/ecc_master1_files/navigation-1.1/sourceembed.js
- create mode 100644 admin/ecc_master1_files/navigation-1.1/tabsets.js
- create mode 100644 admin/ecc_master1_files/tocify-1.9.1/jquery.tocify.css
- create mode 100644 admin/ecc_master1_files/tocify-1.9.1/jquery.tocify.js
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-21-1.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-21-2.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-22-1.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-22-2.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-26-1.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-27-1.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-28-1.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-29-1.png (98%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 40, done.
-Delta compression using up to 4 threads.
-Compressing objects:   2% (1/38)   Compressing objects:   5% (2/38)   Compressing objects:   7% (3/38)   Compressing objects:  10% (4/38)   Compressing objects:  13% (5/38)   Compressing objects:  15% (6/38)   Compressing objects:  18% (7/38)   Compressing objects:  21% (8/38)   Compressing objects:  23% (9/38)   Compressing objects:  26% (10/38)   Compressing objects:  28% (11/38)   Compressing objects:  31% (12/38)   Compressing objects:  34% (13/38)   Compressing objects:  36% (14/38)   Compressing objects:  39% (15/38)   Compressing objects:  42% (16/38)   Compressing objects:  44% (17/38)   Compressing objects:  47% (18/38)   Compressing objects:  50% (19/38)   Compressing objects:  52% (20/38)   Compressing objects:  55% (21/38)   Compressing objects:  57% (22/38)   Compressing objects:  60% (23/38)   Compressing objects:  63% (24/38)   Compressing objects:  65% (25/38)   Compressing objects:  68% (26/38)   Compressing objects:  71% (27/38)   Compressing objects:  73% (28/38)   Compressing objects:  76% (29/38)   Compressing objects:  78% (30/38)   Compressing objects:  81% (31/38)   Compressing objects:  84% (32/38)   Compressing objects:  86% (33/38)   Compressing objects:  89% (34/38)   Compressing objects:  92% (35/38)   Compressing objects:  94% (36/38)   Compressing objects:  97% (37/38)   Compressing objects: 100% (38/38)   Compressing objects: 100% (38/38), done.
-Writing objects:   2% (1/40)   Writing objects:   5% (2/40)   Writing objects:   7% (3/40)   Writing objects:  10% (4/40)   Writing objects:  12% (5/40)   Writing objects:  15% (6/40)   Writing objects:  17% (7/40)   Writing objects:  20% (8/40)   Writing objects:  22% (9/40)   Writing objects:  25% (10/40)   Writing objects:  27% (11/40)   Writing objects:  30% (12/40)   Writing objects:  32% (13/40)   Writing objects:  35% (14/40)   Writing objects:  37% (15/40)   Writing objects:  40% (16/40)   Writing objects:  42% (17/40)   Writing objects:  45% (18/40)   Writing objects:  47% (19/40)   Writing objects:  50% (20/40)   Writing objects:  52% (21/40)   Writing objects:  55% (22/40)   Writing objects:  57% (23/40)   Writing objects:  60% (24/40)   Writing objects:  62% (25/40)   Writing objects:  65% (26/40)   Writing objects:  67% (27/40)   Writing objects:  70% (28/40)   Writing objects:  72% (29/40)   Writing objects:  75% (30/40)   Writing objects:  77% (31/40)   Writing objects:  80% (32/40)   Writing objects:  82% (33/40)   Writing objects:  85% (34/40)   Writing objects:  87% (35/40)   Writing objects:  90% (36/40)   Writing objects:  92% (37/40)   Writing objects:  95% (38/40)   Writing objects:  97% (39/40)   Writing objects: 100% (40/40)   Writing objects: 100% (40/40), 570.13 KiB | 0 bytes/s, done.
-Total 40 (delta 18), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/18)   [Kremote: Resolving deltas:   5% (1/18)   [Kremote: Resolving deltas:  11% (2/18)   [Kremote: Resolving deltas:  16% (3/18)   [Kremote: Resolving deltas:  22% (4/18)   [Kremote: Resolving deltas:  27% (5/18)   [Kremote: Resolving deltas:  33% (6/18)   [Kremote: Resolving deltas:  38% (7/18)   [Kremote: Resolving deltas:  44% (8/18)   [Kremote: Resolving deltas:  50% (9/18)   [Kremote: Resolving deltas:  55% (10/18)   [Kremote: Resolving deltas:  66% (12/18)   [Kremote: Resolving deltas:  72% (13/18)   [Kremote: Resolving deltas:  83% (15/18)   [Kremote: Resolving deltas:  88% (16/18)   [Kremote: Resolving deltas:  94% (17/18)   [Kremote: Resolving deltas: 100% (18/18)   [Kremote: Resolving deltas: 100% (18/18), completed with 16 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   2cea5f1..58b2d64  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ;;[C[K[K;'[K[K[K'' ''[Cl'e's's'o'n'1' 'v'2'
-[master dfe5e1a] lesson1 v2
- 38 files changed, 1238 insertions(+), 1586 deletions(-)
- rewrite Lesson1.Rmd (76%)
- rewrite Lesson1.md (76%)
- copy Lesson1.Rmd => admin/ecc_master1.Rmd (56%)
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (97%)
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png
- delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-21-1.png
- delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-21-2.png
- delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-22-1.png
- delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-22-2.png
- delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png
- delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-26-1.png
- delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-27-1.png
- delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-28-1.png
- delete mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-29-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-5-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-8-2.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-8-3.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-9-1.png
- create mode 100644 docs/functions_lesson1.txt
- create mode 100644 docs/packages_lesson1.txt
- create mode 100644 functions_lesson1.txt
- create mode 100644 packages_lesson1.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 38, done.
-Delta compression using up to 4 threads.
-Compressing objects:   2% (1/36)   Compressing objects:   5% (2/36)   Compressing objects:   8% (3/36)   Compressing objects:  11% (4/36)   Compressing objects:  13% (5/36)   Compressing objects:  16% (6/36)   Compressing objects:  19% (7/36)   Compressing objects:  22% (8/36)   Compressing objects:  25% (9/36)   Compressing objects:  27% (10/36)   Compressing objects:  30% (11/36)   Compressing objects:  33% (12/36)   Compressing objects:  36% (13/36)   Compressing objects:  38% (14/36)   Compressing objects:  41% (15/36)   Compressing objects:  44% (16/36)   Compressing objects:  47% (17/36)   Compressing objects:  50% (18/36)   Compressing objects:  52% (19/36)   Compressing objects:  55% (20/36)   Compressing objects:  58% (21/36)   Compressing objects:  61% (22/36)   Compressing objects:  63% (23/36)   Compressing objects:  66% (24/36)   Compressing objects:  69% (25/36)   Compressing objects:  72% (26/36)   Compressing objects:  75% (27/36)   Compressing objects:  77% (28/36)   Compressing objects:  80% (29/36)   Compressing objects:  83% (30/36)   Compressing objects:  86% (31/36)   Compressing objects:  88% (32/36)   Compressing objects:  91% (33/36)   Compressing objects:  94% (34/36)   Compressing objects:  97% (35/36)   Compressing objects: 100% (36/36)   Compressing objects: 100% (36/36), done.
-Writing objects:   2% (1/38)   Writing objects:   5% (2/38)   Writing objects:   7% (3/38)   Writing objects:  10% (4/38)   Writing objects:  13% (5/38)   Writing objects:  15% (6/38)   Writing objects:  18% (7/38)   Writing objects:  21% (8/38)   Writing objects:  23% (9/38)   Writing objects:  26% (10/38)   Writing objects:  28% (11/38)   Writing objects:  31% (12/38)   Writing objects:  34% (13/38)   Writing objects:  36% (14/38)   Writing objects:  39% (15/38)   Writing objects:  42% (16/38)   Writing objects:  44% (17/38)   Writing objects:  47% (18/38)   Writing objects:  50% (19/38)   Writing objects:  52% (20/38)   Writing objects:  55% (21/38)   Writing objects:  57% (22/38)   Writing objects:  60% (23/38)   Writing objects:  63% (24/38)   Writing objects:  65% (25/38)   Writing objects:  68% (26/38)   Writing objects:  71% (27/38)   Writing objects:  73% (28/38)   Writing objects:  76% (29/38)   Writing objects:  78% (30/38)   Writing objects:  81% (31/38)   Writing objects:  84% (32/38)   Writing objects:  86% (33/38)   Writing objects:  89% (34/38)   Writing objects:  92% (35/38)   Writing objects:  94% (36/38)   Writing objects:  97% (37/38)   Writing objects: 100% (38/38)   Writing objects: 100% (38/38), 349.72 KiB | 0 bytes/s, done.
-Total 38 (delta 15), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/15)   [Kremote: Resolving deltas:   6% (1/15)   [Kremote: Resolving deltas:  13% (2/15)   [Kremote: Resolving deltas:  20% (3/15)   [Kremote: Resolving deltas:  26% (4/15)   [Kremote: Resolving deltas:  33% (5/15)   [Kremote: Resolving deltas:  40% (6/15)   [Kremote: Resolving deltas:  46% (7/15)   [Kremote: Resolving deltas:  53% (8/15)   [Kremote: Resolving deltas:  60% (9/15)   [Kremote: Resolving deltas:  66% (10/15)   [Kremote: Resolving deltas:  73% (11/15)   [Kremote: Resolving deltas:  80% (12/15)   [Kremote: Resolving deltas:  86% (13/15)   [Kremote: Resolving deltas:  93% (14/15)   [Kremote: Resolving deltas: 100% (15/15)   [Kremote: Resolving deltas: 100% (15/15), completed with 13 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   58b2d64..dfe5e1a  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add index.[K[K[K[K[K[K.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''u'p'd'a't'e'd' 'i'n'd'e'c' 'w'i't'h' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'x' 'w'i't'h' 'r'e'a'd'_'c's'v'
-[master e070b3f] updated index with read_csv
- 5 files changed, 82 insertions(+), 44 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pish[K[K[Ksuh[K[K[Kush
-Counting objects: 11, done.
-Delta compression using up to 4 threads.
-Compressing objects:   9% (1/11)   Compressing objects:  18% (2/11)   Compressing objects:  27% (3/11)   Compressing objects:  36% (4/11)   Compressing objects:  45% (5/11)   Compressing objects:  54% (6/11)   Compressing objects:  63% (7/11)   Compressing objects:  72% (8/11)   Compressing objects:  81% (9/11)   Compressing objects:  90% (10/11)   Compressing objects: 100% (11/11)   Compressing objects: 100% (11/11), done.
-Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  45% (5/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  72% (8/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 2.43 KiB | 0 bytes/s, done.
-Total 11 (delta 8), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/8)   [Kremote: Resolving deltas:  12% (1/8)   [Kremote: Resolving deltas:  25% (2/8)   [Kremote: Resolving deltas:  37% (3/8)   [Kremote: Resolving deltas:  50% (4/8)   [Kremote: Resolving deltas:  62% (5/8)   [Kremote: Resolving deltas:  75% (6/8)   [Kremote: Resolving deltas:  87% (7/8)   [Kremote: Resolving deltas: 100% (8/8)   [Kremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   dfe5e1a..e070b3f  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''a'd'd'e'd' 'r'i'd'e'[1P'[1P'[1P' 'i'd'e' 'i'n't'r'o'
-[master 64f9a10] added r ide intro
- 11 files changed, 149 insertions(+), 101 deletions(-)
- create mode 100644 admin/rstudio1.jpg
- create mode 100644 admin/rstudio2.jpg
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png (95%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 24, done.
-Delta compression using up to 4 threads.
-Compressing objects:   4% (1/22)   Compressing objects:   9% (2/22)   Compressing objects:  13% (3/22)   Compressing objects:  18% (4/22)   Compressing objects:  22% (5/22)   Compressing objects:  27% (6/22)   Compressing objects:  31% (7/22)   Compressing objects:  36% (8/22)   Compressing objects:  40% (9/22)   Compressing objects:  45% (10/22)   Compressing objects:  50% (11/22)   Compressing objects:  54% (12/22)   Compressing objects:  59% (13/22)   Compressing objects:  63% (14/22)   Compressing objects:  68% (15/22)   Compressing objects:  72% (16/22)   Compressing objects:  77% (17/22)   Compressing objects:  81% (18/22)   Compressing objects:  86% (19/22)   Compressing objects:  90% (20/22)   Compressing objects:  95% (21/22)   Compressing objects: 100% (22/22)   Compressing objects: 100% (22/22), done.
-Writing objects:   4% (1/24)   Writing objects:   8% (2/24)   Writing objects:  12% (3/24)   Writing objects:  16% (4/24)   Writing objects:  20% (5/24)   Writing objects:  25% (6/24)   Writing objects:  29% (7/24)   Writing objects:  33% (8/24)   Writing objects:  37% (9/24)   Writing objects:  41% (10/24)   Writing objects:  45% (11/24)   Writing objects:  50% (12/24)   Writing objects:  54% (13/24)   Writing objects:  58% (14/24)   Writing objects:  62% (15/24)   Writing objects:  66% (16/24)   Writing objects:  70% (17/24)   Writing objects:  75% (18/24)   Writing objects:  79% (19/24)   Writing objects:  83% (20/24)   Writing objects:  87% (21/24)   Writing objects:  91% (22/24)   Writing objects:  95% (23/24)   Writing objects: 100% (24/24)   Writing objects: 100% (24/24), 901.97 KiB | 0 bytes/s, done.
-Total 24 (delta 14), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/14)   [Kremote: Resolving deltas:   7% (1/14)   [Kremote: Resolving deltas:  14% (2/14)   [Kremote: Resolving deltas:  21% (3/14)   [Kremote: Resolving deltas:  28% (4/14)   [Kremote: Resolving deltas:  35% (5/14)   [Kremote: Resolving deltas:  42% (6/14)   [Kremote: Resolving deltas:  50% (7/14)   [Kremote: Resolving deltas:  57% (8/14)   [Kremote: Resolving deltas:  64% (9/14)   [Kremote: Resolving deltas:  71% (10/14)   [Kremote: Resolving deltas:  78% (11/14)   [Kremote: Resolving deltas:  85% (12/14)   [Kremote: Resolving deltas:  92% (13/14)   [Kremote: Resolving deltas: 100% (14/14)   [Kremote: Resolving deltas: 100% (14/14), completed with 14 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   e070b3f..64f9a10  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'added r ide intro'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'added r ide intro'[C[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'f'i'x'e'd' 'r'i'd'e'[1P'[1P'[1P' 'i'd'e' 'g'i'[1P'[1P'f'i'g's'
-[master abebb37] fixed r ide figs
- 5 files changed, 45 insertions(+), 10 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m 'fixed r ide figs'add .[K[1Ppushcommit -m 'added r ide intro'push[K
-Counting objects: 13, done.
-Delta compression using up to 4 threads.
-Compressing objects:   7% (1/13)   Compressing objects:  15% (2/13)   Compressing objects:  23% (3/13)   Compressing objects:  30% (4/13)   Compressing objects:  38% (5/13)   Compressing objects:  46% (6/13)   Compressing objects:  53% (7/13)   Compressing objects:  61% (8/13)   Compressing objects:  69% (9/13)   Compressing objects:  76% (10/13)   Compressing objects:  84% (11/13)   Compressing objects:  92% (12/13)   Compressing objects: 100% (13/13)   Compressing objects: 100% (13/13), done.
-Writing objects:   7% (1/13)   Writing objects:  15% (2/13)   Writing objects:  23% (3/13)   Writing objects:  30% (4/13)   Writing objects:  38% (5/13)   Writing objects:  46% (6/13)   Writing objects:  53% (7/13)   Writing objects:  61% (8/13)   Writing objects:  69% (9/13)   Writing objects:  76% (10/13)   Writing objects:  84% (11/13)   Writing objects:  92% (12/13)   Writing objects: 100% (13/13)   Writing objects: 100% (13/13), 2.21 KiB | 0 bytes/s, done.
-Total 13 (delta 9), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/9)   [Kremote: Resolving deltas:  11% (1/9)   [Kremote: Resolving deltas:  22% (2/9)   [Kremote: Resolving deltas:  33% (3/9)   [Kremote: Resolving deltas:  44% (4/9)   [Kremote: Resolving deltas:  55% (5/9)   [Kremote: Resolving deltas:  66% (6/9)   [Kremote: Resolving deltas:  77% (7/9)   [Kremote: Resolving deltas:  88% (8/9)   [Kremote: Resolving deltas: 100% (9/9)   [Kremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   64f9a10..abebb37  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'fixed r ide figs'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'fixed r ide figs'
-[master 1475e47] fixed r ide figs
- 7 files changed, 40 insertions(+), 14 deletions(-)
- rename {admin => docs/img}/rstudio1.jpg (100%)
- rename {admin => docs/img}/rstudio2.jpg (100%)
- rename {admin => docs/img}/shapes.png (100%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m 'fixed r ide figs'add .[K[1Ppush
-Counting objects: 12, done.
-Delta compression using up to 4 threads.
-Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
-Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 1.71 KiB | 0 bytes/s, done.
-Total 12 (delta 9), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/9)   [Kremote: Resolving deltas:  11% (1/9)   [Kremote: Resolving deltas:  22% (2/9)   [Kremote: Resolving deltas:  33% (3/9)   [Kremote: Resolving deltas:  44% (4/9)   [Kremote: Resolving deltas:  55% (5/9)   [Kremote: Resolving deltas:  66% (6/9)   [Kremote: Resolving deltas:  77% (7/9)   [Kremote: Resolving deltas:  88% (8/9)   [Kremote: Resolving deltas: 100% (9/9)   [Kremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   abebb37..1475e47  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'fixed r ide figs'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'fixed r ide figs'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'a'i'b'n'b'[1P'[1P'[1P'r'b'n'b' 'n'u'l'l' 'd'a't'a'
-[master a22ed58] airbnb null data
- 4 files changed, 124 insertions(+), 22 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 10, done.
-Delta compression using up to 4 threads.
-Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
-Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 2.29 KiB | 0 bytes/s, done.
-Total 10 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   1475e47..a22ed58  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'airbnb null data'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'airbnb null data'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'l'e's's'o'n' '1' 'f'i'n'a'l'
-[master 640d7ed] lesson 1 final
- 16 files changed, 128 insertions(+), 76 deletions(-)
- delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/6673B09F
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png (95%)
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-20-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-21-1.png
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-3.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-1.png (95%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pish[K[K[Kush
-Counting objects: 22, done.
-Delta compression using up to 4 threads.
-Compressing objects:   4% (1/21)   Compressing objects:   9% (2/21)   Compressing objects:  14% (3/21)   Compressing objects:  19% (4/21)   Compressing objects:  23% (5/21)   Compressing objects:  28% (6/21)   Compressing objects:  33% (7/21)   Compressing objects:  38% (8/21)   Compressing objects:  42% (9/21)   Compressing objects:  47% (10/21)   Compressing objects:  52% (11/21)   Compressing objects:  57% (12/21)   Compressing objects:  61% (13/21)   Compressing objects:  66% (14/21)   Compressing objects:  71% (15/21)   Compressing objects:  76% (16/21)   Compressing objects:  80% (17/21)   Compressing objects:  85% (18/21)   Compressing objects:  90% (19/21)   Compressing objects:  95% (20/21)   Compressing objects: 100% (21/21)   Compressing objects: 100% (21/21), done.
-Writing objects:   4% (1/22)   Writing objects:   9% (2/22)   Writing objects:  13% (3/22)   Writing objects:  18% (4/22)   Writing objects:  22% (5/22)   Writing objects:  27% (6/22)   Writing objects:  31% (7/22)   Writing objects:  36% (8/22)   Writing objects:  40% (9/22)   Writing objects:  45% (10/22)   Writing objects:  50% (11/22)   Writing objects:  54% (12/22)   Writing objects:  59% (13/22)   Writing objects:  63% (14/22)   Writing objects:  68% (15/22)   Writing objects:  72% (16/22)   Writing objects:  77% (17/22)   Writing objects:  81% (18/22)   Writing objects:  86% (19/22)   Writing objects:  90% (20/22)   Writing objects:  95% (21/22)   Writing objects: 100% (22/22)   Writing objects: 100% (22/22), 246.57 KiB | 0 bytes/s, done.
-Total 22 (delta 9), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/9)   [Kremote: Resolving deltas:  11% (1/9)   [Kremote: Resolving deltas:  22% (2/9)   [Kremote: Resolving deltas:  33% (3/9)   [Kremote: Resolving deltas:  44% (4/9)   [Kremote: Resolving deltas:  55% (5/9)   [Kremote: Resolving deltas:  66% (6/9)   [Kremote: Resolving deltas:  77% (7/9)   [Kremote: Resolving deltas:  88% (8/9)   [Kremote: Resolving deltas: 100% (9/9)   [Kremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   a22ed58..640d7ed  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'lesson 1 final'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'lesson 1 final' 'v'2'
-[master d9ed04d] lesson 1 final v2
- 17 files changed, 116 insertions(+), 73 deletions(-)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png (94%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png (93%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-2.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-3.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-1.png (93%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m 'lesson 1 final v2'add .[K[1Ppush
-Counting objects: 21, done.
-Delta compression using up to 4 threads.
-Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
-Writing objects:   4% (1/21)   Writing objects:   9% (2/21)   Writing objects:  14% (3/21)   Writing objects:  19% (4/21)   Writing objects:  23% (5/21)   Writing objects:  28% (6/21)   Writing objects:  33% (7/21)   Writing objects:  38% (8/21)   Writing objects:  42% (9/21)   Writing objects:  47% (10/21)   Writing objects:  52% (11/21)   Writing objects:  57% (12/21)   Writing objects:  61% (13/21)   Writing objects:  66% (14/21)   Writing objects:  71% (15/21)   Writing objects:  76% (16/21)   Writing objects:  80% (17/21)   Writing objects:  85% (18/21)   Writing objects:  90% (19/21)   Writing objects:  95% (20/21)   Writing objects: 100% (21/21)   Writing objects: 100% (21/21), 241.98 KiB | 0 bytes/s, done.
-Total 21 (delta 9), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/9)   [Kremote: Resolving deltas:  11% (1/9)   [Kremote: Resolving deltas:  22% (2/9)   [Kremote: Resolving deltas:  33% (3/9)   [Kremote: Resolving deltas:  44% (4/9)   [Kremote: Resolving deltas:  55% (5/9)   [Kremote: Resolving deltas:  66% (6/9)   [Kremote: Resolving deltas:  77% (7/9)   [Kremote: Resolving deltas:  88% (8/9)   [Kremote: Resolving deltas: 100% (9/9)   [Kremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   640d7ed..d9ed04d  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ;9A[K[K[Kopen functions_lesson1.txt 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open functions_lesson1.txt git push[Kcommit -m 'lesson 1 final v2'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .open functions_lesson1.txt git push[Kcommit -m 'lesson 1 final v2'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'a'[1P'u'p'd'a't'e'd' 'u'n'c'[1P'[1P'[1P'l'e's's'o'n' '1' 'f'u'n'c't'i'o'n' 'l'i's't'[1P'[1P'[1P'[1P'[1P'[1P'n's' 'l'i's't'
-[master 00f8752] updated lesson 1 functions list
- 3 files changed, 45 insertions(+), 5 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git ush[K[K[Kpush
-Counting objects: 8, done.
-Delta compression using up to 4 threads.
-Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
-Writing objects:  12% (1/8)   Writing objects:  25% (2/8)   Writing objects:  37% (3/8)   Writing objects:  50% (4/8)   Writing objects:  62% (5/8)   Writing objects:  75% (6/8)   Writing objects:  87% (7/8)   Writing objects: 100% (8/8)   Writing objects: 100% (8/8), 1.46 KiB | 0 bytes/s, done.
-Total 8 (delta 4), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   d9ed04d..00f8752  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'updated lesson 1 functions list'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'updated lesson 1 functions list'
-[master eaea9da] updated lesson 1 functions list
- 20 files changed, 73 insertions(+), 45 deletions(-)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-9-1.png => unnamed-chunk-10-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-10-1.png => unnamed-chunk-11-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-12-1.png => unnamed-chunk-13-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-13-1.png => unnamed-chunk-14-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-14-1.png => unnamed-chunk-15-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-15-1.png => unnamed-chunk-16-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-16-1.png => unnamed-chunk-17-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-17-1.png => unnamed-chunk-18-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-20-1.png => unnamed-chunk-21-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-21-1.png => unnamed-chunk-22-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-5-1.png => unnamed-chunk-6-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-6-1.png => unnamed-chunk-7-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-7-1.png => unnamed-chunk-8-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-8-1.png => unnamed-chunk-9-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-8-2.png => unnamed-chunk-9-2.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-8-3.png => unnamed-chunk-9-3.png} (100%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m 'updated lesson 1 functions list'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K[1Ppush
-Counting objects: 11, done.
-Delta compression using up to 4 threads.
-Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
-Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  45% (5/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  72% (8/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 1.99 KiB | 0 bytes/s, done.
-Total 11 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   00f8752..eaea9da  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ it [K[K[Kgit commit 0m[K[K-m ''a'd'd'e'd' '[1P'[1P'[1P'[1P'[1P'[1P'f'i'x'e' '[1P'd' 'f'i'g' '[1P'[1P'[1P'[1P's'y'a'p'[1P'[1P'[1P'h'a'p'e's' 'f'i'g'
-[master 8fb4202] fixed shapes fig
- 2 files changed, 45 insertions(+), 9 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git ous[K[K[Kpush
-Counting objects: 7, done.
-Delta compression using up to 4 threads.
-Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
-Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 1.14 KiB | 0 bytes/s, done.
-Total 7 (delta 4), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   eaea9da..8fb4202  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'fixed shapes fig'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'fixed shapes fig'
-[master 5d99fd5] fixed shapes fig
- 15 files changed, 35 insertions(+), 14 deletions(-)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-11-1.png (95%)
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-18-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-21-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-22-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-3.png (96%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m 'fixed shapes fig'add .[K[1Ppush
-Counting objects: 21, done.
-Delta compression using up to 4 threads.
-Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
-Writing objects:   4% (1/21)   Writing objects:   9% (2/21)   Writing objects:  14% (3/21)   Writing objects:  19% (4/21)   Writing objects:  23% (5/21)   Writing objects:  28% (6/21)   Writing objects:  33% (7/21)   Writing objects:  38% (8/21)   Writing objects:  42% (9/21)   Writing objects:  47% (10/21)   Writing objects:  52% (11/21)   Writing objects:  57% (12/21)   Writing objects:  61% (13/21)   Writing objects:  66% (14/21)   Writing objects:  71% (15/21)   Writing objects:  76% (16/21)   Writing objects:  80% (17/21)   Writing objects:  85% (18/21)   Writing objects:  90% (19/21)   Writing objects:  95% (20/21)   Writing objects: 100% (21/21)   Writing objects: 100% (21/21), 345.78 KiB | 0 bytes/s, done.
-Total 21 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   8fb4202..5d99fd5  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'fixed shapes fig'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[Kgit reset 
-Unstaged changes after reset:
-M	.Rproj.user/ABE7B653/console06/E8FBF1BE
-M	Lesson1.Rmd
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset [1Padd .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .reset [1Padd .[1Ppushcommit -m 'fixed shapes fig'
-[master 0b2c358] fixed shapes fig
- 6 files changed, 61 insertions(+), 8 deletions(-)
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-24-1.png
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m 'fixed shapes fig'add .[Kreset [1Padd .[1Ppush
-Counting objects: 14, done.
-Delta compression using up to 4 threads.
-Compressing objects:   7% (1/13)   Compressing objects:  15% (2/13)   Compressing objects:  23% (3/13)   Compressing objects:  30% (4/13)   Compressing objects:  38% (5/13)   Compressing objects:  46% (6/13)   Compressing objects:  53% (7/13)   Compressing objects:  61% (8/13)   Compressing objects:  69% (9/13)   Compressing objects:  76% (10/13)   Compressing objects:  84% (11/13)   Compressing objects:  92% (12/13)   Compressing objects: 100% (13/13)   Compressing objects: 100% (13/13), done.
-Writing objects:   7% (1/14)   Writing objects:  14% (2/14)   Writing objects:  21% (3/14)   Writing objects:  28% (4/14)   Writing objects:  35% (5/14)   Writing objects:  42% (6/14)   Writing objects:  50% (7/14)   Writing objects:  57% (8/14)   Writing objects:  64% (9/14)   Writing objects:  71% (10/14)   Writing objects:  78% (11/14)   Writing objects:  85% (12/14)   Writing objects:  92% (13/14)   Writing objects: 100% (14/14)   Writing objects: 100% (14/14), 126.76 KiB | 0 bytes/s, done.
-Total 14 (delta 8), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/8)   [Kremote: Resolving deltas:  12% (1/8)   [Kremote: Resolving deltas:  25% (2/8)   [Kremote: Resolving deltas:  37% (3/8)   [Kremote: Resolving deltas:  50% (4/8)   [Kremote: Resolving deltas:  62% (5/8)   [Kremote: Resolving deltas:  75% (6/8)   [Kremote: Resolving deltas:  87% (7/8)   [Kremote: Resolving deltas: 100% (8/8)   [Kremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   5d99fd5..0b2c358  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'fixed shapes fig'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'fixed shapes fig'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'f'i'x'e'd' 'a'i'r'b'n'b' 'p'l'o't's'[1P[1P[1P[1P[1P[1@u[1@p[1@d[1@a[1@t[1@e[C[1@ [1@t[1@h[1@e[1@m[1@e[1@s[C[1@ [1@;[1@2[1@C[1@;[1@2[1@C[1@;[1@2[1@C[1@;[1@2[1@C[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'
-[master bf7a405] update themes
- 2 files changed, 23 insertions(+), 6 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pish[K[K[Kush
-Counting objects: 7, done.
-Delta compression using up to 4 threads.
-Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
-Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 994 bytes | 0 bytes/s, done.
-Total 7 (delta 4), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/4)   [Kremote: Resolving deltas:  25% (1/4)   [Kremote: Resolving deltas:  50% (2/4)   [Kremote: Resolving deltas:  75% (3/4)   [Kremote: Resolving deltas: 100% (4/4)   [Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   0b2c358..bf7a405  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''u'p'[1P'[1P's'e't' 't'h'm'e'[1P'[1P'e'e' '[1P'[1P'm'e' 't'o' 'c'l'a's'i's'c'[1P'[1P'[1P's'i'c'
-[master 45a33e8] set theme to classic
- 19 files changed, 23 insertions(+), 8 deletions(-)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-11-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png (96%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-9-1.png => unnamed-chunk-18-1.png} (100%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-21-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-22-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-24-1.png (97%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-18-1.png => unnamed-chunk-9-1.png} (100%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-2.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-3.png (96%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ it [K[K[Kgit pish[K[K[K[Krete[K[Kmote --v
-origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
-origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push orign [K[K[K[K[K[K[K
-Counting objects: 24, done.
-Delta compression using up to 4 threads.
-Compressing objects:   4% (1/23)   Compressing objects:   8% (2/23)   Compressing objects:  13% (3/23)   Compressing objects:  17% (4/23)   Compressing objects:  21% (5/23)   Compressing objects:  26% (6/23)   Compressing objects:  30% (7/23)   Compressing objects:  34% (8/23)   Compressing objects:  39% (9/23)   Compressing objects:  43% (10/23)   Compressing objects:  47% (11/23)   Compressing objects:  52% (12/23)   Compressing objects:  56% (13/23)   Compressing objects:  60% (14/23)   Compressing objects:  65% (15/23)   Compressing objects:  69% (16/23)   Compressing objects:  73% (17/23)   Compressing objects:  78% (18/23)   Compressing objects:  82% (19/23)   Compressing objects:  86% (20/23)   Compressing objects:  91% (21/23)   Compressing objects:  95% (22/23)   Compressing objects: 100% (23/23)   Compressing objects: 100% (23/23), done.
-Writing objects:   4% (1/24)   Writing objects:   8% (2/24)   Writing objects:  12% (3/24)   Writing objects:  16% (4/24)   Writing objects:  20% (5/24)   Writing objects:  25% (6/24)   Writing objects:  29% (7/24)   Writing objects:  33% (8/24)   Writing objects:  37% (9/24)   Writing objects:  41% (10/24)   Writing objects:  45% (11/24)   Writing objects:  50% (12/24)   Writing objects:  54% (13/24)   Writing objects:  58% (14/24)   Writing objects:  62% (15/24)   Writing objects:  66% (16/24)   Writing objects:  70% (17/24)   Writing objects:  75% (18/24)   Writing objects:  79% (19/24)   Writing objects:  83% (20/24)   Writing objects:  87% (21/24)   Writing objects:  91% (22/24)   Writing objects:  95% (23/24)   Writing objects: 100% (24/24)   Writing objects: 100% (24/24), 455.15 KiB | 0 bytes/s, done.
-Total 24 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   bf7a405..45a33e8  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commi t-m [K[K[K[K[Kt -m ''f'i'x'e'd' 'i'n' 'c'o'd'e' 'c'o'm'm'e'n't'i'n'g'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'c'o'd'e' 'c'h'u'n'k' 'c'o'm'm'e'n't's'
-[master 646fcaf] fixed code chunk comments
- 10 files changed, 98 insertions(+), 42 deletions(-)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-18-1.png (96%)
- create mode 100644 docs/Lesson1_files/figure-html/unnamed-chunk-19-1.png
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-21-1.png => unnamed-chunk-22-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-22-1.png => unnamed-chunk-23-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-23-1.png => unnamed-chunk-24-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-24-1.png => unnamed-chunk-25-1.png} (100%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 14, done.
-Delta compression using up to 4 threads.
-Compressing objects:   7% (1/13)   Compressing objects:  15% (2/13)   Compressing objects:  23% (3/13)   Compressing objects:  30% (4/13)   Compressing objects:  38% (5/13)   Compressing objects:  46% (6/13)   Compressing objects:  53% (7/13)   Compressing objects:  61% (8/13)   Compressing objects:  69% (9/13)   Compressing objects:  76% (10/13)   Compressing objects:  84% (11/13)   Compressing objects:  92% (12/13)   Compressing objects: 100% (13/13)   Compressing objects: 100% (13/13), done.
-Writing objects:   7% (1/14)   Writing objects:  14% (2/14)   Writing objects:  21% (3/14)   Writing objects:  28% (4/14)   Writing objects:  35% (5/14)   Writing objects:  42% (6/14)   Writing objects:  50% (7/14)   Writing objects:  57% (8/14)   Writing objects:  64% (9/14)   Writing objects:  71% (10/14)   Writing objects:  78% (11/14)   Writing objects:  85% (12/14)   Writing objects:  92% (13/14)   Writing objects: 100% (14/14)   Writing objects: 100% (14/14), 93.25 KiB | 0 bytes/s, done.
-Total 14 (delta 8), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/8)   [Kremote: Resolving deltas:  12% (1/8)   [Kremote: Resolving deltas:  25% (2/8)   [Kremote: Resolving deltas:  37% (3/8)   [Kremote: Resolving deltas:  50% (4/8)   [Kremote: Resolving deltas:  62% (5/8)   [Kremote: Resolving deltas:  75% (6/8)   [Kremote: Resolving deltas:  87% (7/8)   [Kremote: Resolving deltas: 100% (8/8)   [Kremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   45a33e8..646fcaf  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ git add . 
-g]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commi t-m ''[K[K[K[K[K[K[Kt -m ''g'a'l'l'e'r'y' 'e'a'm'p'l'[1P'[1P'[1P'x'[1P'[1P'x'a'm'p'l'e' 'l'e's's'o'n'1'
-[master 7b2f162] gallery example lesson1
- 126 files changed, 3668 insertions(+), 43 deletions(-)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-9-1.png => unnamed-chunk-10-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-9-2.png => unnamed-chunk-10-2.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-9-3.png => unnamed-chunk-10-3.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-10-1.png => unnamed-chunk-11-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-11-1.png => unnamed-chunk-12-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-12-1.png => unnamed-chunk-13-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-13-1.png => unnamed-chunk-14-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-14-1.png => unnamed-chunk-15-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-15-1.png => unnamed-chunk-16-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-16-1.png => unnamed-chunk-17-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-17-1.png => unnamed-chunk-18-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-18-1.png => unnamed-chunk-19-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-19-1.png => unnamed-chunk-20-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-22-1.png => unnamed-chunk-23-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-23-1.png => unnamed-chunk-24-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-24-1.png => unnamed-chunk-25-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-25-1.png => unnamed-chunk-26-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-6-1.png => unnamed-chunk-7-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-7-1.png => unnamed-chunk-8-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-8-1.png => unnamed-chunk-9-1.png} (100%)
- create mode 100644 docs/site_libs/crosstalk-1.0.0/css/crosstalk.css
- create mode 100644 docs/site_libs/crosstalk-1.0.0/js/crosstalk.js
- create mode 100644 docs/site_libs/crosstalk-1.0.0/js/crosstalk.js.map
- create mode 100644 docs/site_libs/crosstalk-1.0.0/js/crosstalk.min.js
- create mode 100644 docs/site_libs/crosstalk-1.0.0/js/crosstalk.min.js.map
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/LICENSE
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/colourpicker.min.css
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/colourpicker.min.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/mathjax/cdn.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/LICENSE
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/af.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/am.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar-dz.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar-eg.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/az.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/bg.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/bs.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ca.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/cs.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/da.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/de-ch.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/de.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/el.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/eo.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es-ar.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es-pe.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/et.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/eu.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fa.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fi.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fo.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fr-ch.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fr.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/gl.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/gu.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/he.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hi-in.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hr.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hu.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hy.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/id.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/is.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/it.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ja.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ka.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/km.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ko.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/lt.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/lv.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/me-me.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/me.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/mk.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ml.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ms.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/mt.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/nl-be.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/nl.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/no.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pa.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pl.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pt-br.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/rm.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ro.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ru.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sk.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sl.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sq.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sr-sr.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sr.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sv.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sw.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ta.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/th.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tr.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tt.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/uk.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ur.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/vi.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-cn.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-hk.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-tw.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/plotly-htmlwidgets.css
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/plotly-latest.min.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/selectize/selectize.bootstrap3.css
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/selectize/selectize.min.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/typedarray/LICENSE
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/typedarray/typedarray.min.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/plotly.js
- create mode 100644 docs/site_libs/plotly-binding-4.8.0/plotly.yaml
- create mode 100644 docs/site_libs/plotly-htmlwidgets-css-1.39.2/plotly-htmlwidgets.css
- create mode 100644 docs/site_libs/plotly-main-1.39.2/plotly-latest.min.js
- create mode 100644 docs/site_libs/selectize-0.11.2/css/selectize.bootstrap3.css
- create mode 100644 docs/site_libs/selectize-0.11.2/js/es5-shim.min.js
- create mode 100644 docs/site_libs/selectize-0.11.2/js/selectize.min.js
- create mode 100644 docs/site_libs/typedarray-0.1/typedarray.min.js
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pish[K[Kush[K[K[K[Kush
-Counting objects: 131, done.
-Delta compression using up to 4 threads.
-Compressing objects:   0% (1/125)   Compressing objects:   1% (2/125)   Compressing objects:   2% (3/125)   Compressing objects:   3% (4/125)   Compressing objects:   4% (5/125)   Compressing objects:   5% (7/125)   Compressing objects:   6% (8/125)   Compressing objects:   7% (9/125)   Compressing objects:   8% (10/125)   Compressing objects:   9% (12/125)   Compressing objects:  10% (13/125)   Compressing objects:  11% (14/125)   Compressing objects:  12% (15/125)   Compressing objects:  13% (17/125)   Compressing objects:  14% (18/125)   Compressing objects:  15% (19/125)   Compressing objects:  16% (20/125)   Compressing objects:  17% (22/125)   Compressing objects:  18% (23/125)   Compressing objects:  19% (24/125)   Compressing objects:  20% (25/125)   Compressing objects:  21% (27/125)   Compressing objects:  22% (28/125)   Compressing objects:  23% (29/125)   Compressing objects:  24% (30/125)   Compressing objects:  25% (32/125)   Compressing objects:  26% (33/125)   Compressing objects:  27% (34/125)   Compressing objects:  28% (35/125)   Compressing objects:  29% (37/125)   Compressing objects:  30% (38/125)   Compressing objects:  31% (39/125)   Compressing objects:  32% (40/125)   Compressing objects:  33% (42/125)   Compressing objects:  34% (43/125)   Compressing objects:  35% (44/125)   Compressing objects:  36% (45/125)   Compressing objects:  37% (47/125)   Compressing objects:  38% (48/125)   Compressing objects:  39% (49/125)   Compressing objects:  40% (50/125)   Compressing objects:  41% (52/125)   Compressing objects:  42% (53/125)   Compressing objects:  43% (54/125)   Compressing objects:  44% (55/125)   Compressing objects:  45% (57/125)   Compressing objects:  46% (58/125)   Compressing objects:  47% (59/125)   Compressing objects:  48% (60/125)   Compressing objects:  49% (62/125)   Compressing objects:  50% (63/125)   Compressing objects:  51% (64/125)   Compressing objects:  52% (65/125)   Compressing objects:  53% (67/125)   Compressing objects:  54% (68/125)   Compressing objects:  55% (69/125)   Compressing objects:  56% (70/125)   Compressing objects:  57% (72/125)   Compressing objects:  58% (73/125)   Compressing objects:  59% (74/125)   Compressing objects:  60% (75/125)   Compressing objects:  61% (77/125)   Compressing objects:  62% (78/125)   Compressing objects:  63% (79/125)   Compressing objects:  64% (80/125)   Compressing objects:  65% (82/125)   Compressing objects:  66% (83/125)   Compressing objects:  67% (84/125)   Compressing objects:  68% (85/125)   Compressing objects:  69% (87/125)   Compressing objects:  70% (88/125)   Compressing objects:  71% (89/125)   Compressing objects:  72% (90/125)   Compressing objects:  73% (92/125)   Compressing objects:  74% (93/125)   Compressing objects:  75% (94/125)   Compressing objects:  76% (95/125)   Compressing objects:  77% (97/125)   Compressing objects:  78% (98/125)   Compressing objects:  79% (99/125)   Compressing objects:  80% (100/125)   Compressing objects:  81% (102/125)   Compressing objects:  82% (103/125)   Compressing objects:  83% (104/125)   Compressing objects:  84% (105/125)   Compressing objects:  85% (107/125)   Compressing objects:  86% (108/125)   Compressing objects:  87% (109/125)   Compressing objects:  88% (110/125)   Compressing objects:  89% (112/125)   Compressing objects:  90% (113/125)   Compressing objects:  91% (114/125)   Compressing objects:  92% (115/125)   Compressing objects:  93% (117/125)   Compressing objects:  94% (118/125)   Compressing objects:  95% (119/125)   Compressing objects:  96% (120/125)   Compressing objects:  97% (122/125)   Compressing objects:  98% (123/125)   Compressing objects:  99% (124/125)   Compressing objects: 100% (125/125)   Compressing objects: 100% (125/125), done.
-Writing objects:   0% (1/131)   Writing objects:   1% (2/131)   Writing objects:   2% (3/131)   Writing objects:   3% (4/131)   Writing objects:   4% (6/131)   Writing objects:   5% (7/131)   Writing objects:   6% (8/131)   Writing objects:   7% (10/131)   Writing objects:   8% (11/131)   Writing objects:   9% (12/131)   Writing objects:  10% (14/131)   Writing objects:  12% (16/131)   Writing objects:  13% (18/131)   Writing objects:  14% (19/131)   Writing objects:  15% (20/131)   Writing objects:  16% (21/131)   Writing objects:  17% (23/131)   Writing objects:  18% (24/131)   Writing objects:  19% (25/131)   Writing objects:  20% (27/131)   Writing objects:  21% (28/131)   Writing objects:  22% (29/131)   Writing objects:  23% (31/131)   Writing objects:  25% (33/131)   Writing objects:  26% (35/131)   Writing objects:  27% (36/131)   Writing objects:  28% (37/131)   Writing objects:  29% (38/131)   Writing objects:  30% (40/131)   Writing objects:  31% (41/131)   Writing objects:  32% (42/131)   Writing objects:  33% (44/131)   Writing objects:  34% (45/131)   Writing objects:  35% (46/131)   Writing objects:  36% (48/131)   Writing objects:  37% (49/131)   Writing objects:  38% (50/131)   Writing objects:  39% (52/131)   Writing objects:  40% (53/131)   Writing objects:  41% (54/131)   Writing objects:  42% (56/131)   Writing objects:  43% (57/131)   Writing objects:  44% (58/131)   Writing objects:  45% (59/131)   Writing objects:  46% (61/131)   Writing objects:  47% (62/131)   Writing objects:  48% (63/131)   Writing objects:  49% (65/131)   Writing objects:  50% (66/131)   Writing objects:  51% (67/131)   Writing objects:  52% (69/131)   Writing objects:  53% (70/131)   Writing objects:  54% (71/131)   Writing objects:  55% (73/131)   Writing objects:  56% (74/131)   Writing objects:  57% (75/131)   Writing objects:  58% (76/131)   Writing objects:  59% (78/131)   Writing objects:  60% (79/131)   Writing objects:  61% (80/131)   Writing objects:  62% (82/131)   Writing objects:  63% (83/131)   Writing objects:  64% (84/131)   Writing objects:  65% (86/131)   Writing objects:  66% (87/131)   Writing objects:  67% (88/131)   Writing objects:  68% (90/131)   Writing objects:  69% (91/131)   Writing objects:  70% (92/131)   Writing objects:  71% (94/131)   Writing objects:  72% (95/131)   Writing objects:  73% (96/131)   Writing objects:  74% (97/131)   Writing objects:  75% (99/131)   Writing objects:  76% (100/131)   Writing objects:  77% (101/131)   Writing objects:  78% (103/131)   Writing objects:  79% (104/131)   Writing objects:  80% (105/131)   Writing objects:  81% (107/131)   Writing objects:  82% (108/131)   Writing objects:  83% (109/131)   Writing objects:  84% (111/131)   Writing objects:  85% (112/131)   Writing objects:  86% (113/131)   Writing objects:  87% (114/131)   Writing objects:  88% (116/131)   Writing objects:  89% (117/131)   Writing objects:  90% (118/131)   Writing objects:  91% (120/131)   Writing objects:  92% (121/131)   Writing objects:  93% (122/131)   Writing objects:  94% (124/131)   Writing objects:  95% (125/131)   Writing objects:  96% (126/131)   Writing objects:  97% (128/131)   Writing objects:  98% (129/131)   Writing objects:  99% (130/131)   Writing objects: 100% (131/131)   Writing objects: 100% (131/131), 1001.31 KiB | 0 bytes/s, done.
-Total 131 (delta 21), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/21)   [Kremote: Resolving deltas:   4% (1/21)   [Kremote: Resolving deltas:   9% (2/21)   [Kremote: Resolving deltas:  19% (4/21)   [Kremote: Resolving deltas:  23% (5/21)   [Kremote: Resolving deltas:  28% (6/21)   [Kremote: Resolving deltas:  33% (7/21)   [Kremote: Resolving deltas:  38% (8/21)   [Kremote: Resolving deltas:  42% (9/21)   [Kremote: Resolving deltas:  47% (10/21)   [Kremote: Resolving deltas:  52% (11/21)   [Kremote: Resolving deltas:  57% (12/21)   [Kremote: Resolving deltas:  61% (13/21)   [Kremote: Resolving deltas:  66% (14/21)   [Kremote: Resolving deltas:  71% (15/21)   [Kremote: Resolving deltas:  76% (16/21)   [Kremote: Resolving deltas:  80% (17/21)   [Kremote: Resolving deltas:  85% (18/21)   [Kremote: Resolving deltas:  90% (19/21)   [Kremote: Resolving deltas:  95% (20/21)   [Kremote: Resolving deltas: 100% (21/21)   [Kremote: Resolving deltas: 100% (21/21), completed with 13 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   646fcaf..7b2f162  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git p[Kcommit -m ''r'm' 'g'a'l'l'e'r'y' 'l'e's's'o'n'1'
-[master 180b6e8] rm gallery lesson1
- 24 files changed, 1386 insertions(+), 1386 deletions(-)
- rewrite Lesson1.md (96%)
- rewrite docs/Lesson1.html (90%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-11-1.png => unnamed-chunk-10-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-12-1.png => unnamed-chunk-11-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-13-1.png => unnamed-chunk-12-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-14-1.png => unnamed-chunk-13-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-15-1.png => unnamed-chunk-14-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-16-1.png => unnamed-chunk-15-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-17-1.png => unnamed-chunk-16-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-18-1.png => unnamed-chunk-17-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-19-1.png => unnamed-chunk-18-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-20-1.png => unnamed-chunk-19-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-23-1.png => unnamed-chunk-22-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-24-1.png => unnamed-chunk-23-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-25-1.png => unnamed-chunk-24-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-26-1.png => unnamed-chunk-25-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-7-1.png => unnamed-chunk-6-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-8-1.png => unnamed-chunk-7-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-9-1.png => unnamed-chunk-8-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-10-1.png => unnamed-chunk-9-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-10-2.png => unnamed-chunk-9-2.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-10-3.png => unnamed-chunk-9-3.png} (100%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 12, done.
-Delta compression using up to 4 threads.
-Compressing objects:   9% (1/11)   Compressing objects:  18% (2/11)   Compressing objects:  27% (3/11)   Compressing objects:  36% (4/11)   Compressing objects:  45% (5/11)   Compressing objects:  54% (6/11)   Compressing objects:  63% (7/11)   Compressing objects:  72% (8/11)   Compressing objects:  81% (9/11)   Compressing objects:  90% (10/11)   Compressing objects: 100% (11/11)   Compressing objects: 100% (11/11), done.
-Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 3.81 KiB | 0 bytes/s, done.
-Total 12 (delta 8), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/8)   [Kremote: Resolving deltas:  12% (1/8)   [Kremote: Resolving deltas:  25% (2/8)   [Kremote: Resolving deltas:  37% (3/8)   [Kremote: Resolving deltas:  50% (4/8)   [Kremote: Resolving deltas:  62% (5/8)   [Kremote: Resolving deltas:  75% (6/8)   [Kremote: Resolving deltas:  87% (7/8)   [Kremote: Resolving deltas: 100% (8/8)   [Kremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   7b2f162..180b6e8  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ git pushcommit -m 'rm gallery lesson1'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'rm gallery lesson1'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P's'i'n'[1P'[1P'[1P'i'n's'i'd'e' '[1P' 'o'u't's'i'd'e' 'a'e's' 'e'x'a'm'p'l'e'
-[master e11d859] inside outside aes example
- 23 files changed, 119 insertions(+), 885 deletions(-)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png (97%)
- copy docs/Lesson1_files/figure-html/{unnamed-chunk-13-1.png => unnamed-chunk-14-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-14-1.png => unnamed-chunk-15-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-15-1.png => unnamed-chunk-16-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-16-1.png => unnamed-chunk-17-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-17-1.png => unnamed-chunk-18-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-18-1.png => unnamed-chunk-19-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-19-1.png => unnamed-chunk-20-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-22-1.png => unnamed-chunk-23-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-23-1.png => unnamed-chunk-24-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-24-1.png => unnamed-chunk-25-1.png} (100%)
- rename docs/Lesson1_files/figure-html/{unnamed-chunk-25-1.png => unnamed-chunk-26-1.png} (100%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pish[K[K[Kush
-Counting objects: 25, done.
-Delta compression using up to 4 threads.
-Compressing objects:   4% (1/23)   Compressing objects:   8% (2/23)   Compressing objects:  13% (3/23)   Compressing objects:  17% (4/23)   Compressing objects:  21% (5/23)   Compressing objects:  26% (6/23)   Compressing objects:  30% (7/23)   Compressing objects:  34% (8/23)   Compressing objects:  39% (9/23)   Compressing objects:  43% (10/23)   Compressing objects:  47% (11/23)   Compressing objects:  52% (12/23)   Compressing objects:  56% (13/23)   Compressing objects:  60% (14/23)   Compressing objects:  65% (15/23)   Compressing objects:  69% (16/23)   Compressing objects:  73% (17/23)   Compressing objects:  78% (18/23)   Compressing objects:  82% (19/23)   Compressing objects:  86% (20/23)   Compressing objects:  91% (21/23)   Compressing objects:  95% (22/23)   Compressing objects: 100% (23/23)   Compressing objects: 100% (23/23), done.
-Writing objects:   4% (1/25)   Writing objects:   8% (2/25)   Writing objects:  12% (3/25)   Writing objects:  16% (4/25)   Writing objects:  20% (5/25)   Writing objects:  24% (6/25)   Writing objects:  28% (7/25)   Writing objects:  32% (8/25)   Writing objects:  36% (9/25)   Writing objects:  40% (10/25)   Writing objects:  44% (11/25)   Writing objects:  48% (12/25)   Writing objects:  52% (13/25)   Writing objects:  56% (14/25)   Writing objects:  60% (15/25)   Writing objects:  64% (16/25)   Writing objects:  68% (17/25)   Writing objects:  72% (18/25)   Writing objects:  76% (19/25)   Writing objects:  80% (20/25)   Writing objects:  84% (21/25)   Writing objects:  88% (22/25)   Writing objects:  92% (23/25)   Writing objects:  96% (24/25)   Writing objects: 100% (25/25)   Writing objects: 100% (25/25), 30.72 KiB | 0 bytes/s, done.
-Total 25 (delta 17), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/17)   [Kremote: Resolving deltas:   5% (1/17)   [Kremote: Resolving deltas:  11% (2/17)   [Kremote: Resolving deltas:  17% (3/17)   [Kremote: Resolving deltas:  23% (4/17)   [Kremote: Resolving deltas:  29% (5/17)   [Kremote: Resolving deltas:  35% (6/17)   [Kremote: Resolving deltas:  41% (7/17)   [Kremote: Resolving deltas:  47% (8/17)   [Kremote: Resolving deltas:  52% (9/17)   [Kremote: Resolving deltas:  58% (10/17)   [Kremote: Resolving deltas:  64% (11/17)   [Kremote: Resolving deltas:  70% (12/17)   [Kremote: Resolving deltas:  76% (13/17)   [Kremote: Resolving deltas:  82% (14/17)   [Kremote: Resolving deltas:  88% (15/17)   [Kremote: Resolving deltas:  94% (16/17)   [Kremote: Resolving deltas: 100% (17/17)   [Kremote: Resolving deltas: 100% (17/17), completed with 17 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   180b6e8..e11d859  master -> master
-[K6300L-127771-M:ecc malishev$ git add . 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''s't'r'p'[1P'[1P'i'p'[1P'[1P'r'i'p'p'e'd' 'b'a'c'k' 'y'a'm'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'r'e'd'u'c'e'd' 'y'a'm'l's'
-[master c28cfb2] reduced yamls
- 20 files changed, 856 insertions(+), 651 deletions(-)
- rewrite .Rproj.user/ABE7B653/console06/INDEX001 (85%)
- delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/229A19
- delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/229A19-contents
- delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/28805F7E-contents
- delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/2AD4A1D8-contents
- delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/6673B09F-contents
- delete mode 100644 .Rproj.user/ABE7B653/sources/s-FB918B88/lock_file
- create mode 100644 Lesson2.Rmd
- create mode 100644 Lesson2.md
- create mode 100644 docs/Lesson2.html
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 25, done.
-Delta compression using up to 4 threads.
-Compressing objects:   4% (1/23)   Compressing objects:   8% (2/23)   Compressing objects:  13% (3/23)   Compressing objects:  17% (4/23)   Compressing objects:  21% (5/23)   Compressing objects:  26% (6/23)   Compressing objects:  30% (7/23)   Compressing objects:  34% (8/23)   Compressing objects:  39% (9/23)   Compressing objects:  43% (10/23)   Compressing objects:  47% (11/23)   Compressing objects:  52% (12/23)   Compressing objects:  56% (13/23)   Compressing objects:  60% (14/23)   Compressing objects:  65% (15/23)   Compressing objects:  69% (16/23)   Compressing objects:  73% (17/23)   Compressing objects:  78% (18/23)   Compressing objects:  82% (19/23)   Compressing objects:  86% (20/23)   Compressing objects:  91% (21/23)   Compressing objects:  95% (22/23)   Compressing objects: 100% (23/23)   Compressing objects: 100% (23/23), done.
-Writing objects:   4% (1/25)   Writing objects:   8% (2/25)   Writing objects:  12% (3/25)   Writing objects:  16% (4/25)   Writing objects:  20% (5/25)   Writing objects:  24% (6/25)   Writing objects:  28% (7/25)   Writing objects:  32% (8/25)   Writing objects:  36% (9/25)   Writing objects:  40% (10/25)   Writing objects:  44% (11/25)   Writing objects:  48% (12/25)   Writing objects:  52% (13/25)   Writing objects:  56% (14/25)   Writing objects:  60% (15/25)   Writing objects:  64% (16/25)   Writing objects:  68% (17/25)   Writing objects:  72% (18/25)   Writing objects:  76% (19/25)   Writing objects:  80% (20/25)   Writing objects:  84% (21/25)   Writing objects:  88% (22/25)   Writing objects:  92% (23/25)   Writing objects:  96% (24/25)   Writing objects: 100% (25/25)   Writing objects: 100% (25/25), 5.97 KiB | 0 bytes/s, done.
-Total 25 (delta 18), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/18)   [Kremote: Resolving deltas:   5% (1/18)   [Kremote: Resolving deltas:  11% (2/18)   [Kremote: Resolving deltas:  16% (3/18)   [Kremote: Resolving deltas:  22% (4/18)   [Kremote: Resolving deltas:  27% (5/18)   [Kremote: Resolving deltas:  33% (6/18)   [Kremote: Resolving deltas:  38% (7/18)   [Kremote: Resolving deltas:  44% (8/18)   [Kremote: Resolving deltas:  50% (9/18)   [Kremote: Resolving deltas:  55% (10/18)   [Kremote: Resolving deltas:  61% (11/18)   [Kremote: Resolving deltas:  66% (12/18)   [Kremote: Resolving deltas:  72% (13/18)   [Kremote: Resolving deltas:  77% (14/18)   [Kremote: Resolving deltas:  88% (16/18)   [Kremote: Resolving deltas:  94% (17/18)   [Kremote: Resolving deltas: 100% (18/18)   [Kremote: Resolving deltas: 100% (18/18), completed with 16 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   e11d859..c28cfb2  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'reduced yamls'add . [K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . [2Ppushcommit -m 'reduced yamls'push[Kadd . [K[K[K[K[K[Kreseet[K[Kt
-Unstaged changes after reset:
-M	.Rproj.user/ABE7B653/console06/E8FBF1BE
-M	.Rproj.user/ABE7B653/console06/E8FBF1BE.env
-M	Lesson1.Rmd
-M	Lesson2.Rmd
-M	docs/Lesson1.html
-M	docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-11-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-18-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-19-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-20-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-24-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-25-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-26-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-9-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-9-2.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-9-3.png
-M	docs/index.html
-M	index.Rmd
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git resetadd . 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . [1Presetadd . [2Ppushcommit -m 'reduced yamls' '2'
-[master 62a73ce] reduced yamls 2
- 28 files changed, 95 insertions(+), 55 deletions(-)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-11-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-18-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-19-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-20-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-24-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-25-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-26-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png (93%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-1.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-2.png (95%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-3.png (94%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m 'reduced yamls 2'add . [K[1Presetadd . [2Ppush
-Counting objects: 35, done.
-Delta compression using up to 4 threads.
-Compressing objects:   2% (1/34)   Compressing objects:   5% (2/34)   Compressing objects:   8% (3/34)   Compressing objects:  11% (4/34)   Compressing objects:  14% (5/34)   Compressing objects:  17% (6/34)   Compressing objects:  20% (7/34)   Compressing objects:  23% (8/34)   Compressing objects:  26% (9/34)   Compressing objects:  29% (10/34)   Compressing objects:  32% (11/34)   Compressing objects:  35% (12/34)   Compressing objects:  38% (13/34)   Compressing objects:  41% (14/34)   Compressing objects:  44% (15/34)   Compressing objects:  47% (16/34)   Compressing objects:  50% (17/34)   Compressing objects:  52% (18/34)   Compressing objects:  55% (19/34)   Compressing objects:  58% (20/34)   Compressing objects:  61% (21/34)   Compressing objects:  64% (22/34)   Compressing objects:  67% (23/34)   Compressing objects:  70% (24/34)   Compressing objects:  73% (25/34)   Compressing objects:  76% (26/34)   Compressing objects:  79% (27/34)   Compressing objects:  82% (28/34)   Compressing objects:  85% (29/34)   Compressing objects:  88% (30/34)   Compressing objects:  91% (31/34)   Compressing objects:  94% (32/34)   Compressing objects:  97% (33/34)   Compressing objects: 100% (34/34)   Compressing objects: 100% (34/34), done.
-Writing objects:   2% (1/35)   Writing objects:   5% (2/35)   Writing objects:   8% (3/35)   Writing objects:  11% (4/35)   Writing objects:  14% (5/35)   Writing objects:  17% (6/35)   Writing objects:  20% (7/35)   Writing objects:  22% (8/35)   Writing objects:  25% (9/35)   Writing objects:  28% (10/35)   Writing objects:  31% (11/35)   Writing objects:  34% (12/35)   Writing objects:  37% (13/35)   Writing objects:  40% (14/35)   Writing objects:  42% (15/35)   Writing objects:  45% (16/35)   Writing objects:  48% (17/35)   Writing objects:  51% (18/35)   Writing objects:  54% (19/35)   Writing objects:  57% (20/35)   Writing objects:  60% (21/35)   Writing objects:  62% (22/35)   Writing objects:  65% (23/35)   Writing objects:  68% (24/35)   Writing objects:  71% (25/35)   Writing objects:  74% (26/35)   Writing objects:  77% (27/35)   Writing objects:  80% (28/35), 1.10 MiB | 2.19 MiB/s   Writing objects:  82% (29/35), 1.10 MiB | 2.19 MiB/s   Writing objects:  85% (30/35), 1.10 MiB | 2.19 MiB/s   Writing objects:  88% (31/35), 1.10 MiB | 2.19 MiB/s   Writing objects:  91% (32/35), 1.10 MiB | 2.19 MiB/s   Writing objects:  94% (33/35), 1.10 MiB | 2.19 MiB/s   Writing objects:  97% (34/35), 1.10 MiB | 2.19 MiB/s   Writing objects: 100% (35/35), 1.10 MiB | 2.19 MiB/s   Writing objects: 100% (35/35), 1.43 MiB | 2.19 MiB/s, done.
-Total 35 (delta 10), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/10)   [Kremote: Resolving deltas:  10% (1/10)   [Kremote: Resolving deltas:  20% (2/10)   [Kremote: Resolving deltas:  30% (3/10)   [Kremote: Resolving deltas:  40% (4/10)   [Kremote: Resolving deltas:  50% (5/10)   [Kremote: Resolving deltas:  60% (6/10)   [Kremote: Resolving deltas:  70% (7/10)   [Kremote: Resolving deltas:  80% (8/10)   [Kremote: Resolving deltas:  90% (9/10)   [Kremote: Resolving deltas: 100% (10/10)   [Kremote: Resolving deltas: 100% (10/10), completed with 10 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   c28cfb2..62a73ce  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ touch functions_lesson1.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open functions_lesson1.txt [K[Ktouch functions_lesson1.txt[2Popen functions_lesson1.txtouch functions_lesson1.txtgit push[K[K[K[K[K[K[K[K[Kls
-Lesson1.Rmd		_site.yml		functions_lesson1.txt
-Lesson1.md		admin			index.Rmd
-Lesson2.Rmd		admin_			index.md
-Lesson2.md		docs			lesson1_draft.Rmd
-README.md		emorycodingclub.Rproj	packages_lesson1.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
-/Users/malishev/Documents/Emory/admin/ecc
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd[1Plstouch functions_lesson1.txtgit push[Ktouch functions_lesson1.txt[1P.txt2.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ touch functions_lesson2.txtpwd[Ktouch functions_lesson2.txt[1P functions_lesson2.txt[1P functions_lesson2.txt[1P functions_lesson2.txt[1P functions_lesson2.txt[1P functions_lesson2.txto functions_lesson2.txtp functions_lesson2.txte functions_lesson2.txtn functions_lesson2.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open functions_lesson2.txt[1@touch[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Ps_lesson2.txt[1Ps_lesson2.txt[1Ps_lesson2.txt[C[1P_lesson2.txt[1P_lesson2.txt[1P_lesson2.txt[1P_lesson2.txt[1P_lesson2.txt[1P_lesson2.txtp_lesson2.txta_lesson2.txtc_lesson2.txtk_lesson2.txta_lesson2.txtg_lesson2.txte_lesson2.txts_lesson2.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ touch packages_lesson2.txt[Kopen packages_lesson2.txt 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open packages_lesson2.txt touch packages_lesson2.txtopen packages_lesson2.txt touch packages_lesson2.txtopen functions_lesson2.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git merge 
-Already up-to-date.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git ull[K[K[Kpull
-remote: Enumerating objects: 20, done.[K
-remote: Counting objects:   5% (1/20)   [Kremote: Counting objects:  10% (2/20)   [Kremote: Counting objects:  15% (3/20)   [Kremote: Counting objects:  20% (4/20)   [Kremote: Counting objects:  25% (5/20)   [Kremote: Counting objects:  30% (6/20)   [Kremote: Counting objects:  35% (7/20)   [Kremote: Counting objects:  40% (8/20)   [Kremote: Counting objects:  45% (9/20)   [Kremote: Counting objects:  50% (10/20)   [Kremote: Counting objects:  55% (11/20)   [Kremote: Counting objects:  60% (12/20)   [Kremote: Counting objects:  65% (13/20)   [Kremote: Counting objects:  70% (14/20)   [Kremote: Counting objects:  75% (15/20)   [Kremote: Counting objects:  80% (16/20)   [Kremote: Counting objects:  85% (17/20)   [Kremote: Counting objects:  90% (18/20)   [Kremote: Counting objects:  95% (19/20)   [Kremote: Counting objects: 100% (20/20)   [Kremote: Counting objects: 100% (20/20), done.[K
-Unpacking objects:   1% (1/58)   Unpacking objects:   3% (2/58)   Unpacking objects:   5% (3/58)   Unpacking objects:   6% (4/58)   Unpacking objects:   8% (5/58)   Unpacking objects:  10% (6/58)   Unpacking objects:  12% (7/58)   Unpacking objects:  13% (8/58)   Unpacking objects:  15% (9/58)   Unpacking objects:  17% (10/58)   Unpacking objects:  18% (11/58)   Unpacking objects:  20% (12/58)   Unpacking objects:  22% (13/58)   Unpacking objects:  24% (14/58)   Unpacking objects:  25% (15/58)   Unpacking objects:  27% (16/58)   Unpacking objects:  29% (17/58)   Unpacking objects:  31% (18/58)   Unpacking objects:  32% (19/58)   Unpacking objects:  34% (20/58)   Unpacking objects:  36% (21/58)   Unpacking objects:  37% (22/58)   Unpacking objects:  39% (23/58)   Unpacking objects:  41% (24/58)   Unpacking objects:  43% (25/58)   Unpacking objects:  44% (26/58)   Unpacking objects:  46% (27/58)   Unpacking objects:  48% (28/58)   Unpacking objects:  50% (29/58)   Unpacking objects:  51% (30/58)   Unpacking objects:  53% (31/58)   Unpacking objects:  55% (32/58)   Unpacking objects:  56% (33/58)   Unpacking objects:  58% (34/58)   remote: Total 58 (delta 20), reused 20 (delta 20), pack-reused 38[K
-Unpacking objects:  60% (35/58)   Unpacking objects:  62% (36/58)   Unpacking objects:  63% (37/58)   Unpacking objects:  65% (38/58)   Unpacking objects:  67% (39/58)   Unpacking objects:  68% (40/58)   Unpacking objects:  70% (41/58)   Unpacking objects:  72% (42/58)   Unpacking objects:  74% (43/58)   Unpacking objects:  75% (44/58)   Unpacking objects:  77% (45/58)   Unpacking objects:  79% (46/58)   Unpacking objects:  81% (47/58)   Unpacking objects:  82% (48/58)   Unpacking objects:  84% (49/58)   Unpacking objects:  86% (50/58)   Unpacking objects:  87% (51/58)   Unpacking objects:  89% (52/58)   Unpacking objects:  91% (53/58)   Unpacking objects:  93% (54/58)   Unpacking objects:  94% (55/58)   Unpacking objects:  96% (56/58)   Unpacking objects:  98% (57/58)   Unpacking objects: 100% (58/58)   Unpacking objects: 100% (58/58), done.
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * [new branch]      file-cleanup -> origin/file-cleanup
-Already up-to-date.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git mege[K[Krge origin master
-merge: origin - not something we can merge
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git merge origin masterpull[Kmerge [2Ppull origin master
-From https://github.com/darwinanddavis/EmoRyCodingClub
- * branch            master     -> FETCH_HEAD
-Already up-to-date.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git ge[K[Kfetch origin
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git merge master
-Already up-to-date.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git checkout master
-M	.Rproj.user/ABE7B653/console06/E8FBF1BE
-Already on 'master'
-Your branch is up-to-date with 'origin/master'.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git merge .
-merge: . - not something we can merge
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git fetch origin
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git checkout -b file-cleanup origin/file-cleanip[K[Kup
-M	.Rproj.user/ABE7B653/console06/E8FBF1BE
-Branch file-cleanup set up to track remote branch file-cleanup from origin.
-Switched to a new branch 'file-cleanup'
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git checkout fil-[Ke-cleanup[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kstatus
-On branch file-cleanup
-Your branch is up-to-date with 'origin/file-cleanup'.
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	[31mfunctions_lesson2.txt[m
-	[31mpackages_lesson2.txt[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git metge[K[K[Krge master
-Already up-to-date.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git chc[Keckoutma[K ma[K[K[K[K master
-error: Your local changes to the following files would be overwritten by checkout:
-	.Rproj.user/shared/notebooks/paths
-Please commit your changes or stash them before you switch branches.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git master
-error: Your local changes to the following files would be overwritten by checkout:
-	.Rproj.user/shared/notebooks/paths
-Please commit your changes or stash them before you switch branches.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit .Rpoj[K[Kroj.user/shared/notebooks/pat
-patch-chunk-names  paths              
-6300L-127771-M:ecc malishev$ git commit .Rproj.user/shared/notebooks/pat
-patch-chunk-names  paths              
-6300L-127771-M:ecc malishev$ git commit .Rproj.user/shared/notebooks/paths [C[1P[1P[1P[1P[1P[1P[1@a[1@d[1@d[C
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''a'd'd'e'd'[1P'[1P'[1P'[1P'[1P'p'r'e' 'f'i'l'e'-'c'l'e'n'a'p'[1P'[1P'[1P'a'n'u'p' 'm'e'r'g'e'
-[file-cleanup 9dbda6e] pre file-cleanup merge
- 1 file changed, 6 insertions(+), 8 deletions(-)
- rewrite .Rproj.user/shared/notebooks/paths (100%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commi t[K[K[K[K[K[K[Kpush r[Korigin master
-Everything up-to-date
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git checkot [K[Kut master
-M	.Rproj.user/ABE7B653/console06/E8FBF1BE
-Switched to branch 'master'
-Your branch is up-to-date with 'origin/master'.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git git merge[K[K[K[K[K[K[K[K[Kmerge --no-ff fiel-[K[K[Kle-cleanup
-Removing index.md
-Removing docs/site_libs/typedarray-0.1/typedarray.min.js
-Removing docs/site_libs/selectize-0.11.2/js/selectize.min.js
-Removing docs/site_libs/selectize-0.11.2/js/es5-shim.min.js
-Removing docs/site_libs/selectize-0.11.2/css/selectize.bootstrap3.css
-Removing docs/site_libs/primer-tooltips-1.4.0/build.css
-Removing docs/site_libs/plotly-main-1.39.2/plotly-latest.min.js
-Removing docs/site_libs/plotly-htmlwidgets-css-1.39.2/plotly-htmlwidgets.css
-Removing docs/site_libs/plotly-binding-4.8.0/plotly.yaml
-Removing docs/site_libs/plotly-binding-4.8.0/plotly.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/typedarray/typedarray.min.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/typedarray/LICENSE
-Removing docs/site_libs/plotly-binding-4.8.0/lib/selectize/selectize.min.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/selectize/selectize.bootstrap3.css
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/plotly-latest.min.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/plotly-htmlwidgets.css
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-tw.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-hk.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-cn.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/vi.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ur.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/uk.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tt.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tr.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/th.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ta.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sw.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sv.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sr.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sr-sr.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sq.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sl.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sk.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ru.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ro.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/rm.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pt-br.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pl.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pa.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/no.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/nl.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/nl-be.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/mt.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ms.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ml.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/mk.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/me.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/me-me.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/lv.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/lt.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ko.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/km.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ka.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ja.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/it.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/is.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/id.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hy.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hu.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hr.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hi-in.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/he.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/gu.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/gl.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fr.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fr-ch.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fo.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fi.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fa.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/eu.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/et.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es-pe.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es-ar.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/eo.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/el.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/de.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/de-ch.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/da.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/cs.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ca.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/bs.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/bg.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/az.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar-eg.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar-dz.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/am.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/af.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/LICENSE
-Removing docs/site_libs/plotly-binding-4.8.0/lib/mathjax/cdn.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/colourpicker.min.js
-Removing docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/colourpicker.min.css
-Removing docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/LICENSE
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-providers-plugin/leaflet-providers-plugin.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter-bindings.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/resize-handle.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/move-handle.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/filter-icon.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Proj4Leaflet/proj4leaflet.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Proj4Leaflet/proj4-compressed.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/package.json
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.layersupport.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.freezable.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MarkerCluster.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MarkerCluster.Default.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MIT-LICENCE.txt
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.min.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/ionicons.min.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-soft@2x.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-soft.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-shadow@2x.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-shadow.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-plain.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-matte@2x.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-matte.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.woff
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.ttf
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.svg
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.eot
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.woff
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.ttf
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.svg
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.eot
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.woff
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.ttf
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.svg
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.eot
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/FontAwesome.otf
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/font-awesome.min.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap.min.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap.min.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap-theme.min.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Terminator/Terminator-binding.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Terminator/L.Terminator.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/SimpleGraticule-binding.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/L.SimpleGraticule.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/L.SimpleGraticule.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/Leaflet.Graticule.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/L.Graticule.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/Graticule-binding.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/easy-button.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/easy-button.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/LICENSE
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/EasyButton-binding.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/images/toggle.svg
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/images/toggle.png
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Minimap-binding.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.min.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.min.css
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.js
-Removing docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.css
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/rstudio_leaflet/rstudio_leaflet.css
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/rstudio_leaflet/images/1px.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leafletfix/leafletfix.css
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/leaflet.js
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/leaflet.css
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-shadow.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-icon.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-icon-2x.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/images/layers.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/images/layers-2x.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/rstudio_install.md
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/providers.json
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/package.json
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/leaflet-providers.js
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/package.json
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/leaflet-omnivore.min.js
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/index.js
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/LICENSE
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/leaflet-measure.min.js
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/leaflet-measure.css
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/trash_@2X.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/trash.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/start_@2X.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/start.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/rulers_@2X.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/rulers.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/focus_@2X.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/focus.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/check_@2X.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/check.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/cancel_@2X.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/cancel.png
-Removing docs/site_libs/leaflet-binding-2.0.2/lib/jquery/jquery.min.js
-Removing docs/site_libs/leaflet-binding-2.0.2/leaflet.yaml
-Removing docs/site_libs/klippy-0.0.0.9500/js/klippy.min.js
-Removing docs/site_libs/klippy-0.0.0.9500/css/klippy.min.css
-Auto-merging docs/site_libs/htmlwidgets-1.3/htmlwidgets.js
-Removing docs/site_libs/crosstalk-1.0.0/js/crosstalk.min.js.map
-Removing docs/site_libs/crosstalk-1.0.0/js/crosstalk.min.js
-Removing docs/site_libs/crosstalk-1.0.0/js/crosstalk.js.map
-Removing docs/site_libs/crosstalk-1.0.0/js/crosstalk.js
-Removing docs/site_libs/crosstalk-1.0.0/css/crosstalk.css
-Removing docs/site_libs/clipboard-1.7.1/clipboard.min.js
-Removing docs/lesson1_draft_files/figure-html/unnamed-chunk-29-1.png
-Removing docs/lesson1_draft_files/figure-html/unnamed-chunk-28-1.png
-Removing docs/lesson1_draft_files/figure-html/unnamed-chunk-27-1.png
-Removing docs/lesson1_draft_files/figure-html/unnamed-chunk-26-1.png
-Removing docs/lesson1_draft_files/figure-html/unnamed-chunk-23-1.png
-Removing docs/lesson1_draft_files/figure-html/unnamed-chunk-22-2.png
-Removing docs/lesson1_draft_files/figure-html/unnamed-chunk-22-1.png
-Removing docs/lesson1_draft_files/figure-html/unnamed-chunk-21-2.png
-Removing docs/lesson1_draft_files/figure-html/unnamed-chunk-21-1.png
-Removing docs/lesson1_draft_files/figure-html/unnamed-chunk-16-1.png
-Removing docs/lesson1_draft.html
-Removing docs/ecc_master1.html
-Removing docs/ecc_master.tex
-Removing docs/ecc_master.html
-Removing admin/ecc_master1_files/tocify-1.9.1/jquery.tocify.js
-Removing admin/ecc_master1_files/tocify-1.9.1/jquery.tocify.css
-Removing admin/ecc_master1_files/navigation-1.1/tabsets.js
-Removing admin/ecc_master1_files/navigation-1.1/sourceembed.js
-Removing admin/ecc_master1_files/navigation-1.1/codefolding.js
-Removing admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.theme.min.css
-Removing admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.theme.css
-Removing admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.structure.min.css
-Removing admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.structure.css
-Removing admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.min.js
-Removing admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.min.css
-Removing admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.js
-Removing admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.css
-Removing admin/ecc_master1_files/jqueryui-1.11.4/index.html
-Removing admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png
-Removing admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png
-Removing admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_777777_256x240.png
-Removing admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_777620_256x240.png
-Removing admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_555555_256x240.png
-Removing admin/ecc_master1_files/jqueryui-1.11.4/images/ui-icons_444444_256x240.png
-Removing admin/ecc_master1_files/jqueryui-1.11.4/README
-Removing admin/ecc_master1_files/jquery-1.11.3/jquery.min.js
-Removing admin/ecc_master1_files/bootstrap-3.3.5/shim/respond.min.js
-Removing admin/ecc_master1_files/bootstrap-3.3.5/shim/html5shiv.min.js
-Removing admin/ecc_master1_files/bootstrap-3.3.5/js/npm.js
-Removing admin/ecc_master1_files/bootstrap-3.3.5/js/bootstrap.min.js
-Removing admin/ecc_master1_files/bootstrap-3.3.5/js/bootstrap.js
-Removing admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2
-Removing admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff
-Removing admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg
-Removing admin/ecc_master1_files/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/yeti.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/united.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/spacelab.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/simplex.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/sandstone.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/readable.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/paper.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/lumen.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/journal.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Roboto.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Raleway.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/OpenSans.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/NewsCycle.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/LatoBold.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/fonts/Lato.ttf
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/flatly.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/darkly.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/cosmo.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/cerulean.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap.css.map
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap-theme.min.css
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap-theme.css.map
-Removing admin/ecc_master1_files/bootstrap-3.3.5/css/bootstrap-theme.css
-Removing admin/ecc_master1.md
-Removing admin/ecc_master1.html
-Removing admin/ecc_master.tex
-Removing admin/ecc_master.html
-Removing admin/_site/site_libs/tocify-1.9.1/jquery.tocify.js
-Removing admin/_site/site_libs/tocify-1.9.1/jquery.tocify.css
-Removing admin/_site/ecc_master1.html
-Auto-merging admin/_lesson1_draft.Rmd
-Auto-merging admin/_ecc_master1.Rmd
-Removing Lesson2.md
-Removing Lesson1.md
-Merge made by the 'recursive' strategy.
- .Rproj.user/shared/notebooks/paths                      |     2 [31m-[m
- Lesson1.md                                              |   467 [31m-[m
- Lesson2.Rmd                                             |    18 [32m+[m[31m-[m
- Lesson2.md                                              |    83 [31m-[m
- _site.yml                                               |    10 [32m+[m[31m-[m
- admin/{ecc_master1.Rmd => _ecc_master1.Rmd}             |    29 [32m+[m[31m-[m
- lesson1_draft.Rmd => admin/_lesson1_draft.Rmd           |     1 [32m+[m
- admin/_site/ecc_master1.html                            |   588 [31m-[m
- admin/_site/site_libs/tocify-1.9.1/jquery.tocify.css    |    80 [31m-[m
- admin/_site/site_libs/tocify-1.9.1/jquery.tocify.js     |  1002 [31m--[m
- admin/ecc_master.html                                   |   590 [31m-[m
- admin/ecc_master.tex                                    |   181 [31m-[m
- admin/ecc_master1.html                                  |   507 [31m-[m
- admin/ecc_master1.md                                    |   174 [31m-[m
- .../bootstrap-3.3.5/css/bootstrap-theme.css             |   587 [31m-[m
- .../bootstrap-3.3.5/css/bootstrap-theme.css.map         |     1 [31m-[m
- .../bootstrap-3.3.5/css/bootstrap-theme.min.css         |     5 [31m-[m
- .../ecc_master1_files/bootstrap-3.3.5/css/bootstrap.css |  6799 [31m----------[m
- .../bootstrap-3.3.5/css/bootstrap.css.map               |     1 [31m-[m
- .../bootstrap-3.3.5/css/bootstrap.min.css               |     5 [31m-[m
- .../bootstrap-3.3.5/css/cerulean.min.css                |    11 [31m-[m
- .../ecc_master1_files/bootstrap-3.3.5/css/cosmo.min.css |    30 [31m-[m
- .../bootstrap-3.3.5/css/darkly.min.css                  |    30 [31m-[m
- .../bootstrap-3.3.5/css/flatly.min.css                  |    30 [31m-[m
- .../bootstrap-3.3.5/css/fonts/Lato.ttf                  |   Bin [31m81980[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/LatoBold.ttf              |   Bin [31m82368[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/LatoItalic.ttf            |   Bin [31m81332[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/NewsCycle.ttf             |   Bin [31m28716[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf         |   Bin [31m28724[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/OpenSans.ttf              |   Bin [31m34112[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/OpenSansBold.ttf          |   Bin [31m35760[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf    |   Bin [31m33064[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf        |   Bin [31m32808[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/OpenSansLight.ttf         |   Bin [31m35340[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf   |   Bin [31m32680[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/Raleway.ttf               |   Bin [31m63796[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/RalewayBold.ttf           |   Bin [31m62224[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/Roboto.ttf                |   Bin [31m32652[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/RobotoBold.ttf            |   Bin [31m32500[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/RobotoLight.ttf           |   Bin [31m32664[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/RobotoMedium.ttf          |   Bin [31m32580[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/SourceSansPro.ttf         |   Bin [31m35064[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf     |   Bin [31m34908[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf   |   Bin [31m33864[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf    |   Bin [31m35368[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/fonts/Ubuntu.ttf                |   Bin [31m73608[m -> [32m0[m bytes
- .../bootstrap-3.3.5/css/journal.min.css                 |    24 [31m-[m
- .../ecc_master1_files/bootstrap-3.3.5/css/lumen.min.css |    37 [31m-[m
- .../ecc_master1_files/bootstrap-3.3.5/css/paper.min.css |    36 [31m-[m
- .../bootstrap-3.3.5/css/readable.min.css                |    24 [31m-[m
- .../bootstrap-3.3.5/css/sandstone.min.css               |    24 [31m-[m
- .../bootstrap-3.3.5/css/simplex.min.css                 |    24 [31m-[m
- .../bootstrap-3.3.5/css/spacelab.min.css                |    36 [31m-[m
- .../bootstrap-3.3.5/css/united.min.css                  |    18 [31m-[m
- .../ecc_master1_files/bootstrap-3.3.5/css/yeti.min.css  |    50 [31m-[m
- .../fonts/glyphicons-halflings-regular.eot              |   Bin [31m20127[m -> [32m0[m bytes
- .../fonts/glyphicons-halflings-regular.svg              |   288 [31m-[m
- .../fonts/glyphicons-halflings-regular.ttf              |   Bin [31m45404[m -> [32m0[m bytes
- .../fonts/glyphicons-halflings-regular.woff             |   Bin [31m23424[m -> [32m0[m bytes
- .../fonts/glyphicons-halflings-regular.woff2            |   Bin [31m18028[m -> [32m0[m bytes
- admin/ecc_master1_files/bootstrap-3.3.5/js/bootstrap.js |  2363 [31m----[m
- .../bootstrap-3.3.5/js/bootstrap.min.js                 |     7 [31m-[m
- admin/ecc_master1_files/bootstrap-3.3.5/js/npm.js       |    13 [31m-[m
- .../bootstrap-3.3.5/shim/html5shiv.min.js               |     7 [31m-[m
- .../bootstrap-3.3.5/shim/respond.min.js                 |     8 [31m-[m
- admin/ecc_master1_files/jquery-1.11.3/jquery.min.js     |     5 [31m-[m
- admin/ecc_master1_files/jqueryui-1.11.4/README          |     8 [31m-[m
- .../jqueryui-1.11.4/images/ui-icons_444444_256x240.png  |   Bin [31m6992[m -> [32m0[m bytes
- .../jqueryui-1.11.4/images/ui-icons_555555_256x240.png  |   Bin [31m6988[m -> [32m0[m bytes
- .../jqueryui-1.11.4/images/ui-icons_777620_256x240.png  |   Bin [31m4549[m -> [32m0[m bytes
- .../jqueryui-1.11.4/images/ui-icons_777777_256x240.png  |   Bin [31m6999[m -> [32m0[m bytes
- .../jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png  |   Bin [31m4549[m -> [32m0[m bytes
- .../jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png  |   Bin [31m6299[m -> [32m0[m bytes
- admin/ecc_master1_files/jqueryui-1.11.4/index.html      |   505 [31m-[m
- admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.css   |  1060 [31m--[m
- admin/ecc_master1_files/jqueryui-1.11.4/jquery-ui.js    | 14546 [31m---------------------[m
- .../ecc_master1_files/jqueryui-1.11.4/jquery-ui.min.css |     7 [31m-[m
- .../ecc_master1_files/jqueryui-1.11.4/jquery-ui.min.js  |    12 [31m-[m
- .../jqueryui-1.11.4/jquery-ui.structure.css             |   668 [31m-[m
- .../jqueryui-1.11.4/jquery-ui.structure.min.css         |     5 [31m-[m
- .../jqueryui-1.11.4/jquery-ui.theme.css                 |   410 [31m-[m
- .../jqueryui-1.11.4/jquery-ui.theme.min.css             |     5 [31m-[m
- admin/ecc_master1_files/navigation-1.1/codefolding.js   |    59 [31m-[m
- admin/ecc_master1_files/navigation-1.1/sourceembed.js   |    12 [31m-[m
- admin/ecc_master1_files/navigation-1.1/tabsets.js       |   141 [31m-[m
- admin/ecc_master1_files/tocify-1.9.1/jquery.tocify.css  |    80 [31m-[m
- admin/ecc_master1_files/tocify-1.9.1/jquery.tocify.js   |  1002 [31m--[m
- docs/Lesson1.html                                       |   276 [32m+[m[31m-[m
- docs/Lesson1_files/figure-html/unnamed-chunk-10-1.png   |   Bin [31m71021[m -> [32m70373[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-11-1.png   |   Bin [31m74340[m -> [32m73493[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png   |   Bin [31m95029[m -> [32m94135[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png   |   Bin [31m75605[m -> [32m74974[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png   |   Bin [31m94973[m -> [32m93969[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png   |   Bin [31m112504[m -> [32m112076[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png   |   Bin [31m96022[m -> [32m96103[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png   |   Bin [31m83906[m -> [32m84240[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-18-1.png   |   Bin [31m67691[m -> [32m67309[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-19-1.png   |   Bin [31m74188[m -> [32m73460[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-20-1.png   |   Bin [31m177861[m -> [32m176421[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png   |   Bin [31m81623[m -> [32m81462[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-24-1.png   |   Bin [31m89573[m -> [32m89142[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-25-1.png   |   Bin [31m194633[m -> [32m194678[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-26-1.png   |   Bin [31m126179[m -> [32m125186[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png    |   Bin [31m77624[m -> [32m77654[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png    |   Bin [31m44404[m -> [32m43659[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png    |   Bin [31m77624[m -> [32m77654[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-9-1.png    |   Bin [31m77631[m -> [32m77678[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-9-2.png    |   Bin [31m68636[m -> [32m68769[m bytes
- docs/Lesson1_files/figure-html/unnamed-chunk-9-3.png    |   Bin [31m70920[m -> [32m70794[m bytes
- docs/Lesson2.html                                       |   127 [32m+[m[31m-[m
- docs/README.html                                        |    43 [32m+[m[31m-[m
- docs/ecc_master.html                                    |   590 [31m-[m
- docs/ecc_master.tex                                     |   181 [31m-[m
- docs/ecc_master1.html                                   |   603 [31m-[m
- docs/index.html                                         |   187 [32m+[m[31m-[m
- docs/lesson1_draft.html                                 |   843 [31m--[m
- .../figure-html/unnamed-chunk-16-1.png                  |   Bin [31m163838[m -> [32m0[m bytes
- .../figure-html/unnamed-chunk-21-1.png                  |   Bin [31m113772[m -> [32m0[m bytes
- .../figure-html/unnamed-chunk-21-2.png                  |   Bin [31m150947[m -> [32m0[m bytes
- .../figure-html/unnamed-chunk-22-1.png                  |   Bin [31m164041[m -> [32m0[m bytes
- .../figure-html/unnamed-chunk-22-2.png                  |   Bin [31m138476[m -> [32m0[m bytes
- .../figure-html/unnamed-chunk-23-1.png                  |   Bin [31m116521[m -> [32m0[m bytes
- .../figure-html/unnamed-chunk-26-1.png                  |   Bin [31m84915[m -> [32m0[m bytes
- .../figure-html/unnamed-chunk-27-1.png                  |   Bin [31m109718[m -> [32m0[m bytes
- .../figure-html/unnamed-chunk-28-1.png                  |   Bin [31m164608[m -> [32m0[m bytes
- .../figure-html/unnamed-chunk-29-1.png                  |   Bin [31m201641[m -> [32m0[m bytes
- docs/site_libs/clipboard-1.7.1/clipboard.min.js         |     7 [31m-[m
- docs/site_libs/crosstalk-1.0.0/css/crosstalk.css        |    27 [31m-[m
- docs/site_libs/crosstalk-1.0.0/js/crosstalk.js          |  1471 [31m---[m
- docs/site_libs/crosstalk-1.0.0/js/crosstalk.js.map      |    37 [31m-[m
- docs/site_libs/crosstalk-1.0.0/js/crosstalk.min.js      |     2 [31m-[m
- docs/site_libs/crosstalk-1.0.0/js/crosstalk.min.js.map  |     1 [31m-[m
- .../{htmlwidgets-1.2 => htmlwidgets-1.3}/htmlwidgets.js |     5 [32m+[m[31m-[m
- docs/site_libs/klippy-0.0.0.9500/css/klippy.min.css     |     1 [31m-[m
- docs/site_libs/klippy-0.0.0.9500/js/klippy.min.js       |     1 [31m-[m
- docs/site_libs/leaflet-binding-2.0.2/leaflet.yaml       |    24 [31m-[m
- .../leaflet-binding-2.0.2/lib/jquery/jquery.min.js      |     5 [31m-[m
- .../lib/leaflet-measure/images/cancel.png               |   Bin [31m397[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/cancel_@2X.png           |   Bin [31m762[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/check.png                |   Bin [31m387[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/check_@2X.png            |   Bin [31m692[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/focus.png                |   Bin [31m326[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/focus_@2X.png            |   Bin [31m462[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/rulers.png               |   Bin [31m192[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/rulers_@2X.png           |   Bin [31m277[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/start.png                |   Bin [31m491[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/start_@2X.png            |   Bin [31m1003[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/trash.png                |   Bin [31m279[m -> [32m0[m bytes
- .../lib/leaflet-measure/images/trash_@2X.png            |   Bin [31m460[m -> [32m0[m bytes
- .../lib/leaflet-measure/leaflet-measure.css             |     1 [31m-[m
- .../lib/leaflet-measure/leaflet-measure.min.js          |     4 [31m-[m
- .../leaflet-binding-2.0.2/lib/leaflet-omnivore/LICENSE  |    58 [31m-[m
- .../leaflet-binding-2.0.2/lib/leaflet-omnivore/index.js |   258 [31m-[m
- .../lib/leaflet-omnivore/leaflet-omnivore.min.js        |     1 [31m-[m
- .../lib/leaflet-omnivore/package.json                   |    70 [31m-[m
- .../lib/leaflet-providers/leaflet-providers.js          |   747 [31m--[m
- .../lib/leaflet-providers/package.json                  |    45 [31m-[m
- .../lib/leaflet-providers/providers.json                |   690 [31m-[m
- .../lib/leaflet-providers/rstudio_install.md            |    19 [31m-[m
- .../lib/leaflet/images/layers-2x.png                    |   Bin [31m1259[m -> [32m0[m bytes
- .../leaflet-binding-2.0.2/lib/leaflet/images/layers.png |   Bin [31m696[m -> [32m0[m bytes
- .../lib/leaflet/images/marker-icon-2x.png               |   Bin [31m2464[m -> [32m0[m bytes
- .../lib/leaflet/images/marker-icon.png                  |   Bin [31m1466[m -> [32m0[m bytes
- .../lib/leaflet/images/marker-shadow.png                |   Bin [31m618[m -> [32m0[m bytes
- .../leaflet-binding-2.0.2/lib/leaflet/leaflet.css       |   636 [31m-[m
- .../leaflet-binding-2.0.2/lib/leaflet/leaflet.js        |     5 [31m-[m
- .../leaflet-binding-2.0.2/lib/leafletfix/leafletfix.css |    36 [31m-[m
- .../lib/rstudio_leaflet/images/1px.png                  |   Bin [31m68[m -> [32m0[m bytes
- .../lib/rstudio_leaflet/rstudio_leaflet.css             |    32 [31m-[m
- .../plugins/Leaflet-MiniMap/Control.MiniMap.css         |    88 [31m-[m
- .../plugins/Leaflet-MiniMap/Control.MiniMap.js          |   352 [31m-[m
- .../plugins/Leaflet-MiniMap/Control.MiniMap.min.css     |     1 [31m-[m
- .../plugins/Leaflet-MiniMap/Control.MiniMap.min.js      |     1 [31m-[m
- .../plugins/Leaflet-MiniMap/Minimap-binding.js          |    43 [31m-[m
- .../plugins/Leaflet-MiniMap/images/toggle.png           |   Bin [31m219[m -> [32m0[m bytes
- .../plugins/Leaflet-MiniMap/images/toggle.svg           |     1 [31m-[m
- .../plugins/Leaflet.EasyButton/EasyButton-binding.js    |    44 [31m-[m
- .../plugins/Leaflet.EasyButton/LICENSE                  |     7 [31m-[m
- .../plugins/Leaflet.EasyButton/easy-button.css          |    56 [31m-[m
- .../plugins/Leaflet.EasyButton/easy-button.js           |   370 [31m-[m
- .../plugins/Leaflet.Graticule/Graticule-binding.js      |    12 [31m-[m
- .../plugins/Leaflet.Graticule/L.Graticule.js            |   104 [31m-[m
- .../plugins/Leaflet.Graticule/Leaflet.Graticule.js      |   518 [31m-[m
- .../Leaflet.SimpleGraticule/L.SimpleGraticule.css       |    11 [31m-[m
- .../Leaflet.SimpleGraticule/L.SimpleGraticule.js        |   168 [31m-[m
- .../Leaflet.SimpleGraticule/SimpleGraticule-binding.js  |    14 [31m-[m
- .../plugins/Leaflet.Terminator/L.Terminator.js          |   143 [31m-[m
- .../plugins/Leaflet.Terminator/Terminator-binding.js    |    14 [31m-[m
- .../Leaflet.awesome-markers/bootstrap-theme.min.css     |     6 [31m-[m
- .../plugins/Leaflet.awesome-markers/bootstrap.min.css   |     6 [31m-[m
- .../plugins/Leaflet.awesome-markers/bootstrap.min.js    |     7 [31m-[m
- .../Leaflet.awesome-markers/font-awesome.min.css        |     4 [31m-[m
- .../Leaflet.awesome-markers/fonts/FontAwesome.otf       |   Bin [31m134808[m -> [32m0[m bytes
- .../fonts/fontawesome-webfont.eot                       |   Bin [31m165742[m -> [32m0[m bytes
- .../fonts/fontawesome-webfont.svg                       |  2671 [31m----[m
- .../fonts/fontawesome-webfont.ttf                       |   Bin [31m165548[m -> [32m0[m bytes
- .../fonts/fontawesome-webfont.woff                      |   Bin [31m98024[m -> [32m0[m bytes
- .../fonts/glyphicons-halflings-regular.eot              |   Bin [31m20127[m -> [32m0[m bytes
- .../fonts/glyphicons-halflings-regular.svg              |   288 [31m-[m
- .../fonts/glyphicons-halflings-regular.ttf              |   Bin [31m45404[m -> [32m0[m bytes
- .../fonts/glyphicons-halflings-regular.woff             |   Bin [31m23424[m -> [32m0[m bytes
- .../plugins/Leaflet.awesome-markers/fonts/ionicons.eot  |   Bin [31m120724[m -> [32m0[m bytes
- .../plugins/Leaflet.awesome-markers/fonts/ionicons.svg  |  2230 [31m----[m
- .../plugins/Leaflet.awesome-markers/fonts/ionicons.ttf  |   Bin [31m188508[m -> [32m0[m bytes
- .../plugins/Leaflet.awesome-markers/fonts/ionicons.woff |   Bin [31m67904[m -> [32m0[m bytes
- .../Leaflet.awesome-markers/images/markers-matte.png    |   Bin [31m14323[m -> [32m0[m bytes
- .../Leaflet.awesome-markers/images/markers-matte@2x.png |   Bin [31m31113[m -> [32m0[m bytes
- .../Leaflet.awesome-markers/images/markers-plain.png    |   Bin [31m7946[m -> [32m0[m bytes
- .../Leaflet.awesome-markers/images/markers-shadow.png   |   Bin [31m535[m -> [32m0[m bytes
- .../images/markers-shadow@2x.png                        |   Bin [31m1469[m -> [32m0[m bytes
- .../Leaflet.awesome-markers/images/markers-soft.png     |   Bin [31m56965[m -> [32m0[m bytes
- .../Leaflet.awesome-markers/images/markers-soft@2x.png  |   Bin [31m165517[m -> [32m0[m bytes
- .../plugins/Leaflet.awesome-markers/ionicons.min.css    |    11 [31m-[m
- .../Leaflet.awesome-markers/leaflet.awesome-markers.css |   128 [31m-[m
- .../Leaflet.awesome-markers/leaflet.awesome-markers.js  |   146 [31m-[m
- .../leaflet.awesome-markers.min.js                      |     1 [31m-[m
- .../plugins/Leaflet.markercluster/MIT-LICENCE.txt       |    20 [31m-[m
- .../Leaflet.markercluster/MarkerCluster.Default.css     |    60 [31m-[m
- .../plugins/Leaflet.markercluster/MarkerCluster.css     |    14 [31m-[m
- .../leaflet.markercluster.freezable.js                  |     6 [31m-[m
- .../Leaflet.markercluster/leaflet.markercluster.js      |     7 [31m-[m
- .../leaflet.markercluster.layersupport.js               |     6 [31m-[m
- .../plugins/Leaflet.markercluster/package.json          |    22 [31m-[m
- .../plugins/Proj4Leaflet/proj4-compressed.js            |     3 [31m-[m
- .../plugins/Proj4Leaflet/proj4leaflet.js                |   272 [31m-[m
- .../plugins/leaflet-locationfilter/img/filter-icon.png  |   Bin [31m1682[m -> [32m0[m bytes
- .../plugins/leaflet-locationfilter/img/move-handle.png  |   Bin [31m1109[m -> [32m0[m bytes
- .../leaflet-locationfilter/img/resize-handle.png        |   Bin [31m1017[m -> [32m0[m bytes
- .../leaflet-locationfilter/locationfilter-bindings.js   |    66 [31m-[m
- .../plugins/leaflet-locationfilter/locationfilter.css   |    78 [31m-[m
- .../plugins/leaflet-locationfilter/locationfilter.js    |   370 [31m-[m
- .../leaflet-providers-plugin.js                         |     3 [31m-[m
- .../plotly-binding-4.8.0/lib/colourpicker/LICENSE       |     7 [31m-[m
- .../lib/colourpicker/colourpicker.min.css               |     1 [31m-[m
- .../lib/colourpicker/colourpicker.min.js                |     2 [31m-[m
- docs/site_libs/plotly-binding-4.8.0/lib/mathjax/cdn.js  |     4 [31m-[m
- .../site_libs/plotly-binding-4.8.0/lib/plotlyjs/LICENSE |    21 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/af.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/am.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ar-dz.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ar-eg.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ar.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/az.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/bg.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/bs.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ca.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/cs.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/da.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/de-ch.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/de.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/el.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/eo.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/es-ar.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/es-pe.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/es.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/et.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/eu.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/fa.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/fi.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/fo.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/fr-ch.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/fr.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/gl.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/gu.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/he.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/hi-in.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/hr.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/hu.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/hy.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/id.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/is.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/it.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ja.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ka.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/km.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ko.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/lt.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/lv.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/me-me.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/me.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/mk.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ml.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ms.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/mt.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/nl-be.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/nl.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/no.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/pa.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/pl.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/pt-br.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/rm.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ro.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ru.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/sk.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/sl.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/sq.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/sr-sr.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/sr.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/sv.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/sw.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ta.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/th.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/tr.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/tt.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/uk.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/ur.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/vi.js     |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/zh-cn.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/zh-hk.js  |     1 [31m-[m
- .../plotly-binding-4.8.0/lib/plotlyjs/locales/zh-tw.js  |     1 [31m-[m
- .../lib/plotlyjs/plotly-htmlwidgets.css                 |     9 [31m-[m
- .../lib/plotlyjs/plotly-latest.min.js                   |     7 [31m-[m
- .../lib/selectize/selectize.bootstrap3.css              |   401 [31m-[m
- .../plotly-binding-4.8.0/lib/selectize/selectize.min.js |     3 [31m-[m
- .../plotly-binding-4.8.0/lib/typedarray/LICENSE         |    21 [31m-[m
- .../lib/typedarray/typedarray.min.js                    |     1 [31m-[m
- docs/site_libs/plotly-binding-4.8.0/plotly.js           |   915 [31m--[m
- docs/site_libs/plotly-binding-4.8.0/plotly.yaml         |     0
- .../plotly-htmlwidgets.css                              |     9 [31m-[m
- docs/site_libs/plotly-main-1.39.2/plotly-latest.min.js  |     7 [31m-[m
- docs/site_libs/primer-tooltips-1.4.0/build.css          |   166 [31m-[m
- .../selectize-0.11.2/css/selectize.bootstrap3.css       |   401 [31m-[m
- docs/site_libs/selectize-0.11.2/js/es5-shim.min.js      |    17 [31m-[m
- docs/site_libs/selectize-0.11.2/js/selectize.min.js     |     3 [31m-[m
- docs/site_libs/tocify-1.9.1/jquery.tocify.css           |    10 [32m+[m[31m-[m
- docs/site_libs/tocify-1.9.1/jquery.tocify.js            |     4 [32m+[m[31m-[m
- docs/site_libs/typedarray-0.1/typedarray.min.js         |     1 [31m-[m
- img/cover.png                                           |   Bin [31m0[m -> [32m341755[m bytes
- img/ddl.jpeg                                            |   Bin [31m0[m -> [32m27704[m bytes
- img/hw.jpg                                              |   Bin [31m0[m -> [32m71729[m bytes
- img/mm.jpeg                                             |   Bin [31m0[m -> [32m45906[m bytes
- img/nyc.jpg                                             |   Bin [31m0[m -> [32m626182[m bytes
- img/rstudio1.jpg                                        |   Bin [31m0[m -> [32m539950[m bytes
- img/rstudio2.jpg                                        |   Bin [31m0[m -> [32m601136[m bytes
- img/shapes.png                                          |   Bin [31m0[m -> [32m45449[m bytes
- index.Rmd                                               |    27 [32m+[m[31m-[m
- index.md                                                |   223 [31m-[m
- 337 files changed, 420 insertions(+), 50033 deletions(-)
- delete mode 100644 Lesson1.md
- delete mode 100644 Lesson2.md
- rename admin/{ecc_master1.Rmd => _ecc_master1.Rmd} (95%)
- rename lesson1_draft.Rmd => admin/_lesson1_draft.Rmd (99%)
- delete mode 100644 admin/_site/ecc_master1.html
- delete mode 100644 admin/_site/site_libs/tocify-1.9.1/jquery.tocify.css
  delete mode 100644 admin/_site/site_libs/tocify-1.9.1/jquery.tocify.js
  delete mode 100644 admin/ecc_master.html
  delete mode 100644 admin/ecc_master.tex
@@ -2811,3 +983,20 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    3edbc9e..ee7d36e  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [Kgit pushcommit -m 'shortkey L2 and moved here example to L5'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'shortkey L2 and moved here example to L5'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1@f[1@i[1@x[1@e[1@d[1@ [C[C[C[C[C[C[C[C[C L2'l L2'i L2'n L2'k L2'[C L2'
+[master 6d8bec2] fixed shortkey link  L2
+ 3 files changed, 28 insertions(+), 8 deletions(-)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pish[K[K[Kush
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
+Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 2.41 KiB | 0 bytes/s, done.
+Total 9 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/6)   [Kremote: Resolving deltas:  16% (1/6)   [Kremote: Resolving deltas:  33% (2/6)   [Kremote: Resolving deltas:  50% (3/6)   [Kremote: Resolving deltas:  66% (4/6)   [Kremote: Resolving deltas:  83% (5/6)   [Kremote: Resolving deltas: 100% (6/6)   [Kremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   ee7d36e..6d8bec2  master -> master
+git add .

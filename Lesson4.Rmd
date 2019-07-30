@@ -1,15 +1,19 @@
 ---
-Title: "Lesson 4"
+params:
+  lesson: "Lesson 4"
+  title: "`apply` functions and plotting barcharts and distributions"
+  bookchapter_name: "Section 3.5.1"    
+  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
+  functions: "`apply`, `sapply`, `lapply`, `mapply`, `%>%`"
+  packages: "No new packages!"      
+  # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
-  html_document
-params:
-  lesson: !r paste0("Lesson ",4)
-  title: "Lesson 4: `apply` functions and plotting barcharts and distributions"      
+  html_document:
+    code_folding: hide
 ---
-
-
+  
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
 options(width=100)
 knitr::opts_chunk$set(
@@ -34,7 +38,7 @@ if (require(packages)) {
     # load tvthemes
     devtools::install_github("Ryo-N7/tvthemes")
 }
-lapply(packages,library,character.only=T)
+lapply(packages,library,character.only=T)  
 ```
 
 <!-- ____________________________________________________________________________ -->
@@ -42,24 +46,24 @@ lapply(packages,library,character.only=T)
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
 
-# `r params$title`        
+# `r paste0(params$lesson,": ",params$title)`    
 \  
 
-Functions for `r params$lesson`    
-```{r,eval=T, echo=F}
-require(readr)
-readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
-```
-\  
-
-Packages for `r params$lesson`      
-```{r,eval=T, echo=F}
-require(readr)
-readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
-```
+Functions for `r params$lesson`  
+`r params$functions`    
 \    
 
-# Agenda  
+Packages for `r params$lesson`          
+`r params$packages`        
+\    
+
+# Agenda
+
+[Data visualisation in `R` for Data Science, `r params$bookchapter_name`](`r params$bookchapter_section`).      
+\  
+
+<!--  end yaml template------------------------------------------------------- -->  
+  
 * Use `apply`, `mapply`, `lapply`, and `sapply` to apply functions to data  
 * Plot bar charts and distributions  
 

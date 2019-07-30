@@ -1,15 +1,19 @@
 ---
-Title: "Lesson 3"
+params:
+  lesson: "Lesson 3"
+  title: "Using lists and fitting lines and curves to data"      
+  bookchapter_name: "Section 3.5.1"    
+  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
+  functions: "`p_load`"
+  packages: "`pacman`"      
+  # end inputs --------------------------------------------------------------- 
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
-  html_document
-params:
-  lesson: !r paste0("Lesson ",3)
-  title: "Lesson 3: Using lists and fitting lines and curves to data"      
+  html_document:
+    code_folding: hide
 ---
-
-
+  
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
 options(width=100)
 knitr::opts_chunk$set(
@@ -34,7 +38,7 @@ if (require(packages)) {
     # load tvthemes
     devtools::install_github("Ryo-N7/tvthemes")
 }
-lapply(packages,library,character.only=T)
+lapply(packages,library,character.only=T)  
 ```
 
 <!-- ____________________________________________________________________________ -->
@@ -42,29 +46,25 @@ lapply(packages,library,character.only=T)
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
 
-# `r params$title`      
+# `r paste0(params$lesson,": ",params$title)`    
 \  
 
-Functions for `r params$lesson`    
-```{r,eval=T, echo=F}
-require(readr)
-readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/functions_lesson2.txt")
-```
-\  
-
-Packages for `r params$lesson`      
-```{r,eval=T, echo=F}
-require(readr)
-readLines("https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/packages_lesson2.txt")
-```
+Functions for `r params$lesson`  
+`r params$functions`    
 \    
 
-# Agenda  
+Packages for `r params$lesson`          
+`r params$packages`        
+\    
 
-We'll be using [Ch 3 Data visualisation in `R` for Data Science](https://r4ds.had.co.nz/data-visualisation.html#statistical-transformations).  
-Section 3.7.       
+# Agenda
 
-* Explore the super useful `list` structure  
+[Data visualisation in `R` for Data Science, `r params$bookchapter_name`](`r params$bookchapter_section`).      
+\  
+
+<!--  end yaml template------------------------------------------------------- -->
+
+* Explore the super useful `list` structure    
 * Plot bar charts and density distributions  
 
 # Do First    
@@ -83,4 +83,26 @@ ggplot(data = nyc, mapping = aes(x = minimum_nights, y = price)) +
   theme_classic()
 
 ```
+\  
 
+# Load packages with `pacman`  
+```{r}
+install.packages("pacman")
+require(pacman)
+```  
+
+Type in the packages you want to install into the p_load function.  
+_Note: the below two arguments are the same_
+```{r}
+p_load(dplyr,ggplot2) # your packages  
+pacman::p_load(dplyr,ggplot2) # this is the same as above, but allows you to use a specific function from a package without loading the entire package: 'package::function(argument1,argument2,argument3)'  
+```
+
+
+# Applying the Airbnb data  
+Try using the new examples on the Airbnb dataset.      
+
+<!-- end body -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
