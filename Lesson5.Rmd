@@ -4,14 +4,14 @@ params:
   title: "`if` statements and subsetting data"
   bookchapter_name: "Section 3.5.1"    
   bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
-  functions: "`facet_bar`, `list`"
+  functions: "`geom_bar`, `list`, `filter`, `subset`, `here`"
   packages: "`here`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
   html_document:
-    code_folding: hide
+    code_folding: show
 ---
   
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
@@ -26,6 +26,7 @@ knitr::opts_chunk$set(
   tidy.opts=list(width.cutoff=100), # set width of code chunks in output
   size="small" # set code chunk size
   )
+
 ```
 \
 
@@ -111,5 +112,14 @@ here("lookhere","heretest.txt") # using here to forage for the file
 here("lookhere","heretest.txt") %>% readLines # print the contents in R
 
 ```
+\  
+
+# Applying the Airbnb data  
+Use the new examples on the Airbnb dataset.      
+
+<!-- end body -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
 
 

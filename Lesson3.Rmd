@@ -11,7 +11,7 @@ header-includes: \usepackage{float}
 always_allow_html: yes
 output:
   html_document:
-    code_folding: hide
+    code_folding: show
 ---
   
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
@@ -97,10 +97,10 @@ _Note: the below two arguments are the same_
 p_load(dplyr,ggplot2) # your packages  
 pacman::p_load(dplyr,ggplot2) # this is the same as above, but allows you to use a specific function from a package without loading the entire package: 'package::function(argument1,argument2,argument3)'  
 ```
-
+\  
 
 # Applying the Airbnb data  
-Try using the new examples on the Airbnb dataset.      
+Use the new examples on the Airbnb dataset.      
 
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->

@@ -188,9 +188,10 @@ ggplot(data = my_data) +
   geom_smooth(mapping = aes(x = displ, y = hwy)) +
   my_theme
 ```
+\  
 
 # Applying the Airbnb data  
-Try using the new examples on the Airbnb dataset.      
+Use the new examples on the Airbnb dataset.      
 
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->

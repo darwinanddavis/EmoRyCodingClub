@@ -5,13 +5,13 @@ params:
   bookchapter_name: "Section 3.5.1"    
   bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
   functions: "`apply`, `sapply`, `lapply`, `mapply`, `%>%`"
-  packages: "No new packages!"      
+  packages: "`dplyr`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
   html_document:
-    code_folding: hide
+    code_folding: show
 ---
   
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
@@ -139,4 +139,13 @@ my_list %>% lapply(median)
 my_list %>% lapply(unique)
 my_list %>% lapply(sum) # error b/c the second list element is a character class 
 ```
+\  
+
+# Applying the Airbnb data  
+Use the new examples on the Airbnb dataset.      
+
+<!-- end body -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
 
