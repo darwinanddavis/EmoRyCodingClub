@@ -1075,3 +1075,44 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    d5e404e..93da053  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit - m ''u'p'd'a't'e'[1P'[1P'[1P'[1P'[1P'[1P'L'4' 'p'[1P'u'p'd'a't'e'
+[master b38067f] L4 update
+ 9 files changed, 75 insertions(+), 23 deletions(-)
+ rename docs/Lesson4_files/figure-html/{unnamed-chunk-3-1.png => unnamed-chunk-1-1.png} (100%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git ousg[K[K[K[Kpush
+Counting objects: 16, done.
+Delta compression using up to 4 threads.
+Compressing objects:   7% (1/14)   Compressing objects:  14% (2/14)   Compressing objects:  21% (3/14)   Compressing objects:  28% (4/14)   Compressing objects:  35% (5/14)   Compressing objects:  42% (6/14)   Compressing objects:  50% (7/14)   Compressing objects:  57% (8/14)   Compressing objects:  64% (9/14)   Compressing objects:  71% (10/14)   Compressing objects:  78% (11/14)   Compressing objects:  85% (12/14)   Compressing objects:  92% (13/14)   Compressing objects: 100% (14/14)   Compressing objects: 100% (14/14), done.
+Writing objects:   6% (1/16)   Writing objects:  12% (2/16)   Writing objects:  18% (3/16)   Writing objects:  25% (4/16)   Writing objects:  31% (5/16)   Writing objects:  37% (6/16)   Writing objects:  43% (7/16)   Writing objects:  50% (8/16)   Writing objects:  56% (9/16)   Writing objects:  62% (10/16)   Writing objects:  68% (11/16)   Writing objects:  75% (12/16)   Writing objects:  81% (13/16)   Writing objects:  87% (14/16)   Writing objects:  93% (15/16)   Writing objects: 100% (16/16)   Writing objects: 100% (16/16), 6.24 KiB | 0 bytes/s, done.
+Total 16 (delta 11), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/11)   [Kremote: Resolving deltas:   9% (1/11)   [Kremote: Resolving deltas:  18% (2/11)   [Kremote: Resolving deltas:  27% (3/11)   [Kremote: Resolving deltas:  36% (4/11)   [Kremote: Resolving deltas:  45% (5/11)   [Kremote: Resolving deltas:  54% (6/11)   [Kremote: Resolving deltas:  63% (7/11)   [Kremote: Resolving deltas:  72% (8/11)   [Kremote: Resolving deltas:  81% (9/11)   [Kremote: Resolving deltas:  90% (10/11)   [Kremote: Resolving deltas: 100% (11/11)   [Kremote: Resolving deltas: 100% (11/11), completed with 11 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   93da053..b38067f  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ list.[K[K[K[K[Kls
+Lesson1.Rmd
+Lesson2.Rmd
+Lesson3.Rmd
+Lesson4.Rmd
+Lesson5.Rmd
+Lesson5_cache
+Lesson5_files
+README.md
+_site.yml
+admin
+admin_
+docs
+emorycodingclub.Rproj
+functions_lesson1.txt
+functions_lesson2.txt
+img
+index.Rmd
+lookhere
+nyc_compact.csv
+packages_lesson1.txt
+packages_lesson2.txt
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open gitign[K[K[K[K[K[K.gitih[Kgnoore 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .

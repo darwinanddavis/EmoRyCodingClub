@@ -11,7 +11,7 @@ header-includes: \usepackage{float}
 always_allow_html: yes
 output:
   html_document:
-    code_folding: hide
+    code_folding: show
 ---
   
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
@@ -196,33 +196,33 @@ ggplot(data = my_data) +
 # Aesthetic mapping  
 [Section 3.3](https://r4ds.had.co.nz/data-visualisation.html#aesthetic-mappings)  
 
-`color`. Change the color of the data points.
+`colour`. Change the colour of the data points.
 `size`. Change the size of the data points.  
 `alpha`. Change the transparency of the data points.   
 
-## Color
+## Colour
 
-Color by color name. 
+Colour by colour name. 
 ```{r, eval = T}
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy), color = "light blue") +
+  geom_point(mapping = aes(x = displ, y = hwy), colour = "light blue") +
   my_theme
   
 ```
 \   
 
-Color by a [hex code](https://htmlcolorcodes.com/color-picker/) in quotes.  
+Colour by a [hex code](https://htmlcolorcodes.com/color-picker/) in quotes.  
 ```{r, eval = T}
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy), color = "#BB5C42") +
+  geom_point(mapping = aes(x = displ, y = hwy), colour = "#BB5C42") +
   my_theme
 ```
 \  
 
-Color by data column  
+colour by data column  
 ```{r, eval = T}
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+  geom_point(mapping = aes(x = displ, y = hwy, colour = class)) +
   my_theme
 ```
 \  
@@ -230,7 +230,7 @@ ggplot(data = my_data) +
 Inside versus outside the `aes`  
 ```{r, eval = T}
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = "blue")) +
+  geom_point(mapping = aes(x = displ, y = hwy, colour = "blue")) +
   my_theme
 ```
 \  
@@ -278,19 +278,19 @@ Any warnings? Yes, because shape maxes out at six levels.
 
 ## Manually changing aesthetic properties
   
-But we can *set* the aesthetic properties manually, instead of having ggplot do the scaling automatically. For example, we can make our ggplot points all blue like this. This time, putting color OUTSIDE the `aes` argument.
+But we can *set* the aesthetic properties manually, instead of having ggplot do the scaling automatically. For example, we can make our ggplot points all blue like this. This time, putting colour OUTSIDE the `aes` argument.
 
 ```{r, eval = T}
 ggplot(data = my_data) +  
-  geom_point(mapping = aes(x = displ, y = hwy), color = "blue") +
+  geom_point(mapping = aes(x = displ, y = hwy), colour = "blue") +
   my_theme
 ```
 \  
 
-Using color both inside and outside the aes  
+Using colour both inside and outside the aes  
 ```{r, eval = T}
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = class), color = "#AE42BB") +
+  geom_point(mapping = aes(x = displ, y = hwy, colour = class), colour = "#AE42BB") +
   my_theme
 ```
 \  
@@ -301,13 +301,13 @@ ggplot(data = my_data) +
 Putting it all together as a snapshot of what's possible  
 ```{r, eval = T}
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = class, size = class, alpha = class)) +
+  geom_point(mapping = aes(x = displ, y = hwy, colour = class, size = class, alpha = class)) +
   my_theme
 ```
 
 ## Aesthetics you can manually set  
 
-  * The name of a color as a character string.
+  * The name of a colour as a character string.
   * The size of a point in mm.
   * The shape of a point as a number, as shown in Figure 3.1. 
   
@@ -358,7 +358,7 @@ Using the above plotting functions to visualise the AirBnB data
 ```{r, eval=T}
 # plot neighborhood_group vs price
 ggplot(data = nyc) + 
-  geom_point(mapping = aes(x = neighbourhood_group, y = price, color =
+  geom_point(mapping = aes(x = neighbourhood_group, y = price, colour =
                              neighbourhood_group), shape = 21, stroke = 1) +
   my_theme
 ```
@@ -367,7 +367,7 @@ ggplot(data = nyc) +
 # plot minimum_nights vs price
 ggplot(data = nyc) + 
   geom_point(mapping = aes(x = minimum_nights, y = price, 
-                           color = neighbourhood_group), shape = 20, size = 3, stroke = 1) +
+                           colour = neighbourhood_group), shape = 20, size = 3, stroke = 1) +
   my_theme
 ```
 
@@ -375,7 +375,7 @@ ggplot(data = nyc) +
 # availability_365 vs price
 ggplot(data = nyc) + 
   geom_point(mapping = aes(x = availability_365, y = price, 
-                           color = neighbourhood_group), shape = 21, stroke = 1) +
+                           colour = neighbourhood_group), shape = 21, stroke = 1) +
   my_theme
 ```
     
@@ -383,7 +383,7 @@ ggplot(data = nyc) +
 # plot longitude vs price
 ggplot(data = nyc) + 
   geom_point(mapping = aes(x = longitude, y = price, 
-                           color = neighbourhood_group), shape = 21, stroke = 1) +
+                           colour = neighbourhood_group), shape = 21, stroke = 1) +
   my_theme
 ```
 
@@ -397,14 +397,14 @@ glimpse(airbnb)
 my_data <- NULL
 x <- NULL
 y <- NULL
-color <- NULL
+colour <- NULL
 shape <- NULL
 stroke <- NULL
 ```
 
 ```{r, echo=F}
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = x, y = y, color = color), shape = shape, stroke = stroke)
+  geom_point(mapping = aes(x = x, y = y, colour = colour), shape = shape, stroke = stroke)
 ```
 
 <!-- end body -->

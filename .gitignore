@@ -4,3 +4,4 @@ admin_/
 .DS_Store
 docs/admin/
 docs/_site
+*.csv

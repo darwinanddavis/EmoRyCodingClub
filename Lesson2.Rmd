@@ -1,11 +1,11 @@
 ---
 params:
   lesson: "Lesson 2"
-  title: "Reading data, setting working directories, and plotting facets"
+  title: "Reading data and plotting facets and curves"
   bookchapter_name: "Section 3.5.1"    
   bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
-  functions: "`facet_wrap`, `facet_grid`, `geom_smooth`"
-  packages: "No new packages!"      
+  functions: "`facet_wrap`, `facet_grid`, `geom_smooth`, `filter`"
+  packages: "`dplyr`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
@@ -114,6 +114,15 @@ ggplot(data=nyc) +
 \        
 
 # Read in data      
+
+<!-- NOT RUN -->
+<!-- create emailable airbnb dataset -->
+```{r,echo=F,eval=F}
+nyc_email <- nyc[1:1000,]
+write_csv(nyc_email,paste0(getwd(),"/nyc_compact.csv"))
+```
+\    
+
 ```{r}
 my_file <- "your_csv_file.csv"
 my_data <- read_csv(my_file)
@@ -126,7 +135,7 @@ One way to group your data is by colour
 my_data <- mpg
 my_theme <- theme_classic()
 ggplot(data = my_data) + 
-  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +
+  geom_point(mapping = aes(x = displ, y = hwy, colour = class)) +
   my_theme
 ```
 \  
@@ -156,11 +165,35 @@ ggplot(data = my_data) +
 ```
 
 
-# Exercise 3.5  
-[3.5.1](https://r4ds.had.co.nz/data-visualisation.html#exercises-2)  
-  
+# Exercise 3.5.1  
+[Try the exercises from 3.5.1](https://r4ds.had.co.nz/data-visualisation.html#exercises-2).          
+
+# `geom_smooth`    
+
+Plotting points (`geom_point`) or lines (`geom_smooth`)    
+```{r,eval=T}
+# left
+ggplot(data = my_data) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  my_theme
+
+# right
+ggplot(data = my_data) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy)) +
+  my_theme
+```
+
+
+# Linetype    
+Grouping by linetype  
+```{r, eval=T}
+ggplot(data = my_data) + 
+  geom_smooth(mapping = aes(x = displ, y = hwy, linetype = drv)) +
+  my_theme
+```
+
 # Group vs. colour
-Using `group` separates the data into objects, but `colour` will distinguish the differences among these objects     
+Using `group` separates the data into objects ...  
 ```{r,eval=T}
 ggplot(data = my_data) +
   geom_smooth(mapping = aes(x = displ, y = hwy)) +
@@ -169,10 +202,14 @@ ggplot(data = my_data) +
 ggplot(data = my_data) +
   geom_smooth(mapping = aes(x = displ, y = hwy, group = drv)) +
   my_theme
-    
+```
+\  
+
+... but `colour` will distinguish the differences among these objects       
+```{r, eval=T}
 ggplot(data = my_data) +
   geom_smooth(
-    mapping = aes(x = displ, y = hwy, color = drv),
+    mapping = aes(x = displ, y = hwy, colour = drv),
     show.legend = FALSE
   ) +
   my_theme
@@ -187,8 +224,107 @@ ggplot(data = my_data) +
   geom_point(mapping = aes(x = displ, y = hwy)) +
   geom_smooth(mapping = aes(x = displ, y = hwy)) +
   my_theme
+
+# condensing code
+ggplot(data = my_data, mapping = aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  geom_smooth() +
+  my_theme
+
+# adding aes
+ggplot(data = my_data, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(colour = "steel blue") + 
+  geom_smooth(colour = "#C6BDEA", fill="#C6BDEA") +
+  my_theme
+```
+\    
+
+But why does this throw an error?    
+```{r, eval=T, error=T}
+# adding aes
+ggplot(data = my_data) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  geom_smooth() +
+  my_theme
+```
+
+
+
+Specifying layers  
+```{r, eval=T}
+ggplot(data = my_data, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = class)) + 
+  geom_smooth() +
+  my_theme
+```
+
+\  
+
+Applying different datasets to one plot (overriding data)  
+```{r, eval=T}
+require(dplyr)
+names(my_data)
+# subset data with filter
+my_data_subcompact <-  filter(filter(my_data, class == "subcompact"))
+
+ggplot(data = my_data, mapping = aes(x = displ, y = hwy)) + 
+  geom_point(mapping = aes(color = class)) + # original data
+  geom_smooth(data = my_data_subcompact, se = FALSE) + # filtered data 
+  my_theme
 ```
 \  
+
+# Exercise 3.6.1  
+[Try the exercises from 3.6.1](https://r4ds.had.co.nz/data-visualisation.html#exercises-3).  
+
+
+```{r}
+#1
+ggplot(my_data) # ...
+
+#2
+
+```
+
+```{r, echo=F}
+
+#1
+ggplot(my_data, aes(displ, hwy)) +
+  geom_point() +
+  geom_smooth(se=F) +
+  my_theme
+
+#2 
+ggplot(my_data, aes(displ, hwy)) +
+  geom_point() +
+  geom_smooth(aes(group = drv), se=F) +
+  my_theme
+
+#3 
+ggplot(my_data, aes(displ, hwy, color = drv)) +
+  geom_point() +
+  geom_smooth(se=F) +
+  my_theme
+
+#4
+ggplot(my_data, aes(displ, hwy)) +
+  geom_point(aes(colour=drv)) +
+  geom_smooth(se=F) +
+  my_theme
+
+#5 
+ggplot(my_data) +
+  geom_point(aes(displ, hwy, color = drv)) +
+  geom_smooth(aes(displ, hwy, linetype=drv), se=F) +
+  my_theme
+
+#6 
+# notice stroke argument
+ggplot(my_data) +
+  geom_point(aes(displ, hwy, fill=drv, stroke=4), shape=21, colour = "white", size=3)
+
+```
+\    
 
 # Applying the Airbnb data  
 Use the new examples on the Airbnb dataset.      
