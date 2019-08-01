@@ -23,7 +23,7 @@ output:
     theme: lumen
     highlight: tango
     code_folding: show
-    code_download: true
+    code_download: false
     toc: yes
     toc_depth: 2
     toc_float: yes
