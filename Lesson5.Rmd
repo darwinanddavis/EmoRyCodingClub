@@ -96,7 +96,7 @@ ggplot() +
 ```
 
 
-# Reading in data files    
+# Setting your working directory  
 Using `here` to set your working directory  
 ```{r}
 require(here) # load the here package if not already

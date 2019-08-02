@@ -82,8 +82,8 @@ require(ggplot2)
 require(dplyr)
 require(ggthemes)
 
-ttl <- "Price of Airbnb apartments in NYC"
-subttl <- "by number of reviews"
+ttl <- "Reviews of Airbnb apartments in NYC"
+subttl <- "by month"
 caption <- "Source: Airbnb open data"
 xlab <- "Reviews per month"
 ylab <- "Number of reviews"  

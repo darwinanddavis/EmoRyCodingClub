@@ -118,14 +118,15 @@ ggplot(data=nyc) +
 <!-- NOT RUN -->
 <!-- create emailable airbnb dataset -->
 ```{r,echo=F,eval=F}
-nyc_email <- nyc[1:1000,]
-write_csv(nyc_email,paste0(getwd(),"/nyc_compact.csv"))
+nyc_compact <- nyc[1:1000,]
+write_csv(nyc_compact,paste0(getwd(),"/nyc_compact.csv"))
 ```
 \    
 
 ```{r}
 my_file <- "your_csv_file.csv"
-my_data <- read_csv(my_file)
+my_data <- read_csv(my_file) # read in the csv data file  
+glimpse(my_data)
 ```
 \  
 
