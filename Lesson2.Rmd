@@ -57,7 +57,7 @@ Packages for `r params$lesson`
 `r params$packages`        
 \    
 
-# Agenda
+# Agenda  
 
 [Data visualisation in `R` for Data Science, `r params$bookchapter_name`](`r params$bookchapter_section`).    
 
@@ -65,10 +65,9 @@ Packages for `r params$lesson`
 
 * Do first problem set
 * Read in data file  
-* Set working directory `here`  
-* Facets  
-
-
+* Plotting facets  
+* Plotting curves    
+* Combining plot types    
 \  
 
 # Do First problem set  
@@ -108,10 +107,9 @@ ggplot(data=nyc) +
 
 `TAB` = autofill rest of function/global variable  
 `CTRL + ENTER` = run code    
-`ALT (OPTION) + -` = insert assign operator `<-`    
+`ALT + minus sign` = insert assign operator `<-`    
 `CTRL + SHIFT + M` = insert pipe `%>%`     
-**Run `ALT + SHIFT + K`  for [all available shortkeys](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)**        
-\        
+**Run `ALT + SHIFT + K`  for [all available shortkeys](https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts)**  \          
 
 # Read in data      
 
@@ -121,7 +119,7 @@ ggplot(data=nyc) +
 nyc_compact <- nyc[1:1000,]
 write_csv(nyc_compact,paste0(getwd(),"/nyc_compact.csv"))
 ```
-\    
+\      
 
 ```{r}
 my_file <- "your_csv_file.csv"
@@ -165,6 +163,20 @@ ggplot(data = my_data) +
   my_theme
 ```
 
+You can also replace the X or Y argument in `facet_grid` with a period (".") to plot only one variable.   
+```{r, eval=T}
+# Y var
+ggplot(data = my_data) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(. ~ cyl) +
+  my_theme
+
+# X var
+ggplot(data = my_data) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(drv ~ .) +
+  my_theme
+```
 
 # Exercise 3.5.1  
 [Try the exercises from 3.5.1](https://r4ds.had.co.nz/data-visualisation.html#exercises-2).          

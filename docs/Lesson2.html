@@ -521,11 +521,13 @@ div.tocify {
 <li>Do first problem set</li>
 <li>Read in data file<br />
 </li>
-<li>Set working directory <code>here</code><br />
+<li>Plotting facets<br />
 </li>
-<li>Facets</li>
+<li>Plotting curves<br />
+</li>
+<li>Combining plot types<br />
+ </li>
 </ul>
-<p> </p>
 </div>
 <div id="do-first-problem-set" class="section level1">
 <h1>Do First problem set</h1>
@@ -540,10 +542,9 @@ div.tocify {
 <h1>Some useful shortkeys for making <code>R</code> life easier</h1>
 <p><code>TAB</code> = autofill rest of function/global variable<br />
 <code>CTRL + ENTER</code> = run code<br />
-<code>ALT (OPTION) + -</code> = insert assign operator <code>&lt;-</code><br />
+<code>ALT + minus sign</code> = insert assign operator <code>&lt;-</code><br />
 <code>CTRL + SHIFT + M</code> = insert pipe <code>%&gt;%</code><br />
-<strong>Run <code>ALT + SHIFT + K</code> for <a href="https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts">all available shortkeys</a></strong><br />
- </p>
+<strong>Run <code>ALT + SHIFT + K</code> for <a href="https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts">all available shortkeys</a></strong>  </p>
 </div>
 <div id="read-in-data" class="section level1">
 <h1>Read in data</h1>
@@ -578,6 +579,13 @@ When you know the two variables you want to plot<br />
 <strong>The formula structure for <code>facet_grid</code> is Y variable <code>~</code> X variable, e.g. <code>drv ~ cyl</code></strong></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(drv <span class="op">~</span><span class="st"> </span>cyl) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson2_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>You can also replace the X or Y argument in <code>facet_grid</code> with a period (“.”) to plot only one variable.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Y var</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(. <span class="op">~</span><span class="st"> </span>cyl) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># X var</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(drv <span class="op">~</span><span class="st"> </span>.) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
 </div>
 <div id="exercise-3.5.1" class="section level1">
 <h1>Exercise 3.5.1</h1>
@@ -588,28 +596,28 @@ When you know the two variables you want to plot<br />
 <p>Plotting points (<code>geom_point</code>) or lines (<code>geom_smooth</code>)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># left</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># right</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
 </div>
 <div id="linetype" class="section level1">
 <h1>Linetype</h1>
 <p>Grouping by linetype</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">linetype =</span> drv)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 </div>
 <div id="group-vs.colour" class="section level1">
 <h1>Group vs. colour</h1>
 <p>Using <code>group</code> separates the data into objects …</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">group =</span> drv)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-10-2.png" width="672" />  </p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-11-2.png" width="672" />  </p>
 <p>… but <code>colour</code> will distinguish the differences among these objects</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">colour =</span> drv), <span class="dt">show.legend =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span>
 <span class="st">    </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 </div>
 <div id="geometric-objects" class="section level1">
 <h1>Geometric objects</h1>
@@ -619,23 +627,23 @@ When you know the two variables you want to plot<br />
 <p>Possibly the most useful part of plotting data is layering plot types</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, 
     <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># condensing code</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># adding aes</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">colour =</span> <span class="st">&quot;steel blue&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">colour =</span> <span class="st">&quot;#C6BDEA&quot;</span>, 
     <span class="dt">fill =</span> <span class="st">&quot;#C6BDEA&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-12-3.png" width="672" />  </p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-13-3.png" width="672" />  </p>
 <p>But why does this throw an error?</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># adding aes</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <pre><code>Error: stat_smooth requires the following missing aesthetics: x, y</code></pre>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <p>Specifying layers</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">color =</span> class)) <span class="op">+</span><span class="st"> </span>
 <span class="st">    </span><span class="kw">geom_smooth</span>() <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p> </p>
 <p>Applying different datasets to one plot (overriding data)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(dplyr)
@@ -649,7 +657,7 @@ my_data_subcompact &lt;-<span class="st">  </span><span class="kw">filter</span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">color =</span> class)) <span class="op">+</span><span class="st"> </span><span class="co"># original data</span>
 <span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">data =</span> my_data_subcompact, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span><span class="co"># filtered data </span>
 <span class="st">  </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-15-1.png" width="672" />  </p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-16-1.png" width="672" />  </p>
 </div>
 <div id="exercise-3.6.1" class="section level1">
 <h1>Exercise 3.6.1</h1>
