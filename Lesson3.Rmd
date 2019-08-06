@@ -1,9 +1,9 @@
 ---
 params:
   lesson: "Lesson 3"
-  title: "Using lists and fitting lines and curves to data"      
+  title: "Statistical transformations and using lists"      
   bookchapter_name: "Section 3.5.1"    
-  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
+  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#statistical-transformations"
   functions: "`p_load`"
   packages: "`pacman`"      
   # end inputs --------------------------------------------------------------- 
@@ -72,6 +72,9 @@ Packages for `r params$lesson`
 Recreate the below plot using the smaller NYC Airbnb dataset.  
 ```{r, echo=F, eval=T, out.width="100%"}
 require(ggthemes)
+require(ggplot2)
+require(readr)
+
 # smaller csv file (16 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
 nyc <-  read_csv(url)
