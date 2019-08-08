@@ -1,27 +1,4 @@
 
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/de.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/el.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/eo.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es-ar.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es-pe.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/et.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/eu.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fa.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fi.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fo.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fr-ch.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fr.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/gl.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/gu.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/he.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hi-in.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hr.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hu.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hy.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/id.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/is.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/it.js
  delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ja.js
  delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ka.js
  delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/km.js
@@ -999,4 +976,27 @@ remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
 remote: 
 To https://github.com/darwinanddavis/EmoRyCodingClub
    e359c47..d7fc526  master -> master
+[K6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git comi[Kmit - m ''[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C- m ''s'i't'e'[1P'[1P'[1P'[1P'l'3'[1P'[1P'L'3' 'u'p'd'a't'e'
+[master 9ca978a] L3 update
+ 13 files changed, 402 insertions(+), 560 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (85%)
+ rewrite docs/Lesson4_files/figure-html/unnamed-chunk-1-1.png (96%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push[K[K[K[Kremote - v
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 23, done.
+Delta compression using up to 4 threads.
+Compressing objects:   4% (1/21)   Compressing objects:   9% (2/21)   Compressing objects:  14% (3/21)   Compressing objects:  19% (4/21)   Compressing objects:  23% (5/21)   Compressing objects:  28% (6/21)   Compressing objects:  33% (7/21)   Compressing objects:  38% (8/21)   Compressing objects:  42% (9/21)   Compressing objects:  47% (10/21)   Compressing objects:  52% (11/21)   Compressing objects:  57% (12/21)   Compressing objects:  61% (13/21)   Compressing objects:  66% (14/21)   Compressing objects:  71% (15/21)   Compressing objects:  76% (16/21)   Compressing objects:  80% (17/21)   Compressing objects:  85% (18/21)   Compressing objects:  90% (19/21)   Compressing objects:  95% (20/21)   Compressing objects: 100% (21/21)   Compressing objects: 100% (21/21), done.
+Writing objects:   4% (1/23)   Writing objects:   8% (2/23)   Writing objects:  13% (3/23)   Writing objects:  17% (4/23)   Writing objects:  21% (5/23)   Writing objects:  26% (6/23)   Writing objects:  30% (7/23)   Writing objects:  34% (8/23)   Writing objects:  39% (9/23)   Writing objects:  43% (10/23)   Writing objects:  47% (11/23)   Writing objects:  52% (12/23)   Writing objects:  56% (13/23)   Writing objects:  60% (14/23)   Writing objects:  65% (15/23)   Writing objects:  69% (16/23)   Writing objects:  73% (17/23)   Writing objects:  78% (18/23)   Writing objects:  82% (19/23)   Writing objects:  86% (20/23)   Writing objects:  91% (21/23)   Writing objects:  95% (22/23)   Writing objects: 100% (23/23)   Writing objects: 100% (23/23), 191.58 KiB | 0 bytes/s, done.
+Total 23 (delta 16), reused 1 (delta 0)
+remote: Resolving deltas:   0% (0/16)   [Kremote: Resolving deltas:   6% (1/16)   [Kremote: Resolving deltas:  12% (2/16)   [Kremote: Resolving deltas:  18% (3/16)   [Kremote: Resolving deltas:  25% (4/16)   [Kremote: Resolving deltas:  31% (5/16)   [Kremote: Resolving deltas:  37% (6/16)   [Kremote: Resolving deltas:  43% (7/16)   [Kremote: Resolving deltas:  50% (8/16)   [Kremote: Resolving deltas:  56% (9/16)   [Kremote: Resolving deltas:  62% (10/16)   [Kremote: Resolving deltas:  68% (11/16)   [Kremote: Resolving deltas:  75% (12/16)   [Kremote: Resolving deltas:  81% (13/16)   [Kremote: Resolving deltas:  87% (14/16)   [Kremote: Resolving deltas:  93% (15/16)   [Kremote: Resolving deltas: 100% (16/16)   [Kremote: Resolving deltas: 100% (16/16), completed with 16 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   d7fc526..9ca978a  master -> master
 [K6300L-127771-M:ecc malishev$ git add .

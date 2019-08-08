@@ -465,7 +465,7 @@ div.tocify {
 <code>facet_wrap</code>, <code>facet_grid</code>, <code>geom_smooth</code>, <code>filter</code><br />
  </p>
 <p>Packages for Lesson 2<br />
-<code>dplyr</code><br />
+<code>ggplot2</code>,<code>dplyr</code><br />
  </p>
 </div>
 <div id="agenda" class="section level1">
@@ -545,34 +545,35 @@ When you know the two variables you want to plot<br />
 <div id="exercise-3.5.1" class="section level1">
 <h1>Exercise 3.5.1</h1>
 <p><a href="https://r4ds.had.co.nz/data-visualisation.html#exercises-2">Try the exercises from 3.5.1</a>.</p>
+<hr />
 </div>
 <div id="geom_smooth" class="section level1">
 <h1><code>geom_smooth</code></h1>
 <p>Plotting points (<code>geom_point</code>) or lines (<code>geom_smooth</code>)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># left</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># right</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-9-2.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
 </div>
 <div id="linetype" class="section level1">
 <h1>Linetype</h1>
 <p>Grouping by linetype</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">linetype =</span> drv)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="group-vs.colour" class="section level1">
 <h1>Group vs. colour</h1>
 <p>Using <code>group</code> separates the data into objects …</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">group =</span> drv)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-11-2.png" width="672" />  </p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-12-2.png" width="672" />  </p>
 <p>… but <code>colour</code> will distinguish the differences among these objects</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">colour =</span> drv), <span class="dt">show.legend =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span>
 <span class="st">    </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
 <div id="geometric-objects" class="section level1">
 <h1>Geometric objects</h1>
@@ -582,23 +583,23 @@ When you know the two variables you want to plot<br />
 <p>Possibly the most useful part of plotting data is layering plot types</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, 
     <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># condensing code</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-13-2.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># adding aes</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">colour =</span> <span class="st">&quot;steel blue&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">colour =</span> <span class="st">&quot;#C6BDEA&quot;</span>, 
     <span class="dt">fill =</span> <span class="st">&quot;#C6BDEA&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-13-3.png" width="672" />  </p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-14-3.png" width="672" />  </p>
 <p>But why does this throw an error?</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># adding aes</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <pre><code>Error: stat_smooth requires the following missing aesthetics: x, y</code></pre>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>Specifying layers</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">color =</span> class)) <span class="op">+</span><span class="st"> </span>
 <span class="st">    </span><span class="kw">geom_smooth</span>() <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
 <p> </p>
 <p>Applying different datasets to one plot (overriding data)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(dplyr)
@@ -612,7 +613,7 @@ my_data_subcompact &lt;-<span class="st">  </span><span class="kw">filter</span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">color =</span> class)) <span class="op">+</span><span class="st"> </span><span class="co"># original data</span>
 <span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">data =</span> my_data_subcompact, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span><span class="co"># filtered data </span>
 <span class="st">  </span>my_theme</code></pre></div>
-<p><img src="Lesson2_files/figure-html/unnamed-chunk-16-1.png" width="672" />  </p>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-17-1.png" width="672" />  </p>
 </div>
 <div id="exercise-3.6.1" class="section level1">
 <h1>Exercise 3.6.1</h1>
@@ -622,6 +623,7 @@ my_data_subcompact &lt;-<span class="st">  </span><span class="kw">filter</span>
 
 <span class="co"># 2</span></code></pre></div>
 <p> </p>
+<hr />
 </div>
 <div id="applying-the-airbnb-data" class="section level1">
 <h1>Applying the Airbnb data</h1>

@@ -5,7 +5,7 @@ params:
   bookchapter_name: "Section 3.5.1"    
   bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
   functions: "`facet_wrap`, `facet_grid`, `geom_smooth`, `filter`"
-  packages: "`dplyr`"      
+  packages: "`ggplot2`,`dplyr`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
@@ -181,6 +181,54 @@ ggplot(data = my_data) +
 # Exercise 3.5.1  
 [Try the exercises from 3.5.1](https://r4ds.had.co.nz/data-visualisation.html#exercises-2).          
 
+```{r, echo=F}
+#.1
+my_data <- mpg
+my_theme <- theme_classic()
+my_data %>% names
+
+ggplot(data = my_data) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(cty ~ .) +
+  my_theme
+
+#2. 
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = cyl))
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = drv, y = cyl)) +
+  facet_grid(drv ~ cyl)
+
+#3.
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(drv ~ .)
+
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) +
+  facet_grid(. ~ cyl)
+
+#4.
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy, color = class)) +  
+  facet_wrap(~ class, nrow = 2)
+
+#6.
+# when unique variable is in col
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(. ~ class) 
+
+# when unique variable is in row it flip the axis 
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(class ~ .) 
+
+```
+
+------  
+
 # `geom_smooth`    
 
 Plotting points (`geom_point`) or lines (`geom_smooth`)    
@@ -338,6 +386,8 @@ ggplot(my_data) +
 
 ```
 \    
+
+------  
 
 # Applying the Airbnb data  
 Use the new examples on the Airbnb dataset.      
