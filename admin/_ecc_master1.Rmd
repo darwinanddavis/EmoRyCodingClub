@@ -380,6 +380,16 @@ Aug 8
 -	come with own data   
 -	facets?    
 
+
+# Lesson 3  
+- Chapter 4  
+- Chapter 5 up to 5.3  
+- Introduce Rproj    
+- 
+
+
+
+
   
 # Airbnb data exploration  
 

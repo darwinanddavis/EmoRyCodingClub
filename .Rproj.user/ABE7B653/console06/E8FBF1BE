@@ -1000,3 +1000,33 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    d7fc526..9ca978a  master -> master
 [K6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git p[Kcommit  -m ''u'p'd'a't'e' 'L'2'[1P L2'[1P L2'[1P L2'[1P L2'[1P L2'[1P L2'a L2'd L2'd L2'[C L2't L2'o L2'[C L2'[1@ [1@e[1@x[C[1@ [1@c[1@o[1@d[1@e[C[1P[1P[1@p[1@r[1@a[1@c[1@t[1@i[1@c[1@e[C[1@ [1@e[1@c[1P[1@x[C[C[C[C[C[C[C[C[C[1PL2'
+[master c8cc7f5] add practice ex code to L2
+ 22 files changed, 117 insertions(+), 45 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (85%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-9-1.png => unnamed-chunk-10-1.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-11-1.png => unnamed-chunk-10-2.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-10-1.png => unnamed-chunk-11-1.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-9-2.png => unnamed-chunk-12-1.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-11-2.png => unnamed-chunk-12-2.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-12-1.png => unnamed-chunk-13-1.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-13-1.png => unnamed-chunk-14-1.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-13-2.png => unnamed-chunk-14-2.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-13-3.png => unnamed-chunk-14-3.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-14-1.png => unnamed-chunk-15-1.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-15-1.png => unnamed-chunk-16-1.png} (100%)
+ rename docs/Lesson2_files/figure-html/{unnamed-chunk-16-1.png => unnamed-chunk-17-1.png} (100%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 19, done.
+Delta compression using up to 4 threads.
+Compressing objects:   5% (1/17)   Compressing objects:  11% (2/17)   Compressing objects:  17% (3/17)   Compressing objects:  23% (4/17)   Compressing objects:  29% (5/17)   Compressing objects:  35% (6/17)   Compressing objects:  41% (7/17)   Compressing objects:  47% (8/17)   Compressing objects:  52% (9/17)   Compressing objects:  58% (10/17)   Compressing objects:  64% (11/17)   Compressing objects:  70% (12/17)   Compressing objects:  76% (13/17)   Compressing objects:  82% (14/17)   Compressing objects:  88% (15/17)   Compressing objects:  94% (16/17)   Compressing objects: 100% (17/17)   Compressing objects: 100% (17/17), done.
+Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  15% (3/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  47% (9/19)   Writing objects:  52% (10/19)   Writing objects:  57% (11/19)   Writing objects:  63% (12/19)   Writing objects:  68% (13/19)   Writing objects:  73% (14/19)   Writing objects:  78% (15/19)   Writing objects:  84% (16/19)   Writing objects:  89% (17/19)   Writing objects:  94% (18/19)   Writing objects: 100% (19/19)   Writing objects: 100% (19/19), 2.96 KiB | 0 bytes/s, done.
+Total 19 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/10)   [Kremote: Resolving deltas:  10% (1/10)   [Kremote: Resolving deltas:  20% (2/10)   [Kremote: Resolving deltas:  30% (3/10)   [Kremote: Resolving deltas:  40% (4/10)   [Kremote: Resolving deltas:  50% (5/10)   [Kremote: Resolving deltas:  60% (6/10)   [Kremote: Resolving deltas:  70% (7/10)   [Kremote: Resolving deltas:  80% (8/10)   [Kremote: Resolving deltas:  90% (9/10)   [Kremote: Resolving deltas: 100% (10/10)   [Kremote: Resolving deltas: 100% (10/10), completed with 10 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   9ca978a..c8cc7f5  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malisshev$ [K[A6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malisshev$ [K[A6300L-127771-M:ecc malisshev$ [K[A6300L-127771-M:ecc malisshev$ [K[A6300L-127771-M:ecc malisshev$ [K[A6300L-127771-M:ecc malisshev$ 
