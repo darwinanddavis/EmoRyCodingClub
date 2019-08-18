@@ -1,11 +1,11 @@
 ---
 params:
   lesson: "Lesson 3"
-  title: "Statistical transformations and using lists"      
-  bookchapter_name: "Section 3.5.1"    
-  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#statistical-transformations"
-  functions: "`p_load`"
-  packages: "`pacman`"      
+  title: "`R` basics and using `R` project (`Rproj`) files"      
+  bookchapter_name: "Section 4"    
+  bookchapter_section: "https://r4ds.had.co.nz/workflow-basics.html"
+  functions: "`p_load`, `==`, `|`, `%in%`, `filter`, `near`"
+  packages: "`pacman`, `dplyr`"      
   # end inputs --------------------------------------------------------------- 
 header-includes: \usepackage{float}
 always_allow_html: yes
@@ -64,8 +64,9 @@ Packages for `r params$lesson`
 
 <!--  end yaml template------------------------------------------------------- -->
 
-* Explore the super useful `list` structure    
-* Plot bar charts and density distributions  
+* Solidify some fundamental `R` operators            
+* Learn how to use R project files  
+* Use `pacman` for easy package loading  
 
 # Do First    
 
@@ -97,9 +98,148 @@ require(pacman)
 Type in the packages you want to install into the p_load function.  
 _Note: the below two arguments are the same_
 ```{r}
-p_load(dplyr,ggplot2) # your packages  
-pacman::p_load(dplyr,ggplot2) # this is the same as above, but allows you to use a specific function from a package without loading the entire package: 'package::function(argument1,argument2,argument3)'  
+p_load(dplyr,ggplot2,nycflights13) # your packages  
+pacman::p_load(dplyr,ggplot2,nycflights13) # this is the same as above, but allows you to use a specific function from a package without loading the entire package: 'package::function(argument1,argument2,argument3)'  
 ```
+\  
+
+# Introducing `R` project (`Rproj`) files.  
+You can set individual working directories and contain your R documents related to a specific project using an `Rproj` file.  
+
+1. _File > New Project_
+2. _Existing directory > Browse_  
+3. Select _Open in new window_    
+\    
+
+Open a new `R` file within this project and save it as 'Lesson 3.R'.  
+\    
+
+Now repeat the above steps so that you have two different `Rproj` files. Name this second project something different. 
+\    
+
+Let's now see why `Rproj` files are a useful workflow method by checking the working directory for each project.  
+```{r}
+getwd()
+```
+\  
+
+# Basics in `R`  
+Learning and applying the fundamentals of `R` so you can build more complex analytical tools.    
+
+Numeric calculations   
+```{r}
+1 / 200 * 30
+#> [1] 0.15
+(59 + 73 + 2) / 3
+#> [1] 44.7
+sin(pi / 2)
+#> [1] 1
+```
+\  
+
+Assigning objects  
+```{r}
+require(tidyverse)
+x <- 3 * 4
+3 * 4 -> x # occasional tidyverse method to be aware of
+x %>% sqrt -> x # used with a pipe ( %>% )
+```
+\  
+
+# [Chapter 5: Transformations](https://r4ds.had.co.nz/transform.html)    
+Load the datasets    
+```{r}
+library(nycflights13)
+flights # print the flights dataset
+
+```
+\  
+
+# Data classes   
+
+`int` stands for integers.  
+
+`dbl` stands for doubles, or real numbers.  
+
+`chr` stands for character vectors, or strings.  
+
+`dttm` stands for date-times (a date + a time).  
+
+`lgl` stands for logical, vectors that contain only TRUE or FALSE.  
+
+`fctr` stands for factors, which R uses to represent categorical variables with fixed possible values.  
+
+`date` stands for dates.  
+\  
+
+# Using `dlyr`  
+
+## `filter()`  
+Pick observations by their values  
+```{r}
+jan1 <- filter(flights, month == 1, day == 1)
+(jan1 <- filter(flights, month == 1, day == 1)) # wrap in parentheses to both assign and execute  
+
+filter(flights, month = 1)  
+```
+\  
+
+Floating point numbers and using `==`    
+```{r}
+sqrt(2) ^ 2 == 2
+1 / 49 * 49 == 1
+
+near(sqrt(2) ^ 2,  2)
+near(1 / 49 * 49, 1)
+
+```
+\  
+
+## Logical operators    
+
+The following code finds all flights that departed in November or December.  
+```{r}
+names(flights)
+
+# using `|`
+filter(flights, month == 11 | month == 12)
+
+# using `%in%`  
+nov_dec <- filter(flights, month %in% c(11, 12)) 
+
+filter(flights, !(arr_delay > 120 | dep_delay > 120))
+filter(flights, arr_delay <= 120, dep_delay <= 120)
+```
+\  
+
+# Missing values (NAs)  
+```{r}
+NA > 5
+10 == NA
+NA + 10
+NA / 2
+
+NA == NA # get NA
+x <- NA
+y <- NA
+x == y # x and y are both unknowns, so the above returns NA
+
+# check if NAs exist  
+is.na(x)
+```
+\  
+
+Retaining NA values    
+```{r}
+df <- tibble(x = c(1, NA, 3)) # create tibble dataframe  
+filter(df, x > 1) # omit NA by default
+filter(df, is.na(x) | x > 1) # retain NA
+
+```
+\  
+
+# Exercise 5.2.4 
+[Try the exercises from 5.2.4](https://r4ds.had.co.nz/transform.html#exercises-7).  
 \  
 
 # Applying the Airbnb data  

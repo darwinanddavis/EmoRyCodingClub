@@ -1,34 +1,4 @@
 
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ja.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ka.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/km.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ko.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/lt.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/lv.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/me-me.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/me.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/mk.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ml.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ms.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/mt.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/nl-be.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/nl.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/no.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pa.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pl.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pt-br.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/rm.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ro.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ru.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sk.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sl.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sq.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sr-sr.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sr.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sv.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sw.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ta.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/th.js
  delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tr.js
  delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tt.js
  delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/uk.js
@@ -1029,4 +999,5 @@ remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
 remote: 
 To https://github.com/darwinanddavis/EmoRyCodingClub
    9ca978a..c8cc7f5  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malisshev$ [K[A6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malisshev$ [K[A6300L-127771-M:ecc malisshev$ [K[A6300L-127771-M:ecc malisshev$ [K[A6300L-127771-M:ecc malisshev$ [K[A6300L-127771-M:ecc malisshev$ 
+[K[A6300L-127771-M:ecc malishev$ git push[Kgit pushcommit -m 'listt1'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgit add .
