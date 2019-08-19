@@ -1,23 +1,4 @@
 
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tr.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tt.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/uk.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ur.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/vi.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-cn.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-hk.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-tw.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/plotly-htmlwidgets.css
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/plotly-latest.min.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/selectize/selectize.bootstrap3.css
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/selectize/selectize.min.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/typedarray/LICENSE
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/typedarray/typedarray.min.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/plotly.js
- delete mode 100644 docs/site_libs/plotly-binding-4.8.0/plotly.yaml
- delete mode 100644 docs/site_libs/plotly-htmlwidgets-css-1.39.2/plotly-htmlwidgets.css
- delete mode 100644 docs/site_libs/plotly-main-1.39.2/plotly-latest.min.js
- delete mode 100644 docs/site_libs/primer-tooltips-1.4.0/build.css
  delete mode 100644 docs/site_libs/selectize-0.11.2/css/selectize.bootstrap3.css
  delete mode 100644 docs/site_libs/selectize-0.11.2/js/es5-shim.min.js
  delete mode 100644 docs/site_libs/selectize-0.11.2/js/selectize.min.js
@@ -1001,3 +982,21 @@ To https://github.com/darwinanddavis/EmoRyCodingClub
    9ca978a..c8cc7f5  master -> master
 [K[A6300L-127771-M:ecc malishev$ git push[Kgit pushcommit -m 'listt1'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush[K
 [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kgit add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit - [Km ''u'[1P'a'd' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd''e'd' 'L'3'
+[master a59974a] added L3
+ 9 files changed, 640 insertions(+), 60 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (100%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 16, done.
+Delta compression using up to 4 threads.
+Compressing objects:   6% (1/15)   Compressing objects:  13% (2/15)   Compressing objects:  20% (3/15)   Compressing objects:  26% (4/15)   Compressing objects:  33% (5/15)   Compressing objects:  40% (6/15)   Compressing objects:  46% (7/15)   Compressing objects:  53% (8/15)   Compressing objects:  60% (9/15)   Compressing objects:  66% (10/15)   Compressing objects:  73% (11/15)   Compressing objects:  80% (12/15)   Compressing objects:  86% (13/15)   Compressing objects:  93% (14/15)   Compressing objects: 100% (15/15)   Compressing objects: 100% (15/15), done.
+Writing objects:   6% (1/16)   Writing objects:  12% (2/16)   Writing objects:  18% (3/16)   Writing objects:  25% (4/16)   Writing objects:  31% (5/16)   Writing objects:  37% (6/16)   Writing objects:  43% (7/16)   Writing objects:  50% (8/16)   Writing objects:  56% (9/16)   Writing objects:  62% (10/16)   Writing objects:  68% (11/16)   Writing objects:  75% (12/16)   Writing objects:  81% (13/16)   Writing objects:  87% (14/16)   Writing objects:  93% (15/16)   Writing objects: 100% (16/16)   Writing objects: 100% (16/16), 6.81 KiB | 0 bytes/s, done.
+Total 16 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)[Kremote: Resolving deltas:  14% (1/7)[Kremote: Resolving deltas:  28% (2/7)[Kremote: Resolving deltas:  42% (3/7)[Kremote: Resolving deltas:  57% (4/7)[Kremote: Resolving deltas:  71% (5/7)[Kremote: Resolving deltas:  85% (6/7)[Kremote: Resolving deltas: 100% (7/7)[Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   35ed124..a59974a  master -> master
+git add .

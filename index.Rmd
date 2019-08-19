@@ -78,7 +78,7 @@ knitr::include_graphics(c("img/mm.jpeg", "img/ddl.jpeg", "img/hw.jpg"))
 
 ## Date for next session  
 September 5, 2019      
-4:00 - 6:00 PM       
+4:30 - 6:00 PM       
 \  
 
 ## Location   
@@ -90,9 +90,10 @@ Wayne Rollins Building
 require(leaflet)
 latlon <- c(33.79667, -84.32346) # emory
 ecc_label <- "Room 2052, Wayne Rollins Building"
+ecc_popup <- "Take the elevator to the second floor, \nthen exit left and take the first left."
 map <- leaflet() # initiate the leaflet map object
 map <- addTiles(map) # add the actual map tiles to the leaflet object
-map <- addMarkers(map,latlon[2],latlon[1],label=ecc_label,popup=ecc_label) 
+map <- addMarkers(map,latlon[2],latlon[1],label=ecc_label,popup=ecc_popup) 
 map 
 
 ```
