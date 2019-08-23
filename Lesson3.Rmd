@@ -5,7 +5,7 @@ params:
   bookchapter_name: "Section 4"    
   bookchapter_section: "https://r4ds.had.co.nz/workflow-basics.html"
   functions: "`p_load`, `==`, `|`, `%in%`, `filter`, `near`"
-  packages: "`pacman`, `dplyr`"      
+  packages: "`ggplot2`,`pacman`, `dplyr`,`tibble`"      
   # end inputs --------------------------------------------------------------- 
 header-includes: \usepackage{float}
 always_allow_html: yes
@@ -71,6 +71,14 @@ Packages for `r params$lesson`
 # Do First    
 
 Recreate the below plot using the smaller NYC Airbnb dataset.  
+
+```{r}
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+nyc <-  read_csv(url)
+nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
+```
+
 ```{r, echo=F, eval=T, out.width="100%"}
 require(ggthemes)
 require(ggplot2)

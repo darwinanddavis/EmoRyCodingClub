@@ -465,7 +465,7 @@ div.tocify {
 <code>p_load</code>, <code>==</code>, <code>|</code>, <code>%in%</code>, <code>filter</code>, <code>near</code><br />
  </p>
 <p>Packages for Lesson 3<br />
-<code>pacman</code>, <code>dplyr</code><br />
+<code>ggplot2</code>,<code>pacman</code>, <code>dplyr</code>,<code>tibble</code><br />
  </p>
 </div>
 <div id="agenda" class="section level1">
@@ -483,8 +483,12 @@ div.tocify {
 </div>
 <div id="do-first" class="section level1">
 <h1>Do First</h1>
-<p>Recreate the below plot using the smaller NYC Airbnb dataset.<br />
-<img src="Lesson3_files/figure-html/unnamed-chunk-1-1.png" width="100%" />  </p>
+<p>Recreate the below plot using the smaller NYC Airbnb dataset.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
+nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># get smaller subet of data</span></code></pre></div>
+<p><img src="Lesson3_files/figure-html/unnamed-chunk-2-1.png" width="100%" />  </p>
 </div>
 <div id="load-packages-with-pacman" class="section level1">
 <h1>Load packages with <code>pacman</code></h1>

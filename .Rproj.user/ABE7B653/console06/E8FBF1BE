@@ -1,23 +1,4 @@
 
- delete mode 100644 docs/site_libs/selectize-0.11.2/css/selectize.bootstrap3.css
- delete mode 100644 docs/site_libs/selectize-0.11.2/js/es5-shim.min.js
- delete mode 100644 docs/site_libs/selectize-0.11.2/js/selectize.min.js
- delete mode 100644 docs/site_libs/typedarray-0.1/typedarray.min.js
- create mode 100644 img/cover.png
- create mode 100644 img/ddl.jpeg
- create mode 100644 img/hw.jpg
- create mode 100644 img/mm.jpeg
- create mode 100644 img/nyc.jpg
- create mode 100644 img/rstudio1.jpg
- create mode 100644 img/rstudio2.jpg
- create mode 100644 img/shapes.png
- delete mode 100644 index.md
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open _site.yml 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open functions_lesson2.txt 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add functions_lesson2.txt functions_lesson[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kpackages_lesson2.txt 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -mm[K ''p'c'k' 'a'n'd' 'f'u'n'c' 'l'e's's'[1P'[1P'[1P'[1P'[1P' 'f'i'l'e's'[1@a[1@d[1@d[1@e[1@d[1@ [1@l[1@e[1P[1@2[1@ 
-[master 968ad2f] added l2 pck and func files
- 2 files changed, 4 insertions(+)
  create mode 100644 functions_lesson2.txt
  create mode 100644 packages_lesson2.txt
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
@@ -999,4 +980,23 @@ remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
 remote: 
 To https://github.com/darwinanddavis/EmoRyCodingClub
    35ed124..a59974a  master -> master
+git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''l'3' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'L'3' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ''i'n'd'e'x'
+[master 5df83e3] L3 index
+ 9 files changed, 138 insertions(+), 39 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (92%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 16, done.
+Delta compression using up to 4 threads.
+Compressing objects:   6% (1/15)   Compressing objects:  13% (2/15)   Compressing objects:  20% (3/15)   Compressing objects:  26% (4/15)   Compressing objects:  33% (5/15)   Compressing objects:  40% (6/15)   Compressing objects:  46% (7/15)   Compressing objects:  53% (8/15)   Compressing objects:  60% (9/15)   Compressing objects:  66% (10/15)   Compressing objects:  73% (11/15)   Compressing objects:  80% (12/15)   Compressing objects:  86% (13/15)   Compressing objects:  93% (14/15)   Compressing objects: 100% (15/15)   Compressing objects: 100% (15/15), done.
+Writing objects:   6% (1/16)   Writing objects:  12% (2/16)   Writing objects:  18% (3/16)   Writing objects:  25% (4/16)   Writing objects:  31% (5/16)   Writing objects:  37% (6/16)   Writing objects:  43% (7/16)   Writing objects:  50% (8/16)   Writing objects:  56% (9/16)   Writing objects:  62% (10/16)   Writing objects:  68% (11/16)   Writing objects:  75% (12/16)   Writing objects:  81% (13/16)   Writing objects:  87% (14/16)   Writing objects:  93% (15/16)   Writing objects: 100% (16/16)   Writing objects: 100% (16/16), 2.52 KiB | 0 bytes/s, done.
+Total 16 (delta 10), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/10)[Kremote: Resolving deltas:  10% (1/10)[Kremote: Resolving deltas:  20% (2/10)[Kremote: Resolving deltas:  30% (3/10)[Kremote: Resolving deltas:  40% (4/10)[Kremote: Resolving deltas:  50% (5/10)[Kremote: Resolving deltas:  60% (6/10)[Kremote: Resolving deltas:  70% (7/10)[Kremote: Resolving deltas:  80% (8/10)[Kremote: Resolving deltas:  90% (9/10)[Kremote: Resolving deltas: 100% (10/10)[Kremote: Resolving deltas: 100% (10/10), completed with 10 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   a59974a..5df83e3  master -> master
 git add .
