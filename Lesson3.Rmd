@@ -177,6 +177,15 @@ x == y # x and y are both unknowns, so the above returns NA
 # check if NAs exist  
 is.na(x)
 
+# -------------------------------------------
+
+# conditionals 
+5 != 5 # is not equal to 
+5 < 10
+5 > 10
+5 >= 10
+5 <= 10
+
 ```
 \  
 
