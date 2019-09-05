@@ -535,8 +535,8 @@ pacman<span class="op">::</span><span class="kw">p_load</span>(dplyr, ggplot2, n
 
 <span class="co"># assigning objects</span>
 <span class="kw">require</span>(tidyverse)
-x &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">*</span><span class="st"> </span><span class="dv">4</span>
-x  <span class="co"># occasional tidyverse method to be aware of</span>
+x &lt;-<span class="st"> </span><span class="dv">4</span> <span class="op">*</span><span class="st"> </span><span class="dv">3</span>  <span class="co"># conventional method  </span>
+x  <span class="co"># occasional tidyverse method to be aware of  </span>
  &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">*</span><span class="st"> </span><span class="dv">4</span>
 x  <span class="co"># used with a pipe ( %&gt;% )</span>
  &lt;-<span class="st"> </span>x <span class="op">%&gt;%</span><span class="st"> </span>sqrt
@@ -630,6 +630,25 @@ nov_dec &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, mo
 <div id="exercise-5.2.4" class="section level1">
 <h1>Exercise 5.2.4</h1>
 <p><a href="https://r4ds.had.co.nz/transform.html#exercises-7">Try the exercises from 5.2.4</a>.<br />
+ </p>
+</div>
+<div id="changing-order-of-data-rows-with-arrange" class="section level1">
+<h1>Changing order of data rows with <code>arrange()</code></h1>
+<p>Change rows to ascending order</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">arrange</span>(flights, year, month, day)</code></pre></div>
+<p> </p>
+<p><code>desc()</code> = descending order</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">arrange</span>(flights, <span class="kw">desc</span>(dep_time))</code></pre></div>
+<p> </p>
+<p>This puts missing values at the end of the dataframe</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">5</span>, <span class="dv">2</span>, <span class="ot">NA</span>))  <span class="co"># create mock data </span>
+<span class="kw">arrange</span>(df, x)
+<span class="kw">arrange</span>(df, <span class="kw">desc</span>(x))</code></pre></div>
+<p> </p>
+</div>
+<div id="exercise-5.3.1" class="section level1">
+<h1>Exercise 5.3.1</h1>
+<p>Try the <a href="https://r4ds.had.co.nz/transform.html#exercises-8">‘5.3.1 Exercises’ using <code>arrange()</code></a><br />
  </p>
 </div>
 <div id="applying-the-airbnb-data" class="section level1">

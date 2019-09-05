@@ -148,9 +148,9 @@ sin(pi / 2)
 # -------------------------------------------
 
 # assigning objects 
-require(tidyverse)
-x <- 3 * 4
-3 * 4 -> x # occasional tidyverse method to be aware of
+require(tidyverse)  
+x <- 4 * 3 # conventional method  
+3 * 4 -> x # occasional tidyverse method to be aware of  
 x %>% sqrt -> x # used with a pipe ( %>% )
 
 # -------------------------------------------
@@ -256,6 +256,32 @@ filter(df, is.na(x) | x > 1) # retain NA
 
 # Exercise 5.2.4 
 [Try the exercises from 5.2.4](https://r4ds.had.co.nz/transform.html#exercises-7).  
+\  
+
+# Changing order of data rows with `arrange()`  
+
+Change rows to ascending order  
+```{r}
+arrange(flights, year, month, day)
+```
+\  
+
+`desc()` = descending order  
+```{r}
+arrange(flights, desc(dep_time))
+```
+\  
+
+This puts missing values at the end of the dataframe  
+```{r}
+df <- tibble(x = c(5, 2, NA)) # create mock data 
+arrange(df, x)
+arrange(df, desc(x))
+```
+\  
+
+# Exercise 5.3.1 
+Try the ['5.3.1 Exercises' using `arrange()`](https://r4ds.had.co.nz/transform.html#exercises-8)  
 \  
 
 # Applying the Airbnb data  

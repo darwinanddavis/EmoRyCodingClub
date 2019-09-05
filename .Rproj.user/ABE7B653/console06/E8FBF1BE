@@ -1,30 +1,4 @@
 
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-11-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-12-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-13-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-14-1.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-15-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-16-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-17-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-18-1.png (98%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-19-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-20-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-23-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-24-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-25-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-26-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-2.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-9-3.png (98%)
- rewrite docs/Lesson2_files/figure-html/unnamed-chunk-3-1.png (97%)
- rename docs/site_libs/{htmlwidgets-1.3 => htmlwidgets-1.2}/htmlwidgets.js (99%)
- create mode 100644 docs/site_libs/leaflet-binding-2.0.2/leaflet.yaml
- create mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/jquery/jquery.min.js
- create mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/cancel.png
- create mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/cancel_@2X.png
  create mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/check.png
  create mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/check_@2X.png
  create mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/focus.png
@@ -1000,3 +974,29 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    7605b15..93528b8  master -> master
 git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git comi[Kmit -m ''-'-' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'-'-' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CL''-'3'[1P'[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-''-'-'-'[1P'-'-'[1P'-'[1P'-'[1P'-'-'-'-'-'_'[1P'-'[1P'[1P'[1P'-'[1P'-'[1P'-'-'-'-'-'-'_'_'_'-'_'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'[K[C'L'3' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ''c'o'n't'e'n't'
+[master b3fb2c6] L3 content
+ 6 files changed, 45 insertions(+), 23 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (92%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 12, done.
+Delta compression using up to 4 threads.
+Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
+Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 1.34 KiB | 0 bytes/s, done.
+Total 12 (delta 9), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/9)[Kremote: Resolving deltas:  11% (1/9)[Kremote: Resolving deltas:  22% (2/9)[Kremote: Resolving deltas:  33% (3/9)[Kremote: Resolving deltas:  44% (4/9)[Kremote: Resolving deltas:  55% (5/9)[Kremote: Resolving deltas:  66% (6/9)[Kremote: Resolving deltas:  77% (7/9)[Kremote: Resolving deltas:  88% (8/9)[Kremote: Resolving deltas: 100% (9/9)[Kremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   93528b8..b3fb2c6  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ]0;~/Documents/Emory/admin/ecc[?1034h6300L-127771-M:ecc malishev$ flights$arr_delay  %>% unique %>% sort
+bash: flights: command not found
+[K6300L-127771-M:ecc malishev$ git add .
