@@ -5,7 +5,7 @@ params:
   bookchapter_name: "Section 4"    
   bookchapter_section: "https://r4ds.had.co.nz/workflow-basics.html"
   functions: "`p_load`, `==`, `|`, `%in%`, `filter`, `near`"
-  packages: "`ggplot2`,`pacman`, `dplyr`,`tibble`"      
+  packages: "`ggplot2`,`pacman`, `dplyr`, `nycflights13`"      
   # end inputs --------------------------------------------------------------- 
 header-includes: \usepackage{float}
 always_allow_html: yes
@@ -103,23 +103,36 @@ install.packages("pacman")
 require(pacman)
 ```  
 
-Type in the packages you want to install into the p_load function.  
+Type in the packages you want to install into the `p_load` function.  
 _Note: the below two arguments are the same_
 ```{r}
 p_load(dplyr,ggplot2,nycflights13) # your packages  
+```
+
+```{r}
 pacman::p_load(dplyr,ggplot2,nycflights13) # this is the same as above, but allows you to use a specific function from a package without loading the entire package: 'package::function(argument1,argument2,argument3)'  
 ```
 \  
 
 # Introducing `R` project (`Rproj`) files.  
-You can set individual working directories and contain your R documents related to a specific project using an `Rproj` file.  
+You can set individual working directories and contain your R documents related to a specific project using an `Rproj` file.  Two options:
 
+**Option 1:** Create an RProject new directory:
+1. _File > New Project_
+1. _Create New Project_  
+1. Choose a name for your RProj folder. Fill out _Directory name:_ (make it machine-friendly, i.e. no spaces).
+1. Choose a place for the RProj to live. _Browse_
+1. Select _Open in new session_    
+\    
+
+**Option 2:** If you already have a folder *just* for Emory Coding Club:
 1. _File > New Project_
 2. _Existing directory > Browse_  
 3. Select _Open in new window_    
+
 \    
 
-Open a new `R` file within this project and save it as 'Lesson 3.R'.  
+Open a new `R` file within this project and save it as 'Lesson3.R'.  
 \    
 
 Now repeat the above steps so that you have two different `Rproj` files. Name this second project something different. 
@@ -207,7 +220,7 @@ flights # print the flights dataset
 `date` stands for dates.  
 \  
 
-# Using `dlyr`  
+# Using `dplyr`  
 
 ## `filter()`  
 Pick observations by their values  
@@ -223,7 +236,7 @@ filter(flights, month = 1)
 
 The following code finds all flights that departed in November or December.  
 ```{r}
-names(flights)
+glimpse(flights)
 
 # using `|`
 filter(flights, month == 11 | month == 12)
