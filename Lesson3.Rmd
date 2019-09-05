@@ -132,25 +132,60 @@ getwd()
 \  
 
 # Basics in `R`  
-Learning and applying the fundamentals of `R` so you can build more complex analytical tools.    
+Learning and applying the fundamentals of `R` so you can build more complex analytical tools. Use the below summary sheet of some common, basic `R` operations to solve the practice questions in the following section.        
+\  
 
-Numeric calculations   
+## Summary sheet of `R` fundamentals      
 ```{r}
+# numeric calculations 
 1 / 200 * 30
 #> [1] 0.15
 (59 + 73 + 2) / 3
 #> [1] 44.7
 sin(pi / 2)
 #> [1] 1
-```
-\  
 
-Assigning objects  
-```{r}
-require(tidyverse)
-x <- 3 * 4
-3 * 4 -> x # occasional tidyverse method to be aware of
+# -------------------------------------------
+
+# assigning objects 
+require(tidyverse)  
+x <- 4 * 3 # conventional method  
+3 * 4 -> x # occasional tidyverse method to be aware of  
 x %>% sqrt -> x # used with a pipe ( %>% )
+
+# -------------------------------------------
+
+# floating point numbers and using `==` 
+sqrt(2) ^ 2 == 2
+1 / 49 * 49 == 1
+near(sqrt(2) ^ 2,  2)
+near(1 / 49 * 49, 1)
+
+# -------------------------------------------
+
+# missing values (NAs)  
+NA > 5
+10 == NA
+NA + 10
+NA / 2
+
+NA == NA # get NA
+x <- NA
+y <- NA
+x == y # x and y are both unknowns, so the above returns NA
+
+# check if NAs exist  
+is.na(x)
+
+# -------------------------------------------
+
+# conditionals 
+5 != 5 # is not equal to 
+5 < 10
+5 > 10
+5 >= 10
+5 <= 10
+
 ```
 \  
 
@@ -192,17 +227,6 @@ filter(flights, month = 1)
 ```
 \  
 
-Floating point numbers and using `==`    
-```{r}
-sqrt(2) ^ 2 == 2
-1 / 49 * 49 == 1
-
-near(sqrt(2) ^ 2,  2)
-near(1 / 49 * 49, 1)
-
-```
-\  
-
 ## Logical operators    
 
 The following code finds all flights that departed in November or December.  
@@ -215,27 +239,11 @@ filter(flights, month == 11 | month == 12)
 # using `%in%`  
 nov_dec <- filter(flights, month %in% c(11, 12)) 
 
-filter(flights, !(arr_delay > 120 | dep_delay > 120))
+# a '!' specifies a range WITHOUT those conditions, i.e. equal to not including those values 
+filter(flights, !(arr_delay > 120 | dep_delay > 120)) 
 filter(flights, arr_delay <= 120, dep_delay <= 120)
 ```
-\  
-
-# Missing values (NAs)  
-```{r}
-NA > 5
-10 == NA
-NA + 10
-NA / 2
-
-NA == NA # get NA
-x <- NA
-y <- NA
-x == y # x and y are both unknowns, so the above returns NA
-
-# check if NAs exist  
-is.na(x)
-```
-\  
+\    
 
 Retaining NA values    
 ```{r}
@@ -250,8 +258,41 @@ filter(df, is.na(x) | x > 1) # retain NA
 [Try the exercises from 5.2.4](https://r4ds.had.co.nz/transform.html#exercises-7).  
 \  
 
+# Changing order of data rows with `arrange()`  
+
+Change rows to ascending order  
+```{r}
+arrange(flights, year, month, day)
+```
+\  
+
+`desc()` = descending order  
+```{r}
+arrange(flights, desc(dep_time))
+```
+\  
+
+This puts missing values at the end of the dataframe  
+```{r}
+df <- tibble(x = c(5, 2, NA)) # create mock data 
+arrange(df, x)
+arrange(df, desc(x))
+```
+\  
+
+# Exercise 5.3.1 
+Try the ['5.3.1 Exercises' using `arrange()`](https://r4ds.had.co.nz/transform.html#exercises-8)  
+\  
+
 # Applying the Airbnb data  
-Use the new examples on the Airbnb dataset.      
+Use the new examples on the Airbnb dataset.        
+```{r}
+# large Airbnb dataset (106 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+
+nyc_full <- read_csv(url) # reads in data
+nyc_full %>% glimpse
+```
 
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->

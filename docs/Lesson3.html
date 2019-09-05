@@ -519,23 +519,62 @@ pacman<span class="op">::</span><span class="kw">p_load</span>(dplyr, ggplot2, n
 </div>
 <div id="basics-in-r" class="section level1">
 <h1>Basics in <code>R</code></h1>
-<p>Learning and applying the fundamentals of <code>R</code> so you can build more complex analytical tools.</p>
-<p>Numeric calculations</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="dv">1</span><span class="op">/</span><span class="dv">200</span> <span class="op">*</span><span class="st"> </span><span class="dv">30</span>
+<p>Learning and applying the fundamentals of <code>R</code> so you can build more complex analytical tools. Use the below summary sheet of some common, basic <code>R</code> operations to solve the practice questions in the following section.<br />
+ </p>
+<div id="summary-sheet-of-r-fundamentals" class="section level2">
+<h2>Summary sheet of <code>R</code> fundamentals</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># numeric calculations</span>
+<span class="dv">1</span><span class="op">/</span><span class="dv">200</span> <span class="op">*</span><span class="st"> </span><span class="dv">30</span>
 <span class="co"># &gt; [1] 0.15</span>
 (<span class="dv">59</span> <span class="op">+</span><span class="st"> </span><span class="dv">73</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span>)<span class="op">/</span><span class="dv">3</span>
 <span class="co"># &gt; [1] 44.7</span>
 <span class="kw">sin</span>(pi<span class="op">/</span><span class="dv">2</span>)
-<span class="co"># &gt; [1] 1</span></code></pre></div>
-<p> </p>
-<p>Assigning objects</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(tidyverse)
-x &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">*</span><span class="st"> </span><span class="dv">4</span>
-x  <span class="co"># occasional tidyverse method to be aware of</span>
+<span class="co"># &gt; [1] 1</span>
+
+<span class="co"># -------------------------------------------</span>
+
+<span class="co"># assigning objects</span>
+<span class="kw">require</span>(tidyverse)
+x &lt;-<span class="st"> </span><span class="dv">4</span> <span class="op">*</span><span class="st"> </span><span class="dv">3</span>  <span class="co"># conventional method  </span>
+x  <span class="co"># occasional tidyverse method to be aware of  </span>
  &lt;-<span class="st"> </span><span class="dv">3</span> <span class="op">*</span><span class="st"> </span><span class="dv">4</span>
 x  <span class="co"># used with a pipe ( %&gt;% )</span>
- &lt;-<span class="st"> </span>x <span class="op">%&gt;%</span><span class="st"> </span>sqrt</code></pre></div>
+ &lt;-<span class="st"> </span>x <span class="op">%&gt;%</span><span class="st"> </span>sqrt
+
+<span class="co"># -------------------------------------------</span>
+
+<span class="co"># floating point numbers and using `==`</span>
+<span class="kw">sqrt</span>(<span class="dv">2</span>)<span class="op">^</span><span class="dv">2</span> <span class="op">==</span><span class="st"> </span><span class="dv">2</span>
+<span class="dv">1</span><span class="op">/</span><span class="dv">49</span> <span class="op">*</span><span class="st"> </span><span class="dv">49</span> <span class="op">==</span><span class="st"> </span><span class="dv">1</span>
+<span class="kw">near</span>(<span class="kw">sqrt</span>(<span class="dv">2</span>)<span class="op">^</span><span class="dv">2</span>, <span class="dv">2</span>)
+<span class="kw">near</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">49</span> <span class="op">*</span><span class="st"> </span><span class="dv">49</span>, <span class="dv">1</span>)
+
+<span class="co"># -------------------------------------------</span>
+
+<span class="co"># missing values (NAs)</span>
+<span class="ot">NA</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>
+<span class="dv">10</span> <span class="op">==</span><span class="st"> </span><span class="ot">NA</span>
+<span class="ot">NA</span> <span class="op">+</span><span class="st"> </span><span class="dv">10</span>
+<span class="ot">NA</span><span class="op">/</span><span class="dv">2</span>
+
+<span class="ot">NA</span> <span class="op">==</span><span class="st"> </span><span class="ot">NA</span>  <span class="co"># get NA</span>
+x &lt;-<span class="st"> </span><span class="ot">NA</span>
+y &lt;-<span class="st"> </span><span class="ot">NA</span>
+x <span class="op">==</span><span class="st"> </span>y  <span class="co"># x and y are both unknowns, so the above returns NA</span>
+
+<span class="co"># check if NAs exist</span>
+<span class="kw">is.na</span>(x)
+
+<span class="co"># -------------------------------------------</span>
+
+<span class="co"># conditionals</span>
+<span class="dv">5</span> <span class="op">!=</span><span class="st"> </span><span class="dv">5</span>  <span class="co"># is not equal to </span>
+<span class="dv">5</span> <span class="op">&lt;</span><span class="st"> </span><span class="dv">10</span>
+<span class="dv">5</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">10</span>
+<span class="dv">5</span> <span class="op">&gt;=</span><span class="st"> </span><span class="dv">10</span>
+<span class="dv">5</span> <span class="op">&lt;=</span><span class="st"> </span><span class="dv">10</span></code></pre></div>
 <p> </p>
+</div>
 </div>
 <div id="chapter-5-transformations" class="section level1">
 <h1><a href="https://r4ds.had.co.nz/transform.html">Chapter 5: Transformations</a></h1>
@@ -565,13 +604,6 @@ flights  <span class="co"># print the flights dataset</span></code></pre></div>
 
 <span class="kw">filter</span>(flights, <span class="dt">month =</span> <span class="dv">1</span>)</code></pre></div>
 <p> </p>
-<p>Floating point numbers and using <code>==</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sqrt</span>(<span class="dv">2</span>)<span class="op">^</span><span class="dv">2</span> <span class="op">==</span><span class="st"> </span><span class="dv">2</span>
-<span class="dv">1</span><span class="op">/</span><span class="dv">49</span> <span class="op">*</span><span class="st"> </span><span class="dv">49</span> <span class="op">==</span><span class="st"> </span><span class="dv">1</span>
-
-<span class="kw">near</span>(<span class="kw">sqrt</span>(<span class="dv">2</span>)<span class="op">^</span><span class="dv">2</span>, <span class="dv">2</span>)
-<span class="kw">near</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">49</span> <span class="op">*</span><span class="st"> </span><span class="dv">49</span>, <span class="dv">1</span>)</code></pre></div>
-<p> </p>
 </div>
 <div id="logical-operators" class="section level2">
 <h2>Logical operators</h2>
@@ -584,25 +616,9 @@ flights  <span class="co"># print the flights dataset</span></code></pre></div>
 <span class="co"># using `%in%`</span>
 nov_dec &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, month <span class="op">%in%</span><span class="st"> </span><span class="kw">c</span>(<span class="dv">11</span>, <span class="dv">12</span>))
 
+<span class="co"># a &#39;!&#39; specifies a range WITHOUT those conditions, i.e. equal to not including those values</span>
 <span class="kw">filter</span>(flights, <span class="op">!</span>(arr_delay <span class="op">&gt;</span><span class="st"> </span><span class="dv">120</span> <span class="op">|</span><span class="st"> </span>dep_delay <span class="op">&gt;</span><span class="st"> </span><span class="dv">120</span>))
 <span class="kw">filter</span>(flights, arr_delay <span class="op">&lt;=</span><span class="st"> </span><span class="dv">120</span>, dep_delay <span class="op">&lt;=</span><span class="st"> </span><span class="dv">120</span>)</code></pre></div>
-<p> </p>
-</div>
-</div>
-<div id="missing-values-nas" class="section level1">
-<h1>Missing values (NAs)</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="ot">NA</span> <span class="op">&gt;</span><span class="st"> </span><span class="dv">5</span>
-<span class="dv">10</span> <span class="op">==</span><span class="st"> </span><span class="ot">NA</span>
-<span class="ot">NA</span> <span class="op">+</span><span class="st"> </span><span class="dv">10</span>
-<span class="ot">NA</span><span class="op">/</span><span class="dv">2</span>
-
-<span class="ot">NA</span> <span class="op">==</span><span class="st"> </span><span class="ot">NA</span>  <span class="co"># get NA</span>
-x &lt;-<span class="st"> </span><span class="ot">NA</span>
-y &lt;-<span class="st"> </span><span class="ot">NA</span>
-x <span class="op">==</span><span class="st"> </span>y  <span class="co"># x and y are both unknowns, so the above returns NA</span>
-
-<span class="co"># check if NAs exist</span>
-<span class="kw">is.na</span>(x)</code></pre></div>
 <p> </p>
 <p>Retaining NA values</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="ot">NA</span>, <span class="dv">3</span>))  <span class="co"># create tibble dataframe  </span>
@@ -610,14 +626,39 @@ x <span class="op">==</span><span class="st"> </span>y  <span class="co"># x and
 <span class="kw">filter</span>(df, <span class="kw">is.na</span>(x) <span class="op">|</span><span class="st"> </span>x <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>)  <span class="co"># retain NA</span></code></pre></div>
 <p> </p>
 </div>
+</div>
 <div id="exercise-5.2.4" class="section level1">
 <h1>Exercise 5.2.4</h1>
 <p><a href="https://r4ds.had.co.nz/transform.html#exercises-7">Try the exercises from 5.2.4</a>.<br />
  </p>
 </div>
+<div id="changing-order-of-data-rows-with-arrange" class="section level1">
+<h1>Changing order of data rows with <code>arrange()</code></h1>
+<p>Change rows to ascending order</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">arrange</span>(flights, year, month, day)</code></pre></div>
+<p> </p>
+<p><code>desc()</code> = descending order</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">arrange</span>(flights, <span class="kw">desc</span>(dep_time))</code></pre></div>
+<p> </p>
+<p>This puts missing values at the end of the dataframe</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">tibble</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="dv">5</span>, <span class="dv">2</span>, <span class="ot">NA</span>))  <span class="co"># create mock data </span>
+<span class="kw">arrange</span>(df, x)
+<span class="kw">arrange</span>(df, <span class="kw">desc</span>(x))</code></pre></div>
+<p> </p>
+</div>
+<div id="exercise-5.3.1" class="section level1">
+<h1>Exercise 5.3.1</h1>
+<p>Try the <a href="https://r4ds.had.co.nz/transform.html#exercises-8">‘5.3.1 Exercises’ using <code>arrange()</code></a><br />
+ </p>
+</div>
 <div id="applying-the-airbnb-data" class="section level1">
 <h1>Applying the Airbnb data</h1>
 <p>Use the new examples on the Airbnb dataset.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># large Airbnb dataset (106 cols)</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
+
+nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)  <span class="co"># reads in data</span>
+nyc_full <span class="op">%&gt;%</span><span class="st"> </span>glimpse</code></pre></div>
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
