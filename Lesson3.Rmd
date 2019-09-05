@@ -128,7 +128,7 @@ You can set individual working directories and contain your R documents related 
 **Option 2:** If you already have a folder *just* for Emory Coding Club:
 1. _File > New Project_
 2. _Existing directory > Browse_  
-3. Select _Open in new window_    
+3. Select _Open in new session_    
 
 \    
 
