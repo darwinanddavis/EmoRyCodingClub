@@ -1,7 +1,7 @@
 ---
 params:
   lesson: "Lesson 3"
-  title: "`R` basics and using `R` project (`Rproj`) files"      
+  title: "Using `filter`, `arrange`, and `R` project (`Rproj`) files"      
   bookchapter_name: "Section 4"    
   bookchapter_section: "https://r4ds.had.co.nz/workflow-basics.html"
   functions: "`p_load`, `==`, `|`, `%in%`, `filter`, `near`"
