@@ -31,7 +31,7 @@ knitr::opts_chunk$set(
 
 <!-- install packages -->
 ```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
-packages <- c("ggplot2","ggthemes","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr")   
+packages <- c("ggplot2","ggthemes","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr", "nycflights13")   
 if (require(packages)) {
     install.packages(packages,dependencies = T)
     require(packages)
@@ -63,10 +63,10 @@ Packages for `r params$lesson`
 \  
 
 <!--  end yaml template------------------------------------------------------- -->
-
-* Solidify some fundamental `R` operators            
 * Learn how to use R project files  
 * Use `pacman` for easy package loading  
+* Solidify some fundamental `R` operators  
+* Subset data using `dplyr::filter()`
 
 # Do First    
 
@@ -152,14 +152,6 @@ require(tidyverse)
 x <- 4 * 3 # conventional method  
 3 * 4 -> x # occasional tidyverse method to be aware of  
 x %>% sqrt -> x # used with a pipe ( %>% )
-
-# -------------------------------------------
-
-# floating point numbers and using `==` 
-sqrt(2) ^ 2 == 2
-1 / 49 * 49 == 1
-near(sqrt(2) ^ 2,  2)
-near(1 / 49 * 49, 1)
 
 # -------------------------------------------
 
