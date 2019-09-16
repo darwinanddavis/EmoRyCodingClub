@@ -387,6 +387,10 @@ Aug 8
 - Introduce Rproj    
 - 
 
+# lesson 4
+- go straight into problem set
+- continue with filter
+- arrange, select, NAs
 
 
 
