@@ -1,10 +1,10 @@
 ---
 params:
   lesson: "Lesson 4"
-  title: "`apply` functions and plotting barcharts and distributions"
-  bookchapter_name: "Section 3.5.1"    
-  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
-  functions: "`apply`, `sapply`, `lapply`, `mapply`, `%>%`"
+  title: "Wrangling data with `dplyr`"
+  bookchapter_name: "Section 5.2.3"    
+  bookchapter_section: "https://r4ds.had.co.nz/transform.html#missing-values"
+  functions: "`is.na`, `arrange`, `select`, `mutate`"
   packages: "`dplyr`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
@@ -71,7 +71,7 @@ Packages for `r params$lesson`
 
 1. Use the `nycflights13` data set and identify the flights that arrived more than 30 minutes late.     
 
-```{r, include= FALSE, out.width="100%"}
+```{r, include = FALSE, out.width="100%"}
 
 library(nycflights13)
 filter(flights, arr_delay > 30)
@@ -80,7 +80,7 @@ filter(flights, arr_delay > 30)
 
 2. Identify flights that departed between midnight and 5am (inclusive).
 
-```{r}
+```{r, include = FALSE}
 # tricky because you have to figure out that 1,2,3 int means 00:01, 00:02 AM, etc. look at sched_dep_time and dep_delay
 
 filter(flights, dep_time %in% c(2400, 1:500)) #OR 
@@ -88,7 +88,10 @@ filter(flights, dep_time==2400 | dep_time<=500)
 
 ```
 
+\
+
 # Today's approach
+
 \
 
 [See David Kane's philosophy on teaching data science here](https://www.davidkane.info/files/gov_1005_spring_2019.html)
@@ -96,6 +99,9 @@ filter(flights, dep_time==2400 | dep_time<=500)
 \
 
 <center> ![](img/ulysses.jpeg) </center>
+
+\
+
 
 # Tidying
 
@@ -108,8 +114,8 @@ filter(flights, dep_time==2400 | dep_time<=500)
 
 # Exercises
 
-5.3.1 - arrange
-5.4.1 - select
-5.5.2 - mutate
+* 5.3.1 - `arrange`
+* 5.4.1 - `select`
+* 5.5.2 - `mutate`
 
 
