@@ -64,8 +64,9 @@ Packages for `r params$lesson`
 
 <!--  end yaml template------------------------------------------------------- -->  
   
-* Use `apply`, `mapply`, `lapply`, and `sapply` to apply functions to data  
-* Plot bar charts and distributions  
+* Continue where we left off last time with more functions from the `dplyr` package. You'll use these functions to help wrangle data. 
+
+
 
 # Do First    
 
