@@ -35,15 +35,17 @@ filter(df, is.na(x) | x > 1)
 
 ```{r}
 
-df <- tibble(x = c(5, 2, NA))
-arrange(df, x)
+df <- tibble(x = c(5, 2, NA), y= c(1, 2, 3))
+arrange(df, desc(y), x)
 
 
-arrange(df, desc(is.na(x), x)) #NA, then biggest to smallest b/c TRUE = 1, and FALSE=0
+
+a <- arrange(df, desc(is.na(x))) #NA, biggest to smallest b/c TRUE = 1, and FALSE=0
 
 #but what about smallest to biggest with NA leading?
+b <- arrange(df, desc(is.na(x)))
 
-arrange(df, desc(is.na(x)), x)
+
 
 
 ```
