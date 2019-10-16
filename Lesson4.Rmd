@@ -1,10 +1,10 @@
 ---
 params:
   lesson: "Lesson 4"
-  title: "`apply` functions and plotting barcharts and distributions"
-  bookchapter_name: "Section 3.5.1"    
-  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
-  functions: "`apply`, `sapply`, `lapply`, `mapply`, `%>%`"
+  title: "Wrangling data with `dplyr`"
+  bookchapter_name: "Section 5.2.3"    
+  bookchapter_section: "https://r4ds.had.co.nz/transform.html#missing-values"
+  functions: "`is.na`, `arrange`, `select`, `mutate`"
   packages: "`dplyr`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
@@ -64,88 +64,59 @@ Packages for `r params$lesson`
 
 <!--  end yaml template------------------------------------------------------- -->  
   
-* Use `apply`, `mapply`, `lapply`, and `sapply` to apply functions to data  
-* Plot bar charts and distributions  
+* Continue where we left off last time with more functions from the `dplyr` package. You'll use these functions to help wrangle data. 
+
+
 
 # Do First    
 
-Recreate the below plot using the smaller NYC Airbnb dataset. There are four aesthetics to change and the fitted line is a "loess" curve.        
+1. Use the `nycflights13` data set and identify the flights that arrived more than 30 minutes late.     
 
-```{r, echo=F, eval=T, out.width="100%"}
-# smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
-nyc <-  read_csv(url)
-nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
+```{r, include = FALSE, out.width="100%"}
 
-
-require(ggplot2)
-require(dplyr)
-require(ggthemes)
-
-ttl <- "Reviews of Airbnb apartments in NYC"
-subttl <- "by month"
-caption <- "Source: Airbnb open data"
-xlab <- "Reviews per month"
-ylab <- "Number of reviews"  
-colv <- "#535EEB"
-colv_smooth <- "#3B27BA"
-size <- 2
-alpha <- 0.3
-
-# glimpse(nyc)  
-# nyc$calculated_host_listings_count %>% unique
-ggplot(data = nyc, mapping = aes(x = reviews_per_month, y = number_of_reviews)) +
-  geom_point(color = colv, size=3, alpha = alpha) +
-  geom_smooth(color= colv_smooth, fill=colv_smooth, method="loess") +
-  labs(title = ttl,
-       subtitle = subttl,
-       caption = caption,
-       x = xlab,
-       y = ylab) +
-  theme_classic()
+library(nycflights13)
+filter(flights, arr_delay > 30)
 ```
 
-# Using the different apply functions 
 
-Create a list for testing the different apply functions  
-```{r}
-my_list <- list(rnorm(100), # random normal dist of 100 numbers
-               LETTERS, # letter from A to Z
-               sample(100,50) # sample ~ 100 50 times
-               )
-my_list
+2. Identify flights that departed between midnight and 5am (inclusive).
+
+```{r, include = FALSE}
+# tricky because you have to figure out that 1,2,3 int means 00:01, 00:02 AM, etc. look at sched_dep_time and dep_delay
+
+filter(flights, dep_time %in% c(2400, 1:500)) #OR 
+filter(flights, dep_time==2400 | dep_time<=500)
+
 ```
 
-`lapply`      
-```{r}
-my_list %>% sort # throw error because sort doesn't recognise elements within list
+\
 
-# option 1
-my_list %>% unlist # unlist first
-my_list %>% unlist %>% sort # then sort
-# bad because it converts the class of each list element to the only class possible across each element, a character   
+# Today's approach
 
-# option 2
-my_list %>% lapply(sort)  # or just apply the function e.g. sort to the entire list
-# better because it retains the class of each list element 
-```
+\
 
-Other functions to pass to `lapply`    
-```{r}
-my_list %>% lapply(mean)
-my_list %>% lapply(min)
-my_list %>% lapply(max)
-my_list %>% lapply(median)
-my_list %>% lapply(unique)
-my_list %>% lapply(sum) # error b/c the second list element is a character class 
-```
-\  
+[See David Kane's philosophy on teaching data science here](https://www.davidkane.info/files/gov_1005_spring_2019.html)
 
-# Applying the Airbnb data  
-Use the new examples on the Airbnb dataset.      
+\
 
-<!-- end body -->
-<!-- ____________________________________________________________________________ -->
-<!-- ____________________________________________________________________________ -->
-<!-- ____________________________________________________________________________ -->
+<center> ![](img/ulysses.jpeg) </center>
+
+\
+
+
+# Tidying
+
+<center>![](img/dplyr_basics.png)</center>
+
+
+# 5.2.3 Missing values
+
+<center> ![](img/missing.png) </center>
+
+# Exercises
+
+* 5.3.1 - `arrange`
+* 5.4.1 - `select`
+* 5.5.2 - `mutate`
+
 

@@ -1,0 +1,284 @@
+---
+title: "_lesson4_practice"
+author: "Desirée De Leon"
+date: "9/29/2019"
+output: html_document
+---
+
+```{r}
+start <- Sys.time()
+
+#load packages
+
+library(nycflights13)
+library(tidyverse)
+
+```
+
+#5.2.3 Missing Values
+
+```{r}
+df <- tibble(x = c(1, NA, 3))
+filter(df, x > 1)
+```
+```{r}
+filter(df, is.na(x) | x > 1)
+```
+
+
+
+#5.3 Arrange rows with `arrange()`
+
+#5.3.1 Exercises
+
+1. How could you use `arrange()` to sort all missing values to the start? (Hint: use is.na()).
+
+```{r}
+
+df <- tibble(x = c(5, 2, NA), y= c(1, 2, 3))
+arrange(df, desc(y), x)
+
+
+
+a <- arrange(df, desc(is.na(x))) #NA, biggest to smallest b/c TRUE = 1, and FALSE=0
+
+#but what about smallest to biggest with NA leading?
+b <- arrange(df, desc(is.na(x)))
+
+
+
+
+```
+
+2. Sort flights to find the most delayed flights. Find the flights that left earliest.
+
+
+```{r}
+# most delayed
+
+flights # use dep_delay as var
+
+arrange(flights, desc(dep_delay)) #delay by departure (not arrival)
+
+#left the earliest
+
+arrange(flights, dep_delay) #neg numb means early, which I knew because of ?flights
+
+```
+
+3. Sort flights to find the fastest flights.
+
+```{r}
+#fastest as in distance/ time?
+arrange(flights, distance/air_time)
+```
+
+
+4. Which flights travelled the longest? Which travelled the shortest?
+
+```{r}
+# the longest?
+arrange(flights, desc(air_time)) # EWR (newark) to HNL @ 695 minute air_time
+
+# the shortest
+arrange(flights, air_time) # Newark to Connecticut EWR BDL @ 20 minutes
+
+```
+
+# 5.4 Select columns with select()
+`select` is like subsetting in base r
+
+# 5.4.1 Exercises
+
+1. Brainstorm as many ways as possible to select dep_time, dep_delay, arr_time, and arr_delay from flights.
+
+```{r}
+# start w/ glimpse again
+#
+
+#1) by straight up listing them
+select(flights, dep_time, dep_delay, arr_time, arr_delay) 
+
+#2)  using "starts_with"
+select(flights, starts_with("dep"), starts_with("arr"))
+
+#3) using : and then excluding the stuff you don't want in between
+
+select(flights, dep_time:arr_delay, -(starts_with("sched")))
+
+#4) using contains
+
+select(flights, contains("dep"), starts_with("arr"), -contains("sched"))
+
+```
+
+2. What happens if you include the name of a variable multiple times in a select() call?
+ - nothing??
+```{r}
+
+select(flights, dep_time, dep_time, arr_time)
+```
+
+3. What does the `one_of()` function do? Why might it be helpful in conjunction with this vector?
+`vars <- c("year", "month", "day", "dep_delay", "arr_delay")`
+
+The `one_of` function can be used so that you can select any variables that are within `one_of`. 
+
+```{r}
+vars <- c("year", "month", "day", "dep_delay", "arr_delay", "hi") # includes bogus column name
+
+select(flights, vars) #does not work 
+select(flights, one_of(vars)) # but this does
+
+```
+
+4. Does the result of running the following code surprise you? How do the select helpers deal with case by default? How can you change that default?
+
+```{r}
+select(flights, contains("TIME"))
+
+```
+
+Yes, because of the caps in "TIME". Run `?contains()` to see why... `contains()` has a default setting of `ignore.case = TRUE`. Can change to `= FALSE`.
+
+```{r}
+select <- Sys.time()
+select-start
+```
+
+# 5.5 Add new variables with mutate()
+
+## 5.5.2
+
+1. Currently `dep_time` and `sched_dep_time` are convenient to look at, but hard to compute with because they’re not really continuous numbers. Convert them to a more convenient representation of number of minutes since midnight.
+
+```{r}
+
+transmute(flights, 
+       dep_time, 
+       dep_time_min = dep_time %/% 100 * 60 + dep_time %% 100, 
+       sched_dep_time, 
+       sched_dep_time_min = sched_dep_time %/% 100 * 60 + sched_dep_time %% 100, 
+         )
+
+
+
+# but also midnight (2400) would become 1400 minutes instead of 0, so need to convert that too
+
+transmute(flights, 
+       dep_time, 
+       dep_time_min = dep_time %/% 100 * 60 + dep_time %% 100, 
+       sched_dep_time, 
+       sched_dep_time_min = sched_dep_time %/% 100 * 60 + sched_dep_time %% 100, 
+         ) %% 1400
+
+```
+
+2. Compare `air_time` with `arr_time - dep_time`. What do you expect to see? What do you see? What do you need to do to fix it?
+
+```{r}
+
+transmute(flights, air_time,
+          arr_time_min = (arr_time %/% 100 * 60 + arr_time %% 100) %% 1440,
+          dep_time_min = (dep_time %/% 100 * 60 + dep_time %% 100) %% 1440, 
+          arr_time_min - dep_time_min)
+
+# you expect to see the same values, but you don't. Need to use the "easy to compute" versions of arr_time and dep-time
+# also, time zones.  but not multiples of 60. Also, arrival time could include time to taxi to/fro gate but is not airtime
+# check documentation, data source. See we don't have variables in this data set like "taxiin" taxioff" wheelsin, wheelsoff"
+
+# Solution:
+# if it was only a time zone issue, would convert everything to a common time zone (GMT)
+```
+
+3. Compare dep_time, sched_dep_time, and dep_delay. How would you expect those three numbers to be related?
+
+- you expect scheduled time + delay = dep time
+
+```{r}
+
+transmute(flights, dep_time, sched_dep_time, dep_delay)
+# but needs to be in continuous var form
+```
+
+
+```{r}
+# save in new tibble to make easier. make new column variables.
+dep <- mutate(flights,
+                 dep_delay,
+                 sched_dep_time_min = (sched_dep_time %/% 100 * 60 + sched_dep_time %% 100) %% 1440,
+                 dep_time_min = (dep_time %/% 100 * 60 + dep_time %% 100) %% 1440,
+                 diff = sched_dep_time_min + dep_delay - dep_time_min)
+
+dep
+```
+
+```{r}
+# are there any obs where diff != 0?
+
+filter(select(dep, contains("dep"), diff) , diff != 0)
+
+# yes, and all the discrepancies are the non-0 vals are 1440 (which would be for scheduled flights before midnight that got delayed to be after midnight) but let's ggplot to be sure.
+```
+
+ggplot to see 
+
+```{r}
+
+ggplot(data = filter(dep, diff !=0), mapping = aes(y = sched_dep_time_min, x = diff)
+) + 
+  geom_point()
+
+```
+
+4. Find the 10 most delayed flights using a ranking function. How do you want to handle ties? Carefully read the documentation for `min_rank()`.
+
+- min rank gives tied values the same rank, but then skips how ever many ties there were to get the next rank
+- dense rank, picks up where the ties left off
+
+
+```{r}
+# 10 most delayed, but use a rank function instead of arrange()
+
+# first, rank stuff
+ranked_delays <- mutate(flights, dep_delay,
+       rank_delay = min_rank(desc(dep_delay)))
+
+# then, filter based on that
+
+filter(ranked_delays, rank_delay <= 10) # no ties
+
+```
+
+
+
+5. What does 1:3 + 1:10 return? why?
+
+```{r}
+# learned about : with select() to grab columns between col:col and also for num_range("x", 1:3)
+1:3 + 1:10
+```
+Gives warning and then output.
+It's the same as saying:
+
+1+1, 2+2, 3+3...1+4...The first range of numbers will recycle until it reaches the end of the longer object (i.e. 1:10)
+
+6. What trigonometric functions does R provide?
+
+This question seems so random...
+
+ https://www.rdocumentation.org/packages/base/versions/3.6.1/topics/Trig
+
+```{r}
+
+#Hmm.....
+
+sin(pi*1)
+sinpi(1)
+
+
+```
+
+
+
+
