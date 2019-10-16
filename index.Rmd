@@ -77,7 +77,7 @@ knitr::include_graphics(c("img/mm.jpeg", "img/ddl.jpeg", "img/hw.jpg"))
 \    
 
 ## Date for next session  
-October 3, 2019      
+November 7, 2019      
 4:00 - 6:00 PM       
 \  
 
