@@ -1,11 +1,11 @@
 ---
 params:
   lesson: "Lesson 5"
-  title: "`if` statements and subsetting data"
-  bookchapter_name: "Section 3.5.1"    
-  bookchapter_section: "https://r4ds.had.co.nz/data-visualisation.html#facets"
-  functions: "`geom_bar`, `list`, `filter`, `subset`, `here`"
-  packages: "`here`"      
+  title: "Turning code into reproducible documents with `Rmarkdown`"
+  bookchapter_name: "Download the `RMarkdown` template here"    
+  bookchapter_section: "https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd"
+  functions: "`here`, `summarise`"
+  packages: "`here`, `set_here`, `dr_here`, `dplyr`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
@@ -26,7 +26,6 @@ knitr::opts_chunk$set(
   tidy.opts=list(width.cutoff=100), # set width of code chunks in output
   size="small" # set code chunk size
   )
-
 ```
 \
 
@@ -60,16 +59,29 @@ Packages for `r params$lesson`
 
 # Agenda
 
-[Data visualisation in `R` for Data Science, `r params$bookchapter_name`](`r params$bookchapter_section`).        
+[`r params$bookchapter_name`](`r params$bookchapter_section`).        
  
 <!--  end yaml template------------------------------------------------------- -->
   
-* Chop up datasets into smaller parts using `filter` and `subset`  
-* Create conditional statements and toggles using `if` and `else`      
+* Create HTML, PDF, and Word documents from R using `RMarkdown`      
 
-# Do First    
+# Do First      
 
-Recreate the below plot using the larger NYC Airbnb dataset.    
+Recreate the below plot using the larger NYC Airbnb dataset. Here's the code to add the title and labels.  
+
+```{r,eval=F}
+ttl <- "NYC Airbnb availability"
+subttl <- "for room types across neighbourhoods"
+xlab <- "Availability of property in next 30 days"
+ylab <- "Density"
+
+# append this to your ggplot function with a `+`
+labs(title = ttl,
+     subtitle = subttl,
+     x = xlab,
+     y = ylab) 
+```
+
 ```{r,echo=F,eval=T,cache=T}
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
 nyc_full <- read_csv(url) # reads in data
@@ -94,8 +106,7 @@ ggplot() +
   my_theme 
 
 ```
-
-
+  
 # Setting your working directory  
 Using `here` to set your working directory  
 ```{r}
@@ -111,11 +122,38 @@ list.files() # print files in your current working dir. the 'heretest.txt' file 
 here("lookhere","heretest.txt") # using here to forage for the file
 here("lookhere","heretest.txt") %>% readLines # print the contents in R
 
-```
-\  
 
-# Applying the Airbnb data  
-Use the new examples on the Airbnb dataset.      
+```
+\    
+
+# Navigating the `Rmarkdown` interface    
+
+Have a look through each section of the raw `.Rmd` file to see what the code does. You'll be using this template to create your own files, such as creating notes for this coding club.    
+
+<!-- ----------------------- image --------------------------- -->
+<div align="center"; text-align:center>
+  <img src="img/rmd.jpg" style=width:100%>
+</div>
+<!-- ----------------------- image --------------------------- -->  
+  
+
+# Exercises  
+
+* Create a 'EmoRy Coding Club notes' document (PDF or HTML document)  
+* Create your own parameter in the yaml   
+* Create a code chunk that shows the code and output, but masks any warnings
+* Create a code chunk with a plot of your own data or from the Airbnb data. Here's the NYC Airbnb data:    
+```{r}
+# large Airbnb dataset (106 cols)
+require(readr,dplyr)
+
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+
+nyc_full <- read_csv(url) # reads in data
+nyc_full %>% glimpse
+```
+* Change the above figure dimensions in the knitted document      
+
 
 <!-- end body -->
 <!-- ____________________________________________________________________________ -->

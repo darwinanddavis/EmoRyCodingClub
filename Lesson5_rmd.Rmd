@@ -1,0 +1,234 @@
+---
+title: Using RMarkdown for reproducible and neat documents 
+author: |
+ | Your name here 
+ |  
+ | Your affiliation here
+output:
+  html_document: # html options 
+    highlight: tango
+    code_folding: show
+    toc: yes
+    toc_depth: 4
+    number_sections: no
+    toc_float: yes
+  pdf_document: # pdf options
+    highlight: tango
+    template: null
+    toc: yes
+    toc_depth: 4
+    number_sections: false
+    fig_width: 4
+    fig_height: 5
+    fig_caption: true
+  word_document: # ms word options
+    highlight: tango
+    keep_md: yes
+    pandoc_args: --smart
+    toc: yes
+  md_document: # markdown options
+    variant: markdown_github 
+params: 
+  email: "your email here"
+  date: !r Sys.Date()
+  version: !r getRversion()
+classoption: portrait
+---
+
+<!-- this enables math encoding in the knitted documents  -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
+</script>
+
+```{r, set-options, echo = F, cache = F}
+options(width=100)
+knitr::opts_chunk$set(
+ eval = TRUE, # run all code
+ echo = TRUE, # show code chunks in output 
+ tidy=TRUE, # make output as tidy
+ message = FALSE,  # mask all messages
+ warning = FALSE, # mask all warnings 
+ size="small" # set code chunk size
+)
+
+# knitr::opts_knit$set(root.dir=paste0(params$dir,"/")) # set working dir
+# setwd(paste0(params$dir,"/")) # for running just in R not knitr
+```
+
+\newpage   
+
+Date: `r params$date`  
+R version: `r params$version`  
+*Corresponding author: `r params$email`  
+
+\newpage    
+ 
+# Overview
+
+This document showcases how to create and use `RMarkdown` documents.    
+
+You can write in-line `code` if you want to differentiate between when you are typing normally or highlighting `model parameters`, for example.    
+
+Equations like this $t' = \gamma(t - vx/c^{2})$, to appear within text lines.  
+
+Create links to your [website](https://github.com/darwinanddavis).  
+
+Make footnotes^[Where the footnote goes here and it is automatically formatted].    
+
+## Use different headings  
+
+### Like this subheading  
+
+# Just like \LaTeX{}, but _more versatile_.      
+
+\newpage     
+ 
+## Define equations      
+
+Accordingly, we write the eigenfunction of a spinless particle as the superposition of plane wave states of momentum ($\pi$) and energy ($Ej$) having amplitudes $a(\pi,Ej)$  
+
+$$  
+\phi n(r,t) =  
+\sum_{i, j} a(p_{i},E_{j})
+e^{
+\frac{i}
+{h}
+(p_{i} \cdot r - E_{j}t) 
+}
+$$
+\  
+\    
+
+## Embed images/gifs:  
+
+![Great power is pretty boring](img/opm.jpg).        
+
+\newpage  
+
+## Create, alter, and embed plots    
+```{r,echo=F,eval=T}
+set.seed(12)
+N <- 2000
+rr <- rnorm(N)
+plot(rr,pch=20,main="Some random data")
+```
+
+Figure 1. Example of a stock plot embedded into a PDF from RMarkdown.   
+
+\newpage  
+
+## Show plots with associated code  
+```{r,echo=T,eval=T}
+require(viridis)
+bm <- 0
+par(las=1,bty="n"); xlim <- c(-5,5);ylim <- c(0,0.5)
+set.seed(12)
+N <- 2000
+rr <- rnorm(N); rr2 <- rnorm(N^2); rr3 <- rnorm(N+0.3)
+rrd <- density(rr);rrd2 <- density(rr2);rrd3 <- density(rr3)
+main <- paste0(N," points but plot better");xlab <- "Points in space"
+if(bm==1){
+  layout(matrix(c(rep(1,3),2:4), 2, 3, byrow = TRUE));sc <- 1
+  plot(rr,las=1,bty="n",col=adjustcolor(viridis(N),0.5),pch=20,cex=runif(10,1,5),
+       main=main,xlab=xlab)
+for(r in list(rrd,rrd2,rrd3)){
+  plot(r,xlim=xlim,ylim=ylim,main="")
+  polygon(r,col=adjustcolor(viridis(250)[sc],0.5),border=viridis(250)[sc]);sc <- sc+100}
+}else{par(mfrow=c(1,1))
+  plot(rr,las=1,bty="n",col=adjustcolor(viridis(N),0.5),pch=20,cex=runif(10,1,5),
+       main=main,xlab=xlab)}
+```
+
+Figure 2. Example of a plot with improved graphics and its associated code embedded into a PDF from RMarkdown. 
+
+\newpage  
+
+## And tables  
+
+Table 1. Definitions of model parameters for individual hosts and **parasites**. Dimensions and units: -, dimensionless; cm, centimetres; J, Joules; L, length.    
+
+| Parameter | Definition | Dimension<br/>(unit) | 
+| :---: | :--- | :---: |    
+| _L_ | structural length | cm |
+| _ee_ | scaled reserve density | J (cm^3^) |
+| _D_ | host development | --- |
+| _RH_ | energy in reproduction buffer| J |
+
+\newpage  
+
+
+## Embed code from different languages  
+
+### This is `R` code  
+```{r, eval=F}
+if(pck==1){
+  p<-c("rJava", "RNetLogo"); remove.packages(p)
+  # then install rJava and RNetLogo from source
+  install.packages("rJava", repos = "https://cran.r-project.org/")
+  install.packages("RNetLogo", repos = "https://cran.r-project.org/")
+}
+```
+
+### `shell/bash`  
+```{bash, eval=F}
+echo "Hello Bash!"  
+pwd # check working dir
+git init # initialise git
+```
+
+### Octave (and MATLAB from the `RMatlab` package).  
+[`RMatlab documentation`](https://cran.r-project.org/web/packages/R.matlab/index.html).  
+```{octave, eval=F}
+b = [4; 9; 2] # Column vector
+A = [ 3 4 5;
+      1 3 1;
+      3 5 9 ]
+x = A \ b     # Solve the system Ax = b
+```
+
+### HTML    
+```{html, eval=F}
+<!-- links-->
+		<div class="footer">
+			<a href="dd_feed.html" 
+			class="transition fade_in">
+				Latest post
+			</a>
+			&nbsp; &nbsp; &nbsp;
+			<a href="dd_contact.html" 
+			class="transition fade_in">
+				Contact
+			</a>
+			&nbsp; &nbsp; &nbsp;
+			<a href="dd_subscribe.html"
+			class="transition fade_in">
+				Subscribe
+			</a>
+		</div>
+```
+
+### CSS
+```{css, eval=F}
+body {
+  color: red;
+}
+```
+
+### Javascript to access `html` and `css`  
+```{js, eval=F}
+$('.title').css('color', 'red')
+```
+
+### Python  
+```{python, eval=F}
+x = 'hello, python world!'
+print(x.split(' '))
+```
+
+### Here's a complete list of available languages  
+```{r eval=T}
+names(knitr::knit_engines$get())
+```
+
+
+

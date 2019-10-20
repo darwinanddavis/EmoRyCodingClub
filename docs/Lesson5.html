@@ -458,30 +458,35 @@ div.tocify {
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
-<div id="lesson-5-if-statements-and-subsetting-data" class="section level1">
-<h1>Lesson 5: <code>if</code> statements and subsetting data</h1>
+<div id="lesson-5-turning-code-into-reproducible-documents-with-rmarkdown" class="section level1">
+<h1>Lesson 5: Turning code into reproducible documents with <code>Rmarkdown</code></h1>
 <p> </p>
 <p>Functions for Lesson 5<br />
-<code>geom_bar</code>, <code>list</code>, <code>filter</code>, <code>subset</code>, <code>here</code><br />
+<code>here</code>, <code>summarise</code><br />
  </p>
 <p>Packages for Lesson 5<br />
-<code>here</code><br />
+<code>here</code>, <code>set_here</code>, <code>dr_here</code>, <code>dplyr</code><br />
  </p>
 </div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
-<p><a href="https://r4ds.had.co.nz/data-visualisation.html#facets">Data visualisation in <code>R</code> for Data Science, Section 3.5.1</a>.</p>
+<p><a href="https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd">Download the <code>RMarkdown</code> template here</a>.</p>
 <!--  end yaml template------------------------------------------------------- -->
 <ul>
-<li>Chop up datasets into smaller parts using <code>filter</code> and <code>subset</code><br />
-</li>
-<li>Create conditional statements and toggles using <code>if</code> and <code>else</code></li>
+<li>Create HTML, PDF, and Word documents from R using <code>RMarkdown</code></li>
 </ul>
 </div>
 <div id="do-first" class="section level1">
 <h1>Do First</h1>
-<p>Recreate the below plot using the larger NYC Airbnb dataset.</p>
-<p><img src="Lesson5_files/figure-html/unnamed-chunk-2-1.png" width="100%" /></p>
+<p>Recreate the below plot using the larger NYC Airbnb dataset. Here’s the code to add the title and labels.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ttl &lt;-<span class="st"> &quot;NYC Airbnb availability&quot;</span>
+subttl &lt;-<span class="st"> &quot;for room types across neighbourhoods&quot;</span>
+xlab &lt;-<span class="st"> &quot;Availability of property in next 30 days&quot;</span>
+ylab &lt;-<span class="st"> &quot;Density&quot;</span>
+
+<span class="co"># append this to your ggplot function with a `+`</span>
+<span class="kw">labs</span>(<span class="dt">title =</span> ttl, <span class="dt">subtitle =</span> subttl, <span class="dt">x =</span> xlab, <span class="dt">y =</span> ylab)</code></pre></div>
+<p><img src="Lesson5_files/figure-html/unnamed-chunk-3-1.png" width="100%" /></p>
 </div>
 <div id="setting-your-working-directory" class="section level1">
 <h1>Setting your working directory</h1>
@@ -498,6 +503,36 @@ div.tocify {
 <span class="kw">here</span>(<span class="st">&quot;lookhere&quot;</span>, <span class="st">&quot;heretest.txt&quot;</span>)  <span class="co"># using here to forage for the file</span>
 <span class="kw">here</span>(<span class="st">&quot;lookhere&quot;</span>, <span class="st">&quot;heretest.txt&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>readLines  <span class="co"># print the contents in R</span></code></pre></div>
 <p> </p>
+</div>
+<div id="navigating-the-rmarkdown-interface" class="section level1">
+<h1>Navigating the <code>Rmarkdown</code> interface</h1>
+<p>Have a look through each section of the raw <code>.Rmd</code> file to see what the code does. You’ll be using this template to create your own files, such as creating notes for this coding club.</p>
+<!-- ----------------------- image --------------------------- -->
+<div align="center" ;="" text-align:center="">
+<p><img src="img/rmd.jpg" style=width:100%></p>
+</div>
+<!-- ----------------------- image --------------------------- -->
+</div>
+<div id="exercises" class="section level1">
+<h1>Exercises</h1>
+<ul>
+<li>Create a ‘EmoRy Coding Club notes’ document (PDF or HTML document)<br />
+</li>
+<li>Create your own parameter in the yaml<br />
+</li>
+<li>Create a code chunk that shows the code and output, but masks any warnings</li>
+<li>Create a code chunk with a plot of your own data or from the Airbnb data. Here’s the NYC Airbnb data:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># large Airbnb dataset (106 cols)</span>
+<span class="kw">require</span>(readr, dplyr)
+
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
+
+nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)  <span class="co"># reads in data</span>
+nyc_full <span class="op">%&gt;%</span><span class="st"> </span>glimpse</code></pre></div>
+<ul>
+<li>Change the above figure dimensions in the knitted document</li>
+</ul>
 </div>
 <div id="applying-the-airbnb-data" class="section level1">
 <h1>Applying the Airbnb data</h1>

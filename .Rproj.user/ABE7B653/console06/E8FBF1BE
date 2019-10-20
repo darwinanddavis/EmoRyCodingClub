@@ -1000,3 +1000,126 @@ remote:
 To https://github.com/darwinanddavis/EmoRyCodingClub
    3a1f930..3b18fa4  master -> master
 git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''L'%' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C5' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ''s'e's's'i'o'n'[1P'[1P'[1P'[1P'[1P'[1P'[1P't'i'm'e'
+[master 5ce9664] L5 time
+ 8 files changed, 28 insertions(+), 27 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (93%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+To https://github.com/darwinanddavis/EmoRyCodingClub
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/darwinanddavis/EmoRyCodingClub'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pull
+remote: Enumerating objects: 22, done.[K
+remote: Counting objects:   4% (1/22)[Kremote: Counting objects:   9% (2/22)[Kremote: Counting objects:  13% (3/22)[Kremote: Counting objects:  18% (4/22)[Kremote: Counting objects:  22% (5/22)[Kremote: Counting objects:  27% (6/22)[Kremote: Counting objects:  31% (7/22)[Kremote: Counting objects:  36% (8/22)[Kremote: Counting objects:  40% (9/22)[Kremote: Counting objects:  45% (10/22)[Kremote: Counting objects:  50% (11/22)[Kremote: Counting objects:  54% (12/22)[Kremote: Counting objects:  59% (13/22)[Kremote: Counting objects:  63% (14/22)[Kremote: Counting objects:  68% (15/22)[Kremote: Counting objects:  72% (16/22)[Kremote: Counting objects:  77% (17/22)[Kremote: Counting objects:  81% (18/22)[Kremote: Counting objects:  86% (19/22)[Kremote: Counting objects:  90% (20/22)[Kremote: Counting objects:  95% (21/22)[Kremote: Counting objects: 100% (22/22)[Kremote: Counting objects: 100% (22/22), done.[K
+remote: Compressing objects:  33% (1/3)[Kremote: Compressing objects:  66% (2/3)[Kremote: Compressing objects: 100% (3/3)[Kremote: Compressing objects: 100% (3/3), done.[K
+Unpacking objects:   2% (1/34)   Unpacking objects:   5% (2/34)   Unpacking objects:   8% (3/34)   Unpacking objects:  11% (4/34)   Unpacking objects:  14% (5/34)   Unpacking objects:  17% (6/34)   Unpacking objects:  20% (7/34)   Unpacking objects:  23% (8/34)   Unpacking objects:  26% (9/34)   Unpacking objects:  29% (10/34)   remote: Total 34 (delta 19), reused 21 (delta 19), pack-reused 12[K
+Unpacking objects:  32% (11/34)   Unpacking objects:  35% (12/34)   Unpacking objects:  38% (13/34)   Unpacking objects:  41% (14/34)   Unpacking objects:  44% (15/34)   Unpacking objects:  47% (16/34)   Unpacking objects:  50% (17/34)   Unpacking objects:  52% (18/34)   Unpacking objects:  55% (19/34)   Unpacking objects:  58% (20/34)   Unpacking objects:  61% (21/34)   Unpacking objects:  64% (22/34)   Unpacking objects:  67% (23/34)   Unpacking objects:  70% (24/34)   Unpacking objects:  73% (25/34)   Unpacking objects:  76% (26/34)   Unpacking objects:  79% (27/34)   Unpacking objects:  82% (28/34)   Unpacking objects:  85% (29/34)   Unpacking objects:  88% (30/34)   Unpacking objects:  91% (31/34)   Unpacking objects:  94% (32/34)   Unpacking objects:  97% (33/34)   Unpacking objects: 100% (34/34)   Unpacking objects: 100% (34/34), done.
+From https://github.com/darwinanddavis/EmoRyCodingClub
+   3b18fa4..1ad7e75  master     -> origin/master
+Merge made by the 'recursive' strategy.
+ .DS_Store                      | Bin [31m6148[m -> [32m6148[m bytes
+ .../shared/notebooks/paths     |   0
+ Lesson4.Rmd                    | 121 [32m+[m[31m-[m
+ admin/_lesson4_practice.Rmd    | 284 [32m++++[m
+ admin/_lesson4_practice.html   | 539 [32m++++++++[m
+ docs/Lesson4.html              | 166 [32m+[m[31m--[m
+ docs/img/dplyr_basics.png      | Bin [31m0[m -> [32m275242[m bytes
+ docs/img/missing.png           | Bin [31m0[m -> [32m120871[m bytes
+ docs/img/ulysses.jpeg          | Bin [31m0[m -> [32m119925[m bytes
+ .../codefolding.js             |   2 [32m+[m[31m-[m
+ img/dplyr_basics.png           | Bin [31m0[m -> [32m275242[m bytes
+ img/missing.png                | Bin [31m0[m -> [32m120871[m bytes
+ img/ulysses.jpeg               | Bin [31m0[m -> [32m119925[m bytes
+ 13 files changed, 915 insertions(+), 197 deletions(-)
+ create mode 100644 admin/_lesson4_practice.Rmd
+ create mode 100644 admin/_lesson4_practice.html
+ create mode 100644 docs/img/dplyr_basics.png
+ create mode 100644 docs/img/missing.png
+ create mode 100644 docs/img/ulysses.jpeg
+ create mode 100644 img/dplyr_basics.png
+ create mode 100644 img/missing.png
+ create mode 100644 img/ulysses.jpeg
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push[K[K[K[K[K status
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE.env[m
+	[31mmodified:   .Rproj.user/ABE7B653/console06/INDEX001[m
+	[31mmodified:   .Rproj.user/shared/notebooks/paths[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 21, done.
+Delta compression using up to 4 threads.
+Compressing objects:   5% (1/19)   Compressing objects:  10% (2/19)   Compressing objects:  15% (3/19)   Compressing objects:  21% (4/19)   Compressing objects:  26% (5/19)   Compressing objects:  31% (6/19)   Compressing objects:  36% (7/19)   Compressing objects:  42% (8/19)   Compressing objects:  47% (9/19)   Compressing objects:  52% (10/19)   Compressing objects:  57% (11/19)   Compressing objects:  63% (12/19)   Compressing objects:  68% (13/19)   Compressing objects:  73% (14/19)   Compressing objects:  78% (15/19)   Compressing objects:  84% (16/19)   Compressing objects:  89% (17/19)   Compressing objects:  94% (18/19)   Compressing objects: 100% (19/19)   Compressing objects: 100% (19/19), done.
+Writing objects:   4% (1/21)   Writing objects:   9% (2/21)   Writing objects:  14% (3/21)   Writing objects:  19% (4/21)   Writing objects:  23% (5/21)   Writing objects:  28% (6/21)   Writing objects:  33% (7/21)   Writing objects:  38% (8/21)   Writing objects:  42% (9/21)   Writing objects:  47% (10/21)   Writing objects:  52% (11/21)   Writing objects:  57% (12/21)   Writing objects:  61% (13/21)   Writing objects:  66% (14/21)   Writing objects:  71% (15/21)   Writing objects:  76% (16/21)   Writing objects:  80% (17/21)   Writing objects:  85% (18/21)   Writing objects:  90% (19/21)   Writing objects:  95% (20/21)   Writing objects: 100% (21/21)   Writing objects: 100% (21/21), 2.04 KiB | 0 bytes/s, done.
+Total 21 (delta 13), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/13)[Kremote: Resolving deltas:   7% (1/13)[Kremote: Resolving deltas:  15% (2/13)[Kremote: Resolving deltas:  23% (3/13)[Kremote: Resolving deltas:  30% (4/13)[Kremote: Resolving deltas:  38% (5/13)[Kremote: Resolving deltas:  46% (6/13)[Kremote: Resolving deltas:  53% (7/13)[Kremote: Resolving deltas:  61% (8/13)[Kremote: Resolving deltas:  69% (9/13)[Kremote: Resolving deltas:  76% (10/13)[Kremote: Resolving deltas:  84% (11/13)[Kremote: Resolving deltas:  92% (12/13)[Kremote: Resolving deltas: 100% (13/13)[Kremote: Resolving deltas: 100% (13/13), completed with 13 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   1ad7e75..7571c04  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ it a[K[K[K[Kgit add . 
+g]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''l'5' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cal5''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl5' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca5''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C5' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C'l5''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cal5'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdl5'dl5'[Cel5'dl5' l5'
+> it[K[Kgit piush[K[K[K[K[K[K[K[K[Kgit push
+> 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ gt[Kit push
+Everything up-to-date
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m ''addded l5'
+git push
+ echo 32BCDB36 && /usr/bin/env && echo 816E267[A[A[A[8Padd . 
+[K
+[K
+[K[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git statys
+git: 'statys' is not a git command. See 'git --help'.
+
+Did you mean this?
+	status
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git statys[K[Kus
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+	[32mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE.env[m
+	[32mmodified:   .Rproj.user/ABE7B653/console06/INDEX001[m
+	[32mmodified:   .Rproj.user/ABE7B653/sources/prop/INDEX[m
+	[32mmodified:   .Rproj.user/shared/notebooks/paths[m
+	[32mmodified:   Lesson4.Rmd[m
+	[32mmodified:   Lesson5.Rmd[m
+	[32mnew file:   Lesson5_cache/html/unnamed-chunk-2_79471d1e6bc9c8af0a20b7befffb921c.RData[m
+	[32mnew file:   Lesson5_cache/html/unnamed-chunk-2_79471d1e6bc9c8af0a20b7befffb921c.rdb[m
+	[32mnew file:   Lesson5_cache/html/unnamed-chunk-2_79471d1e6bc9c8af0a20b7befffb921c.rdx[m
+	[32mnew file:   Lesson5_files/figure-html/unnamed-chunk-3-1.png[m
+	[32mnew file:   Lesson5_rmd.Rmd[m
+	[32mmodified:   docs/Lesson5.html[m
+	[32mnew file:   docs/Lesson5_files/figure-html/unnamed-chunk-3-1.png[m
+	[32mnew file:   docs/Lesson5_rmd.html[m
+	[32mnew file:   docs/Lesson5_rmd_files/figure-html/unnamed-chunk-1-1.png[m
+	[32mnew file:   docs/Lesson5_rmd_files/figure-html/unnamed-chunk-2-1.png[m
+	[32mnew file:   docs/img/opm.jpg[m
+	[32mmodified:   docs/site_libs/navigation-1.1/codefolding.js[m
+	[32mnew file:   img/opm.jpg[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
+
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .

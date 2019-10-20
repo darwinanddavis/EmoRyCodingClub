@@ -57,7 +57,7 @@ Packages for `r params$lesson`
 `r params$packages`        
 \    
 
-# Agenda
+# Agenda 
 
 [Data visualisation in `R` for Data Science, `r params$bookchapter_name`](`r params$bookchapter_section`).      
 \  
