@@ -91,6 +91,7 @@ nyc_full <- read_csv(url) # reads in data
 ttl <- "NYC Airbnb availability"
 subttl <- "for room types across neighbourhoods"
 xlab <- "Availability of property in next 30 days"
+ylab <- "Density"
 my_theme <- theme_tufte()
 
 # glimpse(nyc_full)  
@@ -102,7 +103,8 @@ ggplot() +
   facet_grid(room_type ~ neighbourhood_group_cleansed) +
   labs(title = ttl,
        subtitle = subttl,
-       x = xlab) +
+       x = xlab,
+       y = ylab) +
   my_theme 
 
 ```

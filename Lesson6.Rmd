@@ -1,0 +1,168 @@
+---
+params:
+  lesson: "Lesson 6"
+  title: "Applying functions with `purrr`"
+  bookchapter_name: "Cheat sheet for the `purrr` package"    
+  bookchapter_section: "https://purrr.tidyverse.org/"  
+  functions: "`map`, `map2`"
+  packages: "`dplyr`, `purrr`"      
+  # end inputs ---------------------------------------------------------------
+header-includes: \usepackage{float}
+always_allow_html: yes
+output:
+  html_document:
+    code_folding: show
+---
+  
+```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
+options(width=100)
+knitr::opts_chunk$set(
+  eval = FALSE, # run all code
+  echo = TRUE, # show code chunks in output 
+  tidy = TRUE, # make output as tidy
+  message = FALSE,  # mask all messages
+  warning = FALSE, # mask all warnings 
+  comment = "",
+  tidy.opts=list(width.cutoff=100), # set width of code chunks in output
+  size="small" # set code chunk size
+  )
+```
+\
+
+<!-- install packages -->
+```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
+packages <- c("ggplot2","ggthemes","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr")   
+if (require(packages)) {
+    install.packages(packages,dependencies = T)
+    require(packages)
+    # load tvthemes
+    devtools::install_github("Ryo-N7/tvthemes")
+}
+lapply(packages,library,character.only=T)  
+```
+
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+
+# `r paste0(params$lesson,": ",params$title)`    
+\  
+
+Functions for `r params$lesson`  
+`r params$functions`    
+\    
+
+Packages for `r params$lesson`          
+`r params$packages`        
+\    
+
+# Agenda 
+
+Use the `purrr` package to apply functions to lists and vectors.    
+
+[`r params$bookchapter_name`](`r params$bookchapter_section`).      
+\  
+
+<!--  end yaml template------------------------------------------------------- -->  
+
+# Do First    
+
+Recreate the below plot using the smaller NYC Airbnb dataset. To change the legend title, add the (unintuitive) `colour = "your legend text"` argument to the `labs()` function.  
+
+```{r}
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+nyc <-  read_csv(url)
+nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
+```
+
+```{r, echo=F, eval=T, out.width="100%"}
+require(ggthemes)
+require(ggplot2)
+require(readr)
+
+# smaller csv file (16 cols)
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+nyc <-  read_csv(url)
+nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
+
+colv = "#00060a"
+ggplot(data = nyc, mapping = aes(x = reviews_per_month,y = number_of_reviews)) +
+  geom_point(aes(color=neighbourhood_group),show.legend = T,alpha=0.5) +
+  geom_smooth(color = colv, fill = colv, method="loess",alpha=0.3) +
+  labs(title = "Reviews across NYC boroughs",
+       caption = "Source: NYC Airbnb data",
+       x = "Reviews per month",
+       y =  "Number of reviews",
+       colour = "Boroughs") +
+  theme_classic()
+
+```
+
+# Apply functions  
+
+The `purrr` package uses the following apply functions to apply function iteratively to a list or vector.  
+
+`map` Apply a function to each element of a list  
+`map2` Apply a function to each element of two lists simultaneously  
+`pmap` Apply a function to groups of elements from lists of lists  
+`lmap` Apply function to each list-element of a list or vector    
+`imap` Apply function to each element of a list or vector and its index  
+
+```{r, eval=F}
+require(purrr)
+set.seed(12)
+ls1 <- list(sample(10),rnorm(10,500),runif(10)) # create a list of data
+ls2 <- map(ls1,sqrt) 
+
+map(ls1,mean)
+map2(ls1,ls2,sum)
+
+```
+\  
+
+# Filter lists 
+`pluck` Select an element by name or index  
+`keep` Select elements that pass a logical test   
+`discard` Select elements that do not pass a logical test  
+`compact` Drop empty elements  
+`head_while` Return head elements until one does not pass. Also `tail_while`.   
+
+```{r,eval=F}
+pluck(ls1,1)
+keep(ls2, is.na)
+discard(ls1, is.na)
+compact(ls1)
+
+```
+
+# Summarise lists  
+
+`every` Do all elements pass a test?   
+`some` Do some elements pass a test?  
+`has_element` Does a list contain an element?  
+`detect` Find first element to pass  
+`detect_index` Find index of first element to pass  
+`vec_depth` Return depth (number of levels of indexes)  
+  
+```{r, eval=F}
+ls1 %>% every(is.character)
+ls1 %>% some(is.character)
+ls1 %>% has_element("foo")
+ls1 %>% detect(is.character)
+ls1 %>% detect_index(is.character)
+ls1 %>% vec_depth
+ 
+```
+
+# Transform lists   
+
+`modify` Apply function to each element  
+`modify_at` Apply function to elements by name or index  
+`modify_if` Apply function to elements that pass a test  
+`modify_depth` Apply function to each element at a given level of a list  
+```{r}
+
+```
+
