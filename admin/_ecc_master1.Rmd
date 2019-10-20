@@ -55,6 +55,12 @@ knitr::opts_chunk$set(
 #setwd(paste0(params$dir,"/")) # for running just in R not knitr
 ```
 
+```{r,eval=F}
+# to render complete site 
+rmarkdown::render_site()
+```
+
+
 \newpage   
 
 Date: `r params$date`  
