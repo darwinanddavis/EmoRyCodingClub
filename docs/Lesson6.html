@@ -461,8 +461,8 @@ div.tocify {
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
-<div id="lesson-6-applying-functions-with-purrr" class="section level1">
-<h1>Lesson 6: Applying functions with <code>purrr</code></h1>
+<div id="lesson-6-lists-lists-lists-and-applying-functions-with-purrr" class="section level1">
+<h1>Lesson 6: Lists, lists, lists and applying functions with <code>purrr</code></h1>
 <p> </p>
 <p>Functions for Lesson 6<br />
 <code>map</code>, <code>map2</code><br />
@@ -480,7 +480,7 @@ div.tocify {
 </div>
 <div id="do-first" class="section level1">
 <h1>Do First</h1>
-<p>Recreate the below plot using the smaller NYC Airbnb dataset. To change the legend title, add the (unintuitive) <code>colour = &quot;your legend text&quot;</code> argument to the <code>labs()</code> function.</p>
+<p>Recreate the below plot using the smaller NYC Airbnb dataset. The curve is a ‘loess’. To change the legend title, add the (unintuitive) <code>colour = &quot;your legend title&quot;</code> argument to the <code>labs()</code> function.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
 nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
@@ -511,7 +511,9 @@ ls2 &lt;-<span class="st"> </span><span class="kw">map</span>(ls1, sqrt)
 <code>discard</code> Select elements that do not pass a logical test<br />
 <code>compact</code> Drop empty elements<br />
 <code>head_while</code> Return head elements until one does not pass. Also <code>tail_while</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pluck</span>(ls1, <span class="dv">1</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pluck</span>(ls1, <span class="dv">3</span>)  <span class="co"># advantage = returns numeric </span>
+ls1[<span class="dv">3</span>][[<span class="dv">1</span>]]  <span class="co"># this is the same as above</span>
+
 <span class="kw">keep</span>(ls2, is.na)
 <span class="kw">discard</span>(ls1, is.na)
 <span class="kw">compact</span>(ls1)</code></pre></div>

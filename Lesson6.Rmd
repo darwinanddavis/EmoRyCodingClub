@@ -1,7 +1,7 @@
 ---
 params:
   lesson: "Lesson 6"
-  title: "Applying functions with `purrr`"
+  title: "Lists, lists, lists and applying functions with `purrr`"
   bookchapter_name: "Cheat sheet for the `purrr` package"    
   bookchapter_section: "https://purrr.tidyverse.org/"  
   functions: "`map`, `map2`"
@@ -68,7 +68,7 @@ Use the `purrr` package to apply functions to lists and vectors.
 
 # Do First    
 
-Recreate the below plot using the smaller NYC Airbnb dataset. To change the legend title, add the (unintuitive) `colour = "your legend text"` argument to the `labs()` function.  
+Recreate the below plot using the smaller NYC Airbnb dataset. The curve is a 'loess'. To change the legend title, add the (unintuitive) `colour = "your legend title"` argument to the `labs()` function.  
 
 ```{r}
 # smaller csv file (16 cols)
@@ -78,9 +78,7 @@ nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
 ```
 
 ```{r, echo=F, eval=T, out.width="100%"}
-require(ggthemes)
-require(ggplot2)
-require(readr)
+require(ggthemes,ggplot2,readr)
 
 # smaller csv file (16 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
@@ -130,7 +128,9 @@ map2(ls1,ls2,sum)
 `head_while` Return head elements until one does not pass. Also `tail_while`.   
 
 ```{r,eval=F}
-pluck(ls1,1)
+pluck(ls1,3) # advantage = returns numeric 
+ls1[3][[1]] # this is the same as above
+
 keep(ls2, is.na)
 discard(ls1, is.na)
 compact(ls1)

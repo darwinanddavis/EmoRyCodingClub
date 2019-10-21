@@ -2,7 +2,7 @@
 params:
   lesson: "Lesson 5"
   title: "Turning code into reproducible documents with `Rmarkdown`"
-  bookchapter_name: "Download the `RMarkdown` template here"    
+  bookchapter_name: "Download the `RMarkdown` template here (right click > Save Link As")      
   bookchapter_section: "https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd"
   functions: "`here`, `summarise`"
   packages: "`here`, `set_here`, `dr_here`, `dplyr`"      
@@ -141,6 +141,7 @@ Have a look through each section of the raw `.Rmd` file to see what the code doe
 
 # Exercises  
 
+* Knit a PDF, HTML, and Word doc. Use the hotkey `Cmd/Ctrl + Shift + K`  
 * Create a 'EmoRy Coding Club notes' document (PDF or HTML document)  
 * Create your own parameter in the yaml   
 * Create a code chunk that shows the code and output, but masks any warnings
@@ -154,7 +155,9 @@ url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/d
 nyc_full <- read_csv(url) # reads in data
 nyc_full %>% glimpse
 ```
-* Change the above figure dimensions in the knitted document      
+* Change the above figure dimensions in the knitted document     
+* Create a table with the title in bold text and one of the rows italicised 
+* Write an inline equation and a idented equation  
 
 
 <!-- end body -->

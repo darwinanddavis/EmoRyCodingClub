@@ -5,13 +5,6 @@ author: |
  |  
  | Your affiliation here
 output:
-  html_document: # html options 
-    highlight: tango
-    code_folding: show
-    toc: yes
-    toc_depth: 4
-    number_sections: no
-    toc_float: yes
   pdf_document: # pdf options
     highlight: tango
     template: null
@@ -21,6 +14,15 @@ output:
     fig_width: 4
     fig_height: 5
     fig_caption: true
+    df_print: tibble 
+    latex_engine: xelatex #pdflatex # lualatex
+  html_document: # html options 
+    highlight: tango
+    code_folding: show
+    toc: yes
+    toc_depth: 4
+    number_sections: no
+    toc_float: yes
   word_document: # ms word options
     highlight: tango
     keep_md: yes
@@ -28,6 +30,12 @@ output:
     toc: yes
   md_document: # markdown options
     variant: markdown_github 
+inludes:
+  before_body: before_body.tex
+subtitle: 
+tags:
+- nothing
+- nothingness
 params: 
   email: "your email here"
   date: !r Sys.Date()
@@ -40,7 +48,7 @@ classoption: portrait
   MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
 </script>
 
-```{r, set-options, echo = F, cache = F}
+```{r, set-options, echo = F, cache = T}
 options(width=100)
 knitr::opts_chunk$set(
  eval = TRUE, # run all code
@@ -50,6 +58,15 @@ knitr::opts_chunk$set(
  warning = FALSE, # mask all warnings 
  size="small" # set code chunk size
 )
+
+### run this once  
+# tinytex::install_tinytex()
+
+packages <- c("DT","htmlwidgets")
+
+ppp <- lapply(packages,require,character.only=T)
+names(ppp) <- packages
+if(any(ppp==F)){cbind(packages,ppp);cat("\n\n\n ---> Check packages are loaded properly <--- \n\n\n")}
 
 # knitr::opts_knit$set(root.dir=paste0(params$dir,"/")) # set working dir
 # setwd(paste0(params$dir,"/")) # for running just in R not knitr
@@ -67,36 +84,50 @@ R version: `r params$version`
 
 This document showcases how to create and use `RMarkdown` documents.    
 
+You can write in **bold** and *italicised* text (in _two_ different __ways__).  
+
 You can write in-line `code` if you want to differentiate between when you are typing normally or highlighting `model parameters`, for example.    
 
 Equations like this $t' = \gamma(t - vx/c^{2})$, to appear within text lines.  
 
 Create links to your [website](https://github.com/darwinanddavis).  
 
-Make footnotes^[Where the footnote goes here and it is automatically formatted].    
+Make footnotes^[Here is the footnote you created earlier, automatically formatted].    
 
-## Use different headings  
+# You can easily create headings. This is the same font size as the 'Overview' above    
+
+## Then move down in font size    
 
 ### Like this subheading  
 
-# Just like \LaTeX{}, but _more versatile_.      
+#### And this fourth order heading   
 
-\newpage     
- 
+Insert line breaks <br>  between text like this    
+
+Insert a horizontal line break using five asterisks ('*****')  
+
+*****        
+
+(There is also a page break here. Best seen in PDF. Check the raw Rmd file to see the code)  
+
+The raw Rmd file also has the code for inserting user comments, 
+<!-- To do this, place the cursor on the text and type 'Cmd/Ctl + Shift + C' -->
+
+\newpage    
+
 ## Define equations      
 
-Accordingly, we write the eigenfunction of a spinless particle as the superposition of plane wave states of momentum ($\pi$) and energy ($Ej$) having amplitudes $a(\pi,Ej)$  
+Accordingly, we write the eigenfunction of a spinless particle as the superposition of plane wave states of momentum ($\pi$) and energy ($Ej$) having amplitudes $a(\pi,Ej)$ (from^[Efthimiades, S., Physical meaning and derivation of Schrodinger and Dirac equations, Department of Natural Sciences, Fordham University. [doi: d34464566](https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf).])     
 
 $$  
 \phi n(r,t) =  
-\sum_{i, j} a(p_{i},E_{j})
-e^{
-\frac{i}
-{h}
-(p_{i} \cdot r - E_{j}t) 
+  \sum_{i, j} a(p_{i},E_{j})
+  e^{
+  \frac{i}
+  {h}
+  (p_{i} \cdot r - E_{j}t) 
 }
 $$
-\  
 \    
 
 ## Embed images/gifs:  
@@ -148,7 +179,7 @@ Figure 2. Example of a plot with improved graphics and its associated code embed
 Table 1. Definitions of model parameters for individual hosts and **parasites**. Dimensions and units: -, dimensionless; cm, centimetres; J, Joules; L, length.    
 
 | Parameter | Definition | Dimension<br/>(unit) | 
-| :---: | :--- | :---: |    
+| :---: | :--- | ---: |    
 | _L_ | structural length | cm |
 | _ee_ | scaled reserve density | J (cm^3^) |
 | _D_ | host development | --- |
@@ -156,6 +187,47 @@ Table 1. Definitions of model parameters for individual hosts and **parasites**.
 
 \newpage  
 
+
+
+## Use buttons or tabs for sub-chapters {.tabset .tabset-fade .tabset-pills}  
+
+### Chapter 1  
+*Then you can add whatever you want here* like you would normally write in the `Rmd` file.  
+\  
+
+### Chapter 2 (with new code)  
+Here's an Easter egg for you ...  
+
+```{r,echo=F}
+require(ggplot2)
+require(plotly)
+nn <- 100
+p <- ggplot() +
+  geom_point(aes(rnorm(nn),sample(nn/2,nn,replace=T)),colour = rainbow(nn),size=sample(nn/2,nn,replace=T)/5,alpha=abs(rnorm(nn))) +
+  labs(x = "Random normally distributed data",
+       y = "Sampled integers") +
+  theme_minimal()
+ggplotly(p)
+```
+
+### More tables   
+Here's a new way of creating tables using the `DT` package  
+
+```{r,cache=T,warning=F, echo=F}
+require(DT)
+require(htmlwidgets)
+datatable(mtcars, 
+          rownames = T, 
+          filter="top", 
+          options = list(pageLength = 5, scrollX=T),
+          class = 'cell-border stripe',
+          editable = 'cell',
+          caption = "Table 1. The 'mtcars' dataset presented in a datatable. Try editing the columns and cells."  
+          )
+```
+
+
+***      
 
 ## Embed code from different languages  
 
@@ -209,8 +281,16 @@ x = A \ b     # Solve the system Ax = b
 
 ### CSS
 ```{css, eval=F}
-body {
-  color: red;
+# custom code for the tabs in this file
+.btn {
+    border-width: 0 0px 0px 0px;
+    font-weight: normal;
+    text-transform: ;
+}
+.btn-default {
+    color: #f08080;
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
 ```
 
