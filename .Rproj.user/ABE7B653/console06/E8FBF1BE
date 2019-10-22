@@ -1217,3 +1217,511 @@ D	site_libs/tocify-1.9.1/jquery.tocify.css
 D	site_libs/tocify-1.9.1/jquery.tocify.js
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset[Kopen Lesson5_rmd.l og 
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git s[Kadd . 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''f'i' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx''e'd' 'l'[1P'L'%'[1P'5' 'p'd'f' 'c'o'm'p'i'l'e' 'e'r'r'o'r'[1@f[1@o[1@r[1@ [1P[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C L[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C L5[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C L5 [1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr L5[1@ [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce L[1@5[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm [1@L[1@v[1@e[1@d[1P[1P[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C L[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Co [1@L[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C L[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm [1@L[1@o[1@v[1@e[1@d[C[1@ [1@p[1@d[1@f[C[1@ [1@o[1@u[1@t[1@p[1@u[1@t[C[1@ [1@i[1@n[C[1@ [1@ya L5 for pdf compile error' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cm L5 for pdf compile error''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl L5 for pdf compile error'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C L5 for pdf compile error'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CL5 for pdf compile error[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[master b9fa6bd] removed pdf output in yaml L5 for pdf compile error
+ 515 files changed, 2341 insertions(+), 68421 deletions(-)
+ rewrite .Rhistory (98%)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (93%)
+ delete mode 100644 Lesson1.html
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-10-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-11-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-12-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-13-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-14-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-15-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-16-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-17-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-18-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-21-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-22-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-23-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-24-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-4-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-5-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-6-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-7-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-7-2.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-7-3.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-8-1.png
+ delete mode 100644 Lesson1_files/figure-html/unnamed-chunk-9-1.png
+ delete mode 100644 Lesson2.html
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-10-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-10-2.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-11-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-12-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-12-2.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-13-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-14-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-14-2.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-14-3.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-15-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-16-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-17-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-2-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-5-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-6-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-7-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-8-1.png
+ delete mode 100644 Lesson2_files/figure-html/unnamed-chunk-8-2.png
+ delete mode 100644 Lesson3.html
+ delete mode 100644 Lesson3_files/figure-html/unnamed-chunk-2-1.png
+ delete mode 100644 Lesson4.html
+ create mode 100644 Lesson5_rmd.tex
+ create mode 100644 Lesson5_rmd_cache/docx/__packages
+ create mode 100644 Lesson5_rmd_cache/docx/set-options_311b2f62b234b1a981616fa3100994fe.RData
+ rename Lesson5_rmd_cache/{html/set-options_ee647e2a2261db154eb0261661658a95.rdb => docx/set-options_311b2f62b234b1a981616fa3100994fe.rdb} (100%)
+ rename Lesson5_rmd_cache/{html/set-options_ee647e2a2261db154eb0261661658a95.rdx => docx/set-options_311b2f62b234b1a981616fa3100994fe.rdx} (100%)
+ create mode 100644 Lesson5_rmd_cache/docx/unnamed-chunk-4_075e818dc45df47659643079a89c31e9.RData
+ create mode 100644 Lesson5_rmd_cache/docx/unnamed-chunk-4_075e818dc45df47659643079a89c31e9.rdb
+ create mode 100644 Lesson5_rmd_cache/docx/unnamed-chunk-4_075e818dc45df47659643079a89c31e9.rdx
+ create mode 100644 Lesson5_rmd_cache/html/set-options_cca5f38d82a556ff479559d431639229.RData
+ create mode 100644 Lesson5_rmd_cache/html/set-options_cca5f38d82a556ff479559d431639229.rdb
+ create mode 100644 Lesson5_rmd_cache/html/set-options_cca5f38d82a556ff479559d431639229.rdx
+ delete mode 100644 Lesson5_rmd_cache/html/set-options_ee647e2a2261db154eb0261661658a95.RData
+ delete mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_3114bb498722b8c7119d62ecb1bbcfee.RData
+ delete mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_3114bb498722b8c7119d62ecb1bbcfee.rdx
+ create mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_b49f10007816d168a00453b4e4d4a908.RData
+ rename Lesson5_rmd_cache/html/{unnamed-chunk-4_3114bb498722b8c7119d62ecb1bbcfee.rdb => unnamed-chunk-4_b49f10007816d168a00453b4e4d4a908.rdb} (100%)
+ create mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_b49f10007816d168a00453b4e4d4a908.rdx
+ create mode 100644 Lesson5_rmd_cache/latex/set-options_0e0e96fd965c4d40ea0d336e622f97e9.RData
+ create mode 100644 Lesson5_rmd_cache/latex/set-options_0e0e96fd965c4d40ea0d336e622f97e9.rdb
+ create mode 100644 Lesson5_rmd_cache/latex/set-options_0e0e96fd965c4d40ea0d336e622f97e9.rdx
+ delete mode 100644 Lesson5_rmd_cache/latex/set-options_28c2544c3bd0de11984352526a702be0.RData
+ delete mode 100644 Lesson5_rmd_cache/latex/set-options_28c2544c3bd0de11984352526a702be0.rdb
+ delete mode 100644 Lesson5_rmd_cache/latex/set-options_28c2544c3bd0de11984352526a702be0.rdx
+ create mode 100644 Lesson5_rmd_cache/latex/unnamed-chunk-4_0e5605693fb467a9921c6d44bc7d4d02.RData
+ create mode 100644 Lesson5_rmd_cache/latex/unnamed-chunk-4_0e5605693fb467a9921c6d44bc7d4d02.rdb
+ create mode 100644 Lesson5_rmd_cache/latex/unnamed-chunk-4_0e5605693fb467a9921c6d44bc7d4d02.rdx
+ create mode 100644 Lesson5_rmd_cache/markdown_github/__packages
+ create mode 100644 Lesson5_rmd_cache/markdown_github/set-options_aa8edae4245fe2f4fa13e87a246579a7.RData
+ create mode 100644 Lesson5_rmd_cache/markdown_github/set-options_aa8edae4245fe2f4fa13e87a246579a7.rdb
+ create mode 100644 Lesson5_rmd_cache/markdown_github/set-options_aa8edae4245fe2f4fa13e87a246579a7.rdx
+ create mode 100644 Lesson5_rmd_cache/markdown_github/unnamed-chunk-4_ef5fa6f07266376ceeb88769f8e63925.RData
+ create mode 100644 Lesson5_rmd_cache/markdown_github/unnamed-chunk-4_ef5fa6f07266376ceeb88769f8e63925.rdb
+ create mode 100644 Lesson5_rmd_cache/markdown_github/unnamed-chunk-4_ef5fa6f07266376ceeb88769f8e63925.rdx
+ create mode 100644 Lesson5_rmd_files/figure-docx/unnamed-chunk-1-1.png
+ create mode 100644 Lesson5_rmd_files/figure-docx/unnamed-chunk-2-1.png
+ create mode 100644 Lesson5_rmd_files/figure-docx/unnamed-chunk-3-1.png
+ create mode 100644 Lesson5_rmd_files/figure-docx/unnamed-chunk-4-1.png
+ create mode 100644 Lesson5_rmd_files/figure-latex/unnamed-chunk-4-1.pdf
+ create mode 100644 Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-1-1.png
+ create mode 100644 Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-2-1.png
+ create mode 100644 Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-3-1.png
+ create mode 100644 Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-4-1.png
+ delete mode 100644 docs/Lesson5_rmd.pdf
+ create mode 100644 docs/Lesson5_rmd.tex
+ create mode 100644 docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-1-1.png
+ create mode 100644 docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-2-1.png
+ create mode 100644 docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-3-1.png
+ create mode 100644 docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-4-1.png
+ create mode 100644 docs/Lesson5_rmd_files/figure-latex/unnamed-chunk-4-1.pdf
+ create mode 100644 docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-1-1.png
+ create mode 100644 docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-2-1.png
+ create mode 100644 docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-3-1.png
+ create mode 100644 docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-4-1.png
+ delete mode 100644 docs/Lesson7_files/figure-html/unnamed-chunk-3-1.png
+ delete mode 100644 docs/site_libs/htmlwidgets-1.2/htmlwidgets.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/leaflet.yaml
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/jquery/jquery.min.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/cancel.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/cancel_@2X.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/check.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/check_@2X.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/focus.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/focus_@2X.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/rulers.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/rulers_@2X.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/start.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/start_@2X.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/trash.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/trash_@2X.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/leaflet-measure.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/leaflet-measure.min.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/LICENSE
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/index.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/leaflet-omnivore.min.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/package.json
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/leaflet-providers.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/package.json
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/providers.json
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/rstudio_install.md
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/images/layers-2x.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/images/layers.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-icon-2x.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-icon.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-shadow.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/leaflet.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leaflet/leaflet.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/leafletfix/leafletfix.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/rstudio_leaflet/images/1px.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/lib/rstudio_leaflet/rstudio_leaflet.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.min.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.min.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Minimap-binding.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/images/toggle.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/images/toggle.svg
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/EasyButton-binding.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/LICENSE
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/easy-button.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/easy-button.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/Graticule-binding.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/L.Graticule.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/Leaflet.Graticule.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/L.SimpleGraticule.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/L.SimpleGraticule.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/SimpleGraticule-binding.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Terminator/L.Terminator.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Terminator/Terminator-binding.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap-theme.min.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap.min.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap.min.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/font-awesome.min.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/FontAwesome.otf
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.eot
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.svg
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.ttf
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.woff
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.eot
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.svg
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.ttf
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.woff
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.eot
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.svg
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.ttf
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.woff
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-matte.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-matte@2x.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-plain.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-shadow.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-shadow@2x.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-soft.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-soft@2x.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/ionicons.min.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.min.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MIT-LICENCE.txt
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MarkerCluster.Default.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MarkerCluster.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.freezable.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.layersupport.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/package.json
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Proj4Leaflet/proj4-compressed.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/Proj4Leaflet/proj4leaflet.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/filter-icon.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/move-handle.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/resize-handle.png
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter-bindings.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter.css
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter.js
+ delete mode 100644 docs/site_libs/leaflet-binding-2.0.2/plugins/leaflet-providers-plugin/leaflet-providers-plugin.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/LICENSE
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/colourpicker.min.css
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/colourpicker.min.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/mathjax/cdn.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/LICENSE
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/af.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/am.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar-dz.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar-eg.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/az.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/bg.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/bs.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ca.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/cs.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/da.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/de-ch.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/de.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/el.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/eo.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es-ar.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es-pe.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/et.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/eu.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fa.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fi.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fo.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fr-ch.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fr.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/gl.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/gu.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/he.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hi-in.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hr.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hu.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hy.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/id.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/is.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/it.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ja.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ka.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/km.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ko.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/lt.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/lv.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/me-me.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/me.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/mk.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ml.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ms.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/mt.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/nl-be.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/nl.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/no.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pa.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pl.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pt-br.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/rm.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ro.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ru.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sk.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sl.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sq.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sr-sr.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sr.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sv.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sw.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ta.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/th.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tr.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tt.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/uk.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ur.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/vi.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-cn.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-hk.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-tw.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/plotly-latest.min.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/selectize/selectize.bootstrap3.css
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/selectize/selectize.min.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/typedarray/LICENSE
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/typedarray/typedarray.min.js
+ delete mode 100644 docs/site_libs/plotly-binding-4.8.0/plotly.yaml
+ rename docs/site_libs/{plotly-binding-4.8.0 => plotly-binding-4.9.0}/plotly.js (88%)
+ delete mode 100644 docs/site_libs/plotly-htmlwidgets-css-1.39.2/plotly-htmlwidgets.css
+ rename docs/site_libs/{plotly-binding-4.8.0/lib/plotlyjs => plotly-htmlwidgets-css-1.46.1}/plotly-htmlwidgets.css (100%)
+ delete mode 100644 docs/site_libs/plotly-main-1.39.2/plotly-latest.min.js
+ create mode 100644 docs/site_libs/plotly-main-1.46.1/plotly-latest.min.js
+ delete mode 100644 index.html
+ delete mode 100644 site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js
+ delete mode 100644 site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.map
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.css.map
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/cerulean.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/cosmo.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/darkly.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/flatly.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Lato.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/LatoBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/NewsCycle.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSans.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Raleway.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Roboto.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/journal.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/lumen.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/paper.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/readable.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/sandstone.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/simplex.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/spacelab.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/united.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/yeti.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot
+ delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg
+ delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff
+ delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2
+ delete mode 100644 site_libs/bootstrap-3.3.5/js/bootstrap.js
+ delete mode 100644 site_libs/bootstrap-3.3.5/js/bootstrap.min.js
+ delete mode 100644 site_libs/bootstrap-3.3.5/js/npm.js
+ delete mode 100644 site_libs/bootstrap-3.3.5/shim/html5shiv.min.js
+ delete mode 100644 site_libs/bootstrap-3.3.5/shim/respond.min.js
+ delete mode 100644 site_libs/font-awesome-5.1.0/css/all.css
+ delete mode 100644 site_libs/font-awesome-5.1.0/css/v4-shims.css
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.eot
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.svg
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.ttf
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff2
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.eot
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.svg
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.ttf
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff2
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.eot
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.svg
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.ttf
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff2
+ delete mode 100644 site_libs/htmlwidgets-1.5.1/htmlwidgets.js
+ delete mode 100644 site_libs/jquery-1.11.3/jquery.min.js
+ delete mode 100644 site_libs/jquery-1.12.4/jquery.min.js
+ delete mode 100644 site_libs/jqueryui-1.11.4/README
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_444444_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_555555_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_777620_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_777777_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/index.html
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.css
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.js
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.min.css
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.min.js
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.structure.css
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.structure.min.css
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.theme.css
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.theme.min.css
+ delete mode 100644 site_libs/leaflet-1.3.1/images/layers-2x.png
+ delete mode 100644 site_libs/leaflet-1.3.1/images/layers.png
+ delete mode 100644 site_libs/leaflet-1.3.1/images/marker-icon-2x.png
+ delete mode 100644 site_libs/leaflet-1.3.1/images/marker-icon.png
+ delete mode 100644 site_libs/leaflet-1.3.1/images/marker-shadow.png
+ delete mode 100644 site_libs/leaflet-1.3.1/leaflet.css
+ delete mode 100644 site_libs/leaflet-1.3.1/leaflet.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/leaflet.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/leaflet.yaml
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/jquery/jquery.min.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/cancel.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/cancel_@2X.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/check.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/check_@2X.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/focus.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/focus_@2X.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/rulers.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/rulers_@2X.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/start.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/start_@2X.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/trash.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/trash_@2X.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/leaflet-measure.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/leaflet-measure.min.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/LICENSE
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/index.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/leaflet-omnivore.min.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/package.json
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/leaflet-providers.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/package.json
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/providers.json
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/rstudio_install.md
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet/images/layers-2x.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet/images/layers.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-icon-2x.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-icon.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-shadow.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet/leaflet.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leaflet/leaflet.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/leafletfix/leafletfix.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/rstudio_leaflet/images/1px.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/lib/rstudio_leaflet/rstudio_leaflet.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.min.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.min.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Minimap-binding.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/images/toggle.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/images/toggle.svg
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/EasyButton-binding.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/LICENSE
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/easy-button.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/easy-button.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/Graticule-binding.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/L.Graticule.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/Leaflet.Graticule.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/L.SimpleGraticule.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/L.SimpleGraticule.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/SimpleGraticule-binding.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Terminator/L.Terminator.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Terminator/Terminator-binding.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap-theme.min.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap.min.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap.min.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/font-awesome.min.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/FontAwesome.otf
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.eot
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.svg
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.ttf
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.woff
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.eot
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.svg
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.ttf
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.woff
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.eot
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.svg
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.ttf
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.woff
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-matte.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-matte@2x.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-plain.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-shadow.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-shadow@2x.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-soft.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-soft@2x.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/ionicons.min.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.min.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MIT-LICENCE.txt
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MarkerCluster.Default.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MarkerCluster.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.freezable.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.layersupport.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/package.json
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Proj4Leaflet/proj4-compressed.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/Proj4Leaflet/proj4leaflet.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/filter-icon.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/move-handle.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/resize-handle.png
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter-bindings.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter.css
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/plugins/leaflet-providers-plugin/leaflet-providers-plugin.js
+ delete mode 100644 site_libs/leafletfix-1.0.0/leafletfix.css
+ delete mode 100644 site_libs/navigation-1.1/codefolding.js
+ delete mode 100644 site_libs/navigation-1.1/sourceembed.js
+ delete mode 100644 site_libs/navigation-1.1/tabsets.js
+ delete mode 100644 site_libs/rstudio_leaflet-1.3.1/images/1px.png
+ delete mode 100644 site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css
+ delete mode 100644 site_libs/tocify-1.9.1/jquery.tocify.css
+ delete mode 100644 site_libs/tocify-1.9.1/jquery.tocify.js
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 66, done.
+Delta compression using up to 4 threads.
+Compressing objects:   1% (1/62)   Compressing objects:   3% (2/62)   Compressing objects:   4% (3/62)   Compressing objects:   6% (4/62)   Compressing objects:   8% (5/62)   Compressing objects:   9% (6/62)   Compressing objects:  11% (7/62)   Compressing objects:  12% (8/62)   Compressing objects:  14% (9/62)   Compressing objects:  16% (10/62)   Compressing objects:  17% (11/62)   Compressing objects:  19% (12/62)   Compressing objects:  20% (13/62)   Compressing objects:  22% (14/62)   Compressing objects:  24% (15/62)   Compressing objects:  25% (16/62)   Compressing objects:  27% (17/62)   Compressing objects:  29% (18/62)   Compressing objects:  30% (19/62)   Compressing objects:  32% (20/62)   Compressing objects:  33% (21/62)   Compressing objects:  35% (22/62)   Compressing objects:  37% (23/62)   Compressing objects:  38% (24/62)   Compressing objects:  40% (25/62)   Compressing objects:  41% (26/62)   Compressing objects:  43% (27/62)   Compressing objects:  45% (28/62)   Compressing objects:  46% (29/62)   Compressing objects:  48% (30/62)   Compressing objects:  50% (31/62)   Compressing objects:  51% (32/62)   Compressing objects:  53% (33/62)   Compressing objects:  54% (34/62)   Compressing objects:  56% (35/62)   Compressing objects:  58% (36/62)   Compressing objects:  59% (37/62)   Compressing objects:  61% (38/62)   Compressing objects:  62% (39/62)   Compressing objects:  64% (40/62)   Compressing objects:  66% (41/62)   Compressing objects:  67% (42/62)   Compressing objects:  69% (43/62)   Compressing objects:  70% (44/62)   Compressing objects:  72% (45/62)   Compressing objects:  74% (46/62)   Compressing objects:  75% (47/62)   Compressing objects:  77% (48/62)   Compressing objects:  79% (49/62)   Compressing objects:  80% (50/62)   Compressing objects:  82% (51/62)   Compressing objects:  83% (52/62)   Compressing objects:  85% (53/62)   Compressing objects:  87% (54/62)   Compressing objects:  88% (55/62)   Compressing objects:  90% (56/62)   Compressing objects:  91% (57/62)   Compressing objects:  93% (58/62)   Compressing objects:  95% (59/62)   Compressing objects:  96% (60/62)   Compressing objects:  98% (61/62)   Compressing objects: 100% (62/62)   Compressing objects: 100% (62/62), done.
+Writing objects:   1% (1/66)   Writing objects:   3% (2/66)   Writing objects:   4% (3/66)   Writing objects:   6% (4/66)   Writing objects:   7% (5/66)   Writing objects:   9% (6/66)   Writing objects:  10% (7/66)   Writing objects:  12% (8/66)   Writing objects:  13% (9/66)   Writing objects:  15% (10/66)   Writing objects:  16% (11/66)   Writing objects:  18% (12/66)   Writing objects:  19% (13/66)   Writing objects:  21% (14/66)   Writing objects:  22% (15/66)   Writing objects:  24% (16/66)   Writing objects:  25% (17/66)   Writing objects:  27% (18/66)   Writing objects:  28% (19/66)   Writing objects:  30% (20/66)   Writing objects:  31% (21/66)   Writing objects:  33% (22/66)   Writing objects:  34% (23/66)   Writing objects:  36% (24/66)   Writing objects:  37% (25/66)   Writing objects:  39% (26/66)   Writing objects:  40% (27/66)   Writing objects:  42% (28/66)   Writing objects:  43% (29/66)   Writing objects:  45% (30/66)   Writing objects:  46% (31/66)   Writing objects:  48% (32/66)   Writing objects:  50% (33/66)   Writing objects:  51% (34/66)   Writing objects:  53% (35/66)   Writing objects:  54% (36/66)   Writing objects:  56% (37/66)   Writing objects:  57% (38/66)   Writing objects:  59% (39/66)   Writing objects:  60% (40/66)   Writing objects:  62% (41/66)   Writing objects:  63% (42/66)   Writing objects:  65% (43/66)   Writing objects:  66% (44/66)   Writing objects:  68% (45/66)   Writing objects:  69% (46/66)   Writing objects:  71% (47/66)   Writing objects:  72% (48/66)   Writing objects:  74% (49/66)   Writing objects:  75% (50/66)   Writing objects:  77% (51/66)   Writing objects:  78% (52/66)   Writing objects:  80% (53/66)   Writing objects:  81% (54/66)   Writing objects:  83% (55/66)   Writing objects:  84% (56/66)   Writing objects:  86% (57/66)   Writing objects:  87% (58/66)   Writing objects:  89% (59/66)   Writing objects:  90% (60/66)   Writing objects:  92% (61/66)   Writing objects:  93% (62/66)   Writing objects:  95% (63/66)   Writing objects:  96% (64/66)   Writing objects:  98% (65/66)   Writing objects: 100% (66/66), 1.07 MiB | 1.51 MiB/s   Writing objects: 100% (66/66), 1.67 MiB | 1.51 MiB/s, done.
+Total 66 (delta 24), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/24)[Kremote: Resolving deltas:   8% (2/24)[Kremote: Resolving deltas:  12% (3/24)[Kremote: Resolving deltas:  16% (4/24)[Kremote: Resolving deltas:  20% (5/24)[Kremote: Resolving deltas:  25% (6/24)[Kremote: Resolving deltas:  29% (7/24)[Kremote: Resolving deltas:  33% (8/24)[Kremote: Resolving deltas:  37% (9/24)[Kremote: Resolving deltas:  41% (10/24)[Kremote: Resolving deltas:  45% (11/24)[Kremote: Resolving deltas:  50% (12/24)[Kremote: Resolving deltas:  54% (13/24)[Kremote: Resolving deltas:  58% (14/24)[Kremote: Resolving deltas:  62% (15/24)[Kremote: Resolving deltas:  66% (16/24)[Kremote: Resolving deltas:  70% (17/24)[Kremote: Resolving deltas:  75% (18/24)[Kremote: Resolving deltas:  79% (19/24)[Kremote: Resolving deltas:  83% (20/24)[Kremote: Resolving deltas:  87% (21/24)[Kremote: Resolving deltas:  91% (22/24)[Kremote: Resolving deltas:  95% (23/24)[Kremote: Resolving deltas: 100% (24/24)[Kremote: Resolving deltas: 100% (24/24), completed with 22 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   526b7a1..b9fa6bd  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git ad [Kd .

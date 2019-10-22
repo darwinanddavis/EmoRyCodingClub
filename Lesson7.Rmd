@@ -76,17 +76,17 @@ Use the `readr` package to easily read in different data file types.
 
 # Do First    
 
-Recreate the below PDF using `RMarkdown` with the following conditions from the smaller NYC Airbnb dataset. The final PDF file [is here](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/Lesson7_dofirst.pdf).  
+Recreate the below PDF using `RMarkdown` with the following conditions from the smaller NYC Airbnb dataset. [Download the final PDF file here](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/Lesson7_dofirst.pdf).  
 
 ```{r}
 # smaller csv file (16 cols)
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
-nyc <-  read_csv(url)
+nyc <-  readr::read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
 ```
 
-* Accommodation less than $200 per night and between than 5 and 15 nights minimum  
-* Show only the data structure of the raw data as a code output. No need to show the code output for how you subsetted the data.     
+* Accommodation less than $200 per night and between 5 and 15 nights    
+* Show only the data structure of the above subsetted data as a code output. No need to show the code for how you subsetted the data (see the PDF).       
 * Show the plotting code along with the plot.      
 * Use the below `yaml` for your `Rmd` file.      
 ```{yaml, echo=T, eval=F,message=F}
@@ -104,11 +104,9 @@ output:
 ---
       
 ```
-* Append the below code at the beginning of your `Rmd` file to suppress the package loading messages and warnings. Use a `{r, echo=T, eval=T, message=F}` header in the code chunk.     
+* Append the below code at the beginning of your `Rmd` file to load the appropriate packages and suppress the package loading messages and warnings. Use a `{r, echo=T, eval=T, message=F}` header in the code chunk.     
 ```{r, echo=T, eval=T,message=F}
-# install.packages("pacman")
-suppressWarnings(require(pacman))
-p_load(ggthemes,ggplot2,readr,dplyr)
+pacman::p_load(ggthemes,ggplot2,readr,dplyr)
 ```
 
 

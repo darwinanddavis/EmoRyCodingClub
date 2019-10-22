@@ -489,15 +489,15 @@ div.tocify {
 </div>
 <div id="do-first" class="section level1">
 <h1>Do First</h1>
-<p>Recreate the below PDF using <code>RMarkdown</code> with the following conditions from the smaller NYC Airbnb dataset. The final PDF file <a href="https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/Lesson7_dofirst.pdf">is here</a>.</p>
+<p>Recreate the below PDF using <code>RMarkdown</code> with the following conditions from the smaller NYC Airbnb dataset. <a href="https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/Lesson7_dofirst.pdf">Download the final PDF file here</a>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
-nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+nyc &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(url)
 nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># get smaller subet of data</span></code></pre></div>
 <ul>
-<li>Accommodation less than $200 per night and between than 5 and 15 nights minimum<br />
+<li>Accommodation less than $200 per night and between 5 and 15 nights<br />
 </li>
-<li>Show only the data structure of the raw data as a code output. No need to show the code output for how you subsetted the data.<br />
+<li>Show only the data structure of the above subsetted data as a code output. No need to show the code for how you subsetted the data (see the PDF).<br />
 </li>
 <li>Show the plotting code along with the plot.<br />
 </li>
@@ -517,11 +517,9 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 <span class="ot">---</span>
       </code></pre></div>
 <ul>
-<li>Append the below code at the beginning of your <code>Rmd</code> file to suppress the package loading messages and warnings. Use a <code>{r, echo=T, eval=T, message=F}</code> header in the code chunk.</li>
+<li>Append the below code at the beginning of your <code>Rmd</code> file to load the appropriate packages and suppress the package loading messages and warnings. Use a <code>{r, echo=T, eval=T, message=F}</code> header in the code chunk.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages(&#39;pacman&#39;)</span>
-<span class="kw">suppressWarnings</span>(<span class="kw">require</span>(pacman))
-<span class="kw">p_load</span>(ggthemes, ggplot2, readr, dplyr)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pacman<span class="op">::</span><span class="kw">p_load</span>(ggthemes, ggplot2, readr, dplyr)</code></pre></div>
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
 <p><img src="img/lesson7_dofirst1.jpg" style=width:50%></p>
