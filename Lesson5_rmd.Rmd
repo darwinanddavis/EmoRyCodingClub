@@ -5,6 +5,13 @@ author: |
  |  
  | Your affiliation here
 output:
+  html_document: # html options 
+    highlight: tango
+    code_folding: show
+    toc: yes
+    toc_depth: 4
+    number_sections: no
+    toc_float: yes
   pdf_document: # pdf options
     highlight: tango
     template: null
@@ -16,13 +23,6 @@ output:
     fig_caption: true
     df_print: tibble 
     latex_engine: xelatex #pdflatex # lualatex
-  html_document: # html options 
-    highlight: tango
-    code_folding: show
-    toc: yes
-    toc_depth: 4
-    number_sections: no
-    toc_float: yes
   word_document: # ms word options
     highlight: tango
     keep_md: yes
@@ -48,7 +48,7 @@ classoption: portrait
   MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
 </script>
 
-```{r, set-options, echo = F, cache = T}
+```{r, set-options, echo = F, cache = T,message=F}
 options(width=100)
 knitr::opts_chunk$set(
  eval = TRUE, # run all code
@@ -62,7 +62,7 @@ knitr::opts_chunk$set(
 ### run this once  
 # tinytex::install_tinytex()
 
-packages <- c("DT","htmlwidgets")
+packages <- c("dplyr","ggplot2","plotly","DT","htmlwidgets")
 
 ppp <- lapply(packages,require,character.only=T)
 names(ppp) <- packages
@@ -132,7 +132,7 @@ $$
 
 ## Embed images/gifs:  
 
-![Great power is pretty boring](img/opm.jpg).        
+![Great power is pretty boring](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/docs/img/opm.jpg).        
 
 \newpage  
 
@@ -198,9 +198,8 @@ Table 1. Definitions of model parameters for individual hosts and **parasites**.
 ### Chapter 2 (with new code)  
 Here's an Easter egg for you ...  
 
-```{r,echo=F}
-require(ggplot2)
-require(plotly)
+```{r,echo=F,message=F}
+lapply(list(require(plotly),require(ggplot2)),suppressWarnings)
 nn <- 100
 p <- ggplot() +
   geom_point(aes(rnorm(nn),sample(nn/2,nn,replace=T)),colour = rainbow(nn),size=sample(nn/2,nn,replace=T)/5,alpha=abs(rnorm(nn))) +
@@ -214,8 +213,7 @@ ggplotly(p)
 Here's a new way of creating tables using the `DT` package  
 
 ```{r,cache=T,warning=F, echo=F}
-require(DT)
-require(htmlwidgets)
+lapply(list(require(DT),require(htmlwidgets)),suppressWarnings)
 caption <- "Table 1. The 'mtcars' dataset presented in a datatable. Try editing the columns and cells." 
 datatable(mtcars, 
           rownames = T, 
