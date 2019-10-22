@@ -1,11 +1,11 @@
 ---
 params:
   lesson: "Lesson 7"
-  title: "Applying functions with `purrr`"
-  bookchapter_name: "Cheat sheet for the `purrr` package"    
-  bookchapter_section: "https://purrr.tidyverse.org/"  
-  functions: "`map`, `map2`"
-  packages: "`dplyr`, `purrr`"      
+  title: "Importing diverse data like a pro"  
+  bookchapter_name: "Cheat sheet for the `readr` package"    
+  bookchapter_section: "https://readr.tidyverse.org/"    
+  functions: "`read_csv`, `read_delim`, `write_csv`, `complete`, `expand`, `spread`, `gather`"
+  packages: "`readr`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
@@ -59,16 +59,24 @@ Packages for `r params$lesson`
 
 # Agenda 
 
-Use the `purrr` package to apply functions to lists and vectors.    
+Use the `readr` package to easily read in different data file types.      
 
 [`r params$bookchapter_name`](`r params$bookchapter_section`).      
 \  
+
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+  <img src="img/readr.png" style=width:50%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+\    
+
 
 <!--  end yaml template------------------------------------------------------- -->  
 
 # Do First    
 
-Recreate the below plot using the smaller NYC Airbnb dataset. To change the legend title, add the (unintuitive) `colour = "your legend text"` argument to the `labs()` function.  
+Recreate the below PDF using `RMarkdown` with the following conditions from the smaller NYC Airbnb dataset. The final PDF file [is here](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/Lesson7_dofirst.pdf).  
 
 ```{r}
 # smaller csv file (16 cols)
@@ -77,92 +85,77 @@ nyc <-  read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
 ```
 
-```{r, echo=F, eval=T, out.width="100%"}
-require(ggthemes)
-require(ggplot2)
-require(readr)
+* Accommodation less than $200 per night and between than 5 and 15 nights minimum  
+* Show only the data structure of the raw data as a code output. No need to show the code output for how you subsetted the data.     
+* Show the plotting code along with the plot.      
+* Use the below `yaml` for your `Rmd` file.      
+```{yaml, echo=T, eval=F,message=F}
 
-# smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
-nyc <-  read_csv(url)
-nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
-
-colv = "#00060a"
-ggplot(data = nyc, mapping = aes(x = reviews_per_month,y = number_of_reviews)) +
-  geom_point(aes(color=neighbourhood_group),show.legend = T,alpha=0.5) +
-  geom_smooth(color = colv, fill = colv, method="loess",alpha=0.3) +
-  labs(title = "Reviews across NYC boroughs",
-       caption = "Source: NYC Airbnb data",
-       x = "Reviews per month",
-       y =  "Number of reviews",
-       colour = "Boroughs") +
-  theme_classic()
-
+---
+title: "Dissecting property availability in New York City using Airbnb open data"
+author: "<your name here>"
+urlcolor: blue
+params:
+  source: "http://insideairbnb.com/new-york-city/"
+output:
+  pdf_document:
+    toc: yes
+    toc_depth: 2
+---
+      
+```
+* Append the below code at the beginning of your `Rmd` file to suppress the package loading messages and warnings. Use a `{r, echo=T, eval=T, message=F}` header in the code chunk.     
+```{r, echo=T, eval=T,message=F}
+# install.packages("pacman")
+suppressWarnings(require(pacman))
+p_load(ggthemes,ggplot2,readr,dplyr)
 ```
 
-# Apply functions  
 
-The `purrr` package uses the following apply functions to apply function iteratively to a list or vector.  
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+  <img src="img/lesson7_dofirst1.jpg" style=width:50%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+\    
 
-`map` Apply a function to each element of a list  
-`map2` Apply a function to each element of two lists simultaneously  
-`pmap` Apply a function to groups of elements from lists of lists  
-`lmap` Apply function to each list-element of a list or vector    
-`imap` Apply function to each element of a list or vector and its index  
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+  <img src="img/lesson7_dofirst2.jpg" style=width:50%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+\    
 
+*****  
+
+# Reading in different data file types      
+  
 ```{r, eval=F}
-require(purrr)
-set.seed(12)
-ls1 <- list(sample(10),rnorm(10,500),runif(10)) # create a list of data
-ls2 <- map(ls1,sqrt) 
-
-map(ls1,mean)
-map2(ls1,ls2,sum)
-
+read_csv("file.csv")  
+write_file(x = "a,b,c\n1,2,3\n4,5,NA", path = "file.csv")  
+read_csv2("file2.csv")  
+write_file(x = "a;b;c\n1;2;3\n4;5;NA", path = "file2.csv")
+read_delim("file.txt", delim = "|")  
+write_file(x = "a|b|c\n1|2|3\n4|5|NA", path = "file.txt")
+read_fwf("file.fwf", col_positions = c(1, 3, 5)) write_file(x = "a b c\n1 2 3\n4 5 NA", path = "file.fwf")
+read_tsv("file.tsv") Also read_table().
+write_file(x = "a\tb\tc\n1\t2\t3\n4\t5\tNA", path = "file.tsv")  
 ```
 \  
 
-# Filter lists 
-`pluck` Select an element by name or index  
-`keep` Select elements that pass a logical test   
-`discard` Select elements that do not pass a logical test  
-`compact` Drop empty elements  
-`head_while` Return head elements until one does not pass. Also `tail_while`.   
-
+# Saving your data from `R`    
+Save `x`, an `R` object, to `path`, a file path  
 ```{r,eval=F}
-pluck(ls1,1)
-keep(ls2, is.na)
-discard(ls1, is.na)
-compact(ls1)
-
+# Comma delimited file
+write_csv(x, path, na = "NA", append = FALSE, col_names = !append)
+# File with arbitrary delimiter
+write_delim(x, path, delim = " ", na = "NA", append = FALSE, col_names = !append)
+# CSV for excel
+write_excel_csv(x, path, na = "NA", append = FALSE, col_names = !append)
+# String to file
+write_file(x, path, append = FALSE) String vector to file, one element per line
+write_lines(x,path, na = "NA", append = FALSE) Object to RDS file
+write_rds(x, path, compress = c("none", "gz", "bz2", "xz"), ...)
+# Tab delimited files
+write_tsv(x, path, na = "NA", append = FALSE, col_names = !append)
 ```
-
-# Summarise lists  
-
-`every` Do all elements pass a test?   
-`some` Do some elements pass a test?  
-`has_element` Does a list contain an element?  
-`detect` Find first element to pass  
-`detect_index` Find index of first element to pass  
-`vec_depth` Return depth (number of levels of indexes)  
-  
-```{r, eval=F}
-ls1 %>% every(is.character)
-ls1 %>% some(is.character)
-ls1 %>% has_element("foo")
-ls1 %>% detect(is.character)
-ls1 %>% detect_index(is.character)
-ls1 %>% vec_depth
- 
-```
-
-# Transform lists   
-
-`modify` Apply function to each element  
-`modify_at` Apply function to elements by name or index  
-`modify_if` Apply function to elements that pass a test  
-`modify_depth` Apply function to each element at a given level of a list  
-```{r}
-
-```
-

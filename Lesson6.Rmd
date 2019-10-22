@@ -64,6 +64,13 @@ Use the `purrr` package to apply functions to lists and vectors.
 [`r params$bookchapter_name`](`r params$bookchapter_section`).      
 \  
 
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+  <img src="img/purrr.jpg" style=width:50%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+\    
+
 <!--  end yaml template------------------------------------------------------- -->  
 
 # Do First    

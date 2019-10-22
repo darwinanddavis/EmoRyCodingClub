@@ -29,80 +29,6 @@
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
-<style type="text/css">code{white-space: pre;}</style>
-<style type="text/css" data-origin="pandoc">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-pre, code { background-color: #f8f8f8; }
-code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code > span.dt { color: #204a87; } /* DataType */
-code > span.dv { color: #0000cf; } /* DecVal */
-code > span.bn { color: #0000cf; } /* BaseN */
-code > span.fl { color: #0000cf; } /* Float */
-code > span.ch { color: #4e9a06; } /* Char */
-code > span.st { color: #4e9a06; } /* String */
-code > span.co { color: #8f5902; font-style: italic; } /* Comment */
-code > span.ot { color: #8f5902; } /* Other */
-code > span.al { color: #ef2929; } /* Alert */
-code > span.fu { color: #000000; } /* Function */
-code > span.er { color: #a40000; font-weight: bold; } /* Error */
-code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #000000; } /* Constant */
-code > span.sc { color: #000000; } /* SpecialChar */
-code > span.vs { color: #4e9a06; } /* VerbatimString */
-code > span.ss { color: #4e9a06; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #000000; } /* Variable */
-code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code > span.ex { } /* Extension */
-code > span.at { color: #c4a000; } /* Attribute */
-code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-
-.sourceCode .row {
-  width: 100%;
-}
-.sourceCode {
-  overflow-x: auto;
-}
-.code-folding-btn {
-  margin-right: -30px;
-}
-</style>
-<script>
-// apply pandoc div.sourceCode style to pre.sourceCode instead
-(function() {
-  var sheets = document.styleSheets;
-  for (var i = 0; i < sheets.length; i++) {
-    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
-    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
-    for (var j = 0; j < rules.length; j++) {
-      var rule = rules[j];
-      // check if there is a div.sourceCode rule
-      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
-      var style = rule.style.cssText;
-      // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
-      // replace div.sourceCode by a pre.sourceCode rule
-      sheets[i].deleteRule(j);
-      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
-    }
-  }
-})();
-</script>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 
 
 <style type="text/css">
@@ -461,90 +387,62 @@ div.tocify {
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
-<div id="lesson-6-lists-lists-lists-and-applying-functions-with-purrr" class="section level1">
-<h1>Lesson 6: Lists, lists, lists and applying functions with <code>purrr</code></h1>
+<div id="lesson-4-wrangling-data-with-dplyr" class="section level1">
+<h1>Lesson 4: Wrangling data with <code>dplyr</code></h1>
 <p> </p>
-<p>Functions for Lesson 6<br />
-<code>map</code>, <code>map2</code><br />
+<p>Functions for Lesson 4<br />
+<code>is.na</code>, <code>arrange</code>, <code>select</code>, <code>mutate</code><br />
  </p>
-<p>Packages for Lesson 6<br />
-<code>dplyr</code>, <code>purrr</code><br />
+<p>Packages for Lesson 4<br />
+<code>dplyr</code><br />
  </p>
 </div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
-<p>Use the <code>purrr</code> package to apply functions to lists and vectors.</p>
-<p><a href="https://purrr.tidyverse.org/">Cheat sheet for the <code>purrr</code> package</a>.<br />
+<p><a href="https://r4ds.had.co.nz/transform.html#missing-values">Data visualisation in <code>R</code> for Data Science, Section 5.2.3</a>.<br />
  </p>
-<!-- ----------------------- image --------------------------- -->
-<div align="center">
-<p><img src="img/purrr.jpg" style=width:50%></p>
-</div>
-<!-- ----------------------- image --------------------------- -->
-<p> </p>
 <!--  end yaml template------------------------------------------------------- -->
+<ul>
+<li>Continue where we left off last time with more functions from the <code>dplyr</code> package. You’ll use these functions to help wrangle data.</li>
+</ul>
 </div>
 <div id="do-first" class="section level1">
 <h1>Do First</h1>
-<p>Recreate the below plot using the smaller NYC Airbnb dataset. The curve is a ‘loess’. To change the legend title, add the (unintuitive) <code>colour = &quot;your legend title&quot;</code> argument to the <code>labs()</code> function.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
-url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
-nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
-nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># get smaller subet of data</span></code></pre></div>
-<p><img src="Lesson6_files/figure-html/unnamed-chunk-2-1.png" width="100%" /></p>
-</div>
-<div id="apply-functions" class="section level1">
-<h1>Apply functions</h1>
-<p>The <code>purrr</code> package uses the following apply functions to apply function iteratively to a list or vector.</p>
-<p><code>map</code> Apply a function to each element of a list<br />
-<code>map2</code> Apply a function to each element of two lists simultaneously<br />
-<code>pmap</code> Apply a function to groups of elements from lists of lists<br />
-<code>lmap</code> Apply function to each list-element of a list or vector<br />
-<code>imap</code> Apply function to each element of a list or vector and its index</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(purrr)
-<span class="kw">set.seed</span>(<span class="dv">12</span>)
-ls1 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">sample</span>(<span class="dv">10</span>), <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">500</span>), <span class="kw">runif</span>(<span class="dv">10</span>))  <span class="co"># create a list of data</span>
-ls2 &lt;-<span class="st"> </span><span class="kw">map</span>(ls1, sqrt)
+<ol style="list-style-type: decimal">
+<li><p>Use the <code>nycflights13</code> data set and identify the flights that arrived more than 30 minutes late.</p></li>
+<li><p>Identify flights that departed between midnight and 5am (inclusive).</p></li>
+</ol>
+<p><br />
+# Today’s approach</p>
+<p><br />
+<a href="https://www.davidkane.info/files/gov_1005_spring_2019.html">See David Kane’s philosophy on teaching data science here</a></p>
+<br />
 
-<span class="kw">map</span>(ls1, mean)
-<span class="kw">map2</span>(ls1, ls2, sum)</code></pre></div>
-<p> </p>
+<center>
+<img src="img/ulysses.jpeg" />
+</center>
+<p><br />
+</p>
 </div>
-<div id="filter-lists" class="section level1">
-<h1>Filter lists</h1>
-<p><code>pluck</code> Select an element by name or index<br />
-<code>keep</code> Select elements that pass a logical test<br />
-<code>discard</code> Select elements that do not pass a logical test<br />
-<code>compact</code> Drop empty elements<br />
-<code>head_while</code> Return head elements until one does not pass. Also <code>tail_while</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pluck</span>(ls1, <span class="dv">3</span>)  <span class="co"># advantage = returns numeric </span>
-ls1[<span class="dv">3</span>][[<span class="dv">1</span>]]  <span class="co"># this is the same as above</span>
-
-<span class="kw">keep</span>(ls2, is.na)
-<span class="kw">discard</span>(ls1, is.na)
-<span class="kw">compact</span>(ls1)</code></pre></div>
+<div id="tidying" class="section level1">
+<h1>Tidying</h1>
+<center>
+<img src="img/dplyr_basics.png" />
+</center>
 </div>
-<div id="summarise-lists" class="section level1">
-<h1>Summarise lists</h1>
-<p><code>every</code> Do all elements pass a test?<br />
-<code>some</code> Do some elements pass a test?<br />
-<code>has_element</code> Does a list contain an element?<br />
-<code>detect</code> Find first element to pass<br />
-<code>detect_index</code> Find index of first element to pass<br />
-<code>vec_depth</code> Return depth (number of levels of indexes)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">every</span>(is.character)
-ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">some</span>(is.character)
-ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">has_element</span>(<span class="st">&quot;foo&quot;</span>)
-ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">detect</span>(is.character)
-ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">detect_index</span>(is.character)
-ls1 <span class="op">%&gt;%</span><span class="st"> </span>vec_depth</code></pre></div>
+<div id="missing-values" class="section level1">
+<h1>5.2.3 Missing values</h1>
+<center>
+<img src="img/missing.png" />
+</center>
 </div>
-<div id="transform-lists" class="section level1">
-<h1>Transform lists</h1>
-<p><code>modify</code> Apply function to each element<br />
-<code>modify_at</code> Apply function to elements by name or index<br />
-<code>modify_if</code> Apply function to elements that pass a test<br />
-<code>modify_depth</code> Apply function to each element at a given level of a list</p>
+<div id="exercises" class="section level1">
+<h1>Exercises</h1>
+<ul>
+<li>5.3.1 - <code>arrange</code></li>
+<li>5.4.1 - <code>select</code></li>
+<li>5.5.2 - <code>mutate</code></li>
+</ul>
 </div>
 
 

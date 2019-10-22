@@ -1255,3 +1255,163 @@ To https://github.com/darwinanddavis/EmoRyCodingClub
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pe[K[Kopen _site.yml 
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open _site.yml 
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git coomit [K[K[K[K[Kmmit -m ''u'p' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd''a't'e'd' 'l'5' 'r'm'd' 'e'g'
+[master f5f9cb7] updated l5 rmd eg
+ 130 files changed, 6312 insertions(+), 97 deletions(-)
+ create mode 100644 Lesson5_rmd_cache/html/__packages
+ create mode 100644 Lesson5_rmd_cache/html/set-options_0806929b457e8a18f9deb2d274e4be10.RData
+ create mode 100644 Lesson5_rmd_cache/html/set-options_0806929b457e8a18f9deb2d274e4be10.rdb
+ create mode 100644 Lesson5_rmd_cache/html/set-options_0806929b457e8a18f9deb2d274e4be10.rdx
+ create mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_dbc8f9ddb67855120d43447aeb3984ac.RData
+ create mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_dbc8f9ddb67855120d43447aeb3984ac.rdb
+ create mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_dbc8f9ddb67855120d43447aeb3984ac.rdx
+ delete mode 100644 Lesson5_rmd_files/figure-docx/unnamed-chunk-1-1.png
+ delete mode 100644 Lesson5_rmd_files/figure-docx/unnamed-chunk-2-1.png
+ delete mode 100644 Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-1-1.png
+ delete mode 100644 Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-2-1.png
+ create mode 100644 Lesson7.Rmd
+ delete mode 100644 docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-1-1.png
+ delete mode 100644 docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-2-1.png
+ delete mode 100644 docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-1-1.png
+ delete mode 100644 docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-2-1.png
+ create mode 100644 docs/site_libs/crosstalk-1.0.0/css/crosstalk.css
+ create mode 100644 docs/site_libs/crosstalk-1.0.0/js/crosstalk.js
+ create mode 100644 docs/site_libs/crosstalk-1.0.0/js/crosstalk.js.map
+ create mode 100644 docs/site_libs/crosstalk-1.0.0/js/crosstalk.min.js
+ create mode 100644 docs/site_libs/crosstalk-1.0.0/js/crosstalk.min.js.map
+ create mode 100644 docs/site_libs/datatables-binding-0.9/datatables.js
+ create mode 100644 docs/site_libs/datatables-css-0.0.0/datatables-crosstalk.css
+ create mode 100644 docs/site_libs/dt-core-1.10.19/css/jquery.dataTables.extra.css
+ create mode 100644 docs/site_libs/dt-core-1.10.19/css/jquery.dataTables.min.css
+ create mode 100644 docs/site_libs/dt-core-1.10.19/js/jquery.dataTables.min.js
+ create mode 100644 docs/site_libs/htmlwidgets-1.5.1/htmlwidgets.js
+ create mode 100644 docs/site_libs/jquery-1.12.4/LICENSE.txt
+ create mode 100644 docs/site_libs/nouislider-7.0.10/jquery.nouislider.min.css
+ create mode 100644 docs/site_libs/nouislider-7.0.10/jquery.nouislider.min.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/LICENSE
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/colourpicker.min.css
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/colourpicker/colourpicker.min.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/mathjax/cdn.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/LICENSE
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/af.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/am.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar-dz.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar-eg.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ar.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/az.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/bg.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/bs.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ca.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/cs.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/da.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/de-ch.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/de.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/el.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/eo.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es-ar.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es-pe.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/es.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/et.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/eu.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fa.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fi.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fo.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fr-ch.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/fr.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/gl.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/gu.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/he.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hi-in.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hr.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hu.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/hy.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/id.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/is.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/it.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ja.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ka.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/km.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ko.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/lt.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/lv.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/me-me.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/me.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/mk.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ml.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ms.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/mt.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/nl-be.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/nl.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/no.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pa.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pl.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/pt-br.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/rm.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ro.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ru.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sk.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sl.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sq.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sr-sr.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sr.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sv.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/sw.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ta.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/th.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tr.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/tt.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/uk.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/ur.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/vi.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-cn.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-hk.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/locales/zh-tw.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/plotly-htmlwidgets.css
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/plotlyjs/plotly-latest.min.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/selectize/selectize.bootstrap3.css
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/selectize/selectize.min.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/typedarray/LICENSE
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/lib/typedarray/typedarray.min.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/plotly.js
+ create mode 100644 docs/site_libs/plotly-binding-4.8.0/plotly.yaml
+ create mode 100644 docs/site_libs/plotly-htmlwidgets-css-1.39.2/plotly-htmlwidgets.css
+ create mode 100644 docs/site_libs/plotly-main-1.39.2/plotly-latest.min.js
+ create mode 100644 docs/site_libs/selectize-0.12.0/selectize.bootstrap3.css
+ create mode 100644 docs/site_libs/selectize-0.12.0/selectize.min.js
+ create mode 100644 docs/site_libs/typedarray-0.1/typedarray.min.js
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 152, done.
+Delta compression using up to 4 threads.
+Compressing objects:   0% (1/142)   Compressing objects:   1% (2/142)   Compressing objects:   2% (3/142)   Compressing objects:   3% (5/142)   Compressing objects:   4% (6/142)   Compressing objects:   5% (8/142)   Compressing objects:   6% (9/142)   Compressing objects:   7% (10/142)   Compressing objects:   8% (12/142)   Compressing objects:   9% (13/142)   Compressing objects:  10% (15/142)   Compressing objects:  11% (16/142)   Compressing objects:  12% (18/142)   Compressing objects:  13% (19/142)   Compressing objects:  14% (20/142)   Compressing objects:  15% (22/142)   Compressing objects:  16% (23/142)   Compressing objects:  17% (25/142)   Compressing objects:  18% (26/142)   Compressing objects:  19% (27/142)   Compressing objects:  20% (29/142)   Compressing objects:  21% (30/142)   Compressing objects:  22% (32/142)   Compressing objects:  23% (33/142)   Compressing objects:  24% (35/142)   Compressing objects:  25% (36/142)   Compressing objects:  26% (37/142)   Compressing objects:  27% (39/142)   Compressing objects:  28% (40/142)   Compressing objects:  29% (42/142)   Compressing objects:  30% (43/142)   Compressing objects:  31% (45/142)   Compressing objects:  32% (46/142)   Compressing objects:  33% (47/142)   Compressing objects:  34% (49/142)   Compressing objects:  35% (50/142)   Compressing objects:  36% (52/142)   Compressing objects:  37% (53/142)   Compressing objects:  38% (54/142)   Compressing objects:  39% (56/142)   Compressing objects:  40% (57/142)   Compressing objects:  41% (59/142)   Compressing objects:  42% (60/142)   Compressing objects:  43% (62/142)   Compressing objects:  44% (63/142)   Compressing objects:  45% (64/142)   Compressing objects:  46% (66/142)   Compressing objects:  47% (67/142)   Compressing objects:  48% (69/142)   Compressing objects:  49% (70/142)   Compressing objects:  50% (71/142)   Compressing objects:  51% (73/142)   Compressing objects:  52% (74/142)   Compressing objects:  53% (76/142)   Compressing objects:  54% (77/142)   Compressing objects:  55% (79/142)   Compressing objects:  56% (80/142)   Compressing objects:  57% (81/142)   Compressing objects:  58% (83/142)   Compressing objects:  59% (84/142)   Compressing objects:  60% (86/142)   Compressing objects:  61% (87/142)   Compressing objects:  62% (89/142)   Compressing objects:  63% (90/142)   Compressing objects:  64% (91/142)   Compressing objects:  65% (93/142)   Compressing objects:  66% (94/142)   Compressing objects:  67% (96/142)   Compressing objects:  68% (97/142)   Compressing objects:  69% (98/142)   Compressing objects:  70% (100/142)   Compressing objects:  71% (101/142)   Compressing objects:  72% (103/142)   Compressing objects:  73% (104/142)   Compressing objects:  74% (106/142)   Compressing objects:  75% (107/142)   Compressing objects:  76% (108/142)   Compressing objects:  77% (110/142)   Compressing objects:  78% (111/142)   Compressing objects:  79% (113/142)   Compressing objects:  80% (114/142)   Compressing objects:  81% (116/142)   Compressing objects:  82% (117/142)   Compressing objects:  83% (118/142)   Compressing objects:  84% (120/142)   Compressing objects:  85% (121/142)   Compressing objects:  86% (123/142)   Compressing objects:  87% (124/142)   Compressing objects:  88% (125/142)   Compressing objects:  89% (127/142)   Compressing objects:  90% (128/142)   Compressing objects:  91% (130/142)   Compressing objects:  92% (131/142)   Compressing objects:  93% (133/142)   Compressing objects:  94% (134/142)   Compressing objects:  95% (135/142)   Compressing objects:  96% (137/142)   Compressing objects:  97% (138/142)   Compressing objects:  98% (140/142)   Compressing objects:  99% (141/142)   Compressing objects: 100% (142/142)   Compressing objects: 100% (142/142), done.
+Writing objects:   0% (1/152)   Writing objects:   1% (2/152)   Writing objects:   2% (4/152)   Writing objects:   3% (5/152)   Writing objects:   4% (7/152)   Writing objects:   5% (8/152)   Writing objects:   6% (10/152)   Writing objects:   7% (11/152)   Writing objects:   8% (13/152)   Writing objects:   9% (14/152)   Writing objects:  10% (16/152)   Writing objects:  11% (17/152)   Writing objects:  12% (19/152)   Writing objects:  13% (20/152)   Writing objects:  14% (22/152)   Writing objects:  15% (23/152)   Writing objects:  16% (25/152)   Writing objects:  17% (26/152)   Writing objects:  18% (28/152)   Writing objects:  19% (29/152)   Writing objects:  20% (31/152)   Writing objects:  21% (32/152)   Writing objects:  22% (34/152)   Writing objects:  23% (35/152)   Writing objects:  25% (38/152)   Writing objects:  26% (40/152)   Writing objects:  27% (42/152)   Writing objects:  28% (43/152)   Writing objects:  29% (45/152)   Writing objects:  30% (46/152)   Writing objects:  31% (48/152)   Writing objects:  32% (49/152)   Writing objects:  33% (51/152)   Writing objects:  34% (52/152)   Writing objects:  35% (54/152)   Writing objects:  36% (55/152)   Writing objects:  37% (57/152)   Writing objects:  38% (58/152)   Writing objects:  40% (61/152)   Writing objects:  41% (63/152)   Writing objects:  42% (64/152)   Writing objects:  43% (66/152)   Writing objects:  44% (67/152)   Writing objects:  45% (69/152)   Writing objects:  46% (70/152)   Writing objects:  47% (72/152)   Writing objects:  48% (73/152)   Writing objects:  50% (76/152)   Writing objects:  51% (78/152)   Writing objects:  52% (80/152)   Writing objects:  53% (81/152)   Writing objects:  54% (83/152)   Writing objects:  55% (84/152)   Writing objects:  56% (86/152)   Writing objects:  57% (87/152)   Writing objects:  58% (89/152)   Writing objects:  59% (90/152)   Writing objects:  60% (92/152)   Writing objects:  61% (93/152)   Writing objects:  62% (95/152)   Writing objects:  63% (96/152)   Writing objects:  64% (98/152)   Writing objects:  65% (99/152)   Writing objects:  66% (101/152)   Writing objects:  67% (102/152)   Writing objects:  68% (104/152)   Writing objects:  69% (105/152)   Writing objects:  70% (107/152)   Writing objects:  71% (108/152)   Writing objects:  72% (110/152)   Writing objects:  73% (111/152)   Writing objects:  74% (113/152)   Writing objects:  75% (114/152)   Writing objects:  76% (116/152)   Writing objects:  77% (118/152)   Writing objects:  78% (119/152)   Writing objects:  79% (121/152)   Writing objects:  80% (122/152)   Writing objects:  81% (124/152)   Writing objects:  82% (125/152)   Writing objects:  83% (127/152)   Writing objects:  84% (128/152)   Writing objects:  85% (130/152)   Writing objects:  86% (131/152)   Writing objects:  87% (133/152)   Writing objects:  88% (134/152)   Writing objects:  89% (136/152)   Writing objects:  90% (137/152)   Writing objects:  91% (139/152)   Writing objects:  92% (140/152)   Writing objects:  93% (142/152)   Writing objects:  94% (143/152)   Writing objects:  95% (145/152)   Writing objects:  96% (146/152)   Writing objects:  97% (148/152)   Writing objects:  98% (149/152)   Writing objects:  99% (151/152)   Writing objects: 100% (152/152)   Writing objects: 100% (152/152), 1.00 MiB | 0 bytes/s, done.
+Total 152 (delta 18), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/18)[Kremote: Resolving deltas:   5% (1/18)[Kremote: Resolving deltas:  16% (3/18)[Kremote: Resolving deltas:  22% (4/18)[Kremote: Resolving deltas:  27% (5/18)[Kremote: Resolving deltas:  33% (6/18)[Kremote: Resolving deltas:  38% (7/18)[Kremote: Resolving deltas:  44% (8/18)[Kremote: Resolving deltas:  50% (9/18)[Kremote: Resolving deltas:  55% (10/18)[Kremote: Resolving deltas:  61% (11/18)[Kremote: Resolving deltas:  66% (12/18)[Kremote: Resolving deltas:  72% (13/18)[Kremote: Resolving deltas:  77% (14/18)[Kremote: Resolving deltas:  83% (15/18)[Kremote: Resolving deltas:  88% (16/18)[Kremote: Resolving deltas:  94% (17/18)[Kremote: Resolving deltas: 100% (18/18)[Kremote: Resolving deltas: 100% (18/18), completed with 12 local objects.[K
+remote: 
+remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
+remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
+remote: 
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   06169fa..f5f9cb7  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'updaated l5 rmd eg'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[9Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen _site.yml [7Pgit pushopen _site.yml 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git coom[K[Kmmit ;10D[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit reset
+Unstaged changes after reset:
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE
+M	.Rproj.user/ABE7B653/console06/INDEX001
+M	.Rproj.user/ABE7B653/sources/prop/89E75701
+M	.Rproj.user/ABE7B653/sources/prop/INDEX
+M	.Rproj.user/shared/notebooks/paths
+M	Lesson5.Rmd
+M	Lesson5_rmd.Rmd
+D	Lesson5_rmd_cache/html/unnamed-chunk-4_dbc8f9ddb67855120d43447aeb3984ac.RData
+D	Lesson5_rmd_cache/html/unnamed-chunk-4_dbc8f9ddb67855120d43447aeb3984ac.rdb
+D	Lesson5_rmd_cache/html/unnamed-chunk-4_dbc8f9ddb67855120d43447aeb3984ac.rdx
+M	Lesson6.Rmd
+M	Lesson7.Rmd
+M	docs/Lesson5.html
+M	docs/Lesson5_rmd.html
+M	docs/Lesson6.html
+M	docs/index.html
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open site[K[K[K[K[K_site[K[K[K[K[K _site.yml 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .

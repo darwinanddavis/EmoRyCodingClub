@@ -2,10 +2,10 @@
 params:
   lesson: "Lesson 5"
   title: "Turning code into reproducible documents with `Rmarkdown`"
-  bookchapter_name: "Download the `RMarkdown` template here (right click > Save Link As")      
+  bookchapter_name: "Download the `RMarkdown` template here: right click > Save Link As"      
   bookchapter_section: "https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd"
-  functions: "`here`, `summarise`"
-  packages: "`here`, `set_here`, `dr_here`, `dplyr`"      
+  functions: "`here`, `summarise`,  `set_here`, `dr_here`"
+  packages: "`here`, `dplyr`, `rmarkdown`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
@@ -117,16 +117,36 @@ set_here() # set current working directory
 dr_here() # print current working directory where .here is located
 ```
 
-1. Create a folder in your directory called **'lookhere'**.  
+1. Create a folder in your local directory called **'lookhere'**.  
 2. Open a new file in TextEdit (Mac) or Notepad (Windows), type in something like " _We found the here file!_ ", then save the file as **"heretest.txt"**.       
 ```{r}
 list.files() # print files in your current working dir. the 'heretest.txt' file is not here, but one folder below in the new 'lookhere' folder
 here("lookhere","heretest.txt") # using here to forage for the file
 here("lookhere","heretest.txt") %>% readLines # print the contents in R
 
-
 ```
 \    
+
+# Creating an `R` project (`Rproj`) file  
+
+**Option 1:** Create an RProject new directory:  
+* _File > New Project_  
+* _Create New Project_  
+* Choose a name for your RProj folder. Fill out _Directory name:_ (make it machine-friendly, i.e. no spaces)   
+* Choose a place for the RProj to live. _Browse_  
+* Select _Open in new session_  
+\   
+
+**Option 2:** If you already have a folder *just* for Emory Coding Club:   
+* _File > New Project_      
+* _Existing directory > Browse_  
+* Select _Open in new session_    
+\  
+
+* Open the 'Lesson5_rmd.Rmd' file within this project and save it as 'Lesson5_rmd.Rmd'.        
+* Open another _.R_ file within this project and save it.    
+* Now repeat the above steps with a second _Rproj_ file. Save this in another directory somewhere on your computer.      
+* Now check the working directory within both _Rproj_ files using the `here` package. What do you see?         
 
 # Navigating the `Rmarkdown` interface    
 
@@ -156,8 +176,8 @@ nyc_full <- read_csv(url) # reads in data
 nyc_full %>% glimpse
 ```
 * Change the above figure dimensions in the knitted document     
-* Create a table with the title in bold text and one of the rows italicised 
-* Write an inline equation and a idented equation  
+* Create a table with the title in bold, one of the columns set to right justified text, and one of the rows italicised   
+* Write an inline equation and an indented equation  
 
 
 <!-- end body -->

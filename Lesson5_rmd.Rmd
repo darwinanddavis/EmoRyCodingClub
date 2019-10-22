@@ -216,13 +216,14 @@ Here's a new way of creating tables using the `DT` package
 ```{r,cache=T,warning=F, echo=F}
 require(DT)
 require(htmlwidgets)
+caption <- "Table 1. The 'mtcars' dataset presented in a datatable. Try editing the columns and cells." 
 datatable(mtcars, 
           rownames = T, 
           filter="top", 
           options = list(pageLength = 5, scrollX=T),
-          class = 'cell-border stripe',
-          editable = 'cell',
-          caption = "Table 1. The 'mtcars' dataset presented in a datatable. Try editing the columns and cells."  
+          class = "cell-border stripe",
+          editable = "cell",
+          caption = caption 
           )
 ```
 
