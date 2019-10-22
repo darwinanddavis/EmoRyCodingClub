@@ -75,34 +75,22 @@ Show plots with associated code
 ``` r
 require(viridis)
 bm <- 0
-par(las = 1, bty = "n")
-xlim <- c(-5, 5)
-ylim <- c(0, 0.5)
+par(las=1,bty="n"); xlim <- c(-5,5);ylim <- c(0,0.5)
 set.seed(12)
 N <- 2000
-rr <- rnorm(N)
-rr2 <- rnorm(N^2)
-rr3 <- rnorm(N + 0.3)
-rrd <- density(rr)
-rrd2 <- density(rr2)
-rrd3 <- density(rr3)
-main <- paste0(N, " points but plot better")
-xlab <- "Points in space"
-if (bm == 1) {
-    layout(matrix(c(rep(1, 3), 2:4), 2, 3, byrow = TRUE))
-    sc <- 1
-    plot(rr, las = 1, bty = "n", col = adjustcolor(viridis(N), 0.5), pch = 20, cex = runif(10, 1, 5), 
-        main = main, xlab = xlab)
-    for (r in list(rrd, rrd2, rrd3)) {
-        plot(r, xlim = xlim, ylim = ylim, main = "")
-        polygon(r, col = adjustcolor(viridis(250)[sc], 0.5), border = viridis(250)[sc])
-        sc <- sc + 100
-    }
-} else {
-    par(mfrow = c(1, 1))
-    plot(rr, las = 1, bty = "n", col = adjustcolor(viridis(N), 0.5), pch = 20, cex = runif(10, 1, 5), 
-        main = main, xlab = xlab)
-}
+rr <- rnorm(N); rr2 <- rnorm(N^2); rr3 <- rnorm(N+0.3)
+rrd <- density(rr);rrd2 <- density(rr2);rrd3 <- density(rr3)
+main <- paste0(N," points but plot better");xlab <- "Points in space"
+if(bm==1){
+  layout(matrix(c(rep(1,3),2:4), 2, 3, byrow = TRUE));sc <- 1
+  plot(rr,las=1,bty="n",col=adjustcolor(viridis(N),0.5),pch=20,cex=runif(10,1,5),
+       main=main,xlab=xlab)
+for(r in list(rrd,rrd2,rrd3)){
+  plot(r,xlim=xlim,ylim=ylim,main="")
+  polygon(r,col=adjustcolor(viridis(250)[sc],0.5),border=viridis(250)[sc]);sc <- sc+100}
+}else{par(mfrow=c(1,1))
+  plot(rr,las=1,bty="n",col=adjustcolor(viridis(N),0.5),pch=20,cex=runif(10,1,5),
+       main=main,xlab=xlab)}
 ```
 
 ![](Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-2-1.png)
@@ -161,12 +149,11 @@ Embed code from different languages
 ### This is `R` code
 
 ``` r
-if (pck == 1) {
-    p <- c("rJava", "RNetLogo")
-    remove.packages(p)
-    # then install rJava and RNetLogo from source
-    install.packages("rJava", repos = "https://cran.r-project.org/")
-    install.packages("RNetLogo", repos = "https://cran.r-project.org/")
+if(pck==1){
+  p<-c("rJava", "RNetLogo"); remove.packages(p)
+  # then install rJava and RNetLogo from source
+  install.packages("rJava", repos = "https://cran.r-project.org/")
+  install.packages("RNetLogo", repos = "https://cran.r-project.org/")
 }
 ```
 
@@ -247,11 +234,14 @@ print(x.split(' '))
 names(knitr::knit_engines$get())
 ```
 
-    ##  [1] "awk"       "bash"      "coffee"    "gawk"      "groovy"    "haskell"   "lein"      "mysql"    
-    ##  [9] "node"      "octave"    "perl"      "psql"      "Rscript"   "ruby"      "sas"       "scala"    
-    ## [17] "sed"       "sh"        "stata"     "zsh"       "highlight" "Rcpp"      "tikz"      "dot"      
-    ## [25] "c"         "fortran"   "fortran95" "asy"       "cat"       "asis"      "stan"      "block"    
-    ## [33] "block2"    "js"        "css"       "sql"       "go"        "python"    "julia"     "sass"     
+    ##  [1] "awk"       "bash"      "coffee"    "gawk"      "groovy"   
+    ##  [6] "haskell"   "lein"      "mysql"     "node"      "octave"   
+    ## [11] "perl"      "psql"      "Rscript"   "ruby"      "sas"      
+    ## [16] "scala"     "sed"       "sh"        "stata"     "zsh"      
+    ## [21] "highlight" "Rcpp"      "tikz"      "dot"       "c"        
+    ## [26] "fortran"   "fortran95" "asy"       "cat"       "asis"     
+    ## [31] "stan"      "block"     "block2"    "js"        "css"      
+    ## [36] "sql"       "go"        "python"    "julia"     "sass"     
     ## [41] "scss"
 
 [1] Here is the footnote you created earlier, automatically formatted

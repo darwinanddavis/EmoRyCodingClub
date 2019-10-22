@@ -85,7 +85,7 @@ nyc <-  readr::read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
 ```
 
-* Accommodation less than $200 per night and between 5 and 15 nights    
+* Accommodation less than $200 per night, between 5 and 15 nights, and excluding Staten Island.        
 * Show only the data structure of the above subsetted data as a code output. No need to show the code for how you subsetted the data (see the PDF).       
 * Show the plotting code along with the plot.      
 * Use the below `yaml` for your `Rmd` file.      

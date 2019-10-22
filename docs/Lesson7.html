@@ -495,7 +495,7 @@ url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/n
 nyc &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(url)
 nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># get smaller subet of data</span></code></pre></div>
 <ul>
-<li>Accommodation less than $200 per night and between 5 and 15 nights<br />
+<li>Accommodation less than $200 per night, between 5 and 15 nights, and excluding Staten Island.<br />
 </li>
 <li>Show only the data structure of the above subsetted data as a code output. No need to show the code for how you subsetted the data (see the PDF).<br />
 </li>
