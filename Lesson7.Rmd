@@ -4,7 +4,7 @@ params:
   title: "Importing diverse data like a pro"  
   bookchapter_name: "Cheat sheet for the `readr` package"    
   bookchapter_section: "https://readr.tidyverse.org/"    
-  functions: "`read_csv`, `read_delim`, `write_csv`, `complete`, `expand`, `spread`, `gather`"
+  functions: "`read_csv`, `read_delim`, `write_csv`, `complete`, `expand`"
   packages: "`readr`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}

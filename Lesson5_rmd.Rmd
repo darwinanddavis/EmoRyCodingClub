@@ -12,17 +12,6 @@ output:
     toc_depth: 4
     number_sections: no
     toc_float: yes
-  pdf_document: # pdf options
-    highlight: tango
-    template: null
-    toc: yes
-    toc_depth: 4
-    number_sections: false
-    fig_width: 4
-    fig_height: 5
-    fig_caption: true
-    df_print: tibble 
-    latex_engine: xelatex #pdflatex # lualatex
   word_document: # ms word options
     highlight: tango
     keep_md: yes
@@ -30,8 +19,6 @@ output:
     toc: yes
   md_document: # markdown options
     variant: markdown_github 
-inludes:
-  before_body: before_body.tex
 subtitle: 
 tags:
 - nothing

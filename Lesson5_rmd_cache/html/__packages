@@ -7,3 +7,17 @@ DT
 htmlwidgets
 nycflights13
 dplyr
+tidyverse
+tibble
+tidyr
+readr
+purrr
+stringr
+forcats
+zoo
+RColorBrewer
+plyr
+leaflet
+ggthemes
+pacman
+sp

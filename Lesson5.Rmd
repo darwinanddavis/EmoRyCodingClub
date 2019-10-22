@@ -2,8 +2,6 @@
 params:
   lesson: "Lesson 5"
   title: "Turning code into reproducible documents with `Rmarkdown`"
-  bookchapter_name: "Download the `RMarkdown` template here: right click > Save Link As"      
-  bookchapter_section: "https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd"
   functions: "`here`, `summarise`,  `set_here`, `dr_here`"
   packages: "`here`, `dplyr`, `rmarkdown`"      
   # end inputs ---------------------------------------------------------------
@@ -59,7 +57,7 @@ Packages for `r params$lesson`
 
 # Agenda
 
-[`r params$bookchapter_name`](`r params$bookchapter_section`).        
+**[Download the `RMarkdown` template: right click > Save As"](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd)**    
  
 <!--  end yaml template------------------------------------------------------- -->
   

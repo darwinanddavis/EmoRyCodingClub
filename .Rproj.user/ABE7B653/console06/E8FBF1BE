@@ -1,499 +1,4 @@
 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   c3fe6c5..e3ce381  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commt [K[Kit -m ''l's'[1P'2' 'c'o'd'e' 'c'h'u'k'[1P'n'k'[1P'[1P'[1P'[1P'[1P'[1P' 'f'o'l'd'
-[master 70a490d] l2 code fold
- 5 files changed, 150 insertions(+), 7 deletions(-)
- rename docs/Lesson2_files/figure-html/{unnamed-chunk-3-1.png => unnamed-chunk-4-1.png} (100%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 12, done.
-Delta compression using up to 4 threads.
-Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
-Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 4.62 KiB | 0 bytes/s, done.
-Total 12 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   e3ce381..70a490d  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git cm[Kommit -m ''i'n'd'e'x' 'u'p'd'a't'e'
-[master ef9585b] index update
- 4 files changed, 29 insertions(+), 12 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 10, done.
-Delta compression using up to 4 threads.
-Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
-Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 1.24 KiB | 0 bytes/s, done.
-Total 10 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   70a490d..ef9585b  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-Saved working directory and index state WIP on master: 89b4215 added lesson 3-5
-HEAD is now at 89b4215 added lesson 3-5
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git status[1Pshrevert --no-commit 89b4215e454754cf8e7700f1e49d42606b233da5d
-error: Your local changes to the following files would be overwritten by merge:
-	.Rproj.user/ABE7B653/console06/E8FBF1BE
-Please commit your changes or stash them before you merge.
-Aborting
-fatal: revert failed
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git log --oneline
-[?1h=[33m89b4215[m added lesson 3-5[m
-[33mef9585b[m index update[m
-[33m70a490d[m l2 code fold[m
-[33me3ce381[m added l2 page[m
-[33mc3fe6c5[m render l2 page[m
-[33m968ad2f[m added l2 pck and func files[m
-[33mcae1f80[m file-cleanup merge Merge branch 'file-cleanup'[m
-[33m9dbda6e[m pre file-cleanup merge[m
-[33m832088e[m Makes the docs folder the output directory for all rendered Rmds[m
-:[K[K [KESCESC[KOO[KAA[K[K:[K[K[?1l>]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git log --oneline[K[K[K[K[K[K[K[K[K
-[?1h=[33mcommit 89b4215e454754cf8e7700f1e49d42606b23da5d[m[m
-Author: darwinanddavis <matthew.malishev@gmail.com>[m
-Date:   Fri Jul 19 13:28:47 2019 -0400[m
-[m
-    added lesson 3-5[m
-[m
-[33mcommit ef9585b88d4c0e55226face6ae281c0732758a65[m[m
-Author: darwinanddavis <matthew.malishev@gmail.com>[m
-Date:   Wed Jul 17 10:00:00 2019 -0400[m
-:[K[K[?1l>]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git [K[K[K[Kgit log --onelinerevert --no-commit 89b4215e454754cf8e7700f1e49d42606b233da5d[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[6Plog --oneline[K--oneline[K[K[K[K[K[K[K[K[Kgit log --onelinerevert --no-commit status[K[1Pshrevert --no-commit 89b4215e454754cf8e7700f1e49d42606b233da5d
-error: Your local changes to the following files would be overwritten by merge:
-	.Rproj.user/ABE7B653/console06/E8FBF1BE
-Please commit your changes or stash them before you merge.
-Aborting
-fatal: revert failed
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git stash list
-[?1h=stash@{0}: WIP on master: 89b4215 added lesson 3-5[m
-stash@{1}: WIP on master: 89b4215 added lesson 3-5[m
-[K[?1l>]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git stash apply
-error: Your local changes to the following files would be overwritten by merge:
-	.Rproj.user/ABE7B653/console06/E8FBF1BE
-Please commit your changes or stash them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[K[K[K[K[Kstatus
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add . [K[K[K[K[K[Kcommit -m ''p'o's't' 's't'a's'h' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'r'e' 's't'a's'h' 'c'o'm'm'i't'
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-
-no changes added to commit
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add ,[K.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .commit -m 'pre stash commit'
-[master c2061e6] pre stash commit
- 1 file changed, 72 insertions(+)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push[K[K[K[Kstatus
-On branch master
-Your branch is ahead of 'origin/master' by 1 commit.
-  (use "git push" to publish your local commits)
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git statuscommit -m 'pre stash commit'add .[Kcommit -m 'pre stash commit'status[Ksh apply
-error: Your local changes to the following files would be overwritten by merge:
-	.Rproj.user/ABE7B653/console06/E8FBF1BE
-Please commit your changes or stash them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''p'r'e' 's't'a's'h' 'c'o'm'
-[master 63b57b3] pre stash com
- 1 file changed, 21 insertions(+), 1 deletion(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pish[K[K[Kush
-Counting objects: 12, done.
-Delta compression using up to 4 threads.
-Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
-Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 2.07 KiB | 0 bytes/s, done.
-Total 12 (delta 6), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/6)   [Kremote: Resolving deltas:  33% (2/6)   [Kremote: Resolving deltas:  66% (4/6)   [Kremote: Resolving deltas: 100% (6/6)   [Kremote: Resolving deltas: 100% (6/6), completed with 3 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   89b4215..63b57b3  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git stash apply
-error: Your local changes to the following files would be overwritten by merge:
-	.Rproj.user/ABE7B653/console06/E8FBF1BE
-Please commit your changes or stash them before you merge.
-Aborting
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git stash apply[5Ptus
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git checkout --.Rproj.user/ABE7B653/console06/E8FBF1BE
-error: unknown option `.Rproj.user/ABE7B653/console06/E8FBF1BE'
-usage: git checkout [<options>] <branch>
-   or: git checkout [<options>] [<branch>] -- <file>...
-
-    -q, --quiet           suppress progress reporting
-    -b <branch>           create and checkout a new branch
-    -B <branch>           create/reset and checkout a branch
-    -l                    create reflog for new branch
-    --detach              detach HEAD at named commit
-    -t, --track           set upstream info for new branch
-    --orphan <new-branch>
-                          new unparented branch
-    -2, --ours            checkout our version for unmerged files
-    -3, --theirs          checkout their version for unmerged files
-    -f, --force           force checkout (throw away local modifications)
-    -m, --merge           perform a 3-way merge with the new branch
-    --overwrite-ignore    update ignored files (default)
-    --conflict <style>    conflict style (merge or diff3)
-    -p, --patch           select hunks interactively
-    --ignore-skip-worktree-bits
-                          do not limit pathspecs to sparse entries only
-    --ignore-other-worktrees
-                          do not check if another worktree is holding the given ref
-    --progress            force progress reporting
-
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ it[K[Kgit cooi[K[Kmmit -m ''p'u'b'l'i's'h' 'l'e's's'o'n'3'-'5'[1P'[1P'[1P' '3'5'[1P'-'5'[1@e[1@a[1@r[C[1@l[1@y[1@ [1P[1P[1P[1P[1P[1P[1@d[1@r[1@a[1@f[1@t[1@ 
-[master 47ca138] publish draft lesson 3-5
- 24 files changed, 1561 insertions(+), 785 deletions(-)
- rename docs/Lesson3.Rmd => Lesson3.Rmd (99%)
- rename docs/Lesson4.Rmd => Lesson4.Rmd (100%)
- rename docs/Lesson5.Rmd => Lesson5.Rmd (96%)
- rename {docs/Lesson5_cache => Lesson5_cache}/html/__packages (71%)
- create mode 100644 Lesson5_cache/html/unnamed-chunk-3_42b909711ebd71adceb372b1d15b3e38.RData
- rename {docs/Lesson5_cache => Lesson5_cache}/html/unnamed-chunk-3_42b909711ebd71adceb372b1d15b3e38.rdb (100%)
- rename {docs/Lesson5_cache => Lesson5_cache}/html/unnamed-chunk-3_42b909711ebd71adceb372b1d15b3e38.rdx (100%)
- create mode 100644 Lesson5_files/figure-html/unnamed-chunk-4-1.png
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png (97%)
- rewrite docs/Lesson3.html (99%)
- create mode 100644 docs/Lesson3_files/figure-html/unnamed-chunk-3-1.png
- rewrite docs/Lesson4.html (99%)
- create mode 100644 docs/Lesson4_files/figure-html/unnamed-chunk-3-1.png
- rewrite docs/Lesson5.html (99%)
- delete mode 100644 docs/Lesson5_cache/html/unnamed-chunk-3_42b909711ebd71adceb372b1d15b3e38.RData
- rewrite docs/Lesson5_files/figure-html/unnamed-chunk-4-1.png (96%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 39, done.
-Delta compression using up to 4 threads.
-Compressing objects:   3% (1/29)   Compressing objects:   6% (2/29)   Compressing objects:  10% (3/29)   Compressing objects:  13% (4/29)   Compressing objects:  17% (5/29)   Compressing objects:  20% (6/29)   Compressing objects:  24% (7/29)   Compressing objects:  27% (8/29)   Compressing objects:  31% (9/29)   Compressing objects:  34% (10/29)   Compressing objects:  37% (11/29)   Compressing objects:  41% (12/29)   Compressing objects:  44% (13/29)   Compressing objects:  48% (14/29)   Compressing objects:  51% (15/29)   Compressing objects:  55% (16/29)   Compressing objects:  58% (17/29)   Compressing objects:  62% (18/29)   Compressing objects:  65% (19/29)   Compressing objects:  68% (20/29)   Compressing objects:  72% (21/29)   Compressing objects:  75% (22/29)   Compressing objects:  79% (23/29)   Compressing objects:  82% (24/29)   Compressing objects:  86% (25/29)   Compressing objects:  89% (26/29)   Compressing objects:  93% (27/29)   Compressing objects:  96% (28/29)   Compressing objects: 100% (29/29)   Compressing objects: 100% (29/29), done.
-Writing objects:   2% (1/39)   Writing objects:   5% (2/39)   Writing objects:   7% (3/39)   Writing objects:  10% (4/39)   Writing objects:  12% (5/39)   Writing objects:  15% (6/39)   Writing objects:  17% (7/39)   Writing objects:  20% (8/39)   Writing objects:  23% (9/39)   Writing objects:  25% (10/39)   Writing objects:  28% (11/39)   Writing objects:  30% (12/39)   Writing objects:  35% (14/39)   Writing objects:  38% (15/39)   Writing objects:  41% (16/39)   Writing objects:  43% (17/39)   Writing objects:  46% (18/39)   Writing objects:  48% (19/39)   Writing objects:  51% (20/39)   Writing objects:  53% (21/39)   Writing objects:  56% (22/39)   Writing objects:  58% (23/39)   Writing objects:  61% (24/39)   Writing objects:  64% (25/39)   Writing objects:  66% (26/39)   Writing objects:  69% (27/39)   Writing objects:  71% (28/39)   Writing objects:  74% (29/39)   Writing objects:  79% (31/39)   Writing objects:  82% (32/39)   Writing objects:  84% (33/39)   Writing objects:  87% (34/39)   Writing objects:  89% (35/39)   Writing objects:  92% (36/39)   Writing objects:  94% (37/39)   Writing objects:  97% (38/39)   Writing objects: 100% (39/39)   Writing objects: 100% (39/39), 419.41 KiB | 0 bytes/s, done.
-Total 39 (delta 14), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/14)   [Kremote: Resolving deltas:   7% (1/14)   [Kremote: Resolving deltas:  14% (2/14)   [Kremote: Resolving deltas:  21% (3/14)   [Kremote: Resolving deltas:  28% (4/14)   [Kremote: Resolving deltas:  35% (5/14)   [Kremote: Resolving deltas:  42% (6/14)   [Kremote: Resolving deltas:  50% (7/14)   [Kremote: Resolving deltas:  57% (8/14)   [Kremote: Resolving deltas:  64% (9/14)   [Kremote: Resolving deltas:  71% (10/14)   [Kremote: Resolving deltas: 100% (14/14)   [Kremote: Resolving deltas: 100% (14/14), completed with 10 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   63b57b3..47ca138  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git p[Kcommit -m ''u'p'd'a't'e' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'[K[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'r'e's'e't'
-> git status
-> 
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset'
-git status
- echo 7E542F6B && /usr/bin/env && echo 563BE3E6[A[A[K
-[K
-[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit status
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes to be committed:
-  (use "git reset HEAD <file>..." to unstage)
-
-	[32mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-	[32mmodified:   _site.yml[m
-	[32mmodified:   docs/Lesson1.html[m
-	[32mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png[m
-	[32mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png[m
-	[32mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png[m
-	[32mmodified:   index.Rmd[m
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset
-Unstaged changes after reset:
-M	.Rproj.user/ABE7B653/console06/E8FBF1BE
-M	_site.yml
-M	docs/Lesson1.html
-M	docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png
-M	docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png
-M	index.Rmd
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git resetstatus
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-	[31mmodified:   _site.yml[m
-	[31mmodified:   docs/Lesson1.html[m
-	[31mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png[m
-	[31mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png[m
-	[31mmodified:   docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png[m
-	[31mmodified:   index.Rmd[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''p'u's'h' 'l'e's's'o'n'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'c'h'a'n'g'e' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'u'p'd'a't'e'd' 'a'm'[1P'[1P' 'y'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'm'a'd'e' 'y'a'm'l' 'c'o'n's'i's't'e'n't' 'u'[1P'[1P'/'p'i's'h'e'd'[1P'[1P'[1P'[1P'[1P'u'e'd' '[1P'[1P'[1P's'h'e'd' 'l'e's's'[1P'[1P'[1P'3'-'5'e3-5's3-5's3-5'o3-5'n3-5' 3-5'[1@s
-[master b2ce903] made yamls consistent/pushed lesson 3-5
- 7 files changed, 117 insertions(+), 8 deletions(-)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png (97%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 14, done.
-Delta compression using up to 4 threads.
-Compressing objects:   7% (1/13)   Compressing objects:  15% (2/13)   Compressing objects:  23% (3/13)   Compressing objects:  30% (4/13)   Compressing objects:  38% (5/13)   Compressing objects:  46% (6/13)   Compressing objects:  53% (7/13)   Compressing objects:  61% (8/13)   Compressing objects:  69% (9/13)   Compressing objects:  76% (10/13)   Compressing objects:  84% (11/13)   Compressing objects:  92% (12/13)   Compressing objects: 100% (13/13)   Compressing objects: 100% (13/13), done.
-Writing objects:   7% (1/14)   Writing objects:  14% (2/14)   Writing objects:  21% (3/14)   Writing objects:  28% (4/14)   Writing objects:  35% (5/14)   Writing objects:  42% (6/14)   Writing objects:  50% (7/14)   Writing objects:  57% (8/14)   Writing objects:  64% (9/14)   Writing objects:  71% (10/14)   Writing objects:  78% (11/14)   Writing objects:  85% (12/14)   Writing objects:  92% (13/14)   Writing objects: 100% (14/14)   Writing objects: 100% (14/14), 80.95 KiB | 0 bytes/s, done.
-Total 14 (delta 8), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/8)   [Kremote: Resolving deltas:  12% (1/8)   [Kremote: Resolving deltas:  25% (2/8)   [Kremote: Resolving deltas:  37% (3/8)   [Kremote: Resolving deltas:  50% (4/8)   [Kremote: Resolving deltas:  62% (5/8)   [Kremote: Resolving deltas:  75% (6/8)   [Kremote: Resolving deltas:  87% (7/8)   [Kremote: Resolving deltas: 100% (8/8)   [Kremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   47ca138..b2ce903  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ render [K[K[K[K[K[K[Kgit add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commi t-m [K[K[K[K[Kt -m ''f'i'x'e'd' 's'i't'e'_'y'a'm'l'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'h't'm'l' 'l'i'n'k' 't'o' 's'i't'e'_'y'a'm'l'[1@s[1P[1P[C[1P[1P[1@l[1@e[1@s[1@s[1@o[1@n
-[master 64602b0] fixed lesson links to site_yaml
- 11 files changed, 89 insertions(+), 13 deletions(-)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-6-1.png (97%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-7-1.png (96%)
- rewrite docs/Lesson1_files/figure-html/unnamed-chunk-8-1.png (97%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 18, done.
-Delta compression using up to 4 threads.
-Compressing objects:   5% (1/17)   Compressing objects:  11% (2/17)   Compressing objects:  17% (3/17)   Compressing objects:  23% (4/17)   Compressing objects:  29% (5/17)   Compressing objects:  35% (6/17)   Compressing objects:  41% (7/17)   Compressing objects:  47% (8/17)   Compressing objects:  52% (9/17)   Compressing objects:  58% (10/17)   Compressing objects:  64% (11/17)   Compressing objects:  70% (12/17)   Compressing objects:  76% (13/17)   Compressing objects:  82% (14/17)   Compressing objects:  88% (15/17)   Compressing objects:  94% (16/17)   Compressing objects: 100% (17/17)   Compressing objects: 100% (17/17), done.
-Writing objects:   5% (1/18)   Writing objects:  11% (2/18)   Writing objects:  16% (3/18)   Writing objects:  22% (4/18)   Writing objects:  27% (5/18)   Writing objects:  33% (6/18)   Writing objects:  38% (7/18)   Writing objects:  44% (8/18)   Writing objects:  50% (9/18)   Writing objects:  55% (10/18)   Writing objects:  61% (11/18)   Writing objects:  66% (12/18)   Writing objects:  72% (13/18)   Writing objects:  77% (14/18)   Writing objects:  83% (15/18)   Writing objects:  88% (16/18)   Writing objects:  94% (17/18)   Writing objects: 100% (18/18)   Writing objects: 100% (18/18), 83.77 KiB | 0 bytes/s, done.
-Total 18 (delta 12), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/12)   [Kremote: Resolving deltas:   8% (1/12)   [Kremote: Resolving deltas:  16% (2/12)   [Kremote: Resolving deltas:  25% (3/12)   [Kremote: Resolving deltas:  33% (4/12)   [Kremote: Resolving deltas:  41% (5/12)   [Kremote: Resolving deltas:  50% (6/12)   [Kremote: Resolving deltas:  58% (7/12)   [Kremote: Resolving deltas:  66% (8/12)   [Kremote: Resolving deltas:  75% (9/12)   [Kremote: Resolving deltas:  83% (10/12)   [Kremote: Resolving deltas:  91% (11/12)   [Kremote: Resolving deltas: 100% (12/12)   [Kremote: Resolving deltas: 100% (12/12), completed with 12 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   b2ce903..64602b0  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[K[K[Kd .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''g'[1P'y'[1P's'e'[1P'[1P'[K[C'[Cu'p'd'a't'e' 'l'4' 'd'o' 'f'i'r's't'
-[master d18c481] update l4 do first
- 7 files changed, 35 insertions(+), 14 deletions(-)
- rewrite docs/Lesson4_files/figure-html/unnamed-chunk-3-1.png (83%)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pich[K[K[Kush
-Counting objects: 15, done.
-Delta compression using up to 4 threads.
-Compressing objects:   7% (1/13)   Compressing objects:  15% (2/13)   Compressing objects:  23% (3/13)   Compressing objects:  30% (4/13)   Compressing objects:  38% (5/13)   Compressing objects:  46% (6/13)   Compressing objects:  53% (7/13)   Compressing objects:  61% (8/13)   Compressing objects:  69% (9/13)   Compressing objects:  76% (10/13)   Compressing objects:  84% (11/13)   Compressing objects:  92% (12/13)   Compressing objects: 100% (13/13)   Compressing objects: 100% (13/13), done.
-Writing objects:   6% (1/15)   Writing objects:  13% (2/15)   Writing objects:  20% (3/15)   Writing objects:  26% (4/15)   Writing objects:  33% (5/15)   Writing objects:  40% (6/15)   Writing objects:  46% (7/15)   Writing objects:  53% (8/15)   Writing objects:  60% (9/15)   Writing objects:  66% (10/15)   Writing objects:  73% (11/15)   Writing objects:  80% (12/15)   Writing objects:  86% (13/15)   Writing objects:  93% (14/15)   Writing objects: 100% (15/15)   Writing objects: 100% (15/15), 193.92 KiB | 0 bytes/s, done.
-Total 15 (delta 9), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/9)   [Kremote: Resolving deltas:  11% (1/9)   [Kremote: Resolving deltas:  22% (2/9)   [Kremote: Resolving deltas:  33% (3/9)   [Kremote: Resolving deltas:  44% (4/9)   [Kremote: Resolving deltas:  55% (5/9)   [Kremote: Resolving deltas:  66% (6/9)   [Kremote: Resolving deltas:  77% (7/9)   [Kremote: Resolving deltas:  88% (8/9)   [Kremote: Resolving deltas: 100% (9/9)   [Kremote: Resolving deltas: 100% (9/9), completed with 9 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   64602b0..d18c481  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls 
-Lesson1.Rmd		README.md		functions_lesson2.txt
-Lesson2.Rmd		_site.yml		img
-Lesson3.Rmd		admin			index.Rmd
-Lesson4.Rmd		admin_			packages_lesson1.txt
-Lesson5.Rmd		docs			packages_lesson2.txt
-Lesson5_cache		emorycodingclub.Rproj
-Lesson5_files		functions_lesson1.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd ..[K[K[K[K[Kcd amin[K[K[Kdmin
-]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ ls
-_ecc_master1.Rmd	_lesson1_draft.Rmd	ggplot1.png
-]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ ls
-_ecc_master1.Rmd	_lesson1_draft.Rmd	ggplot1.png
-]0;~/Documents/Emory/admin/ecc/admin6300L-127771-M:admin malishev$ cd ..
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls
-Lesson1.Rmd		README.md		functions_lesson2.txt
-Lesson2.Rmd		_site.yml		img
-Lesson3.Rmd		admin			index.Rmd
-Lesson4.Rmd		admin_			packages_lesson1.txt
-Lesson5.Rmd		docs			packages_lesson2.txt
-Lesson5_cache		emorycodingclub.Rproj
-Lesson5_files		functions_lesson1.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd docs/
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ touch here_te[K[K[Ktest.tt[Kxt
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ open heretouch heretest.txt
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ touch heretest.txt[10Pcd docs/touch heretest.txt[Kopen heretest.txt 
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ ls
-Lesson1.html		Lesson4_files		functions_lesson2.txt
-Lesson1_files		Lesson5.html		heretest.txt
-Lesson2.html		Lesson5_files		img
-Lesson2_files		README.html		index.html
-Lesson3.html		admin			packages_lesson1.txt
-Lesson3_files		admin_			packages_lesson2.txt
-Lesson4.html		functions_lesson1.txt	site_libs
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ pwd
-/Users/malishev/Documents/Emory/admin/ecc/docs
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ cd ..
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
-/Users/malishev/Documents/Emory/admin/ecc
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwdcd ..[2Ppwd[1Plspwdcd ..[2Ppwd[Kopen here[K[K[K[K[K[K[K[K[Kpwd
-/Users/malishev/Documents/Emory/admin/ecc
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd dco[K[Kocs/
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ open her`[Ketest.txt 
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ cd ..
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
-/Users/malishev/Documents/Emory/admin/ecc
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
-/Users/malishev/Documents/Emory/admin/ecc
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ mkdir lookhere
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd lookhere/
-]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ touch heretest.txt
-]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ open heretest.txt 
-]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ cd ..[K[K..
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ cd docs/
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ ls
-Lesson1.html		Lesson4_files		functions_lesson2.txt
-Lesson1_files		Lesson5.html		heretest.txt
-Lesson2.html		Lesson5_files		img
-Lesson2_files		README.html		index.html
-Lesson3.html		admin			packages_lesson1.txt
-Lesson3_files		admin_			packages_lesson2.txt
-Lesson4.html		functions_lesson1.txt	site_libs
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ rm heretest.txt 
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ le[Ks
-Lesson1.html		Lesson4_files		functions_lesson2.txt
-Lesson1_files		Lesson5.html		img
-Lesson2.html		Lesson5_files		index.html
-Lesson2_files		README.html		packages_lesson1.txt
-Lesson3.html		admin			packages_lesson2.txt
-Lesson3_files		admin_			site_libs
-Lesson4.html		functions_lesson1.txt
-]0;~/Documents/Emory/admin/ecc/docs6300L-127771-M:docs malishev$ p[Kcd ..
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
-/Users/malishev/Documents/Emory/admin/ecc
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''h'e'r'e' 'e'x'a'm'p'l'e'
-[master 1a97e06] here example
- 10 files changed, 140 insertions(+), 21 deletions(-)
- rewrite .Rproj.user/ABE7B653/console06/INDEX001 (71%)
- create mode 100644 .here
- rename docs/Lesson2_files/figure-html/{unnamed-chunk-7-1.png => unnamed-chunk-10-1.png} (100%)
- rename docs/Lesson2_files/figure-html/{unnamed-chunk-6-1.png => unnamed-chunk-9-1.png} (100%)
- create mode 100644 docs/lookhere/heretest.txt
- create mode 100644 lookhere/heretest.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git ps[Kush
-Counting objects: 15, done.
-Delta compression using up to 4 threads.
-Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
-Writing objects:   6% (1/15)   Writing objects:  13% (2/15)   Writing objects:  20% (3/15)   Writing objects:  26% (4/15)   Writing objects:  33% (5/15)   Writing objects:  40% (6/15)   Writing objects:  46% (7/15)   Writing objects:  53% (8/15)   Writing objects:  60% (9/15)   Writing objects:  66% (10/15)   Writing objects:  73% (11/15)   Writing objects:  80% (12/15)   Writing objects:  86% (13/15)   Writing objects:  93% (14/15)   Writing objects: 100% (15/15)   Writing objects: 100% (15/15), 4.79 KiB | 0 bytes/s, done.
-Total 15 (delta 8), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/8)   [Kremote: Resolving deltas:  12% (1/8)   [Kremote: Resolving deltas:  25% (2/8)   [Kremote: Resolving deltas:  37% (3/8)   [Kremote: Resolving deltas:  50% (4/8)   [Kremote: Resolving deltas:  62% (5/8)   [Kremote: Resolving deltas:  75% (6/8)   [Kremote: Resolving deltas:  87% (7/8)   [Kremote: Resolving deltas: 100% (8/8)   [Kremote: Resolving deltas: 100% (8/8), completed with 8 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   d18c481..1a97e06  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ goit a[K[K[K[K[Kit add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commi t0m [K[K[K[K[Kt 0[K-m ''h'e'r'e' 'e'x'a'm'p'l'e' 'l'2'
-[master 100b217] here example l2
- 3 files changed, 43 insertions(+), 11 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 9, done.
-Delta compression using up to 4 threads.
-Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
-Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 2.01 KiB | 0 bytes/s, done.
-Total 9 (delta 6), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/6)   [Kremote: Resolving deltas:  16% (1/6)   [Kremote: Resolving deltas:  33% (2/6)   [Kremote: Resolving deltas:  50% (3/6)   [Kremote: Resolving deltas:  66% (4/6)   [Kremote: Resolving deltas:  83% (5/6)   [Kremote: Resolving deltas: 100% (6/6)   [Kremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   1a97e06..100b217  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''a'd'd'e'd' 'c'o'd'e' '[1P'[1P'[1P'[1P'[1P'n'y'c' 'd'a't'a's'e't' 'i'n't'r's'u't'r'c'i'o'n'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'i'n's't'r'u'c' 't'o' 'i'n'd'e'x'[1@s[1@a[1@v[1@e[1@ [1@;[1@2Cinstruc to index' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C;instruc to index''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2instruc to index'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CCinstruc to index'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C;instruc to index'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2instruc to index'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[CCinstruc to index'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinstruc to in[1Pdex'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinstruc to ind[1Pex'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinstruc to inde[1Px'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinstruc to index[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinstruc to index'[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cinstruc to index' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1P[C[C[C[C[C[C[C
-[master bc4c7e2] added nyc dataset save instruc to index
- 3 files changed, 28 insertions(+), 3 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 9, done.
-Delta compression using up to 4 threads.
-Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
-Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 1.94 KiB | 0 bytes/s, done.
-Total 9 (delta 6), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/6)   [Kremote: Resolving deltas:  16% (1/6)   [Kremote: Resolving deltas:  33% (2/6)   [Kremote: Resolving deltas:  50% (3/6)   [Kremote: Resolving deltas:  66% (4/6)   [Kremote: Resolving deltas:  83% (5/6)   [Kremote: Resolving deltas: 100% (6/6)   [Kremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   100b217..bc4c7e2  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''l'a'p'p'l'y' 'e'g' 'l'4'[C l4'[1Pl4'[C[C[1P4'[1P4'L4'$4'[C[1P'[1P'[1P' 'L'$'[1P'4'[C[1P L4'x L4'a L4'm L4'p L4'l L4'e L4'[C
-[master 3edbc9e] lapply example L4
- 4 files changed, 157 insertions(+), 2 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 10, done.
-Delta compression using up to 4 threads.
-Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
-Writing objects:  10% (1/10)   Writing objects:  20% (2/10)   Writing objects:  30% (3/10)   Writing objects:  40% (4/10)   Writing objects:  50% (5/10)   Writing objects:  60% (6/10)   Writing objects:  70% (7/10)   Writing objects:  80% (8/10)   Writing objects:  90% (9/10)   Writing objects: 100% (10/10)   Writing objects: 100% (10/10), 4.13 KiB | 0 bytes/s, done.
-Total 10 (delta 7), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/7)   [Kremote: Resolving deltas:  14% (1/7)   [Kremote: Resolving deltas:  28% (2/7)   [Kremote: Resolving deltas:  42% (3/7)   [Kremote: Resolving deltas:  57% (4/7)   [Kremote: Resolving deltas:  71% (5/7)   [Kremote: Resolving deltas:  85% (6/7)   [Kremote: Resolving deltas: 100% (7/7)   [Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
-remote: 
-remote: GitHub found 2 vulnerabilities on darwinanddavis/EmoRyCodingClub's default branch (2 moderate). To find out more, visit:[K
-remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
-remote: 
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   bc4c7e2..3edbc9e  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git pushcommit -m 'lapply example L4'add .[K
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[1Ppushcommit -m 'lapply example L4'[1P'5'[1P[1P[1P[1P[1P[1P[1P[1@s[1@h[1@o[1@r[1@t[1@k[C[1@e[1@y[1@ [1@L[1@2[1@ [1@a[1@n[1@d[1@ [1@h[C[1@e[1@r[C[1@e[1P[1P[1P[1P[1@m[1@o[1@v[C[1@e[1@d[1@ [1@h[C[1@e[1@r[C[1@e[1@ [C[1@e[1@x[1@a[1@mpexample L5' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clexample L5''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cexample L5'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C example L5'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ctexample L5'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Coexample L5'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C example L5'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-[C[C[1P L5'[C[1P L5'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C L[1P5'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C L5[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C L5'[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C L5' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P L5'
 [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1PL5'
 [master ee7d36e] shortkey L2 and moved here example to L5
  8 files changed, 73 insertions(+), 63 deletions(-)
@@ -1494,4 +999,221 @@ remote:      https://github.com/darwinanddavis/EmoRyCodingClub/network/alerts[K
 remote: 
 To https://github.com/darwinanddavis/EmoRyCodingClub
    f5f9cb7..8f4f8b1  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ 
+git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit;10D[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit reset
+Unstaged changes after reset:
+M	.Rhistory
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE
+M	.Rproj.user/ABE7B653/console06/INDEX001
+M	.Rproj.user/ABE7B653/pcs/source-pane.pper
+M	.Rproj.user/ABE7B653/pcs/windowlayoutstate.pper
+M	.Rproj.user/ABE7B653/rmd-outputs
+M	Lesson5.Rmd
+M	Lesson7.Rmd
+M	docs/Lesson5.html
+M	docs/Lesson7.html
+M	docs/index.html
+D	site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js
+D	site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js
+D	site_libs/bootstrap-3.3.5/css/bootstrap-theme.css
+D	site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.map
+D	site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css
+D	site_libs/bootstrap-3.3.5/css/bootstrap.css
+D	site_libs/bootstrap-3.3.5/css/bootstrap.css.map
+D	site_libs/bootstrap-3.3.5/css/bootstrap.min.css
+D	site_libs/bootstrap-3.3.5/css/cerulean.min.css
+D	site_libs/bootstrap-3.3.5/css/cosmo.min.css
+D	site_libs/bootstrap-3.3.5/css/darkly.min.css
+D	site_libs/bootstrap-3.3.5/css/flatly.min.css
+D	site_libs/bootstrap-3.3.5/css/fonts/Lato.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/LatoBold.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/NewsCycle.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/OpenSans.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/Raleway.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/Roboto.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
+D	site_libs/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
+D	site_libs/bootstrap-3.3.5/css/journal.min.css
+D	site_libs/bootstrap-3.3.5/css/lumen.min.css
+D	site_libs/bootstrap-3.3.5/css/paper.min.css
+D	site_libs/bootstrap-3.3.5/css/readable.min.css
+D	site_libs/bootstrap-3.3.5/css/sandstone.min.css
+D	site_libs/bootstrap-3.3.5/css/simplex.min.css
+D	site_libs/bootstrap-3.3.5/css/spacelab.min.css
+D	site_libs/bootstrap-3.3.5/css/united.min.css
+D	site_libs/bootstrap-3.3.5/css/yeti.min.css
+D	site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot
+D	site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg
+D	site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf
+D	site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff
+D	site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2
+D	site_libs/bootstrap-3.3.5/js/bootstrap.js
+D	site_libs/bootstrap-3.3.5/js/bootstrap.min.js
+D	site_libs/bootstrap-3.3.5/js/npm.js
+D	site_libs/bootstrap-3.3.5/shim/html5shiv.min.js
+D	site_libs/bootstrap-3.3.5/shim/respond.min.js
+D	site_libs/font-awesome-5.1.0/css/all.css
+D	site_libs/font-awesome-5.1.0/css/v4-shims.css
+D	site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.eot
+D	site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.svg
+D	site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.ttf
+D	site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff
+D	site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff2
+D	site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.eot
+D	site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.svg
+D	site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.ttf
+D	site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff
+D	site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff2
+D	site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.eot
+D	site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.svg
+D	site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.ttf
+D	site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff
+D	site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff2
+D	site_libs/htmlwidgets-1.5.1/htmlwidgets.js
+D	site_libs/jquery-1.11.3/jquery.min.js
+D	site_libs/jquery-1.12.4/jquery.min.js
+D	site_libs/jqueryui-1.11.4/README
+D	site_libs/jqueryui-1.11.4/images/ui-icons_444444_256x240.png
+D	site_libs/jqueryui-1.11.4/images/ui-icons_555555_256x240.png
+D	site_libs/jqueryui-1.11.4/images/ui-icons_777620_256x240.png
+D	site_libs/jqueryui-1.11.4/images/ui-icons_777777_256x240.png
+D	site_libs/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png
+D	site_libs/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png
+D	site_libs/jqueryui-1.11.4/index.html
+D	site_libs/jqueryui-1.11.4/jquery-ui.css
+D	site_libs/jqueryui-1.11.4/jquery-ui.js
+D	site_libs/jqueryui-1.11.4/jquery-ui.min.css
+D	site_libs/jqueryui-1.11.4/jquery-ui.min.js
+D	site_libs/jqueryui-1.11.4/jquery-ui.structure.css
+D	site_libs/jqueryui-1.11.4/jquery-ui.structure.min.css
+D	site_libs/jqueryui-1.11.4/jquery-ui.theme.css
+D	site_libs/jqueryui-1.11.4/jquery-ui.theme.min.css
+D	site_libs/leaflet-1.3.1/images/layers-2x.png
+D	site_libs/leaflet-1.3.1/images/layers.png
+D	site_libs/leaflet-1.3.1/images/marker-icon-2x.png
+D	site_libs/leaflet-1.3.1/images/marker-icon.png
+D	site_libs/leaflet-1.3.1/images/marker-shadow.png
+D	site_libs/leaflet-1.3.1/leaflet.css
+D	site_libs/leaflet-1.3.1/leaflet.js
+D	site_libs/leaflet-binding-2.0.2/leaflet.js
+D	site_libs/leaflet-binding-2.0.2/leaflet.yaml
+D	site_libs/leaflet-binding-2.0.2/lib/jquery/jquery.min.js
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/cancel.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/cancel_@2X.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/check.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/check_@2X.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/focus.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/focus_@2X.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/rulers.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/rulers_@2X.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/start.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/start_@2X.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/trash.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/images/trash_@2X.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/leaflet-measure.css
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-measure/leaflet-measure.min.js
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/LICENSE
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/index.js
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/leaflet-omnivore.min.js
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-omnivore/package.json
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/leaflet-providers.js
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/package.json
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/providers.json
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet-providers/rstudio_install.md
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet/images/layers-2x.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet/images/layers.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-icon-2x.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-icon.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet/images/marker-shadow.png
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet/leaflet.css
+D	site_libs/leaflet-binding-2.0.2/lib/leaflet/leaflet.js
+D	site_libs/leaflet-binding-2.0.2/lib/leafletfix/leafletfix.css
+D	site_libs/leaflet-binding-2.0.2/lib/rstudio_leaflet/images/1px.png
+D	site_libs/leaflet-binding-2.0.2/lib/rstudio_leaflet/rstudio_leaflet.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.min.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Control.MiniMap.min.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/Minimap-binding.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/images/toggle.png
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet-MiniMap/images/toggle.svg
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/EasyButton-binding.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/LICENSE
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/easy-button.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.EasyButton/easy-button.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/Graticule-binding.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/L.Graticule.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Graticule/Leaflet.Graticule.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/L.SimpleGraticule.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/L.SimpleGraticule.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.SimpleGraticule/SimpleGraticule-binding.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Terminator/L.Terminator.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.Terminator/Terminator-binding.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap-theme.min.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap.min.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/bootstrap.min.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/font-awesome.min.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/FontAwesome.otf
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.eot
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.svg
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.ttf
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/fontawesome-webfont.woff
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.eot
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.svg
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.ttf
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/glyphicons-halflings-regular.woff
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.eot
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.svg
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.ttf
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/fonts/ionicons.woff
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-matte.png
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-matte@2x.png
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-plain.png
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-shadow.png
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-shadow@2x.png
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-soft.png
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/images/markers-soft@2x.png
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/ionicons.min.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.awesome-markers/leaflet.awesome-markers.min.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MIT-LICENCE.txt
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MarkerCluster.Default.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/MarkerCluster.css
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.freezable.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/leaflet.markercluster.layersupport.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Leaflet.markercluster/package.json
+D	site_libs/leaflet-binding-2.0.2/plugins/Proj4Leaflet/proj4-compressed.js
+D	site_libs/leaflet-binding-2.0.2/plugins/Proj4Leaflet/proj4leaflet.js
+D	site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/filter-icon.png
+D	site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/move-handle.png
+D	site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/img/resize-handle.png
+D	site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter-bindings.js
+D	site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter.css
+D	site_libs/leaflet-binding-2.0.2/plugins/leaflet-locationfilter/locationfilter.js
+D	site_libs/leaflet-binding-2.0.2/plugins/leaflet-providers-plugin/leaflet-providers-plugin.js
+D	site_libs/leafletfix-1.0.0/leafletfix.css
+D	site_libs/navigation-1.1/codefolding.js
+D	site_libs/navigation-1.1/sourceembed.js
+D	site_libs/navigation-1.1/tabsets.js
+D	site_libs/rstudio_leaflet-1.3.1/images/1px.png
+D	site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css
+D	site_libs/tocify-1.9.1/jquery.tocify.css
+D	site_libs/tocify-1.9.1/jquery.tocify.js
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset[Kopen Lesson5_rmd.l og 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git s[Kadd . 
