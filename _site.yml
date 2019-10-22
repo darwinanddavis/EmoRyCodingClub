@@ -35,12 +35,5 @@ output:
     self_contained: false
 pdf_document: # pdf options
     highlight: tango
-    template: null
     toc: yes
     toc_depth: 4
-    number_sections: false
-    fig_width: 4
-    fig_height: 5
-    fig_caption: true
-    df_print: tibble 
-    latex_engine: pdflatex  #xelatex # lualatex

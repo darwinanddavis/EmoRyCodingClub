@@ -63,6 +63,7 @@ knitr::opts_chunk$set(
 # tinytex::install_tinytex()
 
 packages <- c("dplyr","ggplot2","plotly","DT","htmlwidgets")
+update.packages("htmlwidgets")
 
 ppp <- lapply(packages,require,character.only=T)
 names(ppp) <- packages
