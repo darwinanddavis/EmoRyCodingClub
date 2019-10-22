@@ -111,20 +111,11 @@ pacman::p_load(ggthemes,ggplot2,readr,dplyr)
 
 
 <!-- ----------------------- image --------------------------- -->
-<div align="center">
-  <img src="img/lesson7_dofirst1.jpg" style=width:50%>
-</div>
+![](img/lesson7_dofirst1.jpg) ![](img/lesson7_dofirst2.jpg)
 <!-- ----------------------- image --------------------------- -->
-\    
+\  
 
-<!-- ----------------------- image --------------------------- -->
-<div align="center">
-  <img src="img/lesson7_dofirst2.jpg" style=width:50%>
-</div>
-<!-- ----------------------- image --------------------------- -->
-\    
-
-*****  
+*****    
 
 # Reading in different data file types      
   
