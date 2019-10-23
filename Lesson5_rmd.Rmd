@@ -105,8 +105,7 @@ The raw Rmd file also has the code for inserting user comments,
 
 ## Define equations      
 
-Accordingly, we write the eigenfunction of a spinless particle as the superposition of plane wave states of momentum ($\pi$) and energy ($Ej$) having amplitudes $a(\pi,Ej)$ (from^[Efthimiades, S., Physical meaning and derivation of Schrodinger and Dirac equations, Department of Natural Sciences, Fordham University. [doi: d34464566](https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf).])     
-
+Accordingly, we write the eigenfunction of a spinless particle as the superposition of plane wave states of momentum ($\pi$) and energy ($Ej$) having amplitudes $a(\pi,Ej)$ (from [[1]](https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf)).      
 $$  
 \phi n(r,t) =  
   \sum_{i, j} a(p_{i},E_{j})
@@ -116,7 +115,7 @@ $$
   (p_{i} \cdot r - E_{j}t) 
 }
 $$
-\    
+\          
 
 ## Embed images/gifs:  
 
@@ -187,7 +186,7 @@ Table 1. Definitions of model parameters for individual hosts and **parasites**.
 Here's an Easter egg for you ...  
 
 ```{r,echo=F,message=F}
-lapply(list(require(plotly),require(ggplot2)),suppressWarnings)
+suppressWarnings(pacman::p_load(plotly,ggplot2))
 nn <- 100
 p <- ggplot() +
   geom_point(aes(rnorm(nn),sample(nn/2,nn,replace=T)),colour = rainbow(nn),size=sample(nn/2,nn,replace=T)/5,alpha=abs(rnorm(nn))) +
@@ -201,7 +200,7 @@ ggplotly(p)
 Here's a new way of creating tables using the `DT` package  
 
 ```{r,cache=T,warning=F, echo=F}
-lapply(list(require(DT),require(htmlwidgets)),suppressWarnings)
+suppressWarnings(pacman::p_load(DT,htmlwidgets))
 caption <- "Table 1. The 'mtcars' dataset presented in a datatable. Try editing the columns and cells." 
 datatable(mtcars, 
           rownames = T, 
@@ -297,5 +296,7 @@ print(x.split(' '))
 names(knitr::knit_engines$get())
 ```
 
+# References  
 
+[1] Efthimiades, S., Physical meaning and derivation of Schrodinger and Dirac equations, Department of Natural Sciences, Fordham University, [doi: d34464566](https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf).        
 

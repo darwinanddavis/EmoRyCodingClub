@@ -1778,3 +1778,23 @@ remote: Resolving deltas:   0% (0/12)[Kremote: Resolving deltas:   8% (1/12)[
 To https://github.com/darwinanddavis/EmoRyCodingClub
    a62a5a7..18d3647  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''f'i' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cx''e'd' 'L'5' 'r'm'd'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'd' 'i'n's't'r'u'c't'i'o'n's'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'L'5' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ''i'n's't'r'u'c't'i'o'n's' 'u'p'd'a't'e'
+[master bbb843c] L5 instructions update
+ 13 files changed, 44 insertions(+), 20 deletions(-)
+ create mode 100644 Lesson5_cache/html/unnamed-chunk-2_0bb683a2e402e6f8ff8d4af0b73f7957.RData
+ rename Lesson5_cache/html/{unnamed-chunk-2_79471d1e6bc9c8af0a20b7befffb921c.rdb => unnamed-chunk-2_0bb683a2e402e6f8ff8d4af0b73f7957.rdb} (100%)
+ rename Lesson5_cache/html/{unnamed-chunk-2_79471d1e6bc9c8af0a20b7befffb921c.rdx => unnamed-chunk-2_0bb683a2e402e6f8ff8d4af0b73f7957.rdx} (100%)
+ delete mode 100644 Lesson5_cache/html/unnamed-chunk-2_79471d1e6bc9c8af0a20b7befffb921c.RData
+ rewrite Lesson5_files/figure-html/unnamed-chunk-3-1.png (65%)
+ rewrite docs/Lesson5_files/figure-html/unnamed-chunk-3-1.png (65%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 19, done.
+Delta compression using up to 4 threads.
+Compressing objects:   5% (1/17)   Compressing objects:  11% (2/17)   Compressing objects:  17% (3/17)   Compressing objects:  23% (4/17)   Compressing objects:  29% (5/17)   Compressing objects:  35% (6/17)   Compressing objects:  41% (7/17)   Compressing objects:  47% (8/17)   Compressing objects:  52% (9/17)   Compressing objects:  58% (10/17)   Compressing objects:  64% (11/17)   Compressing objects:  70% (12/17)   Compressing objects:  76% (13/17)   Compressing objects:  82% (14/17)   Compressing objects:  88% (15/17)   Compressing objects:  94% (16/17)   Compressing objects: 100% (17/17)   Compressing objects: 100% (17/17), done.
+Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  15% (3/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  47% (9/19)   Writing objects:  52% (10/19)   Writing objects:  57% (11/19)   Writing objects:  63% (12/19)   Writing objects:  68% (13/19)   Writing objects:  73% (14/19)   Writing objects:  78% (15/19)   Writing objects:  84% (16/19)   Writing objects:  89% (17/19)   Writing objects:  94% (18/19)   Writing objects: 100% (19/19)   Writing objects: 100% (19/19), 78.40 KiB | 0 bytes/s, done.
+Total 19 (delta 12), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/12)[Kremote: Resolving deltas:   8% (1/12)[Kremote: Resolving deltas:  16% (2/12)[Kremote: Resolving deltas:  25% (3/12)[Kremote: Resolving deltas:  33% (4/12)[Kremote: Resolving deltas:  41% (5/12)[Kremote: Resolving deltas:  50% (6/12)[Kremote: Resolving deltas:  58% (7/12)[Kremote: Resolving deltas:  66% (8/12)[Kremote: Resolving deltas:  75% (9/12)[Kremote: Resolving deltas:  83% (10/12)[Kremote: Resolving deltas:  91% (11/12)[Kremote: Resolving deltas: 100% (12/12)[Kremote: Resolving deltas: 100% (12/12), completed with 12 local objects.[K
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   18d3647..bbb843c  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git ad .[K[K[Kdd. [K[K .
