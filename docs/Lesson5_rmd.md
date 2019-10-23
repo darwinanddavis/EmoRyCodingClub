@@ -2,7 +2,7 @@
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
 </script>
-Date: 2019-10-22
+Date: 2019-10-23
 R version: 3.5.0
 \*Corresponding author: your email here
 

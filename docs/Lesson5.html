@@ -476,19 +476,19 @@ div.tocify {
 </div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
-<p><strong><a href="https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd">Download the <code>RMarkdown</code> template: right click &gt; Save As“</a></strong></p>
+<p>Create reproducible HTML, PDF, and Word documents from R using <code>RMarkdown</code>. <strong><a href="https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd">Download the <code>RMarkdown</code> template (right click &gt; Save As)</a>.</strong></p>
 <!--  end yaml template------------------------------------------------------- -->
-<ul>
-<li>Create HTML, PDF, and Word documents from R using <code>RMarkdown</code></li>
-</ul>
 </div>
 <div id="do-first" class="section level1">
 <h1>Do First</h1>
 <p>Recreate the below plot using the larger NYC Airbnb dataset. Here’s the code to add the title and labels.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ttl &lt;-<span class="st"> &quot;NYC Airbnb availability&quot;</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
+nyc_full &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(url)  <span class="co"># reads in data</span>
+
+ttl &lt;-<span class="st"> &quot;NYC Airbnb availability&quot;</span>
 subttl &lt;-<span class="st"> &quot;for room types across neighbourhoods&quot;</span>
 xlab &lt;-<span class="st"> &quot;Availability of property in next 30 days&quot;</span>
-ylab &lt;-<span class="st"> &quot;Density&quot;</span>
+ylab &lt;-<span class="st"> &quot;Count&quot;</span>
 
 <span class="co"># append this to your ggplot function with a `+`</span>
 <span class="kw">labs</span>(<span class="dt">title =</span> ttl, <span class="dt">subtitle =</span> subttl, <span class="dt">x =</span> xlab, <span class="dt">y =</span> ylab)</code></pre></div>

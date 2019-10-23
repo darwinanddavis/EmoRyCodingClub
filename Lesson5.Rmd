@@ -57,21 +57,22 @@ Packages for `r params$lesson`
 
 # Agenda
 
-**[Download the `RMarkdown` template: right click > Save As"](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd)**    
+Create reproducible HTML, PDF, and Word documents from R using `RMarkdown`. **[Download the `RMarkdown` template (right click > Save As)](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd).**        
  
 <!--  end yaml template------------------------------------------------------- -->
   
-* Create HTML, PDF, and Word documents from R using `RMarkdown`      
-
 # Do First      
 
 Recreate the below plot using the larger NYC Airbnb dataset. Here's the code to add the title and labels.  
 
 ```{r,eval=F}
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+nyc_full <- readr::read_csv(url) # reads in data
+
 ttl <- "NYC Airbnb availability"
 subttl <- "for room types across neighbourhoods"
 xlab <- "Availability of property in next 30 days"
-ylab <- "Density"
+ylab <- "Count"
 
 # append this to your ggplot function with a `+`
 labs(title = ttl,
@@ -82,18 +83,18 @@ labs(title = ttl,
 
 ```{r,echo=F,eval=T,cache=T}
 url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
-nyc_full <- read_csv(url) # reads in data
+nyc_full <- readr::read_csv(url) # reads in data
 ```
 
 ```{r, echo=F, eval=T, out.width="100%"}
 ttl <- "NYC Airbnb availability"
 subttl <- "for room types across neighbourhoods"
 xlab <- "Availability of property in next 30 days"
-ylab <- "Density"
+ylab <- "Count"
 my_theme <- theme_tufte()
 
 # glimpse(nyc_full)  
-nyc_full_ <- nyc_full %>% subset(availability_30 > 0)
+nyc_full_ <- nyc_full %>% dplyr::filter(availability_30 > 0)
 
 ggplot() +
   geom_bar(data = nyc_full_, mapping = aes(x = availability_30,
