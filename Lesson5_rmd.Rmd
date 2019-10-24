@@ -1,32 +1,32 @@
 ---
-title: Using RMarkdown for reproducible and neat documents 
-author: |
- | Your name here 
- |  
- | Your affiliation here
+title: "Using RMarkdown for reproducible and neat documents"
+author: "| Your name here \n|  \n| Your affiliation here\n"
 output:
-  html_document: # html options 
-    highlight: tango
+  pdf_document:
+    toc: yes
+    toc_depth: '4'
+  md_document:
+    variant: markdown_github
+  html_document:
     code_folding: show
+    highlight: tango
+    number_sections: no
     toc: yes
     toc_depth: 4
-    number_sections: no
     toc_float: yes
-  word_document: # ms word options
+  word_document:
     highlight: tango
     keep_md: yes
     pandoc_args: --smart
     toc: yes
-  md_document: # markdown options
-    variant: markdown_github 
-subtitle: 
+params:
+  date: !r Sys.Date()
+  email: your email here
+  version: !r getRversion()
+subtitle: null
 tags:
 - nothing
 - nothingness
-params: 
-  email: "your email here"
-  date: !r Sys.Date()
-  version: !r getRversion()
 classoption: portrait
 ---
 
@@ -70,9 +70,19 @@ R version: `r params$version`
  
 # Overview
 
-This document showcases how to create and use `RMarkdown` documents.    
+This document showcases how to create and use `RMarkdown` documents.      
 
-You can write in **bold** and *italicised* text (in _two_ different __ways__).  
+# You can easily create headings. This is a first order heading.  
+
+## Then move down in heading order size        
+
+### Like this subheading  
+
+#### And this fourth order heading       
+
+To create a new line of text, insert two spaces after every line in the `Rmd` file, then hit _ENTER_.        
+
+You can write in **bold** and *italicised* text (in __two__ different _ways_).  
 
 You can write in-line `code` if you want to differentiate between when you are typing normally or highlighting `model parameters`, for example.    
 
@@ -82,26 +92,20 @@ Create links to your [website](https://github.com/darwinanddavis).
 
 Make footnotes^[Here is the footnote you created earlier, automatically formatted].    
 
-# You can easily create headings. This is the same font size as the 'Overview' above    
-
-## Then move down in font size    
-
-### Like this subheading  
-
-#### And this fourth order heading   
-
-Insert line breaks <br>  between text like this    
+Insert line breaks <br>  between text like this, which works best in large <br> slabs of text     
 
 Insert a horizontal line break using five asterisks ('*****')  
 
+<!-- horizontal line  -->
 *****        
+
+The raw Rmd file also has the code for inserting user comments. 
+<!-- To do this, place the cursor on the text and type 'Cmd/Ctl + Shift + C' -->
 
 (There is also a page break here. Best seen in PDF. Check the raw Rmd file to see the code)  
 
-The raw Rmd file also has the code for inserting user comments, 
-<!-- To do this, place the cursor on the text and type 'Cmd/Ctl + Shift + C' -->
-
-\newpage    
+<!-- page break  -->
+\newpage   
 
 ## Define equations      
 
@@ -110,16 +114,16 @@ $$
 \phi n(r,t) =  
   \sum_{i, j} a(p_{i},E_{j})
   e^{
-  \frac{i}
-  {h}
-  (p_{i} \cdot r - E_{j}t) 
+    \frac{i}
+    {h}
+    (p_{i} \cdot r - E_{j}t) 
 }
 $$
 \          
 
 ## Embed images/gifs:  
 
-![Great power is pretty boring](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/docs/img/opm.jpg).        
+![Great power is pretty boring](img/opm.jpg).        
 
 \newpage  
 
@@ -136,8 +140,8 @@ Figure 1. Example of a stock plot embedded into a PDF from RMarkdown.
 \newpage  
 
 ## Show plots with associated code  
-```{r,echo=T,eval=T}
-require(viridis)
+```{r,echo=T,eval=T,message=F}
+suppressWarnings(require(viridis)) 
 bm <- 0
 par(las=1,bty="n"); xlim <- c(-5,5);ylim <- c(0,0.5)
 set.seed(12)
@@ -157,7 +161,7 @@ for(r in list(rrd,rrd2,rrd3)){
        main=main,xlab=xlab)}
 ```
 
-Figure 2. Example of a plot with improved graphics and its associated code embedded into a PDF from RMarkdown. 
+Figure 2. Example of a plot with improved graphics and its associated code embedded into the output document from RMarkdown. 
 
 \newpage  
 
@@ -179,8 +183,21 @@ Table 1. Definitions of model parameters for individual hosts and **parasites**.
 ## Use buttons or tabs for sub-chapters {.tabset .tabset-fade .tabset-pills}  
 
 ### Chapter 1  
+
+.  
+.  
+.  
+.  
+.  
+
 *Then you can add whatever you want here* like you would normally write in the `Rmd` file.  
-\  
+
+.  
+.  
+.  
+.  
+.  
+  
 
 ### Chapter 2 (with new code)  
 Here's an Easter egg for you ...  
