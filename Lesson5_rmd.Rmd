@@ -4,11 +4,6 @@ author: |
   | Your name here
   | Your affiliation here
 output:
-  pdf_document:
-    toc: yes
-    toc_depth: 4
-  md_document:
-    variant: markdown_github
   html_document:
     code_folding: show
     highlight: tango
@@ -16,11 +11,16 @@ output:
     toc: yes
     toc_depth: 4
     toc_float: yes
+  md_document:
+    variant: markdown_github
   word_document:
     highlight: tango
     keep_md: yes
     pandoc_args: --smart
     toc: yes
+  pdf_document:
+    toc: yes
+    toc_depth: 4
 params:
   date: !r Sys.Date()
   email: Your email here
@@ -203,12 +203,22 @@ Here's an Easter egg for you ...
 suppressWarnings(pacman::p_load(plotly,ggplot2))
 set.seed(12) # set a number seed for reproducible number results 
 nn <- 100
+
+random_data <- data.frame("X" = rnorm(nn), 
+           "Y" = sample(nn/2,nn,replace=T),
+           "NN" = nn)
+
 p <- ggplot() +
-  geom_point(aes(rnorm(nn),sample(nn/2,nn,replace=T)),colour = rainbow(nn),size=sample(nn/2,nn,replace=T)/5,alpha=abs(rnorm(nn))) +
+  geom_point(data=random_data,aes(X,Y,
+                 colour=rainbow(nn),
+                 size=sample(Y)/5),
+                 alpha=abs(rnorm(nn))) +
   labs(x = "Random normally distributed data",
        y = "Sampled integers") +
-  theme_minimal()
-ggplotly(p)
+  theme_minimal() +
+  theme(legend.position='none') 
+ggplotly(p,tooltip=c("X","Y"))
+
 ```
 
 ### More tables   

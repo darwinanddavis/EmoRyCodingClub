@@ -1911,3 +1911,113 @@ heretesttoo.txt
 /Users/malishev/Documents/Emory/admin/ecc
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open _site.yml 
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''a'[1P'L'5' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cr''m'd' 't'[1P'e'x't'e'r'n'a'l' 't'e's't'1'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C r[1@m[C[C[C[C[C[C[C[C[C[C[C
+[master 8455e84] L5 rmd external test1
+ 117 files changed, 4571 insertions(+), 471 deletions(-)
+ create mode 100644 Lesson1.html
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-10-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-11-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-12-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-13-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-14-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-15-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-16-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-17-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-18-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-21-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-22-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-23-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-24-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-4-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-5-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-6-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-7-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-7-2.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-7-3.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-8-1.png
+ create mode 100644 Lesson1_files/figure-html/unnamed-chunk-9-1.png
+ create mode 100644 Lesson2.html
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-10-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-10-2.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-11-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-12-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-12-2.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-13-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-14-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-14-2.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-14-3.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-15-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-16-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-17-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-2-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-5-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-6-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-7-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-8-1.png
+ create mode 100644 Lesson2_files/figure-html/unnamed-chunk-8-2.png
+ create mode 100644 Lesson3.html
+ create mode 100644 Lesson3_files/figure-html/unnamed-chunk-2-1.png
+ create mode 100644 Lesson4.html
+ create mode 100644 Lesson5_rmd.docx
+ create mode 100644 Lesson5_rmd.md
+ create mode 100644 Lesson5_rmd_cache/docx/set-options_0eaa414b5b687cb6e0d0d666cdeb80b7.RData
+ create mode 100644 Lesson5_rmd_cache/docx/set-options_0eaa414b5b687cb6e0d0d666cdeb80b7.rdb
+ create mode 100644 Lesson5_rmd_cache/docx/set-options_0eaa414b5b687cb6e0d0d666cdeb80b7.rdx
+ delete mode 100644 Lesson5_rmd_cache/docx/set-options_311b2f62b234b1a981616fa3100994fe.RData
+ delete mode 100644 Lesson5_rmd_cache/docx/set-options_311b2f62b234b1a981616fa3100994fe.rdb
+ delete mode 100644 Lesson5_rmd_cache/docx/set-options_311b2f62b234b1a981616fa3100994fe.rdx
+ delete mode 100644 Lesson5_rmd_cache/docx/unnamed-chunk-4_3d6fbf4d9dfc0e3593a63780aaa00fa8.RData
+ create mode 100644 Lesson5_rmd_cache/docx/unnamed-chunk-4_b4dbd208ab7a13b301d248e8696449c1.RData
+ rename Lesson5_rmd_cache/docx/{unnamed-chunk-4_3d6fbf4d9dfc0e3593a63780aaa00fa8.rdb => unnamed-chunk-4_b4dbd208ab7a13b301d248e8696449c1.rdb} (100%)
+ rename Lesson5_rmd_cache/docx/{unnamed-chunk-4_3d6fbf4d9dfc0e3593a63780aaa00fa8.rdx => unnamed-chunk-4_b4dbd208ab7a13b301d248e8696449c1.rdx} (100%)
+ create mode 100644 Lesson5_rmd_cache/html/set-options_2c56df246615a4afcace45f2e8603920.RData
+ create mode 100644 Lesson5_rmd_cache/html/set-options_2c56df246615a4afcace45f2e8603920.rdb
+ create mode 100644 Lesson5_rmd_cache/html/set-options_2c56df246615a4afcace45f2e8603920.rdx
+ delete mode 100644 Lesson5_rmd_cache/html/set-options_cca5f38d82a556ff479559d431639229.RData
+ delete mode 100644 Lesson5_rmd_cache/html/set-options_cca5f38d82a556ff479559d431639229.rdb
+ delete mode 100644 Lesson5_rmd_cache/html/set-options_cca5f38d82a556ff479559d431639229.rdx
+ create mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_3f2c4f4c59059dc6edf16f06b93d9abe.RData
+ rename Lesson5_rmd_cache/html/{unnamed-chunk-4_4b32587cc2d67075558f87e5da543edf.rdb => unnamed-chunk-4_3f2c4f4c59059dc6edf16f06b93d9abe.rdb} (100%)
+ create mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_3f2c4f4c59059dc6edf16f06b93d9abe.rdx
+ delete mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_4b32587cc2d67075558f87e5da543edf.RData
+ delete mode 100644 Lesson5_rmd_cache/html/unnamed-chunk-4_4b32587cc2d67075558f87e5da543edf.rdx
+ delete mode 100644 Lesson5_rmd_cache/latex/set-options_0e0e96fd965c4d40ea0d336e622f97e9.RData
+ delete mode 100644 Lesson5_rmd_cache/latex/set-options_0e0e96fd965c4d40ea0d336e622f97e9.rdb
+ delete mode 100644 Lesson5_rmd_cache/latex/set-options_0e0e96fd965c4d40ea0d336e622f97e9.rdx
+ create mode 100644 Lesson5_rmd_cache/latex/set-options_6323153b257a417bac6ea6d20dba8a0e.RData
+ create mode 100644 Lesson5_rmd_cache/latex/set-options_6323153b257a417bac6ea6d20dba8a0e.rdb
+ create mode 100644 Lesson5_rmd_cache/latex/set-options_6323153b257a417bac6ea6d20dba8a0e.rdx
+ delete mode 100644 Lesson5_rmd_cache/latex/unnamed-chunk-4_0e5605693fb467a9921c6d44bc7d4d02.RData
+ rename Lesson5_rmd_cache/{markdown_github/set-options_aa8edae4245fe2f4fa13e87a246579a7.RData => latex/unnamed-chunk-4_7eccb8ffb1a4bfece0d7a1f27f64c104.RData} (91%)
+ rename Lesson5_rmd_cache/latex/{unnamed-chunk-4_0e5605693fb467a9921c6d44bc7d4d02.rdb => unnamed-chunk-4_7eccb8ffb1a4bfece0d7a1f27f64c104.rdb} (100%)
+ rename Lesson5_rmd_cache/latex/{unnamed-chunk-4_0e5605693fb467a9921c6d44bc7d4d02.rdx => unnamed-chunk-4_7eccb8ffb1a4bfece0d7a1f27f64c104.rdx} (100%)
+ delete mode 100644 Lesson5_rmd_cache/markdown_github/set-options_aa8edae4245fe2f4fa13e87a246579a7.rdb
+ delete mode 100644 Lesson5_rmd_cache/markdown_github/set-options_aa8edae4245fe2f4fa13e87a246579a7.rdx
+ create mode 100644 Lesson5_rmd_cache/markdown_github/set-options_c5ea6d9d9a85b0a88410b67472439464.RData
+ create mode 100644 Lesson5_rmd_cache/markdown_github/set-options_c5ea6d9d9a85b0a88410b67472439464.rdb
+ create mode 100644 Lesson5_rmd_cache/markdown_github/set-options_c5ea6d9d9a85b0a88410b67472439464.rdx
+ delete mode 100644 Lesson5_rmd_cache/markdown_github/unnamed-chunk-4_281a60c6cb71a4e43e0d974b82ecbaa5.RData
+ create mode 100644 Lesson5_rmd_cache/markdown_github/unnamed-chunk-4_830cc460a4fe97ad2cf707f0651e3925.RData
+ rename Lesson5_rmd_cache/markdown_github/{unnamed-chunk-4_281a60c6cb71a4e43e0d974b82ecbaa5.rdb => unnamed-chunk-4_830cc460a4fe97ad2cf707f0651e3925.rdb} (100%)
+ rename Lesson5_rmd_cache/markdown_github/{unnamed-chunk-4_281a60c6cb71a4e43e0d974b82ecbaa5.rdx => unnamed-chunk-4_830cc460a4fe97ad2cf707f0651e3925.rdx} (100%)
+ rewrite Lesson5_rmd_files/figure-docx/unnamed-chunk-3-1.png (99%)
+ rewrite Lesson5_rmd_files/figure-latex/unnamed-chunk-1-1.pdf (94%)
+ rewrite Lesson5_rmd_files/figure-latex/unnamed-chunk-2-1.pdf (94%)
+ rewrite Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-3-1.png (99%)
+ rewrite docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-3-1.png (99%)
+ rewrite docs/Lesson5_rmd_files/figure-latex/unnamed-chunk-1-1.pdf (94%)
+ rewrite docs/Lesson5_rmd_files/figure-latex/unnamed-chunk-2-1.pdf (94%)
+ rewrite docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-3-1.png (99%)
+ create mode 100644 docs/lookhere/lookheretoo/heretesttoo.txt
+ create mode 100644 index.html
+ create mode 100644 lookhere/lookheretoo/heretesttoo.txt
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 48, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/46)   Compressing objects:   4% (2/46)   Compressing objects:   6% (3/46)   Compressing objects:   8% (4/46)   Compressing objects:  10% (5/46)   Compressing objects:  13% (6/46)   Compressing objects:  15% (7/46)   Compressing objects:  17% (8/46)   Compressing objects:  19% (9/46)   Compressing objects:  21% (10/46)   Compressing objects:  23% (11/46)   Compressing objects:  26% (12/46)   Compressing objects:  28% (13/46)   Compressing objects:  30% (14/46)   Compressing objects:  32% (15/46)   Compressing objects:  34% (16/46)   Compressing objects:  36% (17/46)   Compressing objects:  39% (18/46)   Compressing objects:  41% (19/46)   Compressing objects:  43% (20/46)   Compressing objects:  45% (21/46)   Compressing objects:  47% (22/46)   Compressing objects:  50% (23/46)   Compressing objects:  52% (24/46)   Compressing objects:  54% (25/46)   Compressing objects:  56% (26/46)   Compressing objects:  58% (27/46)   Compressing objects:  60% (28/46)   Compressing objects:  63% (29/46)   Compressing objects:  65% (30/46)   Compressing objects:  67% (31/46)   Compressing objects:  69% (32/46)   Compressing objects:  71% (33/46)   Compressing objects:  73% (34/46)   Compressing objects:  76% (35/46)   Compressing objects:  78% (36/46)   Compressing objects:  80% (37/46)   Compressing objects:  82% (38/46)   Compressing objects:  84% (39/46)   Compressing objects:  86% (40/46)   Compressing objects:  89% (41/46)   Compressing objects:  91% (42/46)   Compressing objects:  93% (43/46)   Compressing objects:  95% (44/46)   Compressing objects:  97% (45/46)   Compressing objects: 100% (46/46)   Compressing objects: 100% (46/46), done.
+Writing objects:   2% (1/48)   Writing objects:   4% (2/48)   Writing objects:   6% (3/48)   Writing objects:   8% (4/48)   Writing objects:  10% (5/48)   Writing objects:  12% (6/48)   Writing objects:  14% (7/48)   Writing objects:  16% (8/48)   Writing objects:  18% (9/48)   Writing objects:  20% (10/48)   Writing objects:  22% (11/48)   Writing objects:  25% (12/48)   Writing objects:  27% (13/48)   Writing objects:  29% (14/48)   Writing objects:  31% (15/48)   Writing objects:  33% (16/48)   Writing objects:  37% (18/48)   Writing objects:  39% (19/48)   Writing objects:  41% (20/48)   Writing objects:  43% (21/48)   Writing objects:  45% (22/48)   Writing objects:  47% (23/48)   Writing objects:  50% (24/48)   Writing objects:  52% (25/48)   Writing objects:  54% (26/48)   Writing objects:  56% (27/48)   Writing objects:  58% (28/48)   Writing objects:  60% (29/48)   Writing objects:  62% (30/48)   Writing objects:  64% (31/48)   Writing objects:  66% (32/48)   Writing objects:  68% (33/48)   Writing objects:  70% (34/48)   Writing objects:  72% (35/48)   Writing objects:  75% (36/48)   Writing objects:  77% (37/48)   Writing objects:  79% (38/48)   Writing objects:  81% (39/48)   Writing objects:  83% (40/48)   Writing objects:  85% (41/48)   Writing objects:  87% (42/48)   Writing objects:  89% (43/48)   Writing objects:  91% (44/48)   Writing objects:  93% (45/48)   Writing objects:  95% (46/48)   Writing objects:  97% (47/48)   Writing objects: 100% (48/48)   Writing objects: 100% (48/48), 1020.53 KiB | 0 bytes/s, done.
+Total 48 (delta 19), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/19)[Kremote: Resolving deltas:  10% (2/19)[Kremote: Resolving deltas:  15% (3/19)[Kremote: Resolving deltas:  21% (4/19)[Kremote: Resolving deltas:  26% (5/19)[Kremote: Resolving deltas:  31% (6/19)[Kremote: Resolving deltas:  36% (7/19)[Kremote: Resolving deltas:  42% (8/19)[Kremote: Resolving deltas:  47% (9/19)[Kremote: Resolving deltas:  52% (10/19)[Kremote: Resolving deltas:  57% (11/19)[Kremote: Resolving deltas:  63% (12/19)[Kremote: Resolving deltas:  68% (13/19)[Kremote: Resolving deltas:  73% (14/19)[Kremote: Resolving deltas:  78% (15/19)[Kremote: Resolving deltas:  84% (16/19)[Kremote: Resolving deltas:  89% (17/19)[Kremote: Resolving deltas:  94% (18/19)[Kremote: Resolving deltas: 100% (19/19)[Kremote: Resolving deltas: 100% (19/19), completed with 17 local objects.[K
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   10e68a7..8455e84  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
