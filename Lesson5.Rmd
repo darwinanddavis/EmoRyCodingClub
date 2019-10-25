@@ -116,15 +116,36 @@ set_here() # set current working directory
 dr_here() # print current working directory where .here is located
 ```
 
+**Example 2**    
 1. Create a folder in your local directory called **'lookhere'**.  
 2. Open a new file in TextEdit (Mac) or Notepad (Windows), type in something like " _We found the here file!_ ", then save the file as **"heretest.txt"**.       
 ```{r}
+
+# example 1
 list.files() # print files in your current working dir. the 'heretest.txt' file is not here, but one folder below in the new 'lookhere' folder
 here("lookhere","heretest.txt") # using here to forage for the file
-here("lookhere","heretest.txt") %>% readLines # print the contents in R
+here("lookhere","heretest.txt") %>% read_lines # print the contents in R
+```
+\  
+
+**Example 2**  
+1. Create another folder within the **lookhere** folder called **lookheretoo**    
+2. Create another .txt file called **heretesttoo.txt** and save it.    
+```{r}
+# example 2
+# create two folders 
+folder1 <- "lookhere"
+folder2 <- "lookheretoo"
+file <- "heretesttoo.txt"
+# navigate to the /lookheretoo folder and open the heretesttoo file using 'here'
+here(folder1,folder2,file) %>% read_lines 
+read_lines(here(folder1,folder2,file)) # non-tidy version
 
 ```
-\    
+\
+Why is `here` useful?    
+  * You can step through sub folders by defining them individually as function inputs  
+  * You can user define these subfolders as variables at the beginning of your `R` script and refer to them throughout your script without pasting, e.g. `paste(folder1,folder2,sep="/")`.      
 
 # Creating an `R` project (`Rproj`) file  
 

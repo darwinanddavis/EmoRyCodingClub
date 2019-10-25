@@ -1,10 +1,12 @@
 ---
 title: "Using RMarkdown for reproducible and neat documents"
-author: "| Your name here \n|  \n| Your affiliation here\n"
+author: | 
+  | Your name here
+  | Your affiliation here
 output:
   pdf_document:
     toc: yes
-    toc_depth: '4'
+    toc_depth: 4
   md_document:
     variant: markdown_github
   html_document:
@@ -21,7 +23,7 @@ output:
     toc: yes
 params:
   date: !r Sys.Date()
-  email: your email here
+  email: Your email here
   version: !r getRversion()
 subtitle: null
 tags:
@@ -36,7 +38,7 @@ classoption: portrait
 </script>
 
 ```{r, set-options, echo = F, cache = T,message=F}
-options(width=100)
+options(width=100,tinytex.verbose = TRUE)
 knitr::opts_chunk$set(
  eval = TRUE, # run all code
  echo = TRUE, # show code chunks in output 
@@ -48,16 +50,11 @@ knitr::opts_chunk$set(
 
 ### run this once  
 # tinytex::install_tinytex()
+# require(tinytex)
 
-packages <- c("dplyr","ggplot2","plotly","DT","htmlwidgets")
-update.packages("htmlwidgets")
+suppressWarnings(pacman::p_load(dplyr,ggplot2,plotly,DT,htmlwidgets,viridis,reticulate))
+# update.packages("htmlwidgets")
 
-ppp <- lapply(packages,require,character.only=T)
-names(ppp) <- packages
-if(any(ppp==F)){cbind(packages,ppp);cat("\n\n\n ---> Check packages are loaded properly <--- \n\n\n")}
-
-# knitr::opts_knit$set(root.dir=paste0(params$dir,"/")) # set working dir
-# setwd(paste0(params$dir,"/")) # for running just in R not knitr
 ```
 
 \newpage   
@@ -123,7 +120,7 @@ $$
 
 ## Embed images/gifs:  
 
-![Great power is pretty boring](img/opm.jpg).        
+![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.jpg).        
 
 \newpage  
 
@@ -204,6 +201,7 @@ Here's an Easter egg for you ...
 
 ```{r,echo=F,message=F}
 suppressWarnings(pacman::p_load(plotly,ggplot2))
+set.seed(12) # set a number seed for reproducible number results 
 nn <- 100
 p <- ggplot() +
   geom_point(aes(rnorm(nn),sample(nn/2,nn,replace=T)),colour = rainbow(nn),size=sample(nn/2,nn,replace=T)/5,alpha=abs(rnorm(nn))) +

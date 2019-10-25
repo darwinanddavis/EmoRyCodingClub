@@ -1816,3 +1816,98 @@ remote: Resolving deltas:   0% (0/8)[Kremote: Resolving deltas:  12% (1/8)[K
 To https://github.com/darwinanddavis/EmoRyCodingClub
    bbb843c..1878ac5  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''u'p' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd''a't'e'd' 'l'e'[1P'[1P'L'5' 'r'm'd'
+[master 10e68a7] updated L5 rmd
+ 3 files changed, 108 insertions(+), 63 deletions(-)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
+Counting objects: 9, done.
+Delta compression using up to 4 threads.
+Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
+Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 2.12 KiB | 0 bytes/s, done.
+Total 9 (delta 6), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/6)[Kremote: Resolving deltas:  16% (1/6)[Kremote: Resolving deltas:  33% (2/6)[Kremote: Resolving deltas:  50% (3/6)[Kremote: Resolving deltas:  66% (4/6)[Kremote: Resolving deltas:  83% (5/6)[Kremote: Resolving deltas: 100% (6/6)[Kremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[K
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   1878ac5..10e68a7  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls
+%
+Lesson1.Rmd
+Lesson2.Rmd
+Lesson3.Rmd
+Lesson4.Rmd
+Lesson5.Rmd
+Lesson5_cache
+Lesson5_files
+Lesson5_rmd.Rmd
+Lesson5_rmd.log
+Lesson5_rmd.tex
+Lesson5_rmd_cache
+Lesson5_rmd_files
+Lesson6.Rmd
+Lesson7.Rmd
+Lesson7_dofirst.pdf
+README.md
+_site.yml
+admin
+admin_
+docs
+emorycodingclub.Rproj
+functions_lesson1.txt
+functions_lesson2.txt
+img
+index.Rmd
+lookhere
+nyc_compact.csv
+packages_lesson1.txt
+packages_lesson2.txt
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ c l[K[K[Kcd lookhere
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ ls
+heretest.txt
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ mrdir lookher etoo
+bash: mrdir: command not found
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ mrdir lookhereetoo[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdir lookheret[1Poo[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckdir lookheretoo[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ l[Kcd lookheretooo/
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ ls
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ touh[K[Kch[K[Kuch look heretoo.txt
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ open lookheeretoo.txt 
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ touh [K[K[Kch heret esttoo.txt
+bash: toch: command not found
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ touch here testtoo.txt
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ open hereteesttoo.txt 
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ rm lookhereetoo.txt 
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ ls
+heretesttoo.txt
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ cd ..
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ ls
+heretest.txt	lookheretoo
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ cd lookheretooo/
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ s
+bash: s: command not found
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ ls
+heretesttoo.txt
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ ls-a
+bash: ls-a: command not found
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ ls -a
+.		heretesttoo.txt
+..
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ ls
+heretesttoo.txt
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ ls =[K-pretty [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ky
+ls: illegal option -- y
+usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ ls -pretty [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C-prettyy[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+ls: illegal option -- -
+usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ open _site [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[Ksite[K[K[K[K[K[K[K[K[Kls
+heretesttoo.txt
+]0;~/Documents/Emory/admin/ecc/lookhere/lookheretoo6300L-127771-M:lookheretoo malishev$ cd ..
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ pwd
+/Users/malishev/Documents/Emory/admin/ecc/lookhere
+]0;~/Documents/Emory/admin/ecc/lookhere6300L-127771-M:lookhere malishev$ cd ..
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
+/Users/malishev/Documents/Emory/admin/ecc
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open _site.yml 
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .

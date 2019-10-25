@@ -37,3 +37,8 @@ pdf_document: # pdf options
     highlight: tango
     toc: yes
     toc_depth: 4
+word_document:
+    highlight: tango
+    keep_md: yes
+    pandoc_args: --smart
+    toc: yes
