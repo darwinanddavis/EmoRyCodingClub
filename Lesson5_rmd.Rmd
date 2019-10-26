@@ -4,13 +4,20 @@ author: |
   | Your name here
   | Your affiliation here
 output:
-  html_document:
-    code_folding: show
+  pdf_document:
+    includes:
+      in_header: # add .tex file with header content
     highlight: tango
-    number_sections: no
+    template: null
     toc: yes
     toc_depth: 4
-    toc_float: yes
+    number_sections: false
+    fig_width: 8
+    fig_height: 6
+    fig_caption: true
+    df_print: tibble 
+    latex_engine: pdflatex #pdflatex # lualatex
+    keep_tex: true # keep .tex file in dir
   md_document:
     variant: markdown_github
   word_document:
@@ -18,9 +25,13 @@ output:
     keep_md: yes
     pandoc_args: --smart
     toc: yes
-  pdf_document:
+  html_document:
+    code_folding: show
+    highlight: tango
+    number_sections: no
     toc: yes
     toc_depth: 4
+    toc_float: yes
 params:
   date: !r Sys.Date()
   email: Your email here
@@ -29,7 +40,10 @@ subtitle: null
 tags:
 - nothing
 - nothingness
-classoption: portrait
+classoption: article
+linkcolor: blue  
+urlcolor: blue  
+citecolor: red
 ---
 
 <!-- this enables math encoding in the knitted documents  -->
@@ -38,14 +52,15 @@ classoption: portrait
 </script>
 
 ```{r, set-options, echo = F, cache = T,message=F}
-options(width=100,tinytex.verbose = TRUE)
+options(width=50,tinytex.verbose = TRUE, width.cutoff=25)
 knitr::opts_chunk$set(
  eval = TRUE, # run all code
  echo = TRUE, # show code chunks in output 
  tidy=TRUE, # make output as tidy
  message = FALSE,  # mask all messages
  warning = FALSE, # mask all warnings 
- size="small" # set code chunk size
+ size="small", # set code chunk size,
+ tidy.opts=list(width.cutoff=25) # set width of code chunks in output
 )
 
 ### run this once  
@@ -63,68 +78,69 @@ Date: `r params$date`
 R version: `r params$version`  
 *Corresponding author: `r params$email`  
 
-\newpage    
- 
+\newpage
+
 # Overview
 
-This document showcases how to create and use `RMarkdown` documents.      
+This document showcases how to create and use `RMarkdown` documents.
 
-# You can easily create headings. This is a first order heading.  
+# You can easily create headings. This is a first order heading.
 
-## Then move down in heading order size        
+## Then move down in heading order size
 
-### Like this subheading  
+### Like this subheading
 
-#### And this fourth order heading       
+#### And this fourth order heading
 
-To create a new line of text, insert two spaces after every line in the `Rmd` file, then hit _ENTER_.        
+<!-- To create a new line of text, insert two spaces after every line in the `Rmd` file, then hit _ENTER_.         -->
 
-You can write in **bold** and *italicised* text (in __two__ different _ways_).  
+You can write in **bold** and *italicised* text (in __two__ different _ways_).
 
-You can write in-line `code` if you want to differentiate between when you are typing normally or highlighting `model parameters`, for example.    
+You can write in-line `code` if you want to differentiate between when you are typing normally or highlighting `model parameters`, for example.
 
-Equations like this $t' = \gamma(t - vx/c^{2})$, to appear within text lines.  
+Equations like this $t' = \gamma(t - vx/c^{2})$, to appear within text lines.
 
-Create links to your [website](https://github.com/darwinanddavis).  
+Create links to your [website](https://github.com/darwinanddavis).
 
-Make footnotes^[Here is the footnote you created earlier, automatically formatted].    
+Make footnotes^[Here is the footnote you created earlier, automatically formatted].
 
-Insert line breaks <br>  between text like this, which works best in large <br> slabs of text     
+Insert line breaks <br>  between text like this, which works best in large <br> slabs of text
 
-Insert a horizontal line break using five asterisks ('*****')  
+Insert a horizontal line break using five asterisks ('*****')
 
-<!-- horizontal line  -->
-*****        
-
-The raw Rmd file also has the code for inserting user comments. 
+<!-- horizontal line  -->  
+<!-- PDF output doesn't like this: Missing number treated as zero error  -->
+<!-- *****     -->
+  
+The raw Rmd file also has the code for inserting user comments.
 <!-- To do this, place the cursor on the text and type 'Cmd/Ctl + Shift + C' -->
 
-(There is also a page break here. Best seen in PDF. Check the raw Rmd file to see the code)  
+(There is also a page break here. Best seen in PDF. Check the raw Rmd file to see the code)
 
 <!-- page break  -->
-\newpage   
+\newpage
 
-## Define equations      
+## Define equations
 
-Accordingly, we write the eigenfunction of a spinless particle as the superposition of plane wave states of momentum ($\pi$) and energy ($Ej$) having amplitudes $a(\pi,Ej)$ (from [[1]](https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf)).      
-$$  
-\phi n(r,t) =  
+Accordingly, we write the eigenfunction of a spinless particle as the superposition of plane wave states of momentum ($\pi$) and energy ($Ej$) having amplitudes $a(\pi,Ej)$ (from [[1]](https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf)).
+$$
+\phi n(r,t) =
   \sum_{i, j} a(p_{i},E_{j})
   e^{
     \frac{i}
     {h}
-    (p_{i} \cdot r - E_{j}t) 
+    (p_{i} \cdot r - E_{j}t)
 }
 $$
-\          
+\  
 
-## Embed images/gifs:  
+## Embed images/gifs:
 
-![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.jpg).        
+<!-- ![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.jpg).   -->
 
-\newpage  
+\newpage
 
-## Create, alter, and embed plots    
+## Create, alter, and embed plots
 ```{r,echo=F,eval=T}
 set.seed(12)
 N <- 2000
@@ -132,13 +148,13 @@ rr <- rnorm(N)
 plot(rr,pch=20,main="Some random data")
 ```
 
-Figure 1. Example of a stock plot embedded into a PDF from RMarkdown.   
+Figure 1. Example of a stock plot embedded into a PDF from RMarkdown.
 
-\newpage  
+\newpage
 
-## Show plots with associated code  
-```{r,echo=T,eval=T,message=F}
-suppressWarnings(require(viridis)) 
+## Show plots with associated code
+```{r,echo=T,eval=T,message=F,width.cutoff=25}
+suppressWarnings(require(viridis))
 bm <- 0
 par(las=1,bty="n"); xlim <- c(-5,5);ylim <- c(0,0.5)
 set.seed(12)
@@ -158,53 +174,53 @@ for(r in list(rrd,rrd2,rrd3)){
        main=main,xlab=xlab)}
 ```
 
-Figure 2. Example of a plot with improved graphics and its associated code embedded into the output document from RMarkdown. 
+Figure 2. Example of a plot with improved graphics and its associated code embedded into the output document from RMarkdown.
 
-\newpage  
+\newpage
 
-## And tables  
+## And tables
 
-Table 1. Definitions of model parameters for individual hosts and **parasites**. Dimensions and units: -, dimensionless; cm, centimetres; J, Joules; L, length.    
+Table 1. Definitions of model parameters for individual hosts and **parasites**. Dimensions and units: -, dimensionless; cm, centimetres; J, Joules; L, length.
 
-| Parameter | Definition | Dimension<br/>(unit) | 
-| :---: | :--- | ---: |    
+| Parameter | Definition | Dimension<br/>(unit) |
+| :---: | :--- | ---: |
 | _L_ | structural length | cm |
 | _ee_ | scaled reserve density | J (cm^3^) |
 | _D_ | host development | --- |
 | _RH_ | energy in reproduction buffer| J |
 
-\newpage  
+\newpage
 
 
 
-## Use buttons or tabs for sub-chapters {.tabset .tabset-fade .tabset-pills}  
+## Use buttons or tabs for sub-chapters {.tabset .tabset-fade .tabset-pills}
 
-### Chapter 1  
+### Chapter 1
 
-.  
-.  
-.  
-.  
-.  
+.
+.
+.
+.
+.
 
-*Then you can add whatever you want here* like you would normally write in the `Rmd` file.  
+*Then you can add whatever you want here* like you would normally write in the `Rmd` file.
 
-.  
-.  
-.  
-.  
-.  
-  
+.
+.
+.
+.
+.
 
-### Chapter 2 (with new code)  
-Here's an Easter egg for you ...  
+
+### Chapter 2 (with new code)
+Here's an Easter egg for you ...
 
 ```{r,echo=F,message=F}
 suppressWarnings(pacman::p_load(plotly,ggplot2))
-set.seed(12) # set a number seed for reproducible number results 
+set.seed(12) # set a number seed for reproducible number results
 nn <- 100
 
-random_data <- data.frame("X" = rnorm(nn), 
+random_data <- data.frame("X" = rnorm(nn),
            "Y" = sample(nn/2,nn,replace=T),
            "NN" = nn)
 
@@ -216,33 +232,33 @@ p <- ggplot() +
   labs(x = "Random normally distributed data",
        y = "Sampled integers") +
   theme_minimal() +
-  theme(legend.position='none') 
+  theme(legend.position='none')
 ggplotly(p,tooltip=c("X","Y"))
 
 ```
 
-### More tables   
-Here's a new way of creating tables using the `DT` package  
+### More tables
+Here's a new way of creating tables using the `DT` package
 
 ```{r,cache=T,warning=F, echo=F}
 suppressWarnings(pacman::p_load(DT,htmlwidgets))
-caption <- "Table 1. The 'mtcars' dataset presented in a datatable. Try editing the columns and cells." 
-datatable(mtcars, 
-          rownames = T, 
-          filter="top", 
+caption <- "Table 1. The 'mtcars' dataset presented in a datatable. Try editing the columns and cells."
+datatable(mtcars,
+          rownames = T,
+          filter="top",
           options = list(pageLength = 5, scrollX=T),
           class = "cell-border stripe",
           editable = "cell",
-          caption = caption 
+          caption = caption
           )
 ```
 
 
-***      
+<!-- *** -->
 
-## Embed code from different languages  
+## Embed code from different languages
 
-### This is `R` code  
+### This is `R` code
 ```{r, eval=F}
 if(pck==1){
   p<-c("rJava", "RNetLogo"); remove.packages(p)
@@ -252,15 +268,15 @@ if(pck==1){
 }
 ```
 
-### `shell/bash`  
+### `shell/bash`
 ```{bash, eval=F}
-echo "Hello Bash!"  
+echo "Hello Bash!"
 pwd # check working dir
 git init # initialise git
 ```
 
-### Octave (and MATLAB from the `RMatlab` package).  
-[`RMatlab documentation`](https://cran.r-project.org/web/packages/R.matlab/index.html).  
+### Octave (and MATLAB from the `RMatlab` package).
+[`RMatlab documentation`](https://cran.r-project.org/web/packages/R.matlab/index.html).
 ```{octave, eval=F}
 b = [4; 9; 2] # Column vector
 A = [ 3 4 5;
@@ -269,16 +285,16 @@ A = [ 3 4 5;
 x = A \ b     # Solve the system Ax = b
 ```
 
-### HTML    
+### HTML
 ```{html, eval=F}
 <!-- links-->
 		<div class="footer">
-			<a href="dd_feed.html" 
+			<a href="dd_feed.html"
 			class="transition fade_in">
 				Latest post
 			</a>
 			&nbsp; &nbsp; &nbsp;
-			<a href="dd_contact.html" 
+			<a href="dd_contact.html"
 			class="transition fade_in">
 				Contact
 			</a>
@@ -305,23 +321,23 @@ x = A \ b     # Solve the system Ax = b
 }
 ```
 
-### Javascript to access `html` and `css`  
+### Javascript to access `html` and `css`
 ```{js, eval=F}
 $('.title').css('color', 'red')
 ```
 
-### Python  
+### Python
 ```{python, eval=F}
 x = 'hello, python world!'
 print(x.split(' '))
 ```
 
-### Here's a complete list of available languages  
+### Here's a complete list of available languages
 ```{r eval=T}
 names(knitr::knit_engines$get())
 ```
 
-# References  
+# References
 
-[1] Efthimiades, S., Physical meaning and derivation of Schrodinger and Dirac equations, Department of Natural Sciences, Fordham University, [doi: d34464566](https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf).        
+[1] Efthimiades, S., Physical meaning and derivation of Schrodinger and Dirac equations, Department of Natural Sciences, Fordham University, [doi: d34464566](https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf).
 
