@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.25)  26 OCT 2019 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.25)  26 OCT 2019 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -627,17 +627,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [3]
 
 LaTeX Warning: File `https://github.com/darwinanddavis/EmoRyCodingClub/raw/mast
-er/img/opm.jpg' not found on input line 195.
+er/img/opm.png' not found on input line 195.
 
 
 ! Package pdftex.def Error: File `"https://github.com/darwinanddavis/EmoRyCodin
-gClub/raw/master/img/""opm".jpg' not found: using draft setting.
+gClub/raw/master/img/""opm".png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.195 ...s/EmoRyCodingClub/raw/master/img/opm.jpg}
+l.195 ...s/EmoRyCodingClub/raw/master/img/opm.png}
                                                   . 
 Here is how much of TeX's memory you used:
  10763 strings out of 494111

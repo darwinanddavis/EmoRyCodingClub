@@ -36,6 +36,7 @@ params:
   date: !r Sys.Date()
   email: Your email here
   version: !r getRversion()
+  img1: "https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.png"
 subtitle: null
 tags:
 - nothing
@@ -136,7 +137,21 @@ $$
 
 ## Embed images/gifs:
 
-![Great power is pretty boring](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/img/opm.jpg).
+![Great power is pretty boring](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/img/opm.png).
+
+```{r, echo=FALSE, eval=F, message=F, warning=F, fig.align="center"}
+# **If knitting to PDF, use the below code**
+# **************** IMAGE NEEDS TO BE PNG *****************
+
+# define variable containing url
+pacman::p_load(png,RCurl)
+url <- params$img1 # this is the img path as a character string, "www.yoursite/img/opm.png"    
+url_cont <- getURLContent(url)
+img <- readPNG(url_cont)
+rimg <- as.raster(img) # raster multilayer object
+r <- nrow(rimg) / ncol(rimg) # image ratio
+plot(rimg)
+```
 
 \newpage
 
