@@ -4,6 +4,15 @@ author: |
   | Your name here
   | Your affiliation here
 output:
+  html_document:
+    code_folding: show
+    highlight: tango
+    number_sections: no
+    toc: yes
+    toc_depth: 4
+    toc_float: yes
+  md_document:
+    variant: markdown_github
   pdf_document:
     includes:
       in_header: # add .tex file with header content
@@ -16,17 +25,8 @@ output:
     fig_height: 6
     fig_caption: true
     df_print: tibble 
-    latex_engine: pdflatex #pdflatex # lualatex
+    latex_engine: pdflatex #xelatex # lualatex
     keep_tex: true # keep .tex file in dir
-  md_document:
-    variant: markdown_github
-  html_document:
-    code_folding: show
-    highlight: tango
-    number_sections: no
-    toc: yes
-    toc_depth: 4
-    toc_float: yes
   word_document:
     highlight: tango
     keep_md: yes
@@ -122,7 +122,7 @@ The raw Rmd file also has the code for inserting user comments.
 
 ## Define equations
 
-Accordingly, we write the eigenfunction of a spinless particle as the superposition of plane wave states of momentum ($\pi$) and energy ($Ej$) having amplitudes $a(\pi,Ej)$ (from [[1]](https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf)).
+Accordingly, we write the eigenfunction of a spinless particle as the superposition of plane wave states of momentum ($\pi$) and energy ($E_{j}$) having amplitudes $a(\pi,E_{j})$ (from [[1]](https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf)).
 $$
 \phi n(r,t) =
   \sum_{i, j} a(p_{i},E_{j})
@@ -136,7 +136,7 @@ $$
 
 ## Embed images/gifs:
 
-<!-- ![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.jpg).   -->
+![Great power is pretty boring](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/img/opm.jpg).
 
 \newpage
 

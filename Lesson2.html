@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 54px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h2 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h3 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h4 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h5 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h6 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">EmoRy Coding Club</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="Lesson1.html">Lesson 1</a>
+</li>
+<li>
+  <a href="Lesson2.html">Lesson 2</a>
+</li>
+<li>
+  <a href="Lesson3.html">Lesson 3</a>
+</li>
+<li>
+  <a href="Lesson4.html">Lesson 4</a>
+</li>
+<li>
+  <a href="Lesson5.html">Lesson 5</a>
+</li>
+<li>
+  <a href="Lesson6.html">Lesson 6</a>
+</li>
+<li>
+  <a href="Lesson7.html">Lesson 7</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/darwinanddavis/EmoRyCodingClub">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+
+<p><br />
+<!-- install packages --></p>
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+<div id="lesson-2-reading-data-and-plotting-facets-and-curves" class="section level1">
+<h1>Lesson 2: Reading data and plotting facets and curves</h1>
+<p> </p>
+<p>Functions for Lesson 2<br />
+<code>facet_wrap</code>, <code>facet_grid</code>, <code>geom_smooth</code>, <code>filter</code><br />
+ </p>
+<p>Packages for Lesson 2<br />
+<code>ggplot2</code>,<code>dplyr</code><br />
+ </p>
+</div>
+<div id="agenda" class="section level1">
+<h1>Agenda</h1>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#facets">Data visualisation in <code>R</code> for Data Science, Section 3.5.1</a>.</p>
+<!--  end yaml template------------------------------------------------------- -->
+<ul>
+<li>Do first problem set</li>
+<li>Read in data file<br />
+</li>
+<li>Plotting facets<br />
+</li>
+<li>Plotting curves<br />
+</li>
+<li>Combining plot types<br />
+ </li>
+</ul>
+</div>
+<div id="do-first-problem-set" class="section level1">
+<h1>Do First problem set</h1>
+<p>Before each new session, we’ll do a quick recap, called a Do First. These will only use functions we’ve previously covered, so if you’re unsure or can’t remember, just check the code from the previous session.<br />
+ </p>
+<p>Recreate the below plot using the smaller NYC Airbnb dataset (<code>nyc</code> from Lesson 1). There are four aesthetics to change and the plot uses <code>theme_solarized</code>.<br />
+<em>Hint</em>: Use the help <code>?</code> function if something isn’t clear.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># You didn&#39;t think we&#39;d make it this easy, did you?</span></code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-2-1.png" width="100%" />  </p>
+</div>
+<div id="some-useful-shortkeys-for-making-r-life-easier" class="section level1">
+<h1>Some useful shortkeys for making <code>R</code> life easier</h1>
+<p><code>TAB</code> = autofill rest of function/global variable<br />
+<code>CTRL + ENTER</code> = run code<br />
+<code>ALT + minus sign</code> = insert assign operator <code>&lt;-</code><br />
+<code>CTRL + SHIFT + M</code> = insert pipe <code>%&gt;%</code><br />
+<strong>Run <code>ALT + SHIFT + K</code> for <a href="https://support.rstudio.com/hc/en-us/articles/200711853-Keyboard-Shortcuts">all available shortkeys</a></strong>  </p>
+</div>
+<div id="read-in-data" class="section level1">
+<h1>Read in data</h1>
+<!-- NOT RUN -->
+<!-- create emailable airbnb dataset -->
+<p> </p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_file &lt;-<span class="st"> &quot;your_csv_file.csv&quot;</span>
+my_data &lt;-<span class="st"> </span><span class="kw">read_csv</span>(my_file)  <span class="co"># read in the csv data file  </span>
+<span class="kw">glimpse</span>(my_data)</code></pre></div>
+<p> </p>
+</div>
+<div id="grouping-data" class="section level1">
+<h1>Grouping data</h1>
+<p>One way to group your data is by colour</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_data &lt;-<span class="st"> </span>mpg
+my_theme &lt;-<span class="st"> </span><span class="kw">theme_classic</span>()
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">colour =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-5-1.png" width="672" />  </p>
+</div>
+<div id="plotting-facets" class="section level1">
+<h1>Plotting facets</h1>
+<p><code>facet_wrap</code> and <code>facet_grid</code><br />
+Facets add a third variable to a plot<br />
+The facet function takes a formula as an argument, which is just a data structure, denoted by a tilde <strong>~</strong></p>
+<p><code>facet_wrap</code><br />
+When you have one variable to plot as a facet</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span>class, <span class="dt">nrow =</span> <span class="dv">2</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><code>facet_grid</code><br />
+When you know the two variables you want to plot<br />
+<strong>The formula structure for <code>facet_grid</code> is Y variable <code>~</code> X variable, e.g. <code>drv ~ cyl</code></strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(drv <span class="op">~</span><span class="st"> </span>cyl) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p>You can also replace the X or Y argument in <code>facet_grid</code> with a period (“.”) to plot only one variable.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Y var</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(. <span class="op">~</span><span class="st"> </span>cyl) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># X var</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(drv <span class="op">~</span><span class="st"> </span>.) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-8-2.png" width="672" /></p>
+</div>
+<div id="exercise-3.5.1" class="section level1">
+<h1>Exercise 3.5.1</h1>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#exercises-2">Try the exercises from 3.5.1</a>.</p>
+<hr />
+</div>
+<div id="geom_smooth" class="section level1">
+<h1><code>geom_smooth</code></h1>
+<p>Plotting points (<code>geom_point</code>) or lines (<code>geom_smooth</code>)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># left</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># right</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
+</div>
+<div id="linetype" class="section level1">
+<h1>Linetype</h1>
+<p>Grouping by linetype</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">linetype =</span> drv)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+</div>
+<div id="group-vs.colour" class="section level1">
+<h1>Group vs. colour</h1>
+<p>Using <code>group</code> separates the data into objects …</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">group =</span> drv)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-12-2.png" width="672" />  </p>
+<p>… but <code>colour</code> will distinguish the differences among these objects</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">colour =</span> drv), <span class="dt">show.legend =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+</div>
+<div id="geometric-objects" class="section level1">
+<h1>Geometric objects</h1>
+</div>
+<div id="adding-geoms" class="section level1">
+<h1>Adding <code>geoms</code></h1>
+<p>Possibly the most useful part of plotting data is layering plot types</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, 
+    <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># condensing code</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>() <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-14-2.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># adding aes</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">colour =</span> <span class="st">&quot;steel blue&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">colour =</span> <span class="st">&quot;#C6BDEA&quot;</span>, 
+    <span class="dt">fill =</span> <span class="st">&quot;#C6BDEA&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-14-3.png" width="672" />  </p>
+<p>But why does this throw an error?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># adding aes</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<pre><code>Error: stat_smooth requires the following missing aesthetics: x, y</code></pre>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Specifying layers</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">color =</span> class)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span><span class="kw">geom_smooth</span>() <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p> </p>
+<p>Applying different datasets to one plot (overriding data)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(dplyr)
+<span class="kw">names</span>(my_data)</code></pre></div>
+<pre><code> [1] &quot;manufacturer&quot; &quot;model&quot;        &quot;displ&quot;        &quot;year&quot;         &quot;cyl&quot;          &quot;trans&quot;       
+ [7] &quot;drv&quot;          &quot;cty&quot;          &quot;hwy&quot;          &quot;fl&quot;           &quot;class&quot;       </code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># subset data with filter</span>
+my_data_subcompact &lt;-<span class="st">  </span><span class="kw">filter</span>(<span class="kw">filter</span>(my_data, class <span class="op">==</span><span class="st"> &quot;subcompact&quot;</span>))
+
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">color =</span> class)) <span class="op">+</span><span class="st"> </span><span class="co"># original data</span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">data =</span> my_data_subcompact, <span class="dt">se =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span><span class="co"># filtered data </span>
+<span class="st">  </span>my_theme</code></pre></div>
+<p><img src="Lesson2_files/figure-html/unnamed-chunk-17-1.png" width="672" />  </p>
+</div>
+<div id="exercise-3.6.1" class="section level1">
+<h1>Exercise 3.6.1</h1>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#exercises-3">Try the exercises from 3.6.1</a>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 1</span>
+<span class="kw">ggplot</span>(my_data)  <span class="co"># ...</span>
+
+<span class="co"># 2</span></code></pre></div>
+<p> </p>
+<hr />
+</div>
+<div id="applying-the-airbnb-data" class="section level1">
+<h1>Applying the Airbnb data</h1>
+<p>Use the new examples on the Airbnb dataset.</p>
+<!-- end body -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
