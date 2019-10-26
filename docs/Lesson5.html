@@ -500,15 +500,28 @@ ylab &lt;-<span class="st"> &quot;Count&quot;</span>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(here)  <span class="co"># load the here package if not already</span>
 <span class="kw">set_here</span>()  <span class="co"># set current working directory </span>
 <span class="kw">dr_here</span>()  <span class="co"># print current working directory where .here is located</span></code></pre></div>
-<ol style="list-style-type: decimal">
-<li>Create a folder in your local directory called <strong>‘lookhere’</strong>.<br />
-</li>
-<li>Open a new file in TextEdit (Mac) or Notepad (Windows), type in something like &quot; <em>We found the here file!</em> “, then save the file as <strong>“heretest.txt”</strong>.</li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">list.files</span>()  <span class="co"># print files in your current working dir. the &#39;heretest.txt&#39; file is not here, but one folder below in the new &#39;lookhere&#39; folder</span>
+<p><strong>Example 2</strong><br />
+1. Create a folder in your local directory called <strong>‘lookhere’</strong>.<br />
+2. Open a new file in TextEdit (Mac) or Notepad (Windows), type in something like &quot; <em>We found the here file!</em> “, then save the file as <strong>“heretest.txt”</strong>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># example 1</span>
+<span class="kw">list.files</span>()  <span class="co"># print files in your current working dir. the &#39;heretest.txt&#39; file is not here, but one folder below in the new &#39;lookhere&#39; folder</span>
 <span class="kw">here</span>(<span class="st">&quot;lookhere&quot;</span>, <span class="st">&quot;heretest.txt&quot;</span>)  <span class="co"># using here to forage for the file</span>
-<span class="kw">here</span>(<span class="st">&quot;lookhere&quot;</span>, <span class="st">&quot;heretest.txt&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>readLines  <span class="co"># print the contents in R</span></code></pre></div>
+<span class="kw">here</span>(<span class="st">&quot;lookhere&quot;</span>, <span class="st">&quot;heretest.txt&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>read_lines  <span class="co"># print the contents in R</span></code></pre></div>
 <p> </p>
+<p><strong>Example 2</strong><br />
+1. Create another folder within the <strong>lookhere</strong> folder called <strong>lookheretoo</strong><br />
+2. Create another .txt file called <strong>heretesttoo.txt</strong> and save it.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># example 2 create two folders</span>
+folder1 &lt;-<span class="st"> &quot;lookhere&quot;</span>
+folder2 &lt;-<span class="st"> &quot;lookheretoo&quot;</span>
+file &lt;-<span class="st"> &quot;heretesttoo.txt&quot;</span>
+<span class="co"># navigate to the /lookheretoo folder and open the heretesttoo file using &#39;here&#39;</span>
+<span class="kw">here</span>(folder1, folder2, file) <span class="op">%&gt;%</span><span class="st"> </span>read_lines
+<span class="kw">read_lines</span>(<span class="kw">here</span>(folder1, folder2, file))  <span class="co"># non-tidy version</span></code></pre></div>
+<p><br />
+Why is <code>here</code> useful?<br />
+* You can step through sub folders by defining them individually as function inputs<br />
+* You can user define these subfolders as variables at the beginning of your <code>R</code> script and refer to them throughout your script without pasting, e.g. <code>paste(folder1,folder2,sep=&quot;/&quot;)</code>.</p>
 </div>
 <div id="creating-an-r-project-rproj-file" class="section level1">
 <h1>Creating an <code>R</code> project (<code>Rproj</code>) file</h1>

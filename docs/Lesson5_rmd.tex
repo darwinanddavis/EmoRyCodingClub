@@ -1,4 +1,4 @@
-\documentclass[portrait]{article}
+\documentclass[article]{article}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -18,14 +18,18 @@
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
 % use microtype if available
 \IfFileExists{microtype.sty}{%
-\usepackage{microtype}
+\usepackage[]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 }{}
-\usepackage[margin=1in]{geometry}
-\usepackage{hyperref}
-\hypersetup{unicode=true,
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true]{hyperref}
+\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+\hypersetup{
             pdftitle={Using RMarkdown for reproducible and neat documents},
-            pdfborder={0 0 0},
+            colorlinks=true,
+            linkcolor=blue,
+            citecolor=red,
+            urlcolor=blue,
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{color}
@@ -69,6 +73,8 @@
 \newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
 \newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
+% Fix footnotes in tables (requires footnote package)
+\IfFileExists{footnote.sty}{\usepackage{footnote}\makesavenoteenv{long table}}{}
 \usepackage{graphicx,grffile}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -98,47 +104,32 @@
 \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
 
-%%% Use protect on footnotes to avoid problems with footnotes in titles
-\let\rmarkdownfootnote\footnote%
-\def\footnote{\protect\rmarkdownfootnote}
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 
-%%% Change title format to be more compact
-\usepackage{titling}
 
-% Create subtitle command for use in maketitle
-\providecommand{\subtitle}[1]{
-  \posttitle{
-    \begin{center}\large#1\end{center}
-    }
-}
-
-\setlength{\droptitle}{-2em}
-
-  \title{Using RMarkdown for reproducible and neat documents}
-    \pretitle{\vspace{\droptitle}\centering\huge}
-  \posttitle{\par}
-    \author{Your name here\\
+\title{Using RMarkdown for reproducible and neat documents}
+\author{Your name here\\
 Your affiliation here}
-    \preauthor{\centering\large\emph}
-  \postauthor{\par}
-    \date{}
-    \predate{}\postdate{}
-  
+\date{}
 
 \begin{document}
 \maketitle
 
 {
+\hypersetup{linkcolor=black}
 \setcounter{tocdepth}{4}
 \tableofcontents
 }
 \newpage   
 
-Date: 2019-10-25\\
+Date: 2019-10-26\\
 R version: 3.5.0\\
 *Corresponding author: Your email here
 
-\newpage    
+\newpage
 
 \section{Overview}\label{overview}
 
@@ -155,9 +146,6 @@ size}\label{then-move-down-in-heading-order-size}
 
 \paragraph{And this fourth order
 heading}\label{and-this-fourth-order-heading}
-
-To create a new line of text, insert two spaces after every line in the
-\texttt{Rmd} file, then hit \emph{ENTER}.
 
 You can write in \textbf{bold} and \emph{italicised} text (in
 \textbf{two} different \emph{ways}).
@@ -179,36 +167,32 @@ slabs of text
 
 Insert a horizontal line break using five asterisks (`*****')
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
-
 The raw Rmd file also has the code for inserting user comments.
 
 (There is also a page break here. Best seen in PDF. Check the raw Rmd
 file to see the code)
 
-\newpage   
+\newpage
 
 \subsection{Define equations}\label{define-equations}
 
 Accordingly, we write the eigenfunction of a spinless particle as the
 superposition of plane wave states of momentum (\(\pi\)) and energy
 (\(Ej\)) having amplitudes \(a(\pi,Ej)\) (from
-\href{https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf}{{[}1{]}}).\\
-\[  
-\phi n(r,t) =  
+\href{https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf}{{[}1{]}}).
+\[
+\phi n(r,t) =
   \sum_{i, j} a(p_{i},E_{j})
   e^{
     \frac{i}
     {h}
-    (p_{i} \cdot r - E_{j}t) 
+    (p_{i} \cdot r - E_{j}t)
 }
 \] ~
 
 \subsection{Embed images/gifs:}\label{embed-imagesgifs}
 
-\includegraphics{img/opm.jpg}.
-
-\newpage  
+\newpage
 
 \subsection{Create, alter, and embed
 plots}\label{create-alter-and-embed-plots}
@@ -217,7 +201,7 @@ plots}\label{create-alter-and-embed-plots}
 
 Figure 1. Example of a stock plot embedded into a PDF from RMarkdown.
 
-\newpage  
+\newpage
 
 \subsection{Show plots with associated
 code}\label{show-plots-with-associated-code}
@@ -240,19 +224,31 @@ code}\label{show-plots-with-associated-code}
 \NormalTok{main <-}\StringTok{ }\KeywordTok{paste0}\NormalTok{(N, }\StringTok{" points but plot better"}\NormalTok{)}
 \NormalTok{xlab <-}\StringTok{ "Points in space"}
 \ControlFlowTok{if}\NormalTok{ (bm }\OperatorTok{==}\StringTok{ }\DecValTok{1}\NormalTok{) \{}
-    \KeywordTok{layout}\NormalTok{(}\KeywordTok{matrix}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{), }\DecValTok{2}\OperatorTok{:}\DecValTok{4}\NormalTok{), }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DataTypeTok{byrow =} \OtherTok{TRUE}\NormalTok{))}
+    \KeywordTok{layout}\NormalTok{(}\KeywordTok{matrix}\NormalTok{(}\KeywordTok{c}\NormalTok{(}\KeywordTok{rep}\NormalTok{(}\DecValTok{1}\NormalTok{, }
+        \DecValTok{3}\NormalTok{), }\DecValTok{2}\OperatorTok{:}\DecValTok{4}\NormalTok{), }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DataTypeTok{byrow =} \OtherTok{TRUE}\NormalTok{))}
 \NormalTok{    sc <-}\StringTok{ }\DecValTok{1}
-    \KeywordTok{plot}\NormalTok{(rr, }\DataTypeTok{las =} \DecValTok{1}\NormalTok{, }\DataTypeTok{bty =} \StringTok{"n"}\NormalTok{, }\DataTypeTok{col =} \KeywordTok{adjustcolor}\NormalTok{(}\KeywordTok{viridis}\NormalTok{(N), }\FloatTok{0.5}\NormalTok{), }\DataTypeTok{pch =} \DecValTok{20}\NormalTok{, }\DataTypeTok{cex =} \KeywordTok{runif}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{), }
-        \DataTypeTok{main =}\NormalTok{ main, }\DataTypeTok{xlab =}\NormalTok{ xlab)}
-    \ControlFlowTok{for}\NormalTok{ (r }\ControlFlowTok{in} \KeywordTok{list}\NormalTok{(rrd, rrd2, rrd3)) \{}
-        \KeywordTok{plot}\NormalTok{(r, }\DataTypeTok{xlim =}\NormalTok{ xlim, }\DataTypeTok{ylim =}\NormalTok{ ylim, }\DataTypeTok{main =} \StringTok{""}\NormalTok{)}
-        \KeywordTok{polygon}\NormalTok{(r, }\DataTypeTok{col =} \KeywordTok{adjustcolor}\NormalTok{(}\KeywordTok{viridis}\NormalTok{(}\DecValTok{250}\NormalTok{)[sc], }\FloatTok{0.5}\NormalTok{), }\DataTypeTok{border =} \KeywordTok{viridis}\NormalTok{(}\DecValTok{250}\NormalTok{)[sc])}
+    \KeywordTok{plot}\NormalTok{(rr, }\DataTypeTok{las =} \DecValTok{1}\NormalTok{, }\DataTypeTok{bty =} \StringTok{"n"}\NormalTok{, }
+        \DataTypeTok{col =} \KeywordTok{adjustcolor}\NormalTok{(}\KeywordTok{viridis}\NormalTok{(N), }
+            \FloatTok{0.5}\NormalTok{), }\DataTypeTok{pch =} \DecValTok{20}\NormalTok{, }
+        \DataTypeTok{cex =} \KeywordTok{runif}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{1}\NormalTok{, }
+            \DecValTok{5}\NormalTok{), }\DataTypeTok{main =}\NormalTok{ main, }
+        \DataTypeTok{xlab =}\NormalTok{ xlab)}
+    \ControlFlowTok{for}\NormalTok{ (r }\ControlFlowTok{in} \KeywordTok{list}\NormalTok{(rrd, rrd2, }
+\NormalTok{        rrd3)) \{}
+        \KeywordTok{plot}\NormalTok{(r, }\DataTypeTok{xlim =}\NormalTok{ xlim, }
+            \DataTypeTok{ylim =}\NormalTok{ ylim, }\DataTypeTok{main =} \StringTok{""}\NormalTok{)}
+        \KeywordTok{polygon}\NormalTok{(r, }\DataTypeTok{col =} \KeywordTok{adjustcolor}\NormalTok{(}\KeywordTok{viridis}\NormalTok{(}\DecValTok{250}\NormalTok{)[sc], }
+            \FloatTok{0.5}\NormalTok{), }\DataTypeTok{border =} \KeywordTok{viridis}\NormalTok{(}\DecValTok{250}\NormalTok{)[sc])}
 \NormalTok{        sc <-}\StringTok{ }\NormalTok{sc }\OperatorTok{+}\StringTok{ }\DecValTok{100}
 \NormalTok{    \}}
 \NormalTok{\} }\ControlFlowTok{else}\NormalTok{ \{}
     \KeywordTok{par}\NormalTok{(}\DataTypeTok{mfrow =} \KeywordTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{))}
-    \KeywordTok{plot}\NormalTok{(rr, }\DataTypeTok{las =} \DecValTok{1}\NormalTok{, }\DataTypeTok{bty =} \StringTok{"n"}\NormalTok{, }\DataTypeTok{col =} \KeywordTok{adjustcolor}\NormalTok{(}\KeywordTok{viridis}\NormalTok{(N), }\FloatTok{0.5}\NormalTok{), }\DataTypeTok{pch =} \DecValTok{20}\NormalTok{, }\DataTypeTok{cex =} \KeywordTok{runif}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{5}\NormalTok{), }
-        \DataTypeTok{main =}\NormalTok{ main, }\DataTypeTok{xlab =}\NormalTok{ xlab)}
+    \KeywordTok{plot}\NormalTok{(rr, }\DataTypeTok{las =} \DecValTok{1}\NormalTok{, }\DataTypeTok{bty =} \StringTok{"n"}\NormalTok{, }
+        \DataTypeTok{col =} \KeywordTok{adjustcolor}\NormalTok{(}\KeywordTok{viridis}\NormalTok{(N), }
+            \FloatTok{0.5}\NormalTok{), }\DataTypeTok{pch =} \DecValTok{20}\NormalTok{, }
+        \DataTypeTok{cex =} \KeywordTok{runif}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{1}\NormalTok{, }
+            \DecValTok{5}\NormalTok{), }\DataTypeTok{main =}\NormalTok{ main, }
+        \DataTypeTok{xlab =}\NormalTok{ xlab)}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
@@ -262,7 +258,7 @@ code}\label{show-plots-with-associated-code}
 Figure 2. Example of a plot with improved graphics and its associated
 code embedded into the output document from RMarkdown.
 
-\newpage  
+\newpage
 
 \subsection{And tables}\label{and-tables}
 
@@ -283,27 +279,19 @@ Parameter & Definition & Dimension(unit)\tabularnewline
 \bottomrule
 \end{longtable}
 
-\newpage  
+\newpage
 
 \subsection{Use buttons or tabs for
 sub-chapters}\label{use-buttons-or-tabs-for-sub-chapters}
 
 \subsubsection{Chapter 1}\label{chapter-1}
 
-.\\
-.\\
-.\\
-.\\
-.
+. . . . .
 
 \emph{Then you can add whatever you want here} like you would normally
 write in the \texttt{Rmd} file.
 
-.\\
-.\\
-.\\
-.\\
-.
+. . . . .
 
 \subsubsection{Chapter 2 (with new code)}\label{chapter-2-with-new-code}
 
@@ -317,8 +305,6 @@ Here's a new way of creating tables using the \texttt{DT} package
 
 \includegraphics{Lesson5_rmd_files/figure-latex/unnamed-chunk-4-1.pdf}
 
-\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
-
 \subsection{Embed code from different
 languages}\label{embed-code-from-different-languages}
 
@@ -330,9 +316,12 @@ code}{This is R code}}\label{this-is-r-code}
 \ControlFlowTok{if}\NormalTok{ (pck }\OperatorTok{==}\StringTok{ }\DecValTok{1}\NormalTok{) \{}
 \NormalTok{    p <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\StringTok{"rJava"}\NormalTok{, }\StringTok{"RNetLogo"}\NormalTok{)}
     \KeywordTok{remove.packages}\NormalTok{(p)}
-    \CommentTok{# then install rJava and RNetLogo from source}
-    \KeywordTok{install.packages}\NormalTok{(}\StringTok{"rJava"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"https://cran.r-project.org/"}\NormalTok{)}
-    \KeywordTok{install.packages}\NormalTok{(}\StringTok{"RNetLogo"}\NormalTok{, }\DataTypeTok{repos =} \StringTok{"https://cran.r-project.org/"}\NormalTok{)}
+    \CommentTok{# then install rJava and}
+    \CommentTok{# RNetLogo from source}
+    \KeywordTok{install.packages}\NormalTok{(}\StringTok{"rJava"}\NormalTok{, }
+        \DataTypeTok{repos =} \StringTok{"https://cran.r-project.org/"}\NormalTok{)}
+    \KeywordTok{install.packages}\NormalTok{(}\StringTok{"RNetLogo"}\NormalTok{, }
+        \DataTypeTok{repos =} \StringTok{"https://cran.r-project.org/"}\NormalTok{)}
 \NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
@@ -341,7 +330,7 @@ code}{This is R code}}\label{this-is-r-code}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\BuiltInTok{echo} \StringTok{"Hello Bash!"}  
+\BuiltInTok{echo} \StringTok{"Hello Bash!"}
 \BuiltInTok{pwd} \CommentTok{# check working dir}
 \FunctionTok{git}\NormalTok{ init }\CommentTok{# initialise git}
 \end{Highlighting}
@@ -369,12 +358,12 @@ package).}{Octave (and MATLAB from the RMatlab package).}}\label{octave-and-matl
 \begin{Highlighting}[]
 \CommentTok{<!-- links-->}
         \KeywordTok{<div}\OtherTok{ class=}\StringTok{"footer"}\KeywordTok{>}
-            \KeywordTok{<a}\OtherTok{ href=}\StringTok{"dd_feed.html"} 
+            \KeywordTok{<a}\OtherTok{ href=}\StringTok{"dd_feed.html"}
 \OtherTok{            class=}\StringTok{"transition fade_in"}\KeywordTok{>}
 \NormalTok{                Latest post}
             \KeywordTok{</a>}
             \DecValTok{&nbsp;} \DecValTok{&nbsp;} \DecValTok{&nbsp;}
-            \KeywordTok{<a}\OtherTok{ href=}\StringTok{"dd_contact.html"} 
+            \KeywordTok{<a}\OtherTok{ href=}\StringTok{"dd_contact.html"}
 \OtherTok{            class=}\StringTok{"transition fade_in"}\KeywordTok{>}
 \NormalTok{                Contact}
             \KeywordTok{</a>}
@@ -433,11 +422,46 @@ languages}\label{heres-a-complete-list-of-available-languages}
 \end{Shaded}
 
 \begin{verbatim}
-##  [1] "awk"       "bash"      "coffee"    "gawk"      "groovy"    "haskell"   "lein"      "mysql"    
-##  [9] "node"      "octave"    "perl"      "psql"      "Rscript"   "ruby"      "sas"       "scala"    
-## [17] "sed"       "sh"        "stata"     "zsh"       "highlight" "Rcpp"      "tikz"      "dot"      
-## [25] "c"         "fortran"   "fortran95" "asy"       "cat"       "asis"      "stan"      "block"    
-## [33] "block2"    "js"        "css"       "sql"       "go"        "python"    "julia"     "sass"     
+##  [1] "awk"      
+##  [2] "bash"     
+##  [3] "coffee"   
+##  [4] "gawk"     
+##  [5] "groovy"   
+##  [6] "haskell"  
+##  [7] "lein"     
+##  [8] "mysql"    
+##  [9] "node"     
+## [10] "octave"   
+## [11] "perl"     
+## [12] "psql"     
+## [13] "Rscript"  
+## [14] "ruby"     
+## [15] "sas"      
+## [16] "scala"    
+## [17] "sed"      
+## [18] "sh"       
+## [19] "stata"    
+## [20] "zsh"      
+## [21] "highlight"
+## [22] "Rcpp"     
+## [23] "tikz"     
+## [24] "dot"      
+## [25] "c"        
+## [26] "fortran"  
+## [27] "fortran95"
+## [28] "asy"      
+## [29] "cat"      
+## [30] "asis"     
+## [31] "stan"     
+## [32] "block"    
+## [33] "block2"   
+## [34] "js"       
+## [35] "css"      
+## [36] "sql"      
+## [37] "go"       
+## [38] "python"   
+## [39] "julia"    
+## [40] "sass"     
 ## [41] "scss"
 \end{verbatim}
 
@@ -447,6 +471,5 @@ languages}\label{heres-a-complete-list-of-available-languages}
 and Dirac equations, Department of Natural Sciences, Fordham University,
 \href{https://arxiv.org/vc/quant-ph/papers/0607/0607001v1.pdf}{doi:
 d34464566}.
-
 
 \end{document}

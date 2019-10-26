@@ -20,11 +20,6 @@ output:
     keep_tex: true # keep .tex file in dir
   md_document:
     variant: markdown_github
-  word_document:
-    highlight: tango
-    keep_md: yes
-    pandoc_args: --smart
-    toc: yes
   html_document:
     code_folding: show
     highlight: tango
@@ -32,6 +27,11 @@ output:
     toc: yes
     toc_depth: 4
     toc_float: yes
+  word_document:
+    highlight: tango
+    keep_md: yes
+    pandoc_args: --smart
+    toc: yes
 params:
   date: !r Sys.Date()
   email: Your email here
@@ -52,7 +52,7 @@ citecolor: red
 </script>
 
 ```{r, set-options, echo = F, cache = T,message=F}
-options(width=50,tinytex.verbose = TRUE, width.cutoff=25)
+options(width=25,tinytex.verbose = TRUE, width.cutoff=25)
 knitr::opts_chunk$set(
  eval = TRUE, # run all code
  echo = TRUE, # show code chunks in output 
