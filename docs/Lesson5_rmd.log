@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.25)  26 OCT 2019 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.25)  28 OCT 2019 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -626,22 +626,22 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 157.
 [3]
 
-LaTeX Warning: File `https://github.com/darwinanddavis/EmoRyCodingClub/raw/mast
-er/img/opm.jpg' not found on input line 195.
+LaTeX Warning: File `https://raw.githubusercontent.com/darwinanddavis/EmoRyCodi
+ngClub/master/img/opm.png' not found on input line 195.
 
 
-! Package pdftex.def Error: File `"https://github.com/darwinanddavis/EmoRyCodin
-gClub/raw/master/img/""opm".jpg' not found: using draft setting.
+! Package pdftex.def Error: File `"https://raw.githubusercontent.com/darwinandd
+avis/EmoRyCodingClub/master/img/""opm".png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.195 ...s/EmoRyCodingClub/raw/master/img/opm.jpg}
+l.195 ...davis/EmoRyCodingClub/master/img/opm.png}
                                                   . 
 Here is how much of TeX's memory you used:
  10763 strings out of 494111
- 151854 string characters out of 6170576
+ 151876 string characters out of 6170576
  214474 words of memory out of 5000000
  14721 multiletter control sequences out of 15000+600000
  63242 words of font info for 58 fonts, out of 8000000 for 9000

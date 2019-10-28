@@ -181,7 +181,7 @@ Have a look through each section of the raw `.Rmd` file to see what the code doe
 
 # Exercises  
 
-* Knit a PDF, HTML, and Word doc. Use the hotkey `Cmd/Ctrl + Shift + K`  
+* Knit an HTML document. Use the hotkey `Cmd/Ctrl + Shift + K`.    
 * Create a 'EmoRy Coding Club notes' document (PDF or HTML document)  
 * Create your own parameter in the yaml   
 * Create a code chunk that shows the code and output, but masks any warnings
