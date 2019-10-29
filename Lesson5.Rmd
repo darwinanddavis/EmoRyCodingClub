@@ -57,8 +57,17 @@ Packages for `r params$lesson`
 
 # Agenda
 
-Create reproducible HTML, PDF, and Word documents from R using `RMarkdown`. **[Download the `RMarkdown` template (right click > Save As)](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd).**        
- 
+Create reproducible HTML, PDF, and Word documents from R using `RMarkdown`.   
+* **[Download the `RMarkdown` template (right click > Save As)](https://github.com/darwinanddavis/EmoRyCodingClub/raw/master/Lesson5_rmd.Rmd).** Save this in the same folder as your coding club files. The file should have a *.Rmd* extension, e.g. **Lesson5_rmd.Rmd**.        
+* Open `RStudio` and run the following code to install the necessary packages:
+
+```{r, eval=F}
+packages <- c("pacman","rmarkdown", "here")  
+install.packages(packages,dependencies = T)
+lapply(packages,require,character.only=T)  
+```
+\  
+
 <!--  end yaml template------------------------------------------------------- -->
   
 # Do First      
@@ -147,7 +156,7 @@ Why is `here` useful?
   * You can step through sub folders by defining them individually as function inputs  
   * You can user define these subfolders as variables at the beginning of your `R` script and refer to them throughout your script without pasting, e.g. `paste(folder1,folder2,sep="/")`.      
 
-# Creating an `R` project (`Rproj`) file  
+# Creating an `R` project (`Rproj`) file    
 
 **Option 1:** Create an RProject new directory:  
 * _File > New Project_  
@@ -155,13 +164,15 @@ Why is `here` useful?
 * Choose a name for your RProj folder. Fill out _Directory name:_ (make it machine-friendly, i.e. no spaces)   
 * Choose a place for the RProj to live. _Browse_  
 * Select _Open in new session_  
-\   
+
+\       
 
 **Option 2:** If you already have a folder *just* for Emory Coding Club:   
 * _File > New Project_      
 * _Existing directory > Browse_  
 * Select _Open in new session_    
-\  
+
+\      
 
 * Open the 'Lesson5_rmd.Rmd' file within this project and save it as 'Lesson5_rmd.Rmd'.        
 * Open another _.R_ file within this project and save it.    
@@ -170,7 +181,7 @@ Why is `here` useful?
 
 # Navigating the `Rmarkdown` interface    
 
-Have a look through each section of the raw `.Rmd` file to see what the code does. You'll be using this template to create your own files, such as creating notes for this coding club.    
+Have a look through each section of the raw `.Rmd` file to see what the code does. You'll be using this template to create your own files, such as creating personal notes for future sessions in this coding club.      
 
 <!-- ----------------------- image --------------------------- -->
 <div align="center"; text-align:center>
@@ -181,10 +192,10 @@ Have a look through each section of the raw `.Rmd` file to see what the code doe
 
 # Exercises  
 
-* Knit an HTML document. Use the hotkey `Cmd/Ctrl + Shift + K`.    
-* Create a 'EmoRy Coding Club notes' document (PDF or HTML document)  
-* Create your own parameter in the yaml   
-* Create a code chunk that shows the code and output, but masks any warnings
+* Knit an HTML document. Use the hotkey `Cmd/Ctrl + Shift + K`    
+* Create a 'EmoRy Coding Club notes' document      
+* Create your own parameter in the yaml     
+* Create a code chunk that shows the code and output, but masks any warnings  
 * Create a code chunk with a plot of your own data or from the Airbnb data. Here's the NYC Airbnb data:    
 ```{r}
 # large Airbnb dataset (106 cols)
@@ -197,7 +208,7 @@ nyc_full %>% glimpse
 ```
 * Change the above figure dimensions in the knitted document     
 * Create a table with the title in bold, one of the columns set to right justified text, and one of the rows italicised   
-* Write an inline equation and an indented equation  
+* Write an inline equation and an indented equation     
 
 
 <!-- end body -->

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.25)  28 OCT 2019 18:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.25)  29 OCT 2019 15:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -502,7 +502,7 @@ Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
 LaTeX Warning: Unused global option(s):
     [article].
 
-(./Lesson5_rmd.aux)
+No file Lesson5_rmd.aux.
 \openout1 = `Lesson5_rmd.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
@@ -547,7 +547,6 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 118.
 LaTeX Info: Redefining \pageref on input line 118.
 LaTeX Info: Redefining \nameref on input line 118.
-(./Lesson5_rmd.out) (./Lesson5_rmd.out)
 \@outlinefile=\write4
 \openout4 = `Lesson5_rmd.out'.
 
@@ -605,7 +604,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 120
 .
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./Lesson5_rmd.toc)
+)
 \tf@toc=\write5
 \openout5 = `Lesson5_rmd.toc'.
 
@@ -626,26 +625,26 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 157.
 [3]
 
-LaTeX Warning: File `https://raw.githubusercontent.com/darwinanddavis/EmoRyCodi
-ngClub/master/img/opm.png' not found on input line 195.
+LaTeX Warning: File `https://github.com/darwinanddavis/EmoRyCodingClub/raw/mast
+er/img/opm.png' not found on input line 195.
 
 
-! Package pdftex.def Error: File `"https://raw.githubusercontent.com/darwinandd
-avis/EmoRyCodingClub/master/img/""opm".png' not found: using draft setting.
+! Package pdftex.def Error: File `"https://github.com/darwinanddavis/EmoRyCodin
+gClub/raw/master/img/""opm".png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.195 ...davis/EmoRyCodingClub/master/img/opm.png}
+l.195 ...s/EmoRyCodingClub/raw/master/img/opm.png}
                                                   . 
 Here is how much of TeX's memory you used:
- 10763 strings out of 494111
- 151876 string characters out of 6170576
- 214474 words of memory out of 5000000
- 14721 multiletter control sequences out of 15000+600000
+ 10744 strings out of 494111
+ 151499 string characters out of 6170576
+ 214075 words of memory out of 5000000
+ 14710 multiletter control sequences out of 15000+600000
  63242 words of font info for 58 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 31i,8n,31p,431b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,8n,31p,271b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 !  ==> Fatal error occurred, no output PDF file produced!

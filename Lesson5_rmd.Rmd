@@ -75,7 +75,7 @@ This document showcases how to create and use `RMarkdown` documents.
 
 #### And this fourth order heading
 
-<!-- To create a new line of text, insert two spaces after every line in the `Rmd` file, then hit _ENTER_.         -->
+<!-- To create a new line of text, insert two spaces after every line in the `Rmd` file, then hit _ENTER_. -->
 
 You can write in **bold** and *italicised* text (in __two__ different _ways_).
 
