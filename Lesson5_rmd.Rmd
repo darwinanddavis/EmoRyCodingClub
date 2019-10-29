@@ -11,38 +11,14 @@ output:
     toc: yes
     toc_depth: 4
     toc_float: yes
-  word_document:
-    highlight: tango
-    keep_md: yes
-    pandoc_args: --smart
-    toc: yes
-  md_document:
-    variant: markdown_github
-  pdf_document:
-    includes:
-      in_header: # add .tex file with header content
-    highlight: tango
-    template: null
-    toc: yes
-    toc_depth: 4
-    number_sections: false
-    fig_width: 8
-    fig_height: 6
-    fig_caption: true
-    df_print: tibble 
-    latex_engine: pdflatex #xelatex # lualatex
-    keep_tex: true # keep .tex file in dir
 params:
+  email: "Your email here"
   date: !r Sys.Date()
-  email: Your email here
   version: !r getRversion()
-  img1: "https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.png"
-subtitle: null
 tags:
-classoption: article
-linkcolor: blue
-urlcolor: blue
-citecolor: red
+  classoption: article
+  linkcolor: blue
+  urlcolor: blue
 ---
 
 <!-- this enables math encoding in the knitted documents  -->
@@ -116,8 +92,7 @@ Insert line breaks <br>  between text like this, which works best in large <br> 
 Insert a horizontal line break using five asterisks ('*****')
 
 <!-- horizontal line  -->  
-<!-- PDF output doesn't like this: Missing number treated as zero error  -->
-<!-- *****     -->
+*****  
   
 The raw Rmd file also has the code for inserting user comments.
 <!-- To do this, place the cursor on the text and type 'Cmd/Ctl + Shift + C' -->
@@ -145,22 +120,7 @@ $$
 
 ![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.png).
 
-```{r, echo=FALSE, eval=F, message=F, warning=F, fig.align="center"}
-# **If knitting to PDF, use the below code**
-# long code lines within code chunks will sit properly in pdf output when document doesnt have images  
-# **************** IMAGE NEEDS TO BE PNG *****************
-
-# define variable containing url
-pacman::p_load(png,RCurl)
-url <- params$img1 # this is the img path as a character string, "www.yoursite/img/opm.png"    
-url_cont <- getURLContent(url)
-img <- readPNG(url_cont)
-rimg <- as.raster(img) # raster multilayer object
-r <- nrow(rimg) / ncol(rimg) # image ratio
-plot(rimg)
-```
-
-\newpage
+\newpage  
 
 ## Create, alter, and embed plots
 ```{r,echo=F,eval=T}
@@ -172,7 +132,7 @@ plot(rr,pch=20,main="Some random data")
 
 Figure 1. Example of a stock plot embedded into a PDF from RMarkdown.
 
-\newpage
+\newpage  
 
 ## Show plots with associated code
 ```{r,echo=T,eval=T,message=F,width.cutoff=25}
