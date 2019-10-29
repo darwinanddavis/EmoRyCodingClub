@@ -125,11 +125,11 @@ set_here() # set current working directory
 dr_here() # print current working directory where .here is located
 ```
 
-**Example 2**    
+**Example 1**    
 1. Create a folder in your local directory called **'lookhere'**.  
 2. Open a new file in TextEdit (Mac) or Notepad (Windows), type in something like " _We found the here file!_ ", then save the file as **"heretest.txt"**.       
 ```{r}
-
+require(readr)  
 # example 1
 list.files() # print files in your current working dir. the 'heretest.txt' file is not here, but one folder below in the new 'lookhere' folder
 here("lookhere","heretest.txt") # using here to forage for the file

@@ -14,19 +14,19 @@
 
 <title></title>
 
-<script src="Lesson5_files/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="Lesson5_files/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
-<script src="Lesson5_files/bootstrap-3.3.5/js/bootstrap.min.js"></script>
-<script src="Lesson5_files/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
-<script src="Lesson5_files/bootstrap-3.3.5/shim/respond.min.js"></script>
-<script src="Lesson5_files/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="Lesson5_files/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="Lesson5_files/tocify-1.9.1/jquery.tocify.js"></script>
-<script src="Lesson5_files/navigation-1.1/tabsets.js"></script>
-<script src="Lesson5_files/navigation-1.1/codefolding.js"></script>
-<link href="Lesson5_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="Lesson5_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -505,10 +505,11 @@ ylab &lt;-<span class="st"> &quot;Count&quot;</span>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(here)  <span class="co"># load the here package if not already</span>
 <span class="kw">set_here</span>()  <span class="co"># set current working directory </span>
 <span class="kw">dr_here</span>()  <span class="co"># print current working directory where .here is located</span></code></pre></div>
-<p><strong>Example 2</strong><br />
+<p><strong>Example 1</strong><br />
 1. Create a folder in your local directory called <strong>‘lookhere’</strong>.<br />
 2. Open a new file in TextEdit (Mac) or Notepad (Windows), type in something like &quot; <em>We found the here file!</em> “, then save the file as <strong>“heretest.txt”</strong>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># example 1</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(readr)
+<span class="co"># example 1</span>
 <span class="kw">list.files</span>()  <span class="co"># print files in your current working dir. the &#39;heretest.txt&#39; file is not here, but one folder below in the new &#39;lookhere&#39; folder</span>
 <span class="kw">here</span>(<span class="st">&quot;lookhere&quot;</span>, <span class="st">&quot;heretest.txt&quot;</span>)  <span class="co"># using here to forage for the file</span>
 <span class="kw">here</span>(<span class="st">&quot;lookhere&quot;</span>, <span class="st">&quot;heretest.txt&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>read_lines  <span class="co"># print the contents in R</span></code></pre></div>
