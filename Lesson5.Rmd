@@ -107,7 +107,7 @@ nyc_full_ <- nyc_full %>% dplyr::filter(availability_30 > 0)
 
 ggplot() +
   geom_bar(data = nyc_full_, mapping = aes(x = availability_30,
-       fill=neighbourhood_group_cleansed), show.legend = FALSE) +
+       fill=neighbourhood_group_cleansed), show.legend = F) +
   facet_grid(room_type ~ neighbourhood_group_cleansed) +
   labs(title = ttl,
        subtitle = subttl,
