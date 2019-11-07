@@ -3,7 +3,7 @@ params:
   lesson: "Lesson 5"
   title: "Turning code into reproducible documents with `Rmarkdown`"
   functions: "`here`, `summarise`,  `set_here`, `dr_here`"
-  packages: "`here`, `dplyr`, `rmarkdown`"      
+  packages: "`here`, `dplyr`, `readr`,`rmarkdown`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
 always_allow_html: yes
