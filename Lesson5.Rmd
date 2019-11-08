@@ -100,20 +100,27 @@ ttl <- "NYC Airbnb availability"
 subttl <- "for room types across neighbourhoods"
 xlab <- "Availability of property in next 30 days"
 ylab <- "Count"
-my_theme <- theme_tufte()
+jharr <- theme_tufte()
+
+names(nyc_full)
+
 
 # glimpse(nyc_full)  
 nyc_full_ <- nyc_full %>% dplyr::filter(availability_30 > 0)
 
+nyc_full_ %>% glimpse
+
 ggplot() +
-  geom_bar(data = nyc_full_, mapping = aes(x = availability_30,
+  geom_bar(data = nyc_full_, 
+           mapping = aes(x = availability_30,
+       color=neighbourhood_group_cleansed,
        fill=neighbourhood_group_cleansed), show.legend = F) +
   facet_grid(room_type ~ neighbourhood_group_cleansed) +
   labs(title = ttl,
        subtitle = subttl,
        x = xlab,
        y = ylab) +
-  my_theme 
+  jharr
 
 ```
   

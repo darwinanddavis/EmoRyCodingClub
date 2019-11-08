@@ -105,6 +105,7 @@ The raw Rmd file also has the code for inserting user comments.
 ## Define equations
 
 Accordingly, we write the eigenfunction of a spinless particle as the superposition of plane wave states of momentum ($\pi$) and energy ($E_{j}$) having amplitudes $a(\pi,E_{j})$ (from [[1]](https://www.academia.edu/33763545/Concise_derivation_of_the_Schr%C3%B6dinger_equation)).
+
 $$
 \phi n(r,t) =
   \sum_{i, j} a(p_{i},E_{j})
@@ -116,15 +117,16 @@ $$
 $$
 \  
 
+
 ## Embed images/gifs:
 
-![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.png).
+![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.png).  
 <!-- code for img in pdf: commit L5 rmd external test final - cmd line pdf/word knit -->
 
-\newpage  
+\newpage    
 
 ## Create, alter, and embed plots
-```{r,echo=F,eval=T}
+```{r,echo=F,eval=T, out.width=""}
 set.seed(12)
 N <- 2000
 rr <- rnorm(N)
@@ -138,7 +140,7 @@ Figure 1. Example of a stock plot embedded into a PDF from RMarkdown.
 ## Show plots with associated code
 ```{r,echo=T,eval=T,message=F,width.cutoff=25}
 suppressWarnings(require(viridis))
-bm <- 0
+bm <- 1
 par(las=1,bty="n"); xlim <- c(-5,5);ylim <- c(0,0.5)
 set.seed(12)
 N <- 2000
