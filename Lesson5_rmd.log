@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.25)  7 NOV 2019 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.10.25)  12 NOV 2019 12:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -300,30 +300,7 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2018/04/16 v5.8 Page Geometry
-(/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
-) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
-Package ifvtex Info: VTeX not detected.
-)
-\Gm@cnth=\count100
-\Gm@cntv=\count101
-\c@Gm@tempcnt=\count102
-\Gm@bindingoffset=\dimen112
-\Gm@wd@mp=\dimen113
-\Gm@odd@mp=\dimen114
-\Gm@even@mp=\dimen115
-\Gm@layoutwidth=\dimen116
-\Gm@layoutheight=\dimen117
-\Gm@layouthoffset=\dimen118
-\Gm@layoutvoffset=\dimen119
-\Gm@dimlist=\toks23
-) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
+)) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2019/09/28 v7.00a Hypertext links for LaTeX
 
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/generic/oberdiek/hobsub-hyperre
@@ -338,9 +315,10 @@ Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 Package hobsub Info: Skipping package `ifluatex' (already loaded).
-Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
 Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
-Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
@@ -365,22 +343,31 @@ Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
 ) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen120
-\Hy@linkcounter=\count103
-\Hy@pagecounter=\count104
+\@linkdim=\dimen112
+\Hy@linkcounter=\count100
+\Hy@pagecounter=\count101
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count105
+\Hy@SavedSpaceFactor=\count102
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Option `unicode' set `true' on input line 4414.
+(/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2019/09/28 v7.00a Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
 )
 Package hyperref Info: Hyper figures OFF on input line 4540.
 Package hyperref Info: Link nesting OFF on input line 4545.
@@ -389,16 +376,16 @@ Package hyperref Info: Plain pages OFF on input line 4555.
 Package hyperref Info: Backreferencing OFF on input line 4560.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4793.
-\c@Hy@tempcnt=\count106
+\c@Hy@tempcnt=\count103
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5152.
-\XeTeXLinkMargin=\dimen121
-\Fld@menulength=\count107
-\Field@Width=\dimen122
-\Fld@charsize=\dimen123
+\XeTeXLinkMargin=\dimen113
+\Fld@menulength=\count104
+\Field@Width=\dimen114
+\Fld@charsize=\dimen115
 Package hyperref Info: Hyper figures OFF on input line 6423.
 Package hyperref Info: Link nesting OFF on input line 6428.
 Package hyperref Info: Hyper index ON on input line 6431.
@@ -408,15 +395,15 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6448.
 Package hyperref Info: PDF/A mode OFF on input line 6453.
 LaTeX Info: Redefining \ref on input line 6493.
 LaTeX Info: Redefining \pageref on input line 6497.
-\Hy@abspage=\count108
-\c@Item=\count109
-\c@Hfootnote=\count110
+\Hy@abspage=\count105
+\c@Item=\count106
+\c@Hfootnote=\count107
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2019/09/28 v7.00a Hyperref driver for pdfTeX
-\Fld@listcount=\count111
-\c@bookmark@seq@number=\count112
+\Fld@listcount=\count108
+\c@bookmark@seq@number=\count109
 
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/rerunfilecheck.s
 ty
@@ -426,13 +413,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip46
 )
-Package hyperref Info: Option `unicode' set `true' on input line 29.
-(/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2019/09/28 v7.00a Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
-)
-Package hyperref Info: Option `breaklinks' set `true' on input line 29.
+Package hyperref Info: Option `colorlinks' set `true' on input line 33.
+Package hyperref Info: Option `breaklinks' set `true' on input line 33.
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -441,58 +423,60 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 147.
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 )) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2019/01/15
 Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
-\FV@CodeLineNo=\count113
+\FV@CodeLineNo=\count110
 \FV@InFile=\read1
 \FV@TabBox=\box29
-\c@FancyVerbLine=\count114
-\FV@StepNumber=\count115
+\c@FancyVerbLine=\count111
+\FV@StepNumber=\count112
 \FV@OutFile=\write3
 ) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip47
-\fb@frw=\dimen124
-\fb@frh=\dimen125
-\FrameRule=\dimen126
-\FrameSep=\dimen127
+\fb@frw=\dimen116
+\fb@frh=\dimen117
+\FrameRule=\dimen118
+\FrameSep=\dimen119
 ) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2019/02/06 v4.12 Multi-page Table package (DPC)
 \LTleft=\skip48
 \LTright=\skip49
 \LTpre=\skip50
 \LTpost=\skip51
-\LTchunksize=\count116
-\LTcapwidth=\dimen128
+\LTchunksize=\count113
+\LTcapwidth=\dimen120
 \LT@head=\box30
 \LT@firsthead=\box31
 \LT@foot=\box32
 \LT@lastfoot=\box33
-\LT@cols=\count117
-\LT@rows=\count118
-\c@LT@tables=\count119
-\c@LT@chunks=\count120
-\LT@p@ftn=\toks24
+\LT@cols=\count114
+\LT@rows=\count115
+\c@LT@tables=\count116
+\c@LT@chunks=\count117
+\LT@p@ftn=\toks23
 ) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2019/10/08 v1.6180339 publication quality tables
-\heavyrulewidth=\dimen129
-\lightrulewidth=\dimen130
-\cmidrulewidth=\dimen131
-\belowrulesep=\dimen132
-\belowbottomsep=\dimen133
-\aboverulesep=\dimen134
-\abovetopsep=\dimen135
-\cmidrulesep=\dimen136
-\cmidrulekern=\dimen137
-\defaultaddspace=\dimen138
-\@cmidla=\count121
-\@cmidlb=\count122
-\@aboverulesep=\dimen139
-\@belowrulesep=\dimen140
-\@thisruleclass=\count123
-\@lastruleclass=\count124
-\@thisrulewidth=\dimen141
+\heavyrulewidth=\dimen121
+\lightrulewidth=\dimen122
+\cmidrulewidth=\dimen123
+\belowrulesep=\dimen124
+\belowbottomsep=\dimen125
+\aboverulesep=\dimen126
+\abovetopsep=\dimen127
+\cmidrulesep=\dimen128
+\cmidrulekern=\dimen129
+\defaultaddspace=\dimen130
+\@cmidla=\count118
+\@cmidlb=\count119
+\@aboverulesep=\dimen131
+\@belowrulesep=\dimen132
+\@thisruleclass=\count120
+\@lastruleclass=\count121
+\@thisrulewidth=\dimen133
 ) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/graphics/graphics.sty
@@ -505,86 +489,52 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 )
-\Gin@req@height=\dimen142
-\Gin@req@width=\dimen143
+\Gin@req@height=\dimen134
+\Gin@req@width=\dimen135
 ) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/oberdiek/grffile.sty
 Package: grffile 2017/06/30 v1.18 Extended file name support for graphics (HO)
 Package grffile Info: Option `multidot' is set to `true'.
 Package grffile Info: Option `extendedchars' is set to `false'.
 Package grffile Info: Option `space' is set to `true'.
 Package grffile Info: \Gin@ii of package `graphicx' fixed on input line 494.
-) (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/titling/titling.sty
-Package: titling 2009/09/04 v2.1d maketitle typesetting
-\thanksmarkwidth=\skip52
-\thanksmargin=\skip53
-\droptitle=\skip54
-) (./Lesson5_rmd.aux)
+)
+
+LaTeX Warning: Unused global option(s):
+    [article].
+
+No file Lesson5_rmd.aux.
 \openout1 = `Lesson5_rmd.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-28.
+18.
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 12
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 118.
+LaTeX Font Info:    ... okay on input line 118.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 8.
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: <default>
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
-* \paperwidth=614.295pt
-* \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=10.0pt
-* \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
-* \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 128.
+Package hyperref Info: Link coloring ON on input line 118.
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
@@ -592,12 +542,11 @@ Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 .sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count125
+\c@section@level=\count122
 )
-LaTeX Info: Redefining \ref on input line 128.
-LaTeX Info: Redefining \pageref on input line 128.
-LaTeX Info: Redefining \nameref on input line 128.
-(./Lesson5_rmd.out) (./Lesson5_rmd.out)
+LaTeX Info: Redefining \ref on input line 118.
+LaTeX Info: Redefining \pageref on input line 118.
+LaTeX Info: Redefining \nameref on input line 118.
 \@outlinefile=\write4
 \openout4 = `Lesson5_rmd.out'.
 
@@ -619,67 +568,83 @@ G,.JBIG2,.JB2,.eps]
 cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
-)) [1
-
-{/Users/malishev/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
-41.
-(/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
+))
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-62.
+20.
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-62.
+20.
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-162.
+120.
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-162.
+120.
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 162.
+(Font)              <12> on input line 120.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 162.
+(Font)              <8> on input line 120.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 162.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 162
+(Font)              <6> on input line 120.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 120
 .
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 162
+LaTeX Font Info:    Trying to load font information for U+msb on input line 120
 .
 (/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+\tf@toc=\write5
+\openout5 = `Lesson5_rmd.toc'.
+
+[1
+
+{/Users/malishev/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+36.
+(/Users/malishev/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 168.
+(Font)              <10> on input line 157.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 168.
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.175 ...nter}\rule{0.5\linewidth}{\linethickness}
-                                                  \end{center} 
+(Font)              <7> on input line 157.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 157.
+[3]
+
+LaTeX Warning: File `https://github.com/darwinanddavis/EmoRyCodingClub/raw/mast
+er/img/opm.png' not found on input line 195.
+
+
+! Package pdftex.def Error: File `"https://github.com/darwinanddavis/EmoRyCodin
+gClub/raw/master/img/""opm".png' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.195 ...s/EmoRyCodingClub/raw/master/img/opm.png}
+                                                  . 
 Here is how much of TeX's memory you used:
- 11109 strings out of 494111
- 156827 string characters out of 6170576
- 223211 words of memory out of 5000000
- 15069 multiletter control sequences out of 15000+600000
- 63487 words of font info for 54 fonts, out of 8000000 for 9000
+ 10744 strings out of 494111
+ 151499 string characters out of 6170576
+ 214075 words of memory out of 5000000
+ 14710 multiletter control sequences out of 15000+600000
+ 63242 words of font info for 58 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 31i,8n,34p,236b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,8n,31p,271b,328s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 !  ==> Fatal error occurred, no output PDF file produced!

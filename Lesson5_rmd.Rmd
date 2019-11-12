@@ -92,7 +92,7 @@ Insert line breaks <br>  between text like this, which works best in large <br> 
 Insert a horizontal line break using five asterisks ('*****')
 
 <!-- horizontal line  -->  
-*****  
+<!-- *****    -->
   
 The raw Rmd file also has the code for inserting user comments.
 <!-- To do this, place the cursor on the text and type 'Cmd/Ctl + Shift + C' -->
@@ -116,11 +116,11 @@ $$
 }
 $$
 \  
+<!-- !!! uncheck the below to include images in HTML and word renders -->
+<!-- !!! pdf render code is found in the below commmit -->
+<!-- ## Embed images/gifs: -->
 
-
-## Embed images/gifs:
-
-![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.png).  
+![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.png).
 <!-- code for img in pdf: commit L5 rmd external test final - cmd line pdf/word knit -->
 
 \newpage    
