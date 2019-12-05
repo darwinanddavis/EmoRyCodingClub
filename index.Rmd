@@ -83,7 +83,8 @@ December 12, 2019
 
 ## Location   
 Room 2052  
-Wayne Rollins Building (click on marker for room directions)        
+Wayne Rollins Building   
+(Click on marker for room directions)          
 \  
 
 ```{r,echo=F}
