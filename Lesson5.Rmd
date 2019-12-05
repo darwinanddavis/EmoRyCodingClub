@@ -104,10 +104,8 @@ jharr <- theme_tufte()
 
 names(nyc_full)
 
-
 # glimpse(nyc_full)  
 nyc_full_ <- nyc_full %>% dplyr::filter(availability_30 > 0)
-
 nyc_full_ %>% glimpse
 
 ggplot() +

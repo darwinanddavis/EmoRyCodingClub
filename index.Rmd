@@ -77,13 +77,13 @@ knitr::include_graphics(c("img/mm.jpeg", "img/ddl.jpeg", "img/hw.jpg"))
 \    
 
 ## Date for next session  
-December 5, 2019      
+December 12, 2019      
 4:00 - 6:00 PM       
 \  
 
 ## Location   
 Room 2052  
-Wayne Rollins Building  
+Wayne Rollins Building (click on marker for room directions)        
 \  
 
 ```{r,echo=F}

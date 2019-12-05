@@ -147,7 +147,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -499,16 +498,18 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 <div id="apply-functions" class="section level1">
 <h1>Apply functions</h1>
 <p>The <code>purrr</code> package uses the following apply functions to apply function iteratively to a list or vector.</p>
+<p>First generate some random data in a list</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s1 &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">10</span>)  <span class="co"># random number sample</span>
+s2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">500</span>)  <span class="co"># sample 10 normally distributed random numbers around a mean of 500 </span>
+s3 &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>)  <span class="co"># random uniform distribution</span>
+ls1 &lt;-<span class="st"> </span><span class="kw">list</span>(s1, s2, s3)  <span class="co"># create a list of these data</span>
+ls1</code></pre></div>
 <p><code>map</code> Apply a function to each element of a list<br />
-<code>map2</code> Apply a function to each element of two lists simultaneously<br />
-<code>pmap</code> Apply a function to groups of elements from lists of lists<br />
-<code>lmap</code> Apply function to each list-element of a list or vector<br />
-<code>imap</code> Apply function to each element of a list or vector and its index</p>
+<code>map2</code> Apply a function to each element of two lists simultaneously</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(purrr)
 <span class="kw">set.seed</span>(<span class="dv">12</span>)
-ls1 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">sample</span>(<span class="dv">10</span>), <span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">500</span>), <span class="kw">runif</span>(<span class="dv">10</span>))  <span class="co"># create a list of data</span>
-ls2 &lt;-<span class="st"> </span><span class="kw">map</span>(ls1, sqrt)
 
+ls2 &lt;-<span class="st"> </span><span class="kw">map</span>(ls1, sqrt)
 <span class="kw">map</span>(ls1, mean)
 <span class="kw">map2</span>(ls1, ls2, sum)</code></pre></div>
 <p> </p>
@@ -548,6 +549,12 @@ ls1 <span class="op">%&gt;%</span><span class="st"> </span>vec_depth</code></pre
 <code>modify_at</code> Apply function to elements by name or index<br />
 <code>modify_if</code> Apply function to elements that pass a test<br />
 <code>modify_depth</code> Apply function to each element at a given level of a list</p>
+</div>
+<div id="further-useful-purrr-functions" class="section level1">
+<h1>Further useful <code>purrr</code> functions</h1>
+<p><code>pmap</code> Apply a function to groups of elements from lists of lists<br />
+<code>lmap</code> Apply function to each list-element of a list or vector<br />
+<code>imap</code> Apply function to each element of a list or vector and its index</p>
 </div>
 
 

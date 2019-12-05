@@ -108,22 +108,26 @@ ggplot(data = nyc, mapping = aes(x = reviews_per_month,y = number_of_reviews)) +
 # Apply functions  
 
 The `purrr` package uses the following apply functions to apply function iteratively to a list or vector.  
+  
+First generate some random data in a list  
+```{r}
+s1 <- sample(10) # random number sample
+s2 <- rnorm(10,500) # sample 10 normally distributed random numbers around a mean of 500 
+s3 <- runif(10) # random uniform distribution
+ls1 <- list(s1,s2,s3) # create a list of these data
+ls1
+```
 
 `map` Apply a function to each element of a list  
 `map2` Apply a function to each element of two lists simultaneously  
-`pmap` Apply a function to groups of elements from lists of lists  
-`lmap` Apply function to each list-element of a list or vector    
-`imap` Apply function to each element of a list or vector and its index  
 
 ```{r, eval=F}
 require(purrr)
 set.seed(12)
-ls1 <- list(sample(10),rnorm(10,500),runif(10)) # create a list of data
-ls2 <- map(ls1,sqrt) 
 
-map(ls1,mean)
-map2(ls1,ls2,sum)
-
+ls2 <- map(ls1,sqrt)   
+map(ls1,mean)  
+map2(ls1,ls2,sum)  
 ```
 \  
 
@@ -173,3 +177,8 @@ ls1 %>% vec_depth
 
 ```
 
+# Further useful `purrr` functions   
+  
+`pmap` Apply a function to groups of elements from lists of lists    
+`lmap` Apply function to each list-element of a list or vector      
+`imap` Apply function to each element of a list or vector and its index   
