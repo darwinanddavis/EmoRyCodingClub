@@ -491,31 +491,88 @@ div.tocify {
 <p>Recreate the below plot using the smaller NYC Airbnb dataset. The curve is a ‘loess’. To change the legend title, add the (unintuitive) <code>colour = &quot;your legend title&quot;</code> argument to the <code>labs()</code> function.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
-nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+nyc &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(url)
 nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># get smaller subet of data</span></code></pre></div>
 <p><img src="Lesson6_files/figure-html/unnamed-chunk-2-1.png" width="100%" /></p>
+</div>
+<div id="create-some-data-in-a-list" class="section level1">
+<h1>Create some data in a list</h1>
+<p>First generate some random data</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s1 &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">10</span>)  <span class="co"># random number sample</span>
+s2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">500</span>)  <span class="co"># sample 10 normally distributed random numbers around a mean of 500 </span>
+s3 &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>)  <span class="co"># random uniform distribution</span>
+s1</code></pre></div>
+<pre><code> [1] 10  5  7  1  4  6  2  8  9  3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s2</code></pre></div>
+<pre><code> [1] 500.6423 500.0957 499.2980 500.7375 499.3650 500.6711 498.8303 498.7721 500.6169 501.4899</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s3</code></pre></div>
+<pre><code> [1] 0.85691433 0.08744640 0.99705681 0.70925223 0.08252559 0.98210983 0.41555348 0.89203687
+ [9] 0.25888490 0.47394351</code></pre>
+<p>Now combine these into a list using <code>list()</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 &lt;-<span class="st"> </span><span class="kw">list</span>(s1, s2, s3)  <span class="co"># create a list of these data</span>
+ls1</code></pre></div>
+<pre><code>[[1]]
+ [1] 10  5  7  1  4  6  2  8  9  3
+
+[[2]]
+ [1] 500.6423 500.0957 499.2980 500.7375 499.3650 500.6711 498.8303 498.7721 500.6169 501.4899
+
+[[3]]
+ [1] 0.85691433 0.08744640 0.99705681 0.70925223 0.08252559 0.98210983 0.41555348 0.89203687
+ [9] 0.25888490 0.47394351</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 <span class="op">%&gt;%</span><span class="st"> </span>str</code></pre></div>
+<pre><code>List of 3
+ $ : int [1:10] 10 5 7 1 4 6 2 8 9 3
+ $ : num [1:10] 501 500 499 501 499 ...
+ $ : num [1:10] 0.8569 0.0874 0.9971 0.7093 0.0825 ...</code></pre>
+</div>
+<div id="list-indexing" class="section level1">
+<h1>List indexing</h1>
+<p>Print the <code>ls1</code> list object and take note of the index and elements</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1
+
+<span class="co"># index</span>
+ls1[<span class="dv">1</span>]
+ls1[<span class="dv">2</span>]
+ls1[<span class="dv">3</span>]
+
+<span class="co"># elements</span>
+ls1[[<span class="dv">1</span>]][[<span class="dv">1</span>]]
+ls1[[<span class="dv">1</span>]][[<span class="dv">3</span>]]
+ls1[[<span class="dv">2</span>]][[<span class="dv">10</span>]]
+ls1[[<span class="dv">3</span>]][[<span class="dv">11</span>]]  <span class="co"># ??</span>
+ls1[[<span class="dv">3</span>]] <span class="op">%&gt;%</span><span class="st"> </span>length
+
+<span class="co"># what&#39;s the difference?</span>
+ls1[<span class="dv">1</span>]
+ls1[[<span class="dv">1</span>]]</code></pre></div>
 </div>
 <div id="apply-functions" class="section level1">
 <h1>Apply functions</h1>
 <p>The <code>purrr</code> package uses the following apply functions to apply function iteratively to a list or vector.</p>
-<p>First generate some random data in a list</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s1 &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">10</span>)  <span class="co"># random number sample</span>
-s2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">500</span>)  <span class="co"># sample 10 normally distributed random numbers around a mean of 500 </span>
-s3 &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>)  <span class="co"># random uniform distribution</span>
-ls1 &lt;-<span class="st"> </span><span class="kw">list</span>(s1, s2, s3)  <span class="co"># create a list of these data</span>
-ls1</code></pre></div>
 <p><code>map</code> Apply a function to each element of a list<br />
 <code>map2</code> Apply a function to each element of two lists simultaneously</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(purrr)
-<span class="kw">set.seed</span>(<span class="dv">12</span>)
-
-ls2 &lt;-<span class="st"> </span><span class="kw">map</span>(ls1, sqrt)
-<span class="kw">map</span>(ls1, mean)
-<span class="kw">map2</span>(ls1, ls2, sum)</code></pre></div>
+<span class="kw">set.seed</span>(<span class="dv">12</span>)  <span class="co"># set a number seed to generate reprodicible results for random data  </span>
+<span class="kw">map</span>(ls1, mean)  <span class="co"># get the mean </span></code></pre></div>
+<div id="exercise-1" class="section level2">
+<h2>Exercise 1</h2>
+<p>Apply summary stats to the <code>ls1</code> list data<br />
+* <code>sum</code><br />
+* <code>summary</code><br />
+* <code>max</code><br />
+* <code>sqrt</code> * <code>length</code> and <code>lengths</code></p>
+<p>What happens when you run the following and why?</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(ls1)
+<span class="kw">sum</span>(ls1)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls2 &lt;-<span class="st"> </span><span class="kw">map</span>(ls1, sqrt)</code></pre></div>
 <p> </p>
 </div>
-<div id="filter-lists" class="section level1">
-<h1>Filter lists</h1>
+</div>
+<div id="exercise-2" class="section level1">
+<h1>Exercise 2</h1>
+<div id="filter-lists" class="section level2">
+<h2>Filter lists</h2>
 <p><code>pluck</code> Select an element by name or index<br />
 <code>keep</code> Select elements that pass a logical test<br />
 <code>discard</code> Select elements that do not pass a logical test<br />
@@ -527,9 +584,26 @@ ls1[<span class="dv">3</span>][[<span class="dv">1</span>]]  <span class="co"># 
 <span class="kw">keep</span>(ls2, is.na)
 <span class="kw">discard</span>(ls1, is.na)
 <span class="kw">compact</span>(ls1)</code></pre></div>
+<p>Store plots in lists for easy retrieval</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">10</span>)
+ls1_df &lt;-<span class="st"> </span>ls1 <span class="op">%&gt;%</span><span class="st"> </span>data.frame
+
+<span class="co"># create some plots</span>
+<span class="kw">names</span>(ls1_df) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>)
+ls1p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(ls1_df, <span class="kw">aes</span>(A, B, <span class="dt">size =</span> A)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">color =</span> <span class="st">&quot;orange&quot;</span>, <span class="dt">show.legend =</span> F) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>(<span class="dt">color =</span> <span class="st">&quot;orange&quot;</span>, 
+    <span class="dt">show.legend =</span> F) <span class="op">+</span><span class="st"> </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Access plots as list indices&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()
+ls2p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(ls1_df) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(A, C, <span class="dt">color =</span> A, <span class="dt">size =</span> A), <span class="dt">show.legend =</span> F) <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()
+<span class="co"># store in list</span>
+plot_list &lt;-<span class="st"> </span><span class="kw">list</span>(ls1p, ls2p)
+<span class="co"># pluck individual plots from list</span>
+<span class="kw">pluck</span>(plot_list, <span class="dv">1</span>)</code></pre></div>
+<p><img src="Lesson6_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 </div>
-<div id="summarise-lists" class="section level1">
-<h1>Summarise lists</h1>
+</div>
+<div id="exercise-3" class="section level1">
+<h1>Exercise 3</h1>
+<div id="summarise-lists" class="section level2">
+<h2>Summarise lists</h2>
 <p><code>every</code> Do all elements pass a test?<br />
 <code>some</code> Do some elements pass a test?<br />
 <code>has_element</code> Does a list contain an element?<br />
@@ -543,12 +617,16 @@ ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">dete
 ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">detect_index</span>(is.character)
 ls1 <span class="op">%&gt;%</span><span class="st"> </span>vec_depth</code></pre></div>
 </div>
-<div id="transform-lists" class="section level1">
-<h1>Transform lists</h1>
+</div>
+<div id="exercise-4" class="section level1">
+<h1>Exercise 4</h1>
+<div id="transform-lists" class="section level2">
+<h2>Transform lists</h2>
 <p><code>modify</code> Apply function to each element<br />
 <code>modify_at</code> Apply function to elements by name or index<br />
 <code>modify_if</code> Apply function to elements that pass a test<br />
 <code>modify_depth</code> Apply function to each element at a given level of a list</p>
+</div>
 </div>
 <div id="further-useful-purrr-functions" class="section level1">
 <h1>Further useful <code>purrr</code> functions</h1>
