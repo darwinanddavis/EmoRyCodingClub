@@ -123,7 +123,8 @@ ls1 <- list(s1,s2,s3) # create a list of these data
 ls1
 ls1 %>% str
 ```
-# List indexing  
+# Exercise 0  
+## List indexing  
 Print the `ls1` list object and take note of the index and elements   
 ```{r}
 ls1
@@ -146,12 +147,11 @@ ls1[[1]]
 
 ```
 
-# Apply functions  
+## Apply functions  
 
 The `purrr` package uses the following apply functions to apply function iteratively to a list or vector.    
 
 `map` Apply a function to each element of a list  
-`map2` Apply a function to each element of two lists simultaneously  
 
 ```{r}
 require(purrr)
@@ -163,19 +163,15 @@ Apply summary stats to the `ls1` list data
 * `sum`  
 * `summary`  
 * `max`  
-* `sqrt`
-* `length` and `lengths`    
+* `sqrt`  
+* `length` and `lengths`      
 
 What happens when you run the following and why?  
 ```{r}
 mean(ls1)
 sum(ls1)  
 ```
-
-```{r}
-ls2 <- map(ls1,sqrt)   
-```
-\  
+\    
 
 # Exercise 2  
 ## Filter lists 
@@ -183,20 +179,22 @@ ls2 <- map(ls1,sqrt)
 `keep` Select elements that pass a logical test   
 `discard` Select elements that do not pass a logical test  
 `compact` Drop empty elements  
-`head_while` Return head elements until one does not pass. Also `tail_while`.   
 
 ```{r,eval=F}
 pluck(ls1,3) # advantage = returns numeric 
 ls1[3][[1]] # this is the same as above
 
-keep(ls2, is.na)
-discard(ls1, is.na)
-compact(ls1)
+func <- map(ls1,mean) > 10 # create a logical test (a predicate function)  
+keep(ls1, func)
+discard(ls1, func)
+
+ls2 <- list(1,NA,NULL,integer(0),list()) # list of empty and null things  
+compact(ls2)
 
 ```
 
-Store plots in lists for easy retrieval  
-```{r,eval=T}
+Store plots in lists for easy retrieval. Create two plots of the `ls1` data and store in a list called `plot_list`.    
+```{r,echo=F,eval=T}
 set.seed(10)
 ls1_df <- ls1 %>% 
   data.frame
@@ -207,10 +205,19 @@ ls1p <- ggplot(ls1_df,aes(A,B,size=A))+geom_point(color="orange",show.legend = F
 ls2p <- ggplot(ls1_df)+geom_point(aes(A,C,color=A,size=A),show.legend = F) + theme_minimal()
 # store in list
 plot_list <- list(ls1p,ls2p) 
+```
+
+```{r,eval=F}
+plot_list <- list(ls1p,ls2p) 
+```
+
+PLot the below plot from the object `plot_list`    
+```{r,echo=F,eval=T}
 # pluck individual plots from list  
 pluck(plot_list,1)
 
 ```
+
 
 # Exercise 3
 ## Summarise lists    
