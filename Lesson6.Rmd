@@ -4,7 +4,7 @@ params:
   title: "Lists, lists, lists and applying functions with `purrr`"
   bookchapter_name: "Cheat sheet for the `purrr` package"    
   bookchapter_section: "https://purrr.tidyverse.org/"  
-  functions: "`map`, `map2`"
+  functions: "`map`, `pluck`, `keep`, `discard`, `compact`"
   packages: "`dplyr`, `purrr`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
