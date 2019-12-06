@@ -211,7 +211,7 @@ plot_list <- list(ls1p,ls2p)
 plot_list <- list(ls1p,ls2p) 
 ```
 
-PLot the below plot from the object `plot_list`    
+Plot your plot from the object `plot_list`      
 ```{r,echo=F,eval=T}
 # pluck individual plots from list  
 pluck(plot_list,1)

@@ -502,29 +502,29 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 s2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">500</span>)  <span class="co"># sample 10 normally distributed random numbers around a mean of 500 </span>
 s3 &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>)  <span class="co"># random uniform distribution</span>
 s1</code></pre></div>
-<pre><code> [1]  3  2  5 10  4  8  6  1  9  7</code></pre>
+<pre><code> [1]  1  4  6  9  7  8  3  5 10  2</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s2</code></pre></div>
-<pre><code> [1] 499.9535 499.2976 498.3935 499.7979 502.0647 500.6060 501.3614 501.0542 500.2144 500.0021</code></pre>
+<pre><code> [1] 500.2460 500.2809 500.9392 499.1901 500.2264 499.7727 498.7389 500.3072 499.1036 498.9181</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s3</code></pre></div>
-<pre><code> [1] 0.24694887 0.86535646 0.18281281 0.01762393 0.55839933 0.24648265 0.03111196 0.63498036
- [9] 0.26214007 0.14471090</code></pre>
+<pre><code> [1] 0.54222658 0.56274886 0.08820573 0.85006973 0.47840211 0.82005969 0.71615639 0.44915482
+ [9] 0.46046692 0.64506884</code></pre>
 <p>Now combine these into a list using <code>list()</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 &lt;-<span class="st"> </span><span class="kw">list</span>(s1, s2, s3)  <span class="co"># create a list of these data</span>
 ls1</code></pre></div>
 <pre><code>[[1]]
- [1]  3  2  5 10  4  8  6  1  9  7
+ [1]  1  4  6  9  7  8  3  5 10  2
 
 [[2]]
- [1] 499.9535 499.2976 498.3935 499.7979 502.0647 500.6060 501.3614 501.0542 500.2144 500.0021
+ [1] 500.2460 500.2809 500.9392 499.1901 500.2264 499.7727 498.7389 500.3072 499.1036 498.9181
 
 [[3]]
- [1] 0.24694887 0.86535646 0.18281281 0.01762393 0.55839933 0.24648265 0.03111196 0.63498036
- [9] 0.26214007 0.14471090</code></pre>
+ [1] 0.54222658 0.56274886 0.08820573 0.85006973 0.47840211 0.82005969 0.71615639 0.44915482
+ [9] 0.46046692 0.64506884</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 <span class="op">%&gt;%</span><span class="st"> </span>str</code></pre></div>
 <pre><code>List of 3
- $ : int [1:10] 3 2 5 10 4 8 6 1 9 7
- $ : num [1:10] 500 499 498 500 502 ...
- $ : num [1:10] 0.2469 0.8654 0.1828 0.0176 0.5584 ...</code></pre>
+ $ : int [1:10] 1 4 6 9 7 8 3 5 10 2
+ $ : num [1:10] 500 500 501 499 500 ...
+ $ : num [1:10] 0.5422 0.5627 0.0882 0.8501 0.4784 ...</code></pre>
 </div>
 <div id="exercise-0" class="section level1">
 <h1>Exercise 0</h1>
@@ -590,7 +590,7 @@ ls2 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">
 <span class="kw">compact</span>(ls2)</code></pre></div>
 <p>Store plots in lists for easy retrieval. Create two plots of the <code>ls1</code> data (called <code>ls1p</code> and <code>ls2p</code>) and store in a list called <code>plot_list</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">plot_list &lt;-<span class="st"> </span><span class="kw">list</span>(ls1p, ls2p)</code></pre></div>
-<p>PLot the below plot from the object <code>plot_list</code><br />
+<p>Plot your plot from the object <code>plot_list</code><br />
 <img src="Lesson6_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 </div>
