@@ -193,7 +193,7 @@ compact(ls2)
 
 ```
 
-Store plots in lists for easy retrieval. Create two plots of the `ls1` data and store in a list called `plot_list`.    
+Store plots in lists for easy retrieval. Create two plots of the `ls1` data (called `ls1p` and `ls2p`) and store in a list called `plot_list`.      
 ```{r,echo=F,eval=T}
 set.seed(10)
 ls1_df <- ls1 %>% 
