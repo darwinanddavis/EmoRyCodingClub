@@ -120,7 +120,7 @@ $$
 <!-- !!! pdf render code is found in the below commmit -->
 <!-- ## Embed images/gifs: -->
 
-![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.png).
+<!-- ![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.png). -->
 <!-- code for img in pdf: commit L5 rmd external test final - cmd line pdf/word knit -->
 
 \newpage    
