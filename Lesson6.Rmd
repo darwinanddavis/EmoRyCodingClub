@@ -193,7 +193,17 @@ compact(ls2)
 
 ```
 
-Store plots in lists for easy retrieval. Create two plots of the `ls1` data (called `ls1p` and `ls2p`) and store in a list called `plot_list`.      
+Store plots in lists for easy retrieval. Create two plots of the `ls1` data (called `ls1p` and `ls2p`) and store in a list called `plot_list`.  
+\  
+
+First turn the list into a dataframe so `ggplot` understands it.  
+
+```{r}
+ls1_df <- ls1 %>% 
+  data.frame
+names(ls1_df) <- c("A","B","C")
+```
+
 ```{r,echo=F,eval=T}
 set.seed(10)
 ls1_df <- ls1 %>% 
