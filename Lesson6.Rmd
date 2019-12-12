@@ -257,6 +257,9 @@ ls1 %>% vec_depth
 `modify_if` Apply function to elements that pass a test  
 `modify_depth` Apply function to each element at a given level of a list  
 ```{r}
+ls1_repeat <- list(list(list(ls1))) # create list of lists 
+ls1_repeat %>% map(mean) # list is indexed too far down 
+ls1_repeat %>% modify_depth(4,mean) # access deep list indices 
 
 ```
 

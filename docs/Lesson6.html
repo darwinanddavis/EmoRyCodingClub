@@ -502,29 +502,29 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 s2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">500</span>)  <span class="co"># sample 10 normally distributed random numbers around a mean of 500 </span>
 s3 &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>)  <span class="co"># random uniform distribution</span>
 s1</code></pre></div>
-<pre><code> [1]  7  5  8 10  4  9  3  6  1  2</code></pre>
+<pre><code> [1]  7  4  8  3  5  9  1 10  2  6</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s2</code></pre></div>
-<pre><code> [1] 498.9850 500.0405 500.4215 499.9844 499.8717 497.8149 500.3813 500.4843 500.1187 497.7524</code></pre>
+<pre><code> [1] 501.0410 499.8889 500.0145 500.8875 501.6772 500.2361 500.2561 501.2953 499.7995 500.4458</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s3</code></pre></div>
-<pre><code> [1] 0.10592530 0.59823899 0.27639138 0.82136831 0.95025098 0.60134636 0.85144451 0.66079056
- [9] 0.23807166 0.04864334</code></pre>
+<pre><code> [1] 0.33174294 0.56738068 0.62730972 0.25044256 0.01892704 0.50252198 0.39586248 0.85352011
+ [9] 0.64010661 0.77659533</code></pre>
 <p>Now combine these into a list using <code>list()</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 &lt;-<span class="st"> </span><span class="kw">list</span>(s1, s2, s3)  <span class="co"># create a list of these data</span>
 ls1</code></pre></div>
 <pre><code>[[1]]
- [1]  7  5  8 10  4  9  3  6  1  2
+ [1]  7  4  8  3  5  9  1 10  2  6
 
 [[2]]
- [1] 498.9850 500.0405 500.4215 499.9844 499.8717 497.8149 500.3813 500.4843 500.1187 497.7524
+ [1] 501.0410 499.8889 500.0145 500.8875 501.6772 500.2361 500.2561 501.2953 499.7995 500.4458
 
 [[3]]
- [1] 0.10592530 0.59823899 0.27639138 0.82136831 0.95025098 0.60134636 0.85144451 0.66079056
- [9] 0.23807166 0.04864334</code></pre>
+ [1] 0.33174294 0.56738068 0.62730972 0.25044256 0.01892704 0.50252198 0.39586248 0.85352011
+ [9] 0.64010661 0.77659533</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 <span class="op">%&gt;%</span><span class="st"> </span>str</code></pre></div>
 <pre><code>List of 3
- $ : int [1:10] 7 5 8 10 4 9 3 6 1 2
- $ : num [1:10] 499 500 500 500 500 ...
- $ : num [1:10] 0.106 0.598 0.276 0.821 0.95 ...</code></pre>
+ $ : int [1:10] 7 4 8 3 5 9 1 10 2 6
+ $ : num [1:10] 501 500 500 501 502 ...
+ $ : num [1:10] 0.3317 0.5674 0.6273 0.2504 0.0189 ...</code></pre>
 </div>
 <div id="exercise-0" class="section level1">
 <h1>Exercise 0</h1>
@@ -624,6 +624,9 @@ ls1 <span class="op">%&gt;%</span><span class="st"> </span>vec_depth</code></pre
 <code>modify_at</code> Apply function to elements by name or index<br />
 <code>modify_if</code> Apply function to elements that pass a test<br />
 <code>modify_depth</code> Apply function to each element at a given level of a list</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1_repeat &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">list</span>(<span class="kw">list</span>(ls1)))  <span class="co"># create list of lists </span>
+ls1_repeat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(mean)  <span class="co"># list is indexed too far down </span>
+ls1_repeat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">modify_depth</span>(<span class="dv">4</span>, mean)  <span class="co"># access deep list indices </span></code></pre></div>
 </div>
 </div>
 <div id="further-useful-purrr-functions" class="section level1">
