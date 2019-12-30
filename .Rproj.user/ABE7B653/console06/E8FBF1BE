@@ -1,425 +1,4 @@
 
-index.Rmd
-index.html
-lookhere
-nyc_compact.csv
-packages_lesson1.txt
-packages_lesson2.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ function [K[K[K[K[K[K[K[K[Kls
-%
-Lesson1.Rmd
-Lesson1.html
-Lesson1_files
-Lesson2.Rmd
-Lesson2.html
-Lesson2_files
-Lesson3.Rmd
-Lesson3.html
-Lesson3_files
-Lesson4.Rmd
-Lesson4.html
-Lesson5.Rmd
-Lesson5_cache
-Lesson5_files
-Lesson5_rmd.Rmd
-Lesson5_rmd.docx
-Lesson5_rmd.log
-Lesson5_rmd.md
-Lesson5_rmd.tex
-Lesson5_rmd_cache
-Lesson5_rmd_files
-Lesson6.Rmd
-Lesson7.Rmd
-Lesson7_dofirst.pdf
-README.md
-_site.yml
-admin
-admin_
-docs
-emorycodingclub.Rproj
-functions_lesson1.txt
-functions_lesson2.txt
-img
-index.Rmd
-index.html
-lookhere
-nyc_compact.csv
-packages_lesson1.txt
-packages_lesson2.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls[Kls
-%
-Lesson1.Rmd
-Lesson1.html
-Lesson1_files
-Lesson2.Rmd
-Lesson2.html
-Lesson2_files
-Lesson3.Rmd
-Lesson3.html
-Lesson3_files
-Lesson4.Rmd
-Lesson4.html
-Lesson5.Rmd
-Lesson5_cache
-Lesson5_files
-Lesson5_rmd.Rmd
-Lesson5_rmd.docx
-Lesson5_rmd.log
-Lesson5_rmd.md
-Lesson5_rmd.tex
-Lesson5_rmd_cache
-Lesson5_rmd_files
-Lesson6.Rmd
-Lesson7.Rmd
-Lesson7_dofirst.pdf
-README.md
-_site.yml
-admin
-admin_
-docs
-emorycodingclub.Rproj
-functions_lesson1.txt
-functions_lesson2.txt
-img
-index.Rmd
-index.html
-lookhere
-nyc_compact.csv
-packages_lesson1.txt
-packages_lesson2.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls -a[K[K[K[K[Kgit int[Kit[K[K[K[K[K[K[K[Kgit add .[K[K[K[K[Kstatus
-On branch master
-Your branch is up-to-date with 'origin/master'.
-Changes not staged for commit:
-  (use "git add/rm <file>..." to update what will be committed)
-  (use "git checkout -- <file>..." to discard changes in working directory)
-
-	[31mmodified:   .Rproj.user/ABE7B653/console06/E8FBF1BE[m
-	[31mmodified:   Lesson5_rmd.Rmd[m
-	[31mdeleted:    Lesson5_rmd.html[m
-	[31mmodified:   Lesson5_rmd.log[m
-	[31mmodified:   Lesson5_rmd.md[m
-	[31mmodified:   Lesson5_rmd.tex[m
-	[31mdeleted:    Lesson5_rmd_cache/html/set-options_4c7194356188f9ab0be5011e5e924d90.RData[m
-	[31mdeleted:    Lesson5_rmd_cache/html/set-options_4c7194356188f9ab0be5011e5e924d90.rdb[m
-	[31mdeleted:    Lesson5_rmd_cache/html/set-options_4c7194356188f9ab0be5011e5e924d90.rdx[m
-	[31mdeleted:    Lesson5_rmd_cache/latex/set-options_5f455cb83b17ae5719b432da9b2e9c2c.RData[m
-	[31mdeleted:    Lesson5_rmd_cache/latex/set-options_5f455cb83b17ae5719b432da9b2e9c2c.rdb[m
-	[31mdeleted:    Lesson5_rmd_cache/latex/set-options_5f455cb83b17ae5719b432da9b2e9c2c.rdx[m
-	[31mdeleted:    Lesson5_rmd_cache/latex/unnamed-chunk-5_5f9667734009bb1ee08ca4db3f03dbca.RData[m
-	[31mdeleted:    Lesson5_rmd_cache/latex/unnamed-chunk-5_5f9667734009bb1ee08ca4db3f03dbca.rdb[m
-	[31mdeleted:    Lesson5_rmd_cache/latex/unnamed-chunk-5_5f9667734009bb1ee08ca4db3f03dbca.rdx[m
-	[31mmodified:   Lesson5_rmd_files/figure-docx/unnamed-chunk-2-1.png[m
-	[31mmodified:   Lesson5_rmd_files/figure-docx/unnamed-chunk-3-1.png[m
-	[31mmodified:   Lesson5_rmd_files/figure-docx/unnamed-chunk-4-1.png[m
-	[31mmodified:   Lesson5_rmd_files/figure-latex/unnamed-chunk-2-1.pdf[m
-	[31mmodified:   Lesson5_rmd_files/figure-latex/unnamed-chunk-3-1.pdf[m
-	[31mmodified:   Lesson5_rmd_files/figure-latex/unnamed-chunk-4-1.pdf[m
-	[31mmodified:   Lesson5_rmd_files/figure-latex/unnamed-chunk-5-1.pdf[m
-	[31mmodified:   docs/Lesson5_rmd.docx[m
-	[31mmodified:   docs/Lesson5_rmd.html[m
-	[31mmodified:   docs/Lesson5_rmd.log[m
-	[31mmodified:   docs/Lesson5_rmd.pdf[m
-	[31mmodified:   docs/Lesson5_rmd.tex[m
-	[31mmodified:   docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-2-1.png[m
-	[31mmodified:   docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-3-1.png[m
-	[31mmodified:   docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-4-1.png[m
-	[31mmodified:   docs/Lesson5_rmd_files/figure-latex/unnamed-chunk-2-1.pdf[m
-	[31mmodified:   docs/Lesson5_rmd_files/figure-latex/unnamed-chunk-3-1.pdf[m
-	[31mmodified:   docs/Lesson5_rmd_files/figure-latex/unnamed-chunk-4-1.pdf[m
-	[31mmodified:   docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-2-1.png[m
-	[31mmodified:   docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-3-1.png[m
-	[31mmodified:   docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-4-1.png[m
-	[31mmodified:   docs/index.html[m
-	[31mdeleted:    site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js[m
-	[31mdeleted:    site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/bootstrap-theme.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.map[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/bootstrap.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/bootstrap.css.map[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/bootstrap.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/cerulean.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/cosmo.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/darkly.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/flatly.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/Lato.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/LatoBold.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/LatoItalic.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/NewsCycle.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/OpenSans.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/Raleway.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/RalewayBold.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/Roboto.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/RobotoBold.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/RobotoLight.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/fonts/Ubuntu.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/journal.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/lumen.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/paper.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/readable.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/sandstone.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/simplex.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/spacelab.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/united.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/css/yeti.min.css[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/js/bootstrap.js[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/js/bootstrap.min.js[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/js/npm.js[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/shim/html5shiv.min.js[m
-	[31mdeleted:    site_libs/bootstrap-3.3.5/shim/respond.min.js[m
-	[31mdeleted:    site_libs/crosstalk-1.0.0/css/crosstalk.css[m
-	[31mdeleted:    site_libs/crosstalk-1.0.0/js/crosstalk.js[m
-	[31mdeleted:    site_libs/crosstalk-1.0.0/js/crosstalk.js.map[m
-	[31mdeleted:    site_libs/crosstalk-1.0.0/js/crosstalk.min.js[m
-	[31mdeleted:    site_libs/crosstalk-1.0.0/js/crosstalk.min.js.map[m
-	[31mdeleted:    site_libs/datatables-binding-0.9/datatables.js[m
-	[31mdeleted:    site_libs/datatables-css-0.0.0/datatables-crosstalk.css[m
-	[31mdeleted:    site_libs/dt-core-1.10.19/css/jquery.dataTables.extra.css[m
-	[31mdeleted:    site_libs/dt-core-1.10.19/css/jquery.dataTables.min.css[m
-	[31mdeleted:    site_libs/dt-core-1.10.19/js/jquery.dataTables.min.js[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/css/all.css[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/css/v4-shims.css[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.eot[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.svg[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.ttf[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff2[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.eot[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.svg[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.ttf[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff2[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.eot[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.svg[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.ttf[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff[m
-	[31mdeleted:    site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff2[m
-	[31mdeleted:    site_libs/htmlwidgets-1.5.1/htmlwidgets.js[m
-	[31mdeleted:    site_libs/jquery-1.11.3/jquery.min.js[m
-	[31mdeleted:    site_libs/jquery-1.12.4/LICENSE.txt[m
-	[31mdeleted:    site_libs/jquery-1.12.4/jquery.min.js[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/README[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/images/ui-icons_444444_256x240.png[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/images/ui-icons_555555_256x240.png[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/images/ui-icons_777620_256x240.png[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/images/ui-icons_777777_256x240.png[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/index.html[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/jquery-ui.css[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/jquery-ui.js[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/jquery-ui.min.css[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/jquery-ui.min.js[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/jquery-ui.structure.css[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/jquery-ui.structure.min.css[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/jquery-ui.theme.css[m
-	[31mdeleted:    site_libs/jqueryui-1.11.4/jquery-ui.theme.min.css[m
-	[31mdeleted:    site_libs/leaflet-1.3.1/images/layers-2x.png[m
-	[31mdeleted:    site_libs/leaflet-1.3.1/images/layers.png[m
-	[31mdeleted:    site_libs/leaflet-1.3.1/images/marker-icon-2x.png[m
-	[31mdeleted:    site_libs/leaflet-1.3.1/images/marker-icon.png[m
-	[31mdeleted:    site_libs/leaflet-1.3.1/images/marker-shadow.png[m
-	[31mdeleted:    site_libs/leaflet-1.3.1/leaflet.css[m
-	[31mdeleted:    site_libs/leaflet-1.3.1/leaflet.js[m
-	[31mdeleted:    site_libs/leaflet-binding-2.0.2/leaflet.js[m
-	[31mdeleted:    site_libs/leafletfix-1.0.0/leafletfix.css[m
-	[31mdeleted:    site_libs/navigation-1.1/codefolding.js[m
-	[31mdeleted:    site_libs/navigation-1.1/sourceembed.js[m
-	[31mdeleted:    site_libs/navigation-1.1/tabsets.js[m
-	[31mdeleted:    site_libs/nouislider-7.0.10/jquery.nouislider.min.css[m
-	[31mdeleted:    site_libs/nouislider-7.0.10/jquery.nouislider.min.js[m
-	[31mdeleted:    site_libs/plotly-binding-4.9.0/plotly.js[m
-	[31mdeleted:    site_libs/plotly-htmlwidgets-css-1.46.1/plotly-htmlwidgets.css[m
-	[31mdeleted:    site_libs/plotly-main-1.46.1/plotly-latest.min.js[m
-	[31mdeleted:    site_libs/rstudio_leaflet-1.3.1/images/1px.png[m
-	[31mdeleted:    site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css[m
-	[31mdeleted:    site_libs/selectize-0.12.0/selectize.bootstrap3.css[m
-	[31mdeleted:    site_libs/selectize-0.12.0/selectize.min.js[m
-	[31mdeleted:    site_libs/tocify-1.9.1/jquery.tocify.css[m
-	[31mdeleted:    site_libs/tocify-1.9.1/jquery.tocify.js[m
-	[31mdeleted:    site_libs/typedarray-0.1/typedarray.min.js[m
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	[31mLesson5_rmd.docx[m
-	[31mLesson5_rmd_cache/docx/unnamed-chunk-5_d94220c13d4aa1805016144792b25c99.RData[m
-	[31mLesson5_rmd_cache/docx/unnamed-chunk-5_d94220c13d4aa1805016144792b25c99.rdb[m
-	[31mLesson5_rmd_cache/docx/unnamed-chunk-5_d94220c13d4aa1805016144792b25c99.rdx[m
-	[31mLesson5_rmd_cache/html/set-options_5c55482a51bb223219d7bf8d19eaae03.RData[m
-	[31mLesson5_rmd_cache/html/set-options_5c55482a51bb223219d7bf8d19eaae03.rdb[m
-	[31mLesson5_rmd_cache/html/set-options_5c55482a51bb223219d7bf8d19eaae03.rdx[m
-	[31mLesson5_rmd_cache/latex/set-options_56d36cb1760710dfb3d4efb5228b1fca.RData[m
-	[31mLesson5_rmd_cache/latex/set-options_56d36cb1760710dfb3d4efb5228b1fca.rdb[m
-	[31mLesson5_rmd_cache/latex/set-options_56d36cb1760710dfb3d4efb5228b1fca.rdx[m
-	[31mLesson5_rmd_cache/latex/unnamed-chunk-5_e1a142ee7018f401bfff732bd0e0e32c.RData[m
-	[31mLesson5_rmd_cache/latex/unnamed-chunk-5_e1a142ee7018f401bfff732bd0e0e32c.rdb[m
-	[31mLesson5_rmd_cache/latex/unnamed-chunk-5_e1a142ee7018f401bfff732bd0e0e32c.rdx[m
-	[31mLesson5_rmd_files/figure-docx/unnamed-chunk-5-1.png[m
-	[31mdocs/Lesson5_rmd_files/figure-docx/unnamed-chunk-5-1.png[m
-	[31mdocs/Lesson5_rmd_files/figure-latex/unnamed-chunk-5-1.pdf[m
-	[31mdocs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-5-1.png[m
-
-no changes added to commit (use "git add" and/or "git commit -a")
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''[K[1P'[1P'[1P'[1P'[1P'[1P'i't' '-'m' '[C'[C'i'' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn'''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci''t'' ''c''[1P''g''i''t''[1P''[1P''[1P''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pstatus
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[Kgit [K[K[K[Kgit add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''L'5' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ''r'm'd' 'e'x't'e'r'n'a'l' 't'e's't' 'p'a's's' '-'-' 'l'[1P'o'n'l'[1P'[1P'[1P'c'm'd' 'l'i'n'e' 'p'f'[1P'd'f'/'w'o'r'd' 'k'n' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ci''t'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[A[9Padd .
-[K
-[K[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'L5 rrmd external test pass -- cmd line pdf/word knitt'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -- cmd line pdf/word knit'[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C -- cmd line pdf/word knit' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P[1@fi -- cmd line pdf/word knit' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn -- cmd line pdf/word knit''[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca -- cmd line pdf/word knit'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cl -- cmd line pdf/word knit'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C cmd line pdf/word knit[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-[master 0322f25] L5 rmd external test final - cmd line pdf/word knit
- 168 files changed, 680 insertions(+), 44878 deletions(-)
- create mode 100644 Lesson5_rmd.docx
- delete mode 100644 Lesson5_rmd.html
- create mode 100644 Lesson5_rmd_cache/docx/unnamed-chunk-5_d94220c13d4aa1805016144792b25c99.RData
- create mode 100644 Lesson5_rmd_cache/docx/unnamed-chunk-5_d94220c13d4aa1805016144792b25c99.rdb
- create mode 100644 Lesson5_rmd_cache/docx/unnamed-chunk-5_d94220c13d4aa1805016144792b25c99.rdx
- delete mode 100644 Lesson5_rmd_cache/html/set-options_4c7194356188f9ab0be5011e5e924d90.RData
- create mode 100644 Lesson5_rmd_cache/html/set-options_921b0c02b598ba8993187b7279112652.RData
- rename Lesson5_rmd_cache/html/{set-options_4c7194356188f9ab0be5011e5e924d90.rdb => set-options_921b0c02b598ba8993187b7279112652.rdb} (100%)
- rename Lesson5_rmd_cache/html/{set-options_4c7194356188f9ab0be5011e5e924d90.rdx => set-options_921b0c02b598ba8993187b7279112652.rdx} (100%)
- rename Lesson5_rmd_cache/latex/{set-options_5f455cb83b17ae5719b432da9b2e9c2c.RData => set-options_56d36cb1760710dfb3d4efb5228b1fca.RData} (95%)
- rename Lesson5_rmd_cache/latex/{set-options_5f455cb83b17ae5719b432da9b2e9c2c.rdb => set-options_56d36cb1760710dfb3d4efb5228b1fca.rdb} (100%)
- rename Lesson5_rmd_cache/latex/{set-options_5f455cb83b17ae5719b432da9b2e9c2c.rdx => set-options_56d36cb1760710dfb3d4efb5228b1fca.rdx} (100%)
- rewrite Lesson5_rmd_files/figure-docx/unnamed-chunk-2-1.png (98%)
- copy Lesson5_rmd_files/figure-docx/{unnamed-chunk-2-1.png => unnamed-chunk-3-1.png} (100%)
- rename Lesson5_rmd_files/figure-docx/{unnamed-chunk-3-1.png => unnamed-chunk-4-1.png} (100%)
- rename Lesson5_rmd_files/figure-docx/{unnamed-chunk-4-1.png => unnamed-chunk-5-1.png} (100%)
- rewrite docs/Lesson5_rmd_files/figure-docx/unnamed-chunk-2-1.png (98%)
- copy docs/Lesson5_rmd_files/figure-docx/{unnamed-chunk-2-1.png => unnamed-chunk-3-1.png} (100%)
- rename docs/Lesson5_rmd_files/figure-docx/{unnamed-chunk-3-1.png => unnamed-chunk-4-1.png} (100%)
- rename docs/Lesson5_rmd_files/figure-docx/{unnamed-chunk-4-1.png => unnamed-chunk-5-1.png} (100%)
- rewrite docs/Lesson5_rmd_files/figure-latex/unnamed-chunk-2-1.pdf (95%)
- copy docs/Lesson5_rmd_files/figure-latex/{unnamed-chunk-2-1.pdf => unnamed-chunk-3-1.pdf} (99%)
- rename docs/Lesson5_rmd_files/figure-latex/{unnamed-chunk-3-1.pdf => unnamed-chunk-4-1.pdf} (99%)
- rename docs/Lesson5_rmd_files/figure-latex/{unnamed-chunk-4-1.pdf => unnamed-chunk-5-1.pdf} (98%)
- rewrite docs/Lesson5_rmd_files/figure-markdown_github/unnamed-chunk-2-1.png (98%)
- copy docs/Lesson5_rmd_files/figure-markdown_github/{unnamed-chunk-2-1.png => unnamed-chunk-3-1.png} (100%)
- rename docs/Lesson5_rmd_files/figure-markdown_github/{unnamed-chunk-3-1.png => unnamed-chunk-4-1.png} (100%)
- rename docs/Lesson5_rmd_files/figure-markdown_github/{unnamed-chunk-4-1.png => unnamed-chunk-5-1.png} (100%)
- delete mode 100644 site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js
- delete mode 100644 site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js
- delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.map
- delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.css.map
- delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/cerulean.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/cosmo.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/darkly.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/flatly.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Lato.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/LatoBold.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/NewsCycle.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSans.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Raleway.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Roboto.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/journal.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/lumen.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/paper.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/readable.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/sandstone.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/simplex.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/spacelab.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/united.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/yeti.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot
- delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg
- delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff
- delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2
- delete mode 100644 site_libs/bootstrap-3.3.5/js/bootstrap.js
- delete mode 100644 site_libs/bootstrap-3.3.5/js/bootstrap.min.js
- delete mode 100644 site_libs/bootstrap-3.3.5/js/npm.js
- delete mode 100644 site_libs/bootstrap-3.3.5/shim/html5shiv.min.js
- delete mode 100644 site_libs/bootstrap-3.3.5/shim/respond.min.js
- delete mode 100644 site_libs/crosstalk-1.0.0/css/crosstalk.css
- delete mode 100644 site_libs/crosstalk-1.0.0/js/crosstalk.js
- delete mode 100644 site_libs/crosstalk-1.0.0/js/crosstalk.js.map
- delete mode 100644 site_libs/crosstalk-1.0.0/js/crosstalk.min.js
- delete mode 100644 site_libs/crosstalk-1.0.0/js/crosstalk.min.js.map
- delete mode 100644 site_libs/datatables-binding-0.9/datatables.js
- delete mode 100644 site_libs/datatables-css-0.0.0/datatables-crosstalk.css
- delete mode 100644 site_libs/dt-core-1.10.19/css/jquery.dataTables.extra.css
- delete mode 100644 site_libs/dt-core-1.10.19/css/jquery.dataTables.min.css
- delete mode 100644 site_libs/dt-core-1.10.19/js/jquery.dataTables.min.js
- delete mode 100644 site_libs/font-awesome-5.1.0/css/all.css
- delete mode 100644 site_libs/font-awesome-5.1.0/css/v4-shims.css
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.eot
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.svg
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.ttf
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff2
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.eot
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.svg
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.ttf
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff2
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.eot
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.svg
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.ttf
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff2
- delete mode 100644 site_libs/htmlwidgets-1.5.1/htmlwidgets.js
- delete mode 100644 site_libs/jquery-1.11.3/jquery.min.js
- delete mode 100644 site_libs/jquery-1.12.4/LICENSE.txt
- delete mode 100644 site_libs/jquery-1.12.4/jquery.min.js
- delete mode 100644 site_libs/jqueryui-1.11.4/README
- delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_444444_256x240.png
- delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_555555_256x240.png
- delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_777620_256x240.png
- delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_777777_256x240.png
- delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png
- delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png
- delete mode 100644 site_libs/jqueryui-1.11.4/index.html
- delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.css
- delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.js
- delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.min.css
- delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.min.js
- delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.structure.css
- delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.structure.min.css
- delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.theme.css
- delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.theme.min.css
- delete mode 100644 site_libs/leaflet-1.3.1/images/layers-2x.png
- delete mode 100644 site_libs/leaflet-1.3.1/images/layers.png
- delete mode 100644 site_libs/leaflet-1.3.1/images/marker-icon-2x.png
- delete mode 100644 site_libs/leaflet-1.3.1/images/marker-icon.png
- delete mode 100644 site_libs/leaflet-1.3.1/images/marker-shadow.png
  delete mode 100644 site_libs/leaflet-1.3.1/leaflet.css
  delete mode 100644 site_libs/leaflet-1.3.1/leaflet.js
  delete mode 100644 site_libs/leaflet-binding-2.0.2/leaflet.js
@@ -1299,3 +878,127 @@ remote: Resolving deltas:   0% (0/12)[Kremote: Resolving deltas:   8% (1/12)[
 To https://github.com/darwinanddavis/EmoRyCodingClub
    a20267a..f1c97c2  master -> master
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''L'^' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C6' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ''m'o'd'f'[1P'i'd'y' 'd'e't'p't'h'[1P'[1P'[1P'[1P'p't'h' 'e'g'[1P[1@f
+[master c616554] L6 modify depth eg
+ 113 files changed, 821 insertions(+), 40429 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (93%)
+ rewrite docs/Lesson5_rmd.html (73%)
+ rewrite docs/Lesson6_files/figure-html/unnamed-chunk-12-1.png (97%)
+ delete mode 100644 site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js
+ delete mode 100644 site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.map
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.css.map
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/cerulean.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/cosmo.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/darkly.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/flatly.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Lato.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/LatoBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/NewsCycle.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSans.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Raleway.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Roboto.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/journal.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/lumen.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/paper.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/readable.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/sandstone.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/simplex.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/spacelab.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/united.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/css/yeti.min.css
+ delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot
+ delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg
+ delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf
+ delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff
+ delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2
+ delete mode 100644 site_libs/bootstrap-3.3.5/js/bootstrap.js
+ delete mode 100644 site_libs/bootstrap-3.3.5/js/bootstrap.min.js
+ delete mode 100644 site_libs/bootstrap-3.3.5/js/npm.js
+ delete mode 100644 site_libs/bootstrap-3.3.5/shim/html5shiv.min.js
+ delete mode 100644 site_libs/bootstrap-3.3.5/shim/respond.min.js
+ delete mode 100644 site_libs/font-awesome-5.1.0/css/all.css
+ delete mode 100644 site_libs/font-awesome-5.1.0/css/v4-shims.css
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.eot
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.svg
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.ttf
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff2
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.eot
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.svg
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.ttf
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff2
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.eot
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.svg
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.ttf
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff
+ delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff2
+ delete mode 100644 site_libs/htmlwidgets-1.5.1/htmlwidgets.js
+ delete mode 100644 site_libs/jquery-1.11.3/jquery.min.js
+ delete mode 100644 site_libs/jquery-1.12.4/jquery.min.js
+ delete mode 100644 site_libs/jqueryui-1.11.4/README
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_444444_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_555555_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_777620_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_777777_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png
+ delete mode 100644 site_libs/jqueryui-1.11.4/index.html
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.css
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.js
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.min.css
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.min.js
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.structure.css
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.structure.min.css
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.theme.css
+ delete mode 100644 site_libs/jqueryui-1.11.4/jquery-ui.theme.min.css
+ delete mode 100644 site_libs/leaflet-1.3.1/images/layers-2x.png
+ delete mode 100644 site_libs/leaflet-1.3.1/images/layers.png
+ delete mode 100644 site_libs/leaflet-1.3.1/images/marker-icon-2x.png
+ delete mode 100644 site_libs/leaflet-1.3.1/images/marker-icon.png
+ delete mode 100644 site_libs/leaflet-1.3.1/images/marker-shadow.png
+ delete mode 100644 site_libs/leaflet-1.3.1/leaflet.css
+ delete mode 100644 site_libs/leaflet-1.3.1/leaflet.js
+ delete mode 100644 site_libs/leaflet-binding-2.0.2/leaflet.js
+ delete mode 100644 site_libs/leafletfix-1.0.0/leafletfix.css
+ delete mode 100644 site_libs/navigation-1.1/codefolding.js
+ delete mode 100644 site_libs/navigation-1.1/sourceembed.js
+ delete mode 100644 site_libs/navigation-1.1/tabsets.js
+ delete mode 100644 site_libs/rstudio_leaflet-1.3.1/images/1px.png
+ delete mode 100644 site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css
+ delete mode 100644 site_libs/tocify-1.9.1/jquery.tocify.css
+ delete mode 100644 site_libs/tocify-1.9.1/jquery.tocify.js
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git piush[K[K[K[Kush origin ma ster
+Counting objects: 13, done.
+Delta compression using up to 4 threads.
+Compressing objects:   8% (1/12)   Compressing objects:  16% (2/12)   Compressing objects:  25% (3/12)   Compressing objects:  33% (4/12)   Compressing objects:  41% (5/12)   Compressing objects:  50% (6/12)   Compressing objects:  58% (7/12)   Compressing objects:  66% (8/12)   Compressing objects:  75% (9/12)   Compressing objects:  83% (10/12)   Compressing objects:  91% (11/12)   Compressing objects: 100% (12/12)   Compressing objects: 100% (12/12), done.
+Writing objects:   7% (1/13)   Writing objects:  15% (2/13)   Writing objects:  23% (3/13)   Writing objects:  30% (4/13)   Writing objects:  38% (5/13)   Writing objects:  46% (6/13)   Writing objects:  53% (7/13)   Writing objects:  61% (8/13)   Writing objects:  69% (9/13)   Writing objects:  76% (10/13)   Writing objects:  84% (11/13)   Writing objects:  92% (12/13)   Writing objects: 100% (13/13)   Writing objects: 100% (13/13), 86.72 KiB | 0 bytes/s, done.
+Total 13 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)[Kremote: Resolving deltas:  14% (1/7)[Kremote: Resolving deltas:  28% (2/7)[Kremote: Resolving deltas:  42% (3/7)[Kremote: Resolving deltas:  57% (4/7)[Kremote: Resolving deltas:  71% (5/7)[Kremote: Resolving deltas:  85% (6/7)[Kremote: Resolving deltas: 100% (7/7)[Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   f1c97c2..c616554  master -> master
+git aad d .[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[Kadd .[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd  .

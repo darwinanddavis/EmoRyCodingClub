@@ -93,7 +93,7 @@ nyc <-  read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
 
 colv = "#00060a"
-ggplot(data = nyc, mapping = aes(x = reviews_per_month,y = number_of_reviews)) +
+ggplot(data = nyc, aes(x = reviews_per_month,y = number_of_reviews)) +
   geom_point(aes(color=neighbourhood_group),show.legend = T,alpha=0.5) +
   geom_smooth(color = colv, fill = colv, method="loess",alpha=0.3) +
   labs(title = "Reviews across NYC boroughs",
@@ -224,7 +224,9 @@ plot_list <- list(ls1p,ls2p)
 Plot your plot from the object `plot_list`      
 ```{r,echo=F,eval=T}
 # pluck individual plots from list  
-pluck(plot_list,1)
+names(plot_list) <- c("Plot1","Plot2")
+pluck(plot_list,"Plot2")
+
 
 ```
 

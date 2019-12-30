@@ -77,8 +77,9 @@ knitr::include_graphics(c("img/mm.jpg", "img/ddl.jpeg", "img/hw.jpg"))
 \    
 
 ## Date for next session  
-December 12, 2019      
-4:00 - 6:00 PM       
+Jan 2020    
+Time and day TBC
+
 \  
 
 ## Location   
