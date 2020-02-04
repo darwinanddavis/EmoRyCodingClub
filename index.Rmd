@@ -77,7 +77,7 @@ knitr::include_graphics(c("img/mm.jpg", "img/ddl.jpeg", "img/hw.jpg"))
 \    
 
 ## Date for next session  
-Jan 2020    
+Feb 2020    
 Time and day TBC
 
 \  
@@ -86,17 +86,23 @@ Time and day TBC
 Room 2052  
 Wayne Rollins Building   
 (Click on marker for room directions)          
-\  
+\    
 
 ```{r,echo=F}
 require(leaflet)
+require(dplyr)
+custom_tile <- "http://b.sm.mapstack.stamen.com/((mapbox-water,$f2f7ff[hsl-color]),(positron,$f2f7ff[hsl-color]),(buildings,$f2f7ff[hsl-color]),(parks,$2c403b[hsl-color]))/{z}/{x}/{y}.png"
+
 latlon <- c(33.79667, -84.32346) # emory
 ecc_label <- "Room 2052, Wayne Rollins Building"
 ecc_popup <- "Take the elevator to the second floor, \nthen exit left and take the first left."
-map <- leaflet() # initiate the leaflet map object
-map <- addTiles(map) # add the actual map tiles to the leaflet object
-map <- addMarkers(map,latlon[2],latlon[1],label=ecc_label,popup=ecc_popup) 
+
+map <- leaflet() %>%  # initiate the leaflet map object
+  setView(latlon[2],latlon[1],zoom=15) %>%
+  addTiles(custom_tile) %>%  # add map tiles to the leaflet object
+  addMarkers(latlon[2],latlon[1],label=ecc_label,popup=ecc_popup) 
 map 
+
 
 ```
 
