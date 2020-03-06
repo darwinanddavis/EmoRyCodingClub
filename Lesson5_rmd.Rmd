@@ -53,6 +53,13 @@ suppressWarnings(pacman::p_load(dplyr,ggplot2,plotly,DT,htmlwidgets,viridis,reti
 # for pdf after setting eval=T in Embed imgs/pdf code chunk 
 # rmarkdown::render("Lesson5_rmd.Rmd", output_format = "pdf_document")
 
+# ------ potential solution for text wrapping in code chunks for PDF
+# set text/limits (N) within code chunks using str_wrap(width=N)
+# rep("String with trailing,
+# middle, and leading white space\t String with trailing,
+#     middle, and leading white space\t ",10) %>%  
+# stringr::str_wrap(width=10)
+
 ```
 
 \newpage   

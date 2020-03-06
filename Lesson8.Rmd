@@ -1,0 +1,128 @@
+---
+params:
+  lesson: "Lesson 8"
+  title: "Scraping and manipulating text strings"  
+  bookchapter_name: "Cheat sheet for the `stringr` package"    
+  bookchapter_section: "https://readr.tidyverse.org/"    
+  functions: ""
+  packages: "`stringr`"      
+  # end inputs ---------------------------------------------------------------
+header-includes: \usepackage{float}
+always_allow_html: yes
+output:
+  html_document:
+    code_folding: show
+---
+  
+```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
+options(width=100)
+knitr::opts_chunk$set(
+  eval = FALSE, # run all code
+  echo = TRUE, # show code chunks in output 
+  tidy = TRUE, # make output as tidy
+  message = FALSE,  # mask all messages
+  warning = FALSE, # mask all warnings 
+  comment = "",
+  tidy.opts=list(width.cutoff=100), # set width of code chunks in output
+  size="small" # set code chunk size
+  )
+```
+\
+
+<!-- install packages -->
+```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
+# install.packages("pacman")
+pacman::p_load("stringr")
+require(stringr)
+require(reprex) # for rendering text string in HTML  
+
+```
+
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+
+# `r paste0(params$lesson,": ",params$title)`    
+\  
+
+Functions for `r params$lesson`  
+`r params$functions`    
+\    
+
+Packages for `r params$lesson`          
+`r params$packages`        
+\    
+
+# Agenda 
+
+Use the `r params$packages` package to cut, substitute, print, and manipulate character and text strings in `R`. Useful for webscraping text from webpages, scraping PDFs and text files for given characters and words, mining genomics data, etc.      
+
+[`r params$bookchapter_name`](`r params$bookchapter_section`).      
+\  
+
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+  <img src="img/readr.png" style=width:50%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+\    
+
+
+<!--  end yaml template------------------------------------------------------- -->  
+
+# Do First    
+
+
+*****    
+
+# Read in data  
+
+```{r}
+para <- readr::read_csv("text.txt") # read in string  
+```
+
+# Detecting strings       
+
+```{r}
+
+```
+
+# Subsetting strings  
+
+```{r}
+
+```
+
+Split the text into separate components and apply the `str_sub` function to each new component  
+
+```{r}
+
+# split data into list elements by every 'XX' character  
+# apply string function to each new element using map  
+
+stringr::str_view("SFHDIKNDFKGFHelloDFFDGWorld","[aeiou]")
+
+```
+
+
+# Mutating and joining strings  
+
+```{r}
+
+```
+
+# Some more useful functions  
+
+`str_wrap` Wrap text into neat paragraphs  
+```{r}
+str_wrap("The prevailing challenges of effective schistosomiasis control suggest the need for new ideas Current schistosome control strategies target either the intermediate snail host or humans", width = 20) %>% 
+reprex(venue = "gh") 
+
+```
+ `str_view_all` View string as HTML webpage  
+ 
+```{r}
+str_view_all("The prevailing challenges of effective schistosomiasis control suggest the need for new ideas Current schistosome control strategies target either the intermediate snail host or humans", "[C]")
+```
+ 

@@ -1,0 +1,128 @@
+---
+params:
+  lesson: "rstudio::conf2020"
+  title: "Super tips, super lessons, and super powers from `R` super users"
+  bookchapter_name: "Link to RStudio conference talks and workshop slides"    
+  bookchapter_section: "https://github.com/EmilHvitfeldt/RStudioConf2020Slides"    
+  functions: ""
+  packages: ""      
+  # end inputs ---------------------------------------------------------------
+header-includes: \usepackage{float}
+always_allow_html: yes
+output:
+  html_document:
+    code_folding: show
+---
+  
+```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
+options(width=100)
+knitr::opts_chunk$set(
+  eval = T, # run all code
+  echo = TRUE, # show code chunks in output 
+  tidy = TRUE, # make output as tidy
+  message = FALSE,  # mask all messages
+  warning = FALSE, # mask all warnings 
+  comment = "",
+  tidy.opts=list(width.cutoff=100), # set width of code chunks in output
+  size="small" # set code chunk size
+  )
+```
+\
+
+<!-- install packages -->
+```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
+packages <- c("ggplot2","ggthemes","dplyr","tidyverse","zoo","RColorBrewer","viridis","plyr")   
+if (require(packages)) {
+    install.packages(packages,dependencies = T)
+    require(packages)
+    # load tvthemes
+    devtools::install_github("Ryo-N7/tvthemes")
+}
+lapply(packages,library,character.only=T)  
+```
+
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+
+# `r paste0(params$lesson,": ",params$title)`    
+\  
+
+Functions for `r params$lesson`  
+`r params$functions`    
+\    
+
+Packages for `r params$lesson`          
+`r params$packages`        
+\    
+
+# Agenda 
+
+Notes from the in San Francisco on Jan 29-30, 2020 
+
+Things to add  
+- http://www.rebeccabarter.com/blog/2020-02-05_rstudio_conf/    
+- joe cheng css and bootstrap  
+- ryan tiempe using multiple packages 
+- dewey and ggplot 
+- tina cormier and spatial data? 
+- pins package  
+- `xgb` package (training/ML)  
+- [Link to rconf recorded talks](https://resources.rstudio.com/rstudio-conf-2020)      
+  
+Weren't able to attend the conference? Fear not. The `R` community is sharing their talk and workshop slides. Thanks to [Emil Hvitfeldt](https://www.hvitfeldt.me/blog/) for collating everything.  
+
+### [`r params$bookchapter_name`](`r params$bookchapter_section`). 
+\  
+
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+  <img src="img/rstudio.png" style=width:50%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+\    
+
+
+<!--  end yaml template------------------------------------------------------- -->  
+
+# Super useful and futuristic `R` tips and tricks  
+
+Below are some useful tips and tricks I gleaned from presentations at the conference. It's a mix of tidyverse titbits for making workflow easier and future `R` development geared toward applied things like user experience and interactive apps.      
+
+These examples were presented by super `R` users at the conference. I had to share some to show you how to bend `R` to your will to do equal parts good and evil. Links to presenters included if you want further info.   
+
+## Plotting 
+
+Use user-defined variables in your `ggplot`   
+
+- dewey and ggplot 
+
+This throws an error because `ggplot` can't recognise the character string.
+
+```{r}
+require(ggplot2)
+my_theme <- theme_classic()
+colour_var <- "class"
+facet_var <- "drv"
+
+ggplot(mpg) +
+  geom_point(aes(displ, hwy, colour = colour_var)) +
+  facet_wrap(vars(facet_var)) + my_theme
+```
+
+
+Placing `.data` in front of your variables and wrapping them with double square braces '[[]]' solves this.  
+```{r}
+require(ggplot2)
+colour_var <- "class"
+facet_var <- "drv"
+
+ggplot(mpg) +
+  geom_point(aes(displ, hwy, colour = .data[[colour_var]])) +
+  facet_wrap(vars(.data[[facet_var]])) + my_theme
+```
+
+# More advanced stuff  
+
+Integrating css and bootstrap  

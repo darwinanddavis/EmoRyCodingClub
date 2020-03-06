@@ -15,6 +15,7 @@ params:
 
 ```{r klippy, echo=FALSE, include=TRUE}
 # klippy::klippy()
+# rmarkdown::render_site() # render entire site 
 ```
 
 <!-- rmd settings -->
@@ -77,7 +78,7 @@ knitr::include_graphics(c("img/mm.jpg", "img/ddl.jpeg", "img/hw.jpg"))
 \    
 
 ## Date for next session  
-Feb 2020    
+March 2020    
 Time and day TBC
 
 \  
