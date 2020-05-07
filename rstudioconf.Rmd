@@ -88,9 +88,27 @@ Weren't able to attend the conference? Fear not. The `R` community is sharing th
 
 # Super useful and futuristic `R` tips and tricks  
 
-Below are some useful tips and tricks I gleaned from presentations at the conference. It's a mix of tidyverse titbits for making workflow easier and future `R` development geared toward applied things like user experience and interactive apps.      
+Below are some useful tips and tricks I gleaned from presentations at the conference. It's a mix of tidyverse titbits for making workflow easier and future `R` development geared toward applied things like user experience and interactive apps, which is where `R`, science communication, and data analysis/viz is already deeply entrenched.
 
 These examples were presented by super `R` users at the conference. I had to share some to show you how to bend `R` to your will to do equal parts good and evil. Links to presenters included if you want further info.   
+
+## Pre installation notes   
+Some packages may require installation from remote sources, such as Github, to which you'll need to prepare your comp with a software package downloader. Below is the quick and nasty way and more details can be found [here](
+https://rstats.wtf/set-up-an-r-dev-environment.html#windows-system-prep
+).  
+
+For Mac, the software package compiler is called **Xcode Command Line Tools**. First, download it using the Terminal/command line:  
+```{shell}
+xcode-select --install
+```
+
+Then check you have everything set up in `R` by running the below command in `R`. You should then see the below confirmation. 
+```{r, echo=T, results='markup'}
+devtools::has_devel()
+```
+Your system should now be ready to download open source, in-development packages and package binaries.    
+
+May run into this issue for Mac OSX Mojave: https://forums.developer.apple.com/thread/104296#317543
 
 ## Plotting 
 

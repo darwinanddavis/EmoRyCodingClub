@@ -75,17 +75,17 @@ knitr::include_graphics(c("img/mm.jpg", "img/ddl.jpeg", "img/hw.jpg"))
 ```
 
 <!-- ----------------------- image --------------------------- -->
-\    
+<!-- \     -->
 
-## Date for next session  
-March 2020    
-Time and day TBC
+<!-- ## Date for next session   -->
+<!-- Time and day TBC -->
 
 \  
 
 ## Location   
-Room 2052  
-Wayne Rollins Building   
+Emory University  
+Room 2052    
+Wayne Rollins Building     
 (Click on marker for room directions)          
 \    
 

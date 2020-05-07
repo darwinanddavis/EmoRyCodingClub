@@ -605,7 +605,7 @@ When you know the two variables you want to plot<br />
 <p>But why does this throw an error?</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># adding aes</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>() <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<pre><code>Error: stat_smooth requires the following missing aesthetics: x, y</code></pre>
+<pre><code>Error: stat_smooth requires the following missing aesthetics: x and y</code></pre>
 <p><img src="Lesson2_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
 <p>Specifying layers</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">color =</span> class)) <span class="op">+</span><span class="st"> </span>

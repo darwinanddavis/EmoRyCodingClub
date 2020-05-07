@@ -110,6 +110,10 @@ stringr::str_view("SFHDIKNDFKGFHelloDFFDGWorld","[aeiou]")
 
 ```{r}
 
+str_replace(text,fixed(" "),x)
+stri_replace_all_charclass("\\p{WHITE_SPACE}","") # remove middle white space
+str_replace_na() 
+
 ```
 
 # Some more useful functions  
@@ -120,9 +124,40 @@ str_wrap("The prevailing challenges of effective schistosomiasis control suggest
 reprex(venue = "gh") 
 
 ```
- `str_view_all` View string as HTML webpage  
  
+`str_view_all` View string as HTML webpage  
 ```{r}
 str_view_all("The prevailing challenges of effective schistosomiasis control suggest the need for new ideas Current schistosome control strategies target either the intermediate snail host or humans", "[C]")
 ```
  
+Including vectors within strings. 
+```{r}
+require(stringr)
+
+vect <- 1000
+str_interp("For including vectors like this ${vect} when you can't break the character strng") 
+
+# Useful when breaking character quotes e.g. HTML tags      
+str_interp("<div style=\"color:#F90F40;\"> <strong> Total cases </strong> ${vect}")
+
+# include lists 
+str_interp("First value, ${v1}, Second value, ${v2*2}.",
+  list(v1 = 10, v2 = 20)
+)
+
+# and data frames
+str_interp(
+  "Values are $[.2f]{max(Sepal.Width)} and $[.2f]{min(Sepal.Width)}.",
+  iris
+)
+```
+
+To include  
+```{r}
+require(stringr); require(dplyr)
+string <- "Some, TEXT," 
+string %>% str_match("E") # return as matrix 
+
+string %>% str_split_fixed(", ",2) # split based on pattern 
+```
+
