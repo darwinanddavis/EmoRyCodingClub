@@ -1000,3 +1000,43 @@ Lesson5_rmd.html
 origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
 origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ;;[K[K;[K''u'p'd'a't'e' 'd' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca''t'e'
+[master 6a0633a] update date
+ 96 files changed, 274 insertions(+), 281 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (81%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git reset
+Unstaged changes after reset:
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git remote --v
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ pwd
+/Users/malishev/Documents/Emory/admin/ecc
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls -a
+%			Lesson5_rmd.html
+.			Lesson5_rmd.log
+..			Lesson5_rmd.md
+.DS_Store		Lesson5_rmd.tex
+.RData			Lesson5_rmd_cache
+.Rhistory		Lesson5_rmd_files
+.Rproj.user		Lesson6.Rmd
+.git			Lesson7.Rmd
+.gitignore		Lesson7_dofirst.pdf
+.here			Lesson8.Rmd
+Lesson1.Rmd		README.md
+Lesson1.html		_site.yml
+Lesson1_files		admin
+Lesson2.Rmd		admin_
+Lesson2.html		docs
+Lesson2_files		emorycodingclub.Rproj
+Lesson3.Rmd		functions_lesson1.txt
+Lesson3.html		functions_lesson2.txt
+Lesson3_files		img
+Lesson4.Rmd		index.Rmd
+Lesson4.html		lookhere
+Lesson5.Rmd		nyc_compact.csv
+Lesson5_cache		packages_lesson1.txt
+Lesson5_files		packages_lesson2.txt
+Lesson5_rmd.Rmd		rstudioconf.Rmd
+Lesson5_rmd.docx
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
