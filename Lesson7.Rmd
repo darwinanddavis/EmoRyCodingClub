@@ -27,7 +27,7 @@ knitr::opts_chunk$set(
   size="small" # set code chunk size
   )
 ```
-\
+\  
 
 <!-- install packages -->
 ```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}

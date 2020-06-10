@@ -4,7 +4,7 @@ params:
   title: "Scraping and manipulating text strings"  
   bookchapter_name: "Cheat sheet for the `stringr` package"      
   bookchapter_section: "https://stringr.tidyverse.org/"    
-  functions: ""
+  functions: "`str_which`,`str_detect`,`str_locate`,`str_view`,`str_sub`,"
   packages: "`stringr`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
