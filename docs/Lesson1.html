@@ -542,12 +542,12 @@ div.tocify {
 <div id="using-built-in-r-data-the-mpg-dataset" class="section level1">
 <h1>Using built-in <code>R</code> data: the <code>mpg</code> dataset</h1>
 <p><a href="https://r4ds.had.co.nz/data-visualisation.html#the-mpg-data-frame">Section 3.2.1</a></p>
-<p>We’ll use a built-in tidyverse dataset called <code>mpg</code> with data about cars and gas-mileage.</p>
+<p>We'll use a built-in tidyverse dataset called <code>mpg</code> with data about cars and gas-mileage.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mpg
 <span class="co"># run help page with &#39;?&#39;</span>
 <span class="st">`</span><span class="dt">?</span><span class="st">`</span>(mpg)</code></pre></div>
 <ul>
-<li>This is a tibble (data frame) that we’ve “printed” out. It’s like R’s version of an excel spreadsheet, but much better.</li>
+<li>This is a tibble (data frame) that we've &quot;printed&quot; out. It's like R's version of an excel spreadsheet, but much better.</li>
 <li>A tibble will show us the first 10 rows, rows containing the data, column names, and the class of data within each column, such as numeric, integer, or character.</li>
 </ul>
 <div id="summarising-data" class="section level2">
@@ -570,9 +570,9 @@ mpg<span class="op">$</span>hwy  <span class="co"># print a column</span></code>
 <h1>Creating a plot with <code>ggplot</code></h1>
 <p><a href="https://r4ds.had.co.nz/data-visualisation.html#creating-a-ggplot">Section 3.2.2</a></p>
 <ul>
-<li><code>ggplot()</code> Creates a coordinate system for us–basically an empty graph.<br />
+<li><code>ggplot()</code> Creates a coordinate system for us--basically an empty graph.<br />
 </li>
-<li><code>geom_point()</code> Adds a “layer”, e.g. geom_point (but there are many for different kinds of graphs).</li>
+<li><code>geom_point()</code> Adds a &quot;layer&quot;, e.g. geom_point (but there are many for different kinds of graphs).</li>
 </ul>
 <p>Plot two of the data columns</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy))</code></pre></div>
@@ -656,7 +656,7 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_classic</span>()
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-17-1.png" width="672" />  </p>
 <p><strong>The inner one is overridden.</strong><br />
  </p>
-<p>Putting it all together as a snapshot of what’s possible</p>
+<p>Putting it all together as a snapshot of what's possible</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">colour =</span> class, <span class="dt">size =</span> class, <span class="dt">alpha =</span> class)) <span class="op">+</span><span class="st"> </span>
 <span class="st">    </span>my_theme</code></pre></div>
 <p><img src="Lesson1_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
@@ -674,7 +674,7 @@ my_theme &lt;-<span class="st"> </span><span class="kw">theme_classic</span>()
 </div>
 <!-- ----------------------- image --------------------------- -->
 <p> </p>
-<p><code>R</code> has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the <code>colour</code> and <code>fill</code> aesthetics. The hollow shapes (0–14) have a border determined by <code>colour</code>; the solid shapes (15–18) are filled with <code>colour</code>; the filled shapes (21–24) have a border of <code>colour</code> and are filled with <code>fill</code>.</p>
+<p><code>R</code> has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the <code>colour</code> and <code>fill</code> aesthetics. The hollow shapes (0--14) have a border determined by <code>colour</code>; the solid shapes (15--18) are filled with <code>colour</code>; the filled shapes (21--24) have a border of <code>colour</code> and are filled with <code>fill</code>.</p>
 
 </div>
 </div>
@@ -701,8 +701,8 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 <span class="kw">length</span>(nyc<span class="op">$</span>id)  <span class="co"># print length of &#39;id&#39; column</span></code></pre></div>
 <pre><code>[1] 2177</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">glimpse</span>(nyc)</code></pre></div>
-<pre><code>Observations: 2,177
-Variables: 16
+<pre><code>Rows: 2,177
+Columns: 16
 $ id                             &lt;dbl&gt; 2539, 2595, 3647, 3831, 4989, 5022, 5099, 5121, 5178, 5203…
 $ name                           &lt;chr&gt; &quot;Clean &amp; quiet apt home by the park&quot;, &quot;Skylit Midtown Cast…
 $ host_id                        &lt;dbl&gt; 2787, 2845, 4632, 4869, 7118, 7192, 7322, 7356, 8967, 7490…
@@ -814,7 +814,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

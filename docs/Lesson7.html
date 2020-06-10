@@ -434,6 +434,9 @@ div.tocify {
 <li>
   <a href="Lesson7.html">Lesson 7</a>
 </li>
+<li>
+  <a href="Lesson8.html">Lesson 8</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -463,8 +466,8 @@ div.tocify {
 </div>
 
 
-<p><br />
-<!-- install packages --></p>
+<p> </p>
+<!-- install packages -->
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
@@ -614,7 +617,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

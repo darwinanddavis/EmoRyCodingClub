@@ -500,10 +500,10 @@ div.tocify {
 </div>
 <div id="do-first-problem-set" class="section level1">
 <h1>Do First problem set</h1>
-<p>Before each new session, we’ll do a quick recap, called a Do First. These will only use functions we’ve previously covered, so if you’re unsure or can’t remember, just check the code from the previous session.<br />
+<p>Before each new session, we'll do a quick recap, called a Do First. These will only use functions we've previously covered, so if you're unsure or can't remember, just check the code from the previous session.<br />
  </p>
 <p>Recreate the below plot using the smaller NYC Airbnb dataset (<code>nyc</code> from Lesson 1). There are four aesthetics to change and the plot uses <code>theme_solarized</code>.<br />
-<em>Hint</em>: Use the help <code>?</code> function if something isn’t clear.</p>
+<em>Hint</em>: Use the help <code>?</code> function if something isn't clear.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># You didn&#39;t think we&#39;d make it this easy, did you?</span></code></pre></div>
 <p><img src="Lesson2_files/figure-html/unnamed-chunk-2-1.png" width="100%" />  </p>
 </div>
@@ -548,7 +548,7 @@ When you know the two variables you want to plot<br />
 <strong>The formula structure for <code>facet_grid</code> is Y variable <code>~</code> X variable, e.g. <code>drv ~ cyl</code></strong></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(drv <span class="op">~</span><span class="st"> </span>cyl) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson2_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
-<p>You can also replace the X or Y argument in <code>facet_grid</code> with a period (“.”) to plot only one variable.</p>
+<p>You can also replace the X or Y argument in <code>facet_grid</code> with a period (&quot;.&quot;) to plot only one variable.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Y var</span>
 <span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">facet_grid</span>(. <span class="op">~</span><span class="st"> </span>cyl) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson2_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
@@ -577,14 +577,14 @@ When you know the two variables you want to plot<br />
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">linetype =</span> drv)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson2_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
-<div id="group-vs.colour" class="section level1">
-<h1>Group vs. colour</h1>
-<p>Using <code>group</code> separates the data into objects …</p>
+<div id="group-vs.-colour" class="section level1">
+<h1>Group vs. colour</h1>
+<p>Using <code>group</code> separates the data into objects ...</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson2_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">group =</span> drv)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
 <p><img src="Lesson2_files/figure-html/unnamed-chunk-12-2.png" width="672" />  </p>
-<p>… but <code>colour</code> will distinguish the differences among these objects</p>
+<p>... but <code>colour</code> will distinguish the differences among these objects</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">colour =</span> drv), <span class="dt">show.legend =</span> <span class="ot">FALSE</span>) <span class="op">+</span><span class="st"> </span>
 <span class="st">    </span>my_theme</code></pre></div>
 <p><img src="Lesson2_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
@@ -703,7 +703,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

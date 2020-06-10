@@ -434,6 +434,9 @@ div.tocify {
 <li>
   <a href="Lesson7.html">Lesson 7</a>
 </li>
+<li>
+  <a href="Lesson8.html">Lesson 8</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -479,41 +482,66 @@ div.tocify {
 </div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
-<p>Weren’t able to attend the conference? The <code>R</code> community is sharing their talk and workshop slides. Thanks to <a href="https://www.hvitfeldt.me/blog/">Emil Hvitfeldt</a>.</p>
+<p>Notes from the in San Francisco on Jan 29-30, 2020</p>
+<p>Things to add<br />
+- <a href="http://www.rebeccabarter.com/blog/2020-02-05_rstudio_conf/" class="uri">http://www.rebeccabarter.com/blog/2020-02-05_rstudio_conf/</a><br />
+- joe cheng css and bootstrap<br />
+- ryan tiempe using multiple packages - dewey and ggplot - tina cormier and spatial data? - pins package<br />
+- <code>xgb</code> package (training/ML)<br />
+- <a href="https://resources.rstudio.com/rstudio-conf-2020">Link to rconf recorded talks</a></p>
+<p>Weren't able to attend the conference? Fear not. The <code>R</code> community is sharing their talk and workshop slides. Thanks to <a href="https://www.hvitfeldt.me/blog/">Emil Hvitfeldt</a> for collating everything.</p>
 <div id="link-to-rstudio-conference-talks-and-workshop-slides." class="section level3">
 <h3><a href="https://github.com/EmilHvitfeldt/RStudioConf2020Slides">Link to RStudio conference talks and workshop slides</a>.</h3>
 <p> </p>
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
-<p><img src="img/readr.png" style=width:50%></p>
+<p><img src="img/rstudio.png" style=width:50%></p>
 </div>
 <!-- ----------------------- image --------------------------- -->
 <p> </p>
 <!--  end yaml template------------------------------------------------------- -->
 </div>
 </div>
-<div id="some-super-useful-super-futuristic-r-tips-and-tricks" class="section level1">
-<h1>Some super useful, super futuristic <code>R</code> tips and tricks</h1>
-<p>These tips were presented by super <code>R</code> users at the Rstudio conference in San Francisco on Jan 29-30, 2020 and I had to share some of them to show you how to bend <code>R</code> to your will to do good (or evil).</p>
-<div id="ggplot2" class="section level2">
-<h2><code>ggplot2</code></h2>
+<div id="super-useful-and-futuristic-r-tips-and-tricks" class="section level1">
+<h1>Super useful and futuristic <code>R</code> tips and tricks</h1>
+<p>Below are some useful tips and tricks I gleaned from presentations at the conference. It's a mix of tidyverse titbits for making workflow easier and future <code>R</code> development geared toward applied things like user experience and interactive apps, which is where <code>R</code>, science communication, and data analysis/viz is already deeply entrenched.</p>
+<p>These examples were presented by super <code>R</code> users at the conference. I had to share some to show you how to bend <code>R</code> to your will to do equal parts good and evil. Links to presenters included if you want further info.</p>
+<div id="pre-installation-notes" class="section level2">
+<h2>Pre installation notes</h2>
+<p>Some packages may require installation from remote sources, such as Github, to which you'll need to prepare your comp with a software package downloader. Below is the quick and nasty way and more details can be found <a href="https://rstats.wtf/set-up-an-r-dev-environment.html#windows-system-prep">here</a>.</p>
+<p>For Mac, the software package compiler is called <strong>Xcode Command Line Tools</strong>. First, download it using the Terminal/command line:</p>
+<pre class="shell"><code>xcode-select --install</code></pre>
+<p>Then check you have everything set up in <code>R</code> by running the below command in <code>R</code>. You should then see the below confirmation.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw">has_devel</span>()</code></pre></div>
+<p>Your system should now be ready to download open source, in-development packages and package binaries.</p>
+<p>May run into this issue for Mac OSX Mojave: <a href="https://forums.developer.apple.com/thread/104296#317543" class="uri">https://forums.developer.apple.com/thread/104296#317543</a></p>
+</div>
+<div id="plotting" class="section level2">
+<h2>Plotting</h2>
 <p>Use user-defined variables in your <code>ggplot</code></p>
-<p><span class="citation">@dewey</span></p>
-<p>This throws an error because <code>ggplot</code> can’t recognise the character string.</p>
+<ul>
+<li>dewey and ggplot</li>
+</ul>
+<p>This throws an error because <code>ggplot</code> can't recognise the character string.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(ggplot2)
 my_theme &lt;-<span class="st"> </span><span class="kw">theme_classic</span>()
 colour_var &lt;-<span class="st"> &quot;class&quot;</span>
 facet_var &lt;-<span class="st"> &quot;drv&quot;</span>
 
 <span class="kw">ggplot</span>(mpg) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(displ, hwy, <span class="dt">colour =</span> colour_var)) <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="kw">vars</span>(facet_var)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
-<p>Placing <code>.data</code> in front of your variables and wrapping them with double square braces ‘[[]]’ solves this.</p>
+<p>Placing <code>.data</code> in front of your variables and wrapping them with double square braces '[[]]' solves this.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(ggplot2)
 colour_var &lt;-<span class="st"> &quot;class&quot;</span>
 facet_var &lt;-<span class="st"> &quot;drv&quot;</span>
 
 <span class="kw">ggplot</span>(mpg) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(displ, hwy, <span class="dt">colour =</span> .data[[colour_var]])) <span class="op">+</span><span class="st"> </span><span class="kw">facet_wrap</span>(<span class="kw">vars</span>(.data[[facet_var]])) <span class="op">+</span><span class="st"> </span>
 <span class="st">    </span>my_theme</code></pre></div>
+<p><img src="rstudioconf_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
+</div>
+<div id="more-advanced-stuff" class="section level1">
+<h1>More advanced stuff</h1>
+<p>Integrating css and bootstrap</p>
 </div>
 
 
@@ -571,7 +599,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

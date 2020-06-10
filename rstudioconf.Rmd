@@ -118,7 +118,7 @@ Use user-defined variables in your `ggplot`
 
 This throws an error because `ggplot` can't recognise the character string.
 
-```{r}
+```{r,eval=F}
 require(ggplot2)
 my_theme <- theme_classic()
 colour_var <- "class"

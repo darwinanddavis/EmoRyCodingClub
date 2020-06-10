@@ -24,3 +24,7 @@ sp
 here
 tinytex
 reticulate
+xml2
+rvest
+reprex
+stringi

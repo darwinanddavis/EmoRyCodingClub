@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
@@ -295,6 +294,7 @@ $(document).ready(function () {
   border: none;
   display: inline-block;
   border-radius: 4px;
+  background-color: transparent;
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
@@ -326,6 +326,12 @@ $(document).ready(function () {
 }
 }
 
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
 
 .toc-content {
   padding-left: 30px;
@@ -428,6 +434,9 @@ div.tocify {
 <li>
   <a href="Lesson7.html">Lesson 7</a>
 </li>
+<li>
+  <a href="Lesson8.html">Lesson 8</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -488,7 +497,7 @@ div.tocify {
 </div>
 <div id="do-first" class="section level1">
 <h1>Do First</h1>
-<p>Recreate the below plot using the smaller NYC Airbnb dataset. The curve is a ‘loess’. To change the legend title, add the (unintuitive) <code>colour = &quot;your legend title&quot;</code> argument to the <code>labs()</code> function.</p>
+<p>Recreate the below plot using the smaller NYC Airbnb dataset. The curve is a 'loess'. To change the legend title, add the (unintuitive) <code>colour = &quot;your legend title&quot;</code> argument to the <code>labs()</code> function.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
 url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
 nyc &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(url)
@@ -502,29 +511,29 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 s2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">500</span>)  <span class="co"># sample 10 normally distributed random numbers around a mean of 500 </span>
 s3 &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>)  <span class="co"># random uniform distribution</span>
 s1</code></pre></div>
-<pre><code> [1]  7  4  8  3  5  9  1 10  2  6</code></pre>
+<pre><code> [1]  2  1 10  4  5  6  8  3  7  9</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s2</code></pre></div>
-<pre><code> [1] 501.0410 499.8889 500.0145 500.8875 501.6772 500.2361 500.2561 501.2953 499.7995 500.4458</code></pre>
+<pre><code> [1] 499.0617 499.9691 500.2190 500.1345 500.8457 499.7911 500.0334 500.8123 502.4011 500.6459</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s3</code></pre></div>
-<pre><code> [1] 0.33174294 0.56738068 0.62730972 0.25044256 0.01892704 0.50252198 0.39586248 0.85352011
- [9] 0.64010661 0.77659533</code></pre>
+<pre><code> [1] 0.7059495 0.4251245 0.7588182 0.9693879 0.1275023 0.9504672 0.5024721 0.1854374 0.1037962
+[10] 0.4185556</code></pre>
 <p>Now combine these into a list using <code>list()</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 &lt;-<span class="st"> </span><span class="kw">list</span>(s1, s2, s3)  <span class="co"># create a list of these data</span>
 ls1</code></pre></div>
 <pre><code>[[1]]
- [1]  7  4  8  3  5  9  1 10  2  6
+ [1]  2  1 10  4  5  6  8  3  7  9
 
 [[2]]
- [1] 501.0410 499.8889 500.0145 500.8875 501.6772 500.2361 500.2561 501.2953 499.7995 500.4458
+ [1] 499.0617 499.9691 500.2190 500.1345 500.8457 499.7911 500.0334 500.8123 502.4011 500.6459
 
 [[3]]
- [1] 0.33174294 0.56738068 0.62730972 0.25044256 0.01892704 0.50252198 0.39586248 0.85352011
- [9] 0.64010661 0.77659533</code></pre>
+ [1] 0.7059495 0.4251245 0.7588182 0.9693879 0.1275023 0.9504672 0.5024721 0.1854374 0.1037962
+[10] 0.4185556</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 <span class="op">%&gt;%</span><span class="st"> </span>str</code></pre></div>
 <pre><code>List of 3
- $ : int [1:10] 7 4 8 3 5 9 1 10 2 6
- $ : num [1:10] 501 500 500 501 502 ...
- $ : num [1:10] 0.3317 0.5674 0.6273 0.2504 0.0189 ...</code></pre>
+ $ : int [1:10] 2 1 10 4 5 6 8 3 7 9
+ $ : num [1:10] 499 500 500 500 501 ...
+ $ : num [1:10] 0.706 0.425 0.759 0.969 0.128 ...</code></pre>
 </div>
 <div id="exercise-0" class="section level1">
 <h1>Exercise 0</h1>
@@ -594,8 +603,12 @@ ls2 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1_df &lt;-<span class="st"> </span>ls1 <span class="op">%&gt;%</span><span class="st"> </span>data.frame
 <span class="kw">names</span>(ls1_df) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">plot_list &lt;-<span class="st"> </span><span class="kw">list</span>(ls1p, ls2p)</code></pre></div>
-<p>Plot your plot from the object <code>plot_list</code><br />
-<img src="Lesson6_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>Plot your plot from the object <code>plot_list</code></p>
+<pre><code>$Plot1
+NULL
+
+$Plot2
+NULL</code></pre>
 </div>
 </div>
 <div id="exercise-3" class="section level1">
@@ -691,7 +704,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

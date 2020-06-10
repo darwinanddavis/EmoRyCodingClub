@@ -520,15 +520,15 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 <h1>Introducing <code>R</code> project (<code>Rproj</code>) files.</h1>
 <p>You can set individual working directories and contain your R documents related to a specific project using an <code>Rproj</code> file. Two options:</p>
 <p><strong>Option 1:</strong> Create an RProject new directory: 1. <em>File &gt; New Project</em> 1. <em>Create New Project</em><br />
-1. Choose a name for your RProj folder. Fill out <em>Directory name:</em> (make it machine-friendly, i.e. no spaces). 1. Choose a place for the RProj to live. <em>Browse</em> 1. Select <em>Open in new session</em><br />
+1. Choose a name for your RProj folder. Fill out <em>Directory name:</em> (make it machine-friendly, i.e. no spaces). 1. Choose a place for the RProj to live. <em>Browse</em> 1. Select <em>Open in new session</em><br />
  </p>
 <p><strong>Option 2:</strong> If you already have a folder <em>just</em> for Emory Coding Club: 1. <em>File &gt; New Project</em> 2. <em>Existing directory &gt; Browse</em><br />
 3. Select <em>Open in new session</em></p>
 <p> </p>
-<p>Open a new <code>R</code> file within this project and save it as ‘Lesson3.R’.<br />
+<p>Open a new <code>R</code> file within this project and save it as 'Lesson3.R'.<br />
  </p>
 <p>Now repeat the above steps so that you have two different <code>Rproj</code> files. Name this second project something different.  </p>
-<p>Let’s now see why <code>Rproj</code> files are a useful workflow method by checking the working directory for each project.</p>
+<p>Let's now see why <code>Rproj</code> files are a useful workflow method by checking the working directory for each project.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">getwd</span>()</code></pre></div>
 <p> </p>
 </div>
@@ -655,7 +655,7 @@ nov_dec &lt;-<span class="st"> </span><span class="kw">filter</span>(flights, mo
 </div>
 <div id="exercise-5.3.1" class="section level1">
 <h1>Exercise 5.3.1</h1>
-<p>Try the <a href="https://r4ds.had.co.nz/transform.html#exercises-8">‘5.3.1 Exercises’ using <code>arrange()</code></a><br />
+<p>Try the <a href="https://r4ds.had.co.nz/transform.html#exercises-8">'5.3.1 Exercises' using <code>arrange()</code></a><br />
  </p>
 </div>
 <div id="applying-the-airbnb-data" class="section level1">
@@ -727,7 +727,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

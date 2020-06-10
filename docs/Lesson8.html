@@ -479,7 +479,7 @@ div.tocify {
 <h1>Lesson 8: Scraping and manipulating text strings</h1>
 <p> </p>
 <p>Functions for Lesson 8<br />
-<code>str_which</code>,<code>str_detect</code>,<code>str_locate</code>,<code>str_view</code>,<code>str_sub</code>,<br />
+<code>str_which</code>,<code>str_detect</code>,<code>str_locate</code>,<code>str_view</code>,<code>str_sub</code><br />
  </p>
 <p>Packages for Lesson 8<br />
 <code>stringr</code><br />
@@ -497,7 +497,7 @@ div.tocify {
 <!-- ----------------------- image --------------------------- -->
 <p> </p>
 <!--  end yaml template------------------------------------------------------- -->
-<p>First, we need some text data. As an exercise, since we’re using strings, we’re going to use the webpage content on using strings from the <a href="https://r4ds.had.co.nz/strings.html">R for Data Science textbook</a> as our text sample.</p>
+<p>First, we need some text data. As an exercise, since we're using strings, we're going to use the webpage content on using strings from the <a href="https://r4ds.had.co.nz/strings.html">R for Data Science textbook</a> as our text sample.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(xml2)  <span class="co"># read html data</span>
 <span class="kw">require</span>(rvest)  <span class="co"># select html elements</span>
 
@@ -618,8 +618,8 @@ txt_short</code></pre></div>
 <p>View an HTML rendering of the text using <code>str_view()</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># visualise the first 1000 characters</span>
 txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_sub</span>(<span class="dv">1</span>, <span class="dv">1000</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_view</span>(<span class="st">&quot; &quot;</span>)</code></pre></div>
-<p><div id="htmlwidget-8cbf735e9369b94903b4" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8cbf735e9369b94903b4">{"x":{"html":"<ul>\n  <li>14<span class='match'> <\/span>Strings | R for Data Science\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-115082821-1');\n\na.sourceLine { display: inline-block; line-height: 1.25; }\na.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }\na.sourceLine:empty { height: 1.2em; position: absolute; }\n.sourceCode { overflow: visible; }\ncode.sourceCode { white-space: pre; position: relative; }\npre.sourceCode { margin: 0; }\n@media screen {\ndiv.sourceCode { overflow: auto; }\n}\n@media print {\ncode.sourceCode { white-space: pre-wrap; }\na.sourceLine { text-indent: -1em; padding-left: 1em; }\n}\npre.numberSource a.sourceLine\n  { position: relative; }\npre.numberSource a.sourceLine:empty\n  { position: absolute; }\npre.numberSource a.sourceLine::before\n  { content: attr(data-line-number);\n    position: absolute; left: -5em; text-align: right; vertical-align: baseline;\n    border: none; pointer-events: all;\n    -webkit<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>  </p>
+<p><div id="htmlwidget-9fa157938fe54c5a9f28" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9fa157938fe54c5a9f28">{"x":{"html":"<ul>\n  <li>14<span class='match'> <\/span>Strings | R for Data Science\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-115082821-1');\n\na.sourceLine { display: inline-block; line-height: 1.25; }\na.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }\na.sourceLine:empty { height: 1.2em; position: absolute; }\n.sourceCode { overflow: visible; }\ncode.sourceCode { white-space: pre; position: relative; }\npre.sourceCode { margin: 0; }\n@media screen {\ndiv.sourceCode { overflow: auto; }\n}\n@media print {\ncode.sourceCode { white-space: pre-wrap; }\na.sourceLine { text-indent: -1em; padding-left: 1em; }\n}\npre.numberSource a.sourceLine\n  { position: relative; }\npre.numberSource a.sourceLine:empty\n  { position: absolute; }\npre.numberSource a.sourceLine::before\n  { content: attr(data-line-number);\n    position: absolute; left: -5em; text-align: right; vertical-align: baseline;\n    border: none; pointer-events: all;\n    -webkit<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>  </p>
 <p>Split the text into separate components and apply the <code>str_sub</code> function to each new component</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># split into matrix at every instance of pattern</span>
 txt_split &lt;-<span class="st"> </span>txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_split_fixed</span>(pat, <span class="dt">n =</span> <span class="ot">Inf</span>)
@@ -633,7 +633,7 @@ txt_split <span class="op">%&gt;%</span><span class="st"> </span>dim  <span clas
 <p>Replace pattern instances with new pattern</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">repl &lt;-<span class="st"> &quot;when you really need that coffee hit&quot;</span>  <span class="co"># replacement character string</span>
 txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace_all</span>(pat, repl)</code></pre></div>
-<p>You’ll notice that the first instance of the returned pattern is capitalised, so the replacement doesn’t catch it and thus ignores the string. We can easily tell <code>R</code> to detect all instances of the pattern by ignoring case using <code>regex</code></p>
+<p>You'll notice that the first instance of the returned pattern is capitalised, so the replacement doesn't catch it and thus ignores the string. We can easily tell <code>R</code> to detect all instances of the pattern by ignoring case using <code>regex</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pat_all &lt;-<span class="st"> </span><span class="kw">regex</span>(pat, <span class="dt">ignore_case =</span> T)
 pat_all
 txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace_all</span>(pat_all, repl)</code></pre></div>
@@ -664,7 +664,7 @@ txt_s <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vect &lt;-<span class="st"> </span><span class="dv">1000</span>
 <span class="kw">str_interp</span>(<span class="st">&quot;For including vectors like this ${vect} when you can&#39;t break the character strng&quot;</span>)</code></pre></div>
 <pre><code>[1] &quot;For including vectors like this 1000 when you can&#39;t break the character strng&quot;</code></pre>
-<p>Useful when breaking character quotes e.g. HTML tags</p>
+<p>Useful when breaking character quotes e.g. HTML tags</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_interp</span>(<span class="st">&quot;&lt;div style=</span><span class="ch">\&quot;</span><span class="st">color:#F90F40;</span><span class="ch">\&quot;</span><span class="st">&gt; &lt;strong&gt; Total count &lt;/strong&gt; ${vect}&quot;</span>)</code></pre></div>
 <pre><code>[1] &quot;&lt;div style=\&quot;color:#F90F40;\&quot;&gt; &lt;strong&gt; Total count &lt;/strong&gt; 1000&quot;</code></pre>
 <p>Include lists within function</p>
@@ -675,9 +675,9 @@ txt_s <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">st
 <pre><code>[1] &quot;Values are 4.40 and 2.00.&quot;</code></pre>
 </div>
 </div>
-<div id="regular-expressions-i.e.regex" class="section level1">
-<h1>Regular expressions, i.e. regex</h1>
-<p>You can find in-depth info on how to parse character vectors or strings or find specific character patterns using regular expressions in the <a href="https://r4ds.had.co.nz/strings.html"><code>R</code> for Data Science book</a>. There’s also <a href="https://regex101.com/r/ksY7HU/2">a handy regex tool</a> for live text parsing.</p>
+<div id="regular-expressions-i.e.-regex" class="section level1">
+<h1>Regular expressions, i.e. regex</h1>
+<p>You can find in-depth info on how to parse character vectors or strings or find specific character patterns using regular expressions in the <a href="https://r4ds.had.co.nz/strings.html"><code>R</code> for Data Science book</a>. There's also <a href="https://regex101.com/r/ksY7HU/2">a handy regex tool</a> for live text parsing.</p>
 </div>
 
 
@@ -735,7 +735,7 @@ $(document).ready(function ()  {
       theme: "bootstrap3",
       context: '.toc-content',
       hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
       },
       ignoreSelector: ".toc-ignore",
       scrollTo: 0

@@ -20,8 +20,8 @@ output:
     fig_height: 5
     fig_caption: true
     df_print: tibble 
-    citation_package: biblatex # natbib
-    latex_engine: lualatex #xelatex #pdflatex 
+    # citation_package: biblatex # natbib
+    latex_engine: pdflatex #lualatex #xelatex #pdflatex
     keep_tex: false # keep .tex file in dir 
   html_document:
     code_folding: show
@@ -61,6 +61,13 @@ knitr::opts_chunk$set(
 
 suppressWarnings(pacman::p_load(dplyr,ggplot2,plotly,DT,htmlwidgets,viridis,reticulate))
 # update.packages("htmlwidgets")
+
+
+### updating latex pcks (june 2020)  
+# update.packages(ask = FALSE, checkBuilt = TRUE) 
+# tinytex::tlmgr_update()  # update LaTeX packages
+# tinytex::reinstall_tinytex() # if lazy load corrupt error, restart r and try again
+# 'Lesson5_rmd.md' file overrides PDF rendering, so check this file for possible typos/errors  
 
 # render by command line
 # for word
@@ -148,7 +155,8 @@ $$
 \newpage    
 
 ## Create, alter, and embed plots
-```{r,echo=F,eval=T, out.width=""}
+```{r,echo=F,eval=T}
+par(mar=rep(1,4))
 set.seed(12)
 N <- 2000
 rr <- rnorm(N)
@@ -267,6 +275,7 @@ datatable(mtcars,
 
 ### This is `R` code
 ```{r, eval=F}
+pck <- 0
 if(pck==1){
   p<-c("rJava", "RNetLogo"); remove.packages(p)
   # then install rJava and RNetLogo from source

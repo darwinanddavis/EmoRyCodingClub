@@ -14,3 +14,17 @@ RColorBrewer
 viridisLite
 viridis
 plyr
+leaflet
+nycflights13
+plotly
+pacman
+sp
+DT
+htmlwidgets
+here
+tinytex
+reticulate
+xml2
+rvest
+reprex
+stringi
