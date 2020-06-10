@@ -1,9 +1,28 @@
 ---
 title: "Using RMarkdown for reproducible and neat documents"
-author: | 
+author: |
   | Your name here
   | Your affiliation here
+params:
+  date: "!r Sys.Date()"
+  email: Your email here
+  version: '!r getRversion()'
 output:
+  pdf_document:
+    toc: yes
+    toc_depth: '4'
+    includes:
+      in_header:  # add .tex file with header content
+    highlight: tango
+    template: null
+    number_sections: false
+    fig_width: 4
+    fig_height: 5
+    fig_caption: true
+    df_print: tibble 
+    citation_package: biblatex # natbib
+    latex_engine: lualatex #xelatex #pdflatex 
+    keep_tex: false # keep .tex file in dir 
   html_document:
     code_folding: show
     highlight: tango
@@ -11,10 +30,6 @@ output:
     toc: yes
     toc_depth: 4
     toc_float: yes
-params:
-  email: "Your email here"
-  date: !r Sys.Date()
-  version: !r getRversion()
 tags:
   classoption: article
   linkcolor: blue
@@ -127,7 +142,7 @@ $$
 <!-- !!! pdf render code is found in the below commmit -->
 <!-- ## Embed images/gifs: -->
 
-<!-- ![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.png). -->
+<!-- ![Great power is pretty boring](https://raw.githubusercontent.com/darwinanddavis/EmoRyCodingClub/master/img/opm.jpg). -->
 <!-- code for img in pdf: commit L5 rmd external test final - cmd line pdf/word knit -->
 
 \newpage    
