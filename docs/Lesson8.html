@@ -24,6 +24,9 @@
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="site_libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
+<script src="site_libs/str_view-binding-1.4.0/str_view.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
@@ -434,6 +437,9 @@ div.tocify {
 <li>
   <a href="Lesson7.html">Lesson 7</a>
 </li>
+<li>
+  <a href="Lesson8.html">Lesson 8</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -475,49 +481,202 @@ div.tocify {
 <p>Functions for Lesson 8</p>
 <p> </p>
 <p>Packages for Lesson 8<br />
-<code>stringr</code>,<code>reprex</code><br />
+<code>stringr</code><br />
  </p>
 </div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
-<p>Use the <code>stringr</code>,<code>reprex</code>[1] package to cut, substitute, print, and manipulate character and text strings in <code>R</code>. Useful for webscraping text from webpages, scraping PDFs and text files for given characters and words, mining genomics data, etc.</p>
-<p><a href="https://readr.tidyverse.org/">Cheat sheet for the <code>stringr</code> package</a>.<br />
+<p>Use the <code>stringr</code> package to cut, substitute, print, and manipulate character and text strings in <code>R</code>. Useful for webscraping text from webpages, scraping PDFs and text files for given characters and words, mining genomics data, etc.</p>
+<p><a href="https://stringr.tidyverse.org/">Cheat sheet for the <code>stringr</code> package</a>.<br />
  </p>
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
-<p><img src="img/readr.png" style=width:50%></p>
+<p><img src="img/stringr.png" style=width:50%></p>
 </div>
 <!-- ----------------------- image --------------------------- -->
 <p> </p>
 <!--  end yaml template------------------------------------------------------- -->
-</div>
-<div id="do-first" class="section level1">
-<h1>Do First</h1>
-<hr />
-</div>
-<div id="read-in-data" class="section level1">
-<h1>Read in data</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">para &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(<span class="st">&quot;text.txt&quot;</span>)  <span class="co"># read in string  </span></code></pre></div>
+<p>First, we need some text data. As an exercise, since we’re using strings, we’re going to use the webpage content on using strings from the <a href="https://r4ds.had.co.nz/strings.html">R for Data Science textbook</a> as our text sample.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(xml2)  <span class="co"># read html data</span>
+<span class="kw">require</span>(rvest)  <span class="co"># select html elements</span>
+
+url &lt;-<span class="st"> &quot;https://r4ds.had.co.nz/strings.html&quot;</span>
+txt &lt;-<span class="st"> </span>url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>()  <span class="co"># read in web text  </span>
+txt <span class="op">%&gt;%</span><span class="st"> </span>str</code></pre></div>
+<pre><code> chr &quot;14 Strings | R for Data Science\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push&quot;| __truncated__</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_length</span>()  <span class="co"># get length of vector  </span></code></pre></div>
+<pre><code>[1] 60134</code></pre>
 </div>
 <div id="detecting-strings" class="section level1">
 <h1>Detecting strings</h1>
+<p>Search for location of string patterns using <code>str_detect</code>, <code>str_which</code>, and <code>str_locate</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pat &lt;-<span class="st"> &quot;strings&quot;</span>  <span class="co"># string pattern to search for  </span>
+txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_detect</span>(pat)  <span class="co"># returns logical if vector contains that pattern </span></code></pre></div>
+<pre><code>[1] TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_which</span>(pat)  <span class="co"># show which vector the pattern exists   </span></code></pre></div>
+<pre><code>[1] 1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_locate</span>(pat)  <span class="co"># show character positions of the first instance of pattern </span></code></pre></div>
+<pre><code>     start  end
+[1,]  6634 6640</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_locate_all</span>(pat)  <span class="co"># show all positions   </span></code></pre></div>
+<pre><code>[[1]]
+      start   end
+ [1,]  6634  6640
+ [2,]  6660  6666
+ [3,]  7456  7462
+ [4,] 12336 12342
+ [5,] 12504 12510
+ [6,] 12628 12634
+ [7,] 12976 12982
+ [8,] 14174 14180
+ [9,] 14310 14316
+[10,] 14511 14517
+[11,] 15020 15026
+[12,] 15051 15057
+[13,] 15999 16005
+[14,] 16121 16127
+[15,] 16651 16657
+[16,] 17670 17676
+[17,] 18932 18938
+[18,] 19486 19492
+[19,] 20152 20158
+[20,] 20307 20313
+[21,] 20391 20397
+[22,] 21368 21374
+[23,] 21470 21476
+[24,] 30661 30667
+[25,] 40026 40032
+[26,] 48077 48083
+[27,] 49282 49288
+[28,] 51298 51304
+[29,] 55766 55772
+[30,] 57345 57351
+[31,] 59152 59158
+[32,] 59506 59512</code></pre>
 </div>
 <div id="subsetting-strings" class="section level1">
 <h1>Subsetting strings</h1>
+<p>Subset and cut up strings into manageable pieces</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># subset string portion based on char position</span>
+txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_sub</span>(txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_locate</span>(pat)  <span class="co"># use positions from above func  </span>
+)</code></pre></div>
+<pre><code>[1] &quot;strings&quot;</code></pre>
+<p>Shorten text with ellipsis to nth character</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt_short &lt;-<span class="st"> </span>txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_trunc</span>(<span class="dv">1000</span>)  <span class="co"># munst be greater than 3 as this is the length of the ellipsis</span>
+txt_short</code></pre></div>
+<pre><code>[1] &quot;14 Strings | R for Data Science\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag(&#39;js&#39;, new Date());\n\n  gtag(&#39;config&#39;, &#39;UA-115082821-1&#39;);\n\na.sourceLine { display: inline-block; line-height: 1.25; }\na.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }\na.sourceLine:empty { height: 1.2em; position: absolute; }\n.sourceCode { overflow: visible; }\ncode.sourceCode { white-space: pre; position: relative; }\npre.sourceCode { margin: 0; }\n@media screen {\ndiv.sourceCode { overflow: auto; }\n}\n@media print {\ncode.sourceCode { white-space: pre-wrap; }\na.sourceLine { text-indent: -1em; padding-left: 1em; }\n}\npre.numberSource a.sourceLine\n  { position: relative; }\npre.numberSource a.sourceLine:empty\n  { position: absolute; }\npre.numberSource a.sourceLine::before\n  { content: attr(data-line-number);\n    position: absolute; left: -5em; text-align: right; vertical-align: baseline;\n    border: none; pointer-events: all;\n    -web...&quot;</code></pre>
+<p>Return string as char vector containing pattern</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_subset</span>(pat)</code></pre></div>
+<p>Extract string patterns as characters</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_extract</span>(pat)  <span class="co"># pull pattern out of string </span></code></pre></div>
+<pre><code>[1] &quot;strings&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_extract_all</span>(pat, <span class="dt">simplify =</span> F)  <span class="co"># extract all patterns as string . set simplify = T to return matrix</span></code></pre></div>
+<pre><code>[[1]]
+ [1] &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot;
+[10] &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot;
+[19] &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot;
+[28] &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot; &quot;strings&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_match</span>(pat)  <span class="co"># extract pattern as matrix </span></code></pre></div>
+<pre><code>     [,1]     
+[1,] &quot;strings&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_match_all</span>(pat)  <span class="co"># extract all pattern instances as matrix </span></code></pre></div>
+<pre><code>[[1]]
+      [,1]     
+ [1,] &quot;strings&quot;
+ [2,] &quot;strings&quot;
+ [3,] &quot;strings&quot;
+ [4,] &quot;strings&quot;
+ [5,] &quot;strings&quot;
+ [6,] &quot;strings&quot;
+ [7,] &quot;strings&quot;
+ [8,] &quot;strings&quot;
+ [9,] &quot;strings&quot;
+[10,] &quot;strings&quot;
+[11,] &quot;strings&quot;
+[12,] &quot;strings&quot;
+[13,] &quot;strings&quot;
+[14,] &quot;strings&quot;
+[15,] &quot;strings&quot;
+[16,] &quot;strings&quot;
+[17,] &quot;strings&quot;
+[18,] &quot;strings&quot;
+[19,] &quot;strings&quot;
+[20,] &quot;strings&quot;
+[21,] &quot;strings&quot;
+[22,] &quot;strings&quot;
+[23,] &quot;strings&quot;
+[24,] &quot;strings&quot;
+[25,] &quot;strings&quot;
+[26,] &quot;strings&quot;
+[27,] &quot;strings&quot;
+[28,] &quot;strings&quot;
+[29,] &quot;strings&quot;
+[30,] &quot;strings&quot;
+[31,] &quot;strings&quot;
+[32,] &quot;strings&quot;</code></pre>
+<p>View an HTML rendering of the text using <code>str_view()</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># visualise the first 1000 characters</span>
+txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_sub</span>(<span class="dv">1</span>, <span class="dv">1000</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_view</span>(<span class="st">&quot; &quot;</span>)</code></pre></div>
+<p><div id="htmlwidget-4771f0d07ea67ed4bf8c" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4771f0d07ea67ed4bf8c">{"x":{"html":"<ul>\n  <li>14<span class='match'> <\/span>Strings | R for Data Science\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-115082821-1');\n\na.sourceLine { display: inline-block; line-height: 1.25; }\na.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }\na.sourceLine:empty { height: 1.2em; position: absolute; }\n.sourceCode { overflow: visible; }\ncode.sourceCode { white-space: pre; position: relative; }\npre.sourceCode { margin: 0; }\n@media screen {\ndiv.sourceCode { overflow: auto; }\n}\n@media print {\ncode.sourceCode { white-space: pre-wrap; }\na.sourceLine { text-indent: -1em; padding-left: 1em; }\n}\npre.numberSource a.sourceLine\n  { position: relative; }\npre.numberSource a.sourceLine:empty\n  { position: absolute; }\npre.numberSource a.sourceLine::before\n  { content: attr(data-line-number);\n    position: absolute; left: -5em; text-align: right; vertical-align: baseline;\n    border: none; pointer-events: all;\n    -webkit<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>  </p>
 <p>Split the text into separate components and apply the <code>str_sub</code> function to each new component</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># split data into list elements by every &#39;XX&#39; character apply string function to each new element</span>
-<span class="co"># using map</span>
-
-stringr<span class="op">::</span><span class="kw">str_view</span>(<span class="st">&quot;SFHDIKNDFKGFHelloDFFDGWorld&quot;</span>, <span class="st">&quot;[aeiou]&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># split into matrix at every instance of pattern</span>
+txt_split &lt;-<span class="st"> </span>txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_split_fixed</span>(pat, <span class="dt">n =</span> <span class="ot">Inf</span>)
+txt_split <span class="op">%&gt;%</span><span class="st"> </span>dim  <span class="co"># get dimensions of matrix </span></code></pre></div>
+<pre><code>[1]  1 33</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt_split[<span class="dv">1</span>, <span class="dv">20</span>]  <span class="co"># view 1st row and 3rd column  </span></code></pre></div>
+<pre><code>[1] &quot;, regexps use the backslash, \\, to escape special behaviour. So to match an ., you need the regexp \\.. Unfortunately this creates a problem. We use &quot;</code></pre>
 </div>
 <div id="mutating-and-joining-strings" class="section level1">
 <h1>Mutating and joining strings</h1>
+<p>Replace pattern instances with new pattern</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">repl &lt;-<span class="st"> &quot;when you really need that coffee hit&quot;</span>  <span class="co"># replacement character string</span>
+txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace_all</span>(pat, repl)</code></pre></div>
+<p>You’ll notice that the first instance of the returned pattern is capitalised, so the replacement doesn’t catch it and thus ignores the string. We can easily tell <code>R</code> to detect all instances of the pattern by ignoring case using <code>regex</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pat_all &lt;-<span class="st"> </span><span class="kw">regex</span>(pat, <span class="dt">ignore_case =</span> T)
+pat_all
+txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace_all</span>(pat_all, repl)</code></pre></div>
 </div>
 <div id="some-more-useful-functions" class="section level1">
 <h1>Some more useful functions</h1>
-<p><code>str_wrap</code> Wrap text into neat paragraphs</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_wrap</span>(<span class="st">&quot;The prevailing challenges of effective schistosomiasis control suggest the need for new ideas.Current schistosome control strategies target either the intermediate snail host or humans, but as sustainable, long-term control methods are constrained by high economic and/or environmental costs. For example, mass drug administration (MDA), such as administering praziquantel, relies on extensive monitoring to evaluate success (Gurarie et al. 2015), while chemical programs, such as mollusciciding, incur high environmental costs (Coelho and Caldeira 2016) and rely of precise timing and careful intervention (MalCiv in review). The measured success from the combined strengths of these two methods is still in its infancy (Lo et al. 2018), presenting opportunities to test and introduce alternatives.  </span>
-<span class="st">&quot;</span>, <span class="dv">20</span>) <span class="op">%&gt;%</span><span class="st"> </span>regrex<span class="op">::</span></code></pre></div>
+<p>Duplicate string</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># use the smaller, split text</span>
+txt_s &lt;-<span class="st"> </span>txt_split[<span class="dv">5</span>]
+txt_s <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_dup</span>(<span class="dv">10</span>)  <span class="co"># duplicate string n number of times (10)     </span></code></pre></div>
+<pre><code>[1] &quot; work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because  work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because  work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because  work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because  work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because  work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because  work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because  work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because  work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because  work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because &quot;</code></pre>
+<p>Removing white space and truncating text</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt_s <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace_all</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>)  <span class="co"># remove all spaces  </span></code></pre></div>
+<pre><code>[1] &quot;workandhowtocreatethembyhand,butthefocusofthischapterwillbeonregularexpressions,orregexpsforshort.Regularexpressionsareusefulbecause&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt_s <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_trim</span>(<span class="dt">side =</span> <span class="st">&quot;both&quot;</span>)  <span class="co"># strip white space from both ends  </span></code></pre></div>
+<pre><code>[1] &quot;work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because&quot;</code></pre>
+<div id="alternative-functions-from-stringi-package" class="section level2">
+<h2>Alternative functions from <code>stringi</code> package</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(stringi)
+txt_s <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">stri_replace_all_charclass</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">p{WHITE_SPACE}&quot;</span>, <span class="st">&quot;&quot;</span>)  <span class="co"># remove middle white space  </span></code></pre></div>
+<pre><code>[1] &quot;workandhowtocreatethembyhand,butthefocusofthischapterwillbeonregularexpressions,orregexpsforshort.Regularexpressionsareusefulbecause&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt_s <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_replace_na</span>()  <span class="co"># change NAs into true &#39;NA&#39;    </span></code></pre></div>
+<pre><code>[1] &quot; work and how to create them by hand, but the focus of this chapter will be on regular expressions, or regexps for short. Regular expressions are useful because &quot;</code></pre>
+</div>
+<div id="including-vectors-within-strings" class="section level2">
+<h2>Including vectors within strings</h2>
+<p>Insert numeric vectors without breaking character string</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">vect &lt;-<span class="st"> </span><span class="dv">1000</span>
+<span class="kw">str_interp</span>(<span class="st">&quot;For including vectors like this ${vect} when you can&#39;t break the character strng&quot;</span>)</code></pre></div>
+<pre><code>[1] &quot;For including vectors like this 1000 when you can&#39;t break the character strng&quot;</code></pre>
+<p>Useful when breaking character quotes e.g. HTML tags</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_interp</span>(<span class="st">&quot;&lt;div style=</span><span class="ch">\&quot;</span><span class="st">color:#F90F40;</span><span class="ch">\&quot;</span><span class="st">&gt; &lt;strong&gt; Total count &lt;/strong&gt; ${vect}&quot;</span>)</code></pre></div>
+<pre><code>[1] &quot;&lt;div style=\&quot;color:#F90F40;\&quot;&gt; &lt;strong&gt; Total count &lt;/strong&gt; 1000&quot;</code></pre>
+<p>Include lists within function</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_interp</span>(<span class="st">&quot;First value, ${v1}, Second value, ${v2*2}.&quot;</span>, <span class="kw">list</span>(<span class="dt">v1 =</span> <span class="dv">10</span>, <span class="dt">v2 =</span> <span class="dv">20</span>))</code></pre></div>
+<pre><code>[1] &quot;First value, 10, Second value, 40.&quot;</code></pre>
+<p>And data frames</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str_interp</span>(<span class="st">&quot;Values are $[.2f]{max(Sepal.Width)} and $[.2f]{min(Sepal.Width)}.&quot;</span>, iris)</code></pre></div>
+<pre><code>[1] &quot;Values are 4.40 and 2.00.&quot;</code></pre>
+</div>
+</div>
+<div id="regular-expressions-i.e.regex" class="section level1">
+<h1>Regular expressions, i.e. regex</h1>
+<p>You can find in-depth info on how to parse character vectors or strings or find specific character patterns using regular expressions in the <a href="https://r4ds.had.co.nz/strings.html"><code>R</code> for Data Science book</a>. There’s also <a href="https://regex101.com/r/ksY7HU/2">a handy regex tool</a> for live text parsing.</p>
 </div>
 
 

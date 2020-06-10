@@ -1,112 +1,4 @@
 
-Writing objects:   4% (1/23)   Writing objects:   8% (2/23)   Writing objects:  13% (3/23)   Writing objects:  17% (4/23)   Writing objects:  21% (5/23)   Writing objects:  26% (6/23)   Writing objects:  30% (7/23)   Writing objects:  34% (8/23)   Writing objects:  39% (9/23)   Writing objects:  43% (10/23)   Writing objects:  47% (11/23)   Writing objects:  52% (12/23)   Writing objects:  56% (13/23)   Writing objects:  60% (14/23)   Writing objects:  65% (15/23)   Writing objects:  69% (16/23)   Writing objects:  73% (17/23)   Writing objects:  78% (18/23)   Writing objects:  82% (19/23)   Writing objects:  86% (20/23)   Writing objects:  91% (21/23)   Writing objects:  95% (22/23)   Writing objects: 100% (23/23)   Writing objects: 100% (23/23), 309.32 KiB | 0 bytes/s, done.
-Total 23 (delta 14), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/14)[Kremote: Resolving deltas:   7% (1/14)[Kremote: Resolving deltas:  14% (2/14)[Kremote: Resolving deltas:  21% (3/14)[Kremote: Resolving deltas:  28% (4/14)[Kremote: Resolving deltas:  35% (5/14)[Kremote: Resolving deltas:  42% (6/14)[Kremote: Resolving deltas:  50% (7/14)[Kremote: Resolving deltas:  57% (8/14)[Kremote: Resolving deltas:  64% (9/14)[Kremote: Resolving deltas:  71% (10/14)[Kremote: Resolving deltas:  78% (11/14)[Kremote: Resolving deltas:  85% (12/14)[Kremote: Resolving deltas:  92% (13/14)[Kremote: Resolving deltas: 100% (14/14)[Kremote: Resolving deltas: 100% (14/14), completed with 14 local objects.[K
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   22fcf91..b1dc50b  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ re[K[Kgit reset
-Unstaged changes after reset:
-M	.Rproj.user/ABE7B653/console06/E8FBF1BE
-M	Lesson5.Rmd
-M	docs/Lesson5.html
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .[K.
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''a'd' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd''e'd'r'e'a'd'r' '[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'L'%' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ''r'e'u'w'[1P'[1P'q'u'i'r'e'd' 'l'c'[1P'[1P'p'c'k's'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C re[1P[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C5 r[1@e[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-
-[master af111ae] L5 required pcks
- 3 files changed, 41 insertions(+), 3 deletions(-)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push
-Counting objects: 9, done.
-Delta compression using up to 4 threads.
-Compressing objects:  11% (1/9)   Compressing objects:  22% (2/9)   Compressing objects:  33% (3/9)   Compressing objects:  44% (4/9)   Compressing objects:  55% (5/9)   Compressing objects:  66% (6/9)   Compressing objects:  77% (7/9)   Compressing objects:  88% (8/9)   Compressing objects: 100% (9/9)   Compressing objects: 100% (9/9), done.
-Writing objects:  11% (1/9)   Writing objects:  22% (2/9)   Writing objects:  33% (3/9)   Writing objects:  44% (4/9)   Writing objects:  55% (5/9)   Writing objects:  66% (6/9)   Writing objects:  77% (7/9)   Writing objects:  88% (8/9)   Writing objects: 100% (9/9)   Writing objects: 100% (9/9), 1.42 KiB | 0 bytes/s, done.
-Total 9 (delta 6), reused 0 (delta 0)
-remote: Resolving deltas:   0% (0/6)[Kremote: Resolving deltas:  16% (1/6)[Kremote: Resolving deltas:  33% (2/6)[Kremote: Resolving deltas:  50% (3/6)[Kremote: Resolving deltas:  66% (4/6)[Kremote: Resolving deltas:  83% (5/6)[Kremote: Resolving deltas: 100% (6/6)[Kremote: Resolving deltas: 100% (6/6), completed with 6 local objects.[K
-To https://github.com/darwinanddavis/EmoRyCodingClub
-   b1dc50b..af111ae  master -> master
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ [K6300L-127771-M:ecc malishev$ ls
-%
-Lesson1.Rmd
-Lesson1.html
-Lesson1_files
-Lesson2.Rmd
-Lesson2.html
-Lesson2_files
-Lesson3.Rmd
-Lesson3.html
-Lesson3_files
-Lesson4.Rmd
-Lesson4.html
-Lesson5.Rmd
-Lesson5_cache
-Lesson5_files
-Lesson5_rmd.Rmd
-Lesson5_rmd.docx
-Lesson5_rmd.log
-Lesson5_rmd.md
-Lesson5_rmd.tex
-Lesson5_rmd_cache
-Lesson5_rmd_files
-Lesson6.Rmd
-Lesson7.Rmd
-Lesson7_dofirst.pdf
-README.md
-_site.yml
-admin
-admin_
-docs
-emorycodingclub.Rproj
-functions_lesson1.txt
-functions_lesson2.txt
-img
-index.Rmd
-index.html
-lookhere
-nyc_compact.csv
-packages_lesson1.txt
-packages_lesson2.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ ls -a
-%
-.
-..
-.DS_Store
-.RData
-.Rhistory
-.Rproj.user
-.git
-.gitignore
-.here
-Lesson1.Rmd
-Lesson1.html
-Lesson1_files
-Lesson2.Rmd
-Lesson2.html
-Lesson2_files
-Lesson3.Rmd
-Lesson3.html
-Lesson3_files
-Lesson4.Rmd
-Lesson4.html
-Lesson5.Rmd
-Lesson5_cache
-Lesson5_files
-Lesson5_rmd.Rmd
-Lesson5_rmd.docx
-Lesson5_rmd.log
-Lesson5_rmd.md
-Lesson5_rmd.tex
-Lesson5_rmd_cache
-Lesson5_rmd_files
-Lesson6.Rmd
-Lesson7.Rmd
-Lesson7_dofirst.pdf
-README.md
-_site.yml
-admin
-admin_
-docs
-emorycodingclub.Rproj
 functions_lesson1.txt
 functions_lesson2.txt
 img
@@ -1040,3 +932,117 @@ Lesson5_files		packages_lesson2.txt
 Lesson5_rmd.Rmd		rstudioconf.Rmd
 Lesson5_rmd.docx
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m ''u'p'd'a't'e' 'i' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cn''d'e'x'[1P'[1P'[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C' [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P'
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cd' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ca''t'e'
+[master ee0186d] update date
+ 1 file changed, 40 insertions(+)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push origin master
+Counting objects: 70, done.
+Delta compression using up to 4 threads.
+Compressing objects:   1% (1/64)   Compressing objects:   3% (2/64)   Compressing objects:   4% (3/64)   Compressing objects:   6% (4/64)   Compressing objects:   7% (5/64)   Compressing objects:   9% (6/64)   Compressing objects:  10% (7/64)   Compressing objects:  12% (8/64)   Compressing objects:  14% (9/64)   Compressing objects:  15% (10/64)   Compressing objects:  17% (11/64)   Compressing objects:  18% (12/64)   Compressing objects:  20% (13/64)   Compressing objects:  21% (14/64)   Compressing objects:  23% (15/64)   Compressing objects:  25% (16/64)   Compressing objects:  26% (17/64)   Compressing objects:  28% (18/64)   Compressing objects:  29% (19/64)   Compressing objects:  31% (20/64)   Compressing objects:  32% (21/64)   Compressing objects:  34% (22/64)   Compressing objects:  35% (23/64)   Compressing objects:  37% (24/64)   Compressing objects:  39% (25/64)   Compressing objects:  40% (26/64)   Compressing objects:  42% (27/64)   Compressing objects:  43% (28/64)   Compressing objects:  45% (29/64)   Compressing objects:  46% (30/64)   Compressing objects:  48% (31/64)   Compressing objects:  50% (32/64)   Compressing objects:  51% (33/64)   Compressing objects:  53% (34/64)   Compressing objects:  54% (35/64)   Compressing objects:  56% (36/64)   Compressing objects:  57% (37/64)   Compressing objects:  59% (38/64)   Compressing objects:  60% (39/64)   Compressing objects:  62% (40/64)   Compressing objects:  64% (41/64)   Compressing objects:  65% (42/64)   Compressing objects:  67% (43/64)   Compressing objects:  68% (44/64)   Compressing objects:  70% (45/64)   Compressing objects:  71% (46/64)   Compressing objects:  73% (47/64)   Compressing objects:  75% (48/64)   Compressing objects:  76% (49/64)   Compressing objects:  78% (50/64)   Compressing objects:  79% (51/64)   Compressing objects:  81% (52/64)   Compressing objects:  82% (53/64)   Compressing objects:  84% (54/64)   Compressing objects:  85% (55/64)   Compressing objects:  87% (56/64)   Compressing objects:  89% (57/64)   Compressing objects:  90% (58/64)   Compressing objects:  92% (59/64)   Compressing objects:  93% (60/64)   Compressing objects:  95% (61/64)   Compressing objects:  96% (62/64)   Compressing objects:  98% (63/64)   Compressing objects: 100% (64/64)   Compressing objects: 100% (64/64), done.
+Writing objects:   1% (1/70)   Writing objects:   2% (2/70)   Writing objects:   4% (3/70)   Writing objects:   5% (4/70)   Writing objects:   7% (5/70)   Writing objects:   8% (6/70)   Writing objects:  10% (7/70)   Writing objects:  11% (8/70)   Writing objects:  12% (9/70)   Writing objects:  14% (10/70)   Writing objects:  15% (11/70)   Writing objects:  17% (12/70)   Writing objects:  18% (13/70)   Writing objects:  20% (14/70)   Writing objects:  21% (15/70)   Writing objects:  22% (16/70)   Writing objects:  24% (17/70)   Writing objects:  25% (18/70)   Writing objects:  27% (19/70)   Writing objects:  28% (20/70)   Writing objects:  30% (21/70)   Writing objects:  31% (22/70)   Writing objects:  32% (23/70)   Writing objects:  34% (24/70)   Writing objects:  35% (25/70)   Writing objects:  37% (26/70)   Writing objects:  38% (27/70)   Writing objects:  40% (28/70)   Writing objects:  41% (29/70)   Writing objects:  42% (30/70)   Writing objects:  44% (31/70)   Writing objects:  45% (32/70)   Writing objects:  47% (33/70)   Writing objects:  48% (34/70)   Writing objects:  50% (35/70)   Writing objects:  51% (36/70)   Writing objects:  52% (37/70)   Writing objects:  54% (38/70)   Writing objects:  55% (39/70)   Writing objects:  57% (40/70)   Writing objects:  58% (41/70)   Writing objects:  60% (42/70)   Writing objects:  61% (43/70)   Writing objects:  62% (44/70)   Writing objects:  64% (45/70)   Writing objects:  65% (46/70)   Writing objects:  67% (47/70)   Writing objects:  68% (48/70)   Writing objects:  70% (49/70)   Writing objects:  71% (50/70)   Writing objects:  72% (51/70)   Writing objects:  74% (52/70)   Writing objects:  75% (53/70)   Writing objects:  77% (54/70)   Writing objects:  78% (55/70)   Writing objects:  80% (56/70)   Writing objects:  81% (57/70)   Writing objects:  82% (58/70)   Writing objects:  84% (59/70)   Writing objects:  85% (60/70)   Writing objects:  87% (61/70)   Writing objects:  88% (62/70)   Writing objects:  90% (63/70)   Writing objects:  91% (64/70)   Writing objects:  92% (65/70)   Writing objects:  94% (66/70)   Writing objects:  95% (67/70)   Writing objects:  97% (68/70)   Writing objects:  98% (69/70)   Writing objects: 100% (70/70)   Writing objects: 100% (70/70), 655.49 KiB | 0 bytes/s, done.
+Total 70 (delta 46), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/46)[Kremote: Resolving deltas:   2% (1/46)[Kremote: Resolving deltas:   6% (3/46)[Kremote: Resolving deltas:   8% (4/46)[Kremote: Resolving deltas:  13% (6/46)[Kremote: Resolving deltas:  15% (7/46)[Kremote: Resolving deltas:  17% (8/46)[Kremote: Resolving deltas:  19% (9/46)[Kremote: Resolving deltas:  21% (10/46)[Kremote: Resolving deltas:  23% (11/46)[Kremote: Resolving deltas:  26% (12/46)[Kremote: Resolving deltas:  28% (13/46)[Kremote: Resolving deltas:  30% (14/46)[Kremote: Resolving deltas:  32% (15/46)[Kremote: Resolving deltas:  34% (16/46)[Kremote: Resolving deltas:  36% (17/46)[Kremote: Resolving deltas:  39% (18/46)[Kremote: Resolving deltas:  41% (19/46)[Kremote: Resolving deltas:  43% (20/46)[Kremote: Resolving deltas:  45% (21/46)[Kremote: Resolving deltas:  47% (22/46)[Kremote: Resolving deltas:  50% (23/46)[Kremote: Resolving deltas:  52% (24/46)[Kremote: Resolving deltas:  54% (25/46)[Kremote: Resolving deltas:  58% (27/46)[Kremote: Resolving deltas:  60% (28/46)[Kremote: Resolving deltas:  63% (29/46)[Kremote: Resolving deltas:  65% (30/46)[Kremote: Resolving deltas:  67% (31/46)[Kremote: Resolving deltas:  69% (32/46)[Kremote: Resolving deltas:  71% (33/46)[Kremote: Resolving deltas:  73% (34/46)[Kremote: Resolving deltas:  76% (35/46)[Kremote: Resolving deltas:  78% (36/46)[Kremote: Resolving deltas:  80% (37/46)[Kremote: Resolving deltas:  82% (38/46)[Kremote: Resolving deltas:  84% (39/46)[Kremote: Resolving deltas:  86% (40/46)[Kremote: Resolving deltas:  89% (41/46)[Kremote: Resolving deltas:  91% (42/46)[Kremote: Resolving deltas:  93% (43/46)[Kremote: Resolving deltas:  95% (44/46)[Kremote: Resolving deltas:  97% (45/46)[Kremote: Resolving deltas: 100% (46/46)[Kremote: Resolving deltas: 100% (46/46), completed with 42 local objects.[K
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   c61edfa..ee0186d  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git checkut m[K[K[K[Kout gh-pages
+error: pathspec 'gh-pages' did not match any file(s) known to git.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git checkout master
+M	.Rproj.user/ABE7B653/console06/E8FBF1BE
+Already on 'master'
+Your branch is up-to-date with 'origin/master'.
+[K[A6300L-127771-M:ecc malishev$ git push origiin gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'redo html link'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origi[6Pn gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'redo html link'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origiin gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m [3P'plots'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origiin gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'fix spelling error'[A[C[C[C[C[C[C[C[C[C[C[C[C[4Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cresetadd .push origiin gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m [3P'mlass'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m [3P'mlass'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origiin gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cremote --v[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Pstatus
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C echo 157D8BC88 && /usr/bin/env && echo 92F98A21[A[8Pls -a
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit commit -m  'am 'add mlass'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pls -acd assignmentss/[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pls -a
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Ppwdls -a[K -a[Kgit push origiin gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m [3P'may26'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp ~/Documentss/Data/worldmaps/coronavirus_.R ~/Documentss/Data/worldmaps/worldmaps[A[C[C.html ~/Documents/Data/worldmaps/worldmaps[A[A[Cgit push origin gh-pages[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m [3P'may25'[K[K[K[K[K[K[K[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[Kpwd
+/Users/malishev/Documents/Emory/admin/ecc
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git sta[K[K[Khos[K[Kistory
+git: 'history' is not a git command. See 'git --help'.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git log --onl ine
+fatal: unrecognized argument: --online
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git log --onliine[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Celine
+[?1h=[33mee0186d[m update date[m
+[33m6a0633a[m update date[m
+[33mc61edfa[m march index[m
+[33m608658e[m index feb[m
+[33m9402b87[m end 2019[m
+[33mc616554[m L6 modify depth eg[m
+[33mf1c97c2[m rendered site[m
+[33ma20267a[m index updates[m
+[33m8333612[m index[m
+[33me2d1e66[m index[m
+:[K[K[K:[K[K[?1l>]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git on[K[Klog
+[?1h=[33mcommit ee0186d83b1b9e96e2035f344840e5e4aff[m [33mbeecc[m[m
+Author: darwinanddavis <matthew.malishev@g[m mail.com>[m
+Date:   Thu May 7 11:15:09 2020 +1000[m
+[m
+    update date[m
+[m
+[33mcommit 6a0633a83ff33f49049a06d24fd92f7d767[m [33m9b845[m[m
+:[K[K[K:[K[K[?1l>]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git log[Kgit log
+[?1h=[33mcommit ee0186d83b1b9e96e2035f344840e5e4aff[m [33mbeecc[m[m
+Author: darwinanddavis <matthew.malishev@g[m mail.com>[m
+Date:   Thu May 7 11:15:09 2020 +1000[m
+[m
+    update date[m
+[m
+[33mcommit 6a0633a83ff33f49049a06d24fd92f7d767[m [33m9b845[m[m
+:[K[K[K:[K[K[?1l>]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .gitigor e
+The file /Users/malishev/Documents/Emory/admin/ecc/.gitigore does not exist.
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open .gitigoree[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cnore[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+git add [K[K[K[K[K[K[K[K[K6300L-127771-M:ecc malishev$ ls
+%
+Lesson1.Rmd
+Lesson1.html
+Lesson1_files
+Lesson2.Rmd
+Lesson2.html
+Lesson2_files
+Lesson3.Rmd
+Lesson3.html
+Lesson3_files
+Lesson4.Rmd
+Lesson5.Rmd
+Lesson5_cache
+Lesson5_files
+Lesson5_rmd.Rmd
+Lesson5_rmd.docx
+Lesson5_rmd.html
+Lesson5_rmd.log
+Lesson5_rmd.md
+Lesson5_rmd.tex
+Lesson5_rmd_cache
+Lesson5_rmd_files
+Lesson6.Rmd
+Lesson7.Rmd
+Lesson7_dofirst.pdf
+Lesson8.Rmd
+README.md
+_site.yml
+admin
+admin_
+docs
+emorycodingclub.Rproj
+functions_lesson1.txt
+functions_lesson2.txt
+img
+index.Rmd
+index.html
+index.knit.html
+lookhere
+nyc_compact.csv
+packages_lesson1.txt
+packages_lesson2.txt
+rstudioconf.Rmd
+site_libs
+text.txt
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add ,[K.

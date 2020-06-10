@@ -2,8 +2,8 @@
 params:
   lesson: "Lesson 8"
   title: "Scraping and manipulating text strings"  
-  bookchapter_name: "Cheat sheet for the `stringr` package"    
-  bookchapter_section: "https://readr.tidyverse.org/"    
+  bookchapter_name: "Cheat sheet for the `stringr` package"      
+  bookchapter_section: "https://stringr.tidyverse.org/"    
   functions: ""
   packages: "`stringr`"      
   # end inputs ---------------------------------------------------------------
@@ -17,7 +17,7 @@ output:
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
 options(width=100)
 knitr::opts_chunk$set(
-  eval = FALSE, # run all code
+  eval = T, # run all code
   echo = TRUE, # show code chunks in output 
   tidy = TRUE, # make output as tidy
   message = FALSE,  # mask all messages
@@ -32,9 +32,8 @@ knitr::opts_chunk$set(
 <!-- install packages -->
 ```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
 # install.packages("pacman")
-pacman::p_load("stringr")
-require(stringr)
-require(reprex) # for rendering text string in HTML  
+pacman::p_load(stringr,reprex,xml2,rvest)
+# reprex = for rendering text string in HTML    
 
 ```
 
@@ -63,7 +62,7 @@ Use the `r params$packages` package to cut, substitute, print, and manipulate ch
 
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
-  <img src="img/readr.png" style=width:50%>
+  <img src="img/stringr.png" style=width:50%>
 </div>
 <!-- ----------------------- image --------------------------- -->
 \    
@@ -71,93 +70,153 @@ Use the `r params$packages` package to cut, substitute, print, and manipulate ch
 
 <!--  end yaml template------------------------------------------------------- -->  
 
-# Do First    
+First, we need some text data. As an exercise, since we're using strings, we're going to use the webpage content on using strings from the [R for Data Science textbook](https://r4ds.had.co.nz/strings.html) as our text sample.      
+```{r, eval=T}
+require(xml2)# read html data
+require(rvest) # select html elements
 
-
-*****    
-
-# Read in data  
-
-```{r}
-para <- readr::read_csv("text.txt") # read in string  
+url <- "https://r4ds.had.co.nz/strings.html"
+txt <- url %>% read_html %>% html_text() # read in web text  
+txt %>% str 
+txt %>% str_length() # get length of vector  
 ```
+
 
 # Detecting strings       
 
+Search for location of string patterns using `str_detect`, `str_which`, and `str_locate`   
 ```{r}
+pat <- "strings" # string pattern to search for  
+txt %>% str_detect(pat) # returns logical if vector contains that pattern 
+txt %>% str_which(pat) # show which vector the pattern exists   
+txt %>% str_locate(pat) # show character positions of the first instance of pattern 
+txt %>% str_locate_all(pat) # show all positions   
 
 ```
 
 # Subsetting strings  
 
+Subset and cut up strings into manageable pieces   
 ```{r}
+# subset string portion based on char position  
+txt %>% str_sub(
+  txt %>% str_locate(pat) # use positions from above func  
+)
+```
+  
+Shorten text with ellipsis to nth character  
+```{r}
+txt_short <- txt %>% str_trunc(2000) # munst be greater than 3 as this is the length of the ellipsis
+txt_short
+```
+
+Return string as char vector containing pattern    
+```{r, eval=F}
+txt %>% str_subset(pat)   
+```
+
+Extract string patterns as characters  
+```{r}
+txt %>% str_extract(pat) # pull pattern out of string 
+txt %>% str_extract_all(pat, simplify = F) # extract all patterns as string . set simplify = T to return matrix
+txt %>% str_match(pat) # extract pattern as matrix 
+txt %>% str_match_all(pat) # extract all pattern instances as matrix 
+```
+
+View an HTML rendering of the text using `str_view()`    
+```{r}
+# visualise the first 1000 characters
+txt %>% str_sub(1,1000) %>% 
+  str_view(" ")
+```
+\  
+
+
+Split the text into separate components and apply the `str_sub` function to each new component    
+```{r, eval=T}
+# split into matrix at every instance of pattern  
+txt_split <- txt %>% str_split_fixed(pat, n = Inf)
+txt_split %>% dim # get dimensions of matrix 
+txt_split[1,20] # view 1st row and 3rd column  
 
 ```
 
-Split the text into separate components and apply the `str_sub` function to each new component  
-
-```{r}
-
-# split data into list elements by every 'XX' character  
-# apply string function to each new element using map  
-
-stringr::str_view("SFHDIKNDFKGFHelloDFFDGWorld","[aeiou]")
-
-```
-
-
+  
 # Mutating and joining strings  
-
-```{r}
-
-str_replace(text,fixed(" "),x)
-stri_replace_all_charclass("\\p{WHITE_SPACE}","") # remove middle white space
-str_replace_na() 
+  
+Replace pattern instances with new pattern    
+```{r, eval=F}
+repl <- "when you really need that coffee hit" # replacement character string
+txt %>% 
+  str_replace_all(pat,repl)
 
 ```
-
+    
+You'll notice that the first instance of the returned pattern is capitalised, so the replacement doesn't catch it and thus ignores the string. We can easily tell `R` to detect all instances of the pattern by ignoring case using `regex`      
+```{r, eval=F}
+pat_all <- regex(pat, ignore_case = T)
+pat_all
+txt %>% str_replace_all(pat_all,repl)
+```
+  
 # Some more useful functions  
-
-`str_wrap` Wrap text into neat paragraphs  
+  
+Duplicate string  
 ```{r}
-str_wrap("The prevailing challenges of effective schistosomiasis control suggest the need for new ideas Current schistosome control strategies target either the intermediate snail host or humans", width = 20) %>% 
-reprex(venue = "gh") 
+# use the smaller, split text 
+txt_s <- txt_split[5]
+txt_s %>% str_dup(10) # duplicate string n number of times (10)     
 
 ```
- 
-`str_view_all` View string as HTML webpage  
-```{r}
-str_view_all("The prevailing challenges of effective schistosomiasis control suggest the need for new ideas Current schistosome control strategies target either the intermediate snail host or humans", "[C]")
-```
- 
-Including vectors within strings. 
-```{r}
-require(stringr)
 
+Removing white space and truncating text   
+```{r}
+txt_s %>% str_replace_all(" ","") # remove all spaces  
+txt_s %>% str_trim(side="both") # strip white space from both ends  
+
+```
+
+## Alternative functions from `stringi` package      
+```{r}
+require(stringi)
+txt_s %>% 
+  stri_replace_all_charclass("\\p{WHITE_SPACE}","") # remove middle white space  
+txt_s %>% str_replace_na() # change NAs into true "NA"    
+
+```
+
+## Including vectors within strings  
+
+Insert numeric vectors without breaking character string  
+```{r}
 vect <- 1000
 str_interp("For including vectors like this ${vect} when you can't break the character strng") 
+```
 
-# Useful when breaking character quotes e.g. HTML tags      
-str_interp("<div style=\"color:#F90F40;\"> <strong> Total cases </strong> ${vect}")
 
-# include lists 
+Useful when breaking character quotes e.g. HTML tags        
+```{r}
+str_interp("<div style=\"color:#F90F40;\"> <strong> Total count </strong> ${vect}")
+```
+
+Include lists within function    
+```{r}
+
 str_interp("First value, ${v1}, Second value, ${v2*2}.",
   list(v1 = 10, v2 = 20)
 )
+```
 
-# and data frames
+And data frames  
+```{r}  
 str_interp(
   "Values are $[.2f]{max(Sepal.Width)} and $[.2f]{min(Sepal.Width)}.",
   iris
-)
+)  
+
 ```
 
-To include  
-```{r}
-require(stringr); require(dplyr)
-string <- "Some, TEXT," 
-string %>% str_match("E") # return as matrix 
+# Regular expressions, i.e. regex    
 
-string %>% str_split_fixed(", ",2) # split based on pattern 
-```
-
+You can find in-depth info on how to parse character vectors or strings or find specific character patterns using regular expressions in the [`R` for Data Science book](https://r4ds.had.co.nz/strings.html). There's also [a handy regex tool](https://regex101.com/r/ksY7HU/2) for live text parsing.      
+  

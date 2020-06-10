@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.3/leaflet.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 54px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h2 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h3 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h4 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h5 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h6 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">EmoRy Coding Club</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="Lesson1.html">Lesson 1</a>
+</li>
+<li>
+  <a href="Lesson2.html">Lesson 2</a>
+</li>
+<li>
+  <a href="Lesson3.html">Lesson 3</a>
+</li>
+<li>
+  <a href="Lesson4.html">Lesson 4</a>
+</li>
+<li>
+  <a href="Lesson5.html">Lesson 5</a>
+</li>
+<li>
+  <a href="Lesson6.html">Lesson 6</a>
+</li>
+<li>
+  <a href="Lesson7.html">Lesson 7</a>
+</li>
+<li>
+  <a href="Lesson8.html">Lesson 8</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/darwinanddavis/EmoRyCodingClub">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+
+<!-- ---------------------------------------------------------------- -->
+<!-- ----------------------- rmd settings --------------------------- -->
+<!-- ---------------------------------------------------------------- -->
+<!-- rmd settings -->
+<!-- install packages -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+<div id="welcome-to-the-emory-coding-club" class="section level1">
+<h1>Welcome to the Emo<code>R</code>y Coding Club</h1>
+<p> </p>
+<!-- ----------------------- overview --------------------------- -->
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>This page contains all the documents, links, and information for the monthly <code>R</code> coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, <code>R</code>, and research levels.<br />
+   </p>
+</div>
+<div id="organisers" class="section level2">
+<h2>Organisers</h2>
+<p><strong>Matt Malishev, Department of Biology</strong><br />
+<strong>Desiree de Leon, Yerkes National Primate Research Center</strong><br />
+<strong>Hasse Walum, Yerkes National Primate Research Center</strong></p>
+<p>    <!-- ----------------------- image --------------------------- --></p>
+<p><img src="img/mm.jpg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /><img src="img/ddl.jpeg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /><img src="img/hw.jpg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /></p>
+<!-- ----------------------- image --------------------------- -->
+<!-- \     -->
+<!-- ## Date for next session   -->
+<!-- Time and day TBC -->
+<p> </p>
+</div>
+<div id="location" class="section level2">
+<h2>Location</h2>
+<p>Emory University<br />
+Room 2052<br />
+Wayne Rollins Building<br />
+(Click on marker for room directions)<br />
+ </p>
+<div id="htmlwidget-37cc1ae481dad6cccbfb" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-37cc1ae481dad6cccbfb">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[33.79667,-84.32346],15,[]],"calls":[{"method":"addTiles","args":["http://b.sm.mapstack.stamen.com/((mapbox-water,$f2f7ff[hsl-color]),(positron,$f2f7ff[hsl-color]),(buildings,$f2f7ff[hsl-color]),(parks,$2c403b[hsl-color]))/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Take the elevator to the second floor, \nthen exit left and take the first left.",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
+<p> </p>
+<!-- ----------------------- 1 before arrival --------------------------- -->
+</div>
+</div>
+<div id="before-you-arrive" class="section level1">
+<h1>Before you arrive</h1>
+<p>Everyone needs to have the following software and packages loaded before you come to the first session. That way, we can get straight into it.</p>
+<ul>
+<li><a href="https://www.r-project.org/">Install <code>R</code> from CRAN</a>.</li>
+<li>If you’re asked to choose a CRAN mirror, just choose whichever is closest to your location.<br />
+</li>
+<li><a href="https://www.rstudio.com/products/rstudio/download/">Install <code>RStudio</code> Desktop</a></li>
+<li>Install the <code>tidyverse</code> package and then load it by copying and pasting the following code into the <em>Console</em> of <code>RStudio</code> and then pressing <em>Enter</em> to execute it.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)
+<span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)
+<span class="kw">library</span>(tidyverse)
+<span class="kw">library</span>(ggplot2)</code></pre></div>
+<p>   </p>
+<div id="if-you-have-used-r-previously-you-can-skip-to-learning-objectives." class="section level3">
+<h3>If you have used <code>R</code> previously, you can skip to <a href="#sec3">‘Learning Objectives’</a>.</h3>
+<p>   </p>
+<p><br></p>
+<!-- ----------------------- 2 pre check --------------------------- -->
+</div>
+</div>
+<div id="pre-work-questions" class="section level1">
+<h1>Pre-work questions</h1>
+<p>If you’re brand new to <code>R</code> or coding, familiarise yourself with a few basic things about <code>R Studio</code> and coding in <code>R</code>. The exercise below should take less than 5 minutes.</p>
+<p>Once you have installed <code>R</code> and <code>R Studio</code>, copy and paste the code below into the <code>R Studio</code> <em>Console</em> (or try typing it out yourself) and press <em>Enter</em> to run it.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Calculate something simple</span>
+<span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span>
+
+<span class="co"># Calculate something using built-in constants</span>
+<span class="dv">2</span> <span class="op">*</span><span class="st"> </span>pi</code></pre></div>
+<p><br></p>
+<p>Use the <em>assignment operator</em>, <code>&lt;-</code>, to create new objects in <code>R</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span>
+b &lt;-<span class="st"> </span>a <span class="op">*</span><span class="st"> </span>pi
+c &lt;-<span class="st"> &quot;Hello World&quot;</span></code></pre></div>
+<p>And then print the objects in the console:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a
+b
+c</code></pre></div>
+<!-- ----------------------- 3 learning obj --------------------------- -->
+<p><a id="sec3"></a></p>
+</div>
+<div id="learning-objectives" class="section level1">
+<h1>Learning Objectives</h1>
+<p>Our first EmoRy Coding Club will be primarily targeted towards beginners, but we hope this will also useful for anyone who may already be familiar with base <code>R</code> and wanting better practice with the <code>tidyverse</code> package.</p>
+<ol style="list-style-type: decimal">
+<li>Introducing beginners to the <code>RStudio</code> IDE</li>
+<li>Doing some introductory plotting with <code>ggplot</code></li>
+</ol>
+<p>We will use the <a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> free online text to guide us through learning <code>R</code>.</p>
+<!-- ----------------------- image --------------------------- -->
+<div align="center" ;="" text-align:center="">
+<p><img src="img/cover.png" style=width:33%></p>
+</div>
+<!-- ----------------------- image --------------------------- -->
+<p><br></p>
+<!-- ----------------------- 4 materials --------------------------- -->
+</div>
+<div id="materials" class="section level1">
+<h1>Materials</h1>
+<p>We’ll be diving into <a href="https://r4ds.had.co.nz/data-visualisation.html">Ch 3, Data visualisation</a> and working through Section 3.3.1.  </p>
+<div id="the-dataset" class="section level3">
+<h3>The dataset</h3>
+<p>We’ll also be using <a href="http://insideairbnb.com/new-york-city/">open-access data of housing listings from AirBnb</a> as our toy dataset. Once we’ve completed the above <strong>R for Data Science exercises</strong>, we’ll repeat the plotting exercise using these data.<br />
+ </p>
+<p>We’ll be using this dataset for the rest of the club sessions, so feel free to explore it in your own time.<br />
+   </p>
+<!-- ----------------------- image --------------------------- -->
+<div align="center" ;="" text-align:center="">
+<p><img src="img/nyc.jpg" style=width:100%></p>
+</div>
+<!-- ----------------------- image --------------------------- -->
+<p>This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below in your <code>R</code> console and press <em>Enter</em>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(readr)
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
+
+nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+
+<span class="co"># smaller csv file (16 cols)</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
+nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># truncate dataset </span>
+
+<span class="kw">head</span>(nyc[, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>])</code></pre></div>
+<p>If everything worked correctly, you should see the below ouput printed in your <code>R</code> console.</p>
+<pre><code># A tibble: 6 x 5
+     id name                                             host_id host_name   neighbourhood_group
+  &lt;dbl&gt; &lt;chr&gt;                                              &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;              
+1  2539 Clean &amp; quiet apt home by the park                  2787 John        Brooklyn           
+2  2595 Skylit Midtown Castle                               2845 Jennifer    Manhattan          
+3  3647 THE VILLAGE OF HARLEM....NEW YORK !                 4632 Elisabeth   Manhattan          
+4  3831 Cozy Entire Floor of Brownstone                     4869 LisaRoxanne Brooklyn           
+5  4989 Great 1 bdrm. apartment in the PERFECT location!    7118 New-Yorker  Manhattan          
+6  5022 Entire Apt: Spacious Studio/Loft by central park    7192 Laura       Manhattan          </code></pre>
+<p>   </p>
+<div id="save-and-use-the-above-code-snippet-whenever-you-need-to-load-our-two-datasets-nyc_full-and-nyc-as-well-be-using-them-regularly-throughout-the-club-sessions." class="section level4">
+<h4>Save and use the above code snippet whenever you need to load our two datasets, <code>nyc_full</code> and <code>nyc</code>, as we’ll be using them regularly throughout the club sessions.</h4>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
