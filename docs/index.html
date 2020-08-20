@@ -512,8 +512,8 @@ Room 2052<br />
 Wayne Rollins Building<br />
 (Click on marker for room directions)<br />
  </p>
-<div id="htmlwidget-984bc8341645207857ed" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-984bc8341645207857ed">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[33.79667,-84.32346],15,[]],"calls":[{"method":"addTiles","args":["http://b.sm.mapstack.stamen.com/((mapbox-water,$f2f7ff[hsl-color]),(positron,$f2f7ff[hsl-color]),(buildings,$f2f7ff[hsl-color]),(parks,$2c403b[hsl-color]))/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Take the elevator to the second floor, \nthen exit left and take the first left.",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-e5e5fb814b07b5b0039d" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e5e5fb814b07b5b0039d">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[33.79667,-84.32346],15,[]],"calls":[{"method":"addTiles","args":["http://b.sm.mapstack.stamen.com/((mapbox-water,$f2f7ff[hsl-color]),(positron,$f2f7ff[hsl-color]),(buildings,$f2f7ff[hsl-color]),(parks,$2c403b[hsl-color]))/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Take the elevator to the second floor, \nthen exit left and take the first left.",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
 <p> </p>
 <!-- ----------------------- 1 before arrival --------------------------- -->
 </div>
@@ -529,35 +529,9 @@ Wayne Rollins Building<br />
 <li>Install the <code>tidyverse</code> package and then load it by copying and pasting the following code into the <em>Console</em> of <code>RStudio</code> and then pressing <em>Enter</em> to execute it.</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)
-<span class="kw">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)
-<span class="kw">library</span>(tidyverse)
-<span class="kw">library</span>(ggplot2)</code></pre></div>
-<p>   </p>
-<div id="if-you-have-used-r-previously-you-can-skip-to-learning-objectives." class="section level3">
-<h3>If you have used <code>R</code> previously, you can skip to <a href="#sec3">'Learning Objectives'</a>.</h3>
+<span class="kw">library</span>(tidyverse)</code></pre></div>
 <p>   </p>
 <p><br></p>
-<!-- ----------------------- 2 pre check --------------------------- -->
-</div>
-</div>
-<div id="pre-work-questions" class="section level1">
-<h1>Pre-work questions</h1>
-<p>If you're brand new to <code>R</code> or coding, familiarise yourself with a few basic things about <code>R Studio</code> and coding in <code>R</code>. The exercise below should take less than 5 minutes.</p>
-<p>Once you have installed <code>R</code> and <code>R Studio</code>, copy and paste the code below into the <code>R Studio</code> <em>Console</em> (or try typing it out yourself) and press <em>Enter</em> to run it.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Calculate something simple</span>
-<span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span>
-
-<span class="co"># Calculate something using built-in constants</span>
-<span class="dv">2</span> <span class="op">*</span><span class="st"> </span>pi</code></pre></div>
-<p><br></p>
-<p>Use the <em>assignment operator</em>, <code>&lt;-</code>, to create new objects in <code>R</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="dv">2</span> <span class="op">+</span><span class="st"> </span><span class="dv">2</span>
-b &lt;-<span class="st"> </span>a <span class="op">*</span><span class="st"> </span>pi
-c &lt;-<span class="st"> &quot;Hello World&quot;</span></code></pre></div>
-<p>And then print the objects in the console:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a
-b
-c</code></pre></div>
 <!-- ----------------------- 3 learning obj --------------------------- -->
 <p><a id="sec3"></a></p>
 </div>

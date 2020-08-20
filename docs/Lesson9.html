@@ -506,7 +506,7 @@ div.tocify {
 <h1>Quick intro to time formats</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ct &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()  <span class="co"># get date and time from your current location </span>
 ct
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-20 10:40:51 AEST&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-20 11:35:39 AEST&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%y-%m&quot;</span>)  <span class="co"># year, month</span>
 [<span class="dv">1</span>] <span class="st">&quot;20-08&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m&quot;</span>)  <span class="co"># full year, month</span>
@@ -514,7 +514,7 @@ ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">forma
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)  <span class="co"># year, month, day</span>
 [<span class="dv">1</span>] <span class="st">&quot;2020-08-20&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d-%H-%M-%S&quot;</span>)  <span class="co"># year, month, day, hour, min, sec</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-20-10-40-51&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-20-11-35-39&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y ;) %m_:P_%d&quot;</span>)  <span class="co"># year, month, day with custom separators</span>
 [<span class="dv">1</span>] <span class="st">&quot;2020 ;) 08_:P_20&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%D&quot;</span>)  <span class="co"># date </span>
@@ -617,28 +617,28 @@ x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
 <p>Pulling specific time components</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># get the current time and date from your location</span>
 <span class="kw">now</span>()
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-20 10:40:52 AEST&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-20 11:35:40 AEST&quot;</span>
 
 <span class="co"># pull specific time components</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>day
 [<span class="dv">1</span>] <span class="dv">20</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>hour
-[<span class="dv">1</span>] <span class="dv">10</span>
+[<span class="dv">1</span>] <span class="dv">11</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>second
-[<span class="dv">1</span>] <span class="fl">52.25503</span>
+[<span class="dv">1</span>] <span class="fl">40.10446</span>
 
 <span class="co"># change the day of an assigned time vector</span>
 dd &lt;-<span class="st"> </span><span class="kw">now</span>()
 <span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">31</span>
 dd
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-31 10:40:52 AEST&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-31 11:35:40 AEST&quot;</span>
 
 <span class="co"># setting a day greater than the last day of the chosen month will automatically roll over to the</span>
 <span class="co"># following month</span>
 dd &lt;-<span class="st"> </span><span class="kw">now</span>()
 <span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">32</span>
 dd
-[<span class="dv">1</span>] <span class="st">&quot;2020-09-01 10:40:52 AEST&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2020-09-01 11:35:40 AEST&quot;</span></code></pre></div>
 <div id="dataset" class="section level3">
 <h3>Dataset</h3>
 <p>Load <code>nycflights13</code> dataset and check out the <code>time_hour</code> column</p>
@@ -721,7 +721,7 @@ ft &lt;-<span class="st"> </span>ft[<span class="kw">sample</span>(ft <span clas
 <h1>Other useful functions</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># roll back to first or last day of previous month</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rollback</span>(<span class="dt">preserve_hms =</span> T, <span class="dt">roll_to_first =</span> T)
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-01 10:40:52 AEST&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-01 11:35:40 AEST&quot;</span>
 
 <span class="fl">2012.75</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">date_decimal</span>()  <span class="co"># decimal dates, e.g. 3/4 into 2012  </span>
 [<span class="dv">1</span>] <span class="st">&quot;2012-10-01 12:00:00 UTC&quot;</span>
