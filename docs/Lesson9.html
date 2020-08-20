@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 54px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h2 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h3 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h4 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h5 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h6 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">EmoRy Coding Club</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="Lesson1.html">Lesson 1</a>
+</li>
+<li>
+  <a href="Lesson2.html">Lesson 2</a>
+</li>
+<li>
+  <a href="Lesson3.html">Lesson 3</a>
+</li>
+<li>
+  <a href="Lesson4.html">Lesson 4</a>
+</li>
+<li>
+  <a href="Lesson5.html">Lesson 5</a>
+</li>
+<li>
+  <a href="Lesson6.html">Lesson 6</a>
+</li>
+<li>
+  <a href="Lesson7.html">Lesson 7</a>
+</li>
+<li>
+  <a href="Lesson8.html">Lesson 8</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/darwinanddavis/EmoRyCodingClub">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+
+<p><br />
+<!-- install packages --></p>
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+<div id="lesson-9-working-with-time-series-and-dates" class="section level1">
+<h1>Lesson 9: Working with time series and dates</h1>
+<p> </p>
+<p>Functions for Lesson 9<br />
+<code>mdy_hms</code><br />
+ </p>
+<p>Packages for Lesson 9<br />
+<code>lubridate</code><br />
+ </p>
+</div>
+<div id="agenda" class="section level1">
+<h1>Agenda</h1>
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+<p><img src="img/lubridate.jpg" style=width:50%></p>
+</div>
+<!-- ----------------------- image --------------------------- -->
+<p> </p>
+<p>Dates and times are stored as class <code>POSIX</code>, which can be represented as <code>POSIXct</code>, <code>POSIXlt</code>, or <code>POSIXt</code>, since 1970-01-01 as a starting point.</p>
+<p><code>POSIXct</code> = number of seconds since the beginning of 1970 as a numeric vector. Best for data frames.<br />
+<code>POSIXlt</code> = a list of vectors that also includes weekday (Sun to Sat) and year day (0 to 365). Best for human-readable times and dates.<br />
+<code>POSIXt</code> = takes attributes from both classes and good for mixing the two classes and doing arithmetic, e.g. substracting time. You will often see this class listed alongside either of the other classes when you run <code>class()</code>.</p>
+<p><strong>Further notes</strong></p>
+<ul>
+<li><code>POSIXlt</code> objects are interpreted as the current timezone unless otherwise specified. You can specify the timezone using the <code>tzone = &quot;&quot;</code> argument for some functions in <code>lubridate</code>.<br />
+</li>
+<li><p>You can switch between classes using <code>as.POSIXct()</code> and <code>as.POSIXlt()</code></p></li>
+<li><p><code>Date</code> is another class associated with time and dates easily passed to functions that take <code>POSIX</code> arguments</p></li>
+</ul>
+</div>
+<div id="quick-intro-to-time-formats" class="section level1">
+<h1>Quick intro to time formats</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ct &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()  <span class="co"># get date and time from your current location </span>
+ct
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-20 10:40:51 AEST&quot;</span>
+ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%y-%m&quot;</span>)  <span class="co"># year, month</span>
+[<span class="dv">1</span>] <span class="st">&quot;20-08&quot;</span>
+ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m&quot;</span>)  <span class="co"># full year, month</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-08&quot;</span>
+ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)  <span class="co"># year, month, day</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-20&quot;</span>
+ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d-%H-%M-%S&quot;</span>)  <span class="co"># year, month, day, hour, min, sec</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-20-10-40-51&quot;</span>
+ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y ;) %m_:P_%d&quot;</span>)  <span class="co"># year, month, day with custom separators</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020 ;) 08_:P_20&quot;</span>
+ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%D&quot;</span>)  <span class="co"># date </span>
+[<span class="dv">1</span>] <span class="st">&quot;08/20/20&quot;</span></code></pre></div>
+</div>
+<div id="time-functions" class="section level1">
+<h1>Time functions</h1>
+<p>You can easily distinguish time as dates (<code>date</code>), days (<code>day</code>), years (<code>y</code>), months (<code>m</code>), or hours (<code>h</code>), minutes (<code>m</code>), and seconds (<code>s</code>).</p>
+<p>Passing numeric vectors returns the time as POSIX class depending on the function you specify.</p>
+<div id="numeric-vectors-to-posixdate" class="section level2">
+<h2>Numeric vectors to POSIX/Date</h2>
+<p><code>as_date</code> = return date<br />
+<code>as_datetime</code> = returns date and time<br />
+<code>ymd()</code> = returns combinations of year, month, day, depending on order</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(lubridate)
+<span class="kw">as_date</span>(<span class="dv">12</span>)  <span class="co"># 12 days after 1970-01-01  </span>
+[<span class="dv">1</span>] <span class="st">&quot;1970-01-13&quot;</span>
+<span class="kw">as_datetime</span>(<span class="dv">12</span>)  <span class="co"># 12 seconds after 1970-01-01  </span>
+[<span class="dv">1</span>] <span class="st">&quot;1970-01-01 00:00:12 UTC&quot;</span>
+
+<span class="co"># adding time numerically</span>
+<span class="kw">as_datetime</span>(<span class="dv">60</span>)
+[<span class="dv">1</span>] <span class="st">&quot;1970-01-01 00:01:00 UTC&quot;</span>
+<span class="kw">as_datetime</span>(<span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span>)
+[<span class="dv">1</span>] <span class="st">&quot;1970-01-01 01:00:00 UTC&quot;</span>
+<span class="kw">as_datetime</span>(<span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">24</span>)
+[<span class="dv">1</span>] <span class="st">&quot;1970-01-02 UTC&quot;</span>
+<span class="kw">as_datetime</span>(<span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">60</span> <span class="op">*</span><span class="st"> </span><span class="dv">24</span>) <span class="op">%&gt;%</span><span class="st"> </span>class
+[<span class="dv">1</span>] <span class="st">&quot;POSIXct&quot;</span> <span class="st">&quot;POSIXt&quot;</span> 
+
+<span class="co"># return dates using arithmetic</span>
+<span class="kw">as_date</span>(<span class="dv">12</span>) <span class="op">-</span><span class="st"> </span><span class="dv">365</span>
+[<span class="dv">1</span>] <span class="st">&quot;1969-01-13&quot;</span></code></pre></div>
+<p>Year, month, day, hour, minute, second</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># year, month, day, hour, minute, second</span>
+<span class="kw">ymd</span>(<span class="dv">120102</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-01-02&quot;</span>
+<span class="kw">ydm</span>(<span class="dv">120102</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-02-01&quot;</span>
+<span class="kw">ymd_h</span>(<span class="dv">12010203</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-01-02 03:00:00 UTC&quot;</span>
+<span class="kw">ymd_hm</span>(<span class="dv">1201020304</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-01-02 03:04:00 UTC&quot;</span>
+<span class="kw">ymd_hms</span>(<span class="dv">120102030405</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-01-02 03:04:05 UTC&quot;</span></code></pre></div>
+<p>Changing order of date-time returned</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mdy_hms</span>(<span class="dv">120102030405</span>)  <span class="co"># month day year format </span>
+[<span class="dv">1</span>] <span class="st">&quot;2002-12-01 03:04:05 UTC&quot;</span>
+<span class="kw">mdy_h</span>(<span class="dv">12010203</span>)  <span class="co"># with hour</span>
+[<span class="dv">1</span>] <span class="st">&quot;2002-12-01 03:00:00 UTC&quot;</span>
+<span class="kw">dmy_hms</span>(<span class="dv">120102030405</span>)  <span class="co"># day, month, year </span>
+[<span class="dv">1</span>] <span class="st">&quot;2002-01-12 03:04:05 UTC&quot;</span>
+<span class="kw">yq</span>(<span class="st">&quot;2012 2&quot;</span>)  <span class="co"># quarter of year  </span>
+[<span class="dv">1</span>] <span class="st">&quot;2012-04-01&quot;</span>
+<span class="kw">yq</span>(<span class="st">&quot;2012 q3&quot;</span>)  <span class="co"># quarter of year  </span>
+[<span class="dv">1</span>] <span class="st">&quot;2012-07-01&quot;</span></code></pre></div>
+<p>Can also pass string arguments</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">
+<span class="kw">ymd_hms</span>(<span class="st">&quot;120102030405&quot;</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-01-02 03:04:05 UTC&quot;</span>
+<span class="kw">ymd_hms</span>(<span class="st">&quot;12-01-02-03-04-05&quot;</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-01-02 03:04:05 UTC&quot;</span>
+<span class="kw">ymd_hms</span>(<span class="st">&quot;2012-01-02 03:04:05&quot;</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-01-02 03:04:05 UTC&quot;</span>
+
+<span class="co"># and AM/PM</span>
+<span class="kw">ymd_hms</span>(<span class="st">&quot;2012-01-02 03:04:05 AM&quot;</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-01-02 03:04:05 UTC&quot;</span>
+<span class="kw">ymd_hms</span>(<span class="st">&quot;2012-01-02 03:04:05 PM&quot;</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-01-02 15:04:05 UTC&quot;</span></code></pre></div>
+<p>Dealing with errors and NAs</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># throws error b/c vector is short/long</span>
+<span class="kw">ymd</span>(<span class="dv">12</span>)
+[<span class="dv">1</span>] <span class="ot">NA</span>
+<span class="kw">ymd</span>(<span class="dv">1201020304</span>)
+[<span class="dv">1</span>] <span class="ot">NA</span>
+
+<span class="co"># create a stopper to limit return length</span>
+<span class="kw">ymd</span>(<span class="dv">12</span>, <span class="dt">truncated =</span> <span class="dv">2</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2012-01-01&quot;</span>
+x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;2011-12-31 12:59&quot;</span>, <span class="st">&quot;2010-01-01 12&quot;</span>, <span class="st">&quot;2010-01&quot;</span>)
+<span class="kw">ymd_hm</span>(x, <span class="dt">truncated =</span> <span class="dv">2</span>)
+[<span class="dv">1</span>] <span class="st">&quot;2011-12-31 12:59:00 UTC&quot;</span> <span class="st">&quot;2010-01-01 12:00:00 UTC&quot;</span> <span class="st">&quot;2020-10-01 00:00:00 UTC&quot;</span></code></pre></div>
+</div>
+</div>
+<div id="reading-various-formats" class="section level1">
+<h1>Reading various formats</h1>
+<p>You can pass a suite of different strings as arguments</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tt &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">20100101120101</span>, <span class="st">&quot;2009-01-02 12-01-02&quot;</span>, <span class="st">&quot;2009.01.03 12:01:03&quot;</span>, <span class="st">&quot;2009-1-4 12-1-4&quot;</span>, <span class="st">&quot;2009-1, 5 12:1, 5&quot;</span>, 
+    <span class="st">&quot;200901-08 1201-08&quot;</span>, <span class="st">&quot;2009 arbitrary 1 non-decimal 6 chars 12 in between 1 !!! 6&quot;</span>, <span class="st">&quot;OR collapsed formats: 20090107 120107 (as long as prefixed with zeros)&quot;</span>, 
+    <span class="st">&quot;Automatic wday, Thu, detection, 10-01-10 10:01:10 and p format: AM&quot;</span>, <span class="st">&quot;Created on 10-01-11 at 10:01:11 PM&quot;</span>)
+<span class="kw">ymd_hms</span>(tt)</code></pre></div>
+<pre><code> [1] &quot;2010-01-01 12:01:01 UTC&quot; &quot;2009-01-02 12:01:02 UTC&quot; &quot;2009-01-03 12:01:03 UTC&quot;
+ [4] &quot;2009-01-04 12:01:04 UTC&quot; &quot;2009-01-05 12:01:05 UTC&quot; &quot;2009-01-08 12:01:08 UTC&quot;
+ [7] &quot;2009-01-06 12:01:06 UTC&quot; &quot;2009-01-07 12:01:07 UTC&quot; &quot;2010-01-10 10:01:10 UTC&quot;
+[10] &quot;2010-01-11 22:01:11 UTC&quot;</code></pre>
+</div>
+<div id="posixdate-as-numeric" class="section level1">
+<h1>POSIX/Date as numeric</h1>
+<p>Pulling specific time components</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># get the current time and date from your location</span>
+<span class="kw">now</span>()
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-20 10:40:52 AEST&quot;</span>
+
+<span class="co"># pull specific time components</span>
+<span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>day
+[<span class="dv">1</span>] <span class="dv">20</span>
+<span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>hour
+[<span class="dv">1</span>] <span class="dv">10</span>
+<span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>second
+[<span class="dv">1</span>] <span class="fl">52.25503</span>
+
+<span class="co"># change the day of an assigned time vector</span>
+dd &lt;-<span class="st"> </span><span class="kw">now</span>()
+<span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">31</span>
+dd
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-31 10:40:52 AEST&quot;</span>
+
+<span class="co"># setting a day greater than the last day of the chosen month will automatically roll over to the</span>
+<span class="co"># following month</span>
+dd &lt;-<span class="st"> </span><span class="kw">now</span>()
+<span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">32</span>
+dd
+[<span class="dv">1</span>] <span class="st">&quot;2020-09-01 10:40:52 AEST&quot;</span></code></pre></div>
+<div id="dataset" class="section level3">
+<h3>Dataset</h3>
+<p>Load <code>nycflights13</code> dataset and check out the <code>time_hour</code> column</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(nycflights13)
+flights <span class="op">%&gt;%</span><span class="st"> </span>str  <span class="co"># stored dataset from nycflights13 package  </span></code></pre></div>
+<pre><code>tibble [336,776 × 19] (S3: tbl_df/tbl/data.frame)
+ $ year          : int [1:336776] 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 ...
+ $ month         : int [1:336776] 1 1 1 1 1 1 1 1 1 1 ...
+ $ day           : int [1:336776] 1 1 1 1 1 1 1 1 1 1 ...
+ $ dep_time      : int [1:336776] 517 533 542 544 554 554 555 557 557 558 ...
+ $ sched_dep_time: int [1:336776] 515 529 540 545 600 558 600 600 600 600 ...
+ $ dep_delay     : num [1:336776] 2 4 2 -1 -6 -4 -5 -3 -3 -2 ...
+ $ arr_time      : int [1:336776] 830 850 923 1004 812 740 913 709 838 753 ...
+ $ sched_arr_time: int [1:336776] 819 830 850 1022 837 728 854 723 846 745 ...
+ $ arr_delay     : num [1:336776] 11 20 33 -18 -25 12 19 -14 -8 8 ...
+ $ carrier       : chr [1:336776] &quot;UA&quot; &quot;UA&quot; &quot;AA&quot; &quot;B6&quot; ...
+ $ flight        : int [1:336776] 1545 1714 1141 725 461 1696 507 5708 79 301 ...
+ $ tailnum       : chr [1:336776] &quot;N14228&quot; &quot;N24211&quot; &quot;N619AA&quot; &quot;N804JB&quot; ...
+ $ origin        : chr [1:336776] &quot;EWR&quot; &quot;LGA&quot; &quot;JFK&quot; &quot;JFK&quot; ...
+ $ dest          : chr [1:336776] &quot;IAH&quot; &quot;IAH&quot; &quot;MIA&quot; &quot;BQN&quot; ...
+ $ air_time      : num [1:336776] 227 227 160 183 116 150 158 53 140 138 ...
+ $ distance      : num [1:336776] 1400 1416 1089 1576 762 ...
+ $ hour          : num [1:336776] 5 5 5 5 6 5 6 6 6 6 ...
+ $ minute        : num [1:336776] 15 29 40 45 0 58 0 0 0 0 ...
+ $ time_hour     : POSIXct[1:336776], format: &quot;2013-01-01 05:00:00&quot; &quot;2013-01-01 05:00:00&quot; &quot;2013-01-01 05:00:00&quot; ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">flights<span class="op">$</span>time_hour <span class="op">%&gt;%</span><span class="st"> </span>str  <span class="co"># time component </span></code></pre></div>
+<pre><code> POSIXct[1:336776], format: &quot;2013-01-01 05:00:00&quot; &quot;2013-01-01 05:00:00&quot; &quot;2013-01-01 05:00:00&quot; &quot;2013-01-01 05:00:00&quot; ...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ft &lt;-<span class="st"> </span>flights<span class="op">$</span>time_hour
+
+<span class="co"># get a smaller sample</span>
+<span class="kw">set.seed</span>(<span class="dv">13</span>)
+ft &lt;-<span class="st"> </span>ft[<span class="kw">sample</span>(ft <span class="op">%&gt;%</span><span class="st"> </span>length, <span class="dv">20</span>, <span class="dt">replace =</span> T)]</code></pre></div>
+</div>
+<div id="parsing-posixdate" class="section level2">
+<h2>Parsing POSIX/Date</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(nycflights13)
+ft &lt;-<span class="st"> </span>ft[<span class="kw">sample</span>(ft <span class="op">%&gt;%</span><span class="st"> </span>length, <span class="dv">20</span>, <span class="dt">replace =</span> T)]
+
+<span class="kw">ymd_hms</span>(ft)  <span class="co"># return full date and time </span>
+ [<span class="dv">1</span>] <span class="st">&quot;2013-02-23 14:00:00 UTC&quot;</span> <span class="st">&quot;2013-06-01 15:00:00 UTC&quot;</span> <span class="st">&quot;2013-04-28 08:00:00 UTC&quot;</span>
+ [<span class="dv">4</span>] <span class="st">&quot;2013-06-01 15:00:00 UTC&quot;</span> <span class="st">&quot;2013-11-30 17:00:00 UTC&quot;</span> <span class="st">&quot;2013-08-21 20:00:00 UTC&quot;</span>
+ [<span class="dv">7</span>] <span class="st">&quot;2013-06-19 08:00:00 UTC&quot;</span> <span class="st">&quot;2013-01-16 19:00:00 UTC&quot;</span> <span class="st">&quot;2013-04-30 23:00:00 UTC&quot;</span>
+[<span class="dv">10</span>] <span class="st">&quot;2013-08-21 20:00:00 UTC&quot;</span> <span class="st">&quot;2013-08-15 18:00:00 UTC&quot;</span> <span class="st">&quot;2013-08-15 18:00:00 UTC&quot;</span>
+[<span class="dv">13</span>] <span class="st">&quot;2013-08-13 07:00:00 UTC&quot;</span> <span class="st">&quot;2013-02-11 15:00:00 UTC&quot;</span> <span class="st">&quot;2013-06-01 15:00:00 UTC&quot;</span>
+[<span class="dv">16</span>] <span class="st">&quot;2013-02-23 14:00:00 UTC&quot;</span> <span class="st">&quot;2013-01-16 19:00:00 UTC&quot;</span> <span class="st">&quot;2013-11-30 17:00:00 UTC&quot;</span>
+[<span class="dv">19</span>] <span class="st">&quot;2013-02-14 08:00:00 UTC&quot;</span> <span class="st">&quot;2013-11-30 17:00:00 UTC&quot;</span>
+
+<span class="kw">ydm_hms</span>(ft)  <span class="co"># returns some NAs b/c month &gt; 12   </span>
+ [<span class="dv">1</span>] <span class="ot">NA</span>                        <span class="st">&quot;2013-01-06 15:00:00 UTC&quot;</span> <span class="ot">NA</span>                       
+ [<span class="dv">4</span>] <span class="st">&quot;2013-01-06 15:00:00 UTC&quot;</span> <span class="ot">NA</span>                        <span class="ot">NA</span>                       
+ [<span class="dv">7</span>] <span class="ot">NA</span>                        <span class="ot">NA</span>                        <span class="ot">NA</span>                       
+[<span class="dv">10</span>] <span class="ot">NA</span>                        <span class="ot">NA</span>                        <span class="ot">NA</span>                       
+[<span class="dv">13</span>] <span class="ot">NA</span>                        <span class="st">&quot;2013-11-02 15:00:00 UTC&quot;</span> <span class="st">&quot;2013-01-06 15:00:00 UTC&quot;</span>
+[<span class="dv">16</span>] <span class="ot">NA</span>                        <span class="ot">NA</span>                        <span class="ot">NA</span>                       
+[<span class="dv">19</span>] <span class="ot">NA</span>                        <span class="ot">NA</span>                       </code></pre></div>
+<div id="getting-just-time-portion" class="section level3">
+<h3>Getting just time portion</h3>
+<p>Force POSIX into numeric, which you can transform back later.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hm</span>(<span class="st">&quot;00:01&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>as.numeric  <span class="co"># returns 60 seconds after 00:00:00</span>
+[<span class="dv">1</span>] <span class="dv">60</span>
+<span class="kw">hm</span>(<span class="st">&quot;23:59&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>as.numeric  <span class="co"># returns seconds elapsed since 00:00:00 as integer</span>
+[<span class="dv">1</span>] <span class="dv">86340</span></code></pre></div>
+</div>
+<div id="time-zones" class="section level3">
+<h3>Time zones</h3>
+<p>There are ~600 time zones to pass to the <code>tzone=&quot;&quot;</code> argument</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">OlsonNames</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">sample</span>(<span class="dv">20</span>)</code></pre></div>
+<pre><code> [1] &quot;Australia/NSW&quot;           &quot;America/Inuvik&quot;          &quot;ROK&quot;                    
+ [4] &quot;Australia/North&quot;         &quot;Canada/Saskatchewan&quot;     &quot;Pacific/Kiritimati&quot;     
+ [7] &quot;America/Cambridge_Bay&quot;   &quot;America/Rosario&quot;         &quot;Europe/Belfast&quot;         
+[10] &quot;Etc/GMT-2&quot;               &quot;Asia/Vientiane&quot;          &quot;Antarctica/Vostok&quot;      
+[13] &quot;Africa/Mogadishu&quot;        &quot;US/Arizona&quot;              &quot;Africa/Bujumbura&quot;       
+[16] &quot;Asia/Dushanbe&quot;           &quot;America/Bogota&quot;          &quot;America/Santo_Domingo&quot;  
+[19] &quot;America/Indiana/Winamac&quot; &quot;America/Anchorage&quot;      </code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># OlsonNames() for complete list</span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="other-useful-functions" class="section level1">
+<h1>Other useful functions</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># roll back to first or last day of previous month</span>
+<span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rollback</span>(<span class="dt">preserve_hms =</span> T, <span class="dt">roll_to_first =</span> T)
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-01 10:40:52 AEST&quot;</span>
+
+<span class="fl">2012.75</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">date_decimal</span>()  <span class="co"># decimal dates, e.g. 3/4 into 2012  </span>
+[<span class="dv">1</span>] <span class="st">&quot;2012-10-01 12:00:00 UTC&quot;</span>
+
+<span class="kw">today</span>()  <span class="co"># today&#39;s date  </span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-08-20&quot;</span></code></pre></div>
+<p>Pass any of the below functions individually</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ftl &lt;-<span class="st"> </span>ft <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">list</span>(<span class="kw">isoyear</span>(.), <span class="kw">epiyear</span>(.), <span class="kw">wday</span>(.), <span class="kw">wday</span>(., <span class="dt">label =</span> T), <span class="kw">qday</span>(.), <span class="kw">week</span>(.), <span class="kw">semester</span>(.), 
+    <span class="kw">am</span>(.), <span class="kw">pm</span>(.))
+<span class="kw">names</span>(ftl) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;international standard date-time code (ISO 8601)&quot;</span>, <span class="st">&quot;epidemiological year&quot;</span>, <span class="st">&quot;weekday&quot;</span>, 
+    <span class="st">&quot;weekday as label&quot;</span>, <span class="st">&quot;day into yearly quarter&quot;</span>, <span class="st">&quot;week of year&quot;</span>, <span class="st">&quot;semester&quot;</span>, <span class="st">&quot;AM?&quot;</span>, <span class="st">&quot;PM?&quot;</span>)
+ftl</code></pre></div>
+<pre><code>$data
+ [1] &quot;2013-02-23 14:00:00 EST&quot; &quot;2013-06-01 15:00:00 EDT&quot; &quot;2013-04-28 08:00:00 EDT&quot;
+ [4] &quot;2013-06-01 15:00:00 EDT&quot; &quot;2013-11-30 17:00:00 EST&quot; &quot;2013-08-21 20:00:00 EDT&quot;
+ [7] &quot;2013-06-19 08:00:00 EDT&quot; &quot;2013-01-16 19:00:00 EST&quot; &quot;2013-04-30 23:00:00 EDT&quot;
+[10] &quot;2013-08-21 20:00:00 EDT&quot; &quot;2013-08-15 18:00:00 EDT&quot; &quot;2013-08-15 18:00:00 EDT&quot;
+[13] &quot;2013-08-13 07:00:00 EDT&quot; &quot;2013-02-11 15:00:00 EST&quot; &quot;2013-06-01 15:00:00 EDT&quot;
+[16] &quot;2013-02-23 14:00:00 EST&quot; &quot;2013-01-16 19:00:00 EST&quot; &quot;2013-11-30 17:00:00 EST&quot;
+[19] &quot;2013-02-14 08:00:00 EST&quot; &quot;2013-11-30 17:00:00 EST&quot;
+
+$`international standard date-time code (ISO 8601)`
+ [1] 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013
+[20] 2013
+
+$`epidemiological year`
+ [1] 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013 2013
+[20] 2013
+
+$weekday
+ [1] 7 7 1 7 7 4 4 4 3 4 5 5 3 2 7 7 4 7 5 7
+
+$`weekday as label`
+ [1] Sat Sat Sun Sat Sat Wed Wed Wed Tue Wed Thu Thu Tue Mon Sat Sat Wed Sat Thu Sat
+Levels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat
+
+$`day into yearly quarter`
+ [1] 54 62 28 62 61 52 80 16 30 52 46 46 44 42 62 54 16 61 45 61
+
+$`week of year`
+ [1]  8 22 17 22 48 34 25  3 18 34 33 33 33  6 22  8  3 48  7 48
+
+$semester
+ [1] 1 1 1 1 2 2 1 1 1 2 2 2 2 1 1 1 1 2 1 2
+
+$`AM?`
+ [1] FALSE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE
+[17] FALSE FALSE  TRUE FALSE
+
+$`PM?`
+ [1]  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE
+[17]  TRUE  TRUE FALSE  TRUE</code></pre>
+<p>Methods for plotting date-time data</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># calendar plot</span>
+<span class="kw">require</span>(sugrrants)
+
+<span class="co"># convert date col to Date format</span>
+ff &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">date =</span> time_hour <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as.Date</span>()) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(distance, arr_delay, date)
+
+<span class="co"># make calendar df</span>
+fdf &lt;-<span class="st"> </span><span class="kw">frame_calendar</span>(ff, <span class="dt">x =</span> distance, <span class="dt">y =</span> arr_delay, <span class="dt">date =</span> date, <span class="dt">nrow =</span> <span class="dv">5</span>)
+
+<span class="co"># plot</span>
+p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(fdf, <span class="kw">aes</span>(<span class="dt">x =</span> .distance, <span class="dt">y =</span> .arr_delay, <span class="dt">group =</span> date)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_void</span>()
+p <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">prettify</span>()  <span class="co"># add calendar text   </span></code></pre></div>
+<p><img src="Lesson9_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

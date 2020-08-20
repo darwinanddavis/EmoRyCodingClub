@@ -100,13 +100,12 @@ ttl <- "NYC Airbnb availability"
 subttl <- "for room types across neighbourhoods"
 xlab <- "Availability of property in next 30 days"
 ylab <- "Count"
-jharr <- theme_tufte()
+my_theme <- theme_tufte()
 
 names(nyc_full)
 
 # glimpse(nyc_full)  
 nyc_full_ <- nyc_full %>% dplyr::filter(availability_30 > 0)
-nyc_full_ %>% glimpse
 
 ggplot() +
   geom_bar(data = nyc_full_, 
@@ -118,7 +117,7 @@ ggplot() +
        subtitle = subttl,
        x = xlab,
        y = ylab) +
-  jharr
+  my_theme
 
 ```
   

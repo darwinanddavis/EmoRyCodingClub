@@ -32,7 +32,7 @@ knitr::opts_chunk$set(
 <!-- install packages -->
 ```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
 # install.packages("pacman")
-pacman::p_load(stringr,reprex,xml2,rvest)
+pacman::p_load(stringr,stringi,dplyr,reprex,xml2,rvest)
 # reprex = for rendering text string in HTML    
 
 ```
@@ -70,13 +70,20 @@ Use the `r params$packages` package to cut, substitute, print, and manipulate ch
 
 <!--  end yaml template------------------------------------------------------- -->  
 
-First, we need some text data. As an exercise, since we're using strings, we're going to use the webpage content on using strings from the [R for Data Science textbook](https://r4ds.had.co.nz/strings.html) as our text sample.      
+Install necessary packages
+```{r}
+# install.packages("pacman") # uncomment and install this first
+pacman::p_load(stringr,stringi,dplyr,reprex,xml2,rvest)
+```
+
+
+First, we need some text data. As an exercise, since we're using strings, we're going to use all the text from the webpage on using strings from the [R for Data Science textbook](https://r4ds.had.co.nz/strings.html) as our text sample.      
 ```{r, eval=T}
 require(xml2)# read html data
 require(rvest) # select html elements
 
 url <- "https://r4ds.had.co.nz/strings.html"
-txt <- url %>% read_html %>% html_text() # read in web text  
+txt <- url %>% read_html %>% html_text() # scrape web text from url  
 txt %>% str 
 txt %>% str_length() # get length of vector  
 ```

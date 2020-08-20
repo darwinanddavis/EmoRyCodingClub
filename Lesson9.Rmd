@@ -1,0 +1,354 @@
+---
+params:
+  lesson: "Lesson 9"
+  title: "Working with time series and dates"  
+  bookchapter_name: "Cheat sheet for the `lubridate` package"      
+  bookchapter_section: "https://lubridate.tidyverse.org/"    
+  functions: "`mdy_hms`"
+  packages: "`lubridate`"      
+  # end inputs ---------------------------------------------------------------
+header-includes: \usepackage{float}
+always_allow_html: yes
+output:
+  html_document:
+    code_folding: show
+---
+  
+```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
+options(width=100)
+knitr::opts_chunk$set(
+  eval = T, # run all code
+  echo = T, # show code chunks in output 
+  tidy = T, # make output as tidy
+  message = F,  # mask all messages
+  warning = F, # mask all warnings 
+  comment = "",
+  collapse = T,
+  tidy.opts=list(width.cutoff=100), # set width of code chunks in output
+  size="small" # set code chunk size
+  )
+```
+\
+
+<!-- install packages -->
+```{r, load packages, eval=T, include=T, cache=F, message=F, warning=F, results='hide',echo=F}
+# install.packages("pacman")
+pacman::p_load(lubridate,dplyr,nycflights13)
+# reprex = for rendering text string in HTML    
+
+```
+
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+
+# `r paste0(params$lesson,": ",params$title)`    
+\  
+
+Functions for `r params$lesson`  
+`r params$functions`    
+\    
+
+Packages for `r params$lesson`          
+`r params$packages`        
+\    
+
+
+# Agenda   
+
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+  <img src="img/lubridate.jpg" style=width:50%>
+</div>
+<!-- ----------------------- image --------------------------- -->
+
+\    
+
+Dates and times are stored as class `POSIX`, which can be represented as `POSIXct`, `POSIXlt`, or `POSIXt`, since 1970-01-01 as a starting point.        
+  
+`POSIXct` = number of seconds since the beginning of 1970 as a numeric vector. Best for data frames.       
+`POSIXlt` = a list of vectors that also includes weekday (Sun to Sat) and year day (0 to 365). Best for human-readable times and dates.       
+`POSIXt` = takes attributes from both classes and good for mixing the two classes and doing arithmetic, e.g. substracting time. You will often see this class listed alongside either of the other classes when you run `class()`.          
+
+**Further notes**    
+
+* `POSIXlt` objects are interpreted as the current timezone unless otherwise specified. You can specify the timezone using the `tzone = ""` argument for some functions in `lubridate`.       
+* You can switch between classes using `as.POSIXct()` and `as.POSIXlt()`   
+
+* `Date` is another class associated with time and dates easily passed to functions that take `POSIX` arguments       
+
+# Quick intro to time formats
+```{r}
+ct <- Sys.time()  # get date and time from your current location 
+ct
+ct %>% format("%y-%m") # year, month
+ct %>% format("%Y-%m")  # full year, month
+ct %>% format("%Y-%m-%d") # year, month, day
+ct %>% format("%Y-%m-%d-%H-%M-%S") # year, month, day, hour, min, sec
+ct %>% format("%Y ;) %m_:P_%d") # year, month, day with custom separators
+ct %>% format("%D") # date 
+
+```
+
+
+# Time functions  
+You can easily distinguish time as dates (`date`), days (`day`), years (`y`), months (`m`), or hours (`h`), minutes (`m`), and seconds (`s`).         
+  
+Passing numeric vectors returns the time as POSIX class depending on the function you specify.     
+
+## Numeric vectors to POSIX/Date        
+`as_date` = return date   
+`as_datetime` = returns date and time  
+`ymd()` = returns combinations of year, month, day, depending on order   
+```{r}
+require(lubridate)
+as_date(12) # 12 days after 1970-01-01  
+as_datetime(12) # 12 seconds after 1970-01-01  
+
+# adding time numerically  
+as_datetime(60) 
+as_datetime(60*60)
+as_datetime(60*60*24)
+as_datetime(60*60*24) %>% class
+
+# return dates using arithmetic  
+as_date(12) - 365
+```
+
+Year, month, day, hour, minute, second    
+```{r}
+# year, month, day, hour, minute, second  
+ymd(120102)
+ydm(120102)
+ymd_h(12010203)
+ymd_hm(1201020304)
+ymd_hms(120102030405)
+
+```
+
+Changing order of date-time returned    
+```{r}
+mdy_hms(120102030405) # month day year format 
+mdy_h(12010203) # with hour
+dmy_hms(120102030405) # day, month, year 
+yq("2012 2") # quarter of year  
+yq("2012 q3") # quarter of year  
+```
+
+Can also pass string arguments
+```{r}
+
+ymd_hms("120102030405")
+ymd_hms("12-01-02-03-04-05")
+ymd_hms("2012-01-02 03:04:05")
+
+# and AM/PM
+ymd_hms("2012-01-02 03:04:05 AM")
+ymd_hms("2012-01-02 03:04:05 PM") 
+```
+
+Dealing with errors and NAs  
+```{r}
+# throws error b/c vector is short/long 
+ymd(12)
+ymd(1201020304)
+
+# create a stopper to limit return length 
+ymd(12,truncated = 2)
+x <- c(
+  "2011-12-31 12:59", 
+  "2010-01-01 12", 
+  "2010-01"
+  )
+ymd_hm(x, truncated = 2)
+```
+
+# Reading various formats    
+You can pass a suite of different strings as arguments
+```{r,collapse=F}
+tt <- c(
+  20100101120101, 
+  "2009-01-02 12-01-02", 
+  "2009.01.03 12:01:03",
+  "2009-1-4 12-1-4",
+  "2009-1, 5 12:1, 5",
+  "200901-08 1201-08",
+  "2009 arbitrary 1 non-decimal 6 chars 12 in between 1 !!! 6",
+  "OR collapsed formats: 20090107 120107 (as long as prefixed with zeros)",
+  "Automatic wday, Thu, detection, 10-01-10 10:01:10 and p format: AM",
+  "Created on 10-01-11 at 10:01:11 PM")
+ymd_hms(tt)
+```
+
+
+# POSIX/Date as numeric   
+Pulling specific time components     
+```{r}
+# get the current time and date from your location   
+now()
+
+# pull specific time components
+now() %>% day 
+now() %>% hour 
+now() %>% second
+
+# change the day of an assigned time vector   
+dd <- now()
+day(dd) <- 31
+dd
+
+# setting a day greater than the last day of the chosen month will automatically roll over to the following month 
+dd <- now()
+day(dd) <- 32
+dd
+
+```
+
+### Dataset  
+
+Load `nycflights13` dataset and check out the `time_hour` column   
+```{r,collapse=F}
+require(nycflights13)
+flights %>% str # stored dataset from nycflights13 package  
+flights$time_hour %>% str # time component 
+ft <- flights$time_hour
+
+# get a smaller sample
+set.seed(13)
+ft <- ft[sample(ft %>% length,20,replace = T)]
+
+```
+
+## Parsing POSIX/Date   
+```{r}
+require(nycflights13)
+ft <- ft[sample(ft %>% length,20,replace = T)]
+
+ymd_hms(ft) # return full date and time 
+
+ydm_hms(ft) # returns some NAs b/c month > 12   
+
+```
+
+
+### Getting just time portion         
+Force POSIX into numeric, which you can transform back later.  
+```{r}
+hm("00:01") %>% as.numeric # returns 60 seconds after 00:00:00
+hm("23:59") %>% as.numeric # returns seconds elapsed since 00:00:00 as integer
+```
+
+### Time zones   
+
+There are ~600 time zones to pass to the `tzone=""` argument   
+
+```{r, collapse=F}
+OlsonNames() %>% sample(20)
+# OlsonNames() for complete list
+```
+
+```{r,collapse=F,eval=F,echo=F}
+require(DataExplorer)
+require(stringr)
+ot <- OlsonNames() %>% as.list
+names(ot) <- OlsonNames() 
+oo <- OlsonNames() %>% str_split_fixed("/",n = 2) 
+ot <- split(ot,oo[,1])
+ot %>% plot_str(type="r")
+# OlsonNames() for complete list
+```
+
+```{r,echo=F,eval=F}
+pacman::p_load(maps,stringr,leaflet)
+
+# get city names
+data(world.cities) # /maps
+world_cities <- world.cities
+ot <- OlsonNames() %>% str_split_fixed("/",n = 2)  # sep country and cities
+ot2 <- ot[,2] %>% str_replace_all("_"," ") 
+odf <- world_cities %>% 
+  filter(name %in% ot2) %>% 
+  select(lat = lat,
+         lon = long,
+         city = name) 
+# plot 
+leaflet() %>% addTiles() %>% 
+  addMarkers(lng=odf$lon,lat=odf$lat,
+             label = paste0(odf$city,"</br>",
+                            "Your current time =", now(), "</br>")) %>% leaflet::addProviderTiles("CartoDB")
+
+# possible time zones to pass to the `tz=""` argument  
+odf[str_detect(OlsonNames(),ot[,2]),]
+odf[complete.cases(odf[str_detect(OlsonNames(),ot[,2]),]),"city"]
+
+```
+
+
+# Other useful functions  
+```{r}
+# roll back to first or last day of previous month  
+now() %>% rollback(preserve_hms = T,roll_to_first = T)
+
+2012.75 %>% date_decimal() # decimal dates, e.g. 3/4 into 2012  
+
+today() # today's date  
+
+```
+
+Pass any of the below functions individually   
+```{r,collapse=F}
+
+ftl <- ft %>% list(
+  isoyear(.), 
+  epiyear(.),
+  wday(.), 
+  wday(.,label = T), 
+  qday(.), 
+  week(.), 
+  semester(.), 
+  am(.), 
+  pm(.) 
+) 
+names(ftl) <- c(
+  "data",
+  "international standard date-time code (ISO 8601)",
+  "epidemiological year",
+  "weekday",
+  "weekday as label",
+  "day into yearly quarter",
+  "week of year",
+  "semester",
+  "AM?",
+  "PM?"
+)
+ftl
+```
+
+Methods for plotting date-time data  
+```{r,collapse=F}
+
+# calendar plot 
+require(sugrrants)
+
+# convert date col to Date format   
+ff <- flights %>% 
+  mutate(date = time_hour %>% as.Date()) %>% 
+  select(distance,arr_delay,date)
+   
+# make calendar df  
+fdf <- frame_calendar(ff,
+                 x = distance, 
+                 y = arr_delay, 
+                 date = date,
+                 nrow = 5)
+
+# plot 
+p <- ggplot(fdf,aes(x = .distance, 
+                    y = .arr_delay, 
+                    group = date)) + geom_line() + theme_void()
+p %>% prettify() # add calendar text   
+
+```
+
+

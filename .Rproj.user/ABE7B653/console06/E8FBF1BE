@@ -1,58 +1,4 @@
 
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Raleway.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Roboto.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/css/journal.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/lumen.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/paper.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/readable.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/sandstone.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/simplex.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/spacelab.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/united.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/css/yeti.min.css
- delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.eot
- delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.svg
- delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.ttf
- delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff
- delete mode 100644 site_libs/bootstrap-3.3.5/fonts/glyphicons-halflings-regular.woff2
- delete mode 100644 site_libs/bootstrap-3.3.5/js/bootstrap.js
- delete mode 100644 site_libs/bootstrap-3.3.5/js/bootstrap.min.js
- delete mode 100644 site_libs/bootstrap-3.3.5/js/npm.js
- delete mode 100644 site_libs/bootstrap-3.3.5/shim/html5shiv.min.js
- delete mode 100644 site_libs/bootstrap-3.3.5/shim/respond.min.js
- delete mode 100644 site_libs/font-awesome-5.1.0/css/all.css
- delete mode 100644 site_libs/font-awesome-5.1.0/css/v4-shims.css
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.eot
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.svg
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.ttf
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-brands-400.woff2
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.eot
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.svg
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.ttf
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-regular-400.woff2
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.eot
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.svg
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.ttf
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff
- delete mode 100644 site_libs/font-awesome-5.1.0/webfonts/fa-solid-900.woff2
- delete mode 100644 site_libs/htmlwidgets-1.5.1/htmlwidgets.js
- delete mode 100644 site_libs/jquery-1.11.3/jquery.min.js
- delete mode 100644 site_libs/jquery-1.12.4/jquery.min.js
- delete mode 100644 site_libs/jqueryui-1.11.4/README
- delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_444444_256x240.png
- delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_555555_256x240.png
- delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_777620_256x240.png
  delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_777777_256x240.png
  delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_cc0000_256x240.png
  delete mode 100644 site_libs/jqueryui-1.11.4/images/ui-icons_ffffff_256x240.png
@@ -1038,3 +984,22 @@ packages_lesson2.txt
 rstudioconf.Rmd
 text.txt
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit -m  ''r'e'a'd'm'e'
+[master 7b8bdbc] readme
+ 6 files changed, 309 insertions(+), 271 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (82%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push pr[K[Korig in master
+Counting objects: 11, done.
+Delta compression using up to 4 threads.
+Compressing objects:   9% (1/11)   Compressing objects:  18% (2/11)   Compressing objects:  27% (3/11)   Compressing objects:  36% (4/11)   Compressing objects:  45% (5/11)   Compressing objects:  54% (6/11)   Compressing objects:  63% (7/11)   Compressing objects:  72% (8/11)   Compressing objects:  81% (9/11)   Compressing objects:  90% (10/11)   Compressing objects: 100% (11/11)   Compressing objects: 100% (11/11), done.
+Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  45% (5/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  72% (8/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 5.13 KiB | 0 bytes/s, done.
+Total 11 (delta 7), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/7)[Kremote: Resolving deltas:  14% (1/7)[Kremote: Resolving deltas:  28% (2/7)[Kremote: Resolving deltas:  42% (3/7)[Kremote: Resolving deltas:  57% (4/7)[Kremote: Resolving deltas:  71% (5/7)[Kremote: Resolving deltas:  85% (6/7)[Kremote: Resolving deltas: 100% (7/7)[Kremote: Resolving deltas: 100% (7/7), completed with 7 local objects.[K
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   bf86574..7b8bdbc  master -> master
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push origiin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'readme'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'readme'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Padd .
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cls[Kpwdopen README.mdd 
+[K6300L-127771-M:ecc malishev$ git remo te --b[Kv
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add  .

@@ -1,12 +1,12 @@
 ---
-Title: "Welcome to the EmoRy Coding Club"
+Title: "Welcome to the `R` Coding Club"
 header-includes: \usepackage{float}
 always_allow_html: yes
 output:
   html_document
 params: 
   lesson: "Index"
-  title: "Welcome to the Emo`R`y Coding Club" 
+  title: "Welcome to the `R` Coding Club" 
 ---
 
 <!-- ---------------------------------------------------------------- -->
@@ -54,7 +54,7 @@ lapply(packages,library,character.only=T)
 
 <!-- ----------------------- overview --------------------------- -->
 ## Overview    
-This page contains all the documents, links, and information for the monthly `R` coding club held in the Department of Biology, Emory University. We meet monthly and introduce new coding concepts and techniques in a casual working environment. The club is half lesson half workshop style and caters for all coding, `R`, and research levels.  
+This page contains all the documents, links, and information for the monthly `R` coding club held at Emory University, Atlanta. We meet monthly and teach new coding concepts and techniques in a casual environment. The club is half lesson half workshop style and caters for all coding and `R` levels.      
 \  
 \  
   
@@ -178,10 +178,9 @@ c
 
 # Learning Objectives
 
-Our first EmoRy Coding Club will be primarily targeted towards beginners, but we hope this will also useful for anyone who may already be familiar with base `R` and wanting better practice with the `tidyverse` package.  
+The Coding Club will use the `R` tidyverse suite and packages. We will use base `R` for some of the fundamentals, with the idea of implementing tidyverse functions to learn more versatile, reproducible, and efficient code.    
 
-1) Introducing beginners to the `RStudio` IDE
-2) Doing some introductory plotting with `ggplot`
+# Materials    
 
 We will use the [R for Data Science](https://r4ds.had.co.nz/index.html) free online text to guide us through learning `R`.
 
@@ -192,17 +191,10 @@ We will use the [R for Data Science](https://r4ds.had.co.nz/index.html) free onl
 </div>
 <!-- ----------------------- image --------------------------- -->
 
-
-
 <br>
 
-<!-- ----------------------- 4 materials --------------------------- -->
-# Materials
+# The dataset      
 
-We'll be diving into [Ch 3, Data visualisation](https://r4ds.had.co.nz/data-visualisation.html) and working through Section 3.3.1.
-\  
-
-### The dataset    
 We'll also be using [open-access data of housing listings from AirBnb](http://insideairbnb.com/new-york-city/) as our toy dataset. Once we've completed the above **R for Data Science exercises**, we'll repeat the plotting exercise using these data.      
 \  
 
