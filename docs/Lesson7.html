@@ -472,11 +472,11 @@ div.tocify {
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
-<div id="lesson-7-importing-diverse-data-like-a-pro" class="section level1">
-<h1>Lesson 7: Importing diverse data like a pro</h1>
+<div id="lesson-7-import-diverse-data-files-and-structures" class="section level1">
+<h1>Lesson 7: Import diverse data files and structures</h1>
 <p> </p>
 <p>Functions for Lesson 7<br />
-<code>read_csv</code>, <code>read_delim</code>, <code>write_csv</code>, <code>complete</code>, <code>expand</code><br />
+<code>read_csv</code>, <code>read_delim</code>, <code>write_csv</code><br />
  </p>
 <p>Packages for Lesson 7<br />
 <code>readr</code><br />
@@ -534,15 +534,17 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 </div>
 <div id="reading-in-different-data-file-types" class="section level1">
 <h1>Reading in different data file types</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read_csv</span>(<span class="st">&quot;file.csv&quot;</span>)  
-<span class="kw">write_file</span>(<span class="dt">x =</span> <span class="st">&quot;a,b,c</span><span class="ch">\n</span><span class="st">1,2,3</span><span class="ch">\n</span><span class="st">4,5,NA&quot;</span>, <span class="dt">path =</span> <span class="st">&quot;file.csv&quot;</span>)  
-<span class="kw">read_csv2</span>(<span class="st">&quot;file2.csv&quot;</span>)  
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">read_csv</span>(<span class="st">&quot;file.csv&quot;</span>)  <span class="co"># read in csv </span>
+<span class="kw">read_csv2</span>(<span class="st">&quot;file2.csv&quot;</span>)  <span class="co"># read in csv data for  &#39;;&#39; as separator and &#39;,&#39; as decimal point</span>
+<span class="kw">read_delim</span>(<span class="st">&quot;file.txt&quot;</span>, <span class="dt">delim =</span> <span class="st">&quot;|&quot;</span>)  <span class="co"># read flat txt files and specify the delimiter </span>
+<span class="kw">read_tsv</span>(<span class="st">&quot;file.tsv&quot;</span>)  <span class="co"># read flat data separated by tabs </span>
+<span class="kw">read_table</span>()  <span class="co"># read data separated by white space, i.e. a table </span>
+
+<span class="kw">write_file</span>(<span class="dt">x =</span> <span class="st">&quot;a,b,c</span><span class="ch">\n</span><span class="st">1,2,3</span><span class="ch">\n</span><span class="st">4,5,NA&quot;</span>, <span class="dt">path =</span> <span class="st">&quot;file.csv&quot;</span>)
 <span class="kw">write_file</span>(<span class="dt">x =</span> <span class="st">&quot;a;b;c</span><span class="ch">\n</span><span class="st">1;2;3</span><span class="ch">\n</span><span class="st">4;5;NA&quot;</span>, <span class="dt">path =</span> <span class="st">&quot;file2.csv&quot;</span>)
-<span class="kw">read_delim</span>(<span class="st">&quot;file.txt&quot;</span>, <span class="dt">delim =</span> <span class="st">&quot;|&quot;</span>)  
 <span class="kw">write_file</span>(<span class="dt">x =</span> <span class="st">&quot;a|b|c</span><span class="ch">\n</span><span class="st">1|2|3</span><span class="ch">\n</span><span class="st">4|5|NA&quot;</span>, <span class="dt">path =</span> <span class="st">&quot;file.txt&quot;</span>)
-<span class="kw">read_fwf</span>(<span class="st">&quot;file.fwf&quot;</span>, <span class="dt">col_positions =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">5</span>)) <span class="kw">write_file</span>(<span class="dt">x =</span> <span class="st">&quot;a b c</span><span class="ch">\n</span><span class="st">1 2 3</span><span class="ch">\n</span><span class="st">4 5 NA&quot;</span>, <span class="dt">path =</span> <span class="st">&quot;file.fwf&quot;</span>)
-<span class="kw">read_tsv</span>(<span class="st">&quot;file.tsv&quot;</span>) Also <span class="kw">read_table</span>().
-<span class="kw">write_file</span>(<span class="dt">x =</span> <span class="st">&quot;a</span><span class="ch">\t</span><span class="st">b</span><span class="ch">\t</span><span class="st">c</span><span class="ch">\n</span><span class="st">1</span><span class="ch">\t</span><span class="st">2</span><span class="ch">\t</span><span class="st">3</span><span class="ch">\n</span><span class="st">4</span><span class="ch">\t</span><span class="st">5</span><span class="ch">\t</span><span class="st">NA&quot;</span>, <span class="dt">path =</span> <span class="st">&quot;file.tsv&quot;</span>)  </code></pre></div>
+<span class="kw">write_file</span>(<span class="dt">x =</span> <span class="st">&quot;a b c</span><span class="ch">\n</span><span class="st">1 2 3</span><span class="ch">\n</span><span class="st">4 5 NA&quot;</span>, <span class="dt">path =</span> <span class="st">&quot;file.fwf&quot;</span>)
+<span class="kw">write_file</span>(<span class="dt">x =</span> <span class="st">&quot;a</span><span class="ch">\t</span><span class="st">b</span><span class="ch">\t</span><span class="st">c</span><span class="ch">\n</span><span class="st">1</span><span class="ch">\t</span><span class="st">2</span><span class="ch">\t</span><span class="st">3</span><span class="ch">\n</span><span class="st">4</span><span class="ch">\t</span><span class="st">5</span><span class="ch">\t</span><span class="st">NA&quot;</span>, <span class="dt">path =</span> <span class="st">&quot;file.tsv&quot;</span>)</code></pre></div>
 <p> </p>
 </div>
 <div id="saving-your-data-from-r" class="section level1">
@@ -550,14 +552,18 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 <p>Save <code>x</code>, an <code>R</code> object, to <code>path</code>, a file path</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Comma delimited file</span>
 <span class="kw">write_csv</span>(x, path, <span class="dt">na =</span> <span class="st">&quot;NA&quot;</span>, <span class="dt">append =</span> <span class="ot">FALSE</span>, <span class="dt">col_names =</span> <span class="op">!</span>append)
+
 <span class="co"># File with arbitrary delimiter</span>
 <span class="kw">write_delim</span>(x, path, <span class="dt">delim =</span> <span class="st">&quot; &quot;</span>, <span class="dt">na =</span> <span class="st">&quot;NA&quot;</span>, <span class="dt">append =</span> <span class="ot">FALSE</span>, <span class="dt">col_names =</span> <span class="op">!</span>append)
+
 <span class="co"># CSV for excel</span>
 <span class="kw">write_excel_csv</span>(x, path, <span class="dt">na =</span> <span class="st">&quot;NA&quot;</span>, <span class="dt">append =</span> <span class="ot">FALSE</span>, <span class="dt">col_names =</span> <span class="op">!</span>append)
+
 <span class="co"># String to file</span>
 <span class="kw">write_file</span>(x, path, <span class="dt">append =</span> <span class="ot">FALSE</span>) String vector to file, one element per line
 <span class="kw">write_lines</span>(x,path, <span class="dt">na =</span> <span class="st">&quot;NA&quot;</span>, <span class="dt">append =</span> <span class="ot">FALSE</span>) Object to RDS file
 <span class="kw">write_rds</span>(x, path, <span class="dt">compress =</span> <span class="kw">c</span>(<span class="st">&quot;none&quot;</span>, <span class="st">&quot;gz&quot;</span>, <span class="st">&quot;bz2&quot;</span>, <span class="st">&quot;xz&quot;</span>), ...)
+
 <span class="co"># Tab delimited files</span>
 <span class="kw">write_tsv</span>(x, path, <span class="dt">na =</span> <span class="st">&quot;NA&quot;</span>, <span class="dt">append =</span> <span class="ot">FALSE</span>, <span class="dt">col_names =</span> <span class="op">!</span>append)</code></pre></div>
 </div>
