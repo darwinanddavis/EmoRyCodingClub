@@ -1,10 +1,10 @@
 ---
 params:
   lesson: "Lesson 9"
-  title: "Working with time series and dates"  
-  bookchapter_name: "Cheat sheet for the `lubridate` package"      
+  title: "Manipulating time series and dates"  
+  bookchapter_name: "Cheat sheet for the `lubridate` package"
   bookchapter_section: "https://lubridate.tidyverse.org/"    
-  functions: "`mdy_hms`"
+  functions: "`ymd()`, `ymd_h()`, `ymd_hm()`, `ymd_hms()`, `hm()`, `date()`, `week()`, `as_date()`, `yq()`, `rollback()`, `date_decimal()`"
   packages: "`lubridate`"      
   # end inputs ---------------------------------------------------------------
 header-includes: \usepackage{float}
@@ -59,9 +59,9 @@ Packages for `r params$lesson`
 
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
-  <img src="img/lubridate.jpg" style=width:50%>
+  <img src="https://github.com/tidyverse/lubridate/blob/master/man/figures/logo.png?raw=true" style=width:25%>
 </div>
-<!-- ----------------------- image --------------------------- -->
+
 
 \    
 
@@ -80,7 +80,7 @@ Dates and times are stored as class `POSIX`, which can be represented as `POSIXc
 
 # Quick intro to time formats
 ```{r}
-ct <- Sys.time()  # get date and time from your current location 
+ct <- now()  # get date and time from your current location
 ct
 ct %>% format("%y-%m") # year, month
 ct %>% format("%Y-%m")  # full year, month
@@ -88,6 +88,10 @@ ct %>% format("%Y-%m-%d") # year, month, day
 ct %>% format("%Y-%m-%d-%H-%M-%S") # year, month, day, hour, min, sec
 ct %>% format("%Y ;) %m_:P_%d") # year, month, day with custom separators
 ct %>% format("%D") # date 
+
+# alternative versions of getting current date and time, respectively (base R)
+Sys.Date()
+Sys.time()
 
 ```
 
@@ -185,9 +189,6 @@ ymd_hms(tt)
 # POSIX/Date as numeric   
 Pulling specific time components     
 ```{r}
-# get the current time and date from your location   
-now()
-
 # pull specific time components
 now() %>% day 
 now() %>% hour 
@@ -233,7 +234,7 @@ ydm_hms(ft) # returns some NAs b/c month > 12
 
 
 ### Getting just time portion         
-Force POSIX into numeric, which you can transform back later.  
+Coerce POSIX into numeric, which you can transform back later.  
 ```{r}
 hm("00:01") %>% as.numeric # returns 60 seconds after 00:00:00
 hm("23:59") %>% as.numeric # returns seconds elapsed since 00:00:00 as integer
@@ -244,7 +245,7 @@ hm("23:59") %>% as.numeric # returns seconds elapsed since 00:00:00 as integer
 There are ~600 time zones to pass to the `tzone=""` argument   
 
 ```{r, collapse=F}
-OlsonNames() %>% sample(20)
+OlsonNames() %>% sample(20) 
 # OlsonNames() for complete list
 ```
 
@@ -271,19 +272,17 @@ odf <- world_cities %>%
   filter(name %in% ot2) %>% 
   select(lat = lat,
          lon = long,
-         city = name) 
+         city = name)
 # plot 
 leaflet() %>% addTiles() %>% 
   addMarkers(lng=odf$lon,lat=odf$lat,
-             label = paste0(odf$city,"</br>",
-                            "Your current time =", now(), "</br>")) %>% leaflet::addProviderTiles("CartoDB")
+             label = paste("City: ",odf$city)) %>% leaflet::addProviderTiles("CartoDB")
 
 # possible time zones to pass to the `tz=""` argument  
 odf[str_detect(OlsonNames(),ot[,2]),]
 odf[complete.cases(odf[str_detect(OlsonNames(),ot[,2]),]),"city"]
 
 ```
-
 
 # Other useful functions  
 ```{r}
@@ -344,9 +343,13 @@ fdf <- frame_calendar(ff,
                  nrow = 5)
 
 # plot 
-p <- ggplot(fdf,aes(x = .distance, 
-                    y = .arr_delay, 
-                    group = date)) + geom_line() + theme_void()
+p <- ggplot(fdf,aes(x = .distance, # new calendar var
+                    y = .arr_delay, # new calendar var
+                    group = date,
+                    colour=arr_delay
+                    )) +
+  geom_line(show.legend=F) + 
+  theme_void()
 p %>% prettify() # add calendar text   
 
 ```

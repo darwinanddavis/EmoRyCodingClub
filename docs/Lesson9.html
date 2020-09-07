@@ -437,6 +437,9 @@ div.tocify {
 <li>
   <a href="Lesson8.html">Lesson 8</a>
 </li>
+<li>
+  <a href="Lesson9.html">Lesson 9</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -472,11 +475,11 @@ div.tocify {
 <!-- ____________________________________________________________________________ -->
 <!-- ____________________________________________________________________________ -->
 <!-- start body -->
-<div id="lesson-9-working-with-time-series-and-dates" class="section level1">
-<h1>Lesson 9: Working with time series and dates</h1>
+<div id="lesson-9-manipulating-time-series-and-dates" class="section level1">
+<h1>Lesson 9: Manipulating time series and dates</h1>
 <p> </p>
 <p>Functions for Lesson 9<br />
-<code>mdy_hms</code><br />
+<code>ymd()</code>, <code>ymd_h()</code>, <code>ymd_hm()</code>, <code>ymd_hms()</code>, <code>hm()</code>, <code>date()</code>, <code>week()</code>, <code>as_date()</code>, <code>yq()</code>, <code>rollback()</code>, <code>date_decimal()</code><br />
  </p>
 <p>Packages for Lesson 9<br />
 <code>lubridate</code><br />
@@ -486,9 +489,8 @@ div.tocify {
 <h1>Agenda</h1>
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
-<p><img src="img/lubridate.jpg" style=width:50%></p>
+<p><img src="https://github.com/tidyverse/lubridate/blob/master/man/figures/logo.png?raw=true" style=width:25%></p>
 </div>
-<!-- ----------------------- image --------------------------- -->
 <p> </p>
 <p>Dates and times are stored as class <code>POSIX</code>, which can be represented as <code>POSIXct</code>, <code>POSIXlt</code>, or <code>POSIXt</code>, since 1970-01-01 as a starting point.</p>
 <p><code>POSIXct</code> = number of seconds since the beginning of 1970 as a numeric vector. Best for data frames.<br />
@@ -504,21 +506,27 @@ div.tocify {
 </div>
 <div id="quick-intro-to-time-formats" class="section level1">
 <h1>Quick intro to time formats</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ct &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()  <span class="co"># get date and time from your current location </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ct &lt;-<span class="st"> </span><span class="kw">now</span>()  <span class="co"># get date and time from your current location</span>
 ct
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-20 17:36:29 AEST&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-09-08 09:43:48 AEST&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%y-%m&quot;</span>)  <span class="co"># year, month</span>
-[<span class="dv">1</span>] <span class="st">&quot;20-08&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;20-09&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m&quot;</span>)  <span class="co"># full year, month</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-08&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-09&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)  <span class="co"># year, month, day</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-20&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-09-08&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d-%H-%M-%S&quot;</span>)  <span class="co"># year, month, day, hour, min, sec</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-20-17-36-29&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-09-08-09-43-48&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y ;) %m_:P_%d&quot;</span>)  <span class="co"># year, month, day with custom separators</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020 ;) 08_:P_20&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020 ;) 09_:P_08&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%D&quot;</span>)  <span class="co"># date </span>
-[<span class="dv">1</span>] <span class="st">&quot;08/20/20&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;09/08/20&quot;</span>
+
+<span class="co"># alternative versions of getting current date and time, respectively (base R)</span>
+<span class="kw">Sys.Date</span>()
+[<span class="dv">1</span>] <span class="st">&quot;2020-09-08&quot;</span>
+<span class="kw">Sys.time</span>()
+[<span class="dv">1</span>] <span class="st">&quot;2020-09-08 09:43:48 AEST&quot;</span></code></pre></div>
 </div>
 <div id="time-functions" class="section level1">
 <h1>Time functions</h1>
@@ -615,30 +623,26 @@ x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
 <div id="posixdate-as-numeric" class="section level1">
 <h1>POSIX/Date as numeric</h1>
 <p>Pulling specific time components</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># get the current time and date from your location</span>
-<span class="kw">now</span>()
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-20 17:36:31 AEST&quot;</span>
-
-<span class="co"># pull specific time components</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># pull specific time components</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>day
-[<span class="dv">1</span>] <span class="dv">20</span>
+[<span class="dv">1</span>] <span class="dv">8</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>hour
-[<span class="dv">1</span>] <span class="dv">17</span>
+[<span class="dv">1</span>] <span class="dv">9</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>second
-[<span class="dv">1</span>] <span class="fl">31.1558</span>
+[<span class="dv">1</span>] <span class="fl">49.73978</span>
 
 <span class="co"># change the day of an assigned time vector</span>
 dd &lt;-<span class="st"> </span><span class="kw">now</span>()
 <span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">31</span>
 dd
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-31 17:36:31 AEST&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-10-01 09:43:49 AEST&quot;</span>
 
 <span class="co"># setting a day greater than the last day of the chosen month will automatically roll over to the</span>
 <span class="co"># following month</span>
 dd &lt;-<span class="st"> </span><span class="kw">now</span>()
 <span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">32</span>
 dd
-[<span class="dv">1</span>] <span class="st">&quot;2020-09-01 17:36:31 AEST&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2020-10-02 09:43:49 AEST&quot;</span></code></pre></div>
 <div id="dataset" class="section level3">
 <h3>Dataset</h3>
 <p>Load <code>nycflights13</code> dataset and check out the <code>time_hour</code> column</p>
@@ -696,7 +700,7 @@ ft &lt;-<span class="st"> </span>ft[<span class="kw">sample</span>(ft <span clas
 [<span class="dv">19</span>] <span class="ot">NA</span>                        <span class="ot">NA</span>                       </code></pre></div>
 <div id="getting-just-time-portion" class="section level3">
 <h3>Getting just time portion</h3>
-<p>Force POSIX into numeric, which you can transform back later.</p>
+<p>Coerce POSIX into numeric, which you can transform back later.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">hm</span>(<span class="st">&quot;00:01&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>as.numeric  <span class="co"># returns 60 seconds after 00:00:00</span>
 [<span class="dv">1</span>] <span class="dv">60</span>
 <span class="kw">hm</span>(<span class="st">&quot;23:59&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>as.numeric  <span class="co"># returns seconds elapsed since 00:00:00 as integer</span>
@@ -721,13 +725,13 @@ ft &lt;-<span class="st"> </span>ft[<span class="kw">sample</span>(ft <span clas
 <h1>Other useful functions</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># roll back to first or last day of previous month</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rollback</span>(<span class="dt">preserve_hms =</span> T, <span class="dt">roll_to_first =</span> T)
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-01 17:36:32 AEST&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-09-01 09:43:49 AEST&quot;</span>
 
 <span class="fl">2012.75</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">date_decimal</span>()  <span class="co"># decimal dates, e.g. 3/4 into 2012  </span>
 [<span class="dv">1</span>] <span class="st">&quot;2012-10-01 12:00:00 UTC&quot;</span>
 
 <span class="kw">today</span>()  <span class="co"># today&#39;s date  </span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-08-20&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2020-09-08&quot;</span></code></pre></div>
 <p>Pass any of the below functions individually</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ftl &lt;-<span class="st"> </span>ft <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">list</span>(<span class="kw">isoyear</span>(.), <span class="kw">epiyear</span>(.), <span class="kw">wday</span>(.), <span class="kw">wday</span>(., <span class="dt">label =</span> T), <span class="kw">qday</span>(.), <span class="kw">week</span>(.), <span class="kw">semester</span>(.), 
     <span class="kw">am</span>(.), <span class="kw">pm</span>(.))
@@ -775,18 +779,30 @@ $`PM?`
  [1]  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE
 [17]  TRUE  TRUE FALSE  TRUE</code></pre>
 <p>Methods for plotting date-time data</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># calendar plot</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># calendar plot </span>
 <span class="kw">require</span>(sugrrants)
 
-<span class="co"># convert date col to Date format</span>
-ff &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">mutate</span>(<span class="dt">date =</span> time_hour <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as.Date</span>()) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">select</span>(distance, arr_delay, date)
+<span class="co"># convert date col to Date format   </span>
+ff &lt;-<span class="st"> </span>flights <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">date =</span> time_hour <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as.Date</span>()) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">select</span>(distance,arr_delay,date)
+   
+<span class="co"># make calendar df  </span>
+fdf &lt;-<span class="st"> </span><span class="kw">frame_calendar</span>(ff,
+                 <span class="dt">x =</span> distance, 
+                 <span class="dt">y =</span> arr_delay, 
+                 <span class="dt">date =</span> date,
+                 <span class="dt">nrow =</span> <span class="dv">5</span>)
 
-<span class="co"># make calendar df</span>
-fdf &lt;-<span class="st"> </span><span class="kw">frame_calendar</span>(ff, <span class="dt">x =</span> distance, <span class="dt">y =</span> arr_delay, <span class="dt">date =</span> date, <span class="dt">nrow =</span> <span class="dv">5</span>)
-
-<span class="co"># plot</span>
-p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(fdf, <span class="kw">aes</span>(<span class="dt">x =</span> .distance, <span class="dt">y =</span> .arr_delay, <span class="dt">group =</span> date)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_line</span>() <span class="op">+</span><span class="st"> </span><span class="kw">theme_void</span>()
-p <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">prettify</span>()  <span class="co"># add calendar text   </span></code></pre></div>
+<span class="co"># plot </span>
+p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(fdf,<span class="kw">aes</span>(<span class="dt">x =</span> .distance, <span class="co"># new calendar var</span>
+                    <span class="dt">y =</span> .arr_delay, <span class="co"># new calendar var</span>
+                    <span class="dt">group =</span> date,
+                    <span class="dt">colour=</span>arr_delay
+                    )) <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">show.legend=</span>F) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">theme_void</span>()
+p <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">prettify</span>() <span class="co"># add calendar text   </span></code></pre></div>
 <p><img src="Lesson9_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 </div>
 

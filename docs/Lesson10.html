@@ -437,6 +437,9 @@ div.tocify {
 <li>
   <a href="Lesson8.html">Lesson 8</a>
 </li>
+<li>
+  <a href="Lesson9.html">Lesson 9</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
@@ -637,10 +640,31 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
 <h2>Finding and scraping specific attributes within a webpage</h2>
 <p>Let's say you wanted to scrape all the urls within a webpage, but ignore the urls contained within some parts of the page, e.g. the sidebar or footer.</p>
 <p>We can use <code>html_attr()</code> to identify nested elements within HTML elements.</p>
-<p>This code srapes the urls from the below webpage, but inclues all possible urls.</p>
+<p>This code scrapes the urls from the below webpage, but inclues all possible urls, which is not what we want.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://r4ds.had.co.nz/index.html&quot;</span>
-<span class="kw">node</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;href&quot;</span>)</code></pre></div>
-<pre><code>{xml_nodeset (0)}</code></pre>
+<span class="kw">node</span>(<span class="st">&quot;a&quot;</span>)</code></pre></div>
+<pre><code>{xml_nodeset (568)}
+ [1] &lt;a href=&quot;./&quot;&gt;R for Data Science&lt;/a&gt;
+ [2] &lt;a href=&quot;index.html&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;Welcome&lt;/a&gt;
+ [3] &lt;a href=&quot;introduction.html&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt; Introduction&lt;/a&gt;
+ [4] &lt;a href=&quot;introduction.html#what-you-will-learn&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.1&lt;/b&gt; What y ...
+ [5] &lt;a href=&quot;introduction.html#how-this-book-is-organised&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.2&lt;/b&gt; ...
+ [6] &lt;a href=&quot;introduction.html#what-you-wont-learn&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3&lt;/b&gt; What y ...
+ [7] &lt;a href=&quot;introduction.html#big-data&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.1&lt;/b&gt; Big data&lt;/a&gt;
+ [8] &lt;a href=&quot;introduction.html#python-julia-and-friends&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.2&lt;/b&gt; ...
+ [9] &lt;a href=&quot;introduction.html#non-rectangular-data&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.3&lt;/b&gt; Non ...
+[10] &lt;a href=&quot;introduction.html#hypothesis-confirmation&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.4&lt;/b&gt;  ...
+[11] &lt;a href=&quot;introduction.html#prerequisites&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4&lt;/b&gt; Prerequisite ...
+[12] &lt;a href=&quot;introduction.html#r&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.1&lt;/b&gt; R&lt;/a&gt;
+[13] &lt;a href=&quot;introduction.html#rstudio&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.2&lt;/b&gt; RStudio&lt;/a&gt;
+[14] &lt;a href=&quot;introduction.html#the-tidyverse&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.3&lt;/b&gt; The tidyve ...
+[15] &lt;a href=&quot;introduction.html#other-packages&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.4&lt;/b&gt; Other pac ...
+[16] &lt;a href=&quot;introduction.html#running-r-code&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.5&lt;/b&gt; Running R c ...
+[17] &lt;a href=&quot;introduction.html#getting-help-and-learning-more&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.6 ...
+[18] &lt;a href=&quot;introduction.html#acknowledgements&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.7&lt;/b&gt; Acknowled ...
+[19] &lt;a href=&quot;introduction.html#colophon&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.8&lt;/b&gt; Colophon&lt;/a&gt;
+[20] &lt;a href=&quot;explore-intro.html&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;2&lt;/b&gt; Introduction&lt;/a&gt;
+...</code></pre>
 <p>Specifying the main body of the webpage (&quot;section&quot;) solves this, but we still want just the urls. Using <code>html_attr()</code> gives us just the url portion of the HTML link element (<code>&lt;a&gt;</code>)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_attr</span>(<span class="st">&quot;href&quot;</span>)</code></pre></div>
 <pre><code>  [1] &quot;http://amzn.to/2aHLAQ1&quot;                              

@@ -140,10 +140,10 @@ Let's say you wanted to scrape all the urls within a webpage, but ignore the url
 
 We can use `html_attr()` to identify nested elements within HTML elements. 
 
-This code srapes the urls from the below webpage, but inclues all possible urls.  
+This code scrapes the urls from the below webpage, but inclues all possible urls, which is not what we want.    
 ```{r}
 url <- "https://r4ds.had.co.nz/index.html"
-node("a") %>% html_nodes("href") 
+node("a") 
 ```
 
 Specifying the main body of the webpage ("section") solves this, but we still want just the urls. Using `html_attr()` gives us just the url portion of the HTML link element (`<a>`)   
