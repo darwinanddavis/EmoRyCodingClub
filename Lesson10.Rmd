@@ -191,7 +191,7 @@ node("img") %>% html_attr("src") %>% image_read()
 ```
 
 
-## Challenge  
+## Challenge    
 
 Find and scrape in the image from the below url and plot it, all without leaving `R` or saving the img to your drive.     
 
