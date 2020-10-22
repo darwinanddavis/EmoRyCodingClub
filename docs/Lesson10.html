@@ -477,23 +477,27 @@ div.tocify {
 <h1>Lesson 10: Scraping webpage data and text</h1>
 <p> </p>
 <p>Functions for Lesson 10<br />
-<code>read_html</code>,<code>html_node</code>,<code>html_attr</code><br />
+<code>read_html</code>,<code>html_node</code>,<code>html_nodes</code>, <code>html_attr</code>, <code>html_text</code>, <code>html_table</code><br />
  </p>
 <p>Packages for Lesson 10<br />
-<code>rvest</code>,<code>xml2</code><br />
+<code>rvest</code>,<code>xml2</code>,<code>magick</code>,<code>magrittr</code><br />
  </p>
 </div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+<p><img src="https://github.com/tidyverse/rvest/raw/master/man/figures/logo.png" style=width:25%></p>
+</div>
 <p>Webscrape data from <code>R</code> using <code>rvest</code> and <code>xml2</code> packages.</p>
-<p><a href="https://readr.tidyverse.org/">Webscrape text and data</a>.<br />
+<p><a href="https://rvest.tidyverse.org/">Webscrape text and data</a>.<br />
 <br />
 </p>
 </div>
 <div id="reading-webpage-data-html" class="section level1">
 <h1>Reading webpage data (HTML)</h1>
 <p>Rather than pulling the entire webpage text, specify HTML elements (nodes), such as headings, tables, images to scrape.</p>
-<p>Use <code>html_node</code> to get only the first HTML node and <code>html_nodes</code> to pull all elements. This is useful when you want to get all text or data within a table, just then only want the first row, for example.</p>
+<p>Use <code>html_node</code> to get only the first HTML node and <code>html_nodes</code> to pull all elements. This is useful when you want to get just the first element you're after or all text or data within a table, for example.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(rvest)
 <span class="kw">require</span>(xml2)
 
@@ -505,7 +509,7 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html  <span clas
 [1] &lt;head&gt;\n&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;\n&lt;meta charset=&quot;u ...
 [2] &lt;body&gt;\n\n\n\n  &lt;div class=&quot;book without-animation with-summary font-size-2 font-family-1&quot; da ...</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># scraping the first node only for third order headings (&#39;h3&#39;)</span>
-url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_node</span>(<span class="st">&quot;h3&quot;</span>)  <span class="co"># get section headings</span></code></pre></div>
+url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_node</span>(<span class="st">&quot;h3&quot;</span>)  <span class="co"># get only first section heading</span></code></pre></div>
 <pre><code>{html_node}
 &lt;h3&gt;
 [1] &lt;span class=&quot;header-section-number&quot;&gt;3.1.1&lt;/span&gt;</code></pre>
@@ -525,30 +529,30 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
 [11] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.9.1&lt;/span&gt; Exercises&lt;/h3&gt;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;img&quot;</span>)  <span class="co"># get just images</span></code></pre></div>
 <pre><code>{xml_nodeset (54)}
- [1] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/27f75d757f210f2106c34e399f5d32b667a653f8/060 ...
- [2] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/75fb0e8e533675ad76f647b02be462f7cfd2f1df/b76 ...
- [3] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/2f8f27c472d7df78486e248c40931019b286361b/32a ...
- [4] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/e86ceaf6b7f5dcad0bb0b7254f3270501dd60b50/333 ...
- [5] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/7c338de8653204508c18a0b5e6bf98f3f66de257/d18 ...
- [6] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/4bc3b12fc5298232b9209c6b85cebae664d7b2b0/e71 ...
- [7] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/aa31d29d26bad3c5377cc0132b7fa4b26308da88/604 ...
- [8] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/5bc19b1d6b8bb4c987c71c7128cb7b4cb5cb927a/9a5 ...
- [9] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/58a48d625b4bd494cd685dd9998f5c74e9c16907/211 ...
-[10] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/a5d53e34dd5b78eb6358b857db8037e4134ce1d7/33f ...
-[11] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/7b70e5c694d661644e49bcaa2fa8d923007cf718/b11 ...
-[12] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/94b029204c691b958eb0c60c6915a19ee4d319bf/cee ...
-[13] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/27f75d757f210f2106c34e399f5d32b667a653f8/78a ...
-[14] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/3e4d5a44b35d0de122c81319995d5dcf484e6d71/7fb ...
-[15] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/33b14521b673a6384c302e3df3008d1c3c034c6b/d32 ...
-[16] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/ef715987983fb850a25fda6cf2f13fbfb145949e/63c ...
-[17] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/4f68161679255e60089d8e7453623f9d347b6b77/be8 ...
-[18] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/2cd610393a828d04520144a1ff8bf669d2b9d790/862 ...
-[19] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/6cb48f7f00aa119aab0db977306e6c0cd996a8d8/e4c ...
-[20] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/62d36d8b7ebbc5ef9e97d3365e201a687214345b/5fb ...
+ [1] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/91aebc6de4de928abc810433b752274ba6a46d58/a78 ...
+ [2] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/a4611ecfa41fe0b4c048b52e942ac38c0e16ff76/e87 ...
+ [3] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/e2ebb6c8b73ed7f4a931b18dd6ce1a3165bf22e6/0c5 ...
+ [4] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/8b89c5554ed6108359d59909d441dbeb010e8802/9f3 ...
+ [5] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/9c1b8b7c0700daf7d8d141f892036a0caf83e8d7/4c8 ...
+ [6] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/f9280bbd15f46cc9d67a8fa30085c147ccee89c4/402 ...
+ [7] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/1ae399aecbf37c65219a1610aa1b9700a6355834/5d0 ...
+ [8] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/c36c62d7f70e30e3307295d6408b8d3b61e3c56a/a69 ...
+ [9] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/e28a1b57b6622cf67fd8a7e01c6a9955914f8fe9/635 ...
+[10] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/2c3f0abae562f351ef2a3b32066b69101d831900/c4e ...
+[11] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/cfc07b44ca9549597084bb18593c6aa115725240/884 ...
+[12] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/c58f7f0f141f26f854d732701592275422e04ec4/0ad ...
+[13] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/91aebc6de4de928abc810433b752274ba6a46d58/4e9 ...
+[14] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/43f153577e9c8e7f012c0606cbfbeb4d2e9ce409/176 ...
+[15] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/f6d3025401c2bf94d85e1871ea67cddf48b52504/317 ...
+[16] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/bc8810a1ee5f0f71e36fcc9743f44dbe00af7765/101 ...
+[17] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/498cf27e1ab09fb0f88823fb0447026492ae0c15/95b ...
+[18] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/b3dd4727d3724ee297d97b826ce5c8b63e3c20cd/2a1 ...
+[19] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/5b179db1649be5e494a1294b4c0ba57d8fec25c1/7d6 ...
+[20] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/737dd0bae0fa6100c991e2ca6c4f7dea77de7718/a36 ...
 ...</code></pre>
 <p>Write a simple function to pull the HTML node you're interested in</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">node &lt;-<span class="st"> </span><span class="cf">function</span>(n) {
-    url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(n)  <span class="co"># get just tables</span>
+    url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(n)  <span class="co"># n = user defined node </span>
 }</code></pre></div>
 <p>Pull specific text, such as headings using HTML elements, i.e. <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code>, etc</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;h1&quot;</span>)  <span class="co"># get first order headings</span></code></pre></div>
@@ -574,14 +578,14 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
  [4] &quot;select()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                         
  [5] &quot;mutate()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                         
  [6] &quot;summarise()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                      
- [7] &quot;library(tidyverse)\n#&gt; ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──\n#&gt; ✔ ggplot2 3.3.0     ✔ purrr   0.3.4\n#&gt; ✔ tibble  3.0.1     ✔ dplyr   0.8.5\n#&gt; ✔ tidyr   1.0.3     ✔ stringr 1.4.0\n#&gt; ✔ readr   1.3.1     ✔ forcats 0.5.0\n#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n#&gt; ✖ dplyr::filter() masks stats::filter()\n#&gt; ✖ dplyr::lag()    masks stats::lag()&quot;
+ [7] &quot;library(tidyverse)\n#&gt; ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──\n#&gt; ✔ ggplot2 3.3.2     ✔ purrr   0.3.4\n#&gt; ✔ tibble  3.0.3     ✔ dplyr   1.0.2\n#&gt; ✔ tidyr   1.1.2     ✔ stringr 1.4.0\n#&gt; ✔ readr   1.4.0     ✔ forcats 0.5.0\n#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n#&gt; ✖ dplyr::filter() masks stats::filter()\n#&gt; ✖ dplyr::lag()    masks stats::lag()&quot;
  [8] &quot;library()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                        
  [9] &quot;install.packages(\&quot;tidyverse\&quot;)\nlibrary(tidyverse)&quot;                                                                                                                                                                                                                                                                                                                                                                                              
 [10] &quot;package::function()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                              </code></pre>
 <p> </p>
 <div id="if-youre-unsure-what-node-to-call-right-click-on-the-piece-of-datatext-you-want-from-the-webpage-and-click-inspect.-here-you-can-identify-the-html-element-you-need." class="section level4">
-<h4>&gt; If you're unsure what node to call, right click on the piece of data/text you want from the webpage and click &quot;Inspect&quot;. Here, you can identify the HTML element you need.</h4>
-<p>E.g. I want just the quotes from the page, but don't know what type of node they belong to. After inspecting the element, I can see it's called a 'blockquote'.</p>
+<h4>If you're unsure what node to call, right click on the piece of data/text you want from the webpage and click &quot;Inspect&quot;. Here, you can identify the HTML element you need.</h4>
+<p>E.g. I want just the quotes from the page, but don't know what type of node they belong to. After inspecting the element, we can see it's called a 'blockquote'.</p>
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
 <p><img src="img/lesson7_inspect.jpg" style=width:100%></p>
@@ -592,49 +596,60 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
 <pre><code>[1] &quot;“The simple graph has brought more information to the data analyst’s mind\nthan any other device.” — John Tukey&quot;
 [2] &quot;“The greatest value of a picture is when it forces us to notice what we\nnever expected to see.” — John Tukey&quot;  </code></pre>
 <p>Scrape table data</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://www.imdb.com/title/tt8515016/&quot;</span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://www.imdb.com/title/tt0094625/?ref_=fn_al_tt_1&quot;</span>
 url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_table</span>(<span class="dt">trim =</span> T)  <span class="co"># get just tables</span></code></pre></div>
 <pre><code>[[1]]
-                     X1                   X2                   X3
-1  Series cast summary: Series cast summary: Series cast summary:
-2                               Jun Fukuyama                  ...
-3                                                                
-4                            Makoto Furukawa                  ...
-5                                                                
-6                             Hiroaki Hirata                  ...
-7                                                                
-8                           Yoshimasa Hosoya                  ...
-9                                                                
-10                            Unshô Ishizuka                  ...
-11                                                               
-12                             Shinji Kawada                  ...
-13                                                               
-14                        Toshiyuki Morikawa                  ...
-15                                                               
-16                              Kenji Nojima                  ...
-17                                                               
-18                               Yuma Uchida                  ...
-19                                                               
-                                                      X4
-1                                   Series cast summary:
-2      Lee Yut Lung\n                  24 episodes, 2018
-3                                                       
-4      Shorter Wong\n                  24 episodes, 2018
-5                                                       
-6          Max Lobo\n                  24 episodes, 2018
-7                                                       
-8  Frederick Arthur\n                  24 episodes, 2018
-9                                                       
-10     Dino Golzine\n                  24 episodes, 2018
-11                                                      
-12     Shunichi Ibe\n                  24 episodes, 2018
-13                                                      
-14           Blanca\n                  24 episodes, 2018
-15                                                      
-16     Eiji Okumura\n                  24 episodes, 2018
-17                                                      
-18         Ash Lynx\n                  24 episodes, 2018
-19                                                      </code></pre>
+                                  X1                                X2
+1  Cast overview, first billed only: Cast overview, first billed only:
+2                                                         Mitsuo Iwata
+3                                                        Nozomu Sasaki
+4                                                          Mami Koyama
+5                                                         Tesshô Genda
+6                                                        Hiroshi Ôtake
+7                                                      Kôichi Kitamura
+8                                                    Michihiro Ikemizu
+9                                                     Yuriko Fuchizaki
+10                                                       Masaaki Ôkura
+11                                                        Tarô Arakawa
+12                                                       Takeshi Kusao
+13                                                       Kazumi Tanaka
+14                                                       Masayuki Katô
+15                                                      Yôsuke Akimoto
+16                                                       Masato Hirano
+                                  X3
+1  Cast overview, first billed only:
+2                                ...
+3                                ...
+4                                ...
+5                                ...
+6                                ...
+7                                ...
+8                                ...
+9                                ...
+10                               ...
+11                               ...
+12                               ...
+13                               ...
+14                               ...
+15                               ...
+16                               ...
+                                                                                                               X4
+1                                                                               Cast overview, first billed only:
+2                                                                                      Kaneda \n  \n  \n  (voice)
+3                                                                                      Tetsuo \n  \n  \n  (voice)
+4                                                                                         Kei \n  \n  \n  (voice)
+5                                                                                         Ryu \n  \n  \n  (voice)
+6                                                                                        Nezu \n  \n  \n  (voice)
+7                                                    Lady Miyako /  \n            Committee A \n  \n  \n  (voice)
+8                                                      Inspector /  \n            Committee I \n  \n  \n  (voice)
+9                                                                                       Kaori \n  \n  \n  (voice)
+10                                                                                   Yamagata \n  \n  \n  (voice)
+11                         Army /  \n            Committee G /  \n            Eiichi Watanabe \n  \n  \n  (voice)
+12                                                                                        Kai \n  \n  \n  (voice)
+13                                                                                       Army \n  \n  \n  (voice)
+14                                              Engineer Sakiyama /  \n            Committe D \n  \n  \n  (voice)
+15                                                                         Harukiya Bartender \n  \n  \n  (voice)
+16 Committee F /  \n            Spy /  \n            Yûji Takeyama /  \n            Terrorist \n  \n  \n  (voice)</code></pre>
 </div>
 <div id="finding-and-scraping-specific-attributes-within-a-webpage" class="section level2">
 <h2>Finding and scraping specific attributes within a webpage</h2>
@@ -642,337 +657,98 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
 <p>We can use <code>html_attr()</code> to identify nested elements within HTML elements.</p>
 <p>This code scrapes the urls from the below webpage, but inclues all possible urls, which is not what we want.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://r4ds.had.co.nz/index.html&quot;</span>
-<span class="kw">node</span>(<span class="st">&quot;a&quot;</span>)</code></pre></div>
-<pre><code>{xml_nodeset (568)}
+<span class="kw">node</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">20</span>)  <span class="co"># return first 20 results</span></code></pre></div>
+<pre><code>{xml_nodeset (20)}
  [1] &lt;a href=&quot;./&quot;&gt;R for Data Science&lt;/a&gt;
  [2] &lt;a href=&quot;index.html&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;Welcome&lt;/a&gt;
- [3] &lt;a href=&quot;introduction.html&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt; Introduction&lt;/a&gt;
- [4] &lt;a href=&quot;introduction.html#what-you-will-learn&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.1&lt;/b&gt; What y ...
- [5] &lt;a href=&quot;introduction.html#how-this-book-is-organised&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.2&lt;/b&gt; ...
- [6] &lt;a href=&quot;introduction.html#what-you-wont-learn&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3&lt;/b&gt; What y ...
- [7] &lt;a href=&quot;introduction.html#big-data&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.1&lt;/b&gt; Big data&lt;/a&gt;
- [8] &lt;a href=&quot;introduction.html#python-julia-and-friends&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.2&lt;/b&gt; ...
- [9] &lt;a href=&quot;introduction.html#non-rectangular-data&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.3&lt;/b&gt; Non ...
-[10] &lt;a href=&quot;introduction.html#hypothesis-confirmation&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.4&lt;/b&gt;  ...
-[11] &lt;a href=&quot;introduction.html#prerequisites&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4&lt;/b&gt; Prerequisite ...
-[12] &lt;a href=&quot;introduction.html#r&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.1&lt;/b&gt; R&lt;/a&gt;
-[13] &lt;a href=&quot;introduction.html#rstudio&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.2&lt;/b&gt; RStudio&lt;/a&gt;
-[14] &lt;a href=&quot;introduction.html#the-tidyverse&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.3&lt;/b&gt; The tidyve ...
-[15] &lt;a href=&quot;introduction.html#other-packages&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.4&lt;/b&gt; Other pac ...
-[16] &lt;a href=&quot;introduction.html#running-r-code&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.5&lt;/b&gt; Running R c ...
-[17] &lt;a href=&quot;introduction.html#getting-help-and-learning-more&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.6 ...
-[18] &lt;a href=&quot;introduction.html#acknowledgements&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.7&lt;/b&gt; Acknowled ...
-[19] &lt;a href=&quot;introduction.html#colophon&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.8&lt;/b&gt; Colophon&lt;/a&gt;
-[20] &lt;a href=&quot;explore-intro.html&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;2&lt;/b&gt; Introduction&lt;/a&gt;
-...</code></pre>
+ [3] &lt;a href=&quot;index.html#acknowledgements&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;Acknowledgements&lt;/a&gt;
+ [4] &lt;a href=&quot;introduction.html&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt; Introduction&lt;/a&gt;
+ [5] &lt;a href=&quot;introduction.html#what-you-will-learn&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.1&lt;/b&gt; What y ...
+ [6] &lt;a href=&quot;introduction.html#how-this-book-is-organised&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.2&lt;/b&gt; ...
+ [7] &lt;a href=&quot;introduction.html#what-you-wont-learn&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3&lt;/b&gt; What y ...
+ [8] &lt;a href=&quot;introduction.html#big-data&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.1&lt;/b&gt; Big data&lt;/a&gt;
+ [9] &lt;a href=&quot;introduction.html#python-julia-and-friends&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.2&lt;/b&gt; ...
+[10] &lt;a href=&quot;introduction.html#non-rectangular-data&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.3&lt;/b&gt; Non ...
+[11] &lt;a href=&quot;introduction.html#hypothesis-confirmation&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.4&lt;/b&gt;  ...
+[12] &lt;a href=&quot;introduction.html#prerequisites&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4&lt;/b&gt; Prerequisite ...
+[13] &lt;a href=&quot;introduction.html#r&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.1&lt;/b&gt; R&lt;/a&gt;
+[14] &lt;a href=&quot;introduction.html#rstudio&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.2&lt;/b&gt; RStudio&lt;/a&gt;
+[15] &lt;a href=&quot;introduction.html#the-tidyverse&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.3&lt;/b&gt; The tidyve ...
+[16] &lt;a href=&quot;introduction.html#other-packages&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.4&lt;/b&gt; Other pac ...
+[17] &lt;a href=&quot;introduction.html#running-r-code&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.5&lt;/b&gt; Running R c ...
+[18] &lt;a href=&quot;introduction.html#getting-help-and-learning-more&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.6 ...
+[19] &lt;a href=&quot;introduction.html#acknowledgements-1&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.7&lt;/b&gt; Acknowl ...
+[20] &lt;a href=&quot;introduction.html#colophon&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.8&lt;/b&gt; Colophon&lt;/a&gt;</code></pre>
 <p>Specifying the main body of the webpage (&quot;section&quot;) solves this, but we still want just the urls. Using <code>html_attr()</code> gives us just the url portion of the HTML link element (<code>&lt;a&gt;</code>)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_attr</span>(<span class="st">&quot;href&quot;</span>)</code></pre></div>
-<pre><code>  [1] &quot;http://amzn.to/2aHLAQ1&quot;                              
-  [2] &quot;http://creativecommons.org/licenses/by-nc-nd/3.0/us/&quot;
-  [3] &quot;http://amzn.to/2aHLAQ1&quot;                              
-  [4] &quot;https://www.doc.govt.nz/kakapo-donate&quot;               
-  [5] &quot;https://www.youtube.com/watch?v=9T1vfsHYiKY&quot;         
-  [6] &quot;https://rmarkdown.rstudio.com&quot;                       
-  [7] &quot;https://bookdown.org&quot;                                
-  [8] &quot;https://github.com/hadley/r4ds&quot;                      
-  [9] &quot;http://travis-ci.org/&quot;                               
- [10] &quot;https://github.com/adidoit&quot;                          
- [11] &quot;https://github.com/agila5&quot;                           
- [12] &quot;https://github.com/ajay-d&quot;                           
- [13] &quot;https://github.com/AlanFeder&quot;                        
- [14] &quot;https://github.com/alonzi&quot;                           
- [15] &quot;https://github.com/ALShum&quot;                           
- [16] &quot;https://github.com/andland&quot;                          
- [17] &quot;https://github.com/andrewmacfarland&quot;                 
- [18] &quot;https://github.com/aviast&quot;                           
- [19] &quot;https://github.com/batpigandme&quot;                      
- [20] &quot;https://github.com/bbrewington&quot;                      
- [21] &quot;https://github.com/behrman&quot;                          
- [22] &quot;https://github.com/benherbertson&quot;                    
- [23] &quot;https://github.com/benmarwick&quot;                       
- [24] &quot;https://github.com/bensteinberg&quot;                     
- [25] &quot;https://github.com/bgreenwell&quot;                       
- [26] &quot;https://github.com/bklamer&quot;                          
- [27] &quot;https://github.com/chrMongeau&quot;                       
- [28] &quot;https://github.com/coopermor&quot;                        
- [29] &quot;https://github.com/csgillespie&quot;                      
- [30] &quot;https://github.com/csrvermaak&quot;                       
- [31] &quot;https://github.com/curious-abhinav&quot;                  
- [32] &quot;https://github.com/curtisalexander&quot;                  
- [33] &quot;https://github.com/cwarden&quot;                          
- [34] &quot;https://github.com/darrkj&quot;                           
- [35] &quot;https://github.com/davidrubinger&quot;                    
- [36] &quot;https://github.com/DDClark&quot;                          
- [37] &quot;https://github.com/derwinmcgeary&quot;                    
- [38] &quot;https://github.com/dgromer&quot;                          
- [39] &quot;https://github.com/djbirke&quot;                          
- [40] &quot;https://github.com/dpastoor&quot;                         
- [41] &quot;https://github.com/duju211&quot;                          
- [42] &quot;https://github.com/dylancashman&quot;                     
- [43] &quot;https://github.com/eddelbuettel&quot;                     
- [44] &quot;https://github.com/EdwinTh&quot;                          
- [45] &quot;https://github.com/elgabbas&quot;                         
- [46] &quot;https://github.com/ericwatt&quot;                         
- [47] &quot;https://github.com/erikerhardt&quot;                      
- [48] &quot;https://github.com/etiennebr&quot;                        
- [49] &quot;https://github.com/evjrob&quot;                           
- [50] &quot;https://github.com/flemingspace&quot;                     
- [51] &quot;https://github.com/florisvdh&quot;                        
- [52] &quot;https://github.com/gadenbuie&quot;                        
- [53] &quot;https://github.com/garrettgman&quot;                      
- [54] &quot;https://github.com/GoldbergData&quot;                     
- [55] &quot;https://github.com/gridgrad&quot;                         
- [56] &quot;https://github.com/gustavdelius&quot;                     
- [57] &quot;https://github.com/hadley&quot;                           
- [58] &quot;https://github.com/hao-trivago&quot;                      
- [59] &quot;https://github.com/harrismcgehee&quot;                    
- [60] &quot;https://github.com/hengnicai&quot;                        
- [61] &quot;https://github.com/iansealy&quot;                         
- [62] &quot;https://github.com/ijlyttle&quot;                         
- [63] &quot;https://github.com/ivan-krukov&quot;                      
- [64] &quot;https://github.com/jacobkap&quot;                         
- [65] &quot;https://github.com/jazzlw&quot;                           
- [66] &quot;https://github.com/jdstorey&quot;                         
- [67] &quot;https://github.com/jeffboichuk&quot;                      
- [68] &quot;https://github.com/jefferis&quot;                         
- [69] &quot;https://github.com/JeldorPKU&quot;                        
- [70] &quot;https://github.com/jennybc&quot;                          
- [71] &quot;https://github.com/jenren&quot;                           
- [72] &quot;https://github.com/jeroenjanssens&quot;                   
- [73] &quot;https://github.com/jimhester&quot;                        
- [74] &quot;https://github.com/jjchern&quot;                          
- [75] &quot;https://github.com/joannejang&quot;                       
- [76] &quot;https://github.com/johnsears&quot;                        
- [77] &quot;https://github.com/jonathanflint&quot;                    
- [78] &quot;https://github.com/jonmcalder&quot;                       
- [79] &quot;https://github.com/jonpage&quot;                          
- [80] &quot;https://github.com/jpetuchovas&quot;                      
- [81] &quot;https://github.com/jroberayalas&quot;                     
- [82] &quot;https://github.com/jules32&quot;                          
- [83] &quot;https://github.com/kaetschap&quot;                        
- [84] &quot;https://github.com/karawoo&quot;                          
- [85] &quot;https://github.com/katrinleinweber&quot;                  
- [86] &quot;https://github.com/kdpsingh&quot;                         
- [87] &quot;https://github.com/khumph&quot;                           
- [88] &quot;https://github.com/kirillseva&quot;                       
- [89] &quot;https://github.com/koalabearski&quot;                     
- [90] &quot;https://github.com/krlmlr&quot;                           
- [91] &quot;https://github.com/landesbergn&quot;                      
- [92] &quot;https://github.com/lindbrook&quot;                        
- [93] &quot;https://github.com/maurolepore&quot;                      
- [94] &quot;https://github.com/mbeveridge&quot;                       
- [95] &quot;https://github.com/mfherman&quot;                         
- [96] &quot;https://github.com/mine-cetinkaya-rundel&quot;            
- [97] &quot;https://github.com/mjhendrickson&quot;                    
- [98] &quot;https://github.com/MJMarshall&quot;                       
- [99] &quot;https://github.com/mustafaascha&quot;                     
-[100] &quot;https://github.com/nareal&quot;                           
-[101] &quot;https://github.com/nate-d-olson&quot;                     
-[102] &quot;https://github.com/nateaff&quot;                          
-[103] &quot;https://github.com/nickclark1000&quot;                    
-[104] &quot;https://github.com/nickelas&quot;                         
-[105] &quot;https://github.com/nirmalpatel&quot;                      
-[106] &quot;https://github.com/nmjakobsen&quot;                       
-[107] &quot;https://github.com/Nowosad&quot;                          
-[108] &quot;https://github.com/peterhurford&quot;                     
-[109] &quot;https://github.com/pkq&quot;                              
-[110] &quot;https://github.com/radugrosu&quot;                        
-[111] &quot;https://github.com/Ranae&quot;                            
-[112] &quot;https://github.com/rgertenbach&quot;                      
-[113] &quot;https://github.com/rlzijdeman&quot;                       
-[114] &quot;https://github.com/Robinlovelace&quot;                    
-[115] &quot;https://github.com/robinsones&quot;                       
-[116] &quot;https://github.com/RohanAlexander&quot;                   
-[117] &quot;https://github.com/RomeroBarata&quot;                     
-[118] &quot;https://github.com/rudeboybert&quot;                      
-[119] &quot;https://github.com/saghirb&quot;                          
-[120] &quot;https://github.com/sauercrowd&quot;                       
-[121] &quot;https://github.com/schuess&quot;                          
-[122] &quot;https://github.com/seamus-mckinsey&quot;                  
-[123] &quot;https://github.com/seanpwilliams&quot;                    
-[124] &quot;https://github.com/seasmith&quot;                         
-[125] &quot;https://github.com/sedaghatfar&quot;                      
-[126] &quot;https://github.com/sekR4&quot;                            
-[127] &quot;https://github.com/sfirke&quot;                           
-[128] &quot;https://github.com/ShanEllis&quot;                        
-[129] &quot;https://github.com/shoili&quot;                           
-[130] &quot;https://github.com/sibusiso16&quot;                       
-[131] &quot;https://github.com/spirgel&quot;                          
-[132] &quot;https://github.com/StevenMMortimer&quot;                  
-[133] &quot;https://github.com/stragu&quot;                           
-[134] &quot;https://github.com/svenski&quot;                          
-[135] &quot;https://github.com/talgalili&quot;                        
-[136] &quot;https://github.com/timwaterhouse&quot;                    
-[137] &quot;https://github.com/tjmahr&quot;                           
-[138] &quot;https://github.com/tklebel&quot;                          
-[139] &quot;https://github.com/tomjamesprior&quot;                    
-[140] &quot;https://github.com/tteo&quot;                             
-[141] &quot;https://github.com/wibeasley&quot;                        
-[142] &quot;https://github.com/yahwes&quot;                           
-[143] &quot;https://github.com/yihui&quot;                            
-[144] &quot;https://github.com/yimingli&quot;                         
-[145] &quot;https://github.com/yutannihilation&quot;                  
-[146] &quot;https://github.com/zeal626&quot;                          
-[147] &quot;https://github.com/zo0z&quot;                             </code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_attr</span>(<span class="st">&quot;href&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">20</span>)  <span class="co"># return first 20 results</span></code></pre></div>
+<pre><code> [1] &quot;http://amzn.to/2aHLAQ1&quot;                                           
+ [2] &quot;http://creativecommons.org/licenses/by-nc-nd/3.0/us/&quot;             
+ [3] &quot;http://amzn.to/2aHLAQ1&quot;                                           
+ [4] &quot;https://www.doc.govt.nz/kakapo-donate&quot;                            
+ [5] &quot;https://www.youtube.com/watch?v=9T1vfsHYiKY&quot;                      
+ [6] &quot;https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html&quot;
+ [7] &quot;https://github.com/adidoit&quot;                                       
+ [8] &quot;https://github.com/agila5&quot;                                        
+ [9] &quot;https://github.com/ajay-d&quot;                                        
+[10] &quot;https://github.com/AlanFeder&quot;                                     
+[11] &quot;https://github.com/alonzi&quot;                                        
+[12] &quot;https://github.com/ALShum&quot;                                        
+[13] &quot;https://github.com/andland&quot;                                       
+[14] &quot;https://github.com/andrewmacfarland&quot;                              
+[15] &quot;https://github.com/aviast&quot;                                        
+[16] &quot;https://github.com/batpigandme&quot;                                   
+[17] &quot;https://github.com/bbrewington&quot;                                   
+[18] &quot;https://github.com/behrman&quot;                                       
+[19] &quot;https://github.com/benherbertson&quot;                                 
+[20] &quot;https://github.com/benmarwick&quot;                                    </code></pre>
 <p>If you wanted just the text associated with the links and not the link themselves, just pull the text instead of using <code>html_attr()</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>()</code></pre></div>
-<pre><code>  [1] &quot;&quot;                                                       
-  [2] &quot;Creative Commons Attribution-NonCommercial-NoDerivs 3.0&quot;
-  [3] &quot;amazon&quot;                                                 
-  [4] &quot;Kākāpō Recovery&quot;                                        
-  [5] &quot;kākāpō&quot;                                                 
-  [6] &quot;RMarkdown&quot;                                              
-  [7] &quot;bookdown&quot;                                               
-  [8] &quot;source&quot;                                                 
-  [9] &quot;travis&quot;                                                 
- [10] &quot;@adidoit&quot;                                               
- [11] &quot;@agila5&quot;                                                
- [12] &quot;@ajay-d&quot;                                                
- [13] &quot;@AlanFeder&quot;                                             
- [14] &quot;@alonzi&quot;                                                
- [15] &quot;@ALShum&quot;                                                
- [16] &quot;@andland&quot;                                               
- [17] &quot;@andrewmacfarland&quot;                                      
- [18] &quot;@aviast&quot;                                                
- [19] &quot;@batpigandme&quot;                                           
- [20] &quot;@bbrewington&quot;                                           
- [21] &quot;@behrman&quot;                                               
- [22] &quot;@benherbertson&quot;                                         
- [23] &quot;@benmarwick&quot;                                            
- [24] &quot;@bensteinberg&quot;                                          
- [25] &quot;@bgreenwell&quot;                                            
- [26] &quot;@bklamer&quot;                                               
- [27] &quot;@chrMongeau&quot;                                            
- [28] &quot;@coopermor&quot;                                             
- [29] &quot;@csgillespie&quot;                                           
- [30] &quot;@csrvermaak&quot;                                            
- [31] &quot;@curious-abhinav&quot;                                       
- [32] &quot;@curtisalexander&quot;                                       
- [33] &quot;@cwarden&quot;                                               
- [34] &quot;@darrkj&quot;                                                
- [35] &quot;@davidrubinger&quot;                                         
- [36] &quot;@DDClark&quot;                                               
- [37] &quot;@derwinmcgeary&quot;                                         
- [38] &quot;@dgromer&quot;                                               
- [39] &quot;@djbirke&quot;                                               
- [40] &quot;@dpastoor&quot;                                              
- [41] &quot;@duju211&quot;                                               
- [42] &quot;@dylancashman&quot;                                          
- [43] &quot;@eddelbuettel&quot;                                          
- [44] &quot;@EdwinTh&quot;                                               
- [45] &quot;@elgabbas&quot;                                              
- [46] &quot;@ericwatt&quot;                                              
- [47] &quot;@erikerhardt&quot;                                           
- [48] &quot;@etiennebr&quot;                                             
- [49] &quot;@evjrob&quot;                                                
- [50] &quot;@flemingspace&quot;                                          
- [51] &quot;@florisvdh&quot;                                             
- [52] &quot;@gadenbuie&quot;                                             
- [53] &quot;@garrettgman&quot;                                           
- [54] &quot;@GoldbergData&quot;                                          
- [55] &quot;@gridgrad&quot;                                              
- [56] &quot;@gustavdelius&quot;                                          
- [57] &quot;@hadley&quot;                                                
- [58] &quot;@hao-trivago&quot;                                           
- [59] &quot;@harrismcgehee&quot;                                         
- [60] &quot;@hengnicai&quot;                                             
- [61] &quot;@iansealy&quot;                                              
- [62] &quot;@ijlyttle&quot;                                              
- [63] &quot;@ivan-krukov&quot;                                           
- [64] &quot;@jacobkap&quot;                                              
- [65] &quot;@jazzlw&quot;                                                
- [66] &quot;@jdstorey&quot;                                              
- [67] &quot;@jeffboichuk&quot;                                           
- [68] &quot;@jefferis&quot;                                              
- [69] &quot;@JeldorPKU&quot;                                             
- [70] &quot;@jennybc&quot;                                               
- [71] &quot;@jenren&quot;                                                
- [72] &quot;@jeroenjanssens&quot;                                        
- [73] &quot;@jimhester&quot;                                             
- [74] &quot;@jjchern&quot;                                               
- [75] &quot;@joannejang&quot;                                            
- [76] &quot;@johnsears&quot;                                             
- [77] &quot;@jonathanflint&quot;                                         
- [78] &quot;@jonmcalder&quot;                                            
- [79] &quot;@jonpage&quot;                                               
- [80] &quot;@jpetuchovas&quot;                                           
- [81] &quot;@jroberayalas&quot;                                          
- [82] &quot;@jules32&quot;                                               
- [83] &quot;@kaetschap&quot;                                             
- [84] &quot;@karawoo&quot;                                               
- [85] &quot;@katrinleinweber&quot;                                       
- [86] &quot;@kdpsingh&quot;                                              
- [87] &quot;@khumph&quot;                                                
- [88] &quot;@kirillseva&quot;                                            
- [89] &quot;@koalabearski&quot;                                          
- [90] &quot;@krlmlr&quot;                                                
- [91] &quot;@landesbergn&quot;                                           
- [92] &quot;@lindbrook&quot;                                             
- [93] &quot;@maurolepore&quot;                                           
- [94] &quot;@mbeveridge&quot;                                            
- [95] &quot;@mfherman&quot;                                              
- [96] &quot;@mine-cetinkaya-rundel&quot;                                 
- [97] &quot;@mjhendrickson&quot;                                         
- [98] &quot;@MJMarshall&quot;                                            
- [99] &quot;@mustafaascha&quot;                                          
-[100] &quot;@nareal&quot;                                                
-[101] &quot;@nate-d-olson&quot;                                          
-[102] &quot;@nateaff&quot;                                               
-[103] &quot;@nickclark1000&quot;                                         
-[104] &quot;@nickelas&quot;                                              
-[105] &quot;@nirmalpatel&quot;                                           
-[106] &quot;@nmjakobsen&quot;                                            
-[107] &quot;@Nowosad&quot;                                               
-[108] &quot;@peterhurford&quot;                                          
-[109] &quot;@pkq&quot;                                                   
-[110] &quot;@radugrosu&quot;                                             
-[111] &quot;@Ranae&quot;                                                 
-[112] &quot;@rgertenbach&quot;                                           
-[113] &quot;@rlzijdeman&quot;                                            
-[114] &quot;@Robinlovelace&quot;                                         
-[115] &quot;@robinsones&quot;                                            
-[116] &quot;@RohanAlexander&quot;                                        
-[117] &quot;@RomeroBarata&quot;                                          
-[118] &quot;@rudeboybert&quot;                                           
-[119] &quot;@saghirb&quot;                                               
-[120] &quot;@sauercrowd&quot;                                            
-[121] &quot;@schuess&quot;                                               
-[122] &quot;@seamus-mckinsey&quot;                                       
-[123] &quot;@seanpwilliams&quot;                                         
-[124] &quot;@seasmith&quot;                                              
-[125] &quot;@sedaghatfar&quot;                                           
-[126] &quot;@sekR4&quot;                                                 
-[127] &quot;@sfirke&quot;                                                
-[128] &quot;@ShanEllis&quot;                                             
-[129] &quot;@shoili&quot;                                                
-[130] &quot;@sibusiso16&quot;                                            
-[131] &quot;@spirgel&quot;                                               
-[132] &quot;@StevenMMortimer&quot;                                       
-[133] &quot;@stragu&quot;                                                
-[134] &quot;@svenski&quot;                                               
-[135] &quot;@talgalili&quot;                                             
-[136] &quot;@timwaterhouse&quot;                                         
-[137] &quot;@tjmahr&quot;                                                
-[138] &quot;@tklebel&quot;                                               
-[139] &quot;@tomjamesprior&quot;                                         
-[140] &quot;@tteo&quot;                                                  
-[141] &quot;@wibeasley&quot;                                             
-[142] &quot;@yahwes&quot;                                                
-[143] &quot;@yihui&quot;                                                 
-[144] &quot;@yimingli&quot;                                              
-[145] &quot;@yutannihilation&quot;                                       
-[146] &quot;@zeal626&quot;                                               
-[147] &quot;@zo0z&quot;                                                  </code></pre>
-<p>Pulling and plotting images straight from a webpage</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">20</span>)  <span class="co"># return first 20 results</span></code></pre></div>
+<pre><code> [1] &quot;&quot;                                                       
+ [2] &quot;Creative Commons Attribution-NonCommercial-NoDerivs 3.0&quot;
+ [3] &quot;amazon&quot;                                                 
+ [4] &quot;Kākāpō Recovery&quot;                                        
+ [5] &quot;kākāpō&quot;                                                 
+ [6] &quot;Contributor Code of Conduct&quot;                            
+ [7] &quot;@adidoit&quot;                                               
+ [8] &quot;@agila5&quot;                                                
+ [9] &quot;@ajay-d&quot;                                                
+[10] &quot;@AlanFeder&quot;                                             
+[11] &quot;@alonzi&quot;                                                
+[12] &quot;@ALShum&quot;                                                
+[13] &quot;@andland&quot;                                               
+[14] &quot;@andrewmacfarland&quot;                                      
+[15] &quot;@aviast&quot;                                                
+[16] &quot;@batpigandme&quot;                                           
+[17] &quot;@bbrewington&quot;                                           
+[18] &quot;@behrman&quot;                                               
+[19] &quot;@benherbertson&quot;                                         
+[20] &quot;@benmarwick&quot;                                            </code></pre>
+<p>To pull a value/term from a webscraped vector, you can use <code>extract2()</code> from the <code>magrittr</code> package to specify the position in the vector</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(magrittr)
+<span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">extract2</span>(<span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># get the 3rd scraped term</span>
+<span class="st">  </span><span class="kw">html_text</span>()  </code></pre></div>
+<pre><code>[1] &quot;amazon&quot;</code></pre>
+<p>Alternatively, you can index the term</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>.[[<span class="dv">3</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># get the 3rd scraped term</span>
+<span class="st">  </span><span class="kw">html_text</span>() </code></pre></div>
+<pre><code>[1] &quot;amazon&quot;</code></pre>
+</div>
+<div id="plotting-images-directly-from-webpages" class="section level2">
+<h2>Plotting images directly from webpages</h2>
+<p>Use <code>image_read()</code> from the <code>magick</code> package to plot images directly after scraping from a webpage</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(magick)
 <span class="kw">node</span>(<span class="st">&quot;img&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_attr</span>(<span class="st">&quot;src&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">image_read</span>()</code></pre></div>
-<p><img src="Lesson10_files/figure-html/unnamed-chunk-10-1.png" width="250" /></p>
+<p><img src="Lesson10_files/figure-html/unnamed-chunk-12-1.png" width="250" /></p>
 </div>
 <div id="challenge" class="section level2">
 <h2>Challenge</h2>
 <p>Find and scrape in the image from the below url and plot it, all without leaving <code>R</code> or saving the img to your drive.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://www.imdb.com/title/tt8515016/&quot;</span></code></pre></div>
-<p><img src="Lesson10_files/figure-html/unnamed-chunk-12-1.png" width="91" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://www.imdb.com/title/tt0094625/?ref_=fn_al_tt_1&quot;</span></code></pre></div>
+<p><img src="Lesson10_files/figure-html/unnamed-chunk-14-1.png" width="91" /></p>
 </div>
 </div>
 

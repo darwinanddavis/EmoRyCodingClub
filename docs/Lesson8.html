@@ -24,7 +24,7 @@
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
-<script src="site_libs/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
 <link href="site_libs/str_view-0.1.0/str_view.css" rel="stylesheet" />
 <script src="site_libs/str_view-binding-1.4.0/str_view.js"></script>
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
@@ -512,7 +512,7 @@ txt &lt;-<span class="st"> </span>url <span class="op">%&gt;%</span><span class=
 txt <span class="op">%&gt;%</span><span class="st"> </span>str</code></pre></div>
 <pre><code> chr &quot;14 Strings | R for Data Science\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push&quot;| __truncated__</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_length</span>()  <span class="co"># get length of vector  </span></code></pre></div>
-<pre><code>[1] 60134</code></pre>
+<pre><code>[1] 60289</code></pre>
 </div>
 <div id="detecting-strings" class="section level1">
 <h1>Detecting strings</h1>
@@ -524,42 +524,42 @@ txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_
 <pre><code>[1] 1</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_locate</span>(pat)  <span class="co"># show character positions of the first instance of pattern </span></code></pre></div>
 <pre><code>     start  end
-[1,]  6634 6640</code></pre>
+[1,]  6730 6736</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_locate_all</span>(pat)  <span class="co"># show all positions   </span></code></pre></div>
 <pre><code>[[1]]
       start   end
- [1,]  6634  6640
- [2,]  6660  6666
- [3,]  7456  7462
- [4,] 12336 12342
- [5,] 12504 12510
- [6,] 12628 12634
- [7,] 12976 12982
- [8,] 14174 14180
- [9,] 14310 14316
-[10,] 14511 14517
-[11,] 15020 15026
-[12,] 15051 15057
-[13,] 15999 16005
-[14,] 16121 16127
-[15,] 16651 16657
-[16,] 17670 17676
-[17,] 18932 18938
-[18,] 19486 19492
-[19,] 20152 20158
-[20,] 20307 20313
-[21,] 20391 20397
-[22,] 21368 21374
-[23,] 21470 21476
-[24,] 30661 30667
-[25,] 40026 40032
-[26,] 48077 48083
-[27,] 49282 49288
-[28,] 51298 51304
-[29,] 55766 55772
-[30,] 57345 57351
-[31,] 59152 59158
-[32,] 59506 59512</code></pre>
+ [1,]  6730  6736
+ [2,]  6756  6762
+ [3,]  7552  7558
+ [4,] 12432 12438
+ [5,] 12600 12606
+ [6,] 12724 12730
+ [7,] 13072 13078
+ [8,] 14270 14276
+ [9,] 14406 14412
+[10,] 14607 14613
+[11,] 15116 15122
+[12,] 15147 15153
+[13,] 16095 16101
+[14,] 16217 16223
+[15,] 16747 16753
+[16,] 17766 17772
+[17,] 19028 19034
+[18,] 19582 19588
+[19,] 20248 20254
+[20,] 20403 20409
+[21,] 20487 20493
+[22,] 21464 21470
+[23,] 21566 21572
+[24,] 30757 30763
+[25,] 40126 40132
+[26,] 48181 48187
+[27,] 49386 49392
+[28,] 51402 51408
+[29,] 55921 55927
+[30,] 57500 57506
+[31,] 59307 59313
+[32,] 59661 59667</code></pre>
 </div>
 <div id="subsetting-strings" class="section level1">
 <h1>Subsetting strings</h1>
@@ -571,7 +571,7 @@ txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_
 <p>Shorten text with ellipsis to nth character</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt_short &lt;-<span class="st"> </span>txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_trunc</span>(<span class="dv">2000</span>)  <span class="co"># munst be greater than 3 as this is the length of the ellipsis</span>
 txt_short</code></pre></div>
-<pre><code>[1] &quot;14 Strings | R for Data Science\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag(&#39;js&#39;, new Date());\n\n  gtag(&#39;config&#39;, &#39;UA-115082821-1&#39;);\n\na.sourceLine { display: inline-block; line-height: 1.25; }\na.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }\na.sourceLine:empty { height: 1.2em; position: absolute; }\n.sourceCode { overflow: visible; }\ncode.sourceCode { white-space: pre; position: relative; }\npre.sourceCode { margin: 0; }\n@media screen {\ndiv.sourceCode { overflow: auto; }\n}\n@media print {\ncode.sourceCode { white-space: pre-wrap; }\na.sourceLine { text-indent: -1em; padding-left: 1em; }\n}\npre.numberSource a.sourceLine\n  { position: relative; }\npre.numberSource a.sourceLine:empty\n  { position: absolute; }\npre.numberSource a.sourceLine::before\n  { content: attr(data-line-number);\n    position: absolute; left: -5em; text-align: right; vertical-align: baseline;\n    border: none; pointer-events: all;\n    -webkit-touch-callout: none; -webkit-user-select: none;\n    -khtml-user-select: none; -moz-user-select: none;\n    -ms-user-select: none; user-select: none;\n    padding: 0 4px; width: 4em;\n    color: #aaaaaa;\n  }\npre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }\ndiv.sourceCode\n  {  }\n@media screen {\na.sourceLine::before { text-decoration: underline; }\n}\ncode span.al { color: #ff0000; font-weight: bold; } /* Alert */\ncode span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */\ncode span.at { color: #7d9029; } /* Attribute */\ncode span.bn { color: #40a070; } /* BaseN */\ncode span.bu { } /* BuiltIn */\ncode span.cf { color: #007020; font-weight: bold; } /* ControlFlow */\ncode span.ch { color: #4070a0; } /* Char */\ncode span.cn { color: #880000; } /* Constant */\ncode span.co { color: #60a0b0; font-style: italic; } /* Comment */\ncode span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */\ncode span.do...&quot;</code></pre>
+<pre><code>[1] &quot;14 Strings | R for Data Science\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag(&#39;js&#39;, new Date());\n\n  gtag(&#39;config&#39;, &#39;UA-115082821-1&#39;);\n\ncode.sourceCode &gt; span { display: inline-block; line-height: 1.25; }\ncode.sourceCode &gt; span { color: inherit; text-decoration: inherit; }\ncode.sourceCode &gt; span:empty { height: 1.2em; }\n.sourceCode { overflow: visible; }\ncode.sourceCode { white-space: pre; position: relative; }\npre.sourceCode { margin: 0; }\n@media screen {\ndiv.sourceCode { overflow: auto; }\n}\n@media print {\ncode.sourceCode { white-space: pre-wrap; }\ncode.sourceCode &gt; span { text-indent: -5em; padding-left: 5em; }\n}\npre.numberSource code\n  { counter-reset: source-line 0; }\npre.numberSource code &gt; span\n  { position: relative; left: -4em; counter-increment: source-line; }\npre.numberSource code &gt; span &gt; a:first-child::before\n  { content: counter(source-line);\n    position: relative; left: -1em; text-align: right; vertical-align: baseline;\n    border: none; display: inline-block;\n    -webkit-touch-callout: none; -webkit-user-select: none;\n    -khtml-user-select: none; -moz-user-select: none;\n    -ms-user-select: none; user-select: none;\n    padding: 0 4px; width: 4em;\n    color: #aaaaaa;\n  }\npre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }\ndiv.sourceCode\n  {   }\n@media screen {\ncode.sourceCode &gt; span &gt; a:first-child::before { text-decoration: underline; }\n}\ncode span.al { color: #ff0000; font-weight: bold; } /* Alert */\ncode span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */\ncode span.at { color: #7d9029; } /* Attribute */\ncode span.bn { color: #40a070; } /* BaseN */\ncode span.bu { } /* BuiltIn */\ncode span.cf { color: #007020; font-weight: bold; } /* ControlFlow */\ncode span.ch { color: #4070a0; } /* Char */\ncode span.cn { color: #880000; } /* Constant */\ncode span.co { color: #60a0b0; font-style: italic; } /* Comment */\ncode span.cv { color: ...&quot;</code></pre>
 <p>Return string as char vector containing pattern</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_subset</span>(pat)</code></pre></div>
 <p>Extract string patterns as characters</p>
@@ -624,8 +624,8 @@ txt_short</code></pre></div>
 <p>View an HTML rendering of the text using <code>str_view()</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># visualise the first 1000 characters</span>
 txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_sub</span>(<span class="dv">1</span>, <span class="dv">1000</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_view</span>(<span class="st">&quot; &quot;</span>)</code></pre></div>
-<p><div id="htmlwidget-bee7bf231e20aa0c9d0c" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-bee7bf231e20aa0c9d0c">{"x":{"html":"<ul>\n  <li>14<span class='match'> <\/span>Strings | R for Data Science\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-115082821-1');\n\na.sourceLine { display: inline-block; line-height: 1.25; }\na.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }\na.sourceLine:empty { height: 1.2em; position: absolute; }\n.sourceCode { overflow: visible; }\ncode.sourceCode { white-space: pre; position: relative; }\npre.sourceCode { margin: 0; }\n@media screen {\ndiv.sourceCode { overflow: auto; }\n}\n@media print {\ncode.sourceCode { white-space: pre-wrap; }\na.sourceLine { text-indent: -1em; padding-left: 1em; }\n}\npre.numberSource a.sourceLine\n  { position: relative; }\npre.numberSource a.sourceLine:empty\n  { position: absolute; }\npre.numberSource a.sourceLine::before\n  { content: attr(data-line-number);\n    position: absolute; left: -5em; text-align: right; vertical-align: baseline;\n    border: none; pointer-events: all;\n    -webkit<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>  </p>
+<p><div id="htmlwidget-f50fe88b63e49552daaf" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f50fe88b63e49552daaf">{"x":{"html":"<ul>\n  <li>14<span class='match'> <\/span>Strings | R for Data Science\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n\n  gtag('config', 'UA-115082821-1');\n\ncode.sourceCode > span { display: inline-block; line-height: 1.25; }\ncode.sourceCode > span { color: inherit; text-decoration: inherit; }\ncode.sourceCode > span:empty { height: 1.2em; }\n.sourceCode { overflow: visible; }\ncode.sourceCode { white-space: pre; position: relative; }\npre.sourceCode { margin: 0; }\n@media screen {\ndiv.sourceCode { overflow: auto; }\n}\n@media print {\ncode.sourceCode { white-space: pre-wrap; }\ncode.sourceCode > span { text-indent: -5em; padding-left: 5em; }\n}\npre.numberSource code\n  { counter-reset: source-line 0; }\npre.numberSource code > span\n  { position: relative; left: -4em; counter-increment: source-line; }\npre.numberSource code > span > a:first-child::before\n  { content: counter(source-line);\n    position: relative; left: -1em; text-align: right; vertical-align: baseline;\n<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>  </p>
 <p>Split the text into separate components and apply the <code>str_sub</code> function to each new component</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># split into matrix at every instance of pattern</span>
 txt_split &lt;-<span class="st"> </span>txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_split_fixed</span>(pat, <span class="dt">n =</span> <span class="ot">Inf</span>)

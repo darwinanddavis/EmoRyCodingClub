@@ -1,26 +1,4 @@
 
-img
-index.Rmd
-lookhere
-nyc_compact.csv
-packages_lesson1.txt
-packages_lesson2.txt
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ open _site.yml 
-[K6300L-127771-M:ecc malishev$ git add .
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git remote -v
-origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
-origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push ..[K[K[K[K[K[K[Kcommit -m ''i'n'd'e'x' 'f' [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ce''b'
-[master 608658e] index feb
- 11 files changed, 2830 insertions(+), 704 deletions(-)
- rewrite .Rproj.user/ABE7B653/console06/INDEX001 (93%)
- delete mode 100644 Lesson4.html
- create mode 100644 docs/site_libs/leaflet-binding-2.0.3/leaflet.js
-]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push oro[Kigin master
-Counting objects: 19, done.
-Delta compression using up to 4 threads.
-Compressing objects:   5% (1/17)   Compressing objects:  11% (2/17)   Compressing objects:  17% (3/17)   Compressing objects:  23% (4/17)   Compressing objects:  29% (5/17)   Compressing objects:  35% (6/17)   Compressing objects:  41% (7/17)   Compressing objects:  47% (8/17)   Compressing objects:  52% (9/17)   Compressing objects:  58% (10/17)   Compressing objects:  64% (11/17)   Compressing objects:  70% (12/17)   Compressing objects:  76% (13/17)   Compressing objects:  82% (14/17)   Compressing objects:  88% (15/17)   Compressing objects:  94% (16/17)   Compressing objects: 100% (17/17)   Compressing objects: 100% (17/17), done.
-Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  15% (3/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  47% (9/19)   Writing objects:  52% (10/19)   Writing objects:  57% (11/19)   Writing objects:  63% (12/19)   Writing objects:  68% (13/19)   Writing objects:  73% (14/19)   Writing objects:  78% (15/19)   Writing objects:  84% (16/19)   Writing objects:  89% (17/19)   Writing objects:  94% (18/19)   Writing objects: 100% (19/19)   Writing objects: 100% (19/19), 31.54 KiB | 0 bytes/s, done.
 Total 19 (delta 12), reused 0 (delta 0)
 remote: Resolving deltas:   0% (0/12)[Kremote: Resolving deltas:   8% (1/12)[Kremote: Resolving deltas:  16% (2/12)[Kremote: Resolving deltas:  25% (3/12)[Kremote: Resolving deltas:  33% (4/12)[Kremote: Resolving deltas:  41% (5/12)[Kremote: Resolving deltas:  50% (6/12)[Kremote: Resolving deltas:  58% (7/12)[Kremote: Resolving deltas:  66% (8/12)[Kremote: Resolving deltas:  75% (9/12)[Kremote: Resolving deltas:  83% (10/12)[Kremote: Resolving deltas:  91% (11/12)[Kremote: Resolving deltas: 100% (12/12)[Kremote: Resolving deltas: 100% (12/12), completed with 12 local objects.[K
 To https://github.com/darwinanddavis/EmoRyCodingClub
@@ -1001,6 +979,27 @@ To https://github.com/darwinanddavis/EmoRyCodingClub
    1b9c61b..c421474  master -> master
 [K6300L-127771-M:ecc malishev$ open si[K[K_site.ymml 
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git [K[K[K[Kgit remote - -v[Kv
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commit - m ''l'9'
+[master 565344b] l9
+ 38 files changed, 476 insertions(+), 432 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (71%)
+ rewrite docs/Lesson9_files/figure-html/unnamed-chunk-17-1.png (95%)
+ delete mode 100644 docs/site_libs/highlightjs-9.12.0/default.css
+ delete mode 100644 docs/site_libs/highlightjs-9.12.0/highlight.js
+ delete mode 100644 docs/site_libs/highlightjs-9.12.0/textmate.css
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git push ori gin master
+Counting objects: 50, done.
+Delta compression using up to 4 threads.
+Compressing objects:   2% (1/45)   Compressing objects:   4% (2/45)   Compressing objects:   6% (3/45)   Compressing objects:   8% (4/45)   Compressing objects:  11% (5/45)   Compressing objects:  13% (6/45)   Compressing objects:  15% (7/45)   Compressing objects:  17% (8/45)   Compressing objects:  20% (9/45)   Compressing objects:  22% (10/45)   Compressing objects:  24% (11/45)   Compressing objects:  26% (12/45)   Compressing objects:  28% (13/45)   Compressing objects:  31% (14/45)   Compressing objects:  33% (15/45)   Compressing objects:  35% (16/45)   Compressing objects:  37% (17/45)   Compressing objects:  40% (18/45)   Compressing objects:  42% (19/45)   Compressing objects:  44% (20/45)   Compressing objects:  46% (21/45)   Compressing objects:  48% (22/45)   Compressing objects:  51% (23/45)   Compressing objects:  53% (24/45)   Compressing objects:  55% (25/45)   Compressing objects:  57% (26/45)   Compressing objects:  60% (27/45)   Compressing objects:  62% (28/45)   Compressing objects:  64% (29/45)   Compressing objects:  66% (30/45)   Compressing objects:  68% (31/45)   Compressing objects:  71% (32/45)   Compressing objects:  73% (33/45)   Compressing objects:  75% (34/45)   Compressing objects:  77% (35/45)   Compressing objects:  80% (36/45)   Compressing objects:  82% (37/45)   Compressing objects:  84% (38/45)   Compressing objects:  86% (39/45)   Compressing objects:  88% (40/45)   Compressing objects:  91% (41/45)   Compressing objects:  93% (42/45)   Compressing objects:  95% (43/45)   Compressing objects:  97% (44/45)   Compressing objects: 100% (45/45)   Compressing objects: 100% (45/45), done.
+Writing objects:   2% (1/50)   Writing objects:   4% (2/50)   Writing objects:   6% (3/50)   Writing objects:   8% (4/50)   Writing objects:  10% (5/50)   Writing objects:  12% (6/50)   Writing objects:  14% (7/50)   Writing objects:  16% (8/50)   Writing objects:  18% (9/50)   Writing objects:  20% (10/50)   Writing objects:  22% (11/50)   Writing objects:  24% (12/50)   Writing objects:  26% (13/50)   Writing objects:  28% (14/50)   Writing objects:  30% (15/50)   Writing objects:  32% (16/50)   Writing objects:  34% (17/50)   Writing objects:  36% (18/50)   Writing objects:  38% (19/50)   Writing objects:  40% (20/50)   Writing objects:  42% (21/50)   Writing objects:  44% (22/50)   Writing objects:  46% (23/50)   Writing objects:  48% (24/50)   Writing objects:  50% (25/50)   Writing objects:  52% (26/50)   Writing objects:  54% (27/50)   Writing objects:  56% (28/50)   Writing objects:  58% (29/50)   Writing objects:  60% (30/50)   Writing objects:  62% (31/50)   Writing objects:  64% (32/50)   Writing objects:  66% (33/50)   Writing objects:  68% (34/50)   Writing objects:  70% (35/50)   Writing objects:  72% (36/50)   Writing objects:  74% (37/50)   Writing objects:  76% (38/50)   Writing objects:  78% (39/50)   Writing objects:  80% (40/50)   Writing objects:  82% (41/50)   Writing objects:  84% (42/50)   Writing objects:  86% (43/50)   Writing objects:  88% (44/50)   Writing objects:  90% (45/50)   Writing objects:  92% (46/50)   Writing objects:  94% (47/50)   Writing objects:  96% (48/50)   Writing objects:  98% (49/50)   Writing objects: 100% (50/50)   Writing objects: 100% (50/50), 282.20 KiB | 0 bytes/s, done.
+Total 50 (delta 35), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/35)[Kremote: Resolving deltas:   2% (1/35)[Kremote: Resolving deltas:   5% (2/35)[Kremote: Resolving deltas:   8% (3/35)[Kremote: Resolving deltas:  11% (4/35)[Kremote: Resolving deltas:  14% (5/35)[Kremote: Resolving deltas:  17% (6/35)[Kremote: Resolving deltas:  20% (7/35)[Kremote: Resolving deltas:  22% (8/35)[Kremote: Resolving deltas:  25% (9/35)[Kremote: Resolving deltas:  28% (10/35)[Kremote: Resolving deltas:  31% (11/35)[Kremote: Resolving deltas:  34% (12/35)[Kremote: Resolving deltas:  37% (13/35)[Kremote: Resolving deltas:  40% (14/35)[Kremote: Resolving deltas:  42% (15/35)[Kremote: Resolving deltas:  45% (16/35)[Kremote: Resolving deltas:  48% (17/35)[Kremote: Resolving deltas:  51% (18/35)[Kremote: Resolving deltas:  54% (19/35)[Kremote: Resolving deltas:  57% (20/35)[Kremote: Resolving deltas:  60% (21/35)[Kremote: Resolving deltas:  62% (22/35)[Kremote: Resolving deltas:  65% (23/35)[Kremote: Resolving deltas:  68% (24/35)[Kremote: Resolving deltas:  71% (25/35)[Kremote: Resolving deltas:  74% (26/35)[Kremote: Resolving deltas:  77% (27/35)[Kremote: Resolving deltas:  80% (28/35)[Kremote: Resolving deltas:  82% (29/35)[Kremote: Resolving deltas:  85% (30/35)[Kremote: Resolving deltas:  88% (31/35)[Kremote: Resolving deltas:  91% (32/35)[Kremote: Resolving deltas:  94% (33/35)[Kremote: Resolving deltas:  97% (34/35)[Kremote: Resolving deltas: 100% (35/35)[Kremote: Resolving deltas: 100% (35/35), completed with 35 local objects.[K
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   c421474..565344b  master -> master
+git remote --v [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kv
 origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
 origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
 ]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git add .
