@@ -499,8 +499,9 @@ div.tocify {
 </div>
 <div id="reading-webpage-data-html" class="section level1">
 <h1>Reading webpage data (HTML)</h1>
-<p>Rather than pulling the entire webpage text, specify HTML elements (nodes), such as headings, tables, images to scrape.</p>
-<p>Use <code>html_node</code> to get only the first HTML node and <code>html_nodes</code> to pull all elements. This is useful when you want to get just the first element you're after or all text or data within a table, for example.</p>
+<p>Reading webpage data can save a ton of time and space by avoiding the need to download the data to your drive and read it into <code>R</code> manually.</p>
+<p>Rather than pulling the entire webpage, specify HTML elements (nodes), such as headings, tables, images to scrape.</p>
+<p>Use <code>html_node</code> to get only the first HTML node and <code>html_nodes</code> to pull all elements. This is useful when you want to grab just the first element or all data associated with that node, e.g. within a table.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(rvest)
 <span class="kw">require</span>(xml2)
 
@@ -749,7 +750,7 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
 </div>
 <div id="challenge" class="section level2">
 <h2>Challenge</h2>
-<p>Find and scrape in the image from the below url and plot it, all without leaving <code>R</code> or saving the img to your drive.</p>
+<p>Find and scrape the image from the below url and plot it, all without leaving <code>R</code> or saving the img to your drive.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://www.imdb.com/title/tt0094625/?ref_=fn_al_tt_1&quot;</span></code></pre></div>
 <p><img src="Lesson10_files/figure-html/unnamed-chunk-14-1.png" width="91" /></p>
 </div>
