@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<script src="site_libs/navigation-1.1/sourceembed.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+pre, code { background-color: #f8f8f8; }
+code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code > span.dt { color: #204a87; } /* DataType */
+code > span.dv { color: #0000cf; } /* DecVal */
+code > span.bn { color: #0000cf; } /* BaseN */
+code > span.fl { color: #0000cf; } /* Float */
+code > span.ch { color: #4e9a06; } /* Char */
+code > span.st { color: #4e9a06; } /* String */
+code > span.co { color: #8f5902; font-style: italic; } /* Comment */
+code > span.ot { color: #8f5902; } /* Other */
+code > span.al { color: #ef2929; } /* Alert */
+code > span.fu { color: #000000; } /* Function */
+code > span.er { color: #a40000; font-weight: bold; } /* Error */
+code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #000000; } /* Constant */
+code > span.sc { color: #000000; } /* SpecialChar */
+code > span.vs { color: #4e9a06; } /* VerbatimString */
+code > span.ss { color: #4e9a06; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #000000; } /* Variable */
+code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code > span.ex { } /* Extension */
+code > span.at { color: #c4a000; } /* Attribute */
+code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+
+.sourceCode .row {
+  width: 100%;
+}
+.sourceCode {
+  overflow-x: auto;
+}
+.code-folding-btn {
+  margin-right: -30px;
+}
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    for (var j = 0; j < rules.length; j++) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+#rmd-source-code {
+  display: none;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 54px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h2 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h3 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h4 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h5 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.section h6 {
+  padding-top: 59px;
+  margin-top: -59px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">EmoRy Coding Club</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="Lesson1.html">Lesson 1</a>
+</li>
+<li>
+  <a href="Lesson2.html">Lesson 2</a>
+</li>
+<li>
+  <a href="Lesson3.html">Lesson 3</a>
+</li>
+<li>
+  <a href="Lesson4.html">Lesson 4</a>
+</li>
+<li>
+  <a href="Lesson5.html">Lesson 5</a>
+</li>
+<li>
+  <a href="Lesson6.html">Lesson 6</a>
+</li>
+<li>
+  <a href="Lesson7.html">Lesson 7</a>
+</li>
+<li>
+  <a href="Lesson8.html">Lesson 8</a>
+</li>
+<li>
+  <a href="Lesson9.html">Lesson 9</a>
+</li>
+<li>
+  <a href="Lesson10.html">Lesson 10</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://github.com/darwinanddavis/EmoRyCodingClub">
+    <span class="fa fa-github"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+<li role="separator" class="divider"></li>
+<li><a id="rmd-download-source" href="#">Download Rmd</a></li>
+</ul>
+</div>
+
+
+
+
+</div>
+
+
+<p><br />
+<!-- install packages --></p>
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- start body -->
+<div id="lesson-1-intro-to-plotting-data-in-r-with-ggplot" class="section level1">
+<h1>Lesson 1: Intro to plotting data in R with <code>ggplot</code></h1>
+<p> </p>
+<p>Functions for Lesson 1<br />
+<code>?</code>, <code>str</code>, <code>glimpse</code>, <code>summary</code>, <code>table</code>, <code>min</code>, <code>max</code>, <code>ggplot</code>, <code>geom_point</code>, <code>geom_smooth</code>, <code>theme_minimal</code>, <code>theme_classic</code>, <code>theme_tufte</code><br />
+ </p>
+<p>Packages for Lesson 1<br />
+<code>tidyverse</code>, <code>ggplot2</code>, <code>dplyr</code><br />
+ </p>
+</div>
+<div id="agenda" class="section level1">
+<h1>Agenda</h1>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html">Data visualisation in <code>R</code> for Data Science, Section 3.1.1</a>.</p>
+<!--  end yaml template------------------------------------------------------- -->
+<ul>
+<li>Intro to the <code>R</code>environment (IDE)<br />
+</li>
+<li>Loading packages, e.g. <code>tidyverse</code><br />
+</li>
+<li>Using built-in <code>R</code> data: the <code>mpg</code> dataset<br />
+</li>
+<li>Using ggplot with the built-in data set (to make scatterplots)<br />
+</li>
+<li>Modifying plot aesthetics<br />
+</li>
+<li>Reading in outside data: Airbnb data<br />
+</li>
+<li>Plotting Airbnb data with ggplot</li>
+</ul>
+<p> </p>
+</div>
+<div id="intro-to-the-r-environment-ide" class="section level1">
+<h1>Intro to the <code>R</code> environment (IDE)</h1>
+<p>The <code>RStudio</code> integrated development environment (IDE) and what you can do with it.<br />
+ </p>
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+<p><img src="img/rstudio1.jpg" style=width:100%></p>
+</div>
+<!-- ----------------------- image --------------------------- -->
+<p> </p>
+<p>A more complete example of what you can acheive with the interface.<br />
+ </p>
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+<p><img src="img/rstudio2.jpg" style=width:100%></p>
+</div>
+<!-- ----------------------- image --------------------------- -->
+<p> </p>
+</div>
+<div id="loading-packages-e.g.-tidyverse" class="section level1">
+<h1>Loading packages, e.g. <code>tidyverse</code></h1>
+<p>How to load packages in <code>R</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)  <span class="co"># install package</span>
+<span class="kw">library</span>(tidyverse)  <span class="co"># load the package library</span>
+<span class="kw">require</span>(tidyverse)  <span class="co"># same as library    </span>
+
+<span class="co"># We are typing in an R Script. Things with # in front make them comments and notes to ourselves</span>
+<span class="co"># Command Return to execute the line/ &#39;run the code&#39;</span></code></pre></div>
+<p> </p>
+</div>
+<div id="using-built-in-r-data-the-mpg-dataset" class="section level1">
+<h1>Using built-in <code>R</code> data: the <code>mpg</code> dataset</h1>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#the-mpg-data-frame">Section 3.2.1</a></p>
+<p>We'll use a built-in tidyverse dataset called <code>mpg</code> with data about cars and gas-mileage.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mpg
+<span class="co"># run help page with &#39;?&#39;</span>
+<span class="st">`</span><span class="dt">?</span><span class="st">`</span>(mpg)</code></pre></div>
+<ul>
+<li>This is a tibble (data frame) that we've &quot;printed&quot; out. It's like R's version of an excel spreadsheet, but much better.</li>
+<li>A tibble will show us the first 10 rows, rows containing the data, column names, and the class of data within each column, such as numeric, integer, or character.</li>
+</ul>
+<div id="summarising-data" class="section level2">
+<h2>Summarising data</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(mpg)  <span class="co"># structure of data</span>
+<span class="kw">glimpse</span>(mpg)  <span class="co"># preview of data </span>
+<span class="kw">summary</span>(mpg)  <span class="co"># basic summary stats  </span>
+<span class="kw">table</span>(mpg<span class="op">$</span>manufacturer)  <span class="co"># counts of each column</span>
+<span class="kw">head</span>(mpg)  <span class="co"># visualise first 6 rows of data</span>
+<span class="kw">tail</span>(mpg, <span class="dv">10</span>)  <span class="co"># visualise last 10 (or N) rows of data </span>
+<span class="kw">names</span>(mpg)  <span class="co"># get column names</span>
+<span class="kw">class</span>(mpg)  <span class="co"># class of data frame</span>
+<span class="kw">class</span>(mpg<span class="op">$</span>manufacturer)  <span class="co"># class of data column</span>
+mpg<span class="op">$</span>displ  <span class="co"># print a column</span>
+mpg<span class="op">$</span>hwy  <span class="co"># print a column</span></code></pre></div>
+<p> </p>
+</div>
+</div>
+<div id="creating-a-plot-with-ggplot" class="section level1">
+<h1>Creating a plot with <code>ggplot</code></h1>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#creating-a-ggplot">Section 3.2.2</a></p>
+<ul>
+<li><code>ggplot()</code> Creates a coordinate system for us--basically an empty graph.<br />
+</li>
+<li><code>geom_point()</code> Adds a &quot;layer&quot;, e.g. geom_point (but there are many for different kinds of graphs).</li>
+</ul>
+<p>Plot two of the data columns</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy))</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-4-1.png" width="672" />  </p>
+<p>Changing the data column inputs for the <strong>x</strong> and <strong>y</strong> axis of the plot</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> mpg) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> class, <span class="dt">y =</span> drv))</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-5-1.png" width="672" />  </p>
+<p>Assign data to variables to create dynamic inputs</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_data &lt;-<span class="st"> </span>mpg  <span class="co"># create own variable using a name of your choice  </span>
+
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy))</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-6-1.png" width="672" />  </p>
+<div id="themes" class="section level2">
+<h2>Themes</h2>
+<p>Change plot style. Link for more <a href="https://www.datanovia.com/en/blog/ggplot-themes-gallery/">ggplot themes</a>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(ggthemes)
+
+<span class="co"># classic theme</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_minimal</span>()</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># minimal theme</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_tufte</span>()</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-7-2.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># assign theme to variable</span>
+my_theme &lt;-<span class="st"> </span><span class="kw">theme_classic</span>()
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) <span class="op">+</span><span class="st"> </span>my_theme  <span class="co"># apply your chosen theme  </span></code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-7-3.png" width="672" />  </p>
+</div>
+</div>
+<div id="aesthetic-mapping" class="section level1">
+<h1>Aesthetic mapping</h1>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#aesthetic-mappings">Section 3.3</a></p>
+<p><code>colour</code>. Change the colour of the data points. <code>size</code>. Change the size of the data points.<br />
+<code>alpha</code>. Change the transparency of the data points.</p>
+<div id="colour" class="section level2">
+<h2>Colour</h2>
+<p>Colour by colour name.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">colour =</span> <span class="st">&quot;light blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-8-1.png" width="672" />  </p>
+<p>Colour by a <a href="https://htmlcolorcodes.com/color-picker/">hex code</a> in quotes.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">colour =</span> <span class="st">&quot;#BB5C42&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-9-1.png" width="672" />  </p>
+<p>colour by data column</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">colour =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-10-1.png" width="672" />  </p>
+<p>Inside versus outside the <code>aes</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">colour =</span> <span class="st">&quot;blue&quot;</span>)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-11-1.png" width="672" />  </p>
+</div>
+<div id="size" class="section level2">
+<h2>Size</h2>
+<p>Size by integer</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">size =</span> <span class="dv">5</span>)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-12-1.png" width="672" />  </p>
+<p>Size by data column</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">size =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-13-1.png" width="672" />  </p>
+<p>We get a warning, but this is okay.<br />
+ </p>
+</div>
+<div id="transparency" class="section level2">
+<h2>Transparency</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># map classe column to different transparencies</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">alpha =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-14-1.png" width="672" />  </p>
+</div>
+<div id="shape" class="section level2">
+<h2>Shape</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">shape =</span> class)) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-15-1.png" width="672" />  </p>
+<p>Any warnings? Yes, because shape maxes out at six levels.  </p>
+</div>
+<div id="manually-changing-aesthetic-properties" class="section level2">
+<h2>Manually changing aesthetic properties</h2>
+<p>But we can <em>set</em> the aesthetic properties manually, instead of having ggplot do the scaling automatically. For example, we can make our ggplot points all blue like this. This time, putting colour OUTSIDE the <code>aes</code> argument.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy), <span class="dt">colour =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-16-1.png" width="672" />  </p>
+<p>Using colour both inside and outside the aes</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">colour =</span> class), <span class="dt">colour =</span> <span class="st">&quot;#AE42BB&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-17-1.png" width="672" />  </p>
+<p><strong>The inner one is overridden.</strong><br />
+ </p>
+<p>Putting it all together as a snapshot of what's possible</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> my_data) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy, <span class="dt">colour =</span> class, <span class="dt">size =</span> class, <span class="dt">alpha =</span> class)) <span class="op">+</span><span class="st"> </span>
+<span class="st">    </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+<div id="aesthetics-you-can-manually-set" class="section level2">
+<h2>Aesthetics you can manually set</h2>
+<ul>
+<li>The name of a colour as a character string.</li>
+<li>The size of a point in mm.</li>
+<li>The shape of a point as a number, as shown in Figure 3.1.</li>
+</ul>
+<!-- ----------------------- image --------------------------- -->
+<div align="center">
+<p><img src="img/shapes.png" style=width:100%></p>
+</div>
+<!-- ----------------------- image --------------------------- -->
+<p> </p>
+<p><code>R</code> has 25 built in shapes that are identified by numbers. There are some seeming duplicates: for example, 0, 15, and 22 are all squares. The difference comes from the interaction of the <code>colour</code> and <code>fill</code> aesthetics. The hollow shapes (0--14) have a border determined by <code>colour</code>; the solid shapes (15--18) are filled with <code>colour</code>; the filled shapes (21--24) have a border of <code>colour</code> and are filled with <code>fill</code>.</p>
+
+</div>
+</div>
+<div id="further-plotting-examples" class="section level1">
+<h1>Further plotting examples</h1>
+<p><a href="https://r4ds.had.co.nz/data-visualisation.html#exercises-1">Section 3.3.1</a></p>
+<p>The online reference contains further examples of how to visualise your data.</p>
+</div>
+<div id="reading-in-outside-data-nyc-airbnb-data" class="section level1">
+<h1>Reading in outside data: NYC Airbnb data</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)  <span class="co"># includes package &#39;readr&#39;</span>
+<span class="co"># All Airbnb data (106 cols)</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
+
+nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)  <span class="co"># reads in data</span>
+<span class="kw">glimpse</span>(nyc_full)</code></pre></div>
+<p> </p>
+<p>Using a smaller dataset</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
+
+nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
+nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># get smaller subet of data</span>
+<span class="kw">length</span>(nyc<span class="op">$</span>id)  <span class="co"># print length of &#39;id&#39; column</span></code></pre></div>
+<pre><code>[1] 2177</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">glimpse</span>(nyc)</code></pre></div>
+<pre><code>Rows: 2,177
+Columns: 16
+$ id                             &lt;dbl&gt; 2539, 2595, 3647, 3831, 4989, 5022, 5099, 5121, 5178, 5203…
+$ name                           &lt;chr&gt; &quot;Clean &amp; quiet apt home by the park&quot;, &quot;Skylit Midtown Cast…
+$ host_id                        &lt;dbl&gt; 2787, 2845, 4632, 4869, 7118, 7192, 7322, 7356, 8967, 7490…
+$ host_name                      &lt;chr&gt; &quot;John&quot;, &quot;Jennifer&quot;, &quot;Elisabeth&quot;, &quot;LisaRoxanne&quot;, &quot;New-Yorke…
+$ neighbourhood_group            &lt;chr&gt; &quot;Brooklyn&quot;, &quot;Manhattan&quot;, &quot;Manhattan&quot;, &quot;Brooklyn&quot;, &quot;Manhatt…
+$ neighbourhood                  &lt;chr&gt; &quot;Kensington&quot;, &quot;Midtown&quot;, &quot;Harlem&quot;, &quot;Clinton Hill&quot;, &quot;Hell&#39;s…
+$ latitude                       &lt;dbl&gt; 40.64749, 40.75362, 40.80902, 40.68514, 40.76260, 40.79851…
+$ longitude                      &lt;dbl&gt; -73.97237, -73.98377, -73.94190, -73.95976, -73.99304, -73…
+$ room_type                      &lt;chr&gt; &quot;Private room&quot;, &quot;Entire home/apt&quot;, &quot;Private room&quot;, &quot;Entire…
+$ price                          &lt;dbl&gt; 149, 225, 150, 89, 105, 80, 200, 60, 79, 79, 150, 135, 85,…
+$ minimum_nights                 &lt;dbl&gt; 1, 1, 3, 1, 4, 10, 3, 45, 2, 2, 1, 5, 2, 4, 2, 90, 2, 2, 1…
+$ number_of_reviews              &lt;dbl&gt; 9, 44, 0, 258, 27, 9, 71, 49, 424, 118, 159, 50, 184, 163,…
+$ last_review                    &lt;date&gt; 2018-10-19, 2019-05-07, NA, 2019-05-20, 2018-07-25, 2018-…
+$ reviews_per_month              &lt;dbl&gt; 0.21, 0.38, NA, 4.53, 0.24, 0.10, 0.58, 0.40, 3.46, 1.00, …
+$ calculated_host_listings_count &lt;dbl&gt; 6, 2, 1, 1, 1, 1, 1, 1, 1, 1, 4, 1, 1, 3, 1, 1, 1, 1, 1, 1…
+$ availability_365               &lt;dbl&gt; 365, 331, 365, 182, 83, 0, 92, 0, 214, 0, 153, 25, 20, 342…</code></pre>
+<p> </p>
+</div>
+<div id="plotting-airbnb-data-with-ggplot" class="section level1">
+<h1>Plotting AirBnB data with ggplot</h1>
+<p>Using the above plotting functions to visualise the AirBnB data</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot neighborhood_group vs price</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> nyc) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> neighbourhood_group, <span class="dt">y =</span> price, <span class="dt">colour =</span> neighbourhood_group), 
+    <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot minimum_nights vs price</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> nyc) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> minimum_nights, <span class="dt">y =</span> price, <span class="dt">colour =</span> neighbourhood_group), 
+    <span class="dt">shape =</span> <span class="dv">20</span>, <span class="dt">size =</span> <span class="dv">3</span>, <span class="dt">stroke =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># availability_365 vs price</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> nyc) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> availability_<span class="dv">365</span>, <span class="dt">y =</span> price, <span class="dt">colour =</span> neighbourhood_group), 
+    <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot longitude vs price</span>
+<span class="kw">ggplot</span>(<span class="dt">data =</span> nyc) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> longitude, <span class="dt">y =</span> price, <span class="dt">colour =</span> neighbourhood_group), 
+    <span class="dt">shape =</span> <span class="dv">21</span>, <span class="dt">stroke =</span> <span class="dv">1</span>) <span class="op">+</span><span class="st"> </span>my_theme</code></pre></div>
+<p><img src="Lesson1_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>Try your own plot using the other variables in the dataset</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># plot neighborhood_group vs price</span>
+<span class="kw">names</span>(airbnb)
+<span class="kw">glimpse</span>(airbnb)
+
+my_data &lt;-<span class="st"> </span><span class="ot">NULL</span>
+x &lt;-<span class="st"> </span><span class="ot">NULL</span>
+y &lt;-<span class="st"> </span><span class="ot">NULL</span>
+colour &lt;-<span class="st"> </span><span class="ot">NULL</span>
+shape &lt;-<span class="st"> </span><span class="ot">NULL</span>
+stroke &lt;-<span class="st"> </span><span class="ot">NULL</span></code></pre></div>
+<!-- end body -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+<!-- ____________________________________________________________________________ -->
+</div>
+
+<div id="rmd-source-code">LS0tCnBhcmFtczoKICBsZXNzb246ICJMZXNzb24gMSIKICB0aXRsZTogIkludHJvIHRvIHBsb3R0aW5nIGRhdGEgaW4gUiB3aXRoIGBnZ3Bsb3RgIgogIGJvb2tjaGFwdGVyX25hbWU6ICJTZWN0aW9uIDMuMS4xIiAgICAKICBib29rY2hhcHRlcl9zZWN0aW9uOiAiaHR0cHM6Ly9yNGRzLmhhZC5jby5uei9kYXRhLXZpc3VhbGlzYXRpb24uaHRtbCIKICBmdW5jdGlvbnM6ICJgP2AsIGBzdHJgLCBgZ2xpbXBzZWAsIGBzdW1tYXJ5YCwgYHRhYmxlYCwgYG1pbmAsIGBtYXhgLCBgZ2dwbG90YCwgYGdlb21fcG9pbnRgLCBgZ2VvbV9zbW9vdGhgLCBgdGhlbWVfbWluaW1hbGAsIGB0aGVtZV9jbGFzc2ljYCwgYHRoZW1lX3R1ZnRlYCIKICBwYWNrYWdlczogImB0aWR5dmVyc2VgLCBgZ2dwbG90MmAsIGBkcGx5cmAiICAgICAgCiAgIyBlbmQgaW5wdXRzIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpoZWFkZXItaW5jbHVkZXM6IFx1c2VwYWNrYWdle2Zsb2F0fQphbHdheXNfYWxsb3dfaHRtbDogeWVzCm91dHB1dDoKICBodG1sX2RvY3VtZW50OgogICAgY29kZV9mb2xkaW5nOiBzaG93CiAgICBjb2RlX2Rvd25sb2FkOiB0cnVlCi0tLQogIApgYGB7ciwgc2V0dXAsIGVjaG8gPSBGQUxTRSwgY2FjaGUgPSBGQUxTRSwgaW5jbHVkZSA9IEZBTFNFfQpvcHRpb25zKHdpZHRoPTEwMCkKa25pdHI6Om9wdHNfY2h1bmskc2V0KAogIGV2YWwgPSBGQUxTRSwgIyBydW4gYWxsIGNvZGUKICBlY2hvID0gVFJVRSwgIyBzaG93IGNvZGUgY2h1bmtzIGluIG91dHB1dCAKICB0aWR5ID0gVFJVRSwgIyBtYWtlIG91dHB1dCBhcyB0aWR5CiAgbWVzc2FnZSA9IEZBTFNFLCAgIyBtYXNrIGFsbCBtZXNzYWdlcwogIHdhcm5pbmcgPSBGQUxTRSwgIyBtYXNrIGFsbCB3YXJuaW5ncyAKICBjb21tZW50ID0gIiIsCiAgdGlkeS5vcHRzPWxpc3Qod2lkdGguY3V0b2ZmPTEwMCksICMgc2V0IHdpZHRoIG9mIGNvZGUgY2h1bmtzIGluIG91dHB1dAogIHNpemU9InNtYWxsIiAjIHNldCBjb2RlIGNodW5rIHNpemUKICApCmBgYApcCgo8IS0tIGluc3RhbGwgcGFja2FnZXMgLS0+CmBgYHtyLCBsb2FkIHBhY2thZ2VzLCBldmFsPVQsIGluY2x1ZGU9VCwgY2FjaGU9RiwgbWVzc2FnZT1GLCB3YXJuaW5nPUYsIHJlc3VsdHM9J2hpZGUnLGVjaG89Rn0KcGFja2FnZXMgPC0gYygiZ2dwbG90MiIsImdndGhlbWVzIiwiZHBseXIiLCJ0aWR5dmVyc2UiLCJ6b28iLCJSQ29sb3JCcmV3ZXIiLCJ2aXJpZGlzIiwicGx5ciIpICAgCmlmIChyZXF1aXJlKHBhY2thZ2VzKSkgewogICAgaW5zdGFsbC5wYWNrYWdlcyhwYWNrYWdlcyxkZXBlbmRlbmNpZXMgPSBUKQogICAgcmVxdWlyZShwYWNrYWdlcykKICAgICMgbG9hZCB0dnRoZW1lcwogICAgZGV2dG9vbHM6Omluc3RhbGxfZ2l0aHViKCJSeW8tTjcvdHZ0aGVtZXMiKQp9CmxhcHBseShwYWNrYWdlcyxsaWJyYXJ5LGNoYXJhY3Rlci5vbmx5PVQpICAKYGBgCgo8IS0tIF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18gLS0+CjwhLS0gX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXyAtLT4KPCEtLSBfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fIC0tPgo8IS0tIHN0YXJ0IGJvZHkgLS0+CgojIGByIHBhc3RlMChwYXJhbXMkbGVzc29uLCI6ICIscGFyYW1zJHRpdGxlKWAgICAgClwgIAoKRnVuY3Rpb25zIGZvciBgciBwYXJhbXMkbGVzc29uYCAgCmByIHBhcmFtcyRmdW5jdGlvbnNgICAgIApcICAgIAoKUGFja2FnZXMgZm9yIGByIHBhcmFtcyRsZXNzb25gICAgICAgICAgIApgciBwYXJhbXMkcGFja2FnZXNgICAgICAgICAKXCAgICAKCiMgQWdlbmRhICAKCltEYXRhIHZpc3VhbGlzYXRpb24gaW4gYFJgIGZvciBEYXRhIFNjaWVuY2UsIGByIHBhcmFtcyRib29rY2hhcHRlcl9uYW1lYF0oYHIgcGFyYW1zJGJvb2tjaGFwdGVyX3NlY3Rpb25gKS4gICAgCgo8IS0tICBlbmQgeWFtbCB0ZW1wbGF0ZS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CgoqIEludHJvIHRvIHRoZSBgUmBlbnZpcm9ubWVudCAoSURFKSAgCiogTG9hZGluZyBwYWNrYWdlcywgZS5nLiBgdGlkeXZlcnNlYCAgCiogVXNpbmcgYnVpbHQtaW4gYFJgIGRhdGE6IHRoZSBgbXBnYCBkYXRhc2V0ICAgCiogVXNpbmcgZ2dwbG90IHdpdGggdGhlIGJ1aWx0LWluIGRhdGEgc2V0ICh0byBtYWtlIHNjYXR0ZXJwbG90cykgICAgCiogTW9kaWZ5aW5nIHBsb3QgYWVzdGhldGljcyAgCiogUmVhZGluZyBpbiBvdXRzaWRlIGRhdGE6IEFpcmJuYiBkYXRhICAKKiBQbG90dGluZyBBaXJibmIgZGF0YSB3aXRoIGdncGxvdCAgICAgIAoKXCAgCgojIEludHJvIHRvIHRoZSBgUmAgZW52aXJvbm1lbnQgKElERSkgIAoKVGhlIGBSU3R1ZGlvYCBpbnRlZ3JhdGVkIGRldmVsb3BtZW50IGVudmlyb25tZW50IChJREUpIGFuZCB3aGF0IHlvdSBjYW4gZG8gd2l0aCBpdC4gIApcICAgIAoKPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBpbWFnZSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CjxkaXYgYWxpZ249ImNlbnRlciI+CiAgPGltZyBzcmM9ImltZy9yc3R1ZGlvMS5qcGciIHN0eWxlPXdpZHRoOjEwMCU+CjwvZGl2Pgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIGltYWdlIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KXCAgCgpBIG1vcmUgY29tcGxldGUgZXhhbXBsZSBvZiB3aGF0IHlvdSBjYW4gYWNoZWl2ZSB3aXRoIHRoZSBpbnRlcmZhY2UuICAKXCAgCgo8IS0tIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIGltYWdlIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAtLT4KPGRpdiBhbGlnbj0iY2VudGVyIj4KICA8aW1nIHNyYz0iaW1nL3JzdHVkaW8yLmpwZyIgc3R5bGU9d2lkdGg6MTAwJT4KPC9kaXY+CjwhLS0gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gaW1hZ2UgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIC0tPgpcICAKCiMgTG9hZGluZyBwYWNrYWdlcywgZS5nLiBgdGlkeXZlcnNlYCAgCgpIb3cgdG8gbG9hZCBwYWNrYWdlcyBpbiBgUmAuICAKCmBgYHtyfQppbnN0YWxsLnBhY2thZ2VzKCJ0aWR5dmVyc2UiKSAgIyBpbnN0YWxsIHBhY2thZ2UKbGlicmFyeSh0aWR5dmVyc2UpICMgbG9hZCB0aGUgcGFja2FnZSBsaWJyYXJ5CnJlcXVpcmUodGlkeXZlcnNlKSAjIHNhbWUgYXMgbGlicmFyeSAgICAKCiMgV2UgYXJlIHR5cGluZyBpbiBhbiBSIFNjcmlwdC4gVGhpbmdzIHdpdGggIyBpbiBmcm9udCBtYWtlIHRoZW0gY29tbWVudHMgYW5kIG5vdGVzIHRvIG91cnNlbHZlcwojIENvbW1hbmQgUmV0dXJuIHRvIGV4ZWN1dGUgdGhlIGxpbmUvICJydW4gdGhlIGNvZGUiCmBgYApcICAKCiMgVXNpbmcgYnVpbHQtaW4gYFJgIGRhdGE6IHRoZSBgbXBnYCBkYXRhc2V0ICAgCltTZWN0aW9uIDMuMi4xXShodHRwczovL3I0ZHMuaGFkLmNvLm56L2RhdGEtdmlzdWFsaXNhdGlvbi5odG1sI3RoZS1tcGctZGF0YS1mcmFtZSkgIAoKV2UnbGwgdXNlIGEgYnVpbHQtaW4gdGlkeXZlcnNlIGRhdGFzZXQgY2FsbGVkIGBtcGdgIHdpdGggZGF0YSBhYm91dCBjYXJzIGFuZCBnYXMtbWlsZWFnZS4KCmBgYHtyfQptcGcKIyBydW4gaGVscCBwYWdlIHdpdGggJz8nCj9tcGcgICAKYGBgCgoqIFRoaXMgaXMgYSB0aWJibGUgKGRhdGEgZnJhbWUpIHRoYXQgd2UndmUgInByaW50ZWQiIG91dC4gSXQncyBsaWtlIFIncyB2ZXJzaW9uIG9mIGFuIGV4Y2VsIHNwcmVhZHNoZWV0LCBidXQgbXVjaCBiZXR0ZXIuIAoqIEEgdGliYmxlIHdpbGwgc2hvdyB1cyB0aGUgZmlyc3QgMTAgcm93cywgcm93cyBjb250YWluaW5nIHRoZSBkYXRhLCBjb2x1bW4gbmFtZXMsIGFuZCB0aGUgY2xhc3Mgb2YgZGF0YSB3aXRoaW4gZWFjaCBjb2x1bW4sIHN1Y2ggYXMgbnVtZXJpYywgaW50ZWdlciwgb3IgY2hhcmFjdGVyLiAgICAKCiMjIFN1bW1hcmlzaW5nIGRhdGEgICAgICAgIApgYGB7cn0Kc3RyKG1wZykgIyBzdHJ1Y3R1cmUgb2YgZGF0YQpnbGltcHNlKG1wZykgIyBwcmV2aWV3IG9mIGRhdGEgCnN1bW1hcnkobXBnKSAjIGJhc2ljIHN1bW1hcnkgc3RhdHMgIAp0YWJsZShtcGckbWFudWZhY3R1cmVyKSAjIGNvdW50cyBvZiBlYWNoIGNvbHVtbgpoZWFkKG1wZykgIyB2aXN1YWxpc2UgZmlyc3QgNiByb3dzIG9mIGRhdGEKdGFpbChtcGcsMTApICMgdmlzdWFsaXNlIGxhc3QgMTAgKG9yIE4pIHJvd3Mgb2YgZGF0YSAKbmFtZXMobXBnKSAjIGdldCBjb2x1bW4gbmFtZXMKY2xhc3MobXBnKSAjIGNsYXNzIG9mIGRhdGEgZnJhbWUKY2xhc3MobXBnJG1hbnVmYWN0dXJlcikgIyBjbGFzcyBvZiBkYXRhIGNvbHVtbgptcGckZGlzcGwgIyBwcmludCBhIGNvbHVtbgptcGckaHd5ICMgcHJpbnQgYSBjb2x1bW4KYGBgClwgICAgCgojIENyZWF0aW5nIGEgcGxvdCB3aXRoIGBnZ3Bsb3RgICAKW1NlY3Rpb24gMy4yLjJdKGh0dHBzOi8vcjRkcy5oYWQuY28ubnovZGF0YS12aXN1YWxpc2F0aW9uLmh0bWwjY3JlYXRpbmctYS1nZ3Bsb3QpICAgICAKCiogYGdncGxvdCgpYCBDcmVhdGVzIGEgY29vcmRpbmF0ZSBzeXN0ZW0gZm9yIHVzLS1iYXNpY2FsbHkgYW4gZW1wdHkgZ3JhcGguICAKKiBgZ2VvbV9wb2ludCgpYCBBZGRzIGEgImxheWVyIiwgZS5nLiBnZW9tX3BvaW50IChidXQgdGhlcmUgYXJlIG1hbnkgZm9yIGRpZmZlcmVudCBraW5kcyBvZiBncmFwaHMpLiAgCgpQbG90IHR3byBvZiB0aGUgZGF0YSBjb2x1bW5zICAKYGBge3IsIGV2YWwgPSBUfQpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5KSkKYGBgClwgIAoKQ2hhbmdpbmcgdGhlIGRhdGEgY29sdW1uIGlucHV0cyBmb3IgdGhlICoqeCoqIGFuZCAqKnkqKiBheGlzIG9mIHRoZSBwbG90ICAKYGBge3IsIGV2YWwgPSBUfQpnZ3Bsb3QoZGF0YSA9IG1wZykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGNsYXNzLCB5ID0gZHJ2KSkKYGBgClwgIAoKQXNzaWduIGRhdGEgdG8gdmFyaWFibGVzIHRvIGNyZWF0ZSBkeW5hbWljIGlucHV0cyAgCmBgYHtyLCBldmFsID0gVH0KbXlfZGF0YSA8LSBtcGcgIyBjcmVhdGUgb3duIHZhcmlhYmxlIHVzaW5nIGEgbmFtZSBvZiB5b3VyIGNob2ljZSAgCgpnZ3Bsb3QoZGF0YSA9IG15X2RhdGEpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpCmBgYApcICAKCiMjIFRoZW1lcyAgCgpDaGFuZ2UgcGxvdCBzdHlsZS4gTGluayBmb3IgbW9yZSBbZ2dwbG90IHRoZW1lc10oaHR0cHM6Ly93d3cuZGF0YW5vdmlhLmNvbS9lbi9ibG9nL2dncGxvdC10aGVtZXMtZ2FsbGVyeS8pLiAgICAgICAgCmBgYHtyLCBldmFsID0gVH0KcmVxdWlyZShnZ3RoZW1lcykKCiMgY2xhc3NpYyB0aGVtZQpnZ3Bsb3QoZGF0YSA9IG15X2RhdGEpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSkpICsgCiAgdGhlbWVfbWluaW1hbCgpCgojIG1pbmltYWwgdGhlbWUKZ2dwbG90KGRhdGEgPSBteV9kYXRhKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3kpKSArIAogIHRoZW1lX3R1ZnRlKCkgIAoKIyBhc3NpZ24gdGhlbWUgdG8gdmFyaWFibGUgIApteV90aGVtZSA8LSB0aGVtZV9jbGFzc2ljKCkgCmdncGxvdChkYXRhID0gbXlfZGF0YSkgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5KSkgKyAKICBteV90aGVtZSAjIGFwcGx5IHlvdXIgY2hvc2VuIHRoZW1lICAKCmBgYApcICAKCiMgQWVzdGhldGljIG1hcHBpbmcgIApbU2VjdGlvbiAzLjNdKGh0dHBzOi8vcjRkcy5oYWQuY28ubnovZGF0YS12aXN1YWxpc2F0aW9uLmh0bWwjYWVzdGhldGljLW1hcHBpbmdzKSAgCgpgY29sb3VyYC4gQ2hhbmdlIHRoZSBjb2xvdXIgb2YgdGhlIGRhdGEgcG9pbnRzLgpgc2l6ZWAuIENoYW5nZSB0aGUgc2l6ZSBvZiB0aGUgZGF0YSBwb2ludHMuICAKYGFscGhhYC4gQ2hhbmdlIHRoZSB0cmFuc3BhcmVuY3kgb2YgdGhlIGRhdGEgcG9pbnRzLiAgIAoKIyMgQ29sb3VyCgpDb2xvdXIgYnkgY29sb3VyIG5hbWUuIApgYGB7ciwgZXZhbCA9IFR9CmdncGxvdChkYXRhID0gbXlfZGF0YSkgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5KSwgY29sb3VyID0gImxpZ2h0IGJsdWUiKSArCiAgbXlfdGhlbWUKICAKYGBgClwgICAKCkNvbG91ciBieSBhIFtoZXggY29kZV0oaHR0cHM6Ly9odG1sY29sb3Jjb2Rlcy5jb20vY29sb3ItcGlja2VyLykgaW4gcXVvdGVzLiAgCmBgYHtyLCBldmFsID0gVH0KZ2dwbG90KGRhdGEgPSBteV9kYXRhKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3kpLCBjb2xvdXIgPSAiI0JCNUM0MiIpICsKICBteV90aGVtZQpgYGAKXCAgCgpjb2xvdXIgYnkgZGF0YSBjb2x1bW4gIApgYGB7ciwgZXZhbCA9IFR9CmdncGxvdChkYXRhID0gbXlfZGF0YSkgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LCBjb2xvdXIgPSBjbGFzcykpICsKICBteV90aGVtZQpgYGAKXCAgCgpJbnNpZGUgdmVyc3VzIG91dHNpZGUgdGhlIGBhZXNgICAKYGBge3IsIGV2YWwgPSBUfQpnZ3Bsb3QoZGF0YSA9IG15X2RhdGEpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3VyID0gImJsdWUiKSkgKwogIG15X3RoZW1lCmBgYApcICAKCiMjIFNpemUgCgpTaXplIGJ5IGludGVnZXIgIApgYGB7ciwgZXZhbCA9IFR9CmdncGxvdChkYXRhID0gbXlfZGF0YSkgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LCBzaXplID0gNSkpICsKICBteV90aGVtZQpgYGAKXCAgCgpTaXplIGJ5IGRhdGEgY29sdW1uICAgICAgCmBgYHtyLCBldmFsID0gVH0KZ2dwbG90KGRhdGEgPSBteV9kYXRhKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIHNpemUgPSBjbGFzcykpICsKICBteV90aGVtZQpgYGAKXCAgCgpXZSBnZXQgYSB3YXJuaW5nLCBidXQgdGhpcyBpcyBva2F5LiAgClwgIAoKIyMgVHJhbnNwYXJlbmN5IApgYGB7ciwgZXZhbCA9IFR9CiMgbWFwIGNsYXNzZSBjb2x1bW4gdG8gZGlmZmVyZW50IHRyYW5zcGFyZW5jaWVzCmdncGxvdChkYXRhID0gbXlfZGF0YSkgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IGRpc3BsLCB5ID0gaHd5LCBhbHBoYSA9IGNsYXNzKSkgKyAKICBteV90aGVtZQpgYGAKXCAgCgojIyBTaGFwZSAgCmBgYHtyLCBldmFsID0gVH0KZ2dwbG90KGRhdGEgPSBteV9kYXRhKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIHNoYXBlID0gY2xhc3MpKSArCiAgbXlfdGhlbWUKYGBgClwgIAoKQW55IHdhcm5pbmdzPyBZZXMsIGJlY2F1c2Ugc2hhcGUgbWF4ZXMgb3V0IGF0IHNpeCBsZXZlbHMuClwgIAoKIyMgTWFudWFsbHkgY2hhbmdpbmcgYWVzdGhldGljIHByb3BlcnRpZXMKICAKQnV0IHdlIGNhbiAqc2V0KiB0aGUgYWVzdGhldGljIHByb3BlcnRpZXMgbWFudWFsbHksIGluc3RlYWQgb2YgaGF2aW5nIGdncGxvdCBkbyB0aGUgc2NhbGluZyBhdXRvbWF0aWNhbGx5LiBGb3IgZXhhbXBsZSwgd2UgY2FuIG1ha2Ugb3VyIGdncGxvdCBwb2ludHMgYWxsIGJsdWUgbGlrZSB0aGlzLiBUaGlzIHRpbWUsIHB1dHRpbmcgY29sb3VyIE9VVFNJREUgdGhlIGBhZXNgIGFyZ3VtZW50LgoKYGBge3IsIGV2YWwgPSBUfQpnZ3Bsb3QoZGF0YSA9IG15X2RhdGEpICsgIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3kpLCBjb2xvdXIgPSAiYmx1ZSIpICsKICBteV90aGVtZQpgYGAKXCAgCgpVc2luZyBjb2xvdXIgYm90aCBpbnNpZGUgYW5kIG91dHNpZGUgdGhlIGFlcyAgCmBgYHtyLCBldmFsID0gVH0KZ2dwbG90KGRhdGEgPSBteV9kYXRhKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gZGlzcGwsIHkgPSBod3ksIGNvbG91ciA9IGNsYXNzKSwgY29sb3VyID0gIiNBRTQyQkIiKSArCiAgbXlfdGhlbWUKYGBgClwgIAoKKipUaGUgaW5uZXIgb25lIGlzIG92ZXJyaWRkZW4uKiogICAgIApcICAKClB1dHRpbmcgaXQgYWxsIHRvZ2V0aGVyIGFzIGEgc25hcHNob3Qgb2Ygd2hhdCdzIHBvc3NpYmxlICAKYGBge3IsIGV2YWwgPSBUfQpnZ3Bsb3QoZGF0YSA9IG15X2RhdGEpICsgCiAgZ2VvbV9wb2ludChtYXBwaW5nID0gYWVzKHggPSBkaXNwbCwgeSA9IGh3eSwgY29sb3VyID0gY2xhc3MsIHNpemUgPSBjbGFzcywgYWxwaGEgPSBjbGFzcykpICsKICBteV90aGVtZQpgYGAKCiMjIEFlc3RoZXRpY3MgeW91IGNhbiBtYW51YWxseSBzZXQgIAoKICAqIFRoZSBuYW1lIG9mIGEgY29sb3VyIGFzIGEgY2hhcmFjdGVyIHN0cmluZy4KICAqIFRoZSBzaXplIG9mIGEgcG9pbnQgaW4gbW0uCiAgKiBUaGUgc2hhcGUgb2YgYSBwb2ludCBhcyBhIG51bWJlciwgYXMgc2hvd24gaW4gRmlndXJlIDMuMS4gCiAgCiAgPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBpbWFnZSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+CjxkaXYgYWxpZ249ImNlbnRlciI+CiAgPGltZyBzcmM9ImltZy9zaGFwZXMucG5nIiBzdHlsZT13aWR0aDoxMDAlPgo8L2Rpdj4KPCEtLSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBpbWFnZSAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gLS0+ClwgIAogIApgUmAgaGFzIDI1IGJ1aWx0IGluIHNoYXBlcyB0aGF0IGFyZSBpZGVudGlmaWVkIGJ5IG51bWJlcnMuIFRoZXJlIGFyZSBzb21lIHNlZW1pbmcgZHVwbGljYXRlczogZm9yIGV4YW1wbGUsIDAsIDE1LCBhbmQgMjIgYXJlIGFsbCBzcXVhcmVzLiBUaGUgZGlmZmVyZW5jZSBjb21lcyBmcm9tIHRoZSBpbnRlcmFjdGlvbiBvZiB0aGUgYGNvbG91cmAgYW5kIGBmaWxsYCBhZXN0aGV0aWNzLiBUaGUgaG9sbG93IHNoYXBlcyAoMC0tMTQpIGhhdmUgYSBib3JkZXIgZGV0ZXJtaW5lZCBieSBgY29sb3VyYDsgdGhlIHNvbGlkIHNoYXBlcyAoMTUtLTE4KSBhcmUgZmlsbGVkIHdpdGggYGNvbG91cmA7IHRoZSBmaWxsZWQgc2hhcGVzICgyMS0tMjQpIGhhdmUgYSBib3JkZXIgb2YgYGNvbG91cmAgYW5kIGFyZSBmaWxsZWQgd2l0aCBgZmlsbGAuICAKClxuZXdwYWdlICAgICAgCgojIEZ1cnRoZXIgcGxvdHRpbmcgZXhhbXBsZXMgICAgCltTZWN0aW9uIDMuMy4xXShodHRwczovL3I0ZHMuaGFkLmNvLm56L2RhdGEtdmlzdWFsaXNhdGlvbi5odG1sI2V4ZXJjaXNlcy0xKSAgCgpUaGUgb25saW5lIHJlZmVyZW5jZSBjb250YWlucyBmdXJ0aGVyIGV4YW1wbGVzIG9mIGhvdyB0byB2aXN1YWxpc2UgeW91ciBkYXRhLiAgICAKCiMgUmVhZGluZyBpbiBvdXRzaWRlIGRhdGE6IE5ZQyBBaXJibmIgZGF0YSAgCgpgYGB7cn0KbGlicmFyeSh0aWR5dmVyc2UpICMgaW5jbHVkZXMgcGFja2FnZSAicmVhZHIiCiMgQWxsIEFpcmJuYiBkYXRhICgxMDYgY29scykKdXJsIDwtICJodHRwOi8vZGF0YS5pbnNpZGVhaXJibmIuY29tL3VuaXRlZC1zdGF0ZXMvbnkvbmV3LXlvcmstY2l0eS8yMDE5LTA2LTAyL2RhdGEvbGlzdGluZ3MuY3N2Lmd6IgoKbnljX2Z1bGwgPC0gcmVhZF9jc3YodXJsKSAjIHJlYWRzIGluIGRhdGEKZ2xpbXBzZShueWNfZnVsbCkKYGBgClwgIAoKVXNpbmcgYSBzbWFsbGVyIGRhdGFzZXQgCmBgYHtyLCBldmFsID0gVH0KIyBzbWFsbGVyIGNzdiBmaWxlICgxNiBjb2xzKQp1cmwgPC0gImh0dHA6Ly9kYXRhLmluc2lkZWFpcmJuYi5jb20vdW5pdGVkLXN0YXRlcy9ueS9uZXcteW9yay1jaXR5LzIwMTktMDYtMDIvdmlzdWFsaXNhdGlvbnMvbGlzdGluZ3MuY3N2IgoKbnljIDwtICByZWFkX2Nzdih1cmwpCm55YyA8LSBueWNbbnljJGlkIDwgMTAwMDAwMCxdICMgZ2V0IHNtYWxsZXIgc3ViZXQgb2YgZGF0YQpsZW5ndGgobnljJGlkKSAjIHByaW50IGxlbmd0aCBvZiAnaWQnIGNvbHVtbgpnbGltcHNlKG55YykKYGBgIApcICAgIAoKIyBQbG90dGluZyBBaXJCbkIgZGF0YSB3aXRoIGdncGxvdCAgCgpVc2luZyB0aGUgYWJvdmUgcGxvdHRpbmcgZnVuY3Rpb25zIHRvIHZpc3VhbGlzZSB0aGUgQWlyQm5CIGRhdGEgIAoKYGBge3IsIGV2YWw9VH0KIyBwbG90IG5laWdoYm9yaG9vZF9ncm91cCB2cyBwcmljZQpnZ3Bsb3QoZGF0YSA9IG55YykgKyAKICBnZW9tX3BvaW50KG1hcHBpbmcgPSBhZXMoeCA9IG5laWdoYm91cmhvb2RfZ3JvdXAsIHkgPSBwcmljZSwgY29sb3VyID0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICBuZWlnaGJvdXJob29kX2dyb3VwKSwgc2hhcGUgPSAyMSwgc3Ryb2tlID0gMSkgKwogIG15X3RoZW1lCmBgYAoKYGBge3IsIGV2YWw9VH0KIyBwbG90IG1pbmltdW1fbmlnaHRzIHZzIHByaWNlCmdncGxvdChkYXRhID0gbnljKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gbWluaW11bV9uaWdodHMsIHkgPSBwcmljZSwgCiAgICAgICAgICAgICAgICAgICAgICAgICAgIGNvbG91ciA9IG5laWdoYm91cmhvb2RfZ3JvdXApLCBzaGFwZSA9IDIwLCBzaXplID0gMywgc3Ryb2tlID0gMSkgKwogIG15X3RoZW1lCmBgYAoKYGBge3IsIGV2YWw9VH0KIyBhdmFpbGFiaWxpdHlfMzY1IHZzIHByaWNlCmdncGxvdChkYXRhID0gbnljKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gYXZhaWxhYmlsaXR5XzM2NSwgeSA9IHByaWNlLCAKICAgICAgICAgICAgICAgICAgICAgICAgICAgY29sb3VyID0gbmVpZ2hib3VyaG9vZF9ncm91cCksIHNoYXBlID0gMjEsIHN0cm9rZSA9IDEpICsKICBteV90aGVtZQpgYGAKICAgIApgYGB7ciwgZXZhbD1UfQojIHBsb3QgbG9uZ2l0dWRlIHZzIHByaWNlCmdncGxvdChkYXRhID0gbnljKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0gbG9uZ2l0dWRlLCB5ID0gcHJpY2UsIAogICAgICAgICAgICAgICAgICAgICAgICAgICBjb2xvdXIgPSBuZWlnaGJvdXJob29kX2dyb3VwKSwgc2hhcGUgPSAyMSwgc3Ryb2tlID0gMSkgKwogIG15X3RoZW1lCmBgYAoKClRyeSB5b3VyIG93biBwbG90IHVzaW5nIHRoZSBvdGhlciB2YXJpYWJsZXMgaW4gdGhlIGRhdGFzZXQgICAgCmBgYHtyfQojIHBsb3QgbmVpZ2hib3Job29kX2dyb3VwIHZzIHByaWNlCm5hbWVzKGFpcmJuYikKZ2xpbXBzZShhaXJibmIpCgpteV9kYXRhIDwtIE5VTEwKeCA8LSBOVUxMCnkgPC0gTlVMTApjb2xvdXIgPC0gTlVMTApzaGFwZSA8LSBOVUxMCnN0cm9rZSA8LSBOVUxMCmBgYAoKYGBge3IsIGVjaG89Rn0KZ2dwbG90KGRhdGEgPSBteV9kYXRhKSArIAogIGdlb21fcG9pbnQobWFwcGluZyA9IGFlcyh4ID0geCwgeSA9IHksIGNvbG91ciA9IGNvbG91ciksIHNoYXBlID0gc2hhcGUsIHN0cm9rZSA9IHN0cm9rZSkKYGBgCgo8IS0tIGVuZCBib2R5IC0tPgo8IS0tIF9fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18gLS0+CjwhLS0gX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXyAtLT4KPCEtLSBfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fIC0tPgoKICAgCg==</div>
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("Lesson1.Rmd");
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

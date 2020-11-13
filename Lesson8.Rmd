@@ -104,11 +104,14 @@ txt %>% str_locate_all(pat) # show all positions
 # Subsetting strings  
 
 Subset and cut up strings into manageable pieces   
-```{r}
+```{r, collapse = T}
 # subset string portion based on char position  
 txt %>% str_sub(
   txt %>% str_locate(pat) # use positions from above func  
 )
+
+# insert user text into string position, e.g. between 1 and 2
+str_sub(txt,1,2) <- "INSERT TEXT AT POSITION" 
 ```
   
 Shorten text with ellipsis to nth character  
