@@ -156,20 +156,20 @@ url <- "https://r4ds.had.co.nz/index.html"
 node("a") %>% head(20) # return first 20 results
 ```
 
-Specifying the main body of the webpage ("section") solves this, but we still want just the urls. Using `html_attr()` gives us just the url portion of the HTML link element (`<a>`)   
+Specifying the main body of the webpage ("main") solves this, but we still want just the urls. Using `html_attr()` gives us just the url portion of the HTML link element (`<a>`)   
 ```{r}
-node("section") %>% html_nodes("a") %>% html_attr("href") %>% head(20) # return first 20 results
+node("main") %>% html_nodes("a") %>% html_attr("href") %>% head(20) # return first 20 results
 ```
 
 If you wanted just the text associated with the links and not the link themselves, just pull the text instead of using `html_attr()`  
 ```{r}
-node("section") %>% html_nodes("a") %>% html_text() %>% head(20) # return first 20 results
+node("main") %>% html_nodes("a") %>% html_text() %>% head(20) # return first 20 results
 ```
 
 To pull a value/term from a webscraped vector, you can use `extract2()` from the `magrittr` package to specify the position in the vector 
 ```{r}
 require(magrittr)
-node("section") %>% 
+node("main") %>% 
   html_nodes("a") %>%
   extract2(3) %>% # get the 3rd scraped term
   html_text()  
@@ -177,7 +177,7 @@ node("section") %>%
 
 Alternatively, you can index the term    
 ```{r}
-node("section") %>% 
+node("main") %>% 
   html_nodes("a") %>% 
   .[[3]] %>% # get the 3rd scraped term
   html_text() 

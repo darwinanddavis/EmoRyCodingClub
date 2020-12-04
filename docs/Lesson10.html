@@ -509,28 +509,29 @@ url &lt;-<span class="st"> &quot;https://r4ds.had.co.nz/data-visualisation.html&
 
 url <span class="op">%&gt;%</span><span class="st"> </span>read_html  <span class="co"># scrape HTML text and data</span></code></pre></div>
 <pre><code>{html_document}
-&lt;html lang=&quot;&quot; xml:lang=&quot;&quot;&gt;
+&lt;html lang=&quot;en&quot;&gt;
 [1] &lt;head&gt;\n&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;\n&lt;meta charset=&quot;u ...
-[2] &lt;body&gt;\n\n\n\n  &lt;div class=&quot;book without-animation with-summary font-size-2 font-family-1&quot; da ...</code></pre>
+[2] &lt;body data-spy=&quot;scroll&quot; data-target=&quot;#toc&quot;&gt;\n\n&lt;div class=&quot;container-fluid&quot;&gt;\n&lt;div class=&quot;row ...</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># scraping the first node only for third order headings (&#39;h3&#39;)</span>
 url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_node</span>(<span class="st">&quot;h3&quot;</span>)  <span class="co"># get only first section heading</span></code></pre></div>
 <pre><code>{html_node}
 &lt;h3&gt;
-[1] &lt;span class=&quot;header-section-number&quot;&gt;3.1.1&lt;/span&gt;</code></pre>
+[1] &lt;span class=&quot;header-section-number&quot;&gt;3.1.1&lt;/span&gt;
+[2] &lt;a class=&quot;anchor&quot; aria-label=&quot;anchor&quot; href=&quot;#prerequisites-1&quot;&gt;&lt;i class=&quot;fas fa-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># scraping all nodes in the webpage</span>
 url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;h3&quot;</span>)  <span class="co"># get section headings</span></code></pre></div>
 <pre><code>{xml_nodeset (11)}
- [1] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.1.1&lt;/span&gt; Prerequisites&lt;/h3&gt;
- [2] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.2.1&lt;/span&gt; The &lt;code&gt;mpg&lt;/code&gt; data frame&lt;/h3&gt;
- [3] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.2.2&lt;/span&gt; Creating a ggplot&lt;/h3&gt;
- [4] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.2.3&lt;/span&gt; A graphing template&lt;/h3&gt;
- [5] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.2.4&lt;/span&gt; Exercises&lt;/h3&gt;
- [6] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.3.1&lt;/span&gt; Exercises&lt;/h3&gt;
- [7] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.5.1&lt;/span&gt; Exercises&lt;/h3&gt;
- [8] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.6.1&lt;/span&gt; Exercises&lt;/h3&gt;
- [9] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.7.1&lt;/span&gt; Exercises&lt;/h3&gt;
-[10] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.8.1&lt;/span&gt; Exercises&lt;/h3&gt;
-[11] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.9.1&lt;/span&gt; Exercises&lt;/h3&gt;</code></pre>
+ [1] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.1.1&lt;/span&gt; Prerequisites&lt;a class=&quot;anchor&quot; aria-l ...
+ [2] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.2.1&lt;/span&gt; The &lt;code&gt;mpg&lt;/code&gt; data frame&lt;a cla ...
+ [3] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.2.2&lt;/span&gt; Creating a ggplot&lt;a class=&quot;anchor&quot; ar ...
+ [4] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.2.3&lt;/span&gt; A graphing template&lt;a class=&quot;anchor&quot;  ...
+ [5] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.2.4&lt;/span&gt; Exercises&lt;a class=&quot;anchor&quot; aria-label ...
+ [6] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.3.1&lt;/span&gt; Exercises&lt;a class=&quot;anchor&quot; aria-label ...
+ [7] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.5.1&lt;/span&gt; Exercises&lt;a class=&quot;anchor&quot; aria-label ...
+ [8] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.6.1&lt;/span&gt; Exercises&lt;a class=&quot;anchor&quot; aria-label ...
+ [9] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.7.1&lt;/span&gt; Exercises&lt;a class=&quot;anchor&quot; aria-label ...
+[10] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.8.1&lt;/span&gt; Exercises&lt;a class=&quot;anchor&quot; aria-label ...
+[11] &lt;h3&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3.9.1&lt;/span&gt; Exercises&lt;a class=&quot;anchor&quot; aria-label ...</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;img&quot;</span>)  <span class="co"># get just images</span></code></pre></div>
 <pre><code>{xml_nodeset (54)}
  [1] &lt;img src=&quot;https://d33wubrfki0l68.cloudfront.net/91aebc6de4de928abc810433b752274ba6a46d58/a78 ...
@@ -561,31 +562,32 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
 <p>Pull specific text, such as headings using HTML elements, i.e. <code>&lt;h1&gt;</code>, <code>&lt;img&gt;</code>, etc</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;h1&quot;</span>)  <span class="co"># get first order headings</span></code></pre></div>
 <pre><code>{xml_nodeset (2)}
-[1] &lt;h1&gt;\n            &lt;i class=&quot;fa fa-circle-o-notch fa-spin&quot;&gt;&lt;/i&gt;&lt;a href=&quot;./&quot;&gt;R for Data Science ...
-[2] &lt;h1&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3&lt;/span&gt; Data visualisation&lt;/h1&gt;</code></pre>
+[1] &lt;h1&gt;\n        &lt;a href=&quot;index.html&quot; title=&quot;&quot;&gt;R for Data Science&lt;/a&gt;\n      &lt;/h1&gt;
+[2] &lt;h1&gt;\n&lt;span class=&quot;header-section-number&quot;&gt;3&lt;/span&gt; Data visualisation&lt;a class=&quot;anchor&quot; aria-l ...</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># now pull just the text without the HTML elements</span>
 <span class="kw">node</span>(<span class="st">&quot;h2&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>(<span class="dt">trim =</span> T)</code></pre></div>
-<pre><code> [1] &quot;3.1 Introduction&quot;                     &quot;3.2 First steps&quot;                     
- [3] &quot;3.3 Aesthetic mappings&quot;               &quot;3.4 Common problems&quot;                 
- [5] &quot;3.5 Facets&quot;                           &quot;3.6 Geometric objects&quot;               
- [7] &quot;3.7 Statistical transformations&quot;      &quot;3.8 Position adjustments&quot;            
- [9] &quot;3.9 Coordinate systems&quot;               &quot;3.10 The layered grammar of graphics&quot;</code></pre>
+<pre><code> [1] &quot;Table of contents&quot;                    &quot;3.1 Introduction&quot;                    
+ [3] &quot;3.2 First steps&quot;                      &quot;3.3 Aesthetic mappings&quot;              
+ [5] &quot;3.4 Common problems&quot;                  &quot;3.5 Facets&quot;                          
+ [7] &quot;3.6 Geometric objects&quot;                &quot;3.7 Statistical transformations&quot;     
+ [9] &quot;3.8 Position adjustments&quot;             &quot;3.9 Coordinate systems&quot;              
+[11] &quot;3.10 The layered grammar of graphics&quot; &quot;On this page&quot;                        </code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;strong&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>(<span class="dt">trim =</span> T)  <span class="co"># get just bold text </span></code></pre></div>
-<pre><code> [1] &quot;R for Data Science&quot;  &quot;grammar of graphics&quot; &quot;data frame&quot;          &quot;aesthetic&quot;          
- [5] &quot;scaling&quot;             &quot;facets&quot;              &quot;geoms&quot;               &quot;geom&quot;               
- [9] &quot;stat&quot;                &quot;position adjustment&quot; &quot;overplotting&quot;       </code></pre>
+<pre><code> [1] &quot;grammar of graphics&quot; &quot;data frame&quot;          &quot;aesthetic&quot;           &quot;scaling&quot;            
+ [5] &quot;facets&quot;              &quot;geoms&quot;               &quot;geom&quot;                &quot;stat&quot;               
+ [9] &quot;position adjustment&quot; &quot;overplotting&quot;        &quot;R for Data Science&quot; </code></pre>
 <p>Find and pull all unique <code>R</code> functions from the webpage and view the first 10 results</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;code&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>(<span class="dt">trim =</span> T) <span class="op">%&gt;%</span><span class="st"> </span>unique <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">10</span>)</code></pre></div>
-<pre><code> [1] &quot;mpg&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                              
- [2] &quot;filter()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                         
- [3] &quot;arrange()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                        
- [4] &quot;select()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                         
- [5] &quot;mutate()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                         
- [6] &quot;summarise()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                      
- [7] &quot;library(tidyverse)\n#&gt; ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──\n#&gt; ✔ ggplot2 3.3.2     ✔ purrr   0.3.4\n#&gt; ✔ tibble  3.0.3     ✔ dplyr   1.0.2\n#&gt; ✔ tidyr   1.1.2     ✔ stringr 1.4.0\n#&gt; ✔ readr   1.4.0     ✔ forcats 0.5.0\n#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n#&gt; ✖ dplyr::filter() masks stats::filter()\n#&gt; ✖ dplyr::lag()    masks stats::lag()&quot;
- [8] &quot;library()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                        
- [9] &quot;install.packages(\&quot;tidyverse\&quot;)\nlibrary(tidyverse)&quot;                                                                                                                                                                                                                                                                                                                                                                                              
-[10] &quot;package::function()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                              </code></pre>
+<pre><code> [1] &quot;library(tidyverse)\n#&gt; ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.0 ──\n#&gt; ✔ ggplot2 3.3.2     ✔ purrr   0.3.4\n#&gt; ✔ tibble  3.0.3     ✔ dplyr   1.0.2\n#&gt; ✔ tidyr   1.1.2     ✔ stringr 1.4.0\n#&gt; ✔ readr   1.4.0     ✔ forcats 0.5.0\n#&gt; ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n#&gt; ✖ dplyr::filter() masks stats::filter()\n#&gt; ✖ dplyr::lag()    masks stats::lag()&quot;                                                                                                                                                                                                                                                                                                              
+ [2] &quot;library()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+ [3] &quot;install.packages(\&quot;tidyverse\&quot;)\nlibrary(tidyverse)&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+ [4] &quot;package::function()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+ [5] &quot;ggplot2::ggplot()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+ [6] &quot;ggplot()&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+ [7] &quot;mpg&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+ [8] &quot;ggplot2::mpg&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+ [9] &quot;mpg\n#&gt; # A tibble: 234 x 11\n#&gt;   manufacturer model displ  year   cyl trans      drv     cty   hwy fl    class \n#&gt;   &lt;chr&gt;        &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;chr&gt; &lt;int&gt; &lt;int&gt; &lt;chr&gt; &lt;chr&gt; \n#&gt; 1 audi         a4      1.8  1999     4 auto(l5)   f        18    29 p     compa…\n#&gt; 2 audi         a4      1.8  1999     4 manual(m5) f        21    29 p     compa…\n#&gt; 3 audi         a4      2    2008     4 manual(m6) f        20    31 p     compa…\n#&gt; 4 audi         a4      2    2008     4 auto(av)   f        21    30 p     compa…\n#&gt; 5 audi         a4      2.8  1999     6 auto(l5)   f        16    26 p     compa…\n#&gt; 6 audi         a4      2.8  1999     6 manual(m5) f        18    26 p     compa…\n#&gt; # … with 228 more rows&quot;
+[10] &quot;displ&quot;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          </code></pre>
 <p> </p>
 <div id="if-youre-unsure-what-node-to-call-right-click-on-the-piece-of-datatext-you-want-from-the-webpage-and-click-inspect.-here-you-can-identify-the-html-element-you-need." class="section level4">
 <h4>If you're unsure what node to call, right click on the piece of data/text you want from the webpage and click &quot;Inspect&quot;. Here, you can identify the HTML element you need.</h4>
@@ -663,83 +665,83 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://r4ds.had.co.nz/index.html&quot;</span>
 <span class="kw">node</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">20</span>)  <span class="co"># return first 20 results</span></code></pre></div>
 <pre><code>{xml_nodeset (20)}
- [1] &lt;a href=&quot;./&quot;&gt;R for Data Science&lt;/a&gt;
- [2] &lt;a href=&quot;index.html&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;Welcome&lt;/a&gt;
- [3] &lt;a href=&quot;index.html#acknowledgements&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;Acknowledgements&lt;/a&gt;
- [4] &lt;a href=&quot;introduction.html&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1&lt;/b&gt; Introduction&lt;/a&gt;
- [5] &lt;a href=&quot;introduction.html#what-you-will-learn&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.1&lt;/b&gt; What y ...
- [6] &lt;a href=&quot;introduction.html#how-this-book-is-organised&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.2&lt;/b&gt; ...
- [7] &lt;a href=&quot;introduction.html#what-you-wont-learn&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3&lt;/b&gt; What y ...
- [8] &lt;a href=&quot;introduction.html#big-data&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.1&lt;/b&gt; Big data&lt;/a&gt;
- [9] &lt;a href=&quot;introduction.html#python-julia-and-friends&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.2&lt;/b&gt; ...
-[10] &lt;a href=&quot;introduction.html#non-rectangular-data&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.3&lt;/b&gt; Non ...
-[11] &lt;a href=&quot;introduction.html#hypothesis-confirmation&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.3.4&lt;/b&gt;  ...
-[12] &lt;a href=&quot;introduction.html#prerequisites&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4&lt;/b&gt; Prerequisite ...
-[13] &lt;a href=&quot;introduction.html#r&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.1&lt;/b&gt; R&lt;/a&gt;
-[14] &lt;a href=&quot;introduction.html#rstudio&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.2&lt;/b&gt; RStudio&lt;/a&gt;
-[15] &lt;a href=&quot;introduction.html#the-tidyverse&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.3&lt;/b&gt; The tidyve ...
-[16] &lt;a href=&quot;introduction.html#other-packages&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.4.4&lt;/b&gt; Other pac ...
-[17] &lt;a href=&quot;introduction.html#running-r-code&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.5&lt;/b&gt; Running R c ...
-[18] &lt;a href=&quot;introduction.html#getting-help-and-learning-more&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.6 ...
-[19] &lt;a href=&quot;introduction.html#acknowledgements-1&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.7&lt;/b&gt; Acknowl ...
-[20] &lt;a href=&quot;introduction.html#colophon&quot;&gt;&lt;i class=&quot;fa fa-check&quot;&gt;&lt;/i&gt;&lt;b&gt;1.8&lt;/b&gt; Colophon&lt;/a&gt;</code></pre>
-<p>Specifying the main body of the webpage (&quot;section&quot;) solves this, but we still want just the urls. Using <code>html_attr()</code> gives us just the url portion of the HTML link element (<code>&lt;a&gt;</code>)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_attr</span>(<span class="st">&quot;href&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">20</span>)  <span class="co"># return first 20 results</span></code></pre></div>
-<pre><code> [1] &quot;http://amzn.to/2aHLAQ1&quot;                                           
- [2] &quot;http://creativecommons.org/licenses/by-nc-nd/3.0/us/&quot;             
- [3] &quot;http://amzn.to/2aHLAQ1&quot;                                           
- [4] &quot;https://www.doc.govt.nz/kakapo-donate&quot;                            
- [5] &quot;https://www.youtube.com/watch?v=9T1vfsHYiKY&quot;                      
- [6] &quot;https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html&quot;
- [7] &quot;https://github.com/adidoit&quot;                                       
- [8] &quot;https://github.com/agila5&quot;                                        
- [9] &quot;https://github.com/ajay-d&quot;                                        
-[10] &quot;https://github.com/AlanFeder&quot;                                     
-[11] &quot;https://github.com/alonzi&quot;                                        
-[12] &quot;https://github.com/ALShum&quot;                                        
-[13] &quot;https://github.com/andland&quot;                                       
-[14] &quot;https://github.com/andrewmacfarland&quot;                              
-[15] &quot;https://github.com/aviast&quot;                                        
-[16] &quot;https://github.com/batpigandme&quot;                                   
-[17] &quot;https://github.com/bbrewington&quot;                                   
-[18] &quot;https://github.com/behrman&quot;                                       
-[19] &quot;https://github.com/benherbertson&quot;                                 
-[20] &quot;https://github.com/benmarwick&quot;                                    </code></pre>
+ [1] &lt;a class=&quot;sr-only sr-only-focusable&quot; href=&quot;#content&quot;&gt;Skip to main content&lt;/a&gt;
+ [2] &lt;a href=&quot;index.html&quot; title=&quot;&quot;&gt;R for Data Science&lt;/a&gt;
+ [3] &lt;a class=&quot;active&quot; href=&quot;index.html&quot;&gt;Welcome&lt;/a&gt;
+ [4] &lt;a class=&quot;&quot; href=&quot;introduction.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;1&lt;/span&gt; Introducti ...
+ [5] &lt;a class=&quot;&quot; href=&quot;explore-intro.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;2&lt;/span&gt; Introduct ...
+ [6] &lt;a class=&quot;&quot; href=&quot;data-visualisation.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;3&lt;/span&gt; Data ...
+ [7] &lt;a class=&quot;&quot; href=&quot;workflow-basics.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;4&lt;/span&gt; Workflo ...
+ [8] &lt;a class=&quot;&quot; href=&quot;transform.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;5&lt;/span&gt; Data transfor ...
+ [9] &lt;a class=&quot;&quot; href=&quot;workflow-scripts.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;6&lt;/span&gt; Workfl ...
+[10] &lt;a class=&quot;&quot; href=&quot;exploratory-data-analysis.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;7&lt;/spa ...
+[11] &lt;a class=&quot;&quot; href=&quot;workflow-projects.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;8&lt;/span&gt; Workf ...
+[12] &lt;a class=&quot;&quot; href=&quot;wrangle-intro.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;9&lt;/span&gt; Introduct ...
+[13] &lt;a class=&quot;&quot; href=&quot;tibbles.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;10&lt;/span&gt; Tibbles&lt;/a&gt;
+[14] &lt;a class=&quot;&quot; href=&quot;data-import.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;11&lt;/span&gt; Data impor ...
+[15] &lt;a class=&quot;&quot; href=&quot;tidy-data.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;12&lt;/span&gt; Tidy data&lt;/a&gt;
+[16] &lt;a class=&quot;&quot; href=&quot;relational-data.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;13&lt;/span&gt; Relati ...
+[17] &lt;a class=&quot;&quot; href=&quot;strings.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;14&lt;/span&gt; Strings&lt;/a&gt;
+[18] &lt;a class=&quot;&quot; href=&quot;factors.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;15&lt;/span&gt; Factors&lt;/a&gt;
+[19] &lt;a class=&quot;&quot; href=&quot;dates-and-times.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;16&lt;/span&gt; Dates  ...
+[20] &lt;a class=&quot;&quot; href=&quot;program-intro.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;17&lt;/span&gt; Introduc ...</code></pre>
+<p>Specifying the main body of the webpage (&quot;main&quot;) solves this, but we still want just the urls. Using <code>html_attr()</code> gives us just the url portion of the HTML link element (<code>&lt;a&gt;</code>)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;main&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_attr</span>(<span class="st">&quot;href&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">20</span>)  <span class="co"># return first 20 results</span></code></pre></div>
+<pre><code> [1] &quot;#welcome&quot;                                                         
+ [2] &quot;http://amzn.to/2aHLAQ1&quot;                                           
+ [3] &quot;http://creativecommons.org/licenses/by-nc-nd/3.0/us/&quot;             
+ [4] &quot;http://amzn.to/2aHLAQ1&quot;                                           
+ [5] &quot;https://www.doc.govt.nz/kakapo-donate&quot;                            
+ [6] &quot;https://www.youtube.com/watch?v=9T1vfsHYiKY&quot;                      
+ [7] &quot;https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html&quot;
+ [8] &quot;#acknowledgements&quot;                                                
+ [9] &quot;https://github.com/adidoit&quot;                                       
+[10] &quot;https://github.com/agila5&quot;                                        
+[11] &quot;https://github.com/ajay-d&quot;                                        
+[12] &quot;https://github.com/AlanFeder&quot;                                     
+[13] &quot;https://github.com/alonzi&quot;                                        
+[14] &quot;https://github.com/ALShum&quot;                                        
+[15] &quot;https://github.com/andland&quot;                                       
+[16] &quot;https://github.com/andrewmacfarland&quot;                              
+[17] &quot;https://github.com/aviast&quot;                                        
+[18] &quot;https://github.com/batpigandme&quot;                                   
+[19] &quot;https://github.com/bbrewington&quot;                                   
+[20] &quot;https://github.com/behrman&quot;                                       </code></pre>
 <p>If you wanted just the text associated with the links and not the link themselves, just pull the text instead of using <code>html_attr()</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">20</span>)  <span class="co"># return first 20 results</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;main&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_text</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">20</span>)  <span class="co"># return first 20 results</span></code></pre></div>
 <pre><code> [1] &quot;&quot;                                                       
- [2] &quot;Creative Commons Attribution-NonCommercial-NoDerivs 3.0&quot;
- [3] &quot;amazon&quot;                                                 
- [4] &quot;Kākāpō Recovery&quot;                                        
- [5] &quot;kākāpō&quot;                                                 
- [6] &quot;Contributor Code of Conduct&quot;                            
- [7] &quot;@adidoit&quot;                                               
- [8] &quot;@agila5&quot;                                                
- [9] &quot;@ajay-d&quot;                                                
-[10] &quot;@AlanFeder&quot;                                             
-[11] &quot;@alonzi&quot;                                                
-[12] &quot;@ALShum&quot;                                                
-[13] &quot;@andland&quot;                                               
-[14] &quot;@andrewmacfarland&quot;                                      
-[15] &quot;@aviast&quot;                                                
-[16] &quot;@batpigandme&quot;                                           
-[17] &quot;@bbrewington&quot;                                           
-[18] &quot;@behrman&quot;                                               
-[19] &quot;@benherbertson&quot;                                         
-[20] &quot;@benmarwick&quot;                                            </code></pre>
+ [2] &quot;&quot;                                                       
+ [3] &quot;Creative Commons Attribution-NonCommercial-NoDerivs 3.0&quot;
+ [4] &quot;amazon&quot;                                                 
+ [5] &quot;Kākāpō Recovery&quot;                                        
+ [6] &quot;kākāpō&quot;                                                 
+ [7] &quot;Contributor Code of Conduct&quot;                            
+ [8] &quot;&quot;                                                       
+ [9] &quot;@adidoit&quot;                                               
+[10] &quot;@agila5&quot;                                                
+[11] &quot;@ajay-d&quot;                                                
+[12] &quot;@AlanFeder&quot;                                             
+[13] &quot;@alonzi&quot;                                                
+[14] &quot;@ALShum&quot;                                                
+[15] &quot;@andland&quot;                                               
+[16] &quot;@andrewmacfarland&quot;                                      
+[17] &quot;@aviast&quot;                                                
+[18] &quot;@batpigandme&quot;                                           
+[19] &quot;@bbrewington&quot;                                           
+[20] &quot;@behrman&quot;                                               </code></pre>
 <p>To pull a value/term from a webscraped vector, you can use <code>extract2()</code> from the <code>magrittr</code> package to specify the position in the vector</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(magrittr)
-<span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">node</span>(<span class="st">&quot;main&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">extract2</span>(<span class="dv">3</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># get the 3rd scraped term</span>
 <span class="st">  </span><span class="kw">html_text</span>()  </code></pre></div>
-<pre><code>[1] &quot;amazon&quot;</code></pre>
+<pre><code>[1] &quot;Creative Commons Attribution-NonCommercial-NoDerivs 3.0&quot;</code></pre>
 <p>Alternatively, you can index the term</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;section&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;main&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
 <span class="st">  </span>.[[<span class="dv">3</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># get the 3rd scraped term</span>
 <span class="st">  </span><span class="kw">html_text</span>() </code></pre></div>
-<pre><code>[1] &quot;amazon&quot;</code></pre>
+<pre><code>[1] &quot;Creative Commons Attribution-NonCommercial-NoDerivs 3.0&quot;</code></pre>
 </div>
 <div id="plotting-images-directly-from-webpages" class="section level2">
 <h2>Plotting images directly from webpages</h2>
