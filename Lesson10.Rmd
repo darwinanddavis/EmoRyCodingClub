@@ -181,7 +181,31 @@ node("main") %>%
   html_nodes("a") %>% 
   .[[3]] %>% # get the 3rd scraped term
   html_text() 
+
+# to return a range/sequence  
+node("main") %>% 
+  html_nodes("a") %>% 
+  .[3:6] %>% # get range 
+  html_text() 
+
 ```
+
+
+## Alternative method using `xml`  
+You can also search for nodes and attributes using xpaths (XML), if that's your thing.     
+The string convention is './/<string>' for each node/attribute       
+```{r}
+require(xml)
+
+# find all XML returning 'a' tags
+url %>% read_html() %>% 
+  xml_find_all(".//a") 
+
+# find the first XML returning 'list'
+url %>% read_html() %>% 
+  xml_find_first(".//li")
+```
+
 
 ## Plotting images directly from webpages  
 
@@ -191,7 +215,6 @@ Use `image_read()` from the `magick` package to plot images directly after scrap
 require(magick)
 node("img") %>% html_attr("src") %>% image_read()
 ```
-
 
 ## Challenge    
 

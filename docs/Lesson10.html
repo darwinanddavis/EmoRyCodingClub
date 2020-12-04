@@ -742,19 +742,64 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
 <span class="st">  </span>.[[<span class="dv">3</span>]] <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># get the 3rd scraped term</span>
 <span class="st">  </span><span class="kw">html_text</span>() </code></pre></div>
 <pre><code>[1] &quot;Creative Commons Attribution-NonCommercial-NoDerivs 3.0&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># to return a range/sequence  </span>
+<span class="kw">node</span>(<span class="st">&quot;main&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">html_nodes</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span>.[<span class="dv">3</span><span class="op">:</span><span class="dv">6</span>] <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># get range </span>
+<span class="st">  </span><span class="kw">html_text</span>() </code></pre></div>
+<pre><code>[1] &quot;Creative Commons Attribution-NonCommercial-NoDerivs 3.0&quot;
+[2] &quot;amazon&quot;                                                 
+[3] &quot;Kākāpō Recovery&quot;                                        
+[4] &quot;kākāpō&quot;                                                 </code></pre>
+</div>
+<div id="alternative-method-using-xml" class="section level2">
+<h2>Alternative method using <code>xml</code></h2>
+<p>You can also search for nodes and attributes using xpaths (XML), if that's your thing.<br />
+The string convention is './/<string>' for each node/attribute</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(xml)
+
+<span class="co"># find all XML returning &#39;a&#39; tags</span>
+url <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">read_html</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">xml_find_all</span>(<span class="st">&quot;.//a&quot;</span>)</code></pre></div>
+<pre><code>{xml_nodeset (187)}
+ [1] &lt;a class=&quot;sr-only sr-only-focusable&quot; href=&quot;#content&quot;&gt;Skip to main content&lt;/a&gt;
+ [2] &lt;a href=&quot;index.html&quot; title=&quot;&quot;&gt;R for Data Science&lt;/a&gt;
+ [3] &lt;a class=&quot;active&quot; href=&quot;index.html&quot;&gt;Welcome&lt;/a&gt;
+ [4] &lt;a class=&quot;&quot; href=&quot;introduction.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;1&lt;/span&gt; Introducti ...
+ [5] &lt;a class=&quot;&quot; href=&quot;explore-intro.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;2&lt;/span&gt; Introduct ...
+ [6] &lt;a class=&quot;&quot; href=&quot;data-visualisation.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;3&lt;/span&gt; Data ...
+ [7] &lt;a class=&quot;&quot; href=&quot;workflow-basics.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;4&lt;/span&gt; Workflo ...
+ [8] &lt;a class=&quot;&quot; href=&quot;transform.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;5&lt;/span&gt; Data transfor ...
+ [9] &lt;a class=&quot;&quot; href=&quot;workflow-scripts.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;6&lt;/span&gt; Workfl ...
+[10] &lt;a class=&quot;&quot; href=&quot;exploratory-data-analysis.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;7&lt;/spa ...
+[11] &lt;a class=&quot;&quot; href=&quot;workflow-projects.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;8&lt;/span&gt; Workf ...
+[12] &lt;a class=&quot;&quot; href=&quot;wrangle-intro.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;9&lt;/span&gt; Introduct ...
+[13] &lt;a class=&quot;&quot; href=&quot;tibbles.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;10&lt;/span&gt; Tibbles&lt;/a&gt;
+[14] &lt;a class=&quot;&quot; href=&quot;data-import.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;11&lt;/span&gt; Data impor ...
+[15] &lt;a class=&quot;&quot; href=&quot;tidy-data.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;12&lt;/span&gt; Tidy data&lt;/a&gt;
+[16] &lt;a class=&quot;&quot; href=&quot;relational-data.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;13&lt;/span&gt; Relati ...
+[17] &lt;a class=&quot;&quot; href=&quot;strings.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;14&lt;/span&gt; Strings&lt;/a&gt;
+[18] &lt;a class=&quot;&quot; href=&quot;factors.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;15&lt;/span&gt; Factors&lt;/a&gt;
+[19] &lt;a class=&quot;&quot; href=&quot;dates-and-times.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;16&lt;/span&gt; Dates  ...
+[20] &lt;a class=&quot;&quot; href=&quot;program-intro.html&quot;&gt;&lt;span class=&quot;header-section-number&quot;&gt;17&lt;/span&gt; Introduc ...
+...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># find the first XML returning &#39;list&#39;</span>
+url <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">read_html</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">xml_find_first</span>(<span class="st">&quot;.//li&quot;</span>)</code></pre></div>
+<pre><code>{html_node}
+&lt;li&gt;
+[1] &lt;a class=&quot;active&quot; href=&quot;index.html&quot;&gt;Welcome&lt;/a&gt;</code></pre>
 </div>
 <div id="plotting-images-directly-from-webpages" class="section level2">
 <h2>Plotting images directly from webpages</h2>
 <p>Use <code>image_read()</code> from the <code>magick</code> package to plot images directly after scraping from a webpage</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(magick)
 <span class="kw">node</span>(<span class="st">&quot;img&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_attr</span>(<span class="st">&quot;src&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">image_read</span>()</code></pre></div>
-<p><img src="Lesson10_files/figure-html/unnamed-chunk-12-1.png" width="250" /></p>
+<p><img src="Lesson10_files/figure-html/unnamed-chunk-13-1.png" width="250" /></p>
 </div>
 <div id="challenge" class="section level2">
 <h2>Challenge</h2>
 <p>Find and scrape the image from the below url and plot it, all without leaving <code>R</code> or saving the img to your drive.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://www.imdb.com/title/tt0094625/?ref_=fn_al_tt_1&quot;</span></code></pre></div>
-<p><img src="Lesson10_files/figure-html/unnamed-chunk-14-1.png" width="91" /></p>
+<p><img src="Lesson10_files/figure-html/unnamed-chunk-15-1.png" width="91" /></p>
 </div>
 </div>
 
