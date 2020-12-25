@@ -116,7 +116,7 @@ str_sub(txt,1,2) <- "INSERT TEXT AT POSITION"
   
 Shorten text with ellipsis to nth character  
 ```{r}
-txt_short <- txt %>% str_trunc(2000) # munst be greater than 3 as this is the length of the ellipsis
+txt_short <- txt %>% str_trunc(20) # munst be greater than 3 as this is the length of the ellipsis
 txt_short
 ```
 
@@ -135,8 +135,8 @@ txt %>% str_match_all(pat) # extract all pattern instances as matrix
 
 View an HTML rendering of the text using `str_view()`    
 ```{r}
-# visualise the first 1000 characters
-txt %>% str_sub(1,1000) %>% 
+# visualise the first 100 characters
+txt %>% str_sub(1,100) %>% 
   str_view(" ")
 ```
 \  
@@ -169,13 +169,13 @@ pat_all
 txt %>% str_replace_all(pat_all,repl)
 ```
   
-# Some more useful functions  
+# Further useful functions  
   
 Duplicate string  
 ```{r}
 # use the smaller, split text 
 txt_s <- txt_split[5]
-txt_s %>% str_dup(10) # duplicate string n number of times (10)     
+txt_s %>% str_dup(3) # duplicate string n number of times (3)     
 
 ```
 

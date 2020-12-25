@@ -1,26 +1,4 @@
 
- 127 files changed, 41761 insertions(+), 1129 deletions(-)
- rewrite .Rproj.user/ABE7B653/console06/INDEX001 (82%)
- delete mode 100644 Lesson4.html
- create mode 100644 docs/img/stringr.png
- create mode 100644 docs/site_libs/str_view-0.1.0/str_view.css
- create mode 100644 docs/site_libs/str_view-binding-1.4.0/str_view.js
- create mode 100644 docs/text.txt
- create mode 100644 img/stringr.png
- create mode 100644 index.html
- create mode 100644 index.knit.html
- create mode 100644 site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js
- create mode 100644 site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js
- create mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.css
- create mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.css.map
- create mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap-theme.min.css
- create mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.css
- create mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.css.map
- create mode 100644 site_libs/bootstrap-3.3.5/css/bootstrap.min.css
- create mode 100644 site_libs/bootstrap-3.3.5/css/cerulean.min.css
- create mode 100644 site_libs/bootstrap-3.3.5/css/cosmo.min.css
- create mode 100644 site_libs/bootstrap-3.3.5/css/darkly.min.css
- create mode 100644 site_libs/bootstrap-3.3.5/css/flatly.min.css
  create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Lato.ttf
  create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/LatoBold.ttf
  create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
@@ -1000,3 +978,25 @@ remote: Resolving deltas:   0% (0/21)[Kremote: Resolving deltas:   4% (1/21)[
 To https://github.com/darwinanddavis/EmoRyCodingClub
    854878e..4eeb997  master -> master
 git pussh origin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crem[8Pote --v[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'uc2 add merge'[A[C[C[C[C[C[C[C[C[C[Cadd .[K
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git addd .[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crem[8Pote --v[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'uc2 add merge'[1P'[1P'[1P'[1P'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crem[11Pote --v[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'uc2 add m'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Ppwd
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit pussh origin gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[3Ppwd
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit addd .[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'uc2 add m'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[Crem[11Pote --v[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crem[8Pote --v[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'uc2 add m'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[3Ppwd
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit pussh origin gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'cv nov19'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'cv nov19'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin gh-pages[A[C[C[C[C[C[C[C[C[C[C[C[3Ppwd
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit addd .[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'uc2 add m'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[Crem[11Pote --v[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit addd .[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin master[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crem[8Pote --v[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'uc2 add m'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'[1P'l'1'0' 'a'd'd' 'x'm'l'
+[master a029c63] l10 add xml
+ 25 files changed, 352 insertions(+), 280 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (78%)
+ rename docs/Lesson10_files/figure-html/{unnamed-chunk-12-1.png => unnamed-chunk-13-1.png} (99%)
+ rename docs/Lesson10_files/figure-html/{unnamed-chunk-14-1.png => unnamed-chunk-15-1.png} (99%)
+ delete mode 100644 docs/Lesson6_files/figure-html/unnamed-chunk-12-1.png
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git commmit -m 'l10 add xml'[A[C[C[C[C[C[C[C[C[C[C[C[Cadd .[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpush origin master
+Counting objects: 34, done.
+Delta compression using up to 4 threads.
+Compressing objects:   3% (1/30)   Compressing objects:   6% (2/30)   Compressing objects:  10% (3/30)   Compressing objects:  13% (4/30)   Compressing objects:  16% (5/30)   Compressing objects:  20% (6/30)   Compressing objects:  23% (7/30)   Compressing objects:  26% (8/30)   Compressing objects:  30% (9/30)   Compressing objects:  33% (10/30)   Compressing objects:  36% (11/30)   Compressing objects:  40% (12/30)   Compressing objects:  43% (13/30)   Compressing objects:  46% (14/30)   Compressing objects:  50% (15/30)   Compressing objects:  53% (16/30)   Compressing objects:  56% (17/30)   Compressing objects:  60% (18/30)   Compressing objects:  63% (19/30)   Compressing objects:  66% (20/30)   Compressing objects:  70% (21/30)   Compressing objects:  73% (22/30)   Compressing objects:  76% (23/30)   Compressing objects:  80% (24/30)   Compressing objects:  83% (25/30)   Compressing objects:  86% (26/30)   Compressing objects:  90% (27/30)   Compressing objects:  93% (28/30)   Compressing objects:  96% (29/30)   Compressing objects: 100% (30/30)   Compressing objects: 100% (30/30), done.
+Writing objects:   2% (1/34)   Writing objects:   5% (2/34)   Writing objects:   8% (3/34)   Writing objects:  11% (4/34)   Writing objects:  14% (5/34)   Writing objects:  17% (6/34)   Writing objects:  20% (7/34)   Writing objects:  23% (8/34)   Writing objects:  26% (9/34)   Writing objects:  29% (10/34)   Writing objects:  32% (11/34)   Writing objects:  35% (12/34)   Writing objects:  38% (13/34)   Writing objects:  41% (14/34)   Writing objects:  44% (15/34)   Writing objects:  47% (16/34)   Writing objects:  50% (17/34)   Writing objects:  52% (18/34)   Writing objects:  55% (19/34)   Writing objects:  58% (20/34)   Writing objects:  61% (21/34)   Writing objects:  64% (22/34)   Writing objects:  67% (23/34)   Writing objects:  70% (24/34)   Writing objects:  73% (25/34)   Writing objects:  76% (26/34)   Writing objects:  79% (27/34)   Writing objects:  82% (28/34)   Writing objects:  85% (29/34)   Writing objects:  88% (30/34)   Writing objects:  91% (31/34)   Writing objects:  94% (32/34)   Writing objects:  97% (33/34)   Writing objects: 100% (34/34)   Writing objects: 100% (34/34), 395.46 KiB | 0 bytes/s, done.
+Total 34 (delta 21), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/21)[Kremote: Resolving deltas:   4% (1/21)[Kremote: Resolving deltas:   9% (2/21)[Kremote: Resolving deltas:  14% (3/21)[Kremote: Resolving deltas:  19% (4/21)[Kremote: Resolving deltas:  23% (5/21)[Kremote: Resolving deltas:  28% (6/21)[Kremote: Resolving deltas:  33% (7/21)[Kremote: Resolving deltas:  38% (8/21)[Kremote: Resolving deltas:  42% (9/21)[Kremote: Resolving deltas:  47% (10/21)[Kremote: Resolving deltas:  52% (11/21)[Kremote: Resolving deltas:  57% (12/21)[Kremote: Resolving deltas:  61% (13/21)[Kremote: Resolving deltas:  66% (14/21)[Kremote: Resolving deltas:  71% (15/21)[Kremote: Resolving deltas:  76% (16/21)[Kremote: Resolving deltas:  80% (17/21)[Kremote: Resolving deltas:  85% (18/21)[Kremote: Resolving deltas:  90% (19/21)[Kremote: Resolving deltas:  95% (20/21)[Kremote: Resolving deltas: 100% (21/21)[Kremote: Resolving deltas: 100% (21/21), completed with 21 local objects.[K
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   4eeb997..a029c63  master -> master
+[K6300L-127771-M:ecc malishev$ gi t add .

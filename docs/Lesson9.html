@@ -511,25 +511,25 @@ div.tocify {
 <h1>Quick intro to time formats</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ct &lt;-<span class="st"> </span><span class="kw">now</span>()  <span class="co"># get date and time from your current location</span>
 ct
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-04 18:56:11 AEDT&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-12-25 17:56:08 AEDT&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%y-%m&quot;</span>)  <span class="co"># year, month</span>
 [<span class="dv">1</span>] <span class="st">&quot;20-12&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m&quot;</span>)  <span class="co"># full year, month</span>
 [<span class="dv">1</span>] <span class="st">&quot;2020-12&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)  <span class="co"># year, month, day</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-04&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-12-25&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d-%H-%M-%S&quot;</span>)  <span class="co"># year, month, day, hour, min, sec</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-04-18-56-11&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-12-25-17-56-08&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y ;) %m_:P_%d&quot;</span>)  <span class="co"># year, month, day with custom separators</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020 ;) 12_:P_04&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020 ;) 12_:P_25&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%D&quot;</span>)  <span class="co"># date </span>
-[<span class="dv">1</span>] <span class="st">&quot;12/04/20&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;12/25/20&quot;</span>
 
 <span class="co"># alternative versions of getting current date and time, respectively (base R)</span>
 <span class="kw">Sys.Date</span>()
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-04&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-12-25&quot;</span>
 <span class="kw">Sys.time</span>()
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-04 18:56:11 AEDT&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2020-12-25 17:56:08 AEDT&quot;</span></code></pre></div>
 </div>
 <div id="time-functions" class="section level1">
 <h1>Time functions</h1>
@@ -628,24 +628,24 @@ x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
 <p>Pulling specific time components</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># pull specific time components</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>day
-[<span class="dv">1</span>] <span class="dv">4</span>
+[<span class="dv">1</span>] <span class="dv">25</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>hour
-[<span class="dv">1</span>] <span class="dv">18</span>
+[<span class="dv">1</span>] <span class="dv">17</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>second
-[<span class="dv">1</span>] <span class="fl">11.90861</span>
+[<span class="dv">1</span>] <span class="fl">9.847767</span>
 
 <span class="co"># change the day of an assigned time vector</span>
 dd &lt;-<span class="st"> </span><span class="kw">now</span>()
 <span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">31</span>
 dd
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-31 18:56:11 AEDT&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-12-31 17:56:09 AEDT&quot;</span>
 
 <span class="co"># setting a day greater than the last day of the chosen month will automatically roll over to the</span>
 <span class="co"># following month</span>
 dd &lt;-<span class="st"> </span><span class="kw">now</span>()
 <span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">32</span>
 dd
-[<span class="dv">1</span>] <span class="st">&quot;2021-01-01 18:56:11 AEDT&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2021-01-01 17:56:09 AEDT&quot;</span></code></pre></div>
 <div id="dataset" class="section level3">
 <h3>Dataset</h3>
 <p>Load <code>nycflights13</code> dataset and check out the <code>time_hour</code> column</p>
@@ -728,13 +728,13 @@ ft &lt;-<span class="st"> </span>ft[<span class="kw">sample</span>(ft <span clas
 <h1>Other useful functions</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># roll back to first or last day of previous month</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rollback</span>(<span class="dt">preserve_hms =</span> T, <span class="dt">roll_to_first =</span> T)
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-01 18:56:12 AEDT&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2020-12-01 17:56:10 AEDT&quot;</span>
 
 <span class="fl">2012.75</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">date_decimal</span>()  <span class="co"># decimal dates, e.g. 3/4 into 2012  </span>
 [<span class="dv">1</span>] <span class="st">&quot;2012-10-01 12:00:00 UTC&quot;</span>
 
 <span class="kw">today</span>()  <span class="co"># today&#39;s date  </span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-04&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2020-12-25&quot;</span></code></pre></div>
 <p>Pass any of the below functions individually</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ftl &lt;-<span class="st"> </span>ft <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">list</span>(<span class="kw">isoyear</span>(.), <span class="kw">epiyear</span>(.), <span class="kw">wday</span>(.), <span class="kw">wday</span>(., <span class="dt">label =</span> T), <span class="kw">qday</span>(.), <span class="kw">week</span>(.), <span class="kw">semester</span>(.), 
     <span class="kw">am</span>(.), <span class="kw">pm</span>(.))
