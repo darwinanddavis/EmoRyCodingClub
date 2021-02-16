@@ -626,8 +626,8 @@ txt_short</code></pre></div>
 <p>View an HTML rendering of the text using <code>str_view()</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># visualise the first 100 characters</span>
 txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_sub</span>(<span class="dv">1</span>, <span class="dv">100</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_view</span>(<span class="st">&quot; &quot;</span>)</code></pre></div>
-<p><div id="htmlwidget-042cac5b84beaed64a62" style="width:960px;height:100%;" class="str_view html-widget"></div>
-<script type="application/json" data-for="htmlwidget-042cac5b84beaed64a62">{"x":{"html":"<ul>\n  <li>INSERT<span class='match'> <\/span>TEXT AT POSITION Strings | R for Data Science\n    window.dataLayer = window.dataLayer || [];\n<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>  </p>
+<p><div id="htmlwidget-3bef27ed06529bcfebd8" style="width:960px;height:100%;" class="str_view html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3bef27ed06529bcfebd8">{"x":{"html":"<ul>\n  <li>INSERT<span class='match'> <\/span>TEXT AT POSITION Strings | R for Data Science\n    window.dataLayer = window.dataLayer || [];\n<\/li>\n<\/ul>"},"evals":[],"jsHooks":[]}</script>  </p>
 <p>Split the text into separate components and apply the <code>str_sub</code> function to each new component</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># split into matrix at every instance of pattern</span>
 txt_split &lt;-<span class="st"> </span>txt <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">str_split_fixed</span>(pat, <span class="dt">n =</span> <span class="ot">Inf</span>)

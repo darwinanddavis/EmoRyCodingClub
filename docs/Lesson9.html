@@ -511,25 +511,25 @@ div.tocify {
 <h1>Quick intro to time formats</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ct &lt;-<span class="st"> </span><span class="kw">now</span>()  <span class="co"># get date and time from your current location</span>
 ct
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-25 17:56:08 AEDT&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-02-17 10:29:38 AEDT&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%y-%m&quot;</span>)  <span class="co"># year, month</span>
-[<span class="dv">1</span>] <span class="st">&quot;20-12&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;21-02&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m&quot;</span>)  <span class="co"># full year, month</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-12&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-02&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)  <span class="co"># year, month, day</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-25&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-02-17&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d-%H-%M-%S&quot;</span>)  <span class="co"># year, month, day, hour, min, sec</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-25-17-56-08&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-02-17-10-29-38&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y ;) %m_:P_%d&quot;</span>)  <span class="co"># year, month, day with custom separators</span>
-[<span class="dv">1</span>] <span class="st">&quot;2020 ;) 12_:P_25&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021 ;) 02_:P_17&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%D&quot;</span>)  <span class="co"># date </span>
-[<span class="dv">1</span>] <span class="st">&quot;12/25/20&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;02/17/21&quot;</span>
 
 <span class="co"># alternative versions of getting current date and time, respectively (base R)</span>
 <span class="kw">Sys.Date</span>()
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-25&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-02-17&quot;</span>
 <span class="kw">Sys.time</span>()
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-25 17:56:08 AEDT&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2021-02-17 10:29:38 AEDT&quot;</span></code></pre></div>
 </div>
 <div id="time-functions" class="section level1">
 <h1>Time functions</h1>
@@ -628,24 +628,24 @@ x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
 <p>Pulling specific time components</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># pull specific time components</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>day
-[<span class="dv">1</span>] <span class="dv">25</span>
-<span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>hour
 [<span class="dv">1</span>] <span class="dv">17</span>
+<span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>hour
+[<span class="dv">1</span>] <span class="dv">10</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>second
-[<span class="dv">1</span>] <span class="fl">9.847767</span>
+[<span class="dv">1</span>] <span class="fl">39.0822</span>
 
 <span class="co"># change the day of an assigned time vector</span>
 dd &lt;-<span class="st"> </span><span class="kw">now</span>()
 <span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">31</span>
 dd
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-31 17:56:09 AEDT&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-03-03 10:29:39 AEDT&quot;</span>
 
 <span class="co"># setting a day greater than the last day of the chosen month will automatically roll over to the</span>
 <span class="co"># following month</span>
 dd &lt;-<span class="st"> </span><span class="kw">now</span>()
 <span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">32</span>
 dd
-[<span class="dv">1</span>] <span class="st">&quot;2021-01-01 17:56:09 AEDT&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2021-03-04 10:29:39 AEDT&quot;</span></code></pre></div>
 <div id="dataset" class="section level3">
 <h3>Dataset</h3>
 <p>Load <code>nycflights13</code> dataset and check out the <code>time_hour</code> column</p>
@@ -728,13 +728,13 @@ ft &lt;-<span class="st"> </span>ft[<span class="kw">sample</span>(ft <span clas
 <h1>Other useful functions</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># roll back to first or last day of previous month</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rollback</span>(<span class="dt">preserve_hms =</span> T, <span class="dt">roll_to_first =</span> T)
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-01 17:56:10 AEDT&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-02-01 10:29:39 AEDT&quot;</span>
 
 <span class="fl">2012.75</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">date_decimal</span>()  <span class="co"># decimal dates, e.g. 3/4 into 2012  </span>
 [<span class="dv">1</span>] <span class="st">&quot;2012-10-01 12:00:00 UTC&quot;</span>
 
 <span class="kw">today</span>()  <span class="co"># today&#39;s date  </span>
-[<span class="dv">1</span>] <span class="st">&quot;2020-12-25&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2021-02-17&quot;</span></code></pre></div>
 <p>Pass any of the below functions individually</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ftl &lt;-<span class="st"> </span>ft <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">list</span>(<span class="kw">isoyear</span>(.), <span class="kw">epiyear</span>(.), <span class="kw">wday</span>(.), <span class="kw">wday</span>(., <span class="dt">label =</span> T), <span class="kw">qday</span>(.), <span class="kw">week</span>(.), <span class="kw">semester</span>(.), 
     <span class="kw">am</span>(.), <span class="kw">pm</span>(.))
@@ -781,6 +781,20 @@ $`AM?`
 $`PM?`
  [1]  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE
 [17]  TRUE  TRUE FALSE  TRUE</code></pre>
+<p>Convert character to timedate format</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(stringr)  <span class="co"># for generating character error</span>
+
+ftc &lt;-<span class="st"> </span>ft <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">as.character</span>()
+ftc[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>] &lt;-<span class="st"> </span>ftc[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>] <span class="op">%&gt;%</span><span class="st"> </span>stringr<span class="op">::</span><span class="kw">str_replace</span>(<span class="st">&quot;:&quot;</span>, <span class="st">&quot;.&quot;</span>)  <span class="co"># create erraneous data</span>
+
+ftc <span class="op">%&gt;%</span><span class="st"> </span>lubridate<span class="op">::</span><span class="kw">ymd_hms</span>()
+ [<span class="dv">1</span>] <span class="st">&quot;2013-02-23 14:00:00 UTC&quot;</span> <span class="st">&quot;2013-06-01 15:00:00 UTC&quot;</span> <span class="st">&quot;2013-04-28 08:00:00 UTC&quot;</span>
+ [<span class="dv">4</span>] <span class="st">&quot;2013-06-01 15:00:00 UTC&quot;</span> <span class="st">&quot;2013-11-30 17:00:00 UTC&quot;</span> <span class="st">&quot;2013-08-21 20:00:00 UTC&quot;</span>
+ [<span class="dv">7</span>] <span class="st">&quot;2013-06-19 08:00:00 UTC&quot;</span> <span class="st">&quot;2013-01-16 19:00:00 UTC&quot;</span> <span class="st">&quot;2013-04-30 23:00:00 UTC&quot;</span>
+[<span class="dv">10</span>] <span class="st">&quot;2013-08-21 20:00:00 UTC&quot;</span> <span class="st">&quot;2013-08-15 18:00:00 UTC&quot;</span> <span class="st">&quot;2013-08-15 18:00:00 UTC&quot;</span>
+[<span class="dv">13</span>] <span class="st">&quot;2013-08-13 07:00:00 UTC&quot;</span> <span class="st">&quot;2013-02-11 15:00:00 UTC&quot;</span> <span class="st">&quot;2013-06-01 15:00:00 UTC&quot;</span>
+[<span class="dv">16</span>] <span class="st">&quot;2013-02-23 14:00:00 UTC&quot;</span> <span class="st">&quot;2013-01-16 19:00:00 UTC&quot;</span> <span class="st">&quot;2013-11-30 17:00:00 UTC&quot;</span>
+[<span class="dv">19</span>] <span class="st">&quot;2013-02-14 08:00:00 UTC&quot;</span> <span class="st">&quot;2013-11-30 17:00:00 UTC&quot;</span></code></pre></div>
 <p>Methods for plotting date-time data</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># calendar plot </span>
 <span class="kw">require</span>(sugrrants)
@@ -806,7 +820,7 @@ p &lt;-<span class="st"> </span><span class="kw">ggplot</span>(fdf,<span class="
 <span class="st">  </span><span class="kw">geom_line</span>(<span class="dt">show.legend=</span>F) <span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">theme_void</span>()
 p <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">prettify</span>() <span class="co"># add calendar text   </span></code></pre></div>
-<p><img src="Lesson9_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p><img src="Lesson9_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 
 

@@ -324,6 +324,17 @@ names(ftl) <- c(
 ftl
 ```
 
+
+Convert character to timedate format  
+```{r}
+require(stringr) # for generating character error
+
+ftc <- ft %>% as.character()
+ftc[1:5] <- ftc[1:5] %>% stringr::str_replace(":",".") # create erraneous data
+
+ftc %>% lubridate::ymd_hms()
+```
+
 Methods for plotting date-time data  
 ```{r,collapse=F}
 

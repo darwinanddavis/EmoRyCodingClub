@@ -1,25 +1,4 @@
 
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Lato.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/LatoBold.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/LatoItalic.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/NewsCycle.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/NewsCycleBold.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSans.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansBold.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansBoldItalic.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansItalic.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansLight.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/OpenSansLightItalic.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Raleway.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RalewayBold.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Roboto.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoBold.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoLight.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/RobotoMedium.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansPro.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProBold.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProItalic.ttf
- create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/SourceSansProLight.ttf
  create mode 100644 site_libs/bootstrap-3.3.5/css/fonts/Ubuntu.ttf
  create mode 100644 site_libs/bootstrap-3.3.5/css/journal.min.css
  create mode 100644 site_libs/bootstrap-3.3.5/css/lumen.min.css
@@ -1000,3 +979,34 @@ remote: Resolving deltas:   0% (0/21)[Kremote: Resolving deltas:   4% (1/21)[
 To https://github.com/darwinanddavis/EmoRyCodingClub
    4eeb997..a029c63  master -> master
 [K6300L-127771-M:ecc malishev$ gi t add .
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ gi t commit -m ;[K''l'8' 'r'e'd'o' 'e'g's'[1P'[1P'g's'
+[master 726149b] l8 redo egs
+ 20 files changed, 235 insertions(+), 236 deletions(-)
+ rewrite .Rproj.user/ABE7B653/console06/INDEX001 (78%)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ gi t remote --v
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ gitt remote --v[C[Ccommit -m 'l8 redo egs'[C[Cadd .[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp /Users/malishev/Documents/ecolaab/maptrack/funcs/user_read_funcc.R /Users/malishev/Documents/eccolab/maptrack/templates/safari//user_safari.R[A[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit[11P push origin master
+[K
+[K
+[K
+[K[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Counting objects: 28, done.
+Delta compression using up to 4 threads.
+Compressing objects:   3% (1/27)   Compressing objects:   7% (2/27)   Compressing objects:  11% (3/27)   Compressing objects:  14% (4/27)   Compressing objects:  18% (5/27)   Compressing objects:  22% (6/27)   Compressing objects:  25% (7/27)   Compressing objects:  29% (8/27)   Compressing objects:  33% (9/27)   Compressing objects:  37% (10/27)   Compressing objects:  40% (11/27)   Compressing objects:  44% (12/27)   Compressing objects:  48% (13/27)   Compressing objects:  51% (14/27)   Compressing objects:  55% (15/27)   Compressing objects:  59% (16/27)   Compressing objects:  62% (17/27)   Compressing objects:  66% (18/27)   Compressing objects:  70% (19/27)   Compressing objects:  74% (20/27)   Compressing objects:  77% (21/27)   Compressing objects:  81% (22/27)   Compressing objects:  85% (23/27)   Compressing objects:  88% (24/27)   Compressing objects:  92% (25/27)   Compressing objects:  96% (26/27)   Compressing objects: 100% (27/27)   Compressing objects: 100% (27/27), done.
+Writing objects:   3% (1/28)   Writing objects:   7% (2/28)   Writing objects:  10% (3/28)   Writing objects:  14% (4/28)   Writing objects:  17% (5/28)   Writing objects:  21% (6/28)   Writing objects:  25% (7/28)   Writing objects:  28% (8/28)   Writing objects:  32% (9/28)   Writing objects:  35% (10/28)   Writing objects:  39% (11/28)   Writing objects:  42% (12/28)   Writing objects:  46% (13/28)   Writing objects:  50% (14/28)   Writing objects:  53% (15/28)   Writing objects:  57% (16/28)   Writing objects:  60% (17/28)   Writing objects:  64% (18/28)   Writing objects:  67% (19/28)   Writing objects:  71% (20/28)   Writing objects:  75% (21/28)   Writing objects:  78% (22/28)   Writing objects:  82% (23/28)   Writing objects:  85% (24/28)   Writing objects:  89% (25/28)   Writing objects:  92% (26/28)   Writing objects:  96% (27/28)   Writing objects: 100% (28/28)   Writing objects: 100% (28/28), 5.47 KiB | 0 bytes/s, done.
+Total 28 (delta 22), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/22)[Kremote: Resolving deltas:   4% (1/22)[Kremote: Resolving deltas:   9% (2/22)[Kremote: Resolving deltas:  13% (3/22)[Kremote: Resolving deltas:  18% (4/22)[Kremote: Resolving deltas:  22% (5/22)[Kremote: Resolving deltas:  27% (6/22)[Kremote: Resolving deltas:  31% (7/22)[Kremote: Resolving deltas:  36% (8/22)[Kremote: Resolving deltas:  40% (9/22)[Kremote: Resolving deltas:  45% (10/22)[Kremote: Resolving deltas:  50% (11/22)[Kremote: Resolving deltas:  54% (12/22)[Kremote: Resolving deltas:  59% (13/22)[Kremote: Resolving deltas:  63% (14/22)[Kremote: Resolving deltas:  68% (15/22)[Kremote: Resolving deltas:  72% (16/22)[Kremote: Resolving deltas:  77% (17/22)[Kremote: Resolving deltas:  81% (18/22)[Kremote: Resolving deltas:  86% (19/22)[Kremote: Resolving deltas:  90% (20/22)[Kremote: Resolving deltas:  95% (21/22)[Kremote: Resolving deltas: 100% (22/22)[Kremote: Resolving deltas: 100% (22/22), completed with 22 local objects.[K
+To https://github.com/darwinanddavis/EmoRyCodingClub
+   a029c63..726149b  master -> master
+[K6300L-127771-M:ecc malishev$ cp /Volumees/Matt_timemachine/maptracks/funcs/useer_read_func.R /Volumes/Matt_timemachinne/maptracks/templates/feb/china/user_cchina.R[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit push origin master[K
+[K
+[K
+[K[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'gg17-21'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd . [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1P.[1P.[1P.[C[K[K remot e --v
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (fetch)
+origin	https://github.com/darwinanddavis/EmoRyCodingClub (push)
+]0;~/Documents/Emory/admin/ecc6300L-127771-M:ecc malishev$ git remotee --v[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccp /Volumes/Matt_timemachine/maptracks/funcs/useer_read_func.R /Volumes/Matt_timemachinne/maptracks/templates/feb/china/user_cchina.R[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit push origin master[K
+[K
+[K
+[K[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m 'gg17-21'[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cadd . [K

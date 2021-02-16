@@ -472,183 +472,222 @@ div.tocify {
 </div>
 
 
-<p><br />
-<!-- install packages --></p>
-<!-- ____________________________________________________________________________ -->
-<!-- ____________________________________________________________________________ -->
-<!-- ____________________________________________________________________________ -->
-<!-- start body -->
-<div id="lesson-6-lists-lists-lists-and-applying-functions-with-purrr" class="section level1">
-<h1>Lesson 6: Lists, lists, lists and applying functions with <code>purrr</code></h1>
 <p> </p>
-<p>Functions for Lesson 6<br />
-<code>map</code>, <code>pluck</code>, <code>keep</code>, <code>discard</code>, <code>compact</code><br />
+<!-- install packages -->
+<!-- ____________________________________________________________________________ -->
+<p><!-- ____________________________________________________________________________ --> <!-- ____________________________________________________________________________ --> <!-- start body --></p>
+<div id="lesson-11-debugging-and-troubleshooting-in-r" class="section level1">
+<h1>Lesson 11: Debugging and troubleshooting in <code>R</code></h1>
+<p> </p>
+<p>Functions for Lesson 11<br />
+<code>debug()</code>,<code>traceback()</code>,<code>browser()</code>, <code>options()</code>, <code>test_that()</code>, <code>qq_show()</code><br />
  </p>
-<p>Packages for Lesson 6<br />
-<code>dplyr</code>, <code>purrr</code><br />
+<p>Packages for Lesson 11<br />
+<code>reprex</code>, <code>rlang</code>, <code>testthat</code><br />
  </p>
 </div>
 <div id="agenda" class="section level1">
 <h1>Agenda</h1>
-<p>Use the <code>purrr</code> package to apply functions to lists and vectors.</p>
-<p><a href="https://purrr.tidyverse.org/">Cheat sheet for the <code>purrr</code> package</a>.<br />
- </p>
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
-<p><img src="img/purrr.jpg" style=width:50%></p>
+<p><img src="https://github.com/tidyverse/rvest/raw/master/man/figures/logo.pngZZ" style=width:25%></p>
 </div>
-<!-- ----------------------- image --------------------------- -->
-<p> </p>
-<!--  end yaml template------------------------------------------------------- -->
-</div>
-<div id="do-first" class="section level1">
-<h1>Do First</h1>
-<p>Recreate the below plot using the smaller NYC Airbnb dataset. The curve is a 'loess'. To change the legend title, add the (unintuitive) <code>colour = &quot;your legend title&quot;</code> argument to the <code>labs()</code> function.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># smaller csv file (16 cols)</span>
-url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
-nyc &lt;-<span class="st"> </span>readr<span class="op">::</span><span class="kw">read_csv</span>(url)
-nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># get smaller subet of data</span></code></pre></div>
-<p><img src="Lesson6_files/figure-html/unnamed-chunk-2-1.png" width="100%" /></p>
-</div>
-<div id="create-some-data-in-a-list" class="section level1">
-<h1>Create some data in a list</h1>
-<p>First generate some random data</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s1 &lt;-<span class="st"> </span><span class="kw">sample</span>(<span class="dv">10</span>)  <span class="co"># random number sample</span>
-s2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">500</span>)  <span class="co"># sample 10 normally distributed random numbers around a mean of 500 </span>
-s3 &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>)  <span class="co"># random uniform distribution</span>
-s1</code></pre></div>
-<pre><code> [1]  2  1 10  4  5  6  8  3  7  9</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s2</code></pre></div>
-<pre><code> [1] 499.0617 499.9691 500.2190 500.1345 500.8457 499.7911 500.0334 500.8123 502.4011 500.6459</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s3</code></pre></div>
-<pre><code> [1] 0.7059495 0.4251245 0.7588182 0.9693879 0.1275023 0.9504672 0.5024721 0.1854374 0.1037962
-[10] 0.4185556</code></pre>
-<p>Now combine these into a list using <code>list()</code></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 &lt;-<span class="st"> </span><span class="kw">list</span>(s1, s2, s3)  <span class="co"># create a list of these data</span>
-ls1</code></pre></div>
-<pre><code>[[1]]
- [1]  2  1 10  4  5  6  8  3  7  9
-
-[[2]]
- [1] 499.0617 499.9691 500.2190 500.1345 500.8457 499.7911 500.0334 500.8123 502.4011 500.6459
-
-[[3]]
- [1] 0.7059495 0.4251245 0.7588182 0.9693879 0.1275023 0.9504672 0.5024721 0.1854374 0.1037962
-[10] 0.4185556</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 <span class="op">%&gt;%</span><span class="st"> </span>str</code></pre></div>
-<pre><code>List of 3
- $ : int [1:10] 2 1 10 4 5 6 8 3 7 9
- $ : num [1:10] 499 500 500 500 501 ...
- $ : num [1:10] 0.706 0.425 0.759 0.969 0.128 ...</code></pre>
-</div>
-<div id="exercise-0" class="section level1">
-<h1>Exercise 0</h1>
-<div id="list-indexing" class="section level2">
-<h2>List indexing</h2>
-<p>Print the <code>ls1</code> list object and take note of the index and elements</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1
-
-<span class="co"># index</span>
-ls1[<span class="dv">1</span>]
-ls1[<span class="dv">2</span>]
-ls1[<span class="dv">3</span>]
-
-<span class="co"># elements</span>
-ls1[[<span class="dv">1</span>]][[<span class="dv">1</span>]]
-ls1[[<span class="dv">1</span>]][[<span class="dv">3</span>]]
-ls1[[<span class="dv">2</span>]][[<span class="dv">10</span>]]
-ls1[[<span class="dv">3</span>]][[<span class="dv">11</span>]]  <span class="co"># ??</span>
-ls1[[<span class="dv">3</span>]] <span class="op">%&gt;%</span><span class="st"> </span>length
-
-<span class="co"># what&#39;s the difference?</span>
-ls1[<span class="dv">1</span>]
-ls1[[<span class="dv">1</span>]]</code></pre></div>
-</div>
-<div id="apply-functions" class="section level2">
-<h2>Apply functions</h2>
-<p>The <code>purrr</code> package uses the following apply functions to apply function iteratively to a list or vector.</p>
-<p><code>map</code> Apply a function to each element of a list</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(purrr)
-<span class="kw">set.seed</span>(<span class="dv">12</span>)  <span class="co"># set a number seed to generate reprodicible results for random data  </span>
-<span class="kw">map</span>(ls1, mean)  <span class="co"># get the mean </span></code></pre></div>
-</div>
-<div id="exercise-1" class="section level2">
-<h2>Exercise 1</h2>
-<p>Apply summary stats to the <code>ls1</code> list data<br />
-* <code>sum</code><br />
-* <code>summary</code><br />
-* <code>max</code><br />
-* <code>sqrt</code><br />
-* <code>length</code> and <code>lengths</code></p>
-<p>What happens when you run the following and why?</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(ls1)
-<span class="kw">sum</span>(ls1)</code></pre></div>
-<p> </p>
-</div>
-</div>
-<div id="exercise-2" class="section level1">
-<h1>Exercise 2</h1>
-<div id="filter-lists" class="section level2">
-<h2>Filter lists</h2>
-<p><code>pluck</code> Select an element by name or index<br />
-<code>keep</code> Select elements that pass a logical test<br />
-<code>discard</code> Select elements that do not pass a logical test<br />
-<code>compact</code> Drop empty elements</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pluck</span>(ls1, <span class="dv">3</span>)  <span class="co"># advantage = returns numeric </span>
-ls1[<span class="dv">3</span>][[<span class="dv">1</span>]]  <span class="co"># this is the same as above</span>
-
-func &lt;-<span class="st"> </span><span class="kw">map</span>(ls1, mean) <span class="op">&gt;</span><span class="st"> </span><span class="dv">10</span>  <span class="co"># create a logical test (a predicate function)  </span>
-<span class="kw">keep</span>(ls1, func)
-<span class="kw">discard</span>(ls1, func)
-
-ls2 &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dv">1</span>, <span class="ot">NA</span>, <span class="ot">NULL</span>, <span class="kw">integer</span>(<span class="dv">0</span>), <span class="kw">list</span>())  <span class="co"># list of empty and null things  </span>
-<span class="kw">compact</span>(ls2)</code></pre></div>
-<p>Store plots in lists for easy retrieval. Create two plots of the <code>ls1</code> data (called <code>ls1p</code> and <code>ls2p</code>) and store in a list called <code>plot_list</code>.<br />
+<p>Debugging with purpose in <code>R</code></p>
+<p><a href="https://rvest.tidyverse.org/">Debugging in <code>R</code></a>.<br />
  </p>
-<p>First turn the list into a dataframe so <code>ggplot</code> understands it.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1_df &lt;-<span class="st"> </span>ls1 <span class="op">%&gt;%</span><span class="st"> </span>data.frame
-<span class="kw">names</span>(ls1_df) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;A&quot;</span>, <span class="st">&quot;B&quot;</span>, <span class="st">&quot;C&quot;</span>)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">plot_list &lt;-<span class="st"> </span><span class="kw">list</span>(ls1p, ls2p)</code></pre></div>
-<p>Plot your plot from the object <code>plot_list</code><br />
-<img src="Lesson6_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div id="troubleshooting-terminology" class="section level2">
+<h2>Troubleshooting terminology</h2>
+<p>error<br />
+debug<br />
+breakpoint<br />
+callstack<br />
+traceback<br />
+browser</p>
+<div id="restart-your-r-workspace" class="section level3">
+<h3>Restart your <code>R</code> workspace</h3>
+<p>The blanket approach to debugging. This resets your installed packages to the version you initially loaded on your computer and into the memory in your new <code>R</code> session.</p>
 </div>
 </div>
-<div id="exercise-3" class="section level1">
-<h1>Exercise 3</h1>
-<div id="summarise-lists" class="section level2">
-<h2>Summarise lists</h2>
-<p><code>every</code> Do all elements pass a test?<br />
-<code>some</code> Do some elements pass a test?<br />
-<code>has_element</code> Does a list contain an element?<br />
-<code>detect</code> Find first element to pass<br />
-<code>detect_index</code> Find index of first element to pass<br />
-<code>vec_depth</code> Return depth (number of levels of indexes)</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">every</span>(is.character)
-ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">some</span>(is.character)
-ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">has_element</span>(<span class="st">&quot;foo&quot;</span>)
-ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">detect</span>(is.character)
-ls1 <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">detect_index</span>(is.character)
-ls1 <span class="op">%&gt;%</span><span class="st"> </span>vec_depth</code></pre></div>
+<div id="common-arenas-that-breed-errors-and-issues" class="section level2">
+<h2>Common arenas that breed errors and issues</h2>
+<div id="working-with-many-packages-across-multiple-r-sessions" class="section level3">
+<h3>Working with many packages across multiple <code>R</code> sessions</h3>
+<ul>
+<li>Restart <code>R</code> to reload the current package version into the <code>R</code> session memory<br />
+</li>
+<li>Change your <code>R</code> preferences so that your current workspace doesn't translate stored objects to any future workspaces</li>
+<li>Set &quot;Save workspace to .Rdata on exit&quot; to 'Never'<br />
+</li>
+<li>Uncheck &quot;Restore .Rdata into workspace on startup&quot;</li>
+</ul>
+</div>
+<div id="finding-errors-in-collaborators-code" class="section level3">
+<h3>Finding errors in collaborators' code</h3>
+<ul>
+<li>Create a minimal reproducible example<br />
+Advantages of creating minimal reproducible examples<br />
+</li>
+<li>Removes noise from your problem code<br />
+</li>
+<li>Creates a neater template for outside help e.g. StackOverflow forums - Helps you diagnose and solve your own problem<br />
+</li>
+<li>Feedsback to deeper understanding of root issues to simplify future troubleshooting</li>
+</ul>
 </div>
 </div>
-<div id="exercise-4" class="section level1">
-<h1>Exercise 4</h1>
-<div id="transform-lists" class="section level2">
-<h2>Transform lists</h2>
-<p><code>modify</code> Apply function to each element<br />
-<code>modify_at</code> Apply function to elements by name or index<br />
-<code>modify_if</code> Apply function to elements that pass a test<br />
-<code>modify_depth</code> Apply function to each element at a given level of a list</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1_repeat &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="kw">list</span>(<span class="kw">list</span>(ls1)))  <span class="co"># create list of lists </span>
-ls1_repeat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">map</span>(mean)  <span class="co"># list is indexed too far down </span>
-ls1_repeat <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">modify_depth</span>(<span class="dv">4</span>, mean)  <span class="co"># access deep list indices </span></code></pre></div>
+<div id="debug-menu" class="section level2">
+<h2>Debug menu</h2>
+<p>Changing the way errors are diagnosed using the Debug dropdown menu options</p>
+<p>Debug &gt; On Error &gt; Error inspector<br />
+Debug &gt; On Error &gt; Message only</p>
+</div>
+<div id="debug-function-and-using-breakpoints" class="section level2">
+<h2><code>debug()</code> function and using breakpoints</h2>
+<p>Insert breakpoints in RStudio IDE at specific rows * Sometimes cleaner by avoiding editing code directly</p>
+<!-- ----------------------- image --------------------------- -->
+<div align="center" ;="" text-align:center="">
+<p><img src="img/lesson11_breakpoint.jpg" style=width:100%></p>
+</div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># first insert breakpoint in code</span>
+<span class="kw">debug</span>(your_function)  <span class="co"># run debug mode on function with error   </span>
+<span class="kw">debugonce</span>(your_function)  <span class="co"># run debug once for first call of function  </span></code></pre></div>
+<p>Two options within Console:<br />
+* Show/Hide traceback<br />
+* Rerun with Debug</p>
+</div>
+<div id="using-optionserrorrecover" class="section level2">
+<h2>Using <code>options(error=recover)</code></h2>
+<p><code>Browse[1]&gt;</code> * Run <code>R</code> commands as per usual, but with error browsing capabilities</p>
+<p>The traceback will look like a menu with options</p>
+<!-- ----------------------- image --------------------------- -->
+<div align="center" ;="" text-align:center="">
+<p><img src="img/lesson11_traceback.jpg" style=width:100%></p>
+</div>
+<ul>
+<li>The 1 represents the frame number in the traceback<br />
+</li>
+<li><code>ls.str()</code> = Run <code>str</code> on all current objects in memory. When run with <code>Browse[1]&gt;</code>, it can identify what objects in memory could be interfering with your commands and causing the error.</li>
+</ul>
+</div>
+<div id="using-browser" class="section level2">
+<h2>Using <code>browser()</code></h2>
+<p>Allows you to move incrementally through code lines to identify error location<br />
+1. Insert <code>browser()</code> within code before error<br />
+Chances are you're unsure of error location, so best practice is to start further up and work down.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Run troublesome code and enter browser mode<br />
+</li>
+<li>Press Next or type <code>n</code> to move down through each line<br />
+</li>
+<li>Once you enter the troublesome line, the <code>Browser[]&gt;</code> index will move up a number(?). Press <code>s</code> to step into code.<br />
+</li>
+<li>From here, you can engage with <code>R</code> objects using regular commands e.g. <code>xx %&gt;% str(), xx %&gt;% dims()</code><br />
+</li>
+<li>Change the <code>R</code> object directly within debugging mode to diagnose the issue using the newly corrected object<br />
+</li>
+<li>Enter <code>Q</code> or use the STOP button to exit browser<br />
+</li>
+<li>Use <code>undebug()</code> to stop debugging for any new errors</li>
+</ol>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">xx &lt;-<span class="st"> </span>LETTERS[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>]
+<span class="kw">browser</span>()  <span class="co"># enter browsing mode before error  </span>
+xx <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rowMeans</span>()  <span class="co"># this is erroneous code </span></code></pre></div>
+<p>Using the <code>reprex</code> package</p>
+</div>
+<div id="debugging-summary" class="section level2">
+<h2>Debugging summary</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">last.warning
+<span class="kw">geterrmessage</span>()  <span class="co"># get last warning and/or error message </span>
+<span class="kw">traceback</span>()  <span class="co"># trace backwards in the call stack to error position</span>
+<span class="kw">browser</span>()  <span class="co"># move incrementally through code lines   </span>
+<span class="kw">rm</span>(<span class="dt">list =</span> <span class="kw">ls</span>())  <span class="co"># lists and deletes all objects in your global workspace </span>
+
+<span class="co"># base options</span>
+<span class="kw">options</span>(<span class="dt">error =</span> recover)  <span class="co"># turn on r debugger  </span>
+<span class="kw">options</span>(<span class="dt">error =</span> <span class="ot">NULL</span>)  <span class="co"># turn off debugger </span>
+<span class="kw">options</span>(<span class="dt">future.debug =</span> T)  <span class="co">#</span>
+<span class="kw">options</span>(<span class="dt">gargle.quiet =</span> F)  <span class="co"># </span>
+<span class="kw">options</span>(<span class="dt">internet.info =</span> <span class="dv">0</span>)  <span class="co"># info printed with url downloads. 0 = most, 2 = minimum  </span></code></pre></div>
+<!-- ----------------------- image --------------------------- -->
+<!-- ----------------------- image --------------------------- -->
+<div align="center" ;="" text-align:center="">
+<p><img src="img/lesson11_debug.jpg" style=width:100%></p>
+</div>
+<p><code>rlang</code> package</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(rlang)
+<span class="kw">last_error</span>()  <span class="co"># latest error </span>
+<span class="kw">last_trace</span>()  <span class="co"># traceback last error </span>
+<span class="kw">qq_show</span>()</code></pre></div>
+</div>
+<div id="some-common-abstract-error-messages" class="section level2">
+<h2>Some common abstract error messages</h2>
+<div id="error-object-of-type-closure-is-not-subsettable" class="section level3">
+<h3><code>Error: object of type closure is not subsettable</code></h3>
+<p><strong>Meaning</strong></p>
+<ul>
+<li>When you try to index or subset a function<br />
+</li>
+<li>When you try to access a stored <code>R</code> function as a variable e.g. using <code>data</code> as a local variable</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># the following are all errors</span>
+sum[<span class="dv">1</span>]
+sum[[<span class="dv">1</span>]]
+sum<span class="op">$</span>a
+
+data  <span class="co"># this is a native r function, so avoid using it to name your own variables/functions  </span></code></pre></div>
+<p>In Shiny<br />
+* When using a function shared across multiple packages, e.g. <code>tags()</code> is found in both <code>{htmltools}</code> and <code>{shiny}</code></p>
+<p><strong>Diagnosis</strong><br />
+* Avoid defining variables that share the same names as native <code>R</code> functions</p>
+<p>In Shiny<br />
+* Specify package for function <code>shiny::tags()</code></p>
+</div>
+<div id="error-in-rowmeansdata-x-must-be-an-array-of-at-least-two-dimensions" class="section level3">
+<h3><code>Error in rowMeans(data): 'x' must be an array of at least two dimensions</code></h3>
+<p><strong>Meaning</strong></p>
+<p><strong>Diagnosis</strong></p>
 </div>
 </div>
-<div id="further-useful-purrr-functions" class="section level1">
-<h1>Further useful <code>purrr</code> functions</h1>
-<p><code>pmap</code> Apply a function to groups of elements from lists of lists<br />
-<code>lmap</code> Apply function to each list-element of a list or vector<br />
-<code>imap</code> Apply function to each element of a list or vector and its index</p>
+<div id="debugging-commands" class="section level2">
+<h2>Debugging commands</h2>
+<p>Q = quit callstack traceback/browser</p>
+<hr />
+<p>(r package content)</p>
+</div>
+<div id="debugging-r-packages" class="section level2">
+<h2>Debugging <code>R</code> packages</h2>
+<p><code>testthat</code> package<br />
+Create testable code for your own reference after diagnosing and solving a recent issue</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(testthat)
+<span class="kw">require</span>(usethis)
+<span class="kw">test_check</span>()
+<span class="kw">use_testthat</span>()  <span class="co"># creates tests/testthat.R and tests/testthat/ </span>
+
+<span class="kw">capture_warning</span>(xx <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rowMeans</span>())  <span class="co"># summarise warning </span>
+<span class="kw">capture_error</span>(xx <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rowMeans</span>())  <span class="co"># summarise error </span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(testthat)
+<span class="kw">test_that</span>(<span class="st">&quot;rowMeans() still shouldn&#39;t work for xx&quot;</span>, {
+    <span class="kw">expect_equal</span>(<span class="st">&quot;&lt;code for condition 1&gt;&quot;</span>)
+    <span class="kw">expect_equal</span>(<span class="st">&quot;&lt;code for condition 2&gt;&quot;</span>)
+    <span class="kw">expect_equal</span>(<span class="st">&quot;&lt;code for condition 3&gt;&quot;</span>)
+})</code></pre></div>
+</div>
+<div id="debugging-shiny-apps" class="section level2">
+<h2>Debugging Shiny apps</h2>
+<p>For undeployed apps</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># shows log of commands Shiny is executing on your app</span>
+<span class="kw">options</span>(<span class="dt">shiny.reactlog =</span> T)
+<span class="kw">showReactLog</span>()
+
+<span class="co"># print progress statments within app</span>
+<span class="kw">cat</span>(<span class="dt">file =</span> <span class="kw">stderr</span>(), <span class="st">&quot;your message&quot;</span>)  <span class="co"># standard connection to error in console</span></code></pre></div>
+<p>For deployed apps<br />
+<strong>Option 1</strong><br />
+1. Keep <code>cat(file=stderr(), &quot;your message&quot;)</code> statements in Shiny code<br />
+2. In your Shiny.io app page, click on Logs and view your <code>cat()</code> outputs</p>
+<p><strong>Option 2</strong><br />
+Set <code>rsconnect::showLogs(steaming = T)</code> in app code to stream log within the RStudio IDE and interact with app log in real time.</p>
+</div>
 </div>
 
 
