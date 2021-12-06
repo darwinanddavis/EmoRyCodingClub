@@ -75,7 +75,7 @@ lapply(packages,require,character.only=T)
 Recreate the below plot using the larger NYC Airbnb dataset. Here's the code to add the title and labels.  
 
 ```{r,eval=F}
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 nyc_full <- readr::read_csv(url) # reads in data
 
 ttl <- "NYC Airbnb availability"
@@ -91,7 +91,7 @@ labs(title = ttl,
 ```
 
 ```{r,echo=F,eval=T,cache=T}
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 nyc_full <- readr::read_csv(url) # reads in data
 ```
 
@@ -205,7 +205,7 @@ Have a look through each section of the raw `.Rmd` file to see what the code doe
 # large Airbnb dataset (106 cols)
 require(readr,dplyr)
 
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 
 nyc_full <- read_csv(url) # reads in data
 nyc_full %>% glimpse

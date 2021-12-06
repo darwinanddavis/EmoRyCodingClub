@@ -30,3 +30,6 @@ reprex
 stringi
 lubridate
 sugrrants
+magick
+magrittr
+rlang

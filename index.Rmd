@@ -55,6 +55,9 @@ lapply(packages,library,character.only=T)
 <!-- ----------------------- overview --------------------------- -->
 ## Overview    
 This page contains all the documents, links, and information for the monthly `R` coding club held at Emory University, Atlanta. We meet monthly and teach new coding concepts and techniques in a casual environment. The club is half lesson half workshop style and caters for all coding and `R` levels.      
+
+Since Covid-19, the club has been virtual and all material remains online and free to distribute.  
+
 \  
 \  
   
@@ -171,12 +174,12 @@ This is a really big data set (it has ~50k rows !!), so it will take a moment to
 
 ```{r, eval = FALSE}
 require(readr)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 
 nyc_full <-  read_csv(url)
 
 # smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 nyc <-  read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # truncate dataset 
 
@@ -188,7 +191,7 @@ If everything worked correctly, you should see the below ouput printed in your `
 
 ```{r, echo=F, eval=T}
 # smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 nyc <-  read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # truncate dataset 
 

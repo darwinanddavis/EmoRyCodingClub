@@ -1,6 +1,6 @@
 name: "my-website"
 navbar:
-  title: "EmoRy Coding Club"
+  title: "R Coding Club"
   left:
     - text: "Home"
       href: index.html

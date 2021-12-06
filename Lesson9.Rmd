@@ -59,7 +59,7 @@ Packages for `r params$lesson`
 
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
-  <img src="https://github.com/tidyverse/lubridate/blob/master/man/figures/logo.png?raw=true" style=width:25%>
+  <img src="https://github.com/tidyverse/lubridate/raw/main/man/figures/logo.png" style=width:25%>
 </div>
 
 
@@ -95,6 +95,31 @@ Sys.time()
 
 ```
 
+## Using POSIX format  
+  
+**Code	Meaning**      
+%a	Abbreviated weekday    
+%A	Full weekday    
+%b	Abbreviated month    
+%B	Full month    
+%c	Locale-specific date and time    
+%d	Decimal date    
+%H	Decimal hours (24 hour)    
+%I	Decimal hours (12 hour)    
+%j	Decimal day of the year    
+%m	Decimal month    
+%M	Decimal minute    
+%p	Locale-specific AM/PM    
+%S	Decimal second    
+%U	Decimal week of the year (starting on Sunday)    
+%w	Decimal Weekday (0=Sunday)      
+%W	Decimal week of the year (starting on Monday)    
+%x	Locale-specific Date    
+%X	Locale-specific Time    
+%y	2-digit year    
+%Y	4-digit year    
+%z	Offset from GMT    
+%Z	Time zone (character)    
 
 # Time functions  
 You can easily distinguish time as dates (`date`), days (`day`), years (`y`), months (`m`), or hours (`h`), minutes (`m`), and seconds (`s`).         

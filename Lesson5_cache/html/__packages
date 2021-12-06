@@ -28,3 +28,8 @@ xml2
 rvest
 reprex
 stringi
+magick
+magrittr
+rlang
+lubridate
+sugrrants

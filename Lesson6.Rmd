@@ -79,7 +79,8 @@ Recreate the below plot using the smaller NYC Airbnb dataset. The curve is a 'lo
 
 ```{r}
 # smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
+
 nyc <-  readr::read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
 ```
@@ -88,13 +89,14 @@ nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
 require(ggthemes,ggplot2,readr)
 
 # smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
+
 nyc <-  read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
 
 colv = "#00060a"
 ggplot(data = nyc, aes(x = reviews_per_month,y = number_of_reviews)) +
-  geom_point(aes(color=neighbourhood_group),show.legend = T,alpha=0.5) +
+  geom_point(aes(color=neighbourhood_group_cleansed),show.legend = T,alpha=0.5) +
   geom_smooth(color = colv, fill = colv, method="loess",alpha=0.3) +
   labs(title = "Reviews across NYC boroughs",
        caption = "Source: NYC Airbnb data",

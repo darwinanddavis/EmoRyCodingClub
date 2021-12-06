@@ -107,7 +107,7 @@ Debug > On Error > Message only
 
 ## `debug()` function and using breakpoints    
 
-Insert breakpoints in RStudio IDE at specific rows 
+1. Insert breakpoints in RStudio IDE at specific rows 
 * Sometimes cleaner by avoiding editing code directly    
 
 <!-- ----------------------- image --------------------------- -->
@@ -115,22 +115,40 @@ Insert breakpoints in RStudio IDE at specific rows
   <img src="img/lesson11_breakpoint.jpg" style=width:100%>
 </div>
 
+2. Run `debug()` on your erraneous function  
 ```{r}
 # first insert breakpoint in code 
 debug(your_function) # run debug mode on function with error   
 debugonce(your_function) # run debug once for first call of function  
 ```
 
-Two options within Console:  
+Two options that pop up within the console:  
 * Show/Hide traceback  
 * Rerun with Debug  
 
-  
-## Using `options(error=recover)`
-`Browse[1]>` 
-* Run `R` commands as per usual, but with error browsing capabilities  
+`debug()`  
+* Useful when you have the source code for the error, i.e. it's your own function 
+* Using breakpoints avoid editing the code directly  
 
-The traceback will look like a menu with options  
+## Using `traceback()`    
+
+* In-depth reporting of call stack (steps that `R` works through when running your code)   
+* Read from bottom-up  
+* Good for a quick snapshot of sequence to visualise code steps  
+* No triage available    
+* Alternative option is `rlang::last_trace()`    
+
+## Using `options(error=recover)`
+* Run `R` commands as per usual, but with error browsing capabilities  
+* Allows you to enter frames for each `R` function/step of the call stack      
+* Selecting a frame will allow you to diagnose the error by showing two extra screens within the `R` Environment pane   
+1. A trackback window that dives into the native functions `R` used to run your erraneous code. Here, you can select each function and see the inner workings.      
+2. A breakdown of each piece of the erraneous code, including values, class, and calls in the call stack, which can highlight the source of error.  
+
+Depending on which call in the trackback you select, a third window as an R file tab with a spectacles logo will appear. This is the inner code of the function `R` used to run your erraneous code.  
+
+`Browse[1]>` 
+The traceback will look like a menu with options    
 
 <!-- ----------------------- image --------------------------- -->
 <div align="center"; text-align:center>

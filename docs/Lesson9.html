@@ -406,7 +406,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">EmoRy Coding Club</a>
+      <a class="navbar-brand" href="index.html">R Coding Club</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -492,7 +492,7 @@ div.tocify {
 <h1>Agenda</h1>
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
-<p><img src="https://github.com/tidyverse/lubridate/blob/master/man/figures/logo.png?raw=true" style=width:25%></p>
+<p><img src="https://github.com/tidyverse/lubridate/raw/main/man/figures/logo.png" style=width:25%></p>
 </div>
 <p> </p>
 <p>Dates and times are stored as class <code>POSIX</code>, which can be represented as <code>POSIXct</code>, <code>POSIXlt</code>, or <code>POSIXt</code>, since 1970-01-01 as a starting point.</p>
@@ -511,25 +511,51 @@ div.tocify {
 <h1>Quick intro to time formats</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ct &lt;-<span class="st"> </span><span class="kw">now</span>()  <span class="co"># get date and time from your current location</span>
 ct
-[<span class="dv">1</span>] <span class="st">&quot;2021-02-17 10:29:38 AEDT&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-12-06 12:49:27 AEDT&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%y-%m&quot;</span>)  <span class="co"># year, month</span>
-[<span class="dv">1</span>] <span class="st">&quot;21-02&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;21-12&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m&quot;</span>)  <span class="co"># full year, month</span>
-[<span class="dv">1</span>] <span class="st">&quot;2021-02&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-12&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d&quot;</span>)  <span class="co"># year, month, day</span>
-[<span class="dv">1</span>] <span class="st">&quot;2021-02-17&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-12-06&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y-%m-%d-%H-%M-%S&quot;</span>)  <span class="co"># year, month, day, hour, min, sec</span>
-[<span class="dv">1</span>] <span class="st">&quot;2021-02-17-10-29-38&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-12-06-12-49-27&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%Y ;) %m_:P_%d&quot;</span>)  <span class="co"># year, month, day with custom separators</span>
-[<span class="dv">1</span>] <span class="st">&quot;2021 ;) 02_:P_17&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021 ;) 12_:P_06&quot;</span>
 ct <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">format</span>(<span class="st">&quot;%D&quot;</span>)  <span class="co"># date </span>
-[<span class="dv">1</span>] <span class="st">&quot;02/17/21&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;12/06/21&quot;</span>
 
 <span class="co"># alternative versions of getting current date and time, respectively (base R)</span>
 <span class="kw">Sys.Date</span>()
-[<span class="dv">1</span>] <span class="st">&quot;2021-02-17&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-12-06&quot;</span>
 <span class="kw">Sys.time</span>()
-[<span class="dv">1</span>] <span class="st">&quot;2021-02-17 10:29:38 AEDT&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2021-12-06 12:49:27 AEDT&quot;</span></code></pre></div>
+<div id="using-posix-format" class="section level2">
+<h2>Using POSIX format</h2>
+<p><strong>Code Meaning</strong><br />
+%a Abbreviated weekday<br />
+%A Full weekday<br />
+%b Abbreviated month<br />
+%B Full month<br />
+%c Locale-specific date and time<br />
+%d Decimal date<br />
+%H Decimal hours (24 hour)<br />
+%I Decimal hours (12 hour)<br />
+%j Decimal day of the year<br />
+%m Decimal month<br />
+%M Decimal minute<br />
+%p Locale-specific AM/PM<br />
+%S Decimal second<br />
+%U Decimal week of the year (starting on Sunday)<br />
+%w Decimal Weekday (0=Sunday)<br />
+%W Decimal week of the year (starting on Monday)<br />
+%x Locale-specific Date<br />
+%X Locale-specific Time<br />
+%y 2-digit year<br />
+%Y 4-digit year<br />
+%z Offset from GMT<br />
+%Z Time zone (character)</p>
+</div>
 </div>
 <div id="time-functions" class="section level1">
 <h1>Time functions</h1>
@@ -628,24 +654,24 @@ x &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot
 <p>Pulling specific time components</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># pull specific time components</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>day
-[<span class="dv">1</span>] <span class="dv">17</span>
+[<span class="dv">1</span>] <span class="dv">6</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>hour
-[<span class="dv">1</span>] <span class="dv">10</span>
+[<span class="dv">1</span>] <span class="dv">12</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span>second
-[<span class="dv">1</span>] <span class="fl">39.0822</span>
+[<span class="dv">1</span>] <span class="fl">28.40541</span>
 
 <span class="co"># change the day of an assigned time vector</span>
 dd &lt;-<span class="st"> </span><span class="kw">now</span>()
 <span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">31</span>
 dd
-[<span class="dv">1</span>] <span class="st">&quot;2021-03-03 10:29:39 AEDT&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-12-31 12:49:28 AEDT&quot;</span>
 
 <span class="co"># setting a day greater than the last day of the chosen month will automatically roll over to the</span>
 <span class="co"># following month</span>
 dd &lt;-<span class="st"> </span><span class="kw">now</span>()
 <span class="kw">day</span>(dd) &lt;-<span class="st"> </span><span class="dv">32</span>
 dd
-[<span class="dv">1</span>] <span class="st">&quot;2021-03-04 10:29:39 AEDT&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2022-01-01 12:49:28 AEDT&quot;</span></code></pre></div>
 <div id="dataset" class="section level3">
 <h3>Dataset</h3>
 <p>Load <code>nycflights13</code> dataset and check out the <code>time_hour</code> column</p>
@@ -728,13 +754,13 @@ ft &lt;-<span class="st"> </span>ft[<span class="kw">sample</span>(ft <span clas
 <h1>Other useful functions</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># roll back to first or last day of previous month</span>
 <span class="kw">now</span>() <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">rollback</span>(<span class="dt">preserve_hms =</span> T, <span class="dt">roll_to_first =</span> T)
-[<span class="dv">1</span>] <span class="st">&quot;2021-02-01 10:29:39 AEDT&quot;</span>
+[<span class="dv">1</span>] <span class="st">&quot;2021-12-01 12:49:29 AEDT&quot;</span>
 
 <span class="fl">2012.75</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">date_decimal</span>()  <span class="co"># decimal dates, e.g. 3/4 into 2012  </span>
 [<span class="dv">1</span>] <span class="st">&quot;2012-10-01 12:00:00 UTC&quot;</span>
 
 <span class="kw">today</span>()  <span class="co"># today&#39;s date  </span>
-[<span class="dv">1</span>] <span class="st">&quot;2021-02-17&quot;</span></code></pre></div>
+[<span class="dv">1</span>] <span class="st">&quot;2021-12-06&quot;</span></code></pre></div>
 <p>Pass any of the below functions individually</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ftl &lt;-<span class="st"> </span>ft <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">list</span>(<span class="kw">isoyear</span>(.), <span class="kw">epiyear</span>(.), <span class="kw">wday</span>(.), <span class="kw">wday</span>(., <span class="dt">label =</span> T), <span class="kw">qday</span>(.), <span class="kw">week</span>(.), <span class="kw">semester</span>(.), 
     <span class="kw">am</span>(.), <span class="kw">pm</span>(.))

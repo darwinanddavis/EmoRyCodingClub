@@ -17,7 +17,7 @@ output:
 ```{r, setup, echo = FALSE, cache = FALSE, include = FALSE}
 options(width=100)
 knitr::opts_chunk$set(
-  eval = T, # run all code
+  eval = F, # run all code
   echo = TRUE, # show code chunks in output 
   tidy = TRUE, # make output as tidy
   message = FALSE,  # mask all messages
@@ -61,7 +61,7 @@ Packages for `r params$lesson`
 
 <!-- ----------------------- image --------------------------- -->
 <div align="center">
-  <img src="https://github.com/tidyverse/rvest/raw/master/man/figures/logo.png" style=width:25%>
+  <img src="https://raw.githubusercontent.com/tidyverse/rvest/main/man/figures/logo.png" style=width:25%>
 </div>
 
 
@@ -69,8 +69,6 @@ Webscrape data from `R` using `rvest` and `xml2` packages.
 
 [`r params$bookchapter_name`](`r params$bookchapter_section`).      
 \
-
-
 
 
 # Reading webpage data (HTML)  
@@ -82,10 +80,11 @@ Use `html_node` to get only the first HTML node and `html_nodes` to pull all ele
 ```{r}
 require(rvest)
 require(xml2)
+require(dplyr)
 
 url <- "https://r4ds.had.co.nz/data-visualisation.html" # url to scrape 
 
-url %>% read_html # scrape HTML text and data
+url %>% rvest::read_html() # scrape HTML text and data
 
 # scraping the first node only for third order headings ("h3")
 url %>% read_html %>% html_node("h3") # get only first section heading
@@ -153,6 +152,12 @@ We can use `html_attr()` to identify nested elements within HTML elements.
 This code scrapes the urls from the below webpage, but inclues all possible urls, which is not what we want.    
 ```{r}
 url <- "https://r4ds.had.co.nz/index.html"
+
+# first we see what type of attributes are available for urls ('a' tags)
+node("a") %>% 
+  html_attrs() %>% 
+  head
+  
 node("a") %>% head(20) # return first 20 results
 ```
 
@@ -176,7 +181,8 @@ node("main") %>%
 ```
 
 Alternatively, you can index the term    
-```{r}
+```{r, eval = F}
+require(rvest)
 node("main") %>% 
   html_nodes("a") %>% 
   .[[3]] %>% # get the 3rd scraped term
@@ -216,6 +222,48 @@ require(magick)
 node("img") %>% html_attr("src") %>% image_read()
 ```
 
+## More functions
+<!-- Add these (20200402) -->
+```{r, eval=F, echo=F}
+url <- "https://en.wikipedia.org/wiki/"
+fh <- "Melbourne"
+
+# use css selectors e.g. search for css class 
+paste0(url,fh) %>% 
+  read_html() %>% # read webpage
+  html_nodes(":contains('infobox')") 
+
+paste0(url,fh) %>% 
+  read_html() %>% # read webpage
+  html_nodes("*:contains('inf')") # search for wildcard string 
+
+# for extracting all divs with class 'a'
+site %>% 
+  read_html() %>% 
+  html_nodes("div.a") %>% 
+  html_text()
+
+# get classes matching specific section on webpage
+fc <- paste0(url,fh) %>% # 
+  read_html() %>% 
+  html_nodes("td") %>% 
+  xml_attrs() %>% # get all classes that belong to above node
+  purrr::map("class") %>% 
+  unlist %>% .[1:10] 
+
+fc <- paste0(".",fc) %>% # add period to class name
+  str_flatten(collapse = " ") # collapse into single string
+
+# search all classes values (need to fix)
+paste0(url,fh) %>% 
+  read_html() %>% # read webpage
+  html_node(fc) %>% # read class
+  html_node("img") %>% # read img
+  html_attr("src") # pull src chr
+  
+```
+
+
 ## Challenge    
 
 Find and scrape the image from the below url and plot it, all without leaving `R` or saving the img to your drive.     
@@ -228,5 +276,24 @@ url <- "https://www.imdb.com/title/tt0094625/?ref_=fn_al_tt_1"
 ```{r,echo=F,eval=T,warning=F}
 require(magick)
 require(magrittr)
+url <- "https://www.imdb.com/title/tt0094625/?ref_=fn_al_tt_1"  
 node("img") %>% html_attr("src") %>% extract2(3) %>% image_read()
 ```
+
+<!-- ## Bypassing paywalls -->
+```{r, eval = F, echo = F}
+require(rvest)
+
+# save html structure to separate webpage
+url <- "https://www.businessinsider.com/how-to-turn-free-newsletter-newsette-into-a-profitable-business-2020-10?utm_source=ebizfacts&utm_medium=sendy&utm_campaign=newsletter&r=AU&IR=T"
+url %>% read_html() %>% 
+  html_node("body") %>%
+  write_xml("/Users/malishev/Desktop/webscrape1.html")
+
+# write html paragraph text to file  
+url %>% read_html() %>% 
+  html_nodes("p") %>% 
+  html_text(trim=T) %>% 
+  write_lines("/Users/malishev/Desktop/webscrape1.txt")
+```
+

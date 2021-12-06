@@ -74,9 +74,9 @@ Recreate the below plot using the smaller NYC Airbnb dataset.
 
 ```{r}
 # smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 nyc <-  read_csv(url)
-nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
+nyc <- nyc[nyc$id < 20000,] # get smaller subet of data
 ```
 
 ```{r, echo=F, eval=T, out.width="100%"}
@@ -85,13 +85,13 @@ require(ggplot2)
 require(readr)
 
 # smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 nyc <-  read_csv(url)
-nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
+nyc <- nyc[nyc$id < 10000,] # get smaller subet of data
 
 ggplot(data = nyc, mapping = aes(x = minimum_nights, y = price)) +
-  geom_point(aes(color=neighbourhood_group),show.legend = F) +
-  facet_wrap(~ neighbourhood_group, nrow=length(nyc$neighbourhood_group)) +
+  geom_point(aes(color=neighbourhood_group_cleansed),show.legend = F) +
+  facet_wrap(~ neighbourhood_group_cleansed, nrow=length(nyc$neighbourhood_group_cleansed)) +
   theme_classic()
 
 ```
@@ -293,7 +293,7 @@ Try the ['5.3.1 Exercises' using `arrange()`](https://r4ds.had.co.nz/transform.h
 Use the new examples on the Airbnb dataset.        
 ```{r}
 # large Airbnb dataset (106 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 
 nyc_full <- read_csv(url) # reads in data
 nyc_full %>% glimpse

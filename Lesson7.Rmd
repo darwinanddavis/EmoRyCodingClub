@@ -81,7 +81,7 @@ Recreate the below PDF using `RMarkdown` with the following conditions from the 
 
 ```{r}
 # smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 nyc <-  readr::read_csv(url)
 nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
 ```

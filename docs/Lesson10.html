@@ -406,7 +406,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">EmoRy Coding Club</a>
+      <a class="navbar-brand" href="index.html">R Coding Club</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -604,58 +604,7 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
 <p>Scrape table data</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://www.imdb.com/title/tt0094625/?ref_=fn_al_tt_1&quot;</span>
 url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_table</span>(<span class="dt">trim =</span> T)  <span class="co"># get just tables</span></code></pre></div>
-<pre><code>[[1]]
-                                  X1                                X2
-1  Cast overview, first billed only: Cast overview, first billed only:
-2                                                         Mitsuo Iwata
-3                                                        Nozomu Sasaki
-4                                                          Mami Koyama
-5                                                         Tesshô Genda
-6                                                        Hiroshi Ôtake
-7                                                      Kôichi Kitamura
-8                                                    Michihiro Ikemizu
-9                                                     Yuriko Fuchizaki
-10                                                       Masaaki Ôkura
-11                                                        Tarô Arakawa
-12                                                       Takeshi Kusao
-13                                                       Kazumi Tanaka
-14                                                       Masayuki Katô
-15                                                      Yôsuke Akimoto
-16                                                       Masato Hirano
-                                  X3
-1  Cast overview, first billed only:
-2                                ...
-3                                ...
-4                                ...
-5                                ...
-6                                ...
-7                                ...
-8                                ...
-9                                ...
-10                               ...
-11                               ...
-12                               ...
-13                               ...
-14                               ...
-15                               ...
-16                               ...
-                                                                                                               X4
-1                                                                               Cast overview, first billed only:
-2                                                                                      Kaneda \n  \n  \n  (voice)
-3                                                                                      Tetsuo \n  \n  \n  (voice)
-4                                                                                         Kei \n  \n  \n  (voice)
-5                                                                                         Ryu \n  \n  \n  (voice)
-6                                                                                        Nezu \n  \n  \n  (voice)
-7                                                    Lady Miyako /  \n            Committee A \n  \n  \n  (voice)
-8                                                      Inspector /  \n            Committee I \n  \n  \n  (voice)
-9                                                                                       Kaori \n  \n  \n  (voice)
-10                                                                                   Yamagata \n  \n  \n  (voice)
-11                         Army /  \n            Committee G /  \n            Eiichi Watanabe \n  \n  \n  (voice)
-12                                                                                        Kai \n  \n  \n  (voice)
-13                                                                                       Army \n  \n  \n  (voice)
-14                                              Engineer Sakiyama /  \n            Committe D \n  \n  \n  (voice)
-15                                                                         Harukiya Bartender \n  \n  \n  (voice)
-16 Committee F /  \n            Spy /  \n            Yûji Takeyama /  \n            Terrorist \n  \n  \n  (voice)</code></pre>
+<pre><code>list()</code></pre>
 </div>
 <div id="finding-and-scraping-specific-attributes-within-a-webpage" class="section level2">
 <h2>Finding and scraping specific attributes within a webpage</h2>
@@ -663,7 +612,33 @@ url <span class="op">%&gt;%</span><span class="st"> </span>read_html <span class
 <p>We can use <code>html_attr()</code> to identify nested elements within HTML elements.</p>
 <p>This code scrapes the urls from the below webpage, but inclues all possible urls, which is not what we want.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://r4ds.had.co.nz/index.html&quot;</span>
-<span class="kw">node</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">20</span>)  <span class="co"># return first 20 results</span></code></pre></div>
+
+<span class="co"># first we see what type of attributes are available for urls (&#39;a&#39; tags)</span>
+<span class="kw">node</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_attrs</span>() <span class="op">%&gt;%</span><span class="st"> </span>head</code></pre></div>
+<pre><code>[[1]]
+                      class                        href 
+&quot;sr-only sr-only-focusable&quot;                  &quot;#content&quot; 
+
+[[2]]
+        href        title 
+&quot;index.html&quot;           &quot;&quot; 
+
+[[3]]
+       class         href 
+    &quot;active&quot; &quot;index.html&quot; 
+
+[[4]]
+              class                href 
+                 &quot;&quot; &quot;introduction.html&quot; 
+
+[[5]]
+               class                 href 
+                  &quot;&quot; &quot;explore-intro.html&quot; 
+
+[[6]]
+                    class                      href 
+                       &quot;&quot; &quot;data-visualisation.html&quot; </code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">node</span>(<span class="st">&quot;a&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">head</span>(<span class="dv">20</span>)  <span class="co"># return first 20 results</span></code></pre></div>
 <pre><code>{xml_nodeset (20)}
  [1] &lt;a class=&quot;sr-only sr-only-focusable&quot; href=&quot;#content&quot;&gt;Skip to main content&lt;/a&gt;
  [2] &lt;a href=&quot;index.html&quot; title=&quot;&quot;&gt;R for Data Science&lt;/a&gt;
@@ -795,11 +770,16 @@ url <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">read
 <span class="kw">node</span>(<span class="st">&quot;img&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">html_attr</span>(<span class="st">&quot;src&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">image_read</span>()</code></pre></div>
 <p><img src="Lesson10_files/figure-html/unnamed-chunk-13-1.png" width="250" /></p>
 </div>
+<div id="more-functions" class="section level2">
+<h2>More functions</h2>
+<!-- Add these (20200402) -->
+</div>
 <div id="challenge" class="section level2">
 <h2>Challenge</h2>
 <p>Find and scrape the image from the below url and plot it, all without leaving <code>R</code> or saving the img to your drive.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">url &lt;-<span class="st"> &quot;https://www.imdb.com/title/tt0094625/?ref_=fn_al_tt_1&quot;</span></code></pre></div>
-<p><img src="Lesson10_files/figure-html/unnamed-chunk-15-1.png" width="91" /></p>
+<p><img src="Lesson10_files/figure-html/unnamed-chunk-16-1.png" width="250" /></p>
+<!-- ## Bypassing paywalls -->
 </div>
 </div>
 

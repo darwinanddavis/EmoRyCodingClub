@@ -1,5 +1,5 @@
 ---
-title: EmoRy Coding Club master document 
+title: R Coding Club master document 
 output_cor: "docs"
 author: |
  | Matt Malishev*, Desiree De Leon & Hasse Walum     

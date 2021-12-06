@@ -4,9 +4,9 @@ author: |
   | Your name here
   | Your affiliation here
 params:
-  date: "!r Sys.Date()"
+  date: !r Sys.Date()
   email: Your email here
-  version: '!r getRversion()'
+  version: !r getRversion()
 output:
   pdf_document:
     toc: yes

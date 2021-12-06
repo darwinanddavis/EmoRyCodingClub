@@ -37,7 +37,7 @@ if (require(packages)) {
     install.packages(packages,dependencies = T)
     require(packages)
     # load tvthemes
-    devtools::install_github("Ryo-N7/tvthemes")
+    # devtools::install_github("Ryo-N7/tvthemes")
 }
 lapply(packages,library,character.only=T)  
 ```
@@ -330,25 +330,25 @@ The online reference contains further examples of how to visualise your data.
 
 # Reading in outside data: NYC Airbnb data  
 
-```{r}
+```{r, eval = T, echo = F}
 library(tidyverse) # includes package "readr"
 # All Airbnb data (106 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 
 nyc_full <- read_csv(url) # reads in data
-glimpse(nyc_full)
+head(nyc_full)
 ```
 \  
 
 Using a smaller dataset 
-```{r, eval = T}
+```{r, eval = T, results="hide"}
 # smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv"
+url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
 
 nyc <-  read_csv(url)
-nyc <- nyc[nyc$id < 1000000,] # get smaller subet of data
+nyc <- nyc[nyc$id < 20000,] # get smaller subet of data
 length(nyc$id) # print length of 'id' column
-glimpse(nyc)
+head(nyc)
 ``` 
 \    
 
@@ -356,11 +356,11 @@ glimpse(nyc)
 
 Using the above plotting functions to visualise the AirBnB data  
 
-```{r, eval=T}
+```{r, eval = T}
 # plot neighborhood_group vs price
 ggplot(data = nyc) + 
-  geom_point(mapping = aes(x = neighbourhood_group, y = price, colour =
-                             neighbourhood_group), shape = 21, stroke = 1) +
+  geom_point(mapping = aes(x = neighbourhood_group_cleansed, y = price, colour =
+                             neighbourhood_group_cleansed), shape = 21, stroke = 1) +
   my_theme
 ```
 
@@ -368,7 +368,7 @@ ggplot(data = nyc) +
 # plot minimum_nights vs price
 ggplot(data = nyc) + 
   geom_point(mapping = aes(x = minimum_nights, y = price, 
-                           colour = neighbourhood_group), shape = 20, size = 3, stroke = 1) +
+                           colour = neighbourhood_group_cleansed), shape = 20, size = 3, stroke = 1) +
   my_theme
 ```
 
@@ -376,7 +376,7 @@ ggplot(data = nyc) +
 # availability_365 vs price
 ggplot(data = nyc) + 
   geom_point(mapping = aes(x = availability_365, y = price, 
-                           colour = neighbourhood_group), shape = 21, stroke = 1) +
+                           colour = neighbourhood_group_cleansed), shape = 21, stroke = 1) +
   my_theme
 ```
     
@@ -384,7 +384,7 @@ ggplot(data = nyc) +
 # plot longitude vs price
 ggplot(data = nyc) + 
   geom_point(mapping = aes(x = longitude, y = price, 
-                           colour = neighbourhood_group), shape = 21, stroke = 1) +
+                           colour = neighbourhood_group_cleansed), shape = 21, stroke = 1) +
   my_theme
 ```
 

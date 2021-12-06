@@ -414,7 +414,7 @@ div.tocify {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">EmoRy Coding Club</a>
+      <a class="navbar-brand" href="index.html">Welcome to the `R` Coding Club</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -495,8 +495,9 @@ div.tocify {
 <!-- ----------------------- overview --------------------------- -->
 <div id="overview" class="section level2">
 <h2>Overview</h2>
-<p>This page contains all the documents, links, and information for the monthly <code>R</code> coding club held at Emory University, Atlanta. We meet monthly and teach new coding concepts and techniques in a casual environment. The club is half lesson half workshop style and caters for all coding and <code>R</code> levels.<br />
-   </p>
+<p>This page contains all the documents, links, and information for the monthly <code>R</code> coding club held at Emory University, Atlanta. We meet monthly and teach new coding concepts and techniques in a casual environment. The club is half lesson half workshop style and caters for all coding and <code>R</code> levels.</p>
+<p>Since Covid-19, the club has been virtual and all material remains online and free to distribute.</p>
+<p>   </p>
 </div>
 <div id="organisers" class="section level2">
 <h2>Organisers</h2>
@@ -518,8 +519,8 @@ Room 2052<br />
 Wayne Rollins Building<br />
 (Click on marker for room directions)<br />
  </p>
-<div id="htmlwidget-7f92cda059744c15646e" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7f92cda059744c15646e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[33.79667,-84.32346],15,[]],"calls":[{"method":"addTiles","args":["http://b.sm.mapstack.stamen.com/((mapbox-water,$f2f7ff[hsl-color]),(positron,$f2f7ff[hsl-color]),(buildings,$f2f7ff[hsl-color]),(parks,$2c403b[hsl-color]))/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Take the elevator to the second floor, \nthen exit left and take the first left.",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9d63167ae60fb69a7cc1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9d63167ae60fb69a7cc1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[33.79667,-84.32346],15,[]],"calls":[{"method":"addTiles","args":["http://b.sm.mapstack.stamen.com/((mapbox-water,$f2f7ff[hsl-color]),(positron,$f2f7ff[hsl-color]),(buildings,$f2f7ff[hsl-color]),(parks,$2c403b[hsl-color]))/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Take the elevator to the second floor, \nthen exit left and take the first left.",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
 <p> </p>
 <!-- ----------------------- 1 before arrival --------------------------- -->
 </div>
@@ -568,7 +569,7 @@ Wayne Rollins Building<br />
 <!-- ----------------------- image --------------------------- -->
 <p>This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below in your <code>R</code> console and press <em>Enter</em>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(readr)
-url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/data/listings.csv.gz&quot;</span>
+url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
 
 nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
 
@@ -580,14 +581,14 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 <span class="kw">head</span>(nyc[, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>])</code></pre></div>
 <p>If everything worked correctly, you should see the below ouput printed in your <code>R</code> console.</p>
 <pre><code># A tibble: 6 x 5
-     id name                                             host_id host_name   neighbourhood_group
-  &lt;dbl&gt; &lt;chr&gt;                                              &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;              
-1  2539 Clean &amp; quiet apt home by the park                  2787 John        Brooklyn           
-2  2595 Skylit Midtown Castle                               2845 Jennifer    Manhattan          
-3  3647 THE VILLAGE OF HARLEM....NEW YORK !                 4632 Elisabeth   Manhattan          
-4  3831 Cozy Entire Floor of Brownstone                     4869 LisaRoxanne Brooklyn           
-5  4989 Great 1 bdrm. apartment in the PERFECT location!    7118 New-Yorker  Manhattan          
-6  5022 Entire Apt: Spacious Studio/Loft by central park    7192 Laura       Manhattan          </code></pre>
+     id listing_url                   scrape_id last_scraped name                                   
+  &lt;dbl&gt; &lt;chr&gt;                             &lt;dbl&gt; &lt;date&gt;       &lt;chr&gt;                                  
+1  2595 https://www.airbnb.com/rooms…   2.02e13 2021-04-09   Skylit Midtown Castle                  
+2  3831 https://www.airbnb.com/rooms…   2.02e13 2021-04-12   Whole flr w/private bdrm, bath &amp; kitch…
+3  5121 https://www.airbnb.com/rooms…   2.02e13 2021-04-09   BlissArtsSpace!                        
+4  5136 https://www.airbnb.com/rooms…   2.02e13 2021-04-10   Spacious Brooklyn Duplex, Patio + Gard…
+5  5178 https://www.airbnb.com/rooms…   2.02e13 2021-04-12   Large Furnished Room Near B&#39;way　      
+6  5203 https://www.airbnb.com/rooms…   2.02e13 2021-04-09   Cozy Clean Guest Room - Family Apt     </code></pre>
 <p>   </p>
 <div id="save-and-use-the-above-code-snippet-whenever-you-need-to-load-our-two-datasets-nyc_full-and-nyc-as-well-be-using-them-regularly-throughout-the-club-sessions." class="section level4">
 <h4>Save and use the above code snippet whenever you need to load our two datasets, <code>nyc_full</code> and <code>nyc</code>, as we'll be using them regularly throughout the club sessions.</h4>
