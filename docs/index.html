@@ -11,14 +11,24 @@
 
 
 
-<title></title>
+<title>index.knit</title>
 
-<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.19/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
 <script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
 <link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
 <script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
@@ -35,44 +45,88 @@
 <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
-<style type="text/css">code{white-space: pre;}</style>
+
+
+<style type="text/css">
+  code {
+    white-space: pre;
+  }
+  .sourceCode {
+    overflow: visible;
+  }
+</style>
 <style type="text/css" data-origin="pandoc">
-div.sourceCode { overflow-x: auto; }
-table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
-  margin: 0; padding: 0; vertical-align: baseline; border: none; }
-table.sourceCode { width: 100%; line-height: 100%; background-color: #f8f8f8; }
-td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
-td.sourceCode { padding-left: 5px; }
-pre, code { background-color: #f8f8f8; }
-code > span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-code > span.dt { color: #204a87; } /* DataType */
-code > span.dv { color: #0000cf; } /* DecVal */
-code > span.bn { color: #0000cf; } /* BaseN */
-code > span.fl { color: #0000cf; } /* Float */
-code > span.ch { color: #4e9a06; } /* Char */
-code > span.st { color: #4e9a06; } /* String */
-code > span.co { color: #8f5902; font-style: italic; } /* Comment */
-code > span.ot { color: #8f5902; } /* Other */
-code > span.al { color: #ef2929; } /* Alert */
-code > span.fu { color: #000000; } /* Function */
-code > span.er { color: #a40000; font-weight: bold; } /* Error */
-code > span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
-code > span.cn { color: #000000; } /* Constant */
-code > span.sc { color: #000000; } /* SpecialChar */
-code > span.vs { color: #4e9a06; } /* VerbatimString */
-code > span.ss { color: #4e9a06; } /* SpecialString */
-code > span.im { } /* Import */
-code > span.va { color: #000000; } /* Variable */
-code > span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-code > span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-code > span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-code > span.ex { } /* Extension */
-code > span.at { color: #c4a000; } /* Attribute */
-code > span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-code > span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-code > span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
 
 .sourceCode .row {
   width: 100%;
@@ -91,13 +145,20 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
   for (var i = 0; i < sheets.length; i++) {
     if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
     try { var rules = sheets[i].cssRules; } catch (e) { continue; }
-    for (var j = 0; j < rules.length; j++) {
+    var j = 0;
+    while (j < rules.length) {
       var rule = rules[j];
       // check if there is a div.sourceCode rule
-      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") continue;
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
       var style = rule.style.cssText;
       // check if color or background-color is set
-      if (rule.style.color === '' && rule.style.backgroundColor === '') continue;
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
       // replace div.sourceCode by a pre.sourceCode rule
       sheets[i].deleteRule(j);
       sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
@@ -105,39 +166,9 @@ code > span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Inf
   }
 })();
 </script>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
+
 
 
 
@@ -147,10 +178,6 @@ h6 {
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
 }
 img {
   max-width:100%;
@@ -167,40 +194,16 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 54px;
-  padding-bottom: 40px;
-}
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 59px;
-  margin-top: -59px;
-}
-.section h2 {
-  padding-top: 59px;
-  margin-top: -59px;
-}
-.section h3 {
-  padding-top: 59px;
-  margin-top: -59px;
-}
-.section h4 {
-  padding-top: 59px;
-  margin-top: -59px;
-}
-.section h5 {
-  padding-top: 59px;
-  margin-top: -59px;
-}
-.section h6 {
-  padding-top: 59px;
-  margin-top: -59px;
-}
 .dropdown-submenu {
   position: relative;
 }
@@ -228,7 +231,7 @@ body {
   margin-right: -10px;
 }
 .dropdown-submenu:hover>a:after {
-  border-left-color: #ffffff;
+  border-left-color: #adb5bd;
 }
 .dropdown-submenu.pull-left {
   float: none;
@@ -240,7 +243,7 @@ body {
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -250,11 +253,28 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
 
@@ -266,13 +286,12 @@ $(document).ready(function () {
   max-height: 500px;
   min-height: 44px;
   overflow-y: auto;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -280,16 +299,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -395,7 +407,7 @@ div.tocify {
 
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row-fluid">
+<div class="row">
 <div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
@@ -409,12 +421,12 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">Welcome to the `R` Coding Club</a>
+      <a class="navbar-brand" href="index.html">R Coding Club</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -464,11 +476,11 @@ div.tocify {
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
-<div class="btn-group pull-right">
-<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
-<ul class="dropdown-menu" style="min-width: 50px;">
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
 <li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
 <li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
 </ul>
@@ -495,17 +507,25 @@ div.tocify {
 <!-- ----------------------- overview --------------------------- -->
 <div id="overview" class="section level2">
 <h2>Overview</h2>
-<p>This page contains all the documents, links, and information for the monthly <code>R</code> coding club held at Emory University, Atlanta. We meet monthly and teach new coding concepts and techniques in a casual environment. The club is half lesson half workshop style and caters for all coding and <code>R</code> levels.</p>
-<p>Since Covid-19, the club has been virtual and all material remains online and free to distribute.</p>
+<p>This page contains all the documents, links, and information for the
+monthly <code>R</code> coding club held at Emory University, Atlanta. We
+meet monthly and teach new coding concepts and techniques in a casual
+environment. The club is half lesson half workshop style and caters for
+all coding and <code>R</code> levels.</p>
+<p>Since Covid-19, the club has been virtual and all material remains
+online and free to distribute.</p>
 <p>   </p>
 </div>
 <div id="organisers" class="section level2">
 <h2>Organisers</h2>
 <p><strong>Matt Malishev, Department of Biology</strong><br />
-<strong>Desiree de Leon, Yerkes National Primate Research Center</strong><br />
-<strong>Hasse Walum, Yerkes National Primate Research Center</strong></p>
-<p>    <!-- ----------------------- image --------------------------- --></p>
-<p><img src="img/mm.jpg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /><img src="img/ddl.jpeg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /><img src="img/hw.jpg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /></p>
+<strong>Desiree de Leon, Yerkes National Primate Research
+Center</strong><br />
+<strong>Hasse Walum, Yerkes National Primate Research
+Center</strong></p>
+<p>   
+<!-- ----------------------- image --------------------------- --></p>
+<p><img src="img/mmm.jpg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /><img src="img/ddl.jpeg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /><img src="img/hw.jpg" width="33%" style = 'display: inline;' style="display: block; margin: auto;" /></p>
 <!-- ----------------------- image --------------------------- -->
 <!-- \     -->
 <!-- ## Date for next session   -->
@@ -519,24 +539,32 @@ Room 2052<br />
 Wayne Rollins Building<br />
 (Click on marker for room directions)<br />
  </p>
-<div id="htmlwidget-9d63167ae60fb69a7cc1" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9d63167ae60fb69a7cc1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[33.79667,-84.32346],15,[]],"calls":[{"method":"addTiles","args":["http://b.sm.mapstack.stamen.com/((mapbox-water,$f2f7ff[hsl-color]),(positron,$f2f7ff[hsl-color]),(buildings,$f2f7ff[hsl-color]),(parks,$2c403b[hsl-color]))/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Take the elevator to the second floor, \nthen exit left and take the first left.",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b4853ce78fe913c4c74c" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b4853ce78fe913c4c74c">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[33.79667,-84.32346],15,[]],"calls":[{"method":"addTiles","args":["http://b.sm.mapstack.stamen.com/((mapbox-water,$f2f7ff[hsl-color]),(positron,$f2f7ff[hsl-color]),(buildings,$f2f7ff[hsl-color]),(parks,$2c403b[hsl-color]))/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false}]},{"method":"addMarkers","args":[33.79667,-84.32346,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"Take the elevator to the second floor, \nthen exit left and take the first left.",null,null,null,"Room 2052, Wayne Rollins Building",{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[33.79667,33.79667],"lng":[-84.32346,-84.32346]}},"evals":[],"jsHooks":[]}</script>
 <p> </p>
 <!-- ----------------------- 1 before arrival --------------------------- -->
 </div>
 </div>
 <div id="before-you-arrive" class="section level1">
 <h1>Before you arrive</h1>
-<p>Everyone needs to have the following software and packages loaded before you come to the first session. That way, we can get straight into it.</p>
+<p>Everyone needs to have the following software and packages loaded
+before you come to the first session. That way, we can get straight into
+it.</p>
 <ul>
-<li><a href="https://www.r-project.org/">Install <code>R</code> from CRAN</a>.</li>
-<li>If you're asked to choose a CRAN mirror, just choose whichever is closest to your location.<br />
+<li><a href="https://www.r-project.org/">Install <code>R</code> from
+CRAN</a>.</li>
+<li>If you’re asked to choose a CRAN mirror, just choose whichever is
+closest to your location.<br />
 </li>
-<li><a href="https://www.rstudio.com/products/rstudio/download/">Install <code>RStudio</code> Desktop</a></li>
-<li>Install the <code>tidyverse</code> package and then load it by copying and pasting the following code into the <em>Console</em> of <code>RStudio</code> and then pressing <em>Enter</em> to execute it.</li>
+<li><a href="https://www.rstudio.com/products/rstudio/download/">Install
+<code>RStudio</code> Desktop</a></li>
+<li>Install the <code>tidyverse</code> package and then load it by
+copying and pasting the following code into the <em>Console</em> of
+<code>RStudio</code> and then pressing <em>Enter</em> to execute
+it.</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)
-<span class="kw">library</span>(tidyverse)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;tidyverse&quot;</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
 <p>   </p>
 <p><br></p>
 <!-- ----------------------- 3 learning obj --------------------------- -->
@@ -544,54 +572,57 @@ Wayne Rollins Building<br />
 </div>
 <div id="learning-objectives" class="section level1">
 <h1>Learning Objectives</h1>
-<p>The Coding Club will use the <code>R</code> tidyverse suite and packages. We will use base <code>R</code> for some of the fundamentals, with the idea of implementing tidyverse functions to learn more versatile, reproducible, and efficient code.</p>
+<p>The Coding Club will use the <code>R</code> tidyverse suite and
+packages. We will use base <code>R</code> for some of the fundamentals,
+with the idea of implementing tidyverse functions to learn more
+versatile, reproducible, and efficient code.</p>
 </div>
 <div id="materials" class="section level1">
 <h1>Materials</h1>
-<p>We will use the <a href="https://r4ds.had.co.nz/index.html">R for Data Science</a> free online text to guide us through learning <code>R</code>.</p>
+<p>We will use the <a href="https://r4ds.had.co.nz/index.html">R for
+Data Science</a> free online text to guide us through learning
+<code>R</code>.</p>
 <!-- ----------------------- image --------------------------- -->
-<div align="center" ;="" text-align:center="">
-<p><img src="img/cover.png" style=width:33%></p>
+<div align="center"; text-align:center>
+  <img src="img/cover.png" style=width:33%>
 </div>
 <!-- ----------------------- image --------------------------- -->
 <p><br></p>
 </div>
 <div id="the-dataset" class="section level1">
 <h1>The dataset</h1>
-<p>We'll also be using <a href="http://insideairbnb.com/new-york-city/">open-access data of housing listings from AirBnb</a> as our toy dataset. Once we've completed the above <strong>R for Data Science exercises</strong>, we'll repeat the plotting exercise using these data.<br />
+<p>We’ll also be using <a
+href="http://insideairbnb.com/new-york-city/">open-access data of
+housing listings from AirBnb</a> as our toy dataset. Once we’ve
+completed the above <strong>R for Data Science exercises</strong>, we’ll
+repeat the plotting exercise using these data.<br />
  </p>
-<p>We'll be using this dataset for the rest of the club sessions, so feel free to explore it in your own time.<br />
+<p>We’ll be using this dataset for the rest of the club sessions, so
+feel free to explore it in your own time.<br />
    </p>
 <!-- ----------------------- image --------------------------- -->
-<div align="center" ;="" text-align:center="">
-<p><img src="img/nyc.jpg" style=width:100%></p>
+<div align="center"; text-align:center>
+  <img src="img/nyc.jpg" style=width:100%>
 </div>
 <!-- ----------------------- image --------------------------- -->
-<p>This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below in your <code>R</code> console and press <em>Enter</em>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(readr)
-url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
-
-nyc_full &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
-
-<span class="co"># smaller csv file (16 cols)</span>
-url &lt;-<span class="st"> &quot;http://data.insideairbnb.com/united-states/ny/new-york-city/2019-06-02/visualisations/listings.csv&quot;</span>
-nyc &lt;-<span class="st"> </span><span class="kw">read_csv</span>(url)
-nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class="op">&lt;</span><span class="st"> </span><span class="fl">1e+06</span>, ]  <span class="co"># truncate dataset </span>
-
-<span class="kw">head</span>(nyc[, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>])</code></pre></div>
-<p>If everything worked correctly, you should see the below ouput printed in your <code>R</code> console.</p>
-<pre><code># A tibble: 6 x 5
-     id listing_url                   scrape_id last_scraped name                                   
-  &lt;dbl&gt; &lt;chr&gt;                             &lt;dbl&gt; &lt;date&gt;       &lt;chr&gt;                                  
-1  2595 https://www.airbnb.com/rooms…   2.02e13 2021-04-09   Skylit Midtown Castle                  
-2  3831 https://www.airbnb.com/rooms…   2.02e13 2021-04-12   Whole flr w/private bdrm, bath &amp; kitch…
-3  5121 https://www.airbnb.com/rooms…   2.02e13 2021-04-09   BlissArtsSpace!                        
-4  5136 https://www.airbnb.com/rooms…   2.02e13 2021-04-10   Spacious Brooklyn Duplex, Patio + Gard…
-5  5178 https://www.airbnb.com/rooms…   2.02e13 2021-04-12   Large Furnished Room Near B&#39;way　      
-6  5203 https://www.airbnb.com/rooms…   2.02e13 2021-04-09   Cozy Clean Guest Room - Family Apt     </code></pre>
+<p>This is a really big data set (it has ~50k rows !!), so it will take
+a moment to run. To import the AirBnb data from the URL, copy and paste
+the lines of code below in your <code>R</code> console and press
+<em>Enter</em>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># require(readr) url &lt;-</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz&#39;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># nyc_full &lt;- read_csv(url) # smaller csv file (16 cols) url &lt;-</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># &#39;http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz&#39; nyc</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># &lt;- read_csv(url) nyc &lt;- nyc[nyc$id &lt; 1000000,] # truncate dataset head(nyc[,1:5])</span></span></code></pre></div>
+<p>If everything worked correctly, you should see the below ouput
+printed in your <code>R</code> console.</p>
 <p>   </p>
-<div id="save-and-use-the-above-code-snippet-whenever-you-need-to-load-our-two-datasets-nyc_full-and-nyc-as-well-be-using-them-regularly-throughout-the-club-sessions." class="section level4">
-<h4>Save and use the above code snippet whenever you need to load our two datasets, <code>nyc_full</code> and <code>nyc</code>, as we'll be using them regularly throughout the club sessions.</h4>
+<div
+id="save-and-use-the-above-code-snippet-whenever-you-need-to-load-our-two-datasets-nyc_full-and-nyc-as-well-be-using-them-regularly-throughout-the-club-sessions."
+class="section level4">
+<h4>Save and use the above code snippet whenever you need to load our
+two datasets, <code>nyc_full</code> and <code>nyc</code>, as we’ll be
+using them regularly throughout the club sessions.</h4>
 </div>
 </div>
 
@@ -606,7 +637,7 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
@@ -624,7 +655,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
+    $(this).parent().toggleClass('nav-tabs-open');
   });
 });
 </script>
@@ -638,6 +669,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

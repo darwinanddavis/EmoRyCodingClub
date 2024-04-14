@@ -73,7 +73,7 @@ Since Covid-19, the club has been virtual and all material remains online and fr
 
 ```{r, echo = FALSE, out.width = "33%", fig.align = "center", out.extra = "style = 'display: inline;'"}
 
-knitr::include_graphics(c("img/mm.jpg", "img/ddl.jpeg", "img/hw.jpg"))
+knitr::include_graphics(c("img/mmm.jpg", "img/ddl.jpeg", "img/hw.jpg"))
 
 ```
 
@@ -172,18 +172,18 @@ We'll be using this dataset for the rest of the club sessions, so feel free to e
 
 This is a really big data set (it has ~50k rows !!), so it will take a moment to run. To import the AirBnb data from the URL, copy and paste the lines of code below in your `R` console and press *Enter*.   
 
-```{r, eval = FALSE}
-require(readr)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
-
-nyc_full <-  read_csv(url)
-
-# smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
-nyc <-  read_csv(url)
-nyc <- nyc[nyc$id < 1000000,] # truncate dataset 
-
-head(nyc[,1:5])
+```{r, eval = F}
+# require(readr)
+# url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
+# 
+# nyc_full <-  read_csv(url)
+# 
+# # smaller csv file (16 cols)
+# url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
+# nyc <-  read_csv(url)
+# nyc <- nyc[nyc$id < 1000000,] # truncate dataset 
+# 
+# head(nyc[,1:5])
 
 ```
 
@@ -191,11 +191,11 @@ If everything worked correctly, you should see the below ouput printed in your `
 
 ```{r, echo=F, eval=T}
 # smaller csv file (16 cols)
-url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
-nyc <-  read_csv(url)
-nyc <- nyc[nyc$id < 1000000,] # truncate dataset 
-
-head(nyc[,1:5])
+# url <- "http://data.insideairbnb.com/united-states/ny/new-york-city/2021-04-07/data/listings.csv.gz"
+# nyc <-  read_csv(url)
+# nyc <- nyc[nyc$id < 1000000,] # truncate dataset 
+# 
+# head(nyc[,1:5])
 
 ```
 \  

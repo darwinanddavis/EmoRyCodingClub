@@ -518,29 +518,29 @@ nyc &lt;-<span class="st"> </span>nyc[nyc<span class="op">$</span>id <span class
 s2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">10</span>, <span class="dv">500</span>)  <span class="co"># sample 10 normally distributed random numbers around a mean of 500 </span>
 s3 &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">10</span>)  <span class="co"># random uniform distribution</span>
 s1</code></pre></div>
-<pre><code> [1]  9  6  4  2  3  8 10  7  1  5</code></pre>
+<pre><code> [1]  2  4  1  8 10  5  3  6  7  9</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s2</code></pre></div>
-<pre><code> [1] 499.4427 499.7249 502.1346 497.5976 498.4508 501.1707 497.8581 500.6781 499.4104 498.9850</code></pre>
+<pre><code> [1] 501.6309 498.4540 499.8142 501.0258 499.9049 499.9875 499.9702 502.5944 501.3363 498.4851</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">s3</code></pre></div>
-<pre><code> [1] 0.4601518 0.3831295 0.2211528 0.2252367 0.2006559 0.6086385 0.7586871 0.7859236 0.6329974
-[10] 0.4263560</code></pre>
+<pre><code> [1] 0.8834566 0.1607566 0.8669604 0.1298742 0.4734379 0.9133809 0.2103161 0.3419445 0.2215991
+[10] 0.3468892</code></pre>
 <p>Now combine these into a list using <code>list()</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 &lt;-<span class="st"> </span><span class="kw">list</span>(s1, s2, s3)  <span class="co"># create a list of these data</span>
 ls1</code></pre></div>
 <pre><code>[[1]]
- [1]  9  6  4  2  3  8 10  7  1  5
+ [1]  2  4  1  8 10  5  3  6  7  9
 
 [[2]]
- [1] 499.4427 499.7249 502.1346 497.5976 498.4508 501.1707 497.8581 500.6781 499.4104 498.9850
+ [1] 501.6309 498.4540 499.8142 501.0258 499.9049 499.9875 499.9702 502.5944 501.3363 498.4851
 
 [[3]]
- [1] 0.4601518 0.3831295 0.2211528 0.2252367 0.2006559 0.6086385 0.7586871 0.7859236 0.6329974
-[10] 0.4263560</code></pre>
+ [1] 0.8834566 0.1607566 0.8669604 0.1298742 0.4734379 0.9133809 0.2103161 0.3419445 0.2215991
+[10] 0.3468892</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ls1 <span class="op">%&gt;%</span><span class="st"> </span>str</code></pre></div>
 <pre><code>List of 3
- $ : int [1:10] 9 6 4 2 3 8 10 7 1 5
- $ : num [1:10] 499 500 502 498 498 ...
- $ : num [1:10] 0.46 0.383 0.221 0.225 0.201 ...</code></pre>
+ $ : int [1:10] 2 4 1 8 10 5 3 6 7 9
+ $ : num [1:10] 502 498 500 501 500 ...
+ $ : num [1:10] 0.883 0.161 0.867 0.13 0.473 ...</code></pre>
 </div>
 <div id="exercise-0" class="section level1">
 <h1>Exercise 0</h1>
