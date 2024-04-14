@@ -200,7 +200,7 @@ If everything worked correctly, you should see the below ouput printed in your `
 ```
 \  
 \  
-
+ 
 #### Save and use the above code snippet whenever you need to load our two datasets, `nyc_full` and `nyc`, as we'll be using them regularly throughout the club sessions.         
 
 ```{r, echo =FALSE, }
